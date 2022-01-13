@@ -2,11 +2,11 @@
   <div :class="[`mobile-cards-white`, className || ``]">
     <img
       class="frame-72-2"
-      src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/frame-72@2x.svg"
+      src="img/frame-72@2x.svg"
     />
     <img
       class="rectangle-136"
-      src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/rectangle-136@2x.svg"
+      src="img/rectangle-136@2x.svg"
     />
   </div>
 </template>

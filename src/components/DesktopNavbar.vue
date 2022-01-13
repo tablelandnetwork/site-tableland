@@ -5,24 +5,26 @@
       src="../../img/logo---black@2x.svg"
     />
     <div class="frame-49">
-      <div>
-        <property2regular3
-          :navigationLink="property2regularProps.navigationLink"
+      <div class="flex">
+        <nav-link
+          :navigationText="property2regularProps.navigationLink"
+          navigationLink="https://textile.notion.site/Our-mission-is-to-accelerate-the-exchange-of-information-across-society-f49e389e12e14473a3475e755a8d9cd6"
           :className="property2regularProps.className"
         />
-      </div>
-      <div class="flex">
-        <property2regular3
-          :navigationLink="property2regular2Props.navigationLink"
+        <nav-link
+          :navigationText="property2regular2Props.navigationLink"
+          navigationLink="https://boards.greenhouse.io/textileio"
           :className="property2regular2Props.className"
         />
-        <property2regular3
-          :navigationLink="property2regular3Props.navigationLink"
+        <nav-link
+          :navigationText="property2regular3Props.navigationLink"
+          navigationLink="https://docs.textile.io/"
           :className="property2regular3Props.className"
         />
-        <property1regular32
-          :navigationCta="property1regular3Props.navigationCta"
-          :className="property1regular3Props.className"
+        <button-regular
+          @click="connect"
+          :button-text="property1regular3Props.navigationCta"
+          size="sm"
         />
       </div>
     </div>
@@ -30,20 +32,27 @@
 </template>
 
 <script>
-import Property2regular3 from "./Property2regular3";
-import Property1regular32 from "./Property1regular32";
+import NavLink from "./NavLink";
+import ButtonRegular from "./ButtonRegular";
 export default {
   name: "DesktopNavbar",
   components: {
-    Property2regular3,
-    Property1regular32,
+    NavLink,
+    ButtonRegular,
   },
   props: ["property2regularProps", "property2regular2Props", "property2regular3Props", "property1regular3Props"],
+  methods: {
+    connect: function () {
+      alert('TODO: clicked connect to tableland');
+    }
+  }
 };
 </script>
 
 <style>
 .desktop-navbar {
+  z-index: 100;
+  justify-content: space-between;
   align-items: center;
   display: flex;
   height: 84px;
@@ -64,7 +73,6 @@ export default {
   justify-content: space-between;
   display: flex;
   height: 44px;
-  width: 100%;
   position: relative;
 }
 </style>

@@ -2,11 +2,11 @@
   <div class="mobile-navbar">
     <img
       class="logo"
-      src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d3623feee5c672fe52527c/img/logo@2x.svg"
+      src="img/logo@2x.svg"
     />
     <img
       class="list"
-      src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/list@2x.svg"
+      src="img/list@2x.svg"
     />
   </div>
 </template>

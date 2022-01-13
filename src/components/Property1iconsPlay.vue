@@ -2,7 +2,7 @@
   <div :class="[`frame-47`, className || ``]">
     <img
       class="play"
-      src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/play@2x.svg"
+      src="img/play@2x.svg"
     />
   </div>
 </template>

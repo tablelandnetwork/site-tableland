@@ -7,13 +7,13 @@
     <div class="footer-links">
       <div class="flex">
         <div class="desktop-footer-link">
-          <div class="navigation-link-1 poppins-normal-spray-16px">{{ property2regularProps.navigationLink }}</div>
+          <a href="#investors" class="navigation-link-1 poppins-normal-spray-16px">{{ property2regularProps.navigationLink }}</a>
         </div>
         <div class="desktop-footer-link">
-          <div class="navigation-link-1 poppins-normal-spray-16px">{{ property2regular2Props.navigationLink }}</div>
+          <a href="#partners" class="navigation-link-1 poppins-normal-spray-16px">{{ property2regular2Props.navigationLink }}</a>
         </div>
         <div class="desktop-footer-link">
-          <div class="navigation-link-1 poppins-normal-spray-16px">{{ property2regular3Props.navigationLink }}</div>
+          <a href="#legal" class="navigation-link-1 poppins-normal-spray-16px">{{ property2regular3Props.navigationLink }}</a>
         </div>
       </div>
     </div>
@@ -21,14 +21,8 @@
 </template>
 
 <script>
-import Property2regular3 from "./Property2regular3";
-import Property1regular32 from "./Property1regular32";
 export default {
   name: "DesktopFooter",
-  components: {
-    Property2regular3,
-    Property1regular32,
-  },
   props: ["property2regularProps", "property2regular2Props", "property2regular3Props"],
 };
 </script>
@@ -53,6 +47,10 @@ export default {
   padding-left: 1rem;
 }
 
+.desktop-footer-link .navigation-link-1:hover {
+  text-decoration: underline;
+}
+
 .logo-spray-1 {
   height: 18px;
   width: 167px;
@@ -64,4 +62,5 @@ export default {
   display: flex;
   height: 44px;
 }
+
 </style>

@@ -3,7 +3,7 @@
     <div class="secondory-button-3 poppins-semi-bold-black-16px">{{ secondoryButton }}</div>
     <img
       class="arrow-fat-lines-right-8"
-      src="../../img/arrowfatlinesright-2@2x.svg"
+      src="img/arrowfatlinesright-2@2x.svg"
     />
   </div>
 </template>
@@ -38,7 +38,7 @@ export default {
 
 .arrow-fat-lines-right-8 {
   height: 24px;
-  margin-left: 20px;
+  margin: 20px;
   width: 24px;
 }
 </style>

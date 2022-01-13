@@ -4,15 +4,15 @@
       <div class="overlap-group7">
         <img
           class="ellipse-157"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/ellipse-157@1x.svg"
+          src="img/ellipse-157@1x.svg"
         />
         <img
           class="ellipse-157-1"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/ellipse-157-1@2x.svg"
+          src="img/ellipse-157-1@2x.svg"
         />
         <img
           class="vector"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d3623feee5c672fe52527c/img/vector-4@2x.svg"
+          src="img/vector-4@2x.svg"
         />
         <div class="frame-51">
           <div class="group-113">
@@ -34,11 +34,11 @@
             <div class="time valign-text-middle sfprotext-normal-black-15-7px">{{ time }}</div>
             <img
               class="cellular"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/cellular@2x.svg"
+              src="img/cellular@2x.svg"
             />
             <img
               class="wifi"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/wifi-1@2x.svg"
+              src="img/wifi-1@2x.svg"
             />
             <div class="batteryi-phone-12-pro">
               <div class="overlap-group">
@@ -46,14 +46,14 @@
               </div>
               <img
                 class="cap"
-                src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d3623feee5c672fe52527c/img/cap@2x.svg"
+                src="img/cap@2x.svg"
               />
             </div>
           </div>
           <div class="search-form">
             <img
               class="a-a"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/aa@2x.svg"
+              src="img/aa@2x.svg"
             />
             <div class="domain">
               <div class="text-1 valign-text-middle sfcompactdisplay-regular-normal-black-14px">{{ text1 }}</div>
@@ -61,17 +61,17 @@
             </div>
             <img
               class="reload"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/reload@2x.svg"
+              src="img/reload@2x.svg"
             />
           </div>
         </div>
         <img
           class="vector-1"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d3623feee5c672fe52527c/img/vector-7@1x.svg"
+          src="img/vector-7@1x.svg"
         />
         <img
           class="vector-2"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d3623feee5c672fe52527c/img/vector-8@2x.svg"
+          src="img/vector-8@2x.svg"
         />
         <div class="the-possibilities-are-endless orbitron-black-black-28px">{{ thePossibilitiesAreEndless }}</div>
         <img class="untitled-1-1" :src="untitled11" />
@@ -102,15 +102,15 @@
       <div class="overlap-group9">
         <img
           class="vector-3"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d3623feee5c672fe52527c/img/vector-2@1x.svg"
+          src="img/vector-2@1x.svg"
         />
         <img
           class="ellipse-158"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/ellipse-158@1x.svg"
+          src="img/ellipse-158@1x.svg"
         />
         <img
           class="vector-4"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d3623feee5c672fe52527c/img/vector-3@1x.svg"
+          src="img/vector-3@1x.svg"
         />
         <div class="frame-63">
           <div class="frame-6620">
@@ -124,7 +124,7 @@
           <div class="overlap-group-1">
             <img class="untitled-7-1" :src="untitled71" /><img
               class="vector-73"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-73@2x.svg"
+              src="img/vector-73@2x.svg"
             />
           </div>
         </div>
@@ -138,12 +138,12 @@
       <div class="overlap-group10">
         <img
           class="ellipse-159"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/ellipse-159@1x.svg"
+          src="img/ellipse-159@1x.svg"
         />
         <div class="overlap-group1-1"><img class="untitled-5-1" :src="untitled51" /></div>
         <img
           class="vector-5"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d3623feee5c672fe52527c/img/vector-6@1x.svg"
+          src="img/vector-6@1x.svg"
         />
         <div class="try-it-try-it-try-it orbitron-black-white-55px">{{ tryItTryItTryIt }}</div>
         <div class="get-a-feel-for-how-e">{{ getAFeelForHowE }}</div>
@@ -179,13 +179,13 @@
         </div>
         <img
           class="vector-6"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d3623feee5c672fe52527c/img/vector-9@1x.svg"
+          src="img/vector-9@1x.svg"
         />
         <div class="tab-navmobile border-2px-black">
           <div class="overlap-group5">
             <img
               class="line-2"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/line-2@2x.svg"
+              src="img/line-2@2x.svg"
             />
             <property1active :tabNavigation="property1activeProps.tabNavigation" />
           </div>
@@ -193,11 +193,11 @@
             <property1regular2 :tabNavigation="property1regular2Props.tabNavigation" />
             <img
               class="line"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/line-2@2x.svg"
+              src="img/line-2@2x.svg"
             />
             <img
               class="line"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/line-2@2x.svg"
+              src="img/line-2@2x.svg"
             />
             <property1regular2
               :tabNavigation="property1regular22Props.tabNavigation"
@@ -205,7 +205,7 @@
             />
             <img
               class="line-4"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/line-2@2x.svg"
+              src="img/line-2@2x.svg"
             />
             <property1regular2
               :tabNavigation="property1regular23Props.tabNavigation"
@@ -222,29 +222,29 @@
       <div class="overlap-group8">
         <img
           class="ellipse-160"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/ellipse-160@2x.svg"
+          src="img/ellipse-160@2x.svg"
         />
         <img
           class="vector-7"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d3623feee5c672fe52527c/img/vector@1x.svg"
+          src="img/vector@1x.svg"
         />
         <img
           class="ellipse-161"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/ellipse-161@2x.svg"
+          src="img/ellipse-161@2x.svg"
         />
         <div class="be-ready-for-the-future orbitron-black-white-55px">{{ beReadyForTheFuture }}</div>
         <img
           class="vector-8"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d3623feee5c672fe52527c/img/vector-1@2x.svg"
+          src="img/vector-1@2x.svg"
         />
         <div class="be-ready-for-the-future-1 orbitron-black-white-55px">{{ beReadyForTheFuture2 }}</div>
         <img
           class="ellipse-154"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/ellipse-154@2x.svg"
+          src="img/ellipse-154@2x.svg"
         />
         <img
           class="vector-9"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d3623feee5c672fe52527c/img/vector-5@1x.svg"
+          src="img/vector-5@1x.svg"
         />
         <div class="frame-64">
           <frame66 :testnetPhase2="frame66Props.testnetPhase2" />
@@ -271,42 +271,42 @@
         </div>
         <img
           class="ellipse-125"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/ellipse-125@1x.svg"
+          src="img/ellipse-125@1x.svg"
         />
         <div class="overlap-group2">
           <img
             class="vector-66"
-            src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-66@2x.svg"
+            src="img/vector-66@2x.svg"
           />
           <img class="screenshot-2021-12-06-at-1204-1" :src="screenshot20211206At12041" /><img
             class="vector-68"
-            src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-68@2x.svg"
+            src="img/vector-68@2x.svg"
           />
           <img
             class="vector-69"
-            src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-69@2x.svg"
+            src="img/vector-69@2x.svg"
           />
           <img
             class="vector-70"
-            src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-70@2x.svg"
+            src="img/vector-70@2x.svg"
           />
           <img
             class="vector-67"
-            src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-67@2x.svg"
+            src="img/vector-67@2x.svg"
           />
           <img
             class="vector-71"
-            src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-71@2x.svg"
+            src="img/vector-71@2x.svg"
           />
           <img
             class="vector-72"
-            src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-72@2x.svg"
+            src="img/vector-72@2x.svg"
           />
         </div>
         <div class="any-suggestions orbitron-black-black-36px">{{ anySuggestions }}</div>
         <img
           class="rectangle-143"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/rectangle-143@1x.svg"
+          src="img/rectangle-143@1x.svg"
         />
         <mobile-cards-white />
         <div class="showcase-showcase orbitron-black-white-55px">{{ showcaseShowcase }}</div>
@@ -329,7 +329,7 @@
           </div>
           <img
             class="logo-black"
-            src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/logo---black@2x.svg"
+            src="img/logo---black@2x.svg"
           />
         </div>
         <img class="untitled-4-1" :src="untitled41" /><img class="untitled-3-3" :src="untitled33" /><group6618
@@ -351,38 +351,38 @@
             <roadmap-number :q2="roadmapNumber3Props.q2" :className="roadmapNumber3Props.className" />
             <img
               class="group-6613"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/group-6613@1x.svg"
+              src="img/group-6613@1x.svg"
             />
             <img
               class="vector-89"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-89@2x.svg"
+              src="img/vector-89@2x.svg"
             />
             <img
               class="vector-78"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-78@2x.svg"
+              src="img/vector-78@2x.svg"
             />
             <img
               class="vector-92"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-92@2x.svg"
+              src="img/vector-92@2x.svg"
             />
             <img
               class="vector-90"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-90@2x.svg"
+              src="img/vector-90@2x.svg"
             />
             <img
               class="vector-91"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-91@2x.svg"
+              src="img/vector-91@2x.svg"
             />
             <roadmap-number :q2="roadmapNumber4Props.q2" :className="roadmapNumber4Props.className" />
           </div>
           <div class="overlap-group3">
             <img
               class="vector-93"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-93@2x.svg"
+              src="img/vector-93@2x.svg"
             />
             <img
               class="vector-94"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-94@2x.svg"
+              src="img/vector-94@2x.svg"
             />
             <roadmap-number :q2="roadmapNumber5Props.q2" :className="roadmapNumber5Props.className" />
             <roadmap-number :q2="roadmapNumber6Props.q2" :className="roadmapNumber6Props.className" />
@@ -545,7 +545,7 @@ export default {
 <style>
 .iphone-13-13-pro-2 {
   align-items: flex-end;
-  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d3623feee5c672fe52527c/img/iphone-13---13-pro---2@1x.svg);
+  background-image: url(/img/iphone-13---13-pro---2@1x.svg);
   background-size: 100% 100%;
   display: flex;
   flex-direction: column;
@@ -674,7 +674,7 @@ export default {
 
 .overlap-group1 {
   align-items: center;
-  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/backgrounds@2x.svg);
+  background-image: url(/img/backgrounds@2x.svg);
   background-size: 100% 100%;
   display: flex;
   flex-direction: column;
@@ -728,7 +728,7 @@ export default {
 
 .overlap-group {
   align-items: flex-start;
-  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d3623feee5c672fe52527c/img/border@2x.svg);
+  background-image: url(/img/border@2x.svg);
   background-size: 100% 100%;
   display: flex;
   height: 13px;
@@ -1018,7 +1018,7 @@ export default {
 
 .overlap-group1-1 {
   align-items: flex-end;
-  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/ellipse-154-1@2x.svg);
+  background-image: url(/img/ellipse-154-1@2x.svg);
   background-size: 100% 100%;
   display: flex;
   height: 886px;

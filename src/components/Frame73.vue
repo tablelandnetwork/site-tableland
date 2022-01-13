@@ -1,16 +1,16 @@
 <template>
   <div class="frame-7">
     <div class="any-suggestions-1 orbitron-black-black-70px">Any suggestions?</div>
-    <button-filled />
+    <button-black button-text="EXPLORE THE POSSIBILITIES" :has-arrow="true" />
   </div>
 </template>
 
 <script>
-import ButtonFilled from "./ButtonFilled";
+import ButtonBlack from "./ButtonBlack";
 export default {
   name: "Frame73",
   components: {
-    ButtonFilled,
+    ButtonBlack,
   },
 };
 </script>

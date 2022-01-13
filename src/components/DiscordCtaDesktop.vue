@@ -15,23 +15,35 @@ export default {
 
 <style>
 .discord-cta-1 {
-  align-items: center;
+  height: 84px;
+  width: 99px;
+  padding: 0 20px;
+  z-index: 200;
+
   background-color: var(--black);
   border: solid 1px aliceblue;
   border-radius: 20px;
+  
+  align-items: center;
   display: flex !important;
-  height: 84px;
   justify-content: flex-end;
-  right: 37px;
-  min-width: 97px;
-  padding: 0 20px;
+
   position: fixed;
+  right: 37px;
   bottom: 37px;
-  z-index: 200;
+
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .discord-cta-1:hover {
   background-color: var(--black-2);
+  height: 86px;
+  min-width: 100px;
+  right: 36px;
+  bottom: 36px;
 }
 
 .vector-20 {

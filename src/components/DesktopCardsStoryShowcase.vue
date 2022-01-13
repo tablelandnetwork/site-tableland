@@ -65,6 +65,10 @@ export default {
   text-decoration-thickness: 3px;
 }
 
+.desktop-cards-story-showcase-content .card-link:hover {
+  text-decoration-thickness: 2px;
+}
+
 .desktop-cards-story-showcase-content .card-content {
   width: 100%;
   padding-left: 30px;

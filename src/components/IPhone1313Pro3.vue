@@ -7,11 +7,11 @@
             <div class="time-1 valign-text-middle sfprotext-normal-black-15-7px">{{ time }}</div>
             <img
               class="cellular-1"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/cellular@2x.svg"
+              src="/img/cellular@2x.svg"
             />
             <img
               class="wifi-1"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/wifi-1@2x.svg"
+              src="/img/wifi-1@2x.svg"
             />
             <div class="batteryi-phone-12-pro-1">
               <div class="overlap-group-2">
@@ -19,14 +19,14 @@
               </div>
               <img
                 class="cap-1"
-                src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/cap-1@2x.svg"
+                src="/img/cap-1@2x.svg"
               />
             </div>
           </div>
           <div class="search-form-1">
             <img
               class="a-a-1"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/aa@2x.svg"
+              src="/img/aa@2x.svg"
             />
             <div class="domain-2">
               <div class="text-2 valign-text-middle sfcompactdisplay-regular-normal-black-14px">{{ text2 }}</div>
@@ -34,25 +34,25 @@
             </div>
             <img
               class="reload-1"
-              src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/reload@2x.svg"
+              src="/img/reload@2x.svg"
             />
           </div>
         </div>
       </div>
-      <property2regular3 :navigationLink="property2regular3Props.navigationLink" />
-      <property2regular3
-        :navigationLink="property2regular32Props.navigationLink"
+      <nav-link :navigationText="property2regular3Props.navigationLink" />
+      <nav-link
+        :navigationText="property2regular32Props.navigationLink"
         :className="property2regular32Props.className"
       />
-      <property2regular3
-        :navigationLink="property2regular33Props.navigationLink"
+      <nav-link
+        :navigationText="property2regular33Props.navigationLink"
         :className="property2regular33Props.className"
       />
-      <property1regular32 :navigationCta="property1regular3Props.navigationCta" />
+      <button-regular :buttonText="property1regular3Props.navigationCta" />
       <div class="discord-cta">
         <img
           class="vector-10"
-          src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-10@2x.svg"
+          src="/img/vector-10@2x.svg"
         />
       </div>
     </div>
@@ -60,13 +60,13 @@
 </template>
 
 <script>
-import Property2regular3 from "./Property2regular3";
-import Property1regular32 from "./Property1regular32";
+import NavLink from "./NavLink";
+import ButtonRegular from "./ButtonRegular";
 export default {
   name: "IPhone1313Pro3",
   components: {
-    Property2regular3,
-    Property1regular32,
+    NavLink,
+    ButtonRegular,
   },
   props: [
     "time",
@@ -100,7 +100,7 @@ export default {
 
 .overlap-group1-2 {
   align-items: center;
-  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/backgrounds-1@2x.svg);
+  background-image: url(/img/backgrounds-1@2x.svg);
   background-size: 100% 100%;
   display: flex;
   flex-direction: column;
@@ -152,7 +152,7 @@ export default {
 
 .overlap-group-2 {
   align-items: flex-start;
-  background-image: url(https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/border-1@2x.svg);
+  background-image: url(/img/border-1@2x.svg);
   background-size: 100% 100%;
   display: flex;
   height: 13px;

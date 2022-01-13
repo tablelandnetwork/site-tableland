@@ -3,7 +3,7 @@
     <div class="text-link poppins-semi-bold-seashell-14px">TEXT LINK</div>
     <img
       class="vector-88"
-      src="https://anima-uploads.s3.amazonaws.com/projects/61d356f9700a64e7b261164c/releases/61d360379b518eab9640b74a/img/vector-88@2x.svg"
+      src="img/vector-88@2x.svg"
     />
   </div>
 </template>

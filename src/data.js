@@ -114,7 +114,7 @@ export const property1activeData = {
 };
 
 export const property1regular22Data = {
-    tabNavigation: "WEB3 GANE STANDINGS",
+    tabNavigation: "WEB3 GAME STANDINGS",
 };
 
 export const property1regular23Data = {
@@ -313,7 +313,7 @@ export const iPhone1313Pro2Data = {
     thePossibilitiesAreEndless: "The possibilities are endless",
     untitled11: "../../img/untitled-1-1@2x.png",
     welcomeToTableland: "WELCOME TO TABLELAND >> WELCOME TO TABLELAND >>",
-    whowItWorksHowItWorksAnd: "WHOW IT WORKS >> HOW IT WORKS >> AND >>",
+    whowItWorksHowItWorksAnd: "WHO IT WORKS >> HOW IT WORKS >>",
     inTablelandWeSpeakSql: "In Tableland, we speak SQL",
     userOwnedTokenNet: "User-owned token networks are the future of the Internet",
     tablelandExistsTo: "TABLELAND EXISTS TO ENABLE ALL LAYERS OF THE INTERNET TO BE USER-OWNED AND CONTROLLED.",
@@ -689,7 +689,7 @@ export const property1TabButtonActiveData = {
 };
 
 export const property1TabButtonData = {
-    text: "WEB3 GANE STANDINGS",
+    text: "WEB3 GAME STANDINGS",
 };
 
 export const property1TabButton2Data = {
@@ -875,13 +875,14 @@ export const desktopNavbarData = {
 };
 
 export const conceptHierarchyAndContentIterationData = {
-    beReadyForTheFuture: "BE READY FOR THE FUTURE",
-    howItWorksHowItWorks: "HOW IT WORKS >> HOW IT WORKS >>",
-    showcaseShowcase: "SHOWCASE >> SHOWCASE >>",
     inTablelandWeSpeakSql: "In Tableland, we speak SQL",
     untitled51: "../../img/untitled-5-1@1x.png",
     untitled11: "../../img/untitled-1-1@1x.png",
-    welcomeToTableland: "WELCOME TO TABLELAND >> WELCOME TO TABLELAND >>",
+    welcomeToTableland:   "WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >>",
+    howItWorksHowItWorks: "HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >>",
+    tryItTryItTryIt:      "TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >>",
+    showcaseShowcase:     "SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >>",
+    beReadyForTheFuture:  "BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >>",
     screenshot20211206At12041: "../../img/screenshot-2021-12-06-at-12-04-1@2x.png",
     untitled81: "img/untitled-8-1@1x.png",
     untitled32: "../../img/untitled-3-2@2x.png",
@@ -897,7 +898,6 @@ export const conceptHierarchyAndContentIterationData = {
     whetherYouReADev: "Whether you're a developer, NFT creator, token holder, or just curious about Web3, there's a place for you in Tableland. Join a fast-growing community of innovators from all over the world.",
     thePossibilitiesAreEndless: "The possibilities are endless",
     useFamiliarSqlTab: "Use familiar SQL tables to read and write NFT metadata, media, social data, or anything else—all orchestrated by token networks like Ethereum.",
-    tryItTryItTryIt: "TRY IT >> TRY IT >> TRY IT >>",
     getAFeelForHowE: "Get a feel for how easy it is to relate tables on decentralised networks.",
     spanText: "select",
     spanText2: " * ",

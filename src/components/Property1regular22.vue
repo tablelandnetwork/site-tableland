@@ -1,9 +1,9 @@
 <template>
-  <div :class="[`desktop-button-text-link-white`, className || ``]">
-    <div class="view-code poppins-semi-bold-seashell-16px">VIEW CODE</div>
+  <div class="desktop-button-text-link-white">
+    <a :href="codeLink" class="view-code poppins-semi-bold-seashell-16px">VIEW CODE</a>
     <img
       class="vector-88-1"
-      src="../../img/vector-88@2x.svg"
+      src="img/vector-88@2x.svg"
     />
   </div>
 </template>
@@ -11,7 +11,7 @@
 <script>
 export default {
   name: "Property1regular22",
-  props: ["className"],
+  props: ["codeLink"],
 };
 </script>
 
@@ -31,6 +31,10 @@ export default {
   line-height: 22.4px;
   min-height: 22px;
   white-space: nowrap;
+}
+
+.view-code:hover {
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .vector-88-1 {
