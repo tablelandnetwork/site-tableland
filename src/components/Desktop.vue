@@ -1,455 +1,444 @@
 <template>
   <div class="container-center-horizontal">
-    <div class="concept-hierarchy-and-content-iteration screen">
-      <div class="overlap-group1-3">
-        <div class="rectangle-31">
-          <page-background />
-        </div>
+    <div class="desktop-content screen">
 
-        <desktop-navbar
-          :property2regularProps="desktopNavbarProps.property2regularProps"
-          :property2regular2Props="desktopNavbarProps.property2regular2Props"
-          :property2regular3Props="desktopNavbarProps.property2regular3Props"
-          :property1regular3Props="desktopNavbarProps.property1regular3Props"
-        />
-
-
-
-        <div class="mesas-set-1">
-          <div class="mesas-set-1-parallax">
-            <div class="mesas-4">
-              <mesas-4 />
-            </div>
-            <div class="mesas-3">
-              <mesas-3 />
-            </div>
-          </div>
-        </div>
-
-        <div class="mesas-1">
-          <mesas-1 />
-        </div>
-        <div class="mesas-2">
-          <mesas-2 />
-        </div>
-
-        <div class="bike-gang">
-          <bike-gang />
-        </div>
-
-        <div class="ellipse-157-2">
-          <yellow-blur-tall />
-        </div>
-
-        <div class="ellipse-125-1">
-          <yellow-blur-wide />
-        </div>
-
-        <div class="ellipse-165">
-          <yellow-blur-wide />
-        </div>
-
-
-        <div class="frame-51-1">
-          <div class="frame-52-1">
-            <property1regular6
-              :videoIntroduction="property1regularProps.videoIntroduction"
-              :property1iconsPlayProps="property1regularProps.property1iconsPlayProps"
-            />
-            <div class="build-d-apps-and-nft-1 orbitron-black-black-70px">{{ buildDappsAndNft }}</div>
-            <div class="tableland-is-a-netwo poppins-normal-black-20px">{{ tablelandIsANetwo }}</div>
-          </div>
-          <button-black :button-text="stateregular2Props.primaryButton" :has-arrow="true" @click="goto('#explore');" />
-        </div>
-
-        <div class="ellipse-166">
-          <yellow-blur-1 />
-        </div>
-
-        <div class="vector-15">
-          <mesas-4 />
-        </div>
-
-        <div class="ellipse-154-1">
-          <yellow-blur-1 />
-        </div>
-
-        <div class="ellipse-128">
-          <yellow-blur-1 />
-        </div>
-        <img class="untitled-1-1-1" src="img/delorean.png" />
-
-        <div class="welcome-to-tableland-1 scroll-container">
-          <div class="scroll-text orbitron-black-white-110px">{{ welcomeToTableland }}</div>
-        </div>
-
-        <div class="how-it-works-how-it-works scroll-container">
-          <div class="scroll-text orbitron-black-white-110px">
-            {{ howItWorksHowItWorks }}
-          </div>
-        </div>
-
-
-        <div class="ellipse-155">
-          <yellow-blur-1 />
-        </div>
-
-        <img
-          class="arrow-fat-line-down"
-          src="../../img/arrowfatlinedown@2x.svg"
-        />
-        <img
-          class="vector-16"
-          src="../../img/vector-5@1x.svg"
-        />
-        <img
-          class="vector-17"
-          src="../../img/vector-6@1x.svg"
-        />
-        <img
-          class="vector-18"
-          src="../../img/vector-7@1x.svg"
-        />
-
-        <div class="ellipse-156">
-          <yellow-blur-1 />
-        </div>
-
-        <div class="frame-7">
-          <div class="any-suggestions-1 orbitron-black-black-70px">Any suggestions?</div>
-          <button-black button-text="EXPLORE THE POSSIBILITIES" :has-arrow="true" />
-        </div>
-
-        <img class="untitled-3-3-1" src="img/delorean-2.png" />
-        <img class="untitled-4-1-1" src="img/delorean-3.png" />
-
-        <div class="scroll-container be-ready-for-the-future-2">
-          <h1 class="scroll-text orbitron-black-white-110px">{{ beReadyForTheFuture }}</h1>
-        </div>
-
-        <div class="desktop-cards-story-image-container">
-          <desktop-cards-story-image
-            :card-title="desktopCardsStoryImage1Props.cardTitle"
-            :card-content="desktopCardsStoryImage1Props.cardContent"
-            pad-top="md"
-          />
-          <desktop-cards-story-image
-            :card-title="desktopCardsStoryImage2Props.cardTitle"
-            :card-content="desktopCardsStoryImage2Props.cardContent"
-            pad-top="lg"
-          />
-          <desktop-cards-story-image
-            :card-title="desktopCardsStoryImage3Props.cardTitle"
-            :card-content="desktopCardsStoryImage3Props.cardContent"
-            pad-top=""
-          />
-          <desktop-cards-story-image
-            :card-title="desktopCardsStoryImage4Props.cardTitle"
-            :card-content="desktopCardsStoryImage4Props.cardContent"
-            pad-top="md"
-          />
-        </div>
-
-        <stateactive />
-        <div class="road-map-connector-1">
-          <road-map-connector :ratio=".6" />
-        </div>
-        <stateregular42
-          :testnetPhase1="stateregular4Props.testnetPhase1"
-          :number="stateregular4Props.number"
-          :rectangle55="stateregular4Props.rectangle55"
-          :roadmapNumberProps="stateregular4Props.roadmapNumberProps"
-          :desktopListGroupProps="stateregular4Props.desktopListGroupProps"
-        />
-        <div class="road-map-connector-2">
-          <road-map-connector-reverse :ratio="2" />
-        </div>
-        <stateregular5
-          :rectangle55="stateregular5Props.rectangle55"
-          :roadmapNumberProps="stateregular5Props.roadmapNumberProps"
-          :frame66Props="stateregular5Props.frame66Props"
-          :desktopListGroup2Props="stateregular5Props.desktopListGroup2Props"
-        />
-        <div class="road-map-connector-3">
-          <road-map-connector :ratio="1.3" />
-        </div>
-        <stateregular6
-          :roadmapNumberProps="stateregular6Props.roadmapNumberProps"
-          :infoBlockProps="stateregular6Props.infoBlockProps"
-        />
-        <div class="road-map-connector-4">
-          <road-map-connector-reverse :ratio="1.9" />
-        </div>
-        <stateregular6
-          :className="stateregular62Props.className"
-          :roadmapNumberProps="stateregular62Props.roadmapNumberProps"
-          :infoBlockProps="stateregular62Props.infoBlockProps"
-        />
-        <div class="road-map-connector-5">
-          <road-map-connector :ratio="1.3" />
-        </div>
-        <stateregular7
-          :testnetPhase1="stateregular7Props.testnetPhase1"
-          :x2022="stateregular7Props.x2022"
-          :rectangle55="stateregular7Props.rectangle55"
-          :roadmapNumberProps="stateregular7Props.roadmapNumberProps"
-          :desktopListGroup2Props="stateregular7Props.desktopListGroup2Props"
-        />
-        <div class="road-map-connector-6">
-          <road-map-connector-reverse :ratio="1.7" />
-        </div>
-        <div class="road-map-car">
-          <road-map-car />
-        </div>
-        <div class=showcase-bg-desktop></div>
-        <div class="scroll-container showcase-showcase-desktop">
-          <div class="scroll-text orbitron-black-white-110px">{{ showcaseShowcase }}</div>
-        </div>
-        <div class="showcase-cards-desktop">
-          <desktop-cards-story-showcase
-            card-title="Showcase 1 Example"
-            card-content="Example project description that describes the project in this description."
-            card-text-link="TEXT LINK"
-          />
-          <desktop-cards-story-showcase
-            card-title="Showcase 1 Example"
-            card-content="Example project description that describes the project in this description."
-            card-text-link="TEXT LINK"
-          />
-          <desktop-cards-story-showcase
-            card-title="Showcase 1 Example"
-            card-content="Example project description that describes the project in this description."
-            card-text-link="TEXT LINK"
-          />
-          <desktop-cards-story-showcase
-            card-title="Showcase 1 Example"
-            card-content="Example project description that describes the project in this description."
-            card-text-link="TEXT LINK"
-          />
-          <desktop-cards-story-showcase
-            card-title="Showcase 1 Example"
-            card-content="Example project description that describes the project in this description."
-            card-text-link="TEXT LINK"
-          />
-          <desktop-cards-story-showcase
-            card-title="Showcase 1 Example"
-            card-content="Example project description that describes the project in this description."
-            card-text-link="TEXT LINK"
-          />
-        </div>
-
-        <div class="showcase-cta">
-          <h2 class="orbitron-black-seashell-45px">{{ whatWillYouBuild }}</h2>
-          <div class="showcase-cta-button">
-            <button-cta :button-text="stateregular4Props2.primaryButton" :has-arrow="true" size="sm" />
-          </div>
-        </div>
-
-        <img class="untitled-8-1" :src="untitled81" />
-
-        <img
-          class="vector-19"
-          src="../../img/vector-8@1x.svg"
-        />
-        <div class="the-possibilities-are-endless-1 orbitron-black-black-45px">{{ thePossibilitiesAreEndless }}</div>
-        <div class="frame-55">
-          <div class=scroll-container-right>
-            <div class="scroll-text flex flex-row">
-
-              <!-- need enough sets of duplicate cards for the side scroll to work -->
-              <desktop-cards-straight
-                :title-text="desktopCardsStraightProps.frame29Props.extendExistingNfts"
-                :description-text="desktopCardsStraightProps.frame29Props.attachInAppOrGam"
-                code-link="#"
-              />
-              <desktop-cards-straight
-                :title-text="desktopCardsStraight2Props.frame29Props.extendExistingNfts"
-                :description-text="desktopCardsStraight2Props.frame29Props.attachInAppOrGam"
-                code-link="#"
-              />
-              <desktop-cards-straight
-                :title-text="desktopCardsStraight2Props2.extendExistingNfts"
-                :description-text="desktopCardsStraight2Props2.attachInAppOrGam"
-                code-link="#"
-              />
-              <desktop-cards-straight
-                :title-text="desktopCardsStraight3Props.frame29Props.extendExistingNfts"
-                :description-text="desktopCardsStraight3Props.frame29Props.attachInAppOrGam"
-                code-link="#"
-              />
-              <desktop-cards-straight
-                :title-text="desktopCardsStraight4Props.frame29Props.extendExistingNfts"
-                :description-text="desktopCardsStraight4Props.frame29Props.attachInAppOrGam"
-                code-link="#"
-              />
-
-              <!-- second set -->
-              <desktop-cards-straight
-                :title-text="desktopCardsStraightProps.frame29Props.extendExistingNfts"
-                :description-text="desktopCardsStraightProps.frame29Props.attachInAppOrGam"
-                code-link="#"
-              />
-              <desktop-cards-straight
-                :title-text="desktopCardsStraight2Props.frame29Props.extendExistingNfts"
-                :description-text="desktopCardsStraight2Props.frame29Props.attachInAppOrGam"
-                code-link="#"
-              />
-              <desktop-cards-straight
-                :title-text="desktopCardsStraight2Props2.extendExistingNfts"
-                :description-text="desktopCardsStraight2Props2.attachInAppOrGam"
-                code-link="#"
-              />
-              <desktop-cards-straight
-                :title-text="desktopCardsStraight3Props.frame29Props.extendExistingNfts"
-                :description-text="desktopCardsStraight3Props.frame29Props.attachInAppOrGam"
-                code-link="#"
-              />
-              <desktop-cards-straight
-                :title-text="desktopCardsStraight4Props.frame29Props.extendExistingNfts"
-                :description-text="desktopCardsStraight4Props.frame29Props.attachInAppOrGam"
-                code-link="#"
-              />
-
-              <!-- third set -->
-              <desktop-cards-straight
-                :title-text="desktopCardsStraightProps.frame29Props.extendExistingNfts"
-                :description-text="desktopCardsStraightProps.frame29Props.attachInAppOrGam"
-                code-link="#"
-              />
-              <desktop-cards-straight
-                :title-text="desktopCardsStraight2Props.frame29Props.extendExistingNfts"
-                :description-text="desktopCardsStraight2Props.frame29Props.attachInAppOrGam"
-                code-link="#"
-              />
-              <desktop-cards-straight
-                :title-text="desktopCardsStraight2Props2.extendExistingNfts"
-                :description-text="desktopCardsStraight2Props2.attachInAppOrGam"
-                code-link="#"
-              />
-              <desktop-cards-straight
-                :title-text="desktopCardsStraight3Props.frame29Props.extendExistingNfts"
-                :description-text="desktopCardsStraight3Props.frame29Props.attachInAppOrGam"
-                code-link="#"
-              />
-              <desktop-cards-straight
-                :title-text="desktopCardsStraight4Props.frame29Props.extendExistingNfts"
-                :description-text="desktopCardsStraight4Props.frame29Props.attachInAppOrGam"
-                code-link="#"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div class="in-tableland-we-speak-sql-1">
-          <div class="orbitron-black-black-45px">{{ inTablelandWeSpeakSql }}</div>
-          <div class="button-right">
-            <button-regular :button-text="stateregular8Props.secondoryButton" :has-arrow="true"/>
-          </div>
-        </div>
-
-        <div class="use-familiar-sql-tab orbitron-black-black-45px">{{ useFamiliarSqlTab }}</div>
-
-        <div class="scroll-container try-it-try-it-try-it-1">
-          <div class="scroll-text orbitron-black-white-110px">{{ tryItTryItTryIt }}</div>
-        </div>
-        
-        
-        <div class="group-6621">
-          <div class="get-a-feel-for-how-e-1 orbitron-black-black-45px">{{ getAFeelForHowE }}</div>
-          <div class="flex-row">
-            <desktop-tab-group
-              :tabsData="[
-                {
-                  tabText: desktopTabGroupProps.property1TabButtonActiveProps.text,
-                  sqlText: [
-                    {
-                      className: 'firacode-normal-hot-pink-16px',
-                      text: spanText
-                    }, {
-                      className: 'firacode-normal-seashell-16px',
-                      text: spanText2
-                    }, {
-                      className: 'firacode-normal-emerald-16px',
-                      text: spanText3
-                    }, {
-                      className: 'firacode-normal-seashell-16px',
-                      text: spanText4
-                    }, {
-                      className: 'firacode-normal-sea-serpent-16px',
-                      text: spanText5
-                    }, {
-                      className: 'firacode-normal-seashell-16px',
-                      text: spanText6
-                    }
-                  ],
-                  columns: [
-                    desktopTableSingleRowProps.x1,
-                    desktopTableSingleRowProps.x7725742,
-                    desktopTableSingleRowProps.x1983746,
-                    desktopTableSingleRowProps.x17625367
-                  ],
-                  rows: [
-                    ['1', '7725742', '1983746', '17625367'],
-                    ['2', '7725742', '1983746', '17625367'],
-                    ['3', '7725742', '1983746', '17625367'],
-                    ['4', '7725742', '1983746', '17625367'],
-                    ['5', '7725742', '1983746', '17625367'],
-                    ['6', '7725742', '1983746', '17625367'],
-                    ['7', '7725742', '1983746', '17625367'],
-                    ['8', '7725742', '1983746', '17625367'],
-                    ['9', '7725742', '1983746', '17625367'],
-                    ['10', '7725742', '1983746', '17625367']
-                  ]
-                }, {
-                  tabText: desktopTabGroupProps.property1TabButtonProps.text,
-                  sqlText: []
-                }, {
-                  tabText: desktopTabGroupProps.property1TabButton2Props.text,
-                  sqlText: []
-                }, {
-                  tabText: desktopTabGroupProps.property1TabButton3Props.text,
-                  sqlText: []
-                }
-              ]"
-            />
-          </div>
-        </div>
-
-        <div class="frame-72-4">
-          <div class="group-104">
-            <div class="join-the-community">{{ joinTheCommunity }}</div>
-            <div class="whether-youre-a-dev-1 poppins-normal-white-20px">{{ whetherYouReADev }}</div>
-          </div>
-          <button-black :buttonText="stateregular3Props.secondoryButton" :has-arrow="true" />
-        </div>
-
-        <div class="group-6622">
-          <div class="frame-62">
-            <div class="frame-63-1">
-              <div class="user-owned-token-net-1 orbitron-black-black-45px">{{ userOwnedTokenNet }}</div>
-              <div class="tableland-exists-to-1">{{ tablelandExistsTo }}</div>
-              <p class="tableland-extends-to poppins-normal-black-16px" v-html="tablelandExtendsTo"></p>
-            </div>
-            <button-regular :button-text="stateregularProps.joinUsOnDiscord" :has-arrow="true" />
-          </div>
-          <div class="group-93-1">
-            <div class="overlap-group-4">
-              <img class="untitled-7-1-1" :src="untitled71" /><img
-                class="vector-73-1"
-                src="../../img/vector-73@2x.svg"
-              />
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-
-
-
+      <div class="rectangle-31">
+        <page-background />
       </div>
+
+      <desktop-navbar
+        :property2regularProps="desktopNavbarProps.property2regularProps"
+        :property2regular2Props="desktopNavbarProps.property2regular2Props"
+        :property2regular3Props="desktopNavbarProps.property2regular3Props"
+        :property1regular3Props="desktopNavbarProps.property1regular3Props"
+      />
+
+
+      <div class="mesas-4">
+        <mesas-4 />
+      </div>
+      <div class="mesas-3">
+        <mesas-3 />
+      </div>
+
+
+      <img
+        class="mesas-5"
+        src="../../img/vector-8@1x.svg"
+      />
+
+      <div class="mesas-1">
+        <mesas-1 />
+      </div>
+      <div class="mesas-2">
+        <mesas-2 />
+      </div>
+
+      <div class="bike-gang">
+        <bike-gang />
+      </div>
+
+      <div class="sun-spot-1">
+        <yellow-blur-tall />
+      </div>
+
+      <div class="ellipse-125-1">
+        <yellow-blur-wide />
+      </div>
+
+      <div class="ellipse-165">
+        <yellow-blur-wide />
+      </div>
+
+
+      <div class="frame-51-1">
+        <div class="frame-52-1">
+          <property1regular6
+            :videoIntroduction="property1regularProps.videoIntroduction"
+            :property1iconsPlayProps="property1regularProps.property1iconsPlayProps"
+          />
+          <div class="build-d-apps-and-nft-1 orbitron-black-black-70px">{{ buildDappsAndNft }}</div>
+          <div class="tableland-is-a-netwo poppins-normal-black-20px">{{ tablelandIsANetwo }}</div>
+        </div>
+        <button-black :button-text="stateregular2Props.primaryButton" :has-arrow="true" @click="goto('#explore');" />
+      </div>
+
+      <div class="ellipse-166">
+        <yellow-blur-1 />
+      </div>
+
+      <div class="mesas-6">
+        <mesas-4 />
+      </div>
+
+      <div class="ellipse-154-1">
+        <yellow-blur-1 />
+      </div>
+
+      <div class="ellipse-128">
+        <yellow-blur-1 />
+      </div>
+      <img class="delorean-1" src="img/delorean.png" />
+
+      <div class="welcome-to-tableland-1 scroll-container">
+        <div class="scroll-text orbitron-black-white-110px">{{ welcomeToTableland }}</div>
+      </div>
+
+      <div class="how-it-works-how-it-works scroll-container">
+        <div class="scroll-text orbitron-black-white-110px">
+          {{ howItWorksHowItWorks }}
+        </div>
+      </div>
+
+
+      <div class="ellipse-155">
+        <yellow-blur-1 />
+      </div>
+
+      <img
+        class="arrow-fat-line-down"
+        src="../../img/arrowfatlinedown@2x.svg"
+      />
+      <img
+        class="vector-16"
+        src="../../img/vector-5@1x.svg"
+      />
+      <img
+        class="vector-17"
+        src="../../img/vector-6@1x.svg"
+      />
+      <img
+        class="vector-18"
+        src="../../img/vector-7@1x.svg"
+      />
+
+      <div class="ellipse-156">
+        <yellow-blur-1 />
+      </div>
+
+      <div class="frame-7">
+        <div class="any-suggestions-1 orbitron-black-black-70px">Any suggestions?</div>
+        <button-black button-text="EXPLORE THE POSSIBILITIES" :has-arrow="true" />
+      </div>
+
+      <img class="untitled-3-3-1" src="img/delorean-2.png" />
+      <img class="untitled-4-1-1" src="img/delorean-3.png" />
+
+      <div class="scroll-container be-ready-for-the-future-2">
+        <h1 class="scroll-text orbitron-black-white-110px">{{ beReadyForTheFuture }}</h1>
+      </div>
+
+      <div class="desktop-cards-story-image-container">
+        <desktop-cards-story-image
+          :card-title="desktopCardsStoryImage1Props.cardTitle"
+          :card-content="desktopCardsStoryImage1Props.cardContent"
+          pad-top="md"
+        />
+        <desktop-cards-story-image
+          :card-title="desktopCardsStoryImage2Props.cardTitle"
+          :card-content="desktopCardsStoryImage2Props.cardContent"
+          pad-top="lg"
+        />
+        <desktop-cards-story-image
+          :card-title="desktopCardsStoryImage3Props.cardTitle"
+          :card-content="desktopCardsStoryImage3Props.cardContent"
+          pad-top=""
+        />
+        <desktop-cards-story-image
+          :card-title="desktopCardsStoryImage4Props.cardTitle"
+          :card-content="desktopCardsStoryImage4Props.cardContent"
+          pad-top="md"
+        />
+      </div>
+
+      <stateactive />
+      <div class="road-map-connector-1">
+        <road-map-connector :ratio=".6" />
+      </div>
+      <stateregular42
+        :testnetPhase1="stateregular4Props.testnetPhase1"
+        :number="stateregular4Props.number"
+        :rectangle55="stateregular4Props.rectangle55"
+        :roadmapNumberProps="stateregular4Props.roadmapNumberProps"
+        :desktopListGroupProps="stateregular4Props.desktopListGroupProps"
+      />
+      <div class="road-map-connector-2">
+        <road-map-connector-reverse :ratio="2" />
+      </div>
+      <stateregular5
+        :rectangle55="stateregular5Props.rectangle55"
+        :roadmapNumberProps="stateregular5Props.roadmapNumberProps"
+        :frame66Props="stateregular5Props.frame66Props"
+        :desktopListGroup2Props="stateregular5Props.desktopListGroup2Props"
+      />
+      <div class="road-map-connector-3">
+        <road-map-connector :ratio="1.3" />
+      </div>
+      <stateregular6
+        :roadmapNumberProps="stateregular6Props.roadmapNumberProps"
+        :infoBlockProps="stateregular6Props.infoBlockProps"
+      />
+      <div class="road-map-connector-4">
+        <road-map-connector-reverse :ratio="1.9" />
+      </div>
+      <stateregular6
+        :className="stateregular62Props.className"
+        :roadmapNumberProps="stateregular62Props.roadmapNumberProps"
+        :infoBlockProps="stateregular62Props.infoBlockProps"
+      />
+      <div class="road-map-connector-5">
+        <road-map-connector :ratio="1.3" />
+      </div>
+      <stateregular7
+        :testnetPhase1="stateregular7Props.testnetPhase1"
+        :x2022="stateregular7Props.x2022"
+        :rectangle55="stateregular7Props.rectangle55"
+        :roadmapNumberProps="stateregular7Props.roadmapNumberProps"
+        :desktopListGroup2Props="stateregular7Props.desktopListGroup2Props"
+      />
+      <div class="road-map-connector-6">
+        <road-map-connector-reverse :ratio="1.7" />
+      </div>
+      <div class="road-map-car">
+        <road-map-car />
+      </div>
+      <div class=showcase-bg-desktop></div>
+      <div class="scroll-container showcase-showcase-desktop">
+        <div class="scroll-text orbitron-black-white-110px">{{ showcaseShowcase }}</div>
+      </div>
+      <div class="showcase-cards-desktop">
+        <desktop-cards-story-showcase
+          card-title="Showcase 1 Example"
+          card-content="Example project description that describes the project in this description."
+          card-text-link="TEXT LINK"
+        />
+        <desktop-cards-story-showcase
+          card-title="Showcase 1 Example"
+          card-content="Example project description that describes the project in this description."
+          card-text-link="TEXT LINK"
+        />
+        <desktop-cards-story-showcase
+          card-title="Showcase 1 Example"
+          card-content="Example project description that describes the project in this description."
+          card-text-link="TEXT LINK"
+        />
+        <desktop-cards-story-showcase
+          card-title="Showcase 1 Example"
+          card-content="Example project description that describes the project in this description."
+          card-text-link="TEXT LINK"
+        />
+        <desktop-cards-story-showcase
+          card-title="Showcase 1 Example"
+          card-content="Example project description that describes the project in this description."
+          card-text-link="TEXT LINK"
+        />
+        <desktop-cards-story-showcase
+          card-title="Showcase 1 Example"
+          card-content="Example project description that describes the project in this description."
+          card-text-link="TEXT LINK"
+        />
+      </div>
+
+      <div class="showcase-cta">
+        <h2 class="orbitron-black-seashell-45px">{{ whatWillYouBuild }}</h2>
+        <div class="showcase-cta-button">
+          <button-cta :button-text="stateregular4Props2.primaryButton" :has-arrow="true" size="sm" />
+        </div>
+      </div>
+
+      <img class="untitled-8-1" :src="untitled81" />
+
+      <div class="the-possibilities-are-endless-1 orbitron-black-black-45px">{{ thePossibilitiesAreEndless }}</div>
+      <div class="frame-55">
+        <div class=scroll-container-right>
+          <div class="scroll-text flex flex-row">
+
+            <!-- need enough sets of duplicate cards for the side scroll to work -->
+            <desktop-cards-straight
+              :title-text="desktopCardsStraightProps.frame29Props.extendExistingNfts"
+              :description-text="desktopCardsStraightProps.frame29Props.attachInAppOrGam"
+              code-link="#"
+            />
+            <desktop-cards-straight
+              :title-text="desktopCardsStraight2Props.frame29Props.extendExistingNfts"
+              :description-text="desktopCardsStraight2Props.frame29Props.attachInAppOrGam"
+              code-link="#"
+            />
+            <desktop-cards-straight
+              :title-text="desktopCardsStraight2Props2.extendExistingNfts"
+              :description-text="desktopCardsStraight2Props2.attachInAppOrGam"
+              code-link="#"
+            />
+            <desktop-cards-straight
+              :title-text="desktopCardsStraight3Props.frame29Props.extendExistingNfts"
+              :description-text="desktopCardsStraight3Props.frame29Props.attachInAppOrGam"
+              code-link="#"
+            />
+            <desktop-cards-straight
+              :title-text="desktopCardsStraight4Props.frame29Props.extendExistingNfts"
+              :description-text="desktopCardsStraight4Props.frame29Props.attachInAppOrGam"
+              code-link="#"
+            />
+
+            <!-- second set -->
+            <desktop-cards-straight
+              :title-text="desktopCardsStraightProps.frame29Props.extendExistingNfts"
+              :description-text="desktopCardsStraightProps.frame29Props.attachInAppOrGam"
+              code-link="#"
+            />
+            <desktop-cards-straight
+              :title-text="desktopCardsStraight2Props.frame29Props.extendExistingNfts"
+              :description-text="desktopCardsStraight2Props.frame29Props.attachInAppOrGam"
+              code-link="#"
+            />
+            <desktop-cards-straight
+              :title-text="desktopCardsStraight2Props2.extendExistingNfts"
+              :description-text="desktopCardsStraight2Props2.attachInAppOrGam"
+              code-link="#"
+            />
+            <desktop-cards-straight
+              :title-text="desktopCardsStraight3Props.frame29Props.extendExistingNfts"
+              :description-text="desktopCardsStraight3Props.frame29Props.attachInAppOrGam"
+              code-link="#"
+            />
+            <desktop-cards-straight
+              :title-text="desktopCardsStraight4Props.frame29Props.extendExistingNfts"
+              :description-text="desktopCardsStraight4Props.frame29Props.attachInAppOrGam"
+              code-link="#"
+            />
+
+            <!-- third set -->
+            <desktop-cards-straight
+              :title-text="desktopCardsStraightProps.frame29Props.extendExistingNfts"
+              :description-text="desktopCardsStraightProps.frame29Props.attachInAppOrGam"
+              code-link="#"
+            />
+            <desktop-cards-straight
+              :title-text="desktopCardsStraight2Props.frame29Props.extendExistingNfts"
+              :description-text="desktopCardsStraight2Props.frame29Props.attachInAppOrGam"
+              code-link="#"
+            />
+            <desktop-cards-straight
+              :title-text="desktopCardsStraight2Props2.extendExistingNfts"
+              :description-text="desktopCardsStraight2Props2.attachInAppOrGam"
+              code-link="#"
+            />
+            <desktop-cards-straight
+              :title-text="desktopCardsStraight3Props.frame29Props.extendExistingNfts"
+              :description-text="desktopCardsStraight3Props.frame29Props.attachInAppOrGam"
+              code-link="#"
+            />
+            <desktop-cards-straight
+              :title-text="desktopCardsStraight4Props.frame29Props.extendExistingNfts"
+              :description-text="desktopCardsStraight4Props.frame29Props.attachInAppOrGam"
+              code-link="#"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="in-tableland-we-speak-sql-1">
+        <div class="orbitron-black-black-45px">{{ inTablelandWeSpeakSql }}</div>
+        <div class="button-right">
+          <button-regular :button-text="stateregular8Props.secondoryButton" :has-arrow="true"/>
+        </div>
+      </div>
+
+      <div class="use-familiar-sql-tab orbitron-black-black-45px">{{ useFamiliarSqlTab }}</div>
+
+      <div class="scroll-container try-it-try-it-try-it-1">
+        <div class="scroll-text orbitron-black-white-110px">{{ tryItTryItTryIt }}</div>
+      </div>
+      
+      
+      <div class="group-6621">
+        <div class="get-a-feel-for-how-e-1 orbitron-black-black-45px">{{ getAFeelForHowE }}</div>
+        <div class="flex-row">
+          <desktop-tab-group
+            :tabsData="[
+              {
+                tabText: desktopTabGroupProps.property1TabButtonActiveProps.text,
+                sqlText: [
+                  {
+                    className: 'firacode-normal-hot-pink-16px',
+                    text: spanText
+                  }, {
+                    className: 'firacode-normal-seashell-16px',
+                    text: spanText2
+                  }, {
+                    className: 'firacode-normal-emerald-16px',
+                    text: spanText3
+                  }, {
+                    className: 'firacode-normal-seashell-16px',
+                    text: spanText4
+                  }, {
+                    className: 'firacode-normal-sea-serpent-16px',
+                    text: spanText5
+                  }, {
+                    className: 'firacode-normal-seashell-16px',
+                    text: spanText6
+                  }
+                ],
+                columns: [
+                  desktopTableSingleRowProps.x1,
+                  desktopTableSingleRowProps.x7725742,
+                  desktopTableSingleRowProps.x1983746,
+                  desktopTableSingleRowProps.x17625367
+                ],
+                rows: [
+                  ['1', '7725742', '1983746', '17625367'],
+                  ['2', '7725742', '1983746', '17625367'],
+                  ['3', '7725742', '1983746', '17625367'],
+                  ['4', '7725742', '1983746', '17625367'],
+                  ['5', '7725742', '1983746', '17625367'],
+                  ['6', '7725742', '1983746', '17625367'],
+                  ['7', '7725742', '1983746', '17625367'],
+                  ['8', '7725742', '1983746', '17625367'],
+                  ['9', '7725742', '1983746', '17625367'],
+                  ['10', '7725742', '1983746', '17625367']
+                ]
+              }, {
+                tabText: desktopTabGroupProps.property1TabButtonProps.text,
+                sqlText: []
+              }, {
+                tabText: desktopTabGroupProps.property1TabButton2Props.text,
+                sqlText: []
+              }, {
+                tabText: desktopTabGroupProps.property1TabButton3Props.text,
+                sqlText: []
+              }
+            ]"
+          />
+        </div>
+      </div>
+
+      <div class="frame-72-4">
+        <div class="group-104">
+          <div class="join-the-community">{{ joinTheCommunity }}</div>
+          <div class="whether-youre-a-dev-1 poppins-normal-white-20px">{{ whetherYouReADev }}</div>
+        </div>
+        <button-black :buttonText="stateregular3Props.secondoryButton" :has-arrow="true" />
+      </div>
+
+      <div class="group-6622">
+        <div class="frame-62">
+          <div class="frame-63-1">
+            <div class="user-owned-token-net-1 orbitron-black-black-45px">{{ userOwnedTokenNet }}</div>
+            <div class="tableland-exists-to-1">{{ tablelandExistsTo }}</div>
+            <p class="tableland-extends-to poppins-normal-black-16px" v-html="tablelandExtendsTo"></p>
+          </div>
+          <button-regular :button-text="stateregularProps.joinUsOnDiscord" :has-arrow="true" />
+        </div>
+        <div class="group-93-1">
+          <div class="overlap-group-4">
+            <img class="untitled-7-1-1" :src="untitled71" /><img
+              class="vector-73-1"
+              src="../../img/vector-73@2x.svg"
+            />
+          </div>
+        </div>
+      </div>
+
       <DiscordCtaDesktop />
 
       <desktop-footer
@@ -617,61 +606,58 @@ export default {
 </script>
 
 <style>
-.concept-hierarchy-and-content-iteration {
+.desktop-content {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 11500px;
+  width: 100%;
+  perspective: 10px;
+  perspective-origin: 0 0;
+
   align-items: flex-start;
   background-color: var(--seashell);
   display: flex;
-  height: 11500px;
-  overflow: hidden;
   position: relative;
-  width: 100%;
 }
 
-.overlap-group1-3 {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  display: flex;
-}
-
-.mesas-set-1 {
+.sun-spot-1 {
+  left: -30%;
   position: absolute;
-  top: 0px;
-  left: 0;
-  width: 100%;
-  height: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 31px;
 }
 
-.mesas-set-1-parallax {
-  position: relative;
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  perspective: 10px;
-  perspective-origin: 0 0;
+.delorean-1 {
+  left: 49%;
+  object-fit: cover;
+  position: absolute;
+  top: 300px;
+  width: 39%;
 }
 
 .mesas-4 {
   position: absolute;
-  top: 0;
+  top: 180px;
   left: 0;
   mix-blend-mode: darken;
   width: 100%;
-  height: 100%;
-  transform: translateZ(0px);
-  height: 600px;
+  transform: translateZ(1px);
 }
 
 .mesas-3 {
+  position: absolute;
+  top: 270px;
+  left: 0;
   width: 100%;
-  height: 100%;
   transform-origin: 0 0;
   transform: translateZ(3px);
-  height: 600px;
+}
+
+.mesas-5 {
+  position: absolute;
+  top: 1000px;
+  width: 100%;
+  transform-origin: 0 0;
+  transform: translateZ(3px);
 }
 
 .mesas-1 {
@@ -699,17 +685,13 @@ export default {
   width: 70%;
 }
 
-.vector-15 {
+.mesas-6 {
   mix-blend-mode: darken;
   position: absolute;
-  top: 3750px;
+  top: 3000px;
   width: 100%;
-}
-
-.ellipse-157-2 {
-  left: -30%;
-  position: absolute;
-  top: 31px;
+  transform-origin: 0 0;
+  transform: translateZ(3px);
 }
 
 .ellipse-125-1 {
@@ -770,14 +752,6 @@ export default {
   position: absolute;
   top: 0;
   width: 1135px;
-}
-
-.untitled-1-1-1 {
-  left: 49%;
-  object-fit: cover;
-  position: absolute;
-  top: 300px;
-  width: 39%;
 }
 
 .ellipse-155 {
@@ -1092,12 +1066,6 @@ export default {
   line-height: 30px;
   margin-top: 14px;
   min-height: 120px;
-  width: 100%;
-}
-
-.vector-19 {
-  position: absolute;
-  top: 1261px;
   width: 100%;
 }
 
