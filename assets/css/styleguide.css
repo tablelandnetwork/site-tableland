@@ -1,0 +1,313 @@
+:root { 
+  --black: #000000;
+  --black-2: #000000b2;
+  --black-3: #00000014;
+  --emerald: #5ad066;
+  --hot-pink: #ff65c1;
+  --orange: #fd9f58;
+  --sea-serpent: #4bcece;
+  --seashell: #f1f1f1;
+  --spray: #75fbff;
+  --white: #ffffffcc;
+ 
+  --font-size-l: 18px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 28px;
+  --font-size-xxxl: 45px;
+  --font-size-xxxxl: 55px;
+ 
+  --font-family-fira_code: "Fira Code", Helvetica;
+  --font-family-fira_code-medium: "Fira Code-Medium", Helvetica;
+  --font-family-orbitron: "Orbitron", Helvetica;
+  --font-family-poppins: "Poppins", Helvetica;
+  --font-family-sf_compact_display-regular: "SF Compact Display-Regular", Helvetica;
+  --font-family-sf_pro_text-regular: "SF Pro Text-Regular", Helvetica;
+  --font-family-sf_pro_text-semibold: "SF Pro Text-Semibold", Helvetica;
+}
+
+.firacode-normal-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-fira_code);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-normal-black-16px {
+  color: var(--black-2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.orbitron-black-seashell-18px {
+  color: var(--seashell);
+  font-family: var(--font-family-orbitron);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.poppins-normal-white-16px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.orbitron-black-black-45px {
+  color: var(--black);
+  font-family: var(--font-family-orbitron);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.poppins-normal-black-20px {
+  color: var(--black-2);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-semi-bold-seashell-14px {
+  color: var(--seashell);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.poppins-semi-bold-seashell-16px {
+  color: var(--seashell);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.orbitron-black-black-28px {
+  color: var(--black);
+  font-family: var(--font-family-orbitron);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.poppins-normal-black-16px-2 {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.orbitron-black-black-25px {
+  color: var(--black-2);
+  font-family: var(--font-family-orbitron);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.poppins-semi-bold-black-14px {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.orbitron-black-white-55px {
+  font-family: var(--font-family-orbitron);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.firacode-normal-seashell-16px {
+  color: var(--seashell);
+  font-family: var(--font-family-fira_code);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.orbitron-black-seashell-45px {
+  color: var(--seashell);
+  font-family: var(--font-family-orbitron);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.orbitron-black-seashell-25px {
+  color: var(--seashell);
+  font-family: var(--font-family-orbitron);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.poppins-semi-bold-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.firacode-normal-black-14px {
+  color: var(--black);
+  font-family: var(--font-family-fira_code);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.orbitron-black-black-28px-2 {
+  color: var(--black-2);
+  font-family: var(--font-family-orbitron);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.orbitron-black-white-110px {
+  font-family: var(--font-family-orbitron);
+  font-size: 110px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.firacode-medium-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-fira_code-medium);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.poppins-semi-bold-black-12px {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.poppins-normal-spray-16px {
+  color: var(--spray);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.orbitron-black-black-70px {
+  color: var(--black);
+  font-family: var(--font-family-orbitron);
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.orbitron-black-black-36px {
+  color: var(--black);
+  font-family: var(--font-family-orbitron);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.sfprotext-normal-black-15-7px {
+  color: var(--black);
+  font-family: var(--font-family-sf_pro_text-semibold);
+  font-size: 15.7px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sfcompactdisplay-regular-normal-black-14px {
+  color: var(--black);
+  font-family: var(--font-family-sf_compact_display-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.sfprotext-regular-normal-black-16px {
+  color: var(--black);
+  font-family: var(--font-family-sf_pro_text-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.firacode-normal-white-16px {
+  font-family: var(--font-family-fira_code);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.firacode-normal-hot-pink-16px {
+  color: var(--hot-pink);
+  font-family: var(--font-family-fira_code);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.firacode-normal-emerald-16px {
+  color: var(--emerald);
+  font-family: var(--font-family-fira_code);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.firacode-normal-sea-serpent-16px {
+  color: var(--sea-serpent);
+  font-family: var(--font-family-fira_code);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.orbitron-black-seashell-28px {
+  color: var(--seashell);
+  font-family: var(--font-family-orbitron);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 900;
+}
+
+.poppins-normal-white-20px {
+  color: var(--white);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.orbitron-black-black-25px-2 {
+  color: var(--black);
+  font-family: var(--font-family-orbitron);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.border-2px-black {
+  border: 2px solid var(--black);
+}
+
+.border-2px-seashell {
+  border: 2px solid var(--seashell);
+}
