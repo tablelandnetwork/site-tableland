@@ -32,7 +32,6 @@ export default {
   border-radius: 20px;
   display: flex;
   height: 64px;
-  min-width: 372px;
   padding: 0 30px;
   -moz-transition: all 0.2s ease;
   -webkit-transition: all 0.2s ease;
@@ -54,7 +53,6 @@ export default {
   letter-spacing: 2.4px;
   line-height: 22.4px;
   min-height: 22px;
-  min-width: 268px;
   white-space: nowrap;
 }
 
@@ -64,16 +62,16 @@ export default {
 
 }
 
-.arrow-fat-lines-right-6 {
+.arrow-fat-lines-right {
   height: 24px;
   margin-top:  -2px;
-  margin-left: 20px;
+  margin-left: 4px;
   width: 24px;
 }
 
 
-.button-black:hover .arrow-fat-lines-right-6 {
-  margin-left: 22px;
+.button-black:hover .arrow-fat-lines-right {
+  margin-left: 6px;
   margin-top:  -4px;
 }
 

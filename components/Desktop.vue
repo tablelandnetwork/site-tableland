@@ -1,5 +1,5 @@
 <template>
-  <div class="desktop-content">
+  <div class="desktop-content lg:block hidden">
 
     <DiscordCtaDesktop />
 
@@ -141,7 +141,7 @@
                 </div>
               </div>
 
-              <div class="in-tableland-we-speak-sql-1 flex justify-between">
+              <div class="leading-10 tracking-normal flex justify-between items-center">
                 <div class="orbitron-black-black-45px pt-2">{{ inTablelandWeSpeakSql }}</div>
                 <div class="button-right">
                   <button-regular :button-text="stateregular8Props.secondoryButton" :has-arrow="true" />
@@ -565,7 +565,7 @@ export default {
 .bike-gang {
   object-fit: cover;
   position: absolute;
-  top: 4850px;
+  top: 4920px;
 }
 
 .mesas-5-fore-2 {
@@ -577,7 +577,7 @@ export default {
 
 .mesas-4-fore-3 {
   position: absolute;
-  top: 5500px;
+  top: 5700px;
   mix-blend-mode: darken;
   width: 100%;
 }
@@ -817,12 +817,6 @@ export default {
   position: absolute;
   top: 4300px;
   width: 100%;
-}
-
-.in-tableland-we-speak-sql-1 {
-  letter-spacing: 0;
-  line-height: 54px;
-  white-space: nowrap;
 }
 
 .ellipse-154-1 {

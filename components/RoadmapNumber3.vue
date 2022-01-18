@@ -1,13 +1,13 @@
 <template>
   <div :class="[`roadmap-number-7-1`, className || ``]">
-    <div class="price-1 orbitron-black-seashell-45px">{{ price }}</div>
+    <div class="price-1 orbitron-black-seashell-45px z-10 whitespace-nowrap">{{ number }}</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "RoadmapNumber3",
-  props: ["price", "className"],
+  name: 'RoadmapNumber3',
+  props: ['number', 'className']
 };
 </script>
 
@@ -22,12 +22,16 @@ export default {
   padding: 0 28px;
 }
 
+.roadmap-number-7-1.fill-right {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .price-1 {
   letter-spacing: 0;
   line-height: 54px;
   min-height: 54px;
   min-width: 78px;
-  white-space: nowrap;
 }
 
 .roadmap-number-7-1.roadmap-number-8 {

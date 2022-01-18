@@ -9,7 +9,7 @@
   --seashell: #f1f1f1;
   --spray: #75fbff;
   --white: #ffffffcc;
- 
+
   --font-size-l: 18px;
   --font-size-m: 16px;
   --font-size-s: 14px;
@@ -156,6 +156,14 @@
 
 .orbitron-black-seashell-25px {
   color: var(--seashell);
+  font-family: var(--font-family-orbitron);
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.orbitron-orange-25px {
+  color: var(--orange);
   font-family: var(--font-family-orbitron);
   font-size: 25px;
   font-style: normal;

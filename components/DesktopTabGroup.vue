@@ -22,16 +22,16 @@
     <!-- content -->
     <div class="col-span-3 flex items-start flex-col ml-4 rounded-2xl border-2px-black bg-var-black overflow-hidden">
       <!-- sql -->
-      <div class="flex items-center p-4">
+      <div class="flex items-center py-4">
         <p v-for="text in tabsData[activeTab].sqlText" :key="text.text" class="firacode-normal-white-16px px-4">
           <span :class="text.className" class="span-1">{{ text.text }}</span>
         </p>
       </div>
       <!-- table -->
-      <div class="px-8 py-10 bg-var-white w-full">
+      <div class="px-8 py-10 bg-white w-full">
         <table class="table-auto w-full p-4">
           <thead>
-            <tr class="border-b-2 border-b-black border-solid">
+            <tr class="border-b-2 border-black border-solid">
               <th
                 v-for="cell in tabsData[activeTab].columns"
                 :key="cell"
@@ -42,7 +42,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="row in tabsData[activeTab].rows" :key="row[0]" class="border-b border-b-black border-solid">
+            <tr v-for="row in tabsData[activeTab].rows" :key="row[0]" class="border-b border-black border-solid">
               <td
                 v-for="cell in row"
                 :key="cell"

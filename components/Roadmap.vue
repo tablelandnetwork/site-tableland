@@ -5,19 +5,33 @@
     <img class="delorean-3" src="img/delorean-3.png">
 
     <div class="desktop-roadmap-block">
-      <img
-        class="roadmap-number-6"
-        src="img/roadmap---number@2x.svg"
-      >
+      <roadmap-number3 number="Q1" class-name="fill-right" />
       <div class="info-block">
-        <img
-          class="frame-64-1"
-          src="img/frame-64@1x.svg"
-        >
-        <img
-          class="rectangle-55-2"
-          src="img/rectangle-55-4@1x.svg"
-        >
+
+        <div class="bg-var-black p-4 rounded-tr-xl">
+          <h4 class="orbitron-black-seashell-45px bg-var-black whitespace-nowrap">Testnet Phase 1</h4>
+          <p class="orbitron-orange-25px bg-var-black">2022</p>
+
+          <desktop-list-item3
+            :ethereum-table-and-p="stateregular4Props.desktopListGroupProps.desktopListItemProps.ethereumTableAndP"
+            :text-white="true"
+          />
+          <desktop-list-item3
+            :ethereum-table-and-p="stateregular4Props.desktopListGroupProps.desktopListItem2Props.ethereumTableAndP"
+            :text-white="true"
+          />
+          <desktop-list-item3
+            :ethereum-table-and-p="stateregular4Props.desktopListGroupProps.desktopListItem3Props.ethereumTableAndP"
+            :text-white="true"
+          />
+        </div>
+        <svg width="100%" viewBox="0 0 572 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <mask id="path-1-inside-1_103_646" fill="white">
+            <path d="M0 0H572V0C572 14.3807 560.868 26.3072 546.521 27.2969L32.0647 62.7879C14.7246 63.9842 0 50.2405 0 32.8591L0 0Z" />
+          </mask>
+          <path d="M0 0H572V0C572 14.3807 560.868 26.3072 546.521 27.2969L32.0647 62.7879C14.7246 63.9842 0 50.2405 0 32.8591L0 0Z" fill="black" />
+          <path d="M0 0V-2H-2V0L0 0ZM32.0647 62.7879L31.9271 60.7927L32.0647 62.7879ZM546.521 27.2969L546.384 25.3017L546.521 27.2969ZM0 2H572V-2H0V2ZM546.384 25.3017L31.9271 60.7927L32.2024 64.7832L546.659 29.2922L546.384 25.3017ZM2 32.8591V0L-2 0V32.8591H2ZM31.9271 60.7927C15.7429 61.9092 2 49.0817 2 32.8591H-2C-2 51.3992 13.7062 66.0592 32.2024 64.7832L31.9271 60.7927ZM570 0C570 13.3295 559.682 24.3843 546.384 25.3017L546.659 29.2922C562.054 28.2301 574 15.4318 574 0H570Z" fill="black" mask="url(#path-1-inside-1_103_646)" />
+        </svg>
       </div>
     </div>
 
@@ -26,22 +40,22 @@
     </div>
 
     <div class="desktop-roadmap-block-1">
-      <roadmap-number3 :price="stateregular4Props.roadmapNumberProps.price" />
+      <roadmap-number3 :number="stateregular4Props.roadmapNumberProps.price" />
       <div class="info-block-1">
         <div class="frame-64-2">
           <div class="frame-66-3">
             <div class="testnet-phase-1 orbitron-black-black-45px">{{ stateregular4Props.testnetPhase1 }}</div>
             <div class="number-3 orbitron-black-black-25px">{{ stateregular4Props.number }}</div>
           </div>
-          <div class="desktop-list-group-4">
+          <div>
             <desktop-list-item3
-              :ethereum-table-and-p="stateregular4Props.desktopListGroupProps.desktopListItemProps.ethereumTableAndP"
+              ethereum-table-and-p="Ethereum table and payment channel support"
             />
             <desktop-list-item3
-              :ethereum-table-and-p="stateregular4Props.desktopListGroupProps.desktopListItem2Props.ethereumTableAndP"
+              ethereum-table-and-p="Token-gated developer access"
             />
             <desktop-list-item3
-              :ethereum-table-and-p="stateregular4Props.desktopListGroupProps.desktopListItem3Props.ethereumTableAndP"
+              ethereum-table-and-p="Tableland community NFT drop"
             />
           </div>
         </div>
@@ -53,7 +67,7 @@
     </div>
 
     <div class="desktop-roadmap-block-2">
-      <roadmap-number3 :price="stateregular5Props.roadmapNumberProps.price" :class-name="stateregular5Props.roadmapNumberProps.className" />
+      <roadmap-number3 :number="stateregular5Props.roadmapNumberProps.price" :class-name="stateregular5Props.roadmapNumberProps.className" />
       <div class="info-block-2">
         <div class="frame-64-3">
           <frame663 :testnet-phase1="stateregular5Props.frame66Props.testnetPhase1" :number="stateregular5Props.frame66Props.number" />
@@ -71,7 +85,7 @@
     </div>
 
     <div class="desktop-roadmap-block-3">
-      <roadmap-number3 :price="stateregular6Props.roadmapNumberProps.price" :class-name="stateregular6Props.roadmapNumberProps.className" />
+      <roadmap-number3 :number="stateregular6Props.roadmapNumberProps.price" :class-name="stateregular6Props.roadmapNumberProps.className" />
       <info-block
         :frame66-props="stateregular6Props.infoBlockProps.frame66Props"
         :desktop-list-group3-props="stateregular6Props.infoBlockProps.desktopListGroup3Props"
@@ -83,7 +97,7 @@
     </div>
 
     <div class="desktop-roadmap-block-4">
-      <roadmap-number3 :price="stateregular62Props.roadmapNumberProps.price" :class-name="stateregular62Props.roadmapNumberProps.className" />
+      <roadmap-number3 :number="stateregular62Props.roadmapNumberProps.price" :class-name="stateregular62Props.roadmapNumberProps.className" />
       <info-block
         :frame66-props="stateregular62Props.infoBlockProps.frame66Props"
         :desktop-list-group3-props="stateregular62Props.infoBlockProps.desktopListGroup3Props"
@@ -96,7 +110,7 @@
 
     <div class="desktop-roadmap-block-5">
       <roadmap-number3
-        :price="stateregular7Props.roadmapNumberProps.price"
+        :number="stateregular7Props.roadmapNumberProps.price"
         :class-name="stateregular7Props.roadmapNumberProps.className"
       />
       <div class="info-block-4">
@@ -141,19 +155,20 @@ export default {
 
 <style>
 .roadmap-container {
-  height: 2480px;
+  height: 2300px;
 }
 
 .desktop-roadmap-block {
   align-items: flex-start;
   display: flex;
-  left: 40.3vw;
+  left: 30.3vw;
+  margin-left: -30px;
   position: absolute;
   top: 0px;
 }
 
 .delorean-2 {
-  left: 9%;
+  left: 6%;
   position: absolute;
   top: -55px;
   width: 279px;
@@ -161,7 +176,7 @@ export default {
 
 .road-map-connector-1 {
   position: absolute;
-  left: 20.3vw;
+  left: 10.3vw;
   width: 25.5vw;
   top: 129px;
 }
@@ -169,14 +184,14 @@ export default {
 .desktop-roadmap-block-1 {
   align-items: flex-start;
   display: flex;
-  left: 20.5vw;
+  left: 10.5vw;
   margin-left: -67px;
   position: absolute;
   top: calc((23vw * 0.6) + (134px * 1))
 }
 
 .delorean-3 {
-  left: calc(71% + 10vw);
+  left: calc(69% + 10vw);
   position: absolute;
   top: 209px;
   width: 35%;
@@ -184,7 +199,7 @@ export default {
 
 .road-map-connector-2 {
   position: absolute;
-  left: 20.3vw;
+  left: 10.3vw;
   width: 25.5vw;
   top: calc((33vw * 0.6) + (134px * 1));
 }
@@ -194,7 +209,7 @@ export default {
   display: flex;
   height: 279px;
   margin-left: -67px;
-  left: 45.5vw;
+  left: 35.5vw;
   width: 45vw;
   position: absolute;
   top: calc((72vw * 0.6) + (134px * 1));
@@ -202,7 +217,7 @@ export default {
 
 .road-map-connector-3 {
   position: absolute;
-  left: 20.3vw;
+  left: 10.3vw;
   width: 25.5vw;
   top: calc((63vw * 0.6) + (134px * 2));
 }
@@ -210,7 +225,7 @@ export default {
 .desktop-roadmap-block-3 {
   align-items: flex-start;
   display: flex;
-  left: 20.5vw;
+  left: 10.5vw;
   margin-left: -67px;
   position: absolute;
   top: calc((92vw * 0.6) + (134px * 2));
@@ -218,7 +233,7 @@ export default {
 
 .road-map-connector-4 {
   position: absolute;
-  left: 20.3vw;
+  left: 10.3vw;
   width: 25.5vw;
   top: calc((85vw * 0.6) + (134px * 3));
 }
@@ -226,7 +241,7 @@ export default {
 .desktop-roadmap-block-4 {
   align-items: flex-start;
   display: flex;
-  left: 45.5vw;
+  left: 35.5vw;
   margin-left: -67px;
   position: absolute;
   top: calc((116vw * 0.6) + (134px * 3));
@@ -234,7 +249,7 @@ export default {
 
 .road-map-connector-5 {
   position: absolute;
-  left: 20.3vw;
+  left: 10.3vw;
   width: 25.5vw;
   top: calc((108vw * 0.6) + (134px * 4));
 }
@@ -242,7 +257,7 @@ export default {
 .desktop-roadmap-block-5 {
   align-items: flex-start;
   display: flex;
-  left: 20.5vw;
+  left: 10.5vw;
   margin-left: -67px;
   position: absolute;
   top: calc((132vw * 0.6) + (134px * 4));
@@ -250,14 +265,14 @@ export default {
 
 .road-map-connector-6 {
   position: absolute;
-  left: 20.3vw;
+  left: 10.3vw;
   width: 25.5vw;
   top: calc((131vw * 0.6) + (134px * 5));
 }
 
 .road-map-car {
   position: absolute;
-  left: calc(45vw - 220px);
+  left: calc(35vw - 220px);
   text-align: center;
   top: calc((170vw * 0.6) + (134px * 5));
 }
