@@ -1,5 +1,5 @@
 <template>
-  <img src="img/background-desktop.png" width="100%" height="11000" class="page-bg">
+  <img src="img/background-desktop.png" width="100%" height="6000" class="page-bg">
 </template>
 
 <script>
@@ -16,7 +16,7 @@ export default {};
   right: 0;
   bottom: 0;
   left: 0;
-  height: 10000px;
+  height: 5800px;
 }
 
 </style>

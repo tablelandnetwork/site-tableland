@@ -15,11 +15,6 @@
       <div class="parallax__group">
         <div class="parallax__layer--base z-50">
 
-          <div class="mesas-4">
-            <mesas-4 />
-          </div>
-
-
           <div class="section section-1">
             <div class="content flex flex-col flex-start relative">
               <div class="frame-1 z-10">
@@ -33,7 +28,7 @@
                   <button-black :button-text="stateregular2Props.primaryButton" :has-arrow="true" @click="goto('#explore');" />
                 </div>
                 <div class="text-center mt-20 w-full z-10">
-                  <img src="~static/img/arrowfatlinedown@2x.svg" class="inline">
+                  <arrow-down class="inline" />
                 </div>
               </div>
               <div class="sun-spot-2 z-0">
@@ -49,7 +44,7 @@
 
               <div class="w-1/2 orbitron-black-black-45px">{{ useFamiliarSqlTab }}</div>
 
-              <div class="pt-20 orbitron-black-black-45px">{{ thePossibilitiesAreEndless }}</div>
+              <div class="pt-60 orbitron-black-black-45px">{{ thePossibilitiesAreEndless }}</div>
               <div class="frame-55">
                 <div class="scroll-container-right">
                   <div class="scroll-text flex flex-row">
@@ -184,12 +179,13 @@
                 <div class="scroll-text orbitron-black-white-110px">{{ tryItTryItTryIt }}</div>
               </div>
 
-              <div class="group-6621">
+              <div class="">
                 <div class="get-a-feel-for-how-e-1 mt-20 orbitron-black-black-45px">{{ getAFeelForHowE }}</div>
-                <div class="flex-row">
+                <div class="mt-20 w-full">
                   <desktop-tab-group
                     :tabs-data="[
                       {
+                        id: 0,
                         tabText: desktopTabGroupProps.property1TabButtonActiveProps.text,
                         sqlText: [
                           {
@@ -231,12 +227,15 @@
                           ['10', '7725742', '1983746', '17625367']
                         ]
                       }, {
+                        id: 1,
                         tabText: desktopTabGroupProps.property1TabButtonProps.text,
                         sqlText: []
                       }, {
+                        id: 2,
                         tabText: desktopTabGroupProps.property1TabButton2Props.text,
                         sqlText: []
                       }, {
+                        id: 3,
                         tabText: desktopTabGroupProps.property1TabButton3Props.text,
                         sqlText: []
                       }
@@ -278,11 +277,7 @@
                 </div>
                 <div class="group-93-1">
                   <div class="overlap-group-4">
-                    <img class="untitled-7-1-1" src="~static/img/untitled-7-1@1x.png">
-                    <img
-                      class="vector-73-1"
-                      src="~static/img/vector-73@2x.svg"
-                    >
+                    <img class="untitled-7-1-1" src="~/assets/img/untitled-7-1@1x.png">
                   </div>
                 </div>
               </div>
@@ -331,24 +326,12 @@
           </div>
         </div><!-- end base -->
 
-        <div class="parallax__layer parallax__layer--fore-2">
-          <div class="mesas-3">
-            <mesas-3 />
-          </div>
+        <div class="parallax__layer parallax__layer--back">
 
           <img class="delorean" src="img/delorean.png">
 
           <div class="sun-spot-1">
             <yellow-blur-tall />
-          </div>
-
-          <img
-            class="mesas-5"
-            src="~static/img/vector-8@1x.svg"
-          >
-
-          <div class="mesas-4-fore">
-            <mesas-4 />
           </div>
 
           <div class="bike-gang">
@@ -359,25 +342,12 @@
             <mesas-4 />
           </div>
 
-          <div class="mesas-5-fore-2">
-            <img
-              src="~static/img/vector-8@1x.svg"
-            >
-          </div>
-
-          <div class="mesas-4-fore-4">
-            <mesas-4 />
-          </div>
-
-          <div class="mesas-6-fore-1">
-            <mesas-6 />
-          </div>
-
         </div><!-- end fore -->
 
-        <div class="parallax__layer parallax__layer--back">
-
-          <page-background />
+        <div class="parallax__layer parallax__layer--back-2">
+          <div class="mesas-3">
+            <mesas3-solid />
+          </div>
 
           <div class="sun-spot-3">
             <yellow-blur-1 />
@@ -391,11 +361,45 @@
             <yellow-blur-1 />
           </div>
 
+          <div class="mesas-4-fore">
+            <mesas-4 />
+          </div>
+
+          <div class="mesas-5-fore-2">
+            <mesas-5 />
+          </div>
+
+          <div class="mesas-6-fore-1">
+            <mesas-6 />
+          </div>
+
           <div class="sun-spot-7">
             <yellow-blur-sharp />
           </div>
+        </div>
+
+        <div class="parallax__layer parallax__layer--back-3">
+
+          <div class="mesas-5">
+            <mesas-5 />
+          </div>
+
+          <div class="mesas-4-fore-4">
+            <mesas-4 />
+          </div>
 
         </div>
+
+        <div class="parallax__layer parallax__layer--back-4">
+
+          <page-background />
+
+          <div class="mesas-4">
+            <mesas-4 />
+          </div>
+
+        </div>
+
       </div><!-- end group -->
 
     </div>
@@ -532,21 +536,27 @@ export default {
 
 .mesas-5 {
   position: absolute;
-  top: 1450px;
+  top: 1000px;
   width: 100%;
 }
 
 .mesas-4 {
   position: absolute;
-  top: 100px;
+  top: 150px;
   left: 0;
   mix-blend-mode: darken;
   width: 100%;
 }
 
+.mesas-3 {
+  position: absolute;
+  top: 300px;
+  width: 100%;
+}
+
 .mesas-4-fore {
   position: absolute;
-  top: 4200px;
+  top: 3350px;
   left: 0;
   mix-blend-mode: darken;
   width: 120%;
@@ -555,19 +565,19 @@ export default {
 .bike-gang {
   object-fit: cover;
   position: absolute;
-  top: 5750px;
+  top: 4850px;
 }
 
 .mesas-5-fore-2 {
   position: absolute;
-  top: 7710px;
+  top: 6010px;
   mix-blend-mode: darken;
   width: 130%;
 }
 
 .mesas-4-fore-3 {
   position: absolute;
-  top: 6500px;
+  top: 5500px;
   mix-blend-mode: darken;
   width: 100%;
 }
@@ -575,7 +585,7 @@ export default {
 .mesas-4-fore-4 {
   position: absolute;
   left: 0;
-  top: 9300px;
+  top: 5300px;
   mix-blend-mode: darken;
   width: 200%;
 }
@@ -583,16 +593,11 @@ export default {
 .mesas-6-fore-1 {
   position: absolute;
   left: 0;
-  top: 10300px;
+  top: 7000px;
   mix-blend-mode: darken;
   width: 100%;
 }
 
-.mesas-3 {
-  position: absolute;
-  top: 400px;
-  width: 100%;
-}
 .delorean {
   position: absolute;
   top: 400px;
@@ -623,9 +628,9 @@ export default {
 
 .sun-spot-7 {
   position: absolute;
-  top: 7900px;
+  top: 7500px;
   left: -70%;
-  width: 200%;
+  width: 180%;
 }
 .sun-spot-7 svg {
   width: 100%;
@@ -790,7 +795,7 @@ export default {
 .sun-spot-6 {
   position: absolute;
   left: -20%;
-  top: 4500px;
+  top: 4900px;
   width: 60%;
 }
 .sun-spot-6 svg {
@@ -1072,58 +1077,13 @@ export default {
   width: 100%;
 }
 
-.group-6621 {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-}
-
 .get-a-feel-for-how-e-1 {
   letter-spacing: 0;
   line-height: 54px;
 }
 
-.flex-row {
-  align-items: flex-start;
-  display: flex;
-  margin-top: 67px;
-  min-width: 1200px;
-  position: relative;
-}
-
-.frame-75 {
-  align-items: flex-start;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  height: 566px;
-  margin-left: 20px;
-  overflow: hidden;
-  width: 895px;
-}
-
-.frame-45-1 {
-  align-items: center;
-  background-color: var(--black);
-  display: flex;
-  height: 122px;
-  min-width: 895px;
-  padding: 0 40px;
-}
-
 .span-1 {
   letter-spacing: 0.05px;
-}
-
-.frame-17-1 {
-  align-items: center;
-  background-color: var(--white);
-  display: flex;
-  flex-direction: column;
-  min-height: 444px;
-  padding: 30px 0;
-  position: relative;
-  width: 895px;
 }
 
 .any-suggestions-1 {

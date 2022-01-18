@@ -1,33 +1,58 @@
 <template>
-  <div class="flex-row">
-    <div class="desktop-tab-group border-2px-black">
-      <div v-for="(tab, i) in tabsData" class="overlap-group-5">
-        <div v-if="activeTab === i" class="desktop-tab-link">
-          <div class="text valign-text-middle poppins-semi-bold-seashell-14px">{{ tab.tabText }}</div>
-        </div>
-
-        <div v-if="activeTab !== i" class="desktop-tab-link-1" @click="setTab(i)">
-          <div class="text-3 valign-text-middle poppins-semi-bold-black-14px">{{ tab.tabText }}</div>
+  <div class="grid grid-cols-4 tables-tab-group">
+    <!-- tabs -->
+    <div>
+      <div class="rounded-2xl border-2px-black overflow-hidden">
+        <div v-for="(tab, i) in tabsData" :key="tab.id">
+          <div
+            :class="{
+              'bg-var-black poppins-semi-bold-seashell-14px': activeTab === i,
+              'px-16 cursor-pointer poppins-semi-bold-black-14px': activeTab !== i,
+              'border-b-2 border-black border-solid': activeTab !== i && i < (tabsData.length - 1)
+            }"
+            class="items-center p-4"
+            @click="setTab(i)"
+          >
+            {{ tab.tabText }}
+          </div>
         </div>
       </div>
     </div>
-    <div class="frame-75 border-2px-black">
-      <div class="frame-45-1">
-        <p v-for="text in tabsData[activeTab].sqlText" class="select-from-axie_i-1 firacode-normal-white-16px">
+
+    <!-- content -->
+    <div class="col-span-3 flex items-start flex-col ml-4 rounded-2xl border-2px-black bg-var-black overflow-hidden">
+      <!-- sql -->
+      <div class="flex items-center p-4">
+        <p v-for="text in tabsData[activeTab].sqlText" :key="text.text" class="firacode-normal-white-16px px-4">
           <span :class="text.className" class="span-1">{{ text.text }}</span>
         </p>
       </div>
-      <div class="frame-17-1">
-        <desktop-table-row
-          :isHeader="true"
-          :row="tabsData[activeTab].columns"
-        />
-
-        <div v-for="row in tabsData[activeTab].rows">
-          <desktop-table-row
-            :row="row"
-          />
-        </div>
+      <!-- table -->
+      <div class="px-8 py-10 bg-var-white w-full">
+        <table class="table-auto w-full p-4">
+          <thead>
+            <tr class="border-b-2 border-b-black border-solid">
+              <th
+                v-for="cell in tabsData[activeTab].columns"
+                :key="cell"
+                class="firacode-medium-black-16px text-left py-4"
+              >
+                {{ cell }}
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="row in tabsData[activeTab].rows" :key="row[0]" class="border-b border-b-black border-solid">
+              <td
+                v-for="cell in row"
+                :key="cell"
+                class="firacode-normal-black-16px py-4"
+              >
+                {{ cell }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
@@ -35,14 +60,9 @@
 
 <script>
 
-import DesktopTableRow from "./DesktopTableRow";
 export default {
-  name: "DesktopTabGroup",
-  components: {
-    DesktopTableRow
-  },
   props: [
-    "tabsData"
+    'tabsData'
   ],
   data: function () {
     return {
@@ -56,117 +76,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.desktop-tab-group {
-  align-items: flex-start;
-  flex-direction: column;
-  border-radius: 20px;
-  display: flex;
-  overflow: hidden;
-  width: 285px;
-}
-
-.overlap-group-5 {
-  height: 60px;
-  position: relative;
-  width: 285px;
-  border-bottom: 2px solid black;
-}
-
-.overlap-group-5:last-child {
-  height: 60px;
-  position: relative;
-  width: 285px;
-  border-bottom: none;
-}
-
-.line-2-1 {
-  height: 2px;
-  left: 0;
-  position: absolute;
-  top: 59px;
-  width: 285px;
-}
-
-.line-3 {
-  height: 2px;
-  left: 0;
-  position: absolute;
-  top: 119px;
-  width: 285px;
-}
-
-.line-4-1 {
-  height: 2px;
-  left: 0;
-  position: absolute;
-  top: 179px;
-  width: 285px;
-}
-
-
-.desktop-tab-link-1 {
-  align-items: center;
-  display: flex;
-  height: 60px;
-  min-width: 285px;
-  padding: 0 30px;
-  cursor: pointer;
-}
-
-.text-3 {
-  height: 20px;
-  letter-spacing: 2.1px;
-  line-height: 19.6px;
-  min-width: 203px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.desktop-tab-link-1.desktop-tab-link-2 {
-  top: 120px;
-}
-
-.desktop-tab-link-1.desktop-tab-link-2 .text-3 {
-  min-width: 181px;
-}
-
-.desktop-tab-link-1.desktop-tab-link-3 {
-  top: 180px;
-}
-
-.desktop-tab-link-1.desktop-tab-link-3 .text-3 {
-  min-width: 94px;
-}
-
-.desktop-tab-link {
-  align-items: center;
-  background-color: var(--black);
-  display: flex;
-  height: 60px;
-  left: 0;
-  min-width: 285px;
-  padding: 0 30px;
-  position: absolute;
-  top: 0;
-}
-
-.text {
-  height: 20px;
-  letter-spacing: 2.1px;
-  line-height: 19.6px;
-  min-width: 192px;
-  text-align: center;
-  white-space: nowrap;
-}
-
-
-.select-from-axie_i-1 {
-  letter-spacing: 0.3px;
-  min-height: 42px;
-  margin-top: 1rem;
-  margin-right: 1rem;
-}
-
-</style>

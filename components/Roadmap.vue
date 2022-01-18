@@ -116,7 +116,7 @@
     </div>
 
     <div class="road-map-connector-6">
-      <road-map-connector-reverse :ratio="1.7" />
+      <road-map-connector-reverse :ratio="2" />
     </div>
     <div class="road-map-car">
       <road-map-car />
@@ -141,13 +141,13 @@ export default {
 
 <style>
 .roadmap-container {
-  height: 2750px;
+  height: 2480px;
 }
 
 .desktop-roadmap-block {
   align-items: flex-start;
   display: flex;
-  left: 50%;
+  left: 40.3vw;
   position: absolute;
   top: 0px;
 }
@@ -161,21 +161,22 @@ export default {
 
 .road-map-connector-1 {
   position: absolute;
-  left: 24.7%;
-  width: 31%;
-  top: 125px;
+  left: 20.3vw;
+  width: 25.5vw;
+  top: 129px;
 }
 
 .desktop-roadmap-block-1 {
   align-items: flex-start;
   display: flex;
-  left: 19%;
+  left: 20.5vw;
+  margin-left: -67px;
   position: absolute;
-  top: 329px;
+  top: calc((23vw * 0.6) + (134px * 1))
 }
 
 .delorean-3 {
-  left: 71%;
+  left: calc(71% + 10vw);
   position: absolute;
   top: 209px;
   width: 35%;
@@ -183,84 +184,82 @@ export default {
 
 .road-map-connector-2 {
   position: absolute;
-  left: 24.7%;
-  width: 25.5%;
-  top: 458px;
+  left: 20.3vw;
+  width: 25.5vw;
+  top: calc((33vw * 0.6) + (134px * 1));
 }
 
 .desktop-roadmap-block-2 {
   align-items: flex-start;
   display: flex;
   height: 279px;
-  left: 44%;
-  width: 45%;
+  margin-left: -67px;
+  left: 45.5vw;
+  width: 45vw;
   position: absolute;
-  top: 745px;
+  top: calc((72vw * 0.6) + (134px * 1));
 }
 
 .road-map-connector-3 {
   position: absolute;
-  left: 24.7%;
-  width: 25.5%;
-  top: 875px;
+  left: 20.3vw;
+  width: 25.5vw;
+  top: calc((63vw * 0.6) + (134px * 2));
 }
 
 .desktop-roadmap-block-3 {
   align-items: flex-start;
   display: flex;
-  height: 234px;
-  left: 19%;
-  width: 50%;
+  left: 20.5vw;
+  margin-left: -67px;
   position: absolute;
-  top: 1100px;
+  top: calc((92vw * 0.6) + (134px * 2));
 }
 
 .road-map-connector-4 {
   position: absolute;
-  left: 24.7%;
-  width: 25.5%;
-  top: 1230px;
+  left: 20.3vw;
+  width: 25.5vw;
+  top: calc((85vw * 0.6) + (134px * 3));
 }
 
 .desktop-roadmap-block-4 {
   align-items: flex-start;
   display: flex;
-  height: 234px;
-  left: 44%;
-  width: 50%;
+  left: 45.5vw;
+  margin-left: -67px;
   position: absolute;
-  top: 1510px;
+  top: calc((116vw * 0.6) + (134px * 3));
 }
 
 .road-map-connector-5 {
   position: absolute;
-  left: 24.7%;
-  width: 25.5%;
-  top: 1640px;
+  left: 20.3vw;
+  width: 25.5vw;
+  top: calc((108vw * 0.6) + (134px * 4));
 }
 
 .desktop-roadmap-block-5 {
   align-items: flex-start;
   display: flex;
-  left: 19%;
-  width: 50%;
+  left: 20.5vw;
+  margin-left: -67px;
   position: absolute;
-  top: 1866px;
+  top: calc((132vw * 0.6) + (134px * 4));
 }
 
 .road-map-connector-6 {
   position: absolute;
-  left: 24.7%;
-  width: 25.5%;
-  top: 1995px;
+  left: 20.3vw;
+  width: 25.5vw;
+  top: calc((131vw * 0.6) + (134px * 5));
 }
 
 .road-map-car {
   position: absolute;
-  left: 24.7%;
-  width: 100%;
+  left: calc(45vw - 220px);
   text-align: center;
-  top: 2255px;
+  top: calc((170vw * 0.6) + (134px * 5));
 }
 
 .roadmap-number-6 {

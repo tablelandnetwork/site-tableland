@@ -27,6 +27,14 @@
   --font-family-sf_pro_text-semibold: "SF Pro Text-Semibold", Helvetica;
 }
 
+.bg-var-black {
+  background-color: var(--black);
+}
+
+.bg-var-white {
+  background-color: var(--white);
+}
+
 .firacode-normal-black-16px {
   color: var(--black);
   font-family: var(--font-family-fira_code);
