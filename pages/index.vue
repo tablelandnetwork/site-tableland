@@ -1,15 +1,19 @@
 <template>
-  <Desktop v-bind="conceptHierarchyAndContentIterationData" />
+  <div>
+    <Desktop v-bind="conceptHierarchyAndContentIterationData" />
+    <Mobile v-bind="iPhone1313Pro2Data" />
+  </div>
 </template>
 
 <script>
 
-import { conceptHierarchyAndContentIterationData } from '@/data';
+import { conceptHierarchyAndContentIterationData, iPhone1313Pro2Data } from '@/data';
 
 export default {
   data: function () {
     return {
-      conceptHierarchyAndContentIterationData: conceptHierarchyAndContentIterationData
+      conceptHierarchyAndContentIterationData: conceptHierarchyAndContentIterationData,
+      iPhone1313Pro2Data: iPhone1313Pro2Data
     };
   }
 };
