@@ -1,19 +1,16 @@
 <template>
-  <div class="videolargeblack-1">
+  <div :class="property1iconsPlayProps.className" class="videolargeblack-1">
     <property1icons-play :className="property1iconsPlayProps.className" />
     <div class="video-introduction-1 poppins-semi-bold-black-16px">{{ videoIntroduction }}</div>
   </div>
 </template>
 
 <script>
-import Property1iconsPlay from "./Property1iconsPlay";
+
 export default {
-  name: "Property1regular6",
-  components: {
-    Property1iconsPlay,
-  },
-  props: ["videoIntroduction", "property1iconsPlayProps"],
+  props: ['videoIntroduction', 'property1iconsPlayProps']
 };
+
 </script>
 
 <style>

@@ -14,9 +14,9 @@
       class="arrow-fat-lines-right"
     >
       <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12.75 3.5L21.75 12.5L12.75 21.5V17H9.75V8H12.75V3.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M3.75 17V8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M6.75 17V8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12.75 3.5L21.75 12.5L12.75 21.5V17H9.75V8H12.75V3.5Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M3.75 17V8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M6.75 17V8" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
       </svg>
     </div>
   </div>
@@ -24,8 +24,7 @@
 
 <script>
 export default {
-  name: "ButtonRegular",
-  props: ["buttonText", "className", "hasArrow", "size"],
+  props: ['buttonText', 'className', 'hasArrow', 'size']
 };
 </script>
 

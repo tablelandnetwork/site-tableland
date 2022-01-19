@@ -43,7 +43,7 @@
   font-weight: 400;
 }
 
-.poppins-normal-black-16px {
+.poppins-normal-black-16px-2 {
   color: var(--black-2);
   font-family: var(--font-family-poppins);
   font-size: var(--font-size-m);
@@ -107,10 +107,18 @@
   font-weight: 900;
 }
 
-.poppins-normal-black-16px-2 {
+.poppins-normal-black-16px {
   color: var(--black);
   font-family: var(--font-family-poppins);
   font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.poppins-normal-black-14px {
+  color: var(--black);
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s);
   font-style: normal;
   font-weight: 400;
 }

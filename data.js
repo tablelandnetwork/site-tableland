@@ -47,19 +47,8 @@ export const mobileCardsStraight24Data = {
 };
 
 export const stateregular2Data = {
-  secondoryButton: 'CHECK OUT OUR LITE PAPER'
-};
-
-export const mobileCardsStoryImage2Data = {
-  className: 'mobile-cards-story-image-1'
-};
-
-export const mobileCardsStoryImage3Data = {
-  className: 'mobile-cards-story-image-2'
-};
-
-export const mobileCardsStoryImage4Data = {
-  className: 'mobile-cards-story-image-3'
+  secondoryButton: 'CHECK OUT OUR LITE PAPER',
+  primaryButton: 'EXPLORE THE POSSIBILITIES'
 };
 
 export const mobileTableSingleRowData = {
@@ -355,6 +344,31 @@ export const desktopCardsStoryImage4Data = {
   cardTitle: '04',
   cardContent: 'Easy as pie. Right?'
 };
+
+
+
+export const mobileCardsStoryImage1Data = {
+  cardTitle: '01',
+  cardContent: 'The bulk of digital information is stored in relational tables for a reason: Information is relational.'
+};
+
+export const mobileCardsStoryImage2Data = {
+  cardTitle: '02',
+  cardContent: 'Tableland brings the standard SQL interface to tables created and stored on Web3.'
+};
+
+export const mobileCardsStoryImage3Data = {
+  cardTitle: '03',
+  cardContent: 'Your familiar SQL tables are stored on a decentralized network of validators and anchored to Ethereum as transferable NFTs, providing ownership and access control.'
+};
+
+export const mobileCardsStoryImage4Data = {
+  cardTitle: '04',
+  cardContent: 'Easy as pie. Right?'
+};
+
+
+
 
 export const stateregular32Data = {
   secondoryButton: 'JOIN US ON DISCORD'
@@ -779,7 +793,7 @@ export const conceptHierarchyAndContentIterationData = {
   inTablelandWeSpeakSql: 'In Tableland, we speak SQL',
   untitled51: '../../img/untitled-5-1@1x.png',
   untitled11: '../../img/untitled-1-1@1x.png',
-  welcomeToTableland: 'WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >>',
+  welcomeToTableland: 'WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >>',
   howItWorksHowItWorks: 'HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >>',
   tryItTryItTryIt: 'TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >>',
   showcaseShowcase: 'SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >>',
@@ -850,21 +864,21 @@ export const iPhone1313Pro2Data = {
   buildDappsAndNft: 'Build dApps and NFT games using familiar SQL',
   aNewGenerationOf: 'A new generation of SQL-powered Web3 experience is coming, built on existing token-networks like Ethereum.',
   why: 'Why?',
-  buildingAppsInThe: 'Building apps in the future requires relational capabilities <br />(e.g., relating NFTs with corresponding metadata). <br />Smart contracts are incapable of providing this functionality.',
+  buildingAppsInThe: 'Building apps in the future requires relational capabilities (e.g., relating NFTs with corresponding metadata). Smart contracts are incapable of providing this functionality.',
   time: '9:41',
   text1: '􀎡',
   domain: 'tableland.io',
   thePossibilitiesAreEndless: 'The possibilities are endless',
   untitled11: '../../img/untitled-1-1@2x.png',
-  welcomeToTableland: 'WELCOME TO TABLELAND >> WELCOME TO TABLELAND >>',
-  whowItWorksHowItWorksAnd: 'WHO IT WORKS >> HOW IT WORKS >>',
+  welcomeToTableland: 'WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >>',
+  howItWorksHowItWorks: 'HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >>',
   inTablelandWeSpeakSql: 'In Tableland, we speak SQL',
   userOwnedTokenNet: 'User-owned token networks are the future of the Internet',
   tablelandExistsTo: 'TABLELAND EXISTS TO ENABLE ALL LAYERS OF THE INTERNET TO BE USER-OWNED AND CONTROLLED.',
   ethereumAndOtherN: 'Ethereum and other networks have brought us world computers with truly composable applications, digital identity, and ownership of digital assets. These identities and assets can be used not only to orchestrate the networks themselves, but to orchestrate and secure all other data on the user-owned Internet. We call this other data the meta-layer and it encompasses everything from NFT metadata to social application data, media, financial data, machine learning data, research data, or whatever else you can imagine.',
   untitled71: '../../img/untitled-7-1@2x.png',
   untitled51: '../../img/untitled-5-1@2x.png',
-  tryItTryItTryIt: 'TRY IT >> TRY IT >> TRY IT >>',
+  tryItTryItTryIt: 'TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >>',
   getAFeelForHowE: 'Get a feel for how easy it is to relate tables on decentralised networks.',
   spanText: 'select',
   spanText2: ' * ',
@@ -892,9 +906,14 @@ export const iPhone1313Pro2Data = {
   mobileCardsStraight23Props: mobileCardsStraight23Data,
   mobileCardsStraight24Props: mobileCardsStraight24Data,
   stateregular2Props: stateregular2Data,
-  mobileCardsStoryImageProps: mobileCardsStoryImage2Data,
-  mobileCardsStoryImage2Props: mobileCardsStoryImage3Data,
-  mobileCardsStoryImage3Props: mobileCardsStoryImage4Data,
+
+
+  mobileCardsStoryImage1Props: mobileCardsStoryImage1Data,
+  mobileCardsStoryImage2Props: mobileCardsStoryImage2Data,
+  mobileCardsStoryImage3Props: mobileCardsStoryImage3Data,
+  mobileCardsStoryImage4Props: mobileCardsStoryImage4Data,
+
+
   mobileTableSingleRowProps: mobileTableSingleRowData,
   mobileTableSingleRow2Props: mobileTableSingleRow2Data,
   mobileTableSingleRow22Props: mobileTableSingleRow22Data,

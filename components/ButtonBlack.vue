@@ -1,7 +1,15 @@
 <template>
   <div class="inline-block">
     <div class="button-black border-2px-seashell" v-on="$listeners">
-      <div class="primary-button-2 poppins-semi-bold-seashell-16px">{{ buttonText }}</div>
+      <div
+        :class="{
+          'poppins-semi-bold-seashell-16px': !mobile,
+          'poppins-semi-bold-seashell-14px': mobile
+        }"
+        class="primary-button-2"
+      >
+        {{ buttonText }}
+      </div>
 
       <div
         v-if="hasArrow"
@@ -20,7 +28,7 @@
 <script>
 export default {
   name: 'ButtonBlack',
-  props: ['buttonText', 'hasArrow']
+  props: ['buttonText', 'hasArrow', 'mobile']
 };
 </script>
 

@@ -17,7 +17,7 @@
 
           <div class="section section-1">
             <div class="content flex flex-col flex-start relative">
-              <div class="frame-1 z-10">
+              <div class="z-10">
                 <div class="">
                   <property1regular6
                     :video-introduction="property1regularProps.videoIntroduction"
@@ -45,7 +45,7 @@
               <div class="w-1/2 orbitron-black-black-45px">{{ useFamiliarSqlTab }}</div>
 
               <div class="pt-60 orbitron-black-black-45px">{{ thePossibilitiesAreEndless }}</div>
-              <div class="frame-55">
+              <div class="cards-straight-container">
                 <div class="scroll-container-right">
                   <div class="scroll-text flex flex-row">
 
@@ -510,17 +510,6 @@ export default {
   position: absolute;
   top: 300px;
   width: 100%;
-}
-
-.content__section-1 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-}
-
-.content__section-1 .frame-1 .button-black {
-  width: 400px;
 }
 
 
@@ -1114,15 +1103,15 @@ export default {
   These cards are supposed to move sideways across the screen into and outof view
   Not sure if back and forth was the idea, or looping?
  */
-.frame-55 {
+.cards-straight-container {
   width: 100%;
 }
 
-.frame-55.scroll-container-right {
+.cards-straight-container.scroll-container-right {
   width: 1260px;
 }
 
-.frame-55 .scroll-text {
+.cards-straight-container .scroll-text {
   width: 1747px;
 }
 
@@ -1214,9 +1203,9 @@ export default {
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
 
-  -moz-animation: scroll-right 85s linear infinite;
-  -webkit-animation: scroll-right 85s linear infinite;
-  animation: scroll-right 85s linear infinite;
+  -moz-animation: scroll-right 255s linear infinite;
+  -webkit-animation: scroll-right 255s linear infinite;
+  animation: scroll-right 255s linear infinite;
 }
 
 .scroll-container-right .scroll-text {
@@ -1225,9 +1214,9 @@ export default {
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
 
-  -moz-animation: scroll-left 65s linear infinite;
-  -webkit-animation: scroll-left 65s linear infinite;
-  animation: scroll-left 65s linear infinite;
+  -moz-animation: scroll-left 105s linear infinite;
+  -webkit-animation: scroll-left 105s linear infinite;
+  animation: scroll-left 105s linear infinite;
 }
 
 /* for Firefox */
