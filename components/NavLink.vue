@@ -6,8 +6,8 @@
 
 <script>
 export default {
-  name: "NavLink",
-  props: ["navigationLink", "navigationText", "className"],
+  name: 'NavLink',
+  props: ['navigationLink', 'navigationText', 'className']
 };
 </script>
 
@@ -18,7 +18,6 @@ export default {
   display: flex;
   height: 44px;
   margin-right: 20px;
-  margin-top: 134px;
   min-width: 88px;
   padding: 0 20px;
 }

@@ -1,32 +1,48 @@
 <template>
   <div class="mobile-content block lg:hidden flex flex-col overflow-hidden w-full">
 
-    <div v-show="menuOpen" class="mobile-menu bg-gray-100 z-10">
-      <button class="w-20 h-20 float-right relative focus:outline-none" @click="toggleMenu(false)">
+    <div :class="{'open': menuOpen}" class="mobile-menu bg-gray-100 z-10">
+      <button class="w-20 h-20 right-4 top-4 absolute focus:outline-none" @click="toggleMenu(false)">
         <div class="block w-5 absolute left-6 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <span
-            class="block absolute h-0.5 w-7 text-black bg-current transform transition duration-500 ease-in-out rotate-45"
+            class="block absolute h-0.5 w-7 text-black bg-current transform transition duration-500 ease-in-out"
+            :class="{
+              'rotate-45': menuOpen,
+              '-translate-y-1.5': !menuOpen
+            }"
           ></span>
           <span
-            class="block absolute h-0.5 w-7 text-black bg-current transform transition duration-500 ease-in-out -rotate-45"
+            class="block absolute h-0.5 w-7 text-black bg-current transform transition duration-500 ease-in-out"
+            :class="{
+              '-rotate-45': menuOpen,
+              'translate-y-1.5': !menuOpen
+            }"
           ></span>
         </div>
       </button>
-      <nav-link :navigation-text="mobileMenuProps1.navigationLink" />
+      <nav-link
+        :navigation-text="mobileMenuProps1.navigationLink"
+        class-name="justify-center mt-24"
+      />
       <nav-link
         :navigation-text="mobileMenuProps2.navigationLink"
-        :class-name="mobileMenuProps2.className"
+        class-name="justify-center margin-nav-link"
       />
       <nav-link
         :navigation-text="mobileMenuProps3.navigationLink"
-        :class-name="mobileMenuProps3.className"
+        class-name="justify-center margin-nav-link"
       />
-      <button-regular :button-text="mobileMenuProps4.navigationCta" />
-      <div class="discord-cta">
-        <img
-          class="vector-10"
-          src="/img/vector-10@2x.svg"
-        />
+
+      <div class="flex justify-center margin-nav-link">
+        <button-regular :button-text="mobileMenuProps4.navigationCta" />
+      </div>
+
+      <div class="flex justify-center margin-nav-link">
+        <a href="https://discord.gg/JS2vyQaa" class="discord-cta flex items-center justify-center bg-var-black rounded-lg h-16 w-20">
+          <svg width="40" height="31" viewBox="0 0 40 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M33.8737 2.57414C31.2332 1.36062 28.4842 0.478055 25.6266 0C25.2649 0.661922 24.867 1.50771 24.5777 2.20641C21.5393 1.72835 18.4647 1.72835 15.4263 2.20641C15.1008 1.43416 14.7391 0.698695 14.3412 0C11.4836 0.478055 8.69846 1.36062 6.09413 2.61091C0.885466 10.5172 -0.525216 18.2028 0.162039 25.8149C3.2366 28.1317 6.6367 29.8968 10.29 31C11.1219 29.86 11.8454 28.6833 12.4603 27.433C11.2666 26.9917 10.1453 26.4401 9.06018 25.7782C9.34955 25.5575 9.60275 25.3369 9.89212 25.1163C16.2944 28.2052 23.7457 28.2052 30.148 25.1163C30.4374 25.3369 30.6906 25.5575 30.98 25.7782C29.8948 26.4401 28.7374 26.9917 27.5437 27.433C28.1586 28.6833 28.882 29.86 29.714 31C33.3673 29.86 36.8035 28.1317 39.8419 25.8149C40.6377 16.9893 38.3951 9.34045 33.8737 2.57414ZM13.3284 21.108C11.339 21.108 9.74743 19.2693 9.74743 17.0261C9.74743 14.7829 11.339 12.9075 13.3284 12.9075C15.354 12.9075 16.9455 14.7461 16.9455 17.0261C16.9093 19.2693 15.354 21.108 13.3284 21.108ZM26.6394 21.108C24.65 21.108 23.0585 19.2693 23.0585 17.0261C23.0585 14.7829 24.65 12.9075 26.6394 12.9075C28.665 12.9075 30.2566 14.7461 30.2204 17.0261C30.1842 19.306 28.6288 21.108 26.6394 21.108Z" fill="#F1F1F1" />
+          </svg>
+        </a>
       </div>
     </div>
 
@@ -172,11 +188,26 @@ export default {
 }
 
 .mobile-menu {
+  transition: all 0.4s ease;
   position: fixed;
   top: 0;
   bottom: 0;
+  left: -100vw;
+  width: 100%;
+}
+
+.mobile-menu.open {
   left: 0;
-  width: 80%;
+}
+
+.mobile-menu .discord-cta:hover {
+  width: 5.2rem;
+  height: 4.2rem;
+  background-color: var(--black-2);
+}
+
+.margin-nav-link {
+  margin-top: 5vh
 }
 
 .ellipse-157 {

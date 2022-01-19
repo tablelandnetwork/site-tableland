@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="mobile-navbar flex w-full px-16 justify-between z-10">
+    <div class="mobile-navbar flex w-full px-6 md:px-16 justify-between z-10">
       <div class="flex flex-col justify-center">
         <img
           class="logo-black-1"
