@@ -55,7 +55,7 @@ export const mobileTableSingleRowData = {
   id: 'ID',
   product: 'PRODUCT',
   value: 'VALUE',
-  surname: 'PRICE'
+  price: 'PRICE'
 };
 
 export const mobileTableSingleRow2Data = {

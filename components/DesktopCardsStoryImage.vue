@@ -4,7 +4,7 @@
       <h4 class="card-title orbitron-black-seashell-45px">{{ cardTitle }}</h4>
       <smoking-gun-image class="smoking-gun"></smoking-gun-image>
       <div class="card-content">
-        <p class="poppins-normal-white-20px">{{ cardContent }}</p>
+        <p class="poppins-normal-white-20px leading-none">{{ cardContent }}</p>
       </div>
     </div>
     <svg width="100%" viewBox="0 0 285 78" fill="none" xmlns="http://www.w3.org/2000/svg">

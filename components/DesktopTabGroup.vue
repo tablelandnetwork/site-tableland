@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-4 tables-tab-group">
+  <div class="grid grid-cols-1 lg:grid-cols-4 tables-tab-group">
     <!-- tabs -->
     <div>
       <div class="rounded-2xl border-2px-black overflow-hidden">
@@ -7,7 +7,7 @@
           <div
             :class="{
               'bg-var-black poppins-semi-bold-seashell-14px': activeTab === i,
-              'px-16 cursor-pointer poppins-semi-bold-black-14px': activeTab !== i,
+              'lg:px-16 cursor-pointer poppins-semi-bold-black-14px': activeTab !== i,
               'border-b-2 border-black border-solid': activeTab !== i && i < (tabsData.length - 1)
             }"
             class="items-center p-4"
@@ -20,7 +20,7 @@
     </div>
 
     <!-- content -->
-    <div class="col-span-3 flex items-start flex-col ml-4 rounded-2xl border-2px-black bg-var-black overflow-hidden">
+    <div class="lg:col-span-3 flex items-start flex-col mt-4 lg:mt-0 lg:ml-4 rounded-2xl border-2px-black bg-var-black overflow-hidden">
       <!-- sql -->
       <div class="flex items-center py-4">
         <p v-for="text in tabsData[activeTab].sqlText" :key="text.text" class="firacode-normal-white-16px px-4">

@@ -216,7 +216,7 @@
             </div>
           </div>
 
-          <div class="mt-96 pt-96 mx-4 md:mx-16">
+          <div class="mt-96 pt-24 mx-4 md:mx-16">
             <h3 class="pt-40 orbitron-black-black-28px">
               {{ userOwnedTokenNet }}
             </h3>
@@ -239,6 +239,73 @@
             <div class="scroll-text orbitron-black-white-110px">{{ tryItTryItTryIt }}</div>
           </div>
 
+          <div class="mt-10 mx-4 md:mx-16">
+            <h3 class="orbitron-black-black-28px">
+              {{ getAFeelForHowE }}
+            </h3>
+
+            <div class="mt-20 w-full">
+              <desktop-tab-group
+                :tabs-data="[
+                  {
+                    id: 0,
+                    tabText: property1activeProps.tabNavigation,
+                    sqlText: [
+                      {
+                        className: 'firacode-normal-hot-pink-16px',
+                        text: spanText
+                      }, {
+                        className: 'firacode-normal-seashell-16px',
+                        text: spanText2
+                      }, {
+                        className: 'firacode-normal-emerald-16px',
+                        text: spanText3
+                      }, {
+                        className: 'firacode-normal-seashell-16px',
+                        text: spanText4
+                      }, {
+                        className: 'firacode-normal-sea-serpent-16px',
+                        text: spanText5
+                      }, {
+                        className: 'firacode-normal-seashell-16px',
+                        text: spanText6
+                      }
+                    ],
+                    columns: [
+                      mobileTableSingleRowProps.id,
+                      mobileTableSingleRowProps.product,
+                      mobileTableSingleRowProps.value,
+                      mobileTableSingleRowProps.price
+                    ],
+                    rows: [
+                      ['1', '7725742', '1983746', '17625367'],
+                      ['2', '7725742', '1983746', '17625367'],
+                      ['3', '7725742', '1983746', '17625367'],
+                      ['4', '7725742', '1983746', '17625367'],
+                      ['5', '7725742', '1983746', '17625367'],
+                      ['6', '7725742', '1983746', '17625367'],
+                      ['7', '7725742', '1983746', '17625367'],
+                      ['8', '7725742', '1983746', '17625367'],
+                      ['9', '7725742', '1983746', '17625367'],
+                      ['10', '7725742', '1983746', '17625367']
+                    ]
+                  }, {
+                    id: 1,
+                    tabText: property1regular2Props.tabNavigation,
+                    sqlText: []
+                  }, {
+                    id: 2,
+                    tabText: property1regular22Props.tabNavigation,
+                    sqlText: []
+                  }, {
+                    id: 3,
+                    tabText: property1regular23Props.tabNavigation,
+                    sqlText: []
+                  }
+                ]"
+              />
+            </div>
+          </div>
 
 
         </div>
@@ -484,19 +551,28 @@ export default {
 
 .mesas-3-mobile {
   position: absolute;
-  top: 4000px;
+  top: 3800px;
   left: 0;
   width: 100%;
 }
 .sun-spot-wide-mobile {
   position: absolute;
-  top: 4000px;
-  left: -83%;
+  top: 3470px;
+  left: -180%;
   width: 300%;
 }
 @media (min-width: 768px) {
   .mesas-3-mobile {
-    top: 4250px;
+    top: 3950px;
+  }
+  .sun-spot-wide-mobile {
+    top: 3800px;
+  }
+}
+@media (min-width: 640px) {
+  .sun-spot-wide-mobile {
+    top: 3500px;
+    left: -125%;
   }
 }
 .mesas-4-mobile-2 {
@@ -508,7 +584,7 @@ export default {
 }
 @media (min-width: 768px) {
   .mesas-4-mobile-2 {
-    top: 2550px;
+    top: 2350px;
   }
 }
 
@@ -532,11 +608,12 @@ export default {
   position: absolute;
   top: 2800px;
   left: 10%;
-  width: 70%;
+  width: 600px;
 }
 @media (min-width: 640px) {
   .group-93-1.mobile {
     top: 2700px;
+    left: 0;
   }
 }
 @media (min-width: 768px) {
