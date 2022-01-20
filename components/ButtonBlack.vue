@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-block">
+  <div class="inline-block" @click="gotoLink">
     <div class="button-black border-2px-seashell" v-on="$listeners">
       <div
         :class="{
@@ -27,8 +27,14 @@
 
 <script>
 export default {
-  name: 'ButtonBlack',
-  props: ['buttonText', 'hasArrow', 'mobile']
+  props: ['buttonText', 'hasArrow', 'mobile', 'buttonLink'],
+  methods: {
+    gotoLink: function () {
+      if (this.buttonLink) {
+        window.location.assign(this.buttonLink);
+      }
+    }
+  }
 };
 </script>
 

@@ -239,7 +239,7 @@
             <div class="scroll-text orbitron-black-white-110px">{{ tryItTryItTryIt }}</div>
           </div>
 
-          <div class="mt-10 mx-4 md:mx-16">
+          <div class="mt-10 mx-4 md:mx-16 mx-4 md:mx-16">
             <h3 class="orbitron-black-black-28px">
               {{ getAFeelForHowE }}
             </h3>
@@ -308,6 +308,18 @@
           </div>
 
 
+          <div class="mt-96 pt-96 mx-4 md:mx-16">
+            <div class="frame-72-4 flex flex-col items-start rounded-3xl p-8">
+              <div class="group-104">
+                <div class="join-the-community">{{ meetTheWorldwideCommunity }}</div>
+                <div class="whether-youre-a-dev-1 poppins-normal-white-20px">{{ whetherYouReADev }}</div>
+              </div>
+              <button-black button-link="https://discord.gg/JS2vyQaa" :button-text="stateregular3Props.secondoryButton" :has-arrow="true" />
+            </div>
+          </div>
+
+
+
         </div>
 
         <div class="parallax__layer parallax__layer--back-2">
@@ -327,11 +339,19 @@
             <yellow-blur-wide />
           </div>
 
+          <div class="bike-gang-mobile">
+            <img src="~/static/img/bike-gang@2x.png">
+          </div>
+
         </div>
 
         <div class="parallax__layer parallax__layer--back-3">
           <div class="mesas-1-mobile">
             <mesas-1 />
+          </div>
+
+          <div class="mesas-5-mobile">
+            <mesas-5 />
           </div>
         </div>
 
@@ -547,6 +567,18 @@ export default {
   top: 1100px;
   left: 0;
   width: 100%;
+}
+.mesas-5-mobile {
+  position: absolute;
+  top: 4330px;
+  left: 0;
+  width: 100%;
+}
+.bike-gang-mobile {
+  position: absolute;
+  top: 5050px;
+  left: 10%;
+  width: 90%;
 }
 
 .mesas-3-mobile {
