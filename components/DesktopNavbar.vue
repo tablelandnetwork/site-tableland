@@ -18,7 +18,7 @@
         />
         <nav-link
           :navigation-text="property2regular3Props.navigationLink"
-          navigation-link="https://docs.textile.io/"
+          navigation-link="https://textileio.gitbook.io/api-docs/uuImxC5jHtHaeltz0m5u/"
           :class-name="property2regular3Props.className"
         />
         <button-regular

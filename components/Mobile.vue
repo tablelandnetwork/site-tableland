@@ -31,7 +31,7 @@
       />
       <nav-link
         :navigation-text="mobileMenuProps3.navigationLink"
-        navigation-link="https://app.gitbook.com/o/dAgpEM9p2w3kBJyy4fDH/s/5KnS0zEEv7UZbi8kCXVA/"
+        navigation-link="https://textileio.gitbook.io/api-docs/uuImxC5jHtHaeltz0m5u/"
         class-name="justify-center margin-nav-link"
       />
 
