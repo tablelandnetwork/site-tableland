@@ -888,7 +888,7 @@ export const iPhone1313Pro2Data = {
   spanText6: ' 10;',
   meetTheWorldwideCommunity: 'Meet the worldwide community',
   whetherYouReADev: 'Whether you\'re a developer, NFT creator, token holder, or just curious about Web3, there\'s a place for you in Tableland. Join a fast-growing community of innovators from all the over the world.',
-  beReadyForTheFuture: 'BE READY FOR THE FUTURE',
+  beReadyForTheFuture: 'BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >>',
   beReadyForTheFuture2: 'BE READY FOR THE FUTURE',
   screenshot20211206At12041: '../../img/screenshot-2021-12-06-at-12-04-1@2x.png',
   anySuggestions: 'Any suggestions?',
@@ -913,6 +913,48 @@ export const iPhone1313Pro2Data = {
   mobileCardsStoryImage3Props: mobileCardsStoryImage3Data,
   mobileCardsStoryImage4Props: mobileCardsStoryImage4Data,
 
+  roadmapPhase1: {
+    quarter: 'Q1',
+    title: 'Testnet Phase 1',
+    subTitle: '2022',
+    listItem1: 'Ethereum table and payment channel support',
+    listItem2: 'Gated developer access',
+    listItem3: 'Tableland community NFT drop'
+  },
+  roadmapPhase2: {
+    quarter: 'Q2',
+    title: 'Testnet Phase 2',
+    subTitle: '2022',
+    listItem1: 'Permissionless validator network',
+    listItem2: 'Tableland token sale; NFT holders receive airdrop',
+    listItem3: 'Validator staking and rewards'
+  },
+  roadmapPhase3: {
+    quarter: 'Q3',
+    title: 'Testnet Phase 3',
+    subTitle: '2022',
+    listItem1: 'IPFS-backed SQL data types',
+    listItem2: 'User table rewards'
+  },
+  roadmapPhase4: {
+    quarter: 'Q1',
+    title: 'Mainnet launch',
+    subTitle: '2022',
+    listItem1: 'Launch event and hackathon'
+  },
+  roadmapPhase5: {
+    quarter: 'Q2',
+    title: 'Simple sharding',
+    subTitle: '2023',
+    listItem1: 'Compute sharding'
+  },
+  roadmapPhase6: {
+    quarter: 'Q4',
+    title: 'Chain expansion',
+    subTitle: '2023',
+    listItem1: 'Avalanche table and payment channel support',
+    listItem2: 'Solana table and payment channel support'
+  },
 
   mobileTableSingleRowProps: mobileTableSingleRowData,
   mobileTableSingleRow2Props: mobileTableSingleRow2Data,

@@ -39,7 +39,7 @@
         'poppins-normal-black-20px': !textWhite,
         'poppins-normal-white-20px': textWhite
       }"
-      class="ethereum-table-and-p-1 poppins-normal-black-20px"
+      class="ethereum-table-and-p-1 whitespace-nowrap poppins-normal-black-20px"
     >
       {{ ethereumTableAndP }}
     </div>
@@ -68,7 +68,6 @@ export default {
   letter-spacing: 0;
   line-height: 30px;
   margin-left: 10px;
-  white-space: nowrap;
 }
 
 .desktop-list-item-10.desktop-list-item-8 {

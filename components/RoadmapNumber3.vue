@@ -1,6 +1,6 @@
 <template>
-  <div :class="[`roadmap-number-7-1`, className || ``]">
-    <div class="price-1 orbitron-black-seashell-45px z-10 whitespace-nowrap">{{ number }}</div>
+  <div :class="[`flex items-center h-16 sm:h-32 w-16 sm:w-32 px-3 sm:px-7 bg-var-black rounded-full roadmap-number-7-1`, className || ``]">
+    <div class="price-1 orbitron-black-seashell-25px sm:orbitron-black-seashell-45px z-10 whitespace-nowrap">{{ number }}</div>
   </div>
 </template>
 
@@ -12,16 +12,6 @@ export default {
 </script>
 
 <style>
-.roadmap-number-7-1 {
-  align-items: center;
-  background-color: var(--black);
-  border-radius: 80px;
-  display: flex;
-  height: 134px;
-  min-width: 134px;
-  padding: 0 28px;
-}
-
 .roadmap-number-7-1.fill-right {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;

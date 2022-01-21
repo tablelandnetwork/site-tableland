@@ -170,6 +170,16 @@
   font-weight: 900;
 }
 
+@media (min-width: 640px) {
+  .sm\:orbitron-black-seashell-45px {
+    color: var(--seashell);
+    font-family: var(--font-family-orbitron);
+    font-size: var(--font-size-xxxl);
+    font-style: normal;
+    font-weight: 900;
+  }
+}
+
 .orbitron-orange-25px {
   color: var(--orange);
   font-family: var(--font-family-orbitron);

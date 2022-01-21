@@ -310,14 +310,30 @@
 
           <div class="mt-96 pt-96 mx-4 md:mx-16">
             <div class="frame-72-4 flex flex-col items-start rounded-3xl p-8">
-              <div class="group-104">
-                <div class="join-the-community">{{ meetTheWorldwideCommunity }}</div>
+              <div class="flex flex-col items-start self-end w-full mb-10">
+                <h3 class="orbitron-black-seashell-28px">
+                  {{ meetTheWorldwideCommunity }}
+                </h3>
                 <div class="whether-youre-a-dev-1 poppins-normal-white-20px">{{ whetherYouReADev }}</div>
               </div>
               <button-black button-link="https://discord.gg/JS2vyQaa" :button-text="stateregular3Props.secondoryButton" :has-arrow="true" />
             </div>
           </div>
 
+          <div class="scroll-container be-ready-for-the-future-2 whitespace-nowrap mt-40">
+            <h1 class="scroll-text orbitron-black-white-110px">{{ beReadyForTheFuture }}</h1>
+          </div>
+
+          <div class="mt-60 mx-4 md:mx-16">
+            <roadmap-mobile
+              :phase1="roadmapPhase1"
+              :phase2="roadmapPhase2"
+              :phase3="roadmapPhase3"
+              :phase4="roadmapPhase4"
+              :phase5="roadmapPhase5"
+              :phase6="roadmapPhase6"
+            />
+          </div>
 
 
         </div>
@@ -366,10 +382,6 @@
 
           <div class="sun-spot-1-mobile">
             <yellow-blur-1 />
-          </div>
-
-          <div class="mesas-4-mobile">
-            <mesas-4 />
           </div>
 
           <div class="sun-spot-1-mobile-2">
@@ -471,12 +483,12 @@ export default {
     'property2regular2Props',
     'group6618Props',
     'group66182Props',
-    'roadmapNumberProps',
-    'roadmapNumber2Props',
-    'roadmapNumber3Props',
-    'roadmapNumber4Props',
-    'roadmapNumber5Props',
-    'roadmapNumber6Props',
+    'roadmapPhase1',
+    'roadmapPhase2',
+    'roadmapPhase3',
+    'roadmapPhase4',
+    'roadmapPhase5',
+    'roadmapPhase6',
     'desktopListGroup22Props',
     'mobileCardsWhiteProps',
     'stateregularProps',
@@ -503,8 +515,8 @@ export default {
 </script>
 
 <style>
-.mobile-content {
-
+.mobile-content .page-bg {
+  height: 9000px;
 }
 
 .mobile-menu {
@@ -538,21 +550,6 @@ export default {
   width: 90%;
 }
 
-.mesas-4-mobile {
-  position: absolute;
-  top: 1700px;
-  left: -34%;
-  mix-blend-mode: darken;
-  width: 172%;
-  z-index: 2;
-}
-
-@media (min-width: 768px) {
-  .mesas-4-mobile {
-    top: 1900px;
-  }
-}
-
 .mesas-2-mobile {
   position: absolute;
   top: 120px;
@@ -564,9 +561,19 @@ export default {
 
 .mesas-1-mobile {
   position: absolute;
-  top: 1100px;
+  top: 900px;
   left: 0;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .mesas-1-mobile {
+    top: 1100px;
+  }
+}
+@media (min-width: 640px) {
+  .mesas-1-mobile {
+    top: 1000px;
+  }
 }
 .mesas-5-mobile {
   position: absolute;
