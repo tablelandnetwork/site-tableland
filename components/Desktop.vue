@@ -617,7 +617,7 @@ export default {
 
 .sun-spot-7 {
   position: absolute;
-  top: 7500px;
+  top: 7400px;
   left: -70%;
   width: 180%;
 }

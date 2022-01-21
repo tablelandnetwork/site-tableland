@@ -6,14 +6,15 @@
     </div>
     <div class="showcase-cards-desktop">
       <desktop-cards-story-showcase
-        card-title="Showcase 1 Example"
-        card-content="Example project description that describes the project in this description."
-        card-text-link="TEXT LINK"
+        card-title="Key-Value Store"
+        card-content="Use Tableland as a simple and fast key value store."
+        card-text-link="Explore"
       />
       <desktop-cards-story-showcase
-        card-title="Showcase 1 Example"
-        card-content="Example project description that describes the project in this description."
-        card-text-link="TEXT LINK"
+        card-title="TODO dApp"
+        card-content="A tutorial to build a simple TODO dApp and get familiar with Tableland."
+        card-link="#"
+        card-text-link="Explore"
       />
       <desktop-cards-story-showcase
         card-title="Showcase 1 Example"
@@ -44,7 +45,7 @@
       </div>
     </div>
 
-    <img class="untitled-8-1 mt-40" :src="untitled81">
+    <img class="text-center w-full mt-40" :src="untitled81">
   </div>
 </template>
 

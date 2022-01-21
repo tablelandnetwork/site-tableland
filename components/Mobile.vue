@@ -336,6 +336,25 @@
           </div>
 
 
+          <div class="my-60 xs:mb-4 py-32 mx-4 md:mx-16 text-center">
+            <h3 class="py-16 orbitron-black-black-28px">
+              {{ anySuggestions }}
+            </h3>
+            <button-black :button-text="explorePossibilities" :has-arrow="true" :mobile="true" />
+          </div>
+
+          <showcase
+            :untitled81="untitled81"
+            :what-will-you-build="whatWillYouBuild"
+            :stateregular4-props2="stateregular4Props2"
+            :showcase-showcase="showcaseShowcase"
+          />
+
+          <mobile-footer
+            :property2regular-props="property2regularProps"
+            :property2regular2-props="property2regular2Props"
+            :property2regular3-props="property2regular3Props"
+          />
         </div>
 
         <div class="parallax__layer parallax__layer--back-2">
@@ -402,6 +421,9 @@
 
 export default {
   props: [
+    'stateregular4Props2',
+
+    'explorePossibilities',
     'videoIntroduction',
     'buildDappsAndNft',
     'aNewGenerationOf',
@@ -516,7 +538,22 @@ export default {
 
 <style>
 .mobile-content .page-bg {
-  height: 9000px;
+  height: 6350px;
+}
+@media (min-width: 500px) {
+  .mobile-content .page-bg {
+    height: 6000px;
+  }
+}
+@media (min-width: 768px) {
+  .mobile-content .page-bg {
+    height: 6000px;
+  }
+}
+@media (min-width: 900px) {
+  .mobile-content .page-bg {
+    height: 6500px;
+  }
 }
 
 .mobile-menu {

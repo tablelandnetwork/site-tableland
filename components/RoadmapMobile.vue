@@ -2,7 +2,7 @@
 
   <div class="relative roadmap-container-mobile">
     <img class="roadmap-delorean-2-mobile" src="img/delorean-2.png">
-    <img class="absolute w-2/3 xs:w-1/2 left-1/4 top-96 xs:top-48" src="img/delorean-3.png">
+    <img class="absolute w-2/3 xs:w-1/2 left-1/4 top-96 xs:top-44 sm:left-3/4 sm:w-1/4 sm:top-32" src="img/delorean-3.png">
 
     <div class="flex justify-end">
       <div class="">
@@ -26,7 +26,7 @@
       <roadmap-number3 :number="phase1.quarter" />
     </div>
 
-    <div class="hidden xs:block -mt-32 sm:-mb-40 mx-8 sm:mx-16">
+    <div class="connector-1 hidden xs:block -mt-44 sm:-mt-32 sm:-mb-40 mx-8 sm:mx-16">
       <roadmap-connector-mobile :short="true" />
     </div>
     <div class="block xs:hidden -mt-60 -mb-20 mx-8">
@@ -54,7 +54,7 @@
       </div>
     </div>
 
-    <div class="hidden xs:block -mt-40 sm:-mb-32 mx-8 sm:mx-16">
+    <div class="hidden xs:block -mt-44 sm:-mt-40 sm:-mb-32 mx-8 sm:mx-16">
       <roadmap-connector-reverse-mobile :short="true" />
     </div>
     <div class="block xs:hidden -mt-80 -mb-40 mx-8 sm:mx-16">
@@ -175,12 +175,17 @@ export default {
 
 <style>
 
+.roadmap-container-mobile .connector-1 {
+  margin-top: -10.3rem;
+}
+
 .roadmap-delorean-2-mobile {
   left: 6%;
   position: absolute;
   top: -155px;
   width: 279px;
 }
+
 .roadmap-delorean-3-mobile {
   position: absolute;
   left: 25%;

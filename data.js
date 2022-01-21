@@ -860,6 +860,7 @@ export const conceptHierarchyAndContentIterationData = {
 };
 
 export const iPhone1313Pro2Data = {
+  stateregular4Props2: stateregular4Data,
   videoIntroduction: 'VIDEO INTRODUCTION',
   buildDappsAndNft: 'Build dApps and NFT games using familiar SQL',
   aNewGenerationOf: 'A new generation of SQL-powered Web3 experience is coming, built on existing token-networks like Ethereum.',
@@ -892,12 +893,12 @@ export const iPhone1313Pro2Data = {
   beReadyForTheFuture2: 'BE READY FOR THE FUTURE',
   screenshot20211206At12041: '../../img/screenshot-2021-12-06-at-12-04-1@2x.png',
   anySuggestions: 'Any suggestions?',
-  showcaseShowcase: 'SHOWCASE >> SHOWCASE >>',
+  showcaseShowcase: 'SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >>',
   whatWillYouBuild: 'What will you build?',
-  untitled81: '../../img/untitled-8-1@1x.png',
-  untitled41: '../../img/untitled-4-1@2x.png',
-  untitled33: '../../img/untitled-3-3@2x.png',
-  untitled34: '../../img/untitled-3-4@2x.png',
+  untitled81: 'img/untitled-8-1@1x.png',
+  untitled41: 'img/untitled-4-1@2x.png',
+  untitled33: 'img/untitled-3-3@2x.png',
+  untitled34: 'img/untitled-3-4@2x.png',
   chainExpansion: 'Chain expansion',
   number: '2023',
   mobileCardsStraightProps: mobileCardsStraightData,
@@ -906,6 +907,7 @@ export const iPhone1313Pro2Data = {
   mobileCardsStraight23Props: mobileCardsStraight23Data,
   mobileCardsStraight24Props: mobileCardsStraight24Data,
   stateregular2Props: stateregular2Data,
+  explorePossibilities: 'EXPLORE THE POSSIBILITIES',
 
 
   mobileCardsStoryImage1Props: mobileCardsStoryImage1Data,

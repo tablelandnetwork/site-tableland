@@ -1,6 +1,6 @@
 <template>
   <div class="inline-block" @click="gotoLink">
-    <div class="button-black border-2px-seashell" v-on="$listeners">
+    <div class="button-black flex items-center bg-var-black cursor-pointer h-16 px-7 border-2px-seashell" v-on="$listeners">
       <div
         :class="{
           'poppins-semi-bold-seashell-16px': !mobile,
