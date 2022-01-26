@@ -23,6 +23,14 @@
     format("opentype");
 }
 
+.bg-black\/50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.text-shadow-black {
+  text-shadow: 1px 1px 1px black;
+}
+
 .screen a {
   text-decoration: none;
 }

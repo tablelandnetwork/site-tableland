@@ -21,7 +21,11 @@
           navigation-link="https://textileio.gitbook.io/api-docs/uuImxC5jHtHaeltz0m5u/"
           :class-name="property2regular3Props.className"
         />
+        <div class="flex flex-col items-center justify-center rounded-3xl poppins-normal-white-16px text-shadow-black bg-black/50 px-5" v-if="ethAddress">
+          <span>{{ ethAddress.slice(0,6) }}...{{ ethAddress.slice(-5) }}</span>
+        </div>
         <button-regular
+          v-if="!ethAddress"
           :button-text="property1regular3Props.navigationCta"
           size="sm"
           @click="connect"
@@ -32,18 +36,32 @@
 </template>
 
 <script>
-import NavLink from './NavLink';
-import ButtonRegular from './ButtonRegular';
+
+import { mapState } from 'vuex';
+
 export default {
-  name: 'DesktopNavbar',
-  components: {
-    NavLink: NavLink,
-    ButtonRegular: ButtonRegular
+  props: [
+    'property2regularProps',
+    'property2regular2Props',
+    'property2regular3Props',
+    'property1regular3Props'
+  ],
+  computed: {
+    ...mapState({
+      ethAddress: state => state.ethAddress
+    })
   },
-  props: ['property2regularProps', 'property2regular2Props', 'property2regular3Props', 'property1regular3Props'],
   methods: {
-    connect: function () {
-      alert('TODO: clicked connect to tableland');
+    connect: async function () {
+      try {
+        await this.$store.dispatch('connect');
+      } catch (err) {
+        console.log('error connecting to tableland');
+        console.log(err);
+        return;
+      }
+
+      console.log('connected');
     }
   }
 };

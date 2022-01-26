@@ -4,7 +4,7 @@
       'sm': size === 'sm',
       'arrow': hasArrow
     }"
-    class="button-regular border-2px-black"
+    class="button-regular flex items-center rounded-3xl h-16 border-2px-black cursor-pointer"
     v-on="$listeners"
   >
     <div class="navigation-cta poppins-normal-black-16px-2">{{ buttonText }}</div>
@@ -30,12 +30,7 @@ export default {
 
 <style>
 .button-regular {
-  cursor: pointer;
-  align-items: center;
   background-color: rgba(0, 0, 0, 0);
-  border-radius: 20px;
-  display: flex;
-  height: 64px;
   min-width: 170px;
   padding: 0 30px;
   -moz-transition: all 0.2s ease;
