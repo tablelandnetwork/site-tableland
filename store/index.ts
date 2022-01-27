@@ -55,6 +55,7 @@ export const actions: ActionTree<RootState, RootState> = {
     context.commit('set', {key: 'allTables', value: tables});
   },
   runSql: async function (context, query) {
+    context.commit('set', {key: 'playgroundResponse', value: {}});
     const res = await runQuery(query, context.state.currentTableId) as any;
 
     console.log(res);

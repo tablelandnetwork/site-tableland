@@ -47,6 +47,19 @@
   font-style: normal;
   font-weight: 400;
 }
+.poppins-normal-16px {
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+.poppins-normal-14px {
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
 
 .firacode-normal-black-16px {
   color: var(--black);

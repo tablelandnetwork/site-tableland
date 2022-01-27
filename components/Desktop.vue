@@ -182,7 +182,7 @@
               <div class="">
                 <div class="get-a-feel-for-how-e-1 mt-20 orbitron-black-black-45px">{{ getAFeelForHowE }}</div>
                 <div class="mt-20 w-full">
-                  <desktop-tab-group
+                  <!--<desktop-tab-group
                     :tabs-data="[
                       {
                         id: 0,
@@ -239,8 +239,8 @@
                         tabText: desktopTabGroupProps.property1TabButton3Props.text,
                         sqlText: []
                       }
-                    ]"
-                  />
+                    ]"-->
+                  <desktop-tab-group :tabs-data="[]" />
                 </div>
               </div>
 

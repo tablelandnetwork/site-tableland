@@ -85,19 +85,27 @@
       </div>
     </div>
 
-    <div v-if="ethAddress && activeTab === tabsData.length" class="lg:col-span-3 flex items-start flex-col mt-4 lg:mt-0 lg:ml-4 rounded-2xl border-2px-black bg-var-black overflow-hidden">
+    <div
+      v-if="ethAddress && activeTab === tabsData.length"
+      class="lg:col-span-3 flex items-start flex-col mt-4 lg:mt-0 lg:ml-4 rounded-2xl border-2px-black bg-var-black overflow-hidden"
+    >
+      <div class="flex">
+        <div class="p-4 poppins-normal-14px text-gray-200 underline">
+          Your Tables
+        </div>
+      </div>
       <!-- select table -->
-      <div class="p-4 w-full relative">
+      <div class="py-4 px-10 w-full relative">
         <div
           v-if="tableIndex >= 1"
-          class="flex justify-center absolute left-1 text-gray-400 cursor-pointer"
+          class="flex justify-center absolute left-2 top-1/2 -mt-2 text-gray-400 cursor-pointer font-black"
           @click="incTableIndex(-1)"
         >
           &lt;
         </div>
         <div
           v-if="tableIndex < allTablesLength"
-          class="flex justify-center absolute right-1 text-gray-400 cursor-pointer"
+          class="flex justify-center absolute right-2 top-1/2 -mt-2 text-gray-400 cursor-pointer font-black"
           @click="incTableIndex(1)"
         >
           &gt;
