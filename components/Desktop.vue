@@ -485,6 +485,7 @@ export default {
     }
   }
 };
+
 </script>
 
 <style>

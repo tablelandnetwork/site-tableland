@@ -89,13 +89,58 @@
       v-if="ethAddress && activeTab === tabsData.length"
       class="lg:col-span-3 flex items-start flex-col mt-4 lg:mt-0 lg:ml-4 rounded-2xl border-2px-black bg-var-black overflow-hidden"
     >
-      <div class="flex">
-        <div class="p-4 poppins-normal-14px text-gray-200 underline">
+      <div class="flex items-center justify-between w-full py-4 px-10">
+        <div
+          class="poppins-normal-14px text-gray-200 underline p-4 rounded-2xl"
+          :class="{
+            'cursor-pointer': openCreateTable === true,
+            'border border-gray-700 border-solid': openCreateTable === false
+          }"
+          @click="openCreateTable = false"
+        >
           Your Tables
         </div>
+
+        <div
+          class="poppins-normal-14px text-gray-200 underline p-4 rounded-2xl"
+          :class="{
+            'cursor-pointer': openCreateTable === false,
+            'border border-gray-700 border-solid': openCreateTable === true
+          }"
+          @click="openCreateTable = true"
+        >
+          Create Table
+        </div>
       </div>
+
+      <div v-if="openCreateTable === true" class="py-4 px-10 w-full relative">
+        <p class="poppins-normal-14px text-gray-200 pb-1">
+          Tableland let's you use SQL. You can write a <span class="firacode-normal-emerald-16px">CREATE TABLE</span> SQL statement below to create a table.
+        </p>
+        <p class="poppins-normal-14px text-gray-200 pb-4">Looking for ideas? You could try:</p>
+        <pre class="firacode-normal-emerald-16px">CREATE TABLE cupcakes (
+  flavor     VARCHAR DEFAULT '',
+  eaten      BOOLEAN DEFAULT false,
+  delicious  BOOLEAN,
+  id         INTEGER UNIQUE
+);</pre>
+      </div>
+
+      <!-- create table sql command -->
+      <div v-if="openCreateTable === true" class="flex items-center p-4 w-full">
+        <form class="w-full" @submit.prevent="runCreate">
+          <textarea
+            v-model="playgroundCreateSql"
+            rows="8"
+            class="bg-gray-500 focus:bg-gray-500 w-full firacode-normal-16px text-green-500 caret-green-500 mb-4 p-2"
+            placeholder="CREATE TABLE ..."
+          ></textarea>
+          <button-black button-text="RUN" @click.prevent="runCreate"></button-black>
+        </form>
+      </div>
+
       <!-- select table -->
-      <div class="py-4 px-10 w-full relative">
+      <div v-if="openCreateTable === false" class="py-4 px-10 w-full relative">
         <div
           v-if="tableIndex >= 1"
           class="flex justify-center absolute left-2 top-1/2 -mt-2 text-gray-400 cursor-pointer font-black"
@@ -124,13 +169,14 @@
           </div>
         </div>
       </div>
+
       <!-- sql command -->
-      <div class="flex items-center p-4 w-full">
+      <div v-if="openCreateTable === false" class="flex items-center p-4 w-full">
         <form class="w-full" @submit.prevent="runCommand">
           <textarea
             v-model="playgroundSql"
             rows="4"
-            class="bg-gray-500 focus:bg-gray-500 w-full firacode-normal-16px text-green-500 caret-green-500 mb-4"
+            class="bg-gray-500 focus:bg-gray-500 w-full firacode-normal-16px text-green-500 caret-green-500 mb-4 p-2"
             placeholder="SELECT * FROM todos LIMIT 10;"
           ></textarea>
           <button-black button-text="RUN" @click.prevent="runCommand"></button-black>
@@ -144,8 +190,8 @@
           class="bg-gray-600 firacode-normal-seashell-16px"
         >{{ JSON.stringify(playgroundResponse, null, 4) }}</pre>
       </div>
-    </div>
 
+    </div>
   </div>
 </template>
 
@@ -161,7 +207,10 @@ export default {
     return {
       activeTab: 0,
       playgroundSql: '',
-      tableIndex: 0
+      playgroundCreateSql: '',
+      tableIndex: 0,
+      newTableName: '',
+      openCreateTable: false
     };
   },
   computed: {
@@ -185,6 +234,9 @@ export default {
     runCommand: async function () {
       await this.$store.dispatch('runSql', this.playgroundSql);
     },
+    runCreate: async function () {
+      await this.$store.dispatch('createTable', this.playgroundCreateSql);
+    },
     incTableIndex: function (inc) {
       this.tableIndex += inc;
     },
@@ -201,4 +253,5 @@ export default {
     }
   }
 };
+
 </script>
