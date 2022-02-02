@@ -15,8 +15,8 @@ jobs:
         with:
           key: ${{ secrets.BUCKET_KEY }}
           secret: ${{ secrets.BUCKET_SECRET }}
-          bucket: "bafzbeigunr7rw7weammzaqryofc3ya3raw7lilnvchg4vf6h5xgcjbwuhi"
-          thread: "bafk4ruiez2yyfjxytdmavnwa2vd4pq75ac44baxcan4hwe24sqdiyqi"
+          bucket: "bafzbeibqrty662jdv6rr6bupkc3qrbfc5ih77vicsqfl32xesfal5ho3di"
+          thread: "bafkwepbma4zz37rs7dns5ye3anc2j7ewqywu2rfciles4oca2b5xkxq"
           path: "dist"
       - run: echo "bucket - ${{ steps.bucket.outputs.key }}"
       - run: echo "ipfs - ${{ steps.bucket.outputs.ipfs }}"
@@ -25,4 +25,3 @@ jobs:
       - run: echo "ipns link - ${{ steps.bucket.outputs.ipnsUrl }}"
       - run: echo "hub - ${{ steps.bucket.outputs.hub }}"
       - run: echo "www - ${{ steps.bucket.outputs.www }}"
-
