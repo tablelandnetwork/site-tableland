@@ -187,7 +187,7 @@
         <h3 v-if="playgroundResponse.error || playgroundResponse.result" class="orbitron-black-black-28px-2">Response:</h3>
         <pre
           v-if="playgroundResponse.error || playgroundResponse.result"
-          class="bg-gray-600 firacode-normal-seashell-16px"
+          class="bg-gray-600 firacode-normal-seashell-16px overflow-x-scroll"
         >{{ JSON.stringify(playgroundResponse, null, 4) }}</pre>
       </div>
 

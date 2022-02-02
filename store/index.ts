@@ -65,8 +65,10 @@ export const actions: ActionTree<RootState, RootState> = {
   },
   createTable: async function (context, createStatement) {
     try {
+      console.log(createStatement);
       // TODO: table is a variation of a v4 uuid with 0x prepended and no dashes
-      const table = await createTable(createStatement);
+      const table = await createTable(createStatement, 'TODO: API changes need to propagate before this will work');
+      console.log(table);
       const tableId = formatUuid(table.slice(2));
       // TODO: setup table to track tables created here
       const tablesTable = await runQuery(sql.insertTable(parseName(createStatement), tableId), context.state.tablesTableId) as any;
@@ -120,15 +122,23 @@ export const actions: ActionTree<RootState, RootState> = {
     }
 
     if (!tablesTableExists) {
-      console.log('tablesTable does not exist, gonna try to create');
-      const tableIdNoFormat = await createTable(sql.createtablesTable());
-      const tablesTableId = formatUuid(tableIdNoFormat.slice(2));
+      try {
+        console.log('tablesTable does not exist, gonna try to create');
+        const tableIdNoFormat = await createTable(sql.createtablesTable(), 'TODO: API changes need to propagate before this will work');
+        console.log(tableIdNoFormat);
 
-      context.commit('set', {key: 'tablesTableId', value: tablesTableId || ''});
-      const tablesTable = await runQuery(sql.selectTablesTable(), tablesTableId) as any;
-      if (tablesTable.result) {
-        context.commit('set', {key: 'tablesTable', value: tablesTable.result.data});
-        tablesTableExists = true;
+        const tablesTableId = formatUuid(tableIdNoFormat.slice(2));
+
+        context.commit('set', {key: 'tablesTableId', value: tablesTableId || ''});
+        const tablesTable = await runQuery(sql.selectTablesTable(), tablesTableId) as any;
+
+        console.log(tablesTable);
+        if (tablesTable.result) {
+          context.commit('set', {key: 'tablesTable', value: tablesTable.result.data});
+          tablesTableExists = true;
+        }
+      } catch (err) {
+        console.log(err);
       }
     }
 
@@ -169,7 +179,7 @@ const parseName = function (createStatement: string) {
   const words = createStatement.split(' ').filter(s => s);
 
   if (words[0].toUpperCase() === 'CREATE' && words[1].toUpperCase() === 'TABLE') {
-    return words[3];
+    return words[2];
   }
 
   // TODO: this whole function can go away once the createTable call returns the name
@@ -188,8 +198,8 @@ const formatUuid = function (val: string) {
 const tablesTableName = 'playground_tables_table';
 const sql = {
   createtablesTable: () => `CREATE TABLE ${tablesTableName} (
-    table_name VARCHAR NOT NULL,
-    uuid VARCHAR NOT NULL
+    table_name TEXT NOT NULL,
+    uuid TEXT NOT NULL
   );`,
   insertTable: (name: string, uuid: string) => `INSERT INTO ${tablesTableName}(table_name, uuid) VALUES ('${name}', '${uuid}');`,
   selectTablesTable: () => `SELECT * FROM ${tablesTableName}`
