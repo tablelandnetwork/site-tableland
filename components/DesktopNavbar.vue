@@ -18,10 +18,13 @@
         />
         <nav-link
           :navigation-text="property2regular3Props.navigationLink"
-          navigation-link="https://textileio.gitbook.io/api-docs/uuImxC5jHtHaeltz0m5u/"
+          navigation-link="https://docs.tableland.xyz/"
           :class-name="property2regular3Props.className"
         />
-        <div class="flex flex-col items-center justify-center rounded-3xl poppins-normal-white-16px text-shadow-black bg-black/50 px-5" v-if="ethAddress">
+        <div
+          v-if="ethAddress"
+          class="flex flex-col items-center justify-center rounded-3xl poppins-normal-white-16px text-shadow-black bg-black/50 px-5"
+        >
           <span>{{ ethAddress.slice(0,6) }}...{{ ethAddress.slice(-5) }}</span>
         </div>
         <button-regular

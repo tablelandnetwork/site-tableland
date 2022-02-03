@@ -255,7 +255,11 @@
                     <div class="join-the-community">{{ joinTheCommunity }}</div>
                     <div class="whether-youre-a-dev-1 poppins-normal-white-20px">{{ whetherYouReADev }}</div>
                   </div>
-                  <button-black :button-text="stateregular3Props.secondoryButton" :has-arrow="true" />
+                  <button-black
+                    :button-text="stateregular3Props.secondoryButton"
+                    :has-arrow="true"
+                    button-link="https://discord.gg/5ss2pTRy"
+                  />
                 </div>
               </div>
 
@@ -273,7 +277,11 @@
                       {{ builtOnSql }}
                     </p>
                   </div>
-                  <button-regular :button-text="stateregularProps.joinUsOnDiscord" :has-arrow="true" />
+                  <button-regular
+                    :button-text="stateregularProps.joinUsOnDiscord"
+                    :has-arrow="true"
+                    button-link="https://discord.gg/5ss2pTRy"
+                  />
                 </div>
                 <div class="group-93-1">
                   <div class="overlap-group-4">
@@ -621,6 +629,8 @@ export default {
   top: 7400px;
   left: -70%;
   width: 180%;
+  height: 1500px;
+  overflow: hidden;
 }
 .sun-spot-7 svg {
   width: 100%;

@@ -31,7 +31,7 @@
       />
       <nav-link
         :navigation-text="mobileMenuProps3.navigationLink"
-        navigation-link="https://textileio.gitbook.io/api-docs/uuImxC5jHtHaeltz0m5u/"
+        navigation-link="https://docs.tableland.xyz/"
         class-name="justify-center margin-nav-link"
       />
 

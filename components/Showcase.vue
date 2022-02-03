@@ -13,7 +13,7 @@
       <desktop-cards-story-showcase
         card-title="TODO dApp"
         card-content="A tutorial to build a simple TODO dApp and get familiar with Tableland."
-        card-link="#"
+        card-link="https://bafzbeief5apdktj25lyoobv6kcity4icgoya5etklxxixkaugcmttetafm.textile.space/"
         card-text-link="Explore"
       />
       <desktop-cards-story-showcase

@@ -24,7 +24,14 @@
 
 <script>
 export default {
-  props: ['buttonText', 'className', 'hasArrow', 'size']
+  props: ['buttonText', 'className', 'hasArrow', 'size', 'buttonLink'],
+  methods: {
+    gotoLink: function () {
+      if (this.buttonLink) {
+        window.location.assign(this.buttonLink);
+      }
+    }
+  }
 };
 </script>
 
