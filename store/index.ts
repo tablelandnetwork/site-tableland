@@ -69,7 +69,7 @@ export const actions: ActionTree<RootState, RootState> = {
       // TODO: table is a variation of a v4 uuid with 0x prepended and no dashes
       const table = await createTable(createStatement, 'TODO: API changes need to propagate before this will work');
       console.log(table);
-      const tableId = formatUuid(table.slice(2));
+      const tableId = formatUuid(table.id.slice(2));
       // TODO: setup table to track tables created here
       const tablesTable = await runQuery(sql.insertTable(parseName(createStatement), tableId), context.state.tablesTableId) as any;
 
@@ -127,7 +127,7 @@ export const actions: ActionTree<RootState, RootState> = {
         const tableIdNoFormat = await createTable(sql.createtablesTable(), 'TODO: API changes need to propagate before this will work');
         console.log(tableIdNoFormat);
 
-        const tablesTableId = formatUuid(tableIdNoFormat.slice(2));
+        const tablesTableId = formatUuid(tableIdNoFormat.id.slice(2));
 
         context.commit('set', {key: 'tablesTableId', value: tablesTableId || ''});
         const tablesTable = await runQuery(sql.selectTablesTable(), tablesTableId) as any;

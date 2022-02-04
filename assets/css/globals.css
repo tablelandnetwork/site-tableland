@@ -35,8 +35,16 @@
   margin-left: 33%;
 }
 
+.-ml-1\/3 {
+  margin-left: -33%;
+}
+
 .ml-1\/2 {
   margin-left: 50%;
+}
+
+.-ml-1\/2 {
+  margin-left: -50%;
 }
 
 .bg-black\/50 {

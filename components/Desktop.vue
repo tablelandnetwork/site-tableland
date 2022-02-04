@@ -33,7 +33,7 @@
                   <arrow-down class="inline" />
                 </div>
               </div>
-              <div class="sun-spot-2 z-0">
+              <div class="absolute -top-36 left-1/2 w-full z-0">
                 <yellow-blur-1 />
               </div>
 
@@ -339,66 +339,67 @@
 
         <div class="parallax__layer parallax__layer--back">
 
-          <div class="w-full ml-96 -mt-48">
+          <div class="w-full -ml-1/2 -mt-48 h-96">
             <yellow-blur-1 />
           </div>
 
-          <div class="w-full -mt-24">
+          <div class="my-96 py-96"><!-- spacer --></div>
+
+          <div class="w-full h-96">
             <mesas-2 />
           </div>
 
           <div class="my-96 py-96"><!-- spacer --></div>
-          <div class="my-96 py-60"><!-- spacer --></div>
+          <div class="my-60 py-96"><!-- spacer --></div>
 
-          <div class="w-1/2">
+          <div class="w-1/2 h-96">
             <img src="~/assets/img/bike-gang@2x.png">
           </div>
 
-          <div class="w-full">
+          <div class="my-96 py-96"><!-- spacer --></div>
+
+          <div class="w-full h-96">
             <mesas-4 />
           </div>
 
         </div><!-- end back -->
 
         <div class="parallax__layer parallax__layer--back-2">
-          <div class="w-full mt-24">
+          <div class="w-full mt-24 h-96">
             <mesas3-solid />
           </div>
 
           <div class="my-96 py-96"><!-- spacer --></div>
           <div class="my-96 py-80"><!-- spacer --></div>
 
-          <div class="w-full">
+          <div class="w-full h-96">
             <mesas-4 />
           </div>
 
-          <div class="w-2/3 ml-1/2 pt-48">
+          <div class="ml-1/3 w-2/3 -mt-96 h-96">
             <yellow-blur-1 />
           </div>
 
-          <div class="w-2/3 -mt-40">
+          <div class="w-2/3 ml-1/2 mt-48 pt-96 h-96">
             <yellow-blur-1 />
           </div>
 
-          <div class="w-full ml-1/2">
+          <div class="py-80"><!-- spacer --></div>
+
+          <div class="w-2/3 h-96">
             <yellow-blur-1 />
           </div>
 
           <div class="py-96"></div>
+          <div class="py-96"></div>
 
-          <div class="w-2/1">
-            <mesas-4 />
-          </div>
+          <div class="py-80"><!-- spacer --></div>
 
-          <div class="mesas-5-fore-2">
+          <div class=" h-96">
             <mesas-5 />
           </div>
 
-          <div class="mesas-6-fore-1">
-            <mesas-6 />
-          </div>
-
-          <div class="sun-spot-7">
+          <div class=" h-96">
             <yellow-blur-1 />
           </div>
         </div>
@@ -581,15 +582,7 @@ export default {
   width: 100%;
 }
 
-.sun-spot-2 {
-  position: absolute;
-  top: -200px;
-  left: -500px;
-  width: 1000px;
-}
-.sun-spot-2 svg {
-  width: 100%;
-}
+
 
 .sun-spot-7 {
   position: absolute;
