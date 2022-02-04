@@ -371,18 +371,18 @@
           </div>
 
           <div class="sun-spot-wide-mobile">
-            <yellow-blur-wide />
+            <yellow-blur-1 />
           </div>
 
           <div class="bike-gang-mobile">
-            <img src="~/static/img/bike-gang@2x.png">
+            <img src="~/assets/img/bike-gang@2x.png">
           </div>
 
         </div>
 
         <div class="parallax__layer parallax__layer--back-3">
           <div class="mesas-1-mobile">
-            <mesas-1 />
+            <mesas-2 />
           </div>
 
           <div class="mesas-5-mobile">

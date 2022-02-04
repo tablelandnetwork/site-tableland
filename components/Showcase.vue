@@ -26,16 +26,6 @@
         card-content="Example project description that describes the project in this description."
         card-text-link="TEXT LINK"
       />
-      <desktop-cards-story-showcase
-        card-title="Showcase 1 Example"
-        card-content="Example project description that describes the project in this description."
-        card-text-link="TEXT LINK"
-      />
-      <desktop-cards-story-showcase
-        card-title="Showcase 1 Example"
-        card-content="Example project description that describes the project in this description."
-        card-text-link="TEXT LINK"
-      />
     </div>
 
     <div class="showcase-cta">
@@ -45,14 +35,14 @@
       </div>
     </div>
 
-    <img class="text-center w-full mt-40" :src="untitled81">
+    <img class="text-center w-full mt-40" src="~/assets/img/footer-scene.png">
   </div>
 </template>
 
 <script>
 
 export default {
-  props: ['untitled81', 'whatWillYouBuild', 'stateregular4Props2', 'showcaseShowcase']
+  props: ['whatWillYouBuild', 'stateregular4Props2', 'showcaseShowcase']
 };
 
 </script>

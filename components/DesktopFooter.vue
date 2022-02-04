@@ -22,8 +22,7 @@
 
 <script>
 export default {
-  name: "DesktopFooter",
-  props: ["property2regularProps", "property2regular2Props", "property2regular3Props"],
+  props: ['property2regularProps', 'property2regular2Props', 'property2regular3Props']
 };
 </script>
 

@@ -34,7 +34,7 @@
                 </div>
               </div>
               <div class="sun-spot-2 z-0">
-                <yellow-blur-wide />
+                <yellow-blur-1 />
               </div>
 
               <div class="relative">
@@ -253,7 +253,7 @@
 
             </div>
 
-            <div class="content mb-8">
+            <div class="content mt-36 mb-8">
 
               <div class="grid grid-cols-2 gap-4 mt-40">
                 <div>&nbsp;</div>
@@ -295,10 +295,6 @@
                     <img class="untitled-7-1-1" src="~/assets/img/untitled-7-1@1x.png">
                   </div>
                 </div>
-              </div>
-
-              <div class="sun-spot-6 z-0">
-                <yellow-blur-wide />
               </div>
 
             </div>
@@ -344,24 +340,25 @@
         <div class="parallax__layer parallax__layer--back">
 
           <div class="w-full ml-96 -mt-48">
-            <yellow-blur-tall />
+            <yellow-blur-1 />
+          </div>
+
+          <div class="w-full -mt-24">
+            <mesas-2 />
           </div>
 
           <div class="my-96 py-96"><!-- spacer --></div>
-          <div class="my-96 py-96"><!-- spacer --></div>
-          <div class="my-96 py-36"><!-- spacer --></div>
+          <div class="my-96 py-60"><!-- spacer --></div>
 
           <div class="w-1/2">
-            <img src="~/static/img/bike-gang@2x.png">
+            <img src="~/assets/img/bike-gang@2x.png">
           </div>
-
-          <div class="my-96 py-16"><!-- spacer --></div>
 
           <div class="w-full">
             <mesas-4 />
           </div>
 
-        </div><!-- end fore -->
+        </div><!-- end back -->
 
         <div class="parallax__layer parallax__layer--back-2">
           <div class="w-full mt-24">
@@ -369,20 +366,27 @@
           </div>
 
           <div class="my-96 py-96"><!-- spacer --></div>
+          <div class="my-96 py-80"><!-- spacer --></div>
 
-          <div class="w-full pt-80">
+          <div class="w-full">
+            <mesas-4 />
+          </div>
+
+          <div class="w-2/3 ml-1/2 pt-48">
             <yellow-blur-1 />
           </div>
 
-          <div class="sun-spot-4">
+          <div class="w-2/3 -mt-40">
             <yellow-blur-1 />
           </div>
 
-          <div class="sun-spot-5">
+          <div class="w-full ml-1/2">
             <yellow-blur-1 />
           </div>
 
-          <div class="mesas-4-fore">
+          <div class="py-96"></div>
+
+          <div class="w-2/1">
             <mesas-4 />
           </div>
 
@@ -395,21 +399,10 @@
           </div>
 
           <div class="sun-spot-7">
-            <yellow-blur-sharp />
+            <yellow-blur-1 />
           </div>
         </div>
 
-        <div class="parallax__layer parallax__layer--back-3">
-
-          <div class="mesas-5">
-            <mesas-5 />
-          </div>
-
-          <div class="mesas-4-fore-4">
-            <mesas-4 />
-          </div>
-
-        </div>
 
         <div class="parallax__layer parallax__layer--back-4">
 
@@ -568,14 +561,6 @@ export default {
   width: 130%;
 }
 
-.mesas-4-fore-4 {
-  position: absolute;
-  left: 0;
-  top: 5300px;
-  mix-blend-mode: darken;
-  width: 200%;
-}
-
 .mesas-6-fore-1 {
   position: absolute;
   left: 0;
@@ -598,7 +583,7 @@ export default {
 
 .sun-spot-2 {
   position: absolute;
-  top: -800px;
+  top: -200px;
   left: -500px;
   width: 1000px;
 }
@@ -734,24 +719,6 @@ export default {
 
 
 
-
-
-
-
-
-
-
-.mesas-1 {
-  position: absolute;
-  top: 8984px;
-  width: 100%;
-}
-
-.mesas-2 {
-  position: absolute;
-  top: 5546px;
-  width: 100%;
-}
 
 .sun-spot-4 {
   left: 20%;

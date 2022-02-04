@@ -1,20 +1,3 @@
 <template>
-  <svg width="100%" viewBox="0 0 1135 1135" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <g filter="url(#filter0_f_2_453)">
-  <circle cx="567.5" cy="567.5" r="267.5" fill="#FFF6A8"/>
-  </g>
-  <defs>
-  <filter id="filter0_f_2_453" x="0" y="0" width="1135" height="1135" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-  <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_2_453"/>
-  </filter>
-  </defs>
-  </svg>
+  <img src="~/assets/img/yellow-blur-1.png" width="100%">
 </template>
-
-<script>
-export default {
-  name: "YellowBlur1"
-};
-</script>
