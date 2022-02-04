@@ -23,6 +23,10 @@
     format("opentype");
 }
 
+.-top-100 {
+  top: -30rem;
+}
+
 .bg-black\/50 {
   background-color: rgba(0, 0, 0, 0.5);
 }

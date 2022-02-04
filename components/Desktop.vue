@@ -1,22 +1,24 @@
 <template>
   <div class="desktop-content lg:block hidden">
 
-    <DiscordCtaDesktop />
+    <div class="background-gradient">
+      <background-page />
+    </div>
 
     <div class="background-layer parallax">
 
       <desktop-navbar
-        :property2regular-props="desktopNavbarProps.property2regularProps"
-        :property2regular2-props="desktopNavbarProps.property2regular2Props"
-        :property2regular3-props="desktopNavbarProps.property2regular3Props"
-        :property1regular3-props="desktopNavbarProps.property1regular3Props"
+        :property2regular-props="desktopNavbarProps.navLinkAbout"
+        :property2regular2-props="desktopNavbarProps.navLinkJoinUs"
+        :property2regular3-props="desktopNavbarProps.navLinkDocs"
+        :property1regular3-props="desktopNavbarProps.navLinkConnect"
       />
 
       <div class="parallax__group">
         <div class="parallax__layer--base z-50">
 
-          <div class="section section-1">
-            <div class="content flex flex-col flex-start relative">
+          <div class="section">
+            <div class="content mt-60 mb-8 flex flex-col flex-start relative">
               <div class="z-10">
                 <div class="">
                   <property1regular6
@@ -35,9 +37,13 @@
                 <yellow-blur-wide />
               </div>
 
+              <div class="relative">
+                <img class="absolute -top-100 left-1/2 w-1/2" src="img/delorean.png">
+              </div>
+
             </div>
 
-            <div class="content">
+            <div class="content mb-8">
               <div class="welcome-to-tableland-1 my-20 scroll-container">
                 <div class="scroll-text orbitron-black-white-110px">{{ welcomeToTableland }}</div>
               </div>
@@ -134,7 +140,7 @@
               </div>
             </div>
 
-            <div class="content">
+            <div class="content mb-8">
               <div class="how-it-works-how-it-works scroll-container my-20">
                 <div class="scroll-text orbitron-black-white-110px">
                   {{ howItWorksHowItWorks }}
@@ -173,7 +179,7 @@
               </div>
             </div>
 
-            <div class="content">
+            <div class="content mb-8">
 
               <div class="scroll-container try-it-try-it-try-it-1 mt-96 whitespace-nowrap">
                 <div class="scroll-text orbitron-black-white-110px">{{ tryItTryItTryIt }}</div>
@@ -182,7 +188,7 @@
               <div class="">
                 <div class="get-a-feel-for-how-e-1 mt-20 orbitron-black-black-45px">{{ getAFeelForHowE }}</div>
                 <div class="mt-20 w-full">
-                  <!--<desktop-tab-group
+                  <desktop-tab-group
                     :tabs-data="[
                       {
                         id: 0,
@@ -239,14 +245,15 @@
                         tabText: desktopTabGroupProps.property1TabButton3Props.text,
                         sqlText: []
                       }
-                    ]"-->
-                  <desktop-tab-group :tabs-data="[]" />
+                    ]"
+                  />
+                  <!--<desktop-tab-group :tabs-data="[]" />-->
                 </div>
               </div>
 
             </div>
 
-            <div class="content">
+            <div class="content mb-8">
 
               <div class="grid grid-cols-2 gap-4 mt-40">
                 <div>&nbsp;</div>
@@ -265,7 +272,7 @@
 
             </div>
 
-            <div class="content">
+            <div class="content mb-8">
               <div class="flex items-center mt-96 z-10">
                 <div class="flex items-start self-end flex-col relative z-10">
                   <div class="flex items-start flex-col mb-10">
@@ -296,7 +303,7 @@
 
             </div>
 
-            <div class="content">
+            <div class="content mb-8">
               <div class="scroll-container be-ready-for-the-future-2 whitespace-nowrap mt-40">
                 <h1 class="scroll-text orbitron-black-white-110px">{{ beReadyForTheFuture }}</h1>
               </div>
@@ -312,7 +319,7 @@
 
             </div>
 
-            <div class="content">
+            <div class="content mb-8">
               <div class="flex flex-col items-center mb-40">
                 <div class="any-suggestions-1 orbitron-black-black-70px">Any suggestions?</div>
                 <button-black button-text="EXPLORE THE POSSIBILITIES" :has-arrow="true" />
@@ -336,28 +343,34 @@
 
         <div class="parallax__layer parallax__layer--back">
 
-          <img class="delorean" src="img/delorean.png">
-
-          <div class="sun-spot-1">
+          <div class="w-full ml-96 -mt-48">
             <yellow-blur-tall />
           </div>
 
-          <div class="bike-gang">
+          <div class="my-96 py-96"><!-- spacer --></div>
+          <div class="my-96 py-96"><!-- spacer --></div>
+          <div class="my-96 py-36"><!-- spacer --></div>
+
+          <div class="w-1/2">
             <img src="~/static/img/bike-gang@2x.png">
           </div>
 
-          <div class="mesas-4-fore-3">
+          <div class="my-96 py-16"><!-- spacer --></div>
+
+          <div class="w-full">
             <mesas-4 />
           </div>
 
         </div><!-- end fore -->
 
         <div class="parallax__layer parallax__layer--back-2">
-          <div class="mesas-3">
+          <div class="w-full mt-24">
             <mesas3-solid />
           </div>
 
-          <div class="sun-spot-3">
+          <div class="my-96 py-96"><!-- spacer --></div>
+
+          <div class="w-full pt-80">
             <yellow-blur-1 />
           </div>
 
@@ -400,9 +413,7 @@
 
         <div class="parallax__layer parallax__layer--back-4">
 
-          <page-background />
-
-          <div class="mesas-4">
+          <div class="w-full -mt-16">
             <mesas-4 />
           </div>
 
@@ -508,8 +519,6 @@ export default {
 
 
 .section .content {
-  margin-top: 0;
-  margin-bottom: 2rem;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -538,20 +547,6 @@ export default {
   width: 100%;
 }
 
-.mesas-4 {
-  position: absolute;
-  top: 150px;
-  left: 0;
-  mix-blend-mode: darken;
-  width: 100%;
-}
-
-.mesas-3 {
-  position: absolute;
-  top: 300px;
-  width: 100%;
-}
-
 .mesas-4-fore {
   position: absolute;
   top: 3350px;
@@ -573,13 +568,6 @@ export default {
   width: 130%;
 }
 
-.mesas-4-fore-3 {
-  position: absolute;
-  top: 5700px;
-  mix-blend-mode: darken;
-  width: 100%;
-}
-
 .mesas-4-fore-4 {
   position: absolute;
   left: 0;
@@ -596,12 +584,6 @@ export default {
   width: 100%;
 }
 
-.delorean {
-  position: absolute;
-  top: 400px;
-  left: 50%;
-  width: 50%;
-}
 .sun-spot-1 {
   position: absolute;
   top: 0;
@@ -768,13 +750,6 @@ export default {
 .mesas-2 {
   position: absolute;
   top: 5546px;
-  width: 100%;
-}
-
-.sun-spot-3 {
-  left: 0;
-  position: absolute;
-  top: 2300px;
   width: 100%;
 }
 

@@ -762,31 +762,31 @@ export const stateregular8Data = {
   secondoryButton: 'EXPLORE FAQ'
 };
 
-export const property2regular35Data = {
+export const navLinkAbout = {
   navigationLink: 'About',
   className: 'desktop-button-nav-link-6'
 };
 
-export const property2regular36Data = {
+export const navLinkJoinUs = {
   navigationLink: 'Join us',
   className: 'desktop-button-nav-link-7'
 };
 
-export const property2regular37Data = {
+export const navLinkDocs = {
   navigationLink: 'Docs',
   className: 'desktop-button-nav-link-8'
 };
 
-export const property1regular322Data = {
+export const navLinkConnect = {
   navigationCta: 'Connect to mint',
   className: 'desktop-button-navigation-cta-1'
 };
 
 export const desktopNavbarData = {
-  property2regularProps: property2regular35Data,
-  property2regular2Props: property2regular36Data,
-  property2regular3Props: property2regular37Data,
-  property1regular3Props: property1regular322Data
+  navLinkAbout: navLinkAbout,
+  navLinkJoinUs: navLinkJoinUs,
+  navLinkDocs: navLinkDocs,
+  navLinkConnect: navLinkConnect
 };
 
 export const conceptHierarchyAndContentIterationData = {

@@ -393,7 +393,7 @@
 
         <div class="parallax__layer parallax__layer--back-4">
 
-          <page-background />
+          <background-page />
 
           <div class="mesas-2-mobile">
             <mesas-2 />

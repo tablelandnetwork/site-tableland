@@ -132,7 +132,7 @@
           <textarea
             v-model="playgroundCreateSql"
             rows="8"
-            class="bg-gray-500 focus:bg-gray-500 w-full firacode-normal-16px text-green-500 caret-green-500 mb-4 p-2"
+            class="bg-gray-700 focus:bg-gray-700 w-full firacode-normal-16px text-green-500 caret-green-500 mb-4 p-2"
             placeholder="CREATE TABLE ..."
           ></textarea>
           <button-black button-text="RUN" @click.prevent="runCreate"></button-black>
@@ -255,3 +255,11 @@ export default {
 };
 
 </script>
+
+<style scoped>
+
+.tables-tab-group {
+  height: 42rem;
+}
+
+</style>
