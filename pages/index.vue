@@ -1,21 +1,14 @@
 <template>
-  <div>
-    <Desktop v-bind="conceptHierarchyAndContentIterationData" />
-    <Mobile v-bind="iPhone1313Pro2Data" />
+  <div class="container mx-auto">
+    <!--
+      Edgar,
+      Let me know if you have any questions or want any help.
+      Please start with a clean slate and feel free to use any thing you want from the old site.
+      -Joe
+     -->
   </div>
 </template>
 
 <script>
-
-import { conceptHierarchyAndContentIterationData, iPhone1313Pro2Data } from '@/data';
-
-export default {
-  data: function () {
-    return {
-      conceptHierarchyAndContentIterationData: conceptHierarchyAndContentIterationData,
-      iPhone1313Pro2Data: iPhone1313Pro2Data
-    };
-  }
-};
-
+export default {};
 </script>
