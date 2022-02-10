@@ -1,23 +1,37 @@
-module.exports = {
+export default {
+  purge: [],
+  darkMode: false, // or 'media' or 'class'
   theme: {
-    screens: {
-      'xs': '500px',
-      // => @media (min-width: 500px) { ... }
-
-      'sm': '640px',
-      // => @media (min-width: 640px) { ... }
-
-      'md': '768px',
-      // => @media (min-width: 768px) { ... }
-
-      'lg': '1024px',
-      // => @media (min-width: 1024px) { ... }
-
-      'xl': '1280px',
-      // => @media (min-width: 1280px) { ... }
-
-      '2xl': '1536px',
-      // => @media (min-width: 1536px) { ... }
+    extend: {
+      fontSize: {
+        '7xl': '5.625rem'
+      },
+      letterSpacing: {
+        widest: '0.23rem'
+      },
+      spacing: {
+        18: '4.5rem',
+        68: '17rem'
+      },
+      lineHeight: {
+        tighter: '1.15'
+      }
+    },
+    fontFamily: {
+      Orbitron: ['Orbitron, sans-serif'],
+      Poppins: ['Poppins, sans-serif']
+    },
+    container: {
+      center: true,
+      screens: {
+        lg: '1664px',
+        xl: '1664px',
+        '2xl': '1664px'
+      }
     }
-  }
-}
+  },
+  variants: {
+    extend: {}
+  },
+  plugins: []
+};
