@@ -11,6 +11,7 @@ export default {
       },
       spacing: {
         18: '4.5rem',
+        30: '7.8rem',
         68: '17rem'
       },
       lineHeight: {

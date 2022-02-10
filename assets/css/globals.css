@@ -21,6 +21,7 @@ body {
 	@apply bg-black text-white text-xl py-5 px-24 rounded-2xl uppercase tracking-widest
 }
 
+/** hero **/
 .hero {
 	background: center / cover no-repeat url('~assets/img/hero.png');
 	padding-bottom: 57rem;
@@ -30,7 +31,7 @@ body {
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 2dppx) {
   .hero {
-		background: center / cover no-repeat url('~assets/img/hero@2x.png');
+		background-image: url('~assets/img/hero@2x.png');
   }
 }
 
@@ -38,7 +39,34 @@ body {
   (-webkit-min-device-pixel-ratio: 3),
   (min-resolution: 3dppx) {
   .hero {
-		background: center / cover no-repeat url('~assets/img/hero@3x.png');
+		background-image: url('~assets/img/hero@3x.png');
+  }
+}
+
+/** playbooks **/
+.playbooks {
+	background: center / 90% no-repeat url('~assets/img/playbooks.png') #454545;
+	padding-top: 13.3rem;
+}
+
+.playbooks .break {
+	background: left / cover no-repeat url('~assets/img/playbooks-break.png') #e7e7e7;
+	height: 185px;
+}
+
+@media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx) {
+  .playbooks {
+		background-image: url('~assets/img/playbooks@2x.png');
+  }
+}
+
+@media
+  (-webkit-min-device-pixel-ratio: 3),
+  (min-resolution: 3dppx) {
+  .playbooks {
+		background-image: url('~assets/img/playbooks@3x.png');
   }
 }
 

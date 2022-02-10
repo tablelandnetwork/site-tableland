@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="~assets/img/mock.png" alt="" class="mock">
+    <!-- <img src="~assets/img/mock.png" alt="" class="mock"> -->
 
     <!-- Header -->
     <header class="bg-navbar">
@@ -36,6 +36,56 @@
         </div>
       </div>
     </section>
+
+    <!-- playbooks -->
+    <section class="playbooks">
+      <div class="container flex justify-between">
+        <div class="w-3/12">
+          <div class="bg-black text-white pt-14 pb-6 px-16 mb-24 rounded-3xl">
+            <p class="text-5xl leading-tighter mb-4">Extend existing NFTs</p>
+            <p class="mb-30">
+              <a class="text-xl uppercase underline" href="#">View Code</a>
+            </p>
+            <p class="text-right">
+              <a class="text-5xl" href="#">+</a>
+            </p>
+          </div>
+
+          <div class="bg-black text-white pt-14 pb-6 px-16 mb-24 rounded-3xl">
+            <p class="text-5xl leading-tighter mb-4">Create new dynamic NFTs</p>
+            <p class="mb-30">
+              <a class="text-xl uppercase underline" href="#">View Code</a>
+            </p>
+            <p class="text-right">
+              <a class="text-5xl" href="#">+</a>
+            </p>
+          </div>
+        </div>
+        <div class="w-3/12">
+          <div class="bg-black text-white pt-14 pb-6 px-16 mb-24 rounded-3xl">
+            <p class="text-5xl leading-tighter mb-4">Use tokens to control table access</p>
+            <p class="mb-18">
+              <a class="text-xl uppercase underline" href="#">View Code</a>
+            </p>
+            <p class="text-right">
+              <a class="text-5xl" href="#">+</a>
+            </p>
+          </div>
+
+          <div class="bg-black text-white pt-14 pb-6 px-16 mb-24 rounded-3xl">
+            <p class="text-5xl leading-tighter mb-4">Compose with existing tables</p>
+            <p class="mb-18">
+              <a class="text-xl uppercase underline" href="#">View Code</a>
+            </p>
+            <p class="text-right">
+              <a class="text-5xl" href="#">+</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="break"></div>
+    </section>
+
   </div>
 </template>
 
