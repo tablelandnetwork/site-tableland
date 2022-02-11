@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[37],{480:function(t,n,e){t.exports=e.p+"img/mesas-2.4cfaa4b.png"},545:function(t,n,e){"use strict";e.r(n);var c=e(57),component=Object(c.a)({},(function(){var t=this.$createElement;return(this._self._c||t)("img",{attrs:{src:e(480),width:"100%"}})}),[],!1,null,null,null);n.default=component.exports}}]);

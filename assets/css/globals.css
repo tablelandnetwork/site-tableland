@@ -1,83 +1,95 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap');
 
-@import url("https://fonts.googleapis.com/css?family=Orbitron:900|Poppins:400,500,600|Fira+Code:400");
-@font-face {
-  font-family: "SF Compact Display-Regular";
-  font-style: normal;
-  font-weight: 400;
-  src: url("~assets/fonts/sfcompactdisplay-regular.otf")
-    format("opentype");
-}
-@font-face {
-  font-family: "SF Pro Text-Regular";
-  font-style: normal;
-  font-weight: 400;
-  src: url("~assets/fonts/sf-pro-text-regular.otf")
-    format("opentype");
-}
-@font-face {
-  font-family: "SF Pro Text-Semibold";
-  font-style: normal;
-  font-weight: 400;
-  src: url("~assets/fonts/sf-pro-text-semibold.otf")
-    format("opentype");
+.mock {
+	opacity: 0.1;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: auto;
 }
 
-.-top-100 {
-  top: -30rem;
+body {
+	@apply font-Poppins
 }
 
-.w-2\/1 {
-  width: 200%;
+.bg-navbar {
+	background-color: #f2f2f2;
 }
 
-.ml-1\/3 {
-  margin-left: 33%;
+.btn {
+	@apply bg-black text-white text-xl py-5 px-24 rounded-2xl uppercase tracking-widest
 }
 
-.-ml-1\/3 {
-  margin-left: -33%;
+/** hero **/
+.hero {
+	background: center / cover no-repeat url('~assets/img/hero.png');
+	padding-bottom: 57rem;
 }
 
-.ml-1\/2 {
-  margin-left: 50%;
+@media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx) {
+  .hero {
+		background-image: url('~assets/img/hero@2x.png');
+  }
 }
 
-.-ml-1\/2 {
-  margin-left: -50%;
+@media
+  (-webkit-min-device-pixel-ratio: 3),
+  (min-resolution: 3dppx) {
+  .hero {
+		background-image: url('~assets/img/hero@3x.png');
+  }
 }
 
-.bg-black\/50 {
-  background-color: rgba(0, 0, 0, 0.5);
+/** playbooks **/
+.playbooks {
+	background: center / 90% no-repeat url('~assets/img/playbooks.png') #454545;
+	padding-top: 13.3rem;
 }
 
-.text-shadow-black {
-  text-shadow: 1px 1px 1px black;
+.playbooks .break {
+	background: left / cover no-repeat url('~assets/img/playbooks-break.png') #e7e7e7;
+	height: 185px;
 }
 
-.screen a {
-  text-decoration: none;
+@media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx) {
+  .playbooks {
+		background-image: url('~assets/img/playbooks@2x.png');
+  }
 }
 
-.container-center-horizontal {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  pointer-events: none;
-  width: 100%;
+@media
+  (-webkit-min-device-pixel-ratio: 3),
+  (min-resolution: 3dppx) {
+  .playbooks {
+		background-image: url('~assets/img/playbooks@3x.png');
+  }
 }
 
-.container-center-horizontal > * {
-  flex-shrink: 0;
-  pointer-events: auto;
+
+/** explanation **/
+.explanation {
+	background: center bottom / cover no-repeat url('~assets/img/explanation.png') #e7e7e7;
+  padding: 8rem 0 48rem;
 }
 
-.valign-text-middle {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+@media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx) {
+  .explanation {
+		background-image: url('~assets/img/explanation@2x.png');
+  }
 }
 
-* {
-  box-sizing: border-box;
+@media
+  (-webkit-min-device-pixel-ratio: 3),
+  (min-resolution: 3dppx) {
+  .explanation {
+		background-image: url('~assets/img/explanation@3x.png');
+  }
 }
+
