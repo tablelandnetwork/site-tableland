@@ -86,6 +86,27 @@
       <div class="break"></div>
     </section>
 
+    <!-- explanation -->
+    <section class="explanation">
+      <div class="container flex">
+        <div class="w-1/2">
+          <h1 class="font-Orbitron text-7xl tracking-tighter leading-none mb-8">
+            In Tableland, we speak SQL
+          </h1>
+          <p class="text-3xl leading-normal tracking-wide mb-1">
+            1 – The bulk of digital information is stored in relational tables.
+          </p>
+          <p class="text-3xl leading-normal tracking-wide mb-1">
+            2 – Your familiar SQL tables are stored on a decentralized network of validators
+            and anchored to Ethereum as transferable NFTs, providing ownership and access control.
+          </p>
+          <p class="text-3xl leading-normal tracking-wide mb-4">
+            3 – Easy as pie, right?
+          </p>
+        </div>
+      </div>
+    </section>
+
   </div>
 </template>
 

@@ -24,10 +24,11 @@ export default {
     },
     container: {
       center: true,
+      padding: '3rem',
       screens: {
-        lg: '1664px',
-        xl: '1664px',
-        '2xl': '1664px'
+        lg: '1760px',
+        xl: '1760px',
+        '2xl': '1760px'
       }
     }
   },

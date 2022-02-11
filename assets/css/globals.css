@@ -70,3 +70,26 @@ body {
   }
 }
 
+
+/** explanation **/
+.explanation {
+	background: center bottom / cover no-repeat url('~assets/img/explanation.png') #e7e7e7;
+  padding: 8rem 0 48rem;
+}
+
+@media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx) {
+  .explanation {
+		background-image: url('~assets/img/explanation@2x.png');
+  }
+}
+
+@media
+  (-webkit-min-device-pixel-ratio: 3),
+  (min-resolution: 3dppx) {
+  .explanation {
+		background-image: url('~assets/img/explanation@3x.png');
+  }
+}
+
