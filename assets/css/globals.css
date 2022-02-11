@@ -23,72 +23,53 @@ body {
 
 /** hero **/
 .hero {
-	background: center / cover no-repeat url('~assets/img/hero.png');
-	padding-bottom: 57rem;
+	background: center / cover no-repeat url('~assets/img/hero.jpg');
+	padding-bottom: 65rem;
 }
 
 @media
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 2dppx) {
   .hero {
-		background-image: url('~assets/img/hero@2x.png');
+		background-image: url('~assets/img/hero@2x.jpg');
   }
 }
 
-@media
-  (-webkit-min-device-pixel-ratio: 3),
-  (min-resolution: 3dppx) {
-  .hero {
-		background-image: url('~assets/img/hero@3x.png');
-  }
+/** garage **/
+.garage {
+	background: center 37% / cover no-repeat url('~assets/img/garage.jpg');
+	padding-top: 19rem;
+  padding-bottom: 1.6rem;
 }
 
-/** playbooks **/
-.playbooks {
-	background: center / 90% no-repeat url('~assets/img/playbooks.png') #454545;
-	padding-top: 13.3rem;
-}
-
-.playbooks .break {
-	background: left / cover no-repeat url('~assets/img/playbooks-break.png') #e7e7e7;
+.garage-break {
+	background: left / cover no-repeat url('~assets/img/garage-break.png');
 	height: 185px;
 }
 
 @media
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 2dppx) {
-  .playbooks {
-		background-image: url('~assets/img/playbooks@2x.png');
+  .garage {
+		background-image: url('~assets/img/garage@2x.jpg');
+  }
+
+  .garage-break {
+		background-image: url('~assets/img/garage-break@2x.png');
   }
 }
 
-@media
-  (-webkit-min-device-pixel-ratio: 3),
-  (min-resolution: 3dppx) {
-  .playbooks {
-		background-image: url('~assets/img/playbooks@3x.png');
-  }
-}
-
-/** explanation **/
-.explanation {
-	background: center bottom / cover no-repeat url('~assets/img/explanation.png') #e7e7e7;
-  padding: 8rem 0 48rem;
+/** sql **/
+.sql {
+	background: center bottom / cover no-repeat url('~assets/img/sql.jpg');
+  padding-bottom: 54rem;
 }
 
 @media
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 2dppx) {
-  .explanation {
-		background-image: url('~assets/img/explanation@2x.png');
-  }
-}
-
-@media
-  (-webkit-min-device-pixel-ratio: 3),
-  (min-resolution: 3dppx) {
-  .explanation {
-		background-image: url('~assets/img/explanation@3x.png');
+  .sql {
+		background-image: url('~assets/img/sql@2x.jpg');
   }
 }
 
@@ -111,18 +92,6 @@ body {
 
   .tables .art {
     background-image: url('~assets/img/tables@2x.png');
-  }
-}
-
-@media
-  (-webkit-min-device-pixel-ratio: 3),
-  (min-resolution: 3dppx) {
-  .tables {
-		background-image: url('~assets/img/tables-bg@3x.png');
-  }
-
-  .tables .art {
-    background-image: url('~assets/img/tables@3x.png');
   }
 }
 
