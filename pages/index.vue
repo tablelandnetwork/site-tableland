@@ -107,6 +107,24 @@
       </div>
     </section>
 
+    <!-- tables -->
+    <section class="tables relative">
+      <div class="art absolute top-0 left-0 bottom-0 right-0"></div>
+      <div class="container flex justify-end">
+        <div class="w-1/2">
+          <h1 class="font-Orbitron text-7xl tracking-tighter leading-none mb-8">
+            Easy to releate tables
+          </h1>
+          <p class="text-3xl leading-normal tracking-wide mb-16">
+            Whether you're a developer, NFT creator, token holder, or just curious about Web3,
+            there's a place for you in Tableland. Join a fast-growing community of innovators
+            from all over the world.
+          </p>
+          <button type="button" class="btn">Call to Action</button>
+        </div>
+      </div>
+    </section>
+
   </div>
 </template>
 
