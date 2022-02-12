@@ -21,7 +21,7 @@
     <section class="hero">
       <div class="container flex items-center py-64">
         <div class="w-1/2">
-          <h1 class="font-Orbitron text-7xl tracking-tighter leading-none mb-8">
+          <h1 class="font-Orbitron text-7xl tracking-tighter leading-none mb-6">
             Build dApps and NFT games using familiar SQL
           </h1>
           <p class="text-3xl leading-normal mb-18">
@@ -37,8 +37,8 @@
       </div>
     </section>
 
-    <!-- playbooks -->
-    <section class="playbooks">
+    <!-- garage -->
+    <section class="garage">
       <div class="container flex justify-between">
         <div class="w-3/12">
           <div class="bg-black text-white pt-14 pb-6 px-16 mb-24 rounded-3xl">
@@ -83,12 +83,12 @@
           </div>
         </div>
       </div>
-      <div class="break"></div>
     </section>
 
-    <!-- explanation -->
-    <section class="explanation">
-      <div class="container flex">
+    <!-- sql -->
+    <section class="sql">
+      <div class="garage-break"></div>
+      <div class="container flex pt-20">
         <div class="w-1/2">
           <h1 class="font-Orbitron text-7xl tracking-tighter leading-none mb-8">
             In Tableland, we speak SQL
@@ -103,6 +103,29 @@
           <p class="text-3xl leading-normal tracking-wide mb-4">
             3 – Easy as pie, right?
           </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- sql -->
+    <section class="playground py-24 bg-gradient-joe">
+      <playground></playground>
+    </section>
+
+    <!-- tables -->
+    <section class="tables relative">
+      <div class="art absolute top-0 left-0 bottom-0 right-0"></div>
+      <div class="container flex justify-end">
+        <div class="w-1/2">
+          <h1 class="font-Orbitron text-7xl tracking-tighter leading-none mb-8">
+            Easy to releate tables
+          </h1>
+          <p class="text-3xl leading-normal tracking-wide mb-16">
+            Whether you're a developer, NFT creator, token holder, or just curious about Web3,
+            there's a place for you in Tableland. Join a fast-growing community of innovators
+            from all over the world.
+          </p>
+          <button type="button" class="btn">Call to Action</button>
         </div>
       </div>
     </section>
