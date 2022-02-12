@@ -12,7 +12,6 @@
             class="pl-8 pr-5 bg-black web-terminal-input"
             type="text"
             autocomplete="off"
-            autofocus
             @keydown="keyCheck"
           >
           <input type="submit">

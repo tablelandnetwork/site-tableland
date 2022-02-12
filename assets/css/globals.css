@@ -43,7 +43,7 @@ body {
 }
 
 .garage-break {
-	background: left / cover no-repeat url('~assets/img/garage-break.png');
+	background: left / cover no-repeat url('~assets/img/break_1.svg');
 	height: 185px;
 }
 
@@ -52,10 +52,6 @@ body {
   (min-resolution: 2dppx) {
   .garage {
 		background-image: url('~assets/img/garage@2x.jpg');
-  }
-
-  .garage-break {
-		background-image: url('~assets/img/garage-break@2x.png');
   }
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <img src="~assets/img/mock.png" alt="" class="mock"> -->
+    <img src="~assets/img/mock.png" alt="" class="mock">
 
     <!-- Header -->
     <header class="bg-navbar">
