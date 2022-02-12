@@ -175,6 +175,70 @@
       </div>
       <div class="community-break"></div>
     </section>
+
+    <!-- phases -->
+    <section class="phases">
+      <div class="container">
+        <div class="mb-62">
+          <div class="w-1/2">
+            <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-1">
+              Q1<br>
+              Testnet Phase 1
+            </h3>
+            <p class="font-Orbitron text-4.5xl mb-5">2022</p>
+            <div class="bg-black text-white py-14 px-16 rounded-3xl">
+              <p class="text-5xl leading-tighter mb-4">
+                Ethereum table &amp; payment channel support
+              </p>
+              <p>
+                <a class="text-2xl uppercase underline" href="#">Learn More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-14 flex justify-end">
+          <div class="w-1/2">
+            <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-1">
+              Q2<br>
+              Testnet Phase 2
+            </h3>
+            <p class="font-Orbitron text-4.5xl mb-5">2022</p>
+            <div class="bg-black text-white py-14 px-16 rounded-3xl">
+              <p class="text-5xl leading-tighter mb-4">
+                Permissionless validator network
+              </p>
+              <p>
+                <a class="text-2xl uppercase underline" href="#">Learn More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-52">
+          <div class="w-1/2">
+            <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-1">
+              Q3<br>
+              Testnet Phase 3
+            </h3>
+            <p class="font-Orbitron text-4.5xl mb-5">2022</p>
+            <div class="bg-black text-white py-14 px-16 rounded-3xl">
+              <p class="text-5xl leading-tighter mb-4">
+                Ethereum table &amp; payment channel support
+              </p>
+              <p>
+                <a class="text-2xl uppercase underline" href="#">Learn More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-5xl tracking-tight mb-4">Any Suggestions?</p>
+          <button type="button" class="btn mb-64">Call to Action</button>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
