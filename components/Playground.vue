@@ -61,6 +61,7 @@ export default {
   methods: {
     display: function (html) { // write to terminal
       this.$refs['web-terminal'].insertAdjacentHTML('afterbegin', html);
+      this.$refs['web-terminal'].scrollTop = 0;
     },
     htmlElement: function (element, text) {
       return `<${element}>${text}</${element}>`;
@@ -121,7 +122,7 @@ export default {
         }
         this.cls();
         this.printf(prefix + ' ' + spinner[count++ % 4]);
-      }, 133.7);
+      }, 313.37);
     },
     onSubmit: function () {
       buffer = this.$refs['web-terminal-input'].value;
@@ -178,7 +179,7 @@ export default {
     },
     runCommand: async function (sql) {
       try {
-        this.showSpinner();
+        this.showSpinner('Running SQL on the Validator');
         const response = await this.$store.dispatch('runSql', sql);
         this.loading = false;
         this.cls();
@@ -193,7 +194,7 @@ export default {
     },
     runCreate: async function (sql) {
       try {
-        this.showSpinner();
+        this.showSpinner('Creating Your Table, the steps are:\nMint the table on Ethereum\n Register it with the Validator\nIt may take a little while\n');
         const response = await this.$store.dispatch('createTable', sql);
         this.loading = false;
         this.cls();
