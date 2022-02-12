@@ -1,12 +1,10 @@
 <template>
   <div>
-    <img src="~assets/img/mock.png" alt="" class="mock">
-
     <!-- Header -->
     <header class="bg-navbar">
       <nav class="container flex items-center py-2">
         <div class="py-4">
-          <img src="~assets/img/logo.svg" alt="Tableland" class="h-5">
+          <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
         </div>
         <ul class="hidden sm:flex flex-1 justify-end items-center gap-x-24 uppercase text-sm pr-20">
           <li><a href="#">About</a></li>
@@ -279,6 +277,19 @@
         </div>
       </div>
     </section>
+
+    <footer class="text-white py-24">
+      <nav class="container flex items-center py-2">
+        <div class="py-4">
+          <img src="~assets/img/logo-white.svg" alt="Tableland" class="h-5">
+        </div>
+        <ul class="hidden sm:flex flex-1 justify-end items-center gap-x-24 uppercase text-sm pr-20">
+          <li><a href="#">Investors</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Legal</a></li>
+        </ul>
+      </nav>
+    </footer>
   </div>
 </template>
 

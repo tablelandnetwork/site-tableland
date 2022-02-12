@@ -149,3 +149,7 @@ body {
   transition-duration: 0s;
   transition-delay: .2s;
 }
+
+footer {
+  background-color: #272627;
+}
