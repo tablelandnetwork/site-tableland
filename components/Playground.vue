@@ -1,11 +1,6 @@
 <template>
-  <div class="max-w-xl mx-auto">
-
-    <div class="flex flex-col items-start justify-center py-4 text-white w-full">
-      <h3 class="font-Orbitron text-5xl leading-tighter mb-4">Try it out</h3>
-      <p class="text-lg">Don't take just our word for it. Type <span class="font-mono">connect</span> below to see how easy it is.</p>
-      <!--<button v-if="!ethAddress" type="button" class="bg-black text-white text-xl py-2 px-8 rounded-2xl" @click="connect">CONNECT</button>-->
-    </div>
+  <div>
+    <!--<button v-if="!ethAddress" type="button" class="bg-black text-white text-xl py-2 px-8 rounded-2xl" @click="connect">CONNECT</button>-->
 
     <div
       class="w-full pt-6 flex items-center flex-col rounded-3xl border-2px-black bg-black overflow-hidden"
@@ -254,7 +249,7 @@ export default {
   color: white;
   font-family: monospace;
   overflow-y: scroll;
-  height: calc(15px * 24);
+  height: calc(17px * 24);
 }
 
 .web-terminal-form, .web-terminal-input  {

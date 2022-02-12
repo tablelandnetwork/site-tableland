@@ -90,9 +90,9 @@
       <div class="garage-break"></div>
       <div class="container flex pt-20">
         <div class="w-1/2">
-          <h1 class="font-Orbitron text-7xl tracking-tighter leading-none mb-8">
+          <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-8">
             In Tableland, we speak SQL
-          </h1>
+          </h3>
           <p class="text-3xl leading-normal tracking-wide mb-1">
             1 – The bulk of digital information is stored in relational tables.
           </p>
@@ -107,29 +107,41 @@
       </div>
     </section>
 
-    <!-- sql -->
-    <section class="playground py-24 bg-gradient-joe">
-      <playground></playground>
-    </section>
-
     <!-- tables -->
-    <section class="tables relative">
-      <div class="art absolute top-0 left-0 bottom-0 right-0"></div>
-      <div class="container flex justify-end">
-        <div class="w-1/2">
-          <h1 class="font-Orbitron text-7xl tracking-tighter leading-none mb-8">
-            Easy to releate tables
-          </h1>
-          <p class="text-3xl leading-normal tracking-wide mb-16">
-            Whether you're a developer, NFT creator, token holder, or just curious about Web3,
-            there's a place for you in Tableland. Join a fast-growing community of innovators
-            from all over the world.
-          </p>
-          <button type="button" class="btn">Call to Action</button>
+    <div class="bg-gradient">
+      <section class="tables relative text-white">
+        <div class="container flex justify-end">
+          <div class="w-1/2">
+            <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-8">
+              Easy to releate tables
+            </h3>
+            <p class="text-3xl leading-normal tracking-wide mb-16">
+              Whether you're a developer, NFT creator, token holder, or just curious about Web3,
+              there's a place for you in Tableland. Join a fast-growing community of innovators
+              from all over the world.
+            </p>
+            <button type="button" class="btn">Call to Action</button>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+
+      <!-- playground -->
+      <section class="playground text-white py-32">
+        <div class="container flex justify-center">
+          <div class="w-1/2">
+            <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-8">
+              Try it out
+            </h3>
+            <p class="text-3xl leading-normal tracking-wide mb-8">
+              Don't take just our word for it. Type <span class="font-mono">connect</span>
+              below to see how easy it is.
+            </p>
+            <playground></playground>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 
