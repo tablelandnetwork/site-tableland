@@ -110,3 +110,42 @@ body {
   left: 0;
   right: 0;
 }
+
+.showcase {
+  background-color: #272627;
+}
+
+.showcase-break {
+	background: left / cover no-repeat url('~assets/img/break_3.svg');
+	height: 185px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.showcase .slider .slide.active {
+  @apply w-full
+}
+
+.showcase .slider .slide.inactive {
+  @apply w-0 cursor-pointer
+}
+
+.showcase .slider .slide.active * {
+  visibility: visible;
+}
+
+.showcase .slider .slide.inactive * {
+  visibility: hidden;
+}
+
+.showcase .slider .slide {
+  transition: width linear .2s;
+}
+
+.showcase .slider .slide.active * {
+  transition-property: visibility;
+  transition-duration: 0s;
+  transition-delay: .2s;
+}

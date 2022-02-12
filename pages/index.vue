@@ -177,7 +177,7 @@
     </section>
 
     <!-- phases -->
-    <section class="phases">
+    <section class="phases mb-48">
       <div class="container">
         <div class="mb-62">
           <div class="w-1/2">
@@ -215,7 +215,7 @@
           </div>
         </div>
 
-        <div class="mb-52">
+        <div class="mb-48">
           <div class="w-1/2">
             <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-1">
               Q3<br>
@@ -234,8 +234,48 @@
         </div>
 
         <div class="text-center">
-          <p class="text-5xl tracking-tight mb-4">Any Suggestions?</p>
-          <button type="button" class="btn mb-64">Call to Action</button>
+          <p class="text-5xl leading-normal mb-2">Any Suggestions?</p>
+          <button type="button" class="btn">Call to Action</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- showcase -->
+    <section class="showcase pt-72 pb-36 relative">
+      <div class="showcase-break"></div>
+      <div class="container">
+        <div class="slider flex gap-x-3.5 mb-32">
+          <div class="bg-white pt-14 pb-120 px-16 rounded-8xl slide active" @click="handleSliderClick">
+            <div class="w-3/12">
+              <h4 class="text-5xl">
+                Showcase Example 1
+              </h4>
+              <a class="text-2xl uppercase underline" href="#">Link</a>
+            </div>
+          </div>
+
+          <div class="bg-white pt-14 pb-120 px-16 rounded-8xl slide inactive" @click="handleSliderClick">
+            <div class="w-3/12">
+              <h4 class="text-5xl">
+                Showcase Example 2
+              </h4>
+              <a class="text-2xl uppercase underline" href="#">Link</a>
+            </div>
+          </div>
+
+          <div class="bg-white pt-14 pb-120 px-16 rounded-8xl slide inactive" @click="handleSliderClick">
+            <div class="w-3/12">
+              <h4 class="text-5xl">
+                Showcase Example 3
+              </h4>
+              <a class="text-2xl uppercase underline" href="#">Link</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center text-white">
+          <p class="text-5xl leading-normal mb-2">What Will You Build?</p>
+          <button type="button" class="btn">Call to Action</button>
         </div>
       </div>
     </section>
@@ -248,6 +288,26 @@ export default {
   data: function () {
     return {
     };
+  },
+
+  methods: {
+    activateSlide: function (slide) {
+      slide.classList.add('active');
+      slide.classList.remove('inactive');
+    },
+
+    deactivateSlide: function (slide) {
+      slide.classList.add('inactive');
+      slide.classList.remove('active');
+    },
+
+    handleSliderClick: function ({ target }) {
+      if (!target.classList.contains('active')) {
+        const siblings = Array.from(target.parentElement.children).filter(c => c !== target);
+        this.activateSlide(target);
+        siblings.forEach(this.deactivateSlide);
+      }
+    }
   }
 };
 
