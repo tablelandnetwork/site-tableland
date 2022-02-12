@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <img src="~assets/img/mock.png" alt="" class="mock"> -->
+    <img src="~assets/img/mock.png" alt="" class="mock">
 
     <!-- Header -->
     <header class="bg-navbar">
@@ -90,9 +90,9 @@
       <div class="garage-break"></div>
       <div class="container flex pt-20">
         <div class="w-1/2">
-          <h1 class="font-Orbitron text-7xl tracking-tighter leading-none mb-8">
+          <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-8">
             In Tableland, we speak SQL
-          </h1>
+          </h3>
           <p class="text-3xl leading-normal tracking-wide mb-1">
             1 – The bulk of digital information is stored in relational tables.
           </p>
@@ -107,29 +107,138 @@
       </div>
     </section>
 
-    <!-- sql -->
-    <section class="playground py-24 bg-gradient-joe">
-      <playground></playground>
+    <div class="bg-gradient">
+      <!-- tables -->
+      <section class="tables relative text-white">
+        <div class="container flex justify-end">
+          <div class="w-1/2">
+            <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-8">
+              Easy to releate tables
+            </h3>
+            <p class="text-3xl leading-normal tracking-wide mb-16">
+              Whether you're a developer, NFT creator, token holder, or just curious about Web3,
+              there's a place for you in Tableland. Join a fast-growing community of innovators
+              from all over the world.
+            </p>
+            <button type="button" class="btn">Call to Action</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- playground -->
+      <section class="playground text-white py-32">
+        <div class="container flex justify-center">
+          <div class="w-1/2">
+            <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-8">
+              Try it out
+            </h3>
+            <p class="text-3xl leading-normal tracking-wide mb-8">
+              Don't take just our word for it. Type <span class="font-mono">connect</span>
+              below to see how easy it is.
+            </p>
+            <playground></playground>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- community -->
+    <section class="community relative">
+      <div class="container">
+        <div class="mb-280">
+          <div class="w-1/2">
+            <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-10">
+              Join the community
+            </h3>
+            <p class="text-3xl leading-normal tracking-wide mb-14">
+              Whether you're a developer, NFT creator, token holder, or just curious about Web3,
+              there's a place for you in Tableland. Join a fast-growing community of innovators
+              from all over the world.
+            </p>
+            <button type="button" class="btn">Call to Action</button>
+          </div>
+        </div>
+
+        <div class="flex justify-end text-white">
+          <div class="w-1/2">
+            <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-14">
+              User-owned token networks are the future of the internet
+            </h3>
+            <p class="text-3xl leading-normal tracking-wide mb-14">
+              Tableland is a compassable meta-layer-it and encompasses everything from NFT
+              metadata, social, financial, machine-learning, and research data, or anything else.
+              Tableland tables are also own-able, tradable, and interoperable assets on their
+              parent networks.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="community-break"></div>
     </section>
 
-    <!-- tables -->
-    <section class="tables relative">
-      <div class="art absolute top-0 left-0 bottom-0 right-0"></div>
-      <div class="container flex justify-end">
-        <div class="w-1/2">
-          <h1 class="font-Orbitron text-7xl tracking-tighter leading-none mb-8">
-            Easy to releate tables
-          </h1>
-          <p class="text-3xl leading-normal tracking-wide mb-16">
-            Whether you're a developer, NFT creator, token holder, or just curious about Web3,
-            there's a place for you in Tableland. Join a fast-growing community of innovators
-            from all over the world.
-          </p>
-          <button type="button" class="btn">Call to Action</button>
+    <!-- phases -->
+    <section class="phases">
+      <div class="container">
+        <div class="mb-62">
+          <div class="w-1/2">
+            <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-1">
+              Q1<br>
+              Testnet Phase 1
+            </h3>
+            <p class="font-Orbitron text-4.5xl mb-5">2022</p>
+            <div class="bg-black text-white py-14 px-16 rounded-3xl">
+              <p class="text-5xl leading-tighter mb-4">
+                Ethereum table &amp; payment channel support
+              </p>
+              <p>
+                <a class="text-2xl uppercase underline" href="#">Learn More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-14 flex justify-end">
+          <div class="w-1/2">
+            <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-1">
+              Q2<br>
+              Testnet Phase 2
+            </h3>
+            <p class="font-Orbitron text-4.5xl mb-5">2022</p>
+            <div class="bg-black text-white py-14 px-16 rounded-3xl">
+              <p class="text-5xl leading-tighter mb-4">
+                Permissionless validator network
+              </p>
+              <p>
+                <a class="text-2xl uppercase underline" href="#">Learn More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-52">
+          <div class="w-1/2">
+            <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-1">
+              Q3<br>
+              Testnet Phase 3
+            </h3>
+            <p class="font-Orbitron text-4.5xl mb-5">2022</p>
+            <div class="bg-black text-white py-14 px-16 rounded-3xl">
+              <p class="text-5xl leading-tighter mb-4">
+                Ethereum table &amp; payment channel support
+              </p>
+              <p>
+                <a class="text-2xl uppercase underline" href="#">Learn More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <p class="text-5xl tracking-tight mb-4">Any Suggestions?</p>
+          <button type="button" class="btn mb-64">Call to Action</button>
         </div>
       </div>
     </section>
-
   </div>
 </template>
 

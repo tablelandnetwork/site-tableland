@@ -17,10 +17,6 @@ body {
 	background-color: #f2f2f2;
 }
 
-.bg-gradient-joe {
-  background-image: url('~assets/img/gradient-joe.svg');
-}
-
 .btn {
 	@apply bg-black text-white text-xl py-5 px-24 rounded-2xl uppercase tracking-widest
 }
@@ -47,7 +43,7 @@ body {
 }
 
 .garage-break {
-	background: left / cover no-repeat url('~assets/img/garage-break.png');
+	background: left / cover no-repeat url('~assets/img/break_1.svg');
 	height: 185px;
 }
 
@@ -56,10 +52,6 @@ body {
   (min-resolution: 2dppx) {
   .garage {
 		background-image: url('~assets/img/garage@2x.jpg');
-  }
-
-  .garage-break {
-		background-image: url('~assets/img/garage-break@2x.png');
   }
 }
 
@@ -79,23 +71,42 @@ body {
 
 /** tables **/
 .tables {
-	background: center / cover no-repeat url('~assets/img/tables-bg.png');
-  padding: 4.5rem 0 50rem;
-}
-
-.tables .art {
-	background: -28rem bottom / cover no-repeat url('~assets/img/tables.png');
+	background: -28rem -4rem / cover no-repeat url('~assets/img/tables.png');
+  padding-bottom: 50rem;
 }
 
 @media
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 2dppx) {
   .tables {
-		background-image: url('~assets/img/tables-bg@2x.png');
-  }
-
-  .tables .art {
     background-image: url('~assets/img/tables@2x.png');
   }
 }
 
+.bg-gradient {
+	background: top / cover no-repeat url('~assets/img/bg-gradient.svg');
+}
+
+/** community **/
+.community {
+	background: center top / cover no-repeat url('~assets/img/community.jpg');
+  padding-top: 13.4rem;
+  padding-bottom: 42rem;
+}
+
+@media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx) {
+  .community {
+		background-image: url('~assets/img/community@2x.jpg');
+  }
+}
+
+.community-break {
+	background: left / cover no-repeat url('~assets/img/break_2.svg');
+	height: 185px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
