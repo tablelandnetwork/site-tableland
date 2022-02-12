@@ -17,6 +17,10 @@ body {
 	background-color: #f2f2f2;
 }
 
+.bg-gradient-joe {
+  background-image: url('~assets/img/gradient-joe.svg');
+}
+
 .btn {
 	@apply bg-black text-white text-xl py-5 px-24 rounded-2xl uppercase tracking-widest
 }
