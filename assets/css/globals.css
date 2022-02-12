@@ -86,3 +86,27 @@ body {
 .bg-gradient {
 	background: top / cover no-repeat url('~assets/img/bg-gradient.svg');
 }
+
+/** community **/
+.community {
+	background: center top / cover no-repeat url('~assets/img/community.jpg');
+  padding-top: 13.4rem;
+  padding-bottom: 43rem;
+}
+
+@media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx) {
+  .community {
+		background-image: url('~assets/img/community@2x.jpg');
+  }
+}
+
+.community-break {
+	background: left / cover no-repeat url('~assets/img/break_2.svg');
+	height: 185px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

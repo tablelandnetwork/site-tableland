@@ -12,7 +12,8 @@ export default {
       spacing: {
         18: '4.2rem',
         30: '7.8rem',
-        68: '17rem'
+        68: '17rem',
+        280: '70rem'
       },
       lineHeight: {
         tighter: '1.15'

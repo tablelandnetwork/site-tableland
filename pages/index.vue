@@ -107,8 +107,8 @@
       </div>
     </section>
 
-    <!-- tables -->
     <div class="bg-gradient">
+      <!-- tables -->
       <section class="tables relative text-white">
         <div class="container flex justify-end">
           <div class="w-1/2">
@@ -124,7 +124,6 @@
           </div>
         </div>
       </section>
-
 
       <!-- playground -->
       <section class="playground text-white py-32">
@@ -142,6 +141,40 @@
         </div>
       </section>
     </div>
+
+    <!-- community -->
+    <section class="community relative">
+      <div class="container">
+        <div class="mb-280">
+          <div class="w-1/2">
+            <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-10">
+              Join the community
+            </h3>
+            <p class="text-3xl leading-normal tracking-wide mb-14">
+              Whether you're a developer, NFT creator, token holder, or just curious about Web3,
+              there's a place for you in Tableland. Join a fast-growing community of innovators
+              from all over the world.
+            </p>
+            <button type="button" class="btn">Call to Action</button>
+          </div>
+        </div>
+
+        <div class="flex justify-end text-white">
+          <div class="w-1/2">
+            <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-14">
+              User-owned token networks are the future of the internet
+            </h3>
+            <p class="text-3xl leading-normal tracking-wide mb-14">
+              Tableland is a compassable meta-layer-it and encompasses everything from NFT
+              metadata, social, financial, machine-learning, and research data, or anything else.
+              Tableland tables are also own-able, tradable, and interoperable assets on their
+              parent networks.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="community-break"></div>
+    </section>
   </div>
 </template>
 
