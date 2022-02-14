@@ -5,8 +5,6 @@
 ```bash
 # install dependencies
 npm install
-# you need to have https://github.com/textileio/js-tableland, and you need to have run `npm link` from that repo
-npm link @textile/tableland
 
 # serve with hot reload at localhost:3000
 npm run dev
