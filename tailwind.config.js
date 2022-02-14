@@ -15,10 +15,16 @@ export default {
         30: '7.8rem',
         62: '15.5rem',
         68: '17rem',
+        120: '30rem',
         280: '70rem'
       },
       lineHeight: {
         tighter: '1.15'
+      },
+      borderRadius: {
+        '4xl': '2rem',
+        '5xl': '2.5rem',
+        '8xl': '4rem'
       }
     },
     fontFamily: {

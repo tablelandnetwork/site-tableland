@@ -1,12 +1,10 @@
 <template>
   <div>
-    <img src="~assets/img/mock.png" alt="" class="mock">
-
     <!-- Header -->
     <header class="bg-navbar">
       <nav class="container flex items-center py-2">
         <div class="py-4">
-          <img src="~assets/img/logo.svg" alt="Tableland" class="h-5">
+          <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
         </div>
         <ul class="hidden sm:flex flex-1 justify-end items-center gap-x-24 uppercase text-sm pr-20">
           <li><a href="#">About</a></li>
@@ -28,7 +26,7 @@
             Tableland is a network and SQL database protocol for Ethereum.
             Built for developers, NFT creators, and Web3 visionaries.
           </p>
-          <button type="button" class="btn mb-64">Call to Action</button>
+          <ButtonLink href="#">Call to Action</ButtonLink>
           <p class="text-5xl tracking-tight leading-tighter">
             Use familiar SQL tables to read and write NFT meatadata, media, social
             data, or anything else – all orchestrated by token networks like Ethereum.
@@ -40,45 +38,45 @@
     <!-- garage -->
     <section class="garage">
       <div class="container flex justify-between">
-        <div class="w-3/12">
-          <div class="bg-black text-white pt-14 pb-6 px-16 mb-24 rounded-3xl">
+        <div class="w-3/12 px-4">
+          <div class="bg-black text-white pt-14 pb-8 pl-12 pr-10 mb-24 rounded-4xl">
             <p class="text-5xl leading-tighter mb-4">Extend existing NFTs</p>
             <p class="mb-30">
               <a class="text-xl uppercase underline" href="#">View Code</a>
             </p>
             <p class="text-right">
-              <a class="text-5xl" href="#">+</a>
+              <button><ExpandIcon /></button>
             </p>
           </div>
 
-          <div class="bg-black text-white pt-14 pb-6 px-16 mb-24 rounded-3xl">
+          <div class="bg-black text-white pt-14 pb-8 pl-12 pr-10 mb-24 rounded-4xl">
             <p class="text-5xl leading-tighter mb-4">Create new dynamic NFTs</p>
             <p class="mb-30">
               <a class="text-xl uppercase underline" href="#">View Code</a>
             </p>
             <p class="text-right">
-              <a class="text-5xl" href="#">+</a>
+              <button><ExpandIcon /></button>
             </p>
           </div>
         </div>
-        <div class="w-3/12">
-          <div class="bg-black text-white pt-14 pb-6 px-16 mb-24 rounded-3xl">
+        <div class="w-3/12 px-4">
+          <div class="bg-black text-white pt-14 pb-8 pl-12 pr-10 mb-24 rounded-4xl">
             <p class="text-5xl leading-tighter mb-4">Use tokens to control table access</p>
             <p class="mb-18">
               <a class="text-xl uppercase underline" href="#">View Code</a>
             </p>
             <p class="text-right">
-              <a class="text-5xl" href="#">+</a>
+              <button><ExpandIcon /></button>
             </p>
           </div>
 
-          <div class="bg-black text-white pt-14 pb-6 px-16 mb-24 rounded-3xl">
+          <div class="bg-black text-white pt-14 pb-8 pl-12 pr-10 mb-24 rounded-4xl">
             <p class="text-5xl leading-tighter mb-4">Compose with existing tables</p>
             <p class="mb-18">
               <a class="text-xl uppercase underline" href="#">View Code</a>
             </p>
             <p class="text-right">
-              <a class="text-5xl" href="#">+</a>
+              <button><ExpandIcon /></button>
             </p>
           </div>
         </div>
@@ -120,7 +118,7 @@
               there's a place for you in Tableland. Join a fast-growing community of innovators
               from all over the world.
             </p>
-            <button type="button" class="btn">Call to Action</button>
+            <ButtonLink href="#">Call to Action</ButtonLink>
           </div>
         </div>
       </section>
@@ -155,7 +153,7 @@
               there's a place for you in Tableland. Join a fast-growing community of innovators
               from all over the world.
             </p>
-            <button type="button" class="btn">Call to Action</button>
+            <ButtonLink href="#">Call to Action</ButtonLink>
           </div>
         </div>
 
@@ -177,7 +175,7 @@
     </section>
 
     <!-- phases -->
-    <section class="phases">
+    <section class="phases mb-48">
       <div class="container">
         <div class="mb-62">
           <div class="w-1/2">
@@ -215,7 +213,7 @@
           </div>
         </div>
 
-        <div class="mb-52">
+        <div class="mb-48">
           <div class="w-1/2">
             <h3 class="font-Orbitron text-7xl tracking-tighter leading-none mb-1">
               Q3<br>
@@ -234,11 +232,64 @@
         </div>
 
         <div class="text-center">
-          <p class="text-5xl tracking-tight mb-4">Any Suggestions?</p>
-          <button type="button" class="btn mb-64">Call to Action</button>
+          <p class="text-5xl leading-normal mb-2">Any Suggestions?</p>
+          <ButtonLink href="#">Call to Action</ButtonLink>
         </div>
       </div>
     </section>
+
+    <!-- showcase -->
+    <section class="showcase pt-72 pb-36 relative">
+      <div class="showcase-break"></div>
+      <div class="container">
+        <div class="slider flex gap-x-3.5 mb-32">
+          <div class="bg-white pt-14 pb-120 px-16 rounded-8xl slide active" @click="handleSliderClick">
+            <div class="w-3/12">
+              <h4 class="text-5xl">
+                Showcase Example 1
+              </h4>
+              <a class="text-2xl uppercase underline" href="#">Link</a>
+            </div>
+          </div>
+
+          <div class="bg-white pt-14 pb-120 px-16 rounded-8xl slide inactive" @click="handleSliderClick">
+            <div class="w-3/12">
+              <h4 class="text-5xl">
+                Showcase Example 2
+              </h4>
+              <a class="text-2xl uppercase underline" href="#">Link</a>
+            </div>
+          </div>
+
+          <div class="bg-white pt-14 pb-120 px-16 rounded-8xl slide inactive" @click="handleSliderClick">
+            <div class="w-3/12">
+              <h4 class="text-5xl">
+                Showcase Example 3
+              </h4>
+              <a class="text-2xl uppercase underline" href="#">Link</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center text-white">
+          <p class="text-5xl leading-normal mb-2">What Will You Build?</p>
+          <ButtonLink href="#">Call to Action</ButtonLink>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-white py-24">
+      <nav class="container flex items-center py-2">
+        <div class="py-4">
+          <img src="~assets/img/logo-white.svg" alt="Tableland" class="h-5">
+        </div>
+        <ul class="hidden sm:flex flex-1 justify-end items-center gap-x-24 uppercase text-sm pr-20">
+          <li><a href="#">Investors</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Legal</a></li>
+        </ul>
+      </nav>
+    </footer>
   </div>
 </template>
 
@@ -248,6 +299,26 @@ export default {
   data: function () {
     return {
     };
+  },
+
+  methods: {
+    activateSlide: function (slide) {
+      slide.classList.add('active');
+      slide.classList.remove('inactive');
+    },
+
+    deactivateSlide: function (slide) {
+      slide.classList.add('inactive');
+      slide.classList.remove('active');
+    },
+
+    handleSliderClick: function ({ target }) {
+      if (!target.classList.contains('active')) {
+        const siblings = Array.from(target.parentElement.children).filter(c => c !== target);
+        this.activateSlide(target);
+        siblings.forEach(this.deactivateSlide);
+      }
+    }
   }
 };
 
