@@ -26,7 +26,7 @@
             Tableland is a network and SQL database protocol for Ethereum.
             Built for developers, NFT creators, and Web3 visionaries.
           </p>
-          <button type="button" class="btn mb-64">Call to Action</button>
+          <ButtonLink href="#">Call to Action</ButtonLink>
           <p class="text-5xl tracking-tight leading-tighter">
             Use familiar SQL tables to read and write NFT meatadata, media, social
             data, or anything else – all orchestrated by token networks like Ethereum.
@@ -38,45 +38,45 @@
     <!-- garage -->
     <section class="garage">
       <div class="container flex justify-between">
-        <div class="w-3/12">
-          <div class="bg-black text-white pt-14 pb-6 px-16 mb-24 rounded-3xl">
+        <div class="w-3/12 px-4">
+          <div class="bg-black text-white pt-14 pb-8 pl-12 pr-10 mb-24 rounded-4xl">
             <p class="text-5xl leading-tighter mb-4">Extend existing NFTs</p>
             <p class="mb-30">
               <a class="text-xl uppercase underline" href="#">View Code</a>
             </p>
             <p class="text-right">
-              <a class="text-5xl" href="#">+</a>
+              <button><ExpandIcon /></button>
             </p>
           </div>
 
-          <div class="bg-black text-white pt-14 pb-6 px-16 mb-24 rounded-3xl">
+          <div class="bg-black text-white pt-14 pb-8 pl-12 pr-10 mb-24 rounded-4xl">
             <p class="text-5xl leading-tighter mb-4">Create new dynamic NFTs</p>
             <p class="mb-30">
               <a class="text-xl uppercase underline" href="#">View Code</a>
             </p>
             <p class="text-right">
-              <a class="text-5xl" href="#">+</a>
+              <button><ExpandIcon /></button>
             </p>
           </div>
         </div>
-        <div class="w-3/12">
-          <div class="bg-black text-white pt-14 pb-6 px-16 mb-24 rounded-3xl">
+        <div class="w-3/12 px-4">
+          <div class="bg-black text-white pt-14 pb-8 pl-12 pr-10 mb-24 rounded-4xl">
             <p class="text-5xl leading-tighter mb-4">Use tokens to control table access</p>
             <p class="mb-18">
               <a class="text-xl uppercase underline" href="#">View Code</a>
             </p>
             <p class="text-right">
-              <a class="text-5xl" href="#">+</a>
+              <button><ExpandIcon /></button>
             </p>
           </div>
 
-          <div class="bg-black text-white pt-14 pb-6 px-16 mb-24 rounded-3xl">
+          <div class="bg-black text-white pt-14 pb-8 pl-12 pr-10 mb-24 rounded-4xl">
             <p class="text-5xl leading-tighter mb-4">Compose with existing tables</p>
             <p class="mb-18">
               <a class="text-xl uppercase underline" href="#">View Code</a>
             </p>
             <p class="text-right">
-              <a class="text-5xl" href="#">+</a>
+              <button><ExpandIcon /></button>
             </p>
           </div>
         </div>
@@ -118,7 +118,7 @@
               there's a place for you in Tableland. Join a fast-growing community of innovators
               from all over the world.
             </p>
-            <button type="button" class="btn">Call to Action</button>
+            <ButtonLink href="#">Call to Action</ButtonLink>
           </div>
         </div>
       </section>
@@ -153,7 +153,7 @@
               there's a place for you in Tableland. Join a fast-growing community of innovators
               from all over the world.
             </p>
-            <button type="button" class="btn">Call to Action</button>
+            <ButtonLink href="#">Call to Action</ButtonLink>
           </div>
         </div>
 
@@ -233,7 +233,7 @@
 
         <div class="text-center">
           <p class="text-5xl leading-normal mb-2">Any Suggestions?</p>
-          <button type="button" class="btn">Call to Action</button>
+          <ButtonLink href="#">Call to Action</ButtonLink>
         </div>
       </div>
     </section>
@@ -273,7 +273,7 @@
 
         <div class="text-center text-white">
           <p class="text-5xl leading-normal mb-2">What Will You Build?</p>
-          <button type="button" class="btn">Call to Action</button>
+          <ButtonLink href="#">Call to Action</ButtonLink>
         </div>
       </div>
     </section>

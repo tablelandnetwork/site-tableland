@@ -18,7 +18,11 @@ body {
 }
 
 .btn {
-	@apply bg-black text-white text-xl py-5 px-24 rounded-2xl uppercase tracking-widest
+	@apply inline-block text-xl py-5 px-24 rounded-2xl uppercase tracking-widest cursor-pointer
+}
+
+.btn:active {
+  background-color: #272627;
 }
 
 /** hero **/

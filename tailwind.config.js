@@ -22,6 +22,8 @@ export default {
         tighter: '1.15'
       },
       borderRadius: {
+        '4xl': '2rem',
+        '5xl': '2.5rem',
         '8xl': '4rem'
       }
     },
