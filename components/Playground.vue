@@ -45,6 +45,26 @@ const bhManage = function () {
   bhIndex = 0;
 };
 
+const messages = {
+  connected: 'Connected!\n' +
+    'This is your basic Tableland Terminal, you can type SQL commands interact to with a Tableland Validator.\n' +
+    'Run `help` to learn more and see some example commands.',
+  creating: 'Creating Your Table, the steps are:\n  Mint the table on Ethereum\n  Register it with the Validator\n  It may take a little while\n',
+  help: 'Available commands:\n' +
+    '    list      List your tables\n' +
+    '    clear     Clear this terminal\n' +
+    '    whoami    See your Eth Address\n' +
+    '    help      Show this message again\n' +
+    'Example Read Queries:\n' +
+    '    SELECT * FROM LootAttributes_3;\n' +
+    '    SELECT * FROM todo_todos_example_34 ORDER BY id ASC;',
+  running: 'Running SQL on the Validator',
+  warn: {
+    connect: 'Before running commands you need to connect with a Tableland Validator. We currently only support connecting via Metamask. Make sure it\'s installed, then type `connect` and hit return.',
+    statement: 'WARN: that is not a SQL statement that Tableland can use'
+  }
+};
+
 
 export default {
   data: function () {
@@ -79,15 +99,7 @@ export default {
       }
     },
     help: function () {
-      this.printf('    SELECT * FROM todo_todos_example_34 ORDER BY id ASC;');
-      this.printf('    SELECT * FROM LootAttributes_3;');
-      this.printf('Example Read Queries:');
-      this.printf('');
-      this.printf('   help      Show this message again');
-      this.printf('   whoami    See your Eth Address');
-      this.printf('   clear     Clear this terminal');
-      this.printf('   list      List your tables');
-      this.printf('Available commands:');
+      this.printf(messages.help);
     },
     keyCheck: function (e) {
       const keycode = window.event.keyCode;
@@ -139,7 +151,7 @@ export default {
         this.connect();
       } else if (!this.ethAddress) {
         this.cls();
-        this.printf('Before running commands you need to connect with a Tableland Validator. We currently only support connecting via Metamask. Make sure it\'s installed, then type `connect` and hit return.');
+        this.printf(messages.warn.connect);
       } else if (buffer === 'clear') {
         this.cls();
       } else if (buffer === 'help') {
@@ -165,7 +177,7 @@ export default {
         const sql = command.trim().toLowerCase();
 
         if (!sql) {
-          return this.printf('WARN: that is not a SQL statement that Tableland can use');
+          return this.printf(messages.warn.statement);
         }
 
         if (sql.indexOf('create') === 0) {
@@ -176,13 +188,12 @@ export default {
         await this.runCommand(command);
       } catch (err) {
         this.loading = false;
-        this.printf(err.message);
-        this.printf('Command Failed:');
+        this.printf('Command Failed:\n' + err.message);
       }
     },
     runCommand: async function (sql) {
       try {
-        this.showSpinner('Running SQL on the Validator');
+        this.showSpinner(messages.running);
         const response = await this.$store.dispatch('runSql', sql);
         this.loading = false;
         this.cls();
@@ -196,16 +207,14 @@ export default {
     },
     runCreate: async function (sql) {
       try {
-        this.showSpinner('Creating Your Table, the steps are:\nMint the table on Ethereum\n Register it with the Validator\nIt may take a little while\n');
+        this.showSpinner(messages.creating);
         const response = await this.$store.dispatch('createTable', sql);
         this.loading = false;
         this.cls();
-        this.printf(JSON.stringify(response, null, 4));
-        this.printf('Table Created: ');
+        this.printf('Table Created:\n' + JSON.stringify(response, null, 4));
       } catch (err) {
         this.loading = false;
-        this.printf(err.message);
-        this.printf('Error: ');
+        this.printf('Error:\n' + err.message);
       }
     },
     list: async function () {
@@ -214,12 +223,10 @@ export default {
         const tables = await this.$store.dispatch('myTables');
         this.loading = false;
         this.cls();
-        this.printf(JSON.stringify(tables, null, 4));
-        this.printf('Result: ');
+        this.printf('Result:\n' + JSON.stringify(tables, null, 4));
       } catch (err) {
         this.loading = false;
-        this.printf(err.message);
-        this.printf('Error: ');
+        this.printf('Error:\n' + err.message);
       }
     },
     connect: async function () {
@@ -230,13 +237,10 @@ export default {
 
         // initial message
         this.cls();
-        this.printf('Run `help` to learn more and see some example commands.');
-        this.printf('This is your basic Tableland Terminal, you can type SQL commands interact to with a Tableland Validator.');
-        this.printf('Connected!');
+        this.printf(messages.connected);
       } catch (err) {
         this.loading = false;
-        this.printf(err.message);
-        this.printf('Error connecting to tableland');
+        this.printf('Error:\n' + err.message);
       }
     }
   }
