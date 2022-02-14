@@ -16,7 +16,12 @@
           >
           <input type="submit">
         </form>
-        <div ref="web-terminal" class="web-terminal"></div>
+        <div ref="web-terminal" class="web-terminal">
+          <span v-for="(line, i) in lines" :key="i">
+            {{ line }}
+            <br>
+          </span>
+        </div>
       </div>
     </div>
   </div>
@@ -44,7 +49,8 @@ const bhManage = function () {
 export default {
   data: function () {
     return {
-      loading: false
+      loading: false,
+      lines: []
     };
   },
   computed: {
@@ -53,17 +59,18 @@ export default {
     })
   },
   methods: {
-    display: function (html) { // write to terminal
-      this.$refs['web-terminal'].insertAdjacentHTML('afterbegin', html);
+    // format, write to terminal
+    printf: function (string) {
+      const lines = string.replaceAll('  ', '\xA0\xA0').split('\n').reverse();
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        this.lines.unshift(line);
+      }
+
       this.$refs['web-terminal'].scrollTop = 0;
     },
-    htmlElement: function (element, text) {
-      return `<${element}>${text}</${element}>`;
-    },
-    printf: function (string, newline = true) { // format, write to terminal
-      const nl = newline ? '<br>' : '';
-      const htmlString = string.replaceAll('  ', '&nbsp;&nbsp;').replaceAll('\n', '<br>');
-      this.display(`${this.htmlElement('span', htmlString)}${nl}`);
+    replaceLine: function (string) {
+      this.$set(this.lines, 0, string);
     },
     cls: function () { // clear screen
       const fontHeight = 15;
@@ -106,7 +113,9 @@ export default {
         return;
       }
 
+      this.cls();
       this.loading = true;
+
       const spinner = ['\\', '|', '/', '—'];
       let count = 0;
       const intervalId = setInterval(() => {
@@ -114,8 +123,8 @@ export default {
           clearInterval(intervalId);
           return;
         }
-        this.cls();
-        this.printf(prefix + ' ' + spinner[count++ % 4]);
+
+        this.replaceLine(prefix + ' ' + spinner[count++ % 4]);
       }, 313.37);
     },
     onSubmit: function () {
@@ -130,7 +139,7 @@ export default {
         this.connect();
       } else if (!this.ethAddress) {
         this.cls();
-        this.printf('Before running commands you need to connect with a Tableland Validator. (hint: type `connect` and hit return)');
+        this.printf('Before running commands you need to connect with a Tableland Validator. We currently only support connecting via Metamask. Make sure it\'s installed, then type `connect` and hit return.');
       } else if (buffer === 'clear') {
         this.cls();
       } else if (buffer === 'help') {
@@ -180,7 +189,6 @@ export default {
         this.printf(JSON.stringify(response, null, 4));
         this.printf('Result: ');
       } catch (err) {
-        console.error(err);
         this.loading = false;
         this.printf(err.message);
         this.printf('Error: ');
