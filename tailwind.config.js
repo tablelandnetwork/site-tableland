@@ -5,7 +5,10 @@ export default {
     extend: {
       fontSize: {
         '4.5xl': '2.5rem',
-        '7xl': '5.625rem'
+        '5xl': '3.5rem',
+        '6xl': '4.25rem',
+        '7xl': '5rem',
+        '8xl': '5.625rem'
       },
       letterSpacing: {
         widest: '0.23rem'
@@ -24,6 +27,7 @@ export default {
       borderRadius: {
         '4xl': '2rem',
         '5xl': '2.5rem',
+        '7xl': '3.5rem',
         '8xl': '4rem'
       }
     },
@@ -33,7 +37,6 @@ export default {
     },
     container: {
       center: true,
-      padding: '3rem',
       screens: {
         lg: '1760px',
         xl: '1760px',
