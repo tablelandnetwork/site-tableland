@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontSize: {
-        '4.5xl': '2.5rem',
+        '4.5xl': '2.75rem',
         '5xl': '3.5rem',
         '6xl': '4.25rem',
         '7xl': '5rem',
@@ -18,6 +18,8 @@ export default {
         30: '7.8rem',
         62: '15.5rem',
         68: '17rem',
+        80: '21rem',
+        100: '22rem',
         120: '30rem',
         280: '70rem',
         540: '135rem'
@@ -30,6 +32,11 @@ export default {
         '5xl': '2.5rem',
         '7xl': '3.5rem',
         '8xl': '4rem'
+      },
+      colors: {
+        purple: '#4B1F66',
+        violet: '#6f2560',
+        pink: '#c36fab'
       }
     },
     fontFamily: {
