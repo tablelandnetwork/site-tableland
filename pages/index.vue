@@ -88,7 +88,7 @@
     <!-- sql -->
     <section class="sql">
       <div class="garage-break"></div>
-      <div class="container px-6 md:px-8 lg:px-12 flex pt-20">
+      <div class="container px-6 md:px-8 lg:px-12 flex pt-20 2xl:pb-68">
         <div class="lg:w-2/3 xl:w-1/2">
           <h3 class="font-Orbitron text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter leading-none mb-8">
             In Tableland, we speak SQL
@@ -130,7 +130,7 @@
       <!-- playground -->
       <section class="playground text-white py-32">
         <div class="container px-6 md:px-8 lg:px-12 flex justify-center">
-          <div class="lg:w-2/3 xl:w-1/2">
+          <div class="md:w-2/3">
             <h3 class="font-Orbitron text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter leading-none mb-8">
               Try it out
             </h3>
@@ -147,8 +147,8 @@
     <!-- community -->
     <section class="community relative">
       <div class="container px-6 md:px-8 lg:px-12">
-        <div class="mb-280">
-          <div class="lg:w-2/3 xl:w-1/2">
+        <div class="mb-280 xl:mb-540">
+          <div class="md:w-2/3 xl:w-1/2">
             <h3 class="font-Orbitron text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter leading-none mb-10">
               Join the community
             </h3>
@@ -164,7 +164,7 @@
         </div>
 
         <div class="flex justify-end text-white">
-          <div class="lg:w-2/3 xl:w-1/2">
+          <div class="sm:w-3/4 md:w-2/3 xl:w-1/2">
             <h3 class="font-Orbitron text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter leading-none mb-14">
               User-owned token networks are the future of the internet
             </h3>
@@ -286,10 +286,10 @@
 
     <footer class="text-white py-24">
       <nav class="container px-6 md:px-8 lg:px-12 flex items-center py-2">
-        <div class="py-4">
+        <div class="hidden sm:inline-block py-4">
           <img src="~assets/img/logo-white.svg" alt="Tableland" class="h-5">
         </div>
-        <ul class="hidden sm:flex flex-1 justify-end items-center gap-x-12 xl:gap-x-24 uppercase text-sm pr-20">
+        <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-sm pr-20">
           <li><a href="#">Investors</a></li>
           <li><a href="#">Partners</a></li>
           <li><a href="#">Legal</a></li>

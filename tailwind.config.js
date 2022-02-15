@@ -19,7 +19,8 @@ export default {
         62: '15.5rem',
         68: '17rem',
         120: '30rem',
-        280: '70rem'
+        280: '70rem',
+        540: '135rem'
       },
       lineHeight: {
         tighter: '1.15'
