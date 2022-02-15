@@ -188,6 +188,7 @@ export default {
         await this.runCommand(command);
       } catch (err) {
         this.loading = false;
+        this.cls();
         this.printf('Command Failed:\n' + err.message);
       }
     },
@@ -201,6 +202,7 @@ export default {
         this.printf('Result: ');
       } catch (err) {
         this.loading = false;
+        this.cls();
         this.printf(err.message);
         this.printf('Error: ');
       }
@@ -214,6 +216,7 @@ export default {
         this.printf('Table Created:\n' + JSON.stringify(response, null, 4));
       } catch (err) {
         this.loading = false;
+        this.cls();
         this.printf('Error:\n' + err.message);
       }
     },
@@ -226,6 +229,7 @@ export default {
         this.printf('Result:\n' + JSON.stringify(tables, null, 4));
       } catch (err) {
         this.loading = false;
+        this.cls();
         this.printf('Error:\n' + err.message);
       }
     },
@@ -240,6 +244,7 @@ export default {
         this.printf(messages.connected);
       } catch (err) {
         this.loading = false;
+        this.cls();
         this.printf('Error:\n' + err.message);
       }
     }
