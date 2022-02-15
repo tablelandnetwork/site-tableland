@@ -18,7 +18,7 @@ body {
 }
 
 .btn {
-	@apply inline-block text-xl py-5 px-24 rounded-2xl uppercase tracking-widest cursor-pointer
+	@apply inline-block text-xl py-5 px-12 lg:px-24 rounded-2xl uppercase tracking-wider lg:tracking-widest cursor-pointer
 }
 
 .btn:active {
