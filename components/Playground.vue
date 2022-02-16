@@ -50,10 +50,12 @@ const messages = {
     'This is your basic Tableland Terminal, you can type SQL commands interact to with a Tableland Validator.\n' +
     'Run `help` to learn more and see some example commands.',
   creating: 'Creating Your Table, the steps are:\n  Mint the table on Ethereum\n  Register it with the Validator\n  It may take a little while\n',
+  docs: 'Read the full docs here: https://docs.tableland.xyz',
   help: 'Available commands:\n' +
     '    list      List your tables\n' +
     '    clear     Clear this terminal\n' +
     '    whoami    See your Eth Address\n' +
+    '    docs      Show url to the documentation\n' +
     '    help      Show this message again\n' +
     'Example Read Queries:\n' +
     '    SELECT * FROM LootAttributes_3;\n' +
@@ -149,6 +151,9 @@ export default {
 
       if (buffer === 'connect') {
         this.connect();
+      } else if (buffer === 'docs' || buffer === 'man' || buffer === 'man tableland') {
+        this.cls();
+        this.printf(messages.docs);
       } else if (!this.ethAddress) {
         this.cls();
         this.printf(messages.warn.connect);
