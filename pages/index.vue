@@ -37,10 +37,17 @@
 
     <!-- garage -->
     <section class="garage">
-      <div class="text-center">
-        <ButtonLink href="https://docs.tableland.xyz/building/examples/playbooks">See playbooks</ButtonLink>
+      <div class="container px-6 md:px-9 lg:px-16 flex items-center">
+        <div class="lg:w-2/3 xl:w-1/2">
+          <p class="text-white text-2xl md:text-3xl md:leading-normal font-light mb-18">
+            Tableland isn't a new database—it’s just web3-native relational tables.
+          </p>
+          <div class="text-center lg:text-left">
+            <ButtonLink href="https://docs.tableland.xyz/building/examples/playbooks">See playbooks</ButtonLink>
+          </div>
+        </div>
       </div>
-      <div class="container px-6 md:px-9 lg:px-16 lg:flex pt-120 justify-between">
+      <div class="container px-6 md:px-9 lg:px-24 lg:flex pt-70 justify-between">
         <div class="lg:w-1/3 xl:w-1/4">
           <div class="text-white mb-80">
             <p class="playbook-left bg-purple text-3xl px-6 py-4 font-medium rounded">Store NFT metadata</p>
@@ -51,7 +58,7 @@
           </div>
         </div>
         <div class="lg:w-1/3 xl:w-1/4">
-          <div class="text-white mb-68">
+          <div class="text-white mb-70">
             <p class="playbook-right bg-purple text-3xl p-4 font-medium rounded">Control table access</p>
           </div>
 
@@ -91,7 +98,7 @@
           <div class="lg:w-2/3 xl:w-1/2">
             <h3 class="font-Orbitron text-4xl md:text-6xl lg:text-7xl lg:leading-tighter mb-10">
             </h3>
-            <p class="text-2xl md:text-3xl md:leading-normal font-light mb-10">
+            <p class="text-2xl md:text-3xl md:leading-normal font-light mb-18">
             </p>
             <div class="text-center lg:text-left">
               <ButtonLink href="#"></ButtonLink>
@@ -124,7 +131,7 @@
             <h3 class="font-Orbitron text-4xl md:text-6xl lg:text-7xl lg:leading-tighter mb-10">
               Join the community
             </h3>
-            <p class="text-2xl md:text-3xl md:leading-normal font-light mb-10">
+            <p class="text-2xl md:text-3xl md:leading-normal font-light mb-18">
               Whether you're a developer, NFT creator, token holder, or just curious about Web3, there's a place for you in Tableland. Join a fast-growing community of innovators from all over the world.
             </p>
             <div class="text-center lg:text-left">
