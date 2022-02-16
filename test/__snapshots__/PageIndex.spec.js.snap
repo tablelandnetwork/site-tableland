@@ -2,177 +2,854 @@
 
 exports[`Index Page renders correctly 1`] = `
 <div>
-  <desktop
-    bereadyforthefuture="BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >>"
-    builddappsandnft="Build dApps and NFT games using familiar SQL"
-    builtonsql="Tableland is built on SQL, a battle-tested database language known by millions of developers."
-    desktopcardsstoryimage1props="[object Object]"
-    desktopcardsstoryimage2props="[object Object]"
-    desktopcardsstoryimage3props="[object Object]"
-    desktopcardsstoryimage4props="[object Object]"
-    desktopcardsstraight2props="[object Object]"
-    desktopcardsstraight2props2="[object Object]"
-    desktopcardsstraight3props="[object Object]"
-    desktopcardsstraight4props="[object Object]"
-    desktopcardsstraightprops="[object Object]"
-    desktopnavbarprops="[object Object]"
-    desktoptabgroupprops="[object Object]"
-    desktoptablesinglerow22props="[object Object]"
-    desktoptablesinglerow23props="[object Object]"
-    desktoptablesinglerow24props="[object Object]"
-    desktoptablesinglerow25props="[object Object]"
-    desktoptablesinglerow26props="[object Object]"
-    desktoptablesinglerow27props="[object Object]"
-    desktoptablesinglerow28props="[object Object]"
-    desktoptablesinglerow29props="[object Object]"
-    desktoptablesinglerow2props="[object Object]"
-    desktoptablesinglerow3props="[object Object]"
-    desktoptablesinglerowprops="[object Object]"
-    getafeelforhowe="Get a feel for how easy it is to relate tables on decentralised networks."
-    howitworkshowitworks="HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >>"
-    intablelandwespeaksql="In Tableland, we speak SQL"
-    jointhecommunity="Join the community"
-    property1regularprops="[object Object]"
-    property2regular2props="[object Object]"
-    property2regular3props="[object Object]"
-    property2regularprops="[object Object]"
-    screenshot20211206at12041="../../img/screenshot-2021-12-06-at-12-04-1@2x.png"
-    showcaseshowcase="SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >>"
-    spantext="select"
-    spantext2=" * "
-    spantext3="from"
-    spantext4=" axie_infinitiy_round_2"
-    spantext5=" limit"
-    spantext6=" 10;"
-    stateregular2props="[object Object]"
-    stateregular3props="[object Object]"
-    stateregular4props="[object Object]"
-    stateregular4props2="[object Object]"
-    stateregular5props="[object Object]"
-    stateregular62props="[object Object]"
-    stateregular6props="[object Object]"
-    stateregular7props="[object Object]"
-    stateregular8props="[object Object]"
-    stateregularprops="[object Object]"
-    tablelandexiststo="TABLELAND EXISTS TO ENABLE ALL DATA LAYERS OF THE INTERNET TO BE USER-OWNED AND CONTROLLED."
-    tablelandextendsto="Tableland extends token networks like Ethereum with metadata. Anyone can create tables of data linked to existing identities and assets. Tableland is a composable meta-layer — it encompasses everything from NFT metadata to media, social, financial, machine learning, and research data, or anything else. Tableland tables are also own-able, tradable, and interoperable assets on their parent networks."
-    tablelandisanetwo="Tableland is a network and SQL database protocol for Ethereum. Built for developers, NFT creators, and Web3 visionaries."
-    thepossibilitiesareendless="The possibilities are endless"
-    tryittryittryit="TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >>"
-    untitled11="../../img/untitled-1-1@1x.png"
-    untitled32="../../img/untitled-3-2@2x.png"
-    untitled33="../../img/untitled-3-3@2x.png"
-    untitled41="../../img/untitled-4-1@2x.png"
-    untitled51="../../img/untitled-5-1@1x.png"
-    untitled81="img/untitled-8-1@1x.png"
-    usefamiliarsqltab="Use familiar SQL tables to read and write NFT metadata, media, social data, or anything else—all orchestrated by token networks like Ethereum."
-    userownedtokennet="User-owned token networks are the future of the Internet"
-    welcometotableland="WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >>"
-    whatwillyoubuild="What will you build?"
-    whetheryoureadev="Whether you're a developer, NFT creator, token holder, or just curious about Web3, there's a place for you in Tableland. Join a fast-growing community of innovators from all over the world."
-  />
+  <header
+    class="bg-navbar"
+  >
+    <nav
+      class="container px-6 md:px-8 lg:px-12 flex items-center py-2"
+    >
+      <div
+        class="py-4"
+      >
+        <img
+          alt="Tableland"
+          class="h-5"
+          src="~assets/img/logo-black.svg"
+        />
+      </div>
+       
+      <ul
+        class="hidden md:flex flex-1 justify-end items-center gap-x-10 lg:gap-x-24 uppercase text-sm pr-20"
+      >
+        <li>
+          <a
+            href="#"
+          >
+            About
+          </a>
+        </li>
+         
+        <li>
+          <a
+            href="#"
+          >
+            Join Us
+          </a>
+        </li>
+         
+        <li>
+          <a
+            href="#"
+          >
+            Docs
+          </a>
+        </li>
+         
+        <li>
+          <a
+            href="#"
+          >
+            Mint
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
    
-  <mobile
-    anewgenerationof="A new generation of SQL-powered Web3 experience is coming, built on existing token-networks like Ethereum."
-    anysuggestions="Any suggestions?"
-    bereadyforthefuture="BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >> BE READY FOR THE FUTURE >>"
-    bereadyforthefuture2="BE READY FOR THE FUTURE"
-    builddappsandnft="Build dApps and NFT games using familiar SQL"
-    buildingappsinthe="Building apps in the future requires relational capabilities (e.g., relating NFTs with corresponding metadata). Smart contracts are incapable of providing this functionality."
-    chainexpansion="Chain expansion"
-    desktoplistgroup22props="[object Object]"
-    desktoplistgroup2props="[object Object]"
-    desktoplistgroup2props2="[object Object]"
-    desktoplistgroupprops="[object Object]"
-    domain="tableland.io"
-    ethereumandothern="Ethereum and other networks have brought us world computers with truly composable applications, digital identity, and ownership of digital assets. These identities and assets can be used not only to orchestrate the networks themselves, but to orchestrate and secure all other data on the user-owned Internet. We call this other data the meta-layer and it encompasses everything from NFT metadata to social application data, media, financial data, machine learning data, research data, or whatever else you can imagine."
-    explorepossibilities="EXPLORE THE POSSIBILITIES"
-    frame662props="[object Object]"
-    frame663props="[object Object]"
-    frame66props="[object Object]"
-    getafeelforhowe="Get a feel for how easy it is to relate tables on decentralised networks."
-    group66182props="[object Object]"
-    group6618props="[object Object]"
-    howitworkshowitworks="HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >> HOW IT WORKS >>"
-    intablelandwespeaksql="In Tableland, we speak SQL"
-    meettheworldwidecommunity="Meet the worldwide community"
-    mobilecardsstoryimage1props="[object Object]"
-    mobilecardsstoryimage2props="[object Object]"
-    mobilecardsstoryimage3props="[object Object]"
-    mobilecardsstoryimage4props="[object Object]"
-    mobilecardsstraight22props="[object Object]"
-    mobilecardsstraight23props="[object Object]"
-    mobilecardsstraight24props="[object Object]"
-    mobilecardsstraight2props="[object Object]"
-    mobilecardsstraightprops="[object Object]"
-    mobilecardswhiteprops="[object Object]"
-    mobilemenuprops1="[object Object]"
-    mobilemenuprops2="[object Object]"
-    mobilemenuprops3="[object Object]"
-    mobilemenuprops4="[object Object]"
-    mobiletablesinglerow210props="[object Object]"
-    mobiletablesinglerow22props="[object Object]"
-    mobiletablesinglerow23props="[object Object]"
-    mobiletablesinglerow24props="[object Object]"
-    mobiletablesinglerow25props="[object Object]"
-    mobiletablesinglerow26props="[object Object]"
-    mobiletablesinglerow27props="[object Object]"
-    mobiletablesinglerow28props="[object Object]"
-    mobiletablesinglerow29props="[object Object]"
-    mobiletablesinglerow2props="[object Object]"
-    mobiletablesinglerowprops="[object Object]"
-    number="2023"
-    property1activeprops="[object Object]"
-    property1regular22props="[object Object]"
-    property1regular23props="[object Object]"
-    property1regular2props="[object Object]"
-    property2regular2props="[object Object]"
-    property2regular3props="[object Object]"
-    property2regularprops="[object Object]"
-    roadmapnumber2props="[object Object]"
-    roadmapnumber3props="[object Object]"
-    roadmapnumber4props="[object Object]"
-    roadmapnumber5props="[object Object]"
-    roadmapnumber6props="[object Object]"
-    roadmapnumberprops="[object Object]"
-    roadmapphase1="[object Object]"
-    roadmapphase2="[object Object]"
-    roadmapphase3="[object Object]"
-    roadmapphase4="[object Object]"
-    roadmapphase5="[object Object]"
-    roadmapphase6="[object Object]"
-    screenshot20211206at12041="../../img/screenshot-2021-12-06-at-12-04-1@2x.png"
-    showcaseshowcase="SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >> SHOWCASE >>"
-    spantext="select"
-    spantext2=" * "
-    spantext3="from"
-    spantext4=" axie_infinitiy_round_2"
-    spantext5="limit"
-    spantext6=" 10;"
-    stateregular2props="[object Object]"
-    stateregular3props="[object Object]"
-    stateregular4props="[object Object]"
-    stateregular4props2="[object Object]"
-    stateregularprops="[object Object]"
-    tablelandexiststo="TABLELAND EXISTS TO ENABLE ALL LAYERS OF THE INTERNET TO BE USER-OWNED AND CONTROLLED."
-    text1="􀎡"
-    text2="􀎡"
-    thepossibilitiesareendless="The possibilities are endless"
-    time="9:41"
-    tryittryittryit="TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >> TRY IT >>"
-    untitled11="../../img/untitled-1-1@2x.png"
-    untitled33="img/untitled-3-3@2x.png"
-    untitled34="img/untitled-3-4@2x.png"
-    untitled41="img/untitled-4-1@2x.png"
-    untitled51="../../img/untitled-5-1@2x.png"
-    untitled71="../../img/untitled-7-1@2x.png"
-    untitled81="img/untitled-8-1@1x.png"
-    userownedtokennet="User-owned token networks are the future of the Internet"
-    videointroduction="VIDEO INTRODUCTION"
-    welcometotableland="WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >> WELCOME TO TABLELAND >>"
-    whatwillyoubuild="What will you build?"
-    whetheryoureadev="Whether you're a developer, NFT creator, token holder, or just curious about Web3, there's a place for you in Tableland. Join a fast-growing community of innovators from all the over the world."
-    why="Why?"
-  />
+  <section
+    class="hero"
+  >
+    <div
+      class="container px-6 md:px-9 lg:px-12 flex items-center py-64"
+    >
+      <div
+        class="lg:w-2/3 xl:w-1/2"
+      >
+        <h1
+          class="font-Orbitron text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter leading-tight mb-6"
+        >
+          
+          Build dApps and NFT games using familiar SQL
+        
+        </h1>
+         
+        <p
+          class="text-2xl md:text-3xl leading-normal mb-18"
+        >
+          
+          Tableland is a network and SQL database protocol for Ethereum.
+          Built for developers, NFT creators, and Web3 visionaries.
+        
+        </p>
+         
+        <div
+          class="text-center lg:text-left mb-64"
+        >
+          <a
+            class="btn bg-black text-white"
+            href="#"
+          >
+            <span
+              class="flex"
+            >
+              Call to Action 
+              <img
+                alt=""
+                class="hidden sm:inline-block ml-4"
+                src="~assets/img/arrow_white.png"
+                srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+              />
+            </span>
+          </a>
+        </div>
+         
+        <p
+          class="text-3xl md:text-4xl xl:text-5xl tracking-tight xl:leading-tighter"
+        >
+          
+          Use familiar SQL tables to read and write NFT meatadata, media, social
+          data, or anything else – all orchestrated by token networks like Ethereum.
+        
+        </p>
+      </div>
+    </div>
+  </section>
+   
+  <section
+    class="garage"
+  >
+    <div
+      class="container px-6 md:px-8 lg:px-12 lg:flex justify-between"
+    >
+      <div
+        class="lg:w-1/2 xl:w-1/3 lg:px-4"
+      >
+        <div
+          class="bg-black text-white pt-14 pb-8 pl-8 pr-6 lg:pl-12 lg:pr-10 mb-24 rounded-4xl"
+        >
+          <p
+            class="text-3xl md:text-4xl xl:text-5xl xl:leading-tighter mb-4"
+          >
+            Extend existing NFTs
+          </p>
+           
+          <p
+            class="mb-30"
+          >
+            <a
+              class="text-lg lg:text-xl uppercase underline"
+              href="#"
+            >
+              View Code
+            </a>
+          </p>
+           
+          <p
+            class="text-right"
+          >
+            <button>
+              <img
+                alt="+"
+                class="inline"
+                src="~assets/img/expand.png"
+                srcset="~assets/img/expand.png 1x, ~assets/img/expand@2x.png 2x"
+              />
+            </button>
+          </p>
+        </div>
+         
+        <div
+          class="bg-black text-white pt-14 pb-8 pl-8 pr-6 lg:pl-12 lg:pr-10 mb-24 rounded-4xl"
+        >
+          <p
+            class="text-3xl md:text-4xl xl:text-5xl xl:leading-tighter mb-4"
+          >
+            Create new dynamic NFTs
+          </p>
+           
+          <p
+            class="mb-30"
+          >
+            <a
+              class="text-lg lg:text-xl uppercase underline"
+              href="#"
+            >
+              View Code
+            </a>
+          </p>
+           
+          <p
+            class="text-right"
+          >
+            <button>
+              <img
+                alt="+"
+                class="inline"
+                src="~assets/img/expand.png"
+                srcset="~assets/img/expand.png 1x, ~assets/img/expand@2x.png 2x"
+              />
+            </button>
+          </p>
+        </div>
+      </div>
+       
+      <div
+        class="lg:w-1/2 xl:w-1/3 lg:px-4"
+      >
+        <div
+          class="bg-black text-white pt-14 pb-8 pl-8 pr-6 lg:pl-12 lg:pr-10 mb-24 rounded-4xl"
+        >
+          <p
+            class="text-3xl md:text-4xl xl:text-5xl xl:leading-tighter mb-4"
+          >
+            Use tokens to control table access
+          </p>
+           
+          <p
+            class="mb-18"
+          >
+            <a
+              class="text-lg lg:text-xl uppercase underline"
+              href="#"
+            >
+              View Code
+            </a>
+          </p>
+           
+          <p
+            class="text-right"
+          >
+            <button>
+              <img
+                alt="+"
+                class="inline"
+                src="~assets/img/expand.png"
+                srcset="~assets/img/expand.png 1x, ~assets/img/expand@2x.png 2x"
+              />
+            </button>
+          </p>
+        </div>
+         
+        <div
+          class="bg-black text-white pt-14 pb-8 pl-8 pr-6 lg:pl-12 lg:pr-10 mb-24 rounded-4xl"
+        >
+          <p
+            class="text-3xl md:text-4xl xl:text-5xl xl:leading-tighter mb-4"
+          >
+            Compose with existing tables
+          </p>
+           
+          <p
+            class="mb-18"
+          >
+            <a
+              class="text-lg lg:text-xl uppercase underline"
+              href="#"
+            >
+              View Code
+            </a>
+          </p>
+           
+          <p
+            class="text-right"
+          >
+            <button>
+              <img
+                alt="+"
+                class="inline"
+                src="~assets/img/expand.png"
+                srcset="~assets/img/expand.png 1x, ~assets/img/expand@2x.png 2x"
+              />
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+   
+  <section
+    class="sql"
+  >
+    <div
+      class="garage-break"
+    />
+     
+    <div
+      class="container px-6 md:px-8 lg:px-12 flex pt-20 2xl:pb-68"
+    >
+      <div
+        class="lg:w-2/3 xl:w-1/2"
+      >
+        <h3
+          class="font-Orbitron text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter leading-none mb-8"
+        >
+          
+          In Tableland, we speak SQL
+        
+        </h3>
+         
+        <p
+          class="text-2xl md:text-3xl leading-normal tracking-wide mb-1"
+        >
+          
+          1 – The bulk of digital information is stored in relational tables.
+        
+        </p>
+         
+        <p
+          class="text-2xl md:text-3xl leading-normal tracking-wide mb-1"
+        >
+          
+          2 – Your familiar SQL tables are stored on a decentralized network of validators
+          and anchored to Ethereum as transferable NFTs, providing ownership and access control.
+        
+        </p>
+         
+        <p
+          class="text-2xl md:text-3xl leading-normal tracking-wide mb-4"
+        >
+          
+          3 – Easy as pie, right?
+        
+        </p>
+      </div>
+    </div>
+  </section>
+   
+  <div
+    class="bg-gradient"
+  >
+    <section
+      class="tables relative text-white"
+    >
+      <div
+        class="container px-6 md:px-8 lg:px-12 flex justify-end"
+      >
+        <div
+          class="lg:w-2/3 xl:w-1/2"
+        >
+          <h3
+            class="font-Orbitron text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter leading-none mb-8"
+          >
+            
+            Easy to releate tables
+          
+          </h3>
+           
+          <p
+            class="text-2xl md:text-3xl leading-normal tracking-wide mb-16"
+          >
+            
+            Whether you're a developer, NFT creator, token holder, or just curious about Web3,
+            there's a place for you in Tableland. Join a fast-growing community of innovators
+            from all over the world.
+          
+          </p>
+           
+          <div
+            class="text-center lg:text-left"
+          >
+            <a
+              class="btn bg-black text-white"
+              href="#"
+            >
+              <span
+                class="flex"
+              >
+                Call to Action 
+                <img
+                  alt=""
+                  class="hidden sm:inline-block ml-4"
+                  src="~assets/img/arrow_white.png"
+                  srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+                />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+    <section
+      class="playground text-white py-32"
+    >
+      <div
+        class="container px-6 md:px-8 lg:px-12 flex justify-center"
+      >
+        <div
+          class="md:w-2/3"
+        >
+          <h3
+            class="font-Orbitron text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter leading-none mb-8"
+          >
+            
+            Try it out
+          
+          </h3>
+           
+          <p
+            class="text-2xl md:text-3xl leading-normal tracking-wide mb-8"
+          >
+            
+            Don't take just our word for it. Type 
+            <span
+              class="font-mono"
+            >
+              connect
+            </span>
+            
+            below to see how easy it is.
+          
+          </p>
+           
+          <div>
+            <div
+              class="w-full pt-6 flex items-center flex-col rounded-3xl border-2px-black bg-black overflow-hidden"
+            >
+              <div
+                class="w-full block"
+              >
+                <form
+                  class="web-terminal-form relative block w-full text-white font-mono"
+                >
+                  <input
+                    autocomplete="off"
+                    class="pl-8 pr-5 bg-black web-terminal-input block w-full text-white font-mono outline-none"
+                    type="text"
+                  />
+                   
+                  <input
+                    class="w-0 hidden"
+                    type="submit"
+                  />
+                </form>
+                 
+                <div
+                  class="web-terminal p-5 overflow-y-scroll text-white"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+   
+  <section
+    class="community relative"
+  >
+    <div
+      class="container px-6 md:px-8 lg:px-12"
+    >
+      <div
+        class="mb-280 xl:mb-540"
+      >
+        <div
+          class="md:w-2/3 xl:w-1/2"
+        >
+          <h3
+            class="font-Orbitron text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter leading-none mb-10"
+          >
+            
+            Join the community
+          
+          </h3>
+           
+          <p
+            class="text-2xl md:text-3xl leading-normal tracking-wide mb-14"
+          >
+            
+            Whether you're a developer, NFT creator, token holder, or just curious about Web3,
+            there's a place for you in Tableland. Join a fast-growing community of innovators
+            from all over the world.
+          
+          </p>
+           
+          <div
+            class="text-center lg:text-left"
+          >
+            <a
+              class="btn bg-black text-white"
+              href="#"
+            >
+              <span
+                class="flex"
+              >
+                Call to Action 
+                <img
+                  alt=""
+                  class="hidden sm:inline-block ml-4"
+                  src="~assets/img/arrow_white.png"
+                  srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+                />
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+       
+      <div
+        class="flex justify-end text-white"
+      >
+        <div
+          class="sm:w-3/4 md:w-2/3 xl:w-1/2"
+        >
+          <h3
+            class="font-Orbitron text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter leading-none mb-14"
+          >
+            
+            User-owned token networks are the future of the internet
+          
+          </h3>
+           
+          <p
+            class="text-2xl md:text-3xl leading-normal tracking-wide mb-14"
+          >
+            
+            Tableland is a compassable meta-layer-it and encompasses everything from NFT
+            metadata, social, financial, machine-learning, and research data, or anything else.
+            Tableland tables are also own-able, tradable, and interoperable assets on their
+            parent networks.
+          
+          </p>
+        </div>
+      </div>
+    </div>
+     
+    <div
+      class="community-break"
+    />
+  </section>
+   
+  <section
+    class="phases mb-48"
+  >
+    <div
+      class="container px-6 md:px-8 lg:px-12"
+    >
+      <div
+        class="mb-62"
+      >
+        <div
+          class="xl:w-1/2"
+        >
+          <h3
+            class="font-Orbitron text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter leading-none mb-1"
+          >
+            
+            Q1
+            <br />
+            
+            Testnet Phase 1
+          
+          </h3>
+           
+          <p
+            class="font-Orbitron text-2xl md:text-3xl lg:text-4.5xl mb-5"
+          >
+            2022
+          </p>
+           
+          <div
+            class="bg-black text-white py-8 md:py-10 lg:py-14 px-10 md:px-12 lg:px-16 rounded-3xl"
+          >
+            <p
+              class="text-3xl md:text-4xl xl:text-5xl xl:leading-tighter mb-4"
+            >
+              
+              Ethereum table & payment channel support
+            
+            </p>
+             
+            <p>
+              <a
+                class="text-xl md:text-2xl uppercase underline"
+                href="#"
+              >
+                Learn More
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+       
+      <div
+        class="mb-62 xl:mb-14 xl:flex xl:justify-end"
+      >
+        <div
+          class="xl:w-1/2"
+        >
+          <h3
+            class="font-Orbitron text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter leading-none mb-1"
+          >
+            
+            Q2
+            <br />
+            
+            Testnet Phase 2
+          
+          </h3>
+           
+          <p
+            class="font-Orbitron text-2xl md:text-3xl lg:text-4.5xl mb-5"
+          >
+            2022
+          </p>
+           
+          <div
+            class="bg-black text-white py-8 md:py-10 lg:py-14 px-10 md:px-12 lg:px-16 rounded-3xl"
+          >
+            <p
+              class="text-3xl md:text-4xl xl:text-5xl xl:leading-tighter mb-4"
+            >
+              
+              Permissionless validator network
+            
+            </p>
+             
+            <p>
+              <a
+                class="text-xl md:text-2xl uppercase underline"
+                href="#"
+              >
+                Learn More
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+       
+      <div
+        class="mb-48"
+      >
+        <div
+          class="xl:w-1/2"
+        >
+          <h3
+            class="font-Orbitron text-4xl md:text-6xl lg:text-7xl xl:text-8xl tracking-tighter leading-none mb-1"
+          >
+            
+            Q3
+            <br />
+            
+            Testnet Phase 3
+          
+          </h3>
+           
+          <p
+            class="font-Orbitron text-2xl md:text-3xl lg:text-4.5xl mb-5"
+          >
+            2022
+          </p>
+           
+          <div
+            class="bg-black text-white py-8 md:py-10 lg:py-14 px-10 md:px-12 lg:px-16 rounded-3xl"
+          >
+            <p
+              class="text-3xl md:text-4xl xl:text-5xl xl:leading-tighter mb-4"
+            >
+              
+              Ethereum table & payment channel support
+            
+            </p>
+             
+            <p>
+              <a
+                class="text-xl md:text-2xl uppercase underline"
+                href="#"
+              >
+                Learn More
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+       
+      <div
+        class="text-center"
+      >
+        <p
+          class="text-3xl md:text-4xl xl:text-5xl xl:leading-normal mb-8"
+        >
+          Any Suggestions?
+        </p>
+         
+        <a
+          class="btn bg-black text-white"
+          href="#"
+        >
+          <span
+            class="flex"
+          >
+            Call to Action 
+            <img
+              alt=""
+              class="hidden sm:inline-block ml-4"
+              src="~assets/img/arrow_white.png"
+              srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+            />
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+   
+  <section
+    class="hidden md:block showcase pt-72 pb-36 relative"
+  >
+    <div
+      class="showcase-break"
+    />
+     
+    <div
+      class="container px-6 md:px-8 lg:px-12"
+    >
+      <div
+        class="slider flex gap-x-3.5 mb-32"
+      >
+        <div
+          class="bg-white pt-8 lg:pt-14 pb-120 px-10 lg:px-16 rounded-7xl lg:rounded-8xl slide active"
+        >
+          <div
+            class="md:w-1/2 xl:w-1/3"
+          >
+            <h4
+              class="text-3xl md:text-4xl xl:text-5xl xl:leading-tighter"
+            >
+              
+              Showcase Example 1
+            
+            </h4>
+             
+            <a
+              class="text-2xl uppercase underline"
+              href="#"
+            >
+              Link
+            </a>
+          </div>
+        </div>
+         
+        <div
+          class="bg-white pt-8 lg:pt-14 pb-120 px-10 lg:px-16 rounded-7xl lg:rounded-8xl slide inactive"
+        >
+          <div
+            class="md:w-1/2 xl:w-1/3"
+          >
+            <h4
+              class="text-3xl md:text-4xl xl:text-5xl xl:leading-tighter"
+            >
+              
+              Showcase Example 2
+            
+            </h4>
+             
+            <a
+              class="text-2xl uppercase underline"
+              href="#"
+            >
+              Link
+            </a>
+          </div>
+        </div>
+         
+        <div
+          class="bg-white pt-8 lg:pt-14 pb-120 px-10 lg:px-16 rounded-7xl lg:rounded-8xl slide inactive"
+        >
+          <div
+            class="md:w-1/2 xl:w-1/3"
+          >
+            <h4
+              class="text-3xl md:text-4xl xl:text-5xl xl:leading-tighter"
+            >
+              
+              Showcase Example 3
+            
+            </h4>
+             
+            <a
+              class="text-2xl uppercase underline"
+              href="#"
+            >
+              Link
+            </a>
+          </div>
+        </div>
+      </div>
+       
+      <div
+        class="text-center text-white"
+      >
+        <p
+          class="text-3xl md:text-4xl xl:text-5xl xl:leading-normal mb-2"
+        >
+          What Will You Build?
+        </p>
+         
+        <a
+          class="btn bg-black text-white"
+          href="#"
+        >
+          <span
+            class="flex"
+          >
+            Call to Action 
+            <img
+              alt=""
+              class="hidden sm:inline-block ml-4"
+              src="~assets/img/arrow_white.png"
+              srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+            />
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+   
+  <footer
+    class="text-white py-24"
+  >
+    <nav
+      class="container px-6 md:px-8 lg:px-12 flex items-center py-2"
+    >
+      <div
+        class="hidden sm:inline-block py-4"
+      >
+        <img
+          alt="Tableland"
+          class="h-5"
+          src="~assets/img/logo-white.svg"
+        />
+      </div>
+       
+      <ul
+        class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-sm pr-20"
+      >
+        <li>
+          <a
+            href="#"
+          >
+            Investors
+          </a>
+        </li>
+         
+        <li>
+          <a
+            href="#"
+          >
+            Partners
+          </a>
+        </li>
+         
+        <li>
+          <a
+            href="#"
+          >
+            Legal
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
 </div>
 `;

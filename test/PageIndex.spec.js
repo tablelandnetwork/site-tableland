@@ -1,7 +1,9 @@
-import { mount } from '@vue/test-utils';
+import { createLocalVue, mount } from '@vue/test-utils';
 import { setupTest } from '@nuxt/test-utils'
 import IndexPage from '@/pages/index.vue';
 import flushPromises from 'flush-promises';
+
+import { registerComponents } from './setup';
 
 /*
 window.ethereum = {};
@@ -30,22 +32,27 @@ jest.mock('ethers', function () {
   }
 });
 */
+
 describe('Index Page', function () {
   setupTest({
     configFile: 'nuxt.config.js'
   });
 
-  let wrapper = mount(IndexPage);
-/*
+  let wrapper;
+
   beforeAll(async function () {
+    const localVue = createLocalVue();
+    registerComponents(localVue);
+
+    // env defined in global setup
     const storePath = `${process.env.buildDir}/store.js`;
     const NuxtStore = await import(storePath);
     const store = await NuxtStore.createStore();
 
     // hoisted
-    wrapper = mount(IndexPage, { store });
+    wrapper = mount(IndexPage, { localVue: localVue, store: store });
   });
-*/
+
   test('is a Vue instance', function () {
     expect(wrapper.vm).toBeTruthy();
   });
@@ -54,13 +61,15 @@ describe('Index Page', function () {
     expect(wrapper.element).toMatchSnapshot();
   });
 
-  test('connects to metamask', async function () {
-    const metamaskButton = wrapper.find('button');
-    expect(metamaskButton.find('span').text()).toMatch('Connect to Tableland');
+  test('should respond to clicking showcase slider', async function () {
+    const showcase = wrapper.find('.showcase');
+    const activeSlider = showcase.find('.slide.active');
+    const inactiveSlider = showcase.find('.slide.inactive');
+    inactiveSlider.trigger('click');
 
-    await metamaskButton.trigger('click');
     await flushPromises();
 
-    expect(metamaskButton.find('span').text()).toMatch('Disconnect');
+    await expect(activeSlider.element.classList.contains('inactive')).toBe(true);
+    await expect(inactiveSlider.element.classList.contains('active')).toBe(true);
   });
 });

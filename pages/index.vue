@@ -47,7 +47,7 @@
               <a class="text-lg lg:text-xl uppercase underline" href="#">View Code</a>
             </p>
             <p class="text-right">
-              <button><ExpandIcon /></button>
+              <button><ExpandIcon></ExpandIcon></button>
             </p>
           </div>
 
@@ -57,7 +57,7 @@
               <a class="text-lg lg:text-xl uppercase underline" href="#">View Code</a>
             </p>
             <p class="text-right">
-              <button><ExpandIcon /></button>
+              <button><ExpandIcon></ExpandIcon></button>
             </p>
           </div>
         </div>
@@ -68,7 +68,7 @@
               <a class="text-lg lg:text-xl uppercase underline" href="#">View Code</a>
             </p>
             <p class="text-right">
-              <button><ExpandIcon /></button>
+              <button><ExpandIcon></ExpandIcon></button>
             </p>
           </div>
 
@@ -78,7 +78,7 @@
               <a class="text-lg lg:text-xl uppercase underline" href="#">View Code</a>
             </p>
             <p class="text-right">
-              <button><ExpandIcon /></button>
+              <button><ExpandIcon></ExpandIcon></button>
             </p>
           </div>
         </div>
