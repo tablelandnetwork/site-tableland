@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;500;600&display=swap');
 
 .mock {
 	opacity: 0.1;
@@ -9,8 +9,18 @@
 	height: auto;
 }
 
+html {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+}
+
 body {
-	@apply font-Poppins
+	@apply font-Poppins;
+  background-color: #f2f2f2;
 }
 
 .bg-navbar {
@@ -27,8 +37,8 @@ body {
 
 /** hero **/
 .hero {
-	background: center / cover no-repeat url('~assets/img/hero.jpg');
-	padding-bottom: 65rem;
+	background: center -8rem / cover no-repeat url('~assets/img/hero.jpg');
+	padding-bottom: 73rem;
 }
 
 @media
@@ -39,22 +49,24 @@ body {
   }
 }
 
-@media (min-width: 1900px) {
-  .hero {
-    padding-bottom: 116rem;
-  }
-}
-
 /** garage **/
 .garage {
-	background: center 37% / cover no-repeat url('~assets/img/garage.jpg');
-	padding-top: 19rem;
-  padding-bottom: 1.6rem;
+	background: center -26rem / cover no-repeat url('~assets/img/garage.jpg');
+}
+
+p.playbook-left {
+  display: inline-block;
+  float: right;
+}
+
+p.playbook-right {
+  display: inline-block;
+  float: left;
 }
 
 .garage-break {
 	background: left / cover no-repeat url('~assets/img/break_1.svg');
-	height: 185px;
+	height: 184px;
 }
 
 @media
@@ -112,16 +124,21 @@ body {
   }
 }
 
-.bg-gradient {
-	background: top / cover no-repeat url('~assets/img/bg-gradient.svg');
-  padding-bottom: 45rem;
+.playground {
+  background: -65rem -17rem / 200% no-repeat url('~assets/img/clouds.png');
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+  .playground {
+    background-image: url('~assets/img/clouds@2x.png');
+  }
 }
 
 /** community **/
 .community {
 	background: center top / cover no-repeat url('~assets/img/community.jpg');
-  padding-top: 13.4rem;
-  padding-bottom: 42rem;
 }
 
 @media
@@ -132,11 +149,19 @@ body {
   }
 }
 
+.community-top {
+  margin-bottom: 73rem;
+}
+
+.community-bottom {
+  padding-bottom: 40rem;
+}
+
 .community-break {
-	background: left / cover no-repeat url('~assets/img/break_2.svg');
-	height: 185px;
+	background: left / cover no-repeat url('~assets/img/break_4.svg');
+	height: 184px;
   position: absolute;
-  bottom: -2px;
+  bottom: 0;
   left: 0;
   right: 0;
 }
@@ -147,7 +172,7 @@ body {
 
 .showcase-break {
 	background: left / cover no-repeat url('~assets/img/break_3.svg');
-	height: 185px;
+	height: 184px;
   position: absolute;
   top: 0;
   left: 0;
