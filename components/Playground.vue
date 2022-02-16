@@ -6,17 +6,17 @@
       class="w-full pt-6 flex items-center flex-col rounded-3xl border-2px-black bg-black overflow-hidden"
     >
       <div class="w-full block">
-        <form class="web-terminal-form relative" @submit.prevent="onSubmit">
+        <form class="web-terminal-form relative block w-full text-white font-mono" @submit.prevent="onSubmit">
           <input
             ref="web-terminal-input"
-            class="pl-8 pr-5 bg-black web-terminal-input"
+            class="pl-8 pr-5 bg-black web-terminal-input block w-full text-white font-mono outline-none"
             type="text"
             autocomplete="off"
             @keydown="keyCheck"
           >
-          <input type="submit">
+          <input type="submit" class="w-0 hidden">
         </form>
-        <div ref="web-terminal" class="web-terminal">
+        <div ref="web-terminal" class="web-terminal p-5 overflow-y-scroll text-white">
           <span v-for="(line, i) in lines" :key="i">
             {{ line }}
             <br>
@@ -258,36 +258,22 @@ export default {
     box-sizing: border-box;
 }
 
-/* fontHeight: 15px; */
-/* terminalRows: 24; */
 .web-terminal {
-  padding: 20px;
-  color: white;
   font-family: monospace;
-  overflow-y: scroll;
-  height: calc(17px * 24);
+  height: calc(22rem + 10vw);
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
-.web-terminal-form, .web-terminal-input  {
-  display: block;
-  width: 100%;
-  border: none;
-  color: white;
-  font-family: monospace;
+.web-terminal::-webkit-scrollbar {
+  display: none;
 }
 
 .font-mono {
   font-family: monospace;
 }
 
-.web-terminal-form input[type=submit] {
-  width: 0px;
-  display: none;
-}
-
-.web-terminal-form input[type=text]:focus {
-  outline: none;
-}
 .web-terminal-form::before {
   content: '> ';
   position: absolute;
