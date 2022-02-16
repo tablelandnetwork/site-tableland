@@ -1,27 +1,26 @@
-name: "Textile Bucket - Deploy Tableland Site"
+name: Build - Test - Deploy
 on:
   push:
     branches:
-      - deploy
+      - main
 jobs:
-  deploy: # make sure the action works on a clean machine without building
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout
+      - name: Checkout 🛎️
         uses: actions/checkout@v2
-      - name: push # push to a known bucket
-        id: bucket
-        uses: "textileio/github-action-buckets@master"
+
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run generate
+
+      - name: Test 🔧
+        run: |
+          npm test
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
-          key: ${{ secrets.BUCKET_KEY }}
-          secret: ${{ secrets.BUCKET_SECRET }}
-          bucket: "bafzbeibqrty662jdv6rr6bupkc3qrbfc5ih77vicsqfl32xesfal5ho3di"
-          thread: "bafkwepbma4zz37rs7dns5ye3anc2j7ewqywu2rfciles4oca2b5xkxq"
-          path: "dist"
-      - run: echo "bucket - ${{ steps.bucket.outputs.key }}"
-      - run: echo "ipfs - ${{ steps.bucket.outputs.ipfs }}"
-      - run: echo "ipfs link - ${{ steps.bucket.outputs.ipfsUrl }}"
-      - run: echo "ipns - ${{ steps.bucket.outputs.ipns }}"
-      - run: echo "ipns link - ${{ steps.bucket.outputs.ipnsUrl }}"
-      - run: echo "hub - ${{ steps.bucket.outputs.hub }}"
-      - run: echo "www - ${{ steps.bucket.outputs.www }}"
+          branch: gh-pages
+          folder: dist
