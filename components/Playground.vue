@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <!--<button v-if="!ethAddress" type="button" class="bg-black text-white text-xl py-2 px-8 rounded-2xl" @click="connect">CONNECT</button>-->
-
+  <div @click.once="init">
     <div
       class="w-full pt-6 flex items-center flex-col rounded-3xl border-2px-black bg-black overflow-hidden"
     >
@@ -52,11 +50,13 @@ const messages = {
   creating: 'Creating Your Table, the steps are:\n  Mint the table on Ethereum\n  Register it with the Validator\n  It may take a little while\n',
   docs: 'Read the full docs here: https://docs.tableland.xyz',
   help: 'Available commands:\n' +
+    '    connect   Connect to tableland with Metamask. You must\n' +
+    '              do this before any other commands can be run.\n' +
     '    list      List your tables\n' +
     '    clear     Clear this terminal\n' +
     '    whoami    See your Eth Address\n' +
     '    docs      Show url to the documentation\n' +
-    '    help      Show this message again\n' +
+    '    help      Show this message again\n\n' +
     'Example Read Queries:\n' +
     '    SELECT * FROM LootAttributes_3;\n' +
     '    SELECT * FROM todo_todos_example_34 ORDER BY id ASC;',
@@ -79,6 +79,9 @@ export default {
     ...mapState({
       ethAddress: state => state.ethAddress
     })
+  },
+  mounted: function () {
+    this.printf(messages.help);
   },
   methods: {
     // format, write to terminal
@@ -176,7 +179,10 @@ export default {
 
       this.$refs['web-terminal-input'].value = '';
     },
-
+    init: function () {
+      // the first click on the terminal should put their cursor in the input
+      this.$refs['web-terminal-input'].focus();
+    },
     parseCommand: async function (command) {
       try {
         const sql = command.trim().toLowerCase();
