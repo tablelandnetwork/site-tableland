@@ -21,6 +21,12 @@ header {
 body {
 	@apply font-Poppins;
   background-color: #f2f2f2;
+  animation: reveal 2s;
+}
+
+@keyframes reveal {
+  from {opacity: 0.5;}
+  to {opacity: 1;}
 }
 
 .bg-navbar {
@@ -79,7 +85,7 @@ p.playbook-right {
 
 @media (min-width: 1900px) {
   .garage {
-    padding-bottom: 40rem;
+    padding-bottom: 30rem;
   }
 }
 
@@ -125,7 +131,7 @@ p.playbook-right {
 }
 
 .playground {
-  background: -65rem -17rem / 200% no-repeat url('~assets/img/clouds.png');
+  background: -62rem -14rem / 190% no-repeat url('~assets/img/clouds.png');
 }
 
 @media
@@ -150,7 +156,7 @@ p.playbook-right {
 }
 
 .community-top {
-  margin-bottom: 73rem;
+  margin-bottom: 71rem;
 }
 
 .community-bottom {
