@@ -101,7 +101,7 @@
       </section>
 
       <!-- playground -->
-      <section class="playground text-white pt-18">
+      <section class="playground text-white pt-24">
         <div class="container px-6 md:px-9 lg:px-16 pt-24 flex justify-center">
           <div class="md:w-1/2">
             <h3 class="font-Orbitron text-4xl md:text-6xl lg:text-7xl lg:leading-tighter mb-10">
@@ -119,7 +119,7 @@
     <!-- community -->
     <section class="community relative">
       <div class="container px-6 md:px-9 lg:px-16">
-        <div class="community-top pt-80">
+        <div class="community-top pt-100">
           <div class="md:w-2/3 xl:w-1/2">
             <h3 class="font-Orbitron text-4xl md:text-6xl lg:text-7xl lg:leading-tighter mb-10">
               Join the community

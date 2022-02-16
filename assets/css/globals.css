@@ -124,6 +124,18 @@ p.playbook-right {
   }
 }
 
+.playground {
+  background: -65rem -17rem / 200% no-repeat url('~assets/img/clouds.png');
+}
+
+@media
+(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 2dppx) {
+  .playground {
+    background-image: url('~assets/img/clouds@2x.png');
+  }
+}
+
 /** community **/
 .community {
 	background: center top / cover no-repeat url('~assets/img/community.jpg');
@@ -142,7 +154,7 @@ p.playbook-right {
 }
 
 .community-bottom {
-  padding-bottom: 41rem;
+  padding-bottom: 40rem;
 }
 
 .community-break {
