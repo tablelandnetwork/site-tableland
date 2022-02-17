@@ -1,6 +1,7 @@
 import { createLocalVue, mount } from '@vue/test-utils';
 import { setupTest } from '@nuxt/test-utils'
 import Playground from '@/components/Playground.vue';
+import messages from '~/playground-messages';
 import flushPromises from 'flush-promises';
 
 import { registerComponents } from './setup';
@@ -29,15 +30,34 @@ describe('Playground component', function () {
     expect(wrapper.vm).toBeTruthy();
   });
 
-  test('prompts user connect to Tableland', async function () {
-    const textInput = wrapper.find('input[type="text"]');
+  test('prompts user to connect to Tableland', async function () {
     const form = wrapper.find('form.web-terminal-form');
+    const textInput = form.find('input[type="text"]');
 
-    textInput.value = 'help';
+    textInput.element.value = 'whoami';
     form.trigger('submit');
 
     await flushPromises();
 
-    await expect(wrapper.find('.web-terminal > span:first-of-type').text()).toMatch('Before running commands you need to connect with a Tableland Validator. We currently only support connecting via Metamask. Make sure it\'s installed, then type `connect` and hit return.');
+    await expect(wrapper.find('.web-terminal > span:first-of-type').text()).toMatch(messages.warn.connect);
+  });
+
+  test('Shows help message when not connected', async function () {
+    const form = wrapper.find('form.web-terminal-form');
+    const textInput = form.find('input[type="text"]');
+
+    textInput.element.value = 'help';
+    form.trigger('submit');
+
+    await flushPromises();
+
+    const messageLines = messages.help.split('\n');
+    const terminalLines = wrapper.findAll('.web-terminal > span');
+
+    for (let i = 0; i < messageLines.length; i++) {
+      const line = messageLines[i];
+
+      await expect(terminalLines.at(i).text().replace(/\s+/g, '')).toMatch(messageLines[i].replace(/\s+/g, ''));
+    }
   });
 });
