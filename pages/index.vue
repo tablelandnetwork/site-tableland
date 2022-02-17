@@ -246,11 +246,11 @@
     </section>
 
     <footer class="text-white py-10">
-      <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2">
-        <div class="hidden xl:inline-block py-4">
+      <nav class="container px-6 md:px-9 lg:px-16 py-2">
+        <div class="hidden py-4">
           <img src="~assets/img/logo-white.svg" alt="Tableland" class="h-5">
         </div>
-        <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-sm">
+        <ul class="flex justify-center items-center gap-x-3 sm:gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-sm">
           <li><a href="https://twitter.com/tableland__">Twitter</a></li>
           <li><a href="https://textile.notion.site/Tableland-Grants-Funding-ebc1f398d53a481d94f090ab12d93be0">Grants</a></li>
           <li><a href="https://boards.greenhouse.io/textileio">Jobs</a></li>
