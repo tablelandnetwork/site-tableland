@@ -1,6 +1,6 @@
 export default {
   connected: 'Connected!\n' +
-    'This is your basic Tableland Terminal, you can type SQL commands interact to with a Tableland Validator.\n' +
+    'This is your basic Tableland Terminal, you can type SQL commands to interact with a Tableland Validator.\n' +
     'Run `help` to learn more and see some example commands.',
   creating: 'Creating Your Table, the steps are:\n  Mint the table on Ethereum\n  Register it with the Validator\n  It may take a little while\n',
   docs: 'Read the full docs here: https://docs.tableland.xyz',
