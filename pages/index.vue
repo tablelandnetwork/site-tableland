@@ -24,8 +24,11 @@
           <p class="text-2xl md:text-3xl leading-normal md:leading-normal font-light mb-18">
             Tableland is a network and relational metadata protocol for EVM chains like Ethereum. Built for developers, NFT creators, and web3 visionaries.
           </p>
-          <div class="text-center lg:text-left mb-50">
+          <div class="hidden md:inline-block text-center lg:text-left mb-50">
             <ButtonLink href="https://docs.tableland.xyz">Get started</ButtonLink>
+          </div>
+          <div class="md:hidden text-center lg:text-left mb-50">
+            <ButtonLink href="https://discord.gg/7WDqyanQ">Join us on Discord</ButtonLink>
           </div>
           <p class="text-3xl md:text-4xl lg:text-4.25xl leading-normal md:leading-normal lg:leading-snug font-medium">
             Use familiar SQL tables to read and write dynamic NFT metadata or application data–all orchestrated by token networks like Ethereum.
@@ -77,14 +80,14 @@
             In Tableland, we speak SQL
           </h3>
           <p class="text-2xl md:text-3xl leading-normal md:leading-normal font-light mb-1">
-            1 – The bulk of digital information is stored in relational tables.
+            1–The bulk of digital information is stored in relational tables.
           </p>
           <p class="text-2xl md:text-3xl leading-normal md:leading-normal font-light mb-1">
-            2 – Your familiar SQL tables are stored on a decentralized network of validators
+            2–Your familiar SQL tables are stored on a decentralized network of validators
             and anchored to Ethereum as transferable NFTs, providing ownership and access control.
           </p>
           <p class="text-2xl md:text-3xl leading-normal md:leading-normal font-light mb-4">
-            3 – Easy as pie, right?
+            3–Easy as pie, right?
           </p>
         </div>
       </div>
