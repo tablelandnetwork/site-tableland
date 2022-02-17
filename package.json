@@ -1,5 +1,6 @@
 {
-  "name": "site-tableland",
+  "name": "Tableland",
+  "description": "Build web3 with SQL",
   "version": "1.0.0",
   "private": true,
   "scripts": {
