@@ -19,7 +19,7 @@ exports[`Index Page renders correctly 1`] = `
       </div>
        
       <ul
-        class="flex flex-1 justify-end items-center gap-x-8 md:gap-x-10 lg:gap-x-24 uppercase text-sm"
+        class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-24 uppercase text-sm ml-3"
       >
         <li>
           <a
@@ -759,9 +759,11 @@ exports[`Index Page renders correctly 1`] = `
       </div>
        
       <ul
-        class="flex justify-center items-center gap-x-3 sm:gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-sm"
+        class="flex justify-center items-center gap-x-3 sm:gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-xs"
       >
-        <li>
+        <li
+          class="hidden md:inline-block"
+        >
           <a
             href="https://twitter.com/tableland__"
           >
@@ -777,7 +779,9 @@ exports[`Index Page renders correctly 1`] = `
           </a>
         </li>
          
-        <li>
+        <li
+          class="hidden md:inline-block"
+        >
           <a
             href="https://boards.greenhouse.io/textileio"
           >
@@ -805,7 +809,7 @@ exports[`Index Page renders correctly 1`] = `
           <a
             href="https://textile.notion.site/Tableland-Privacy-Policy-6fd160e7f485491d9dc4cbab188043d5"
           >
-            Privacy Policy
+            Privacy
           </a>
         </li>
          
@@ -813,7 +817,7 @@ exports[`Index Page renders correctly 1`] = `
           <a
             href="https://textile.notion.site/Tableland-Terms-of-Use-cf80f1b550b843ad9d4b8c3140b78e35"
           >
-            Terms of Use
+            Terms
           </a>
         </li>
       </ul>
