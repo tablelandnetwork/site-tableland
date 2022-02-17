@@ -43,8 +43,8 @@ body {
 
 /** hero **/
 .hero {
-	background: center -8rem / cover no-repeat url('~assets/img/hero.jpg');
-	padding-bottom: 73rem;
+	background: center center / cover no-repeat url('~assets/img/hero.jpg');
+  height: 2550px;
 }
 
 @media
@@ -57,7 +57,22 @@ body {
 
 /** garage **/
 .garage {
-	background: center -26rem / cover no-repeat url('~assets/img/garage.jpg');
+	background: center center / cover no-repeat url('~assets/img/garage.jpg');
+  height: 1450px;
+}
+
+.playbooks {
+  padding-top: 14rem;
+}
+
+@media (max-width: 1024px) {
+  .playbooks {
+    display: none;
+  }
+}
+
+.playbook {
+  margin-bottom: 25rem;
 }
 
 p.playbook-left {
@@ -71,7 +86,7 @@ p.playbook-right {
 }
 
 .garage-break {
-	background: left / cover no-repeat url('~assets/img/break_1.svg');
+	background: center / cover no-repeat url('~assets/img/break_1.svg');
 	height: 184px;
 }
 
@@ -83,16 +98,10 @@ p.playbook-right {
   }
 }
 
-@media (min-width: 1900px) {
-  .garage {
-    padding-bottom: 30rem;
-  }
-}
-
 /** sql **/
 .sql {
-	background: center bottom / cover no-repeat url('~assets/img/sql.jpg');
-  padding-bottom: 54rem;
+	background: center center / cover no-repeat url('~assets/img/sql.jpg');
+  height: 1875px;
 }
 
 @media
@@ -131,7 +140,7 @@ p.playbook-right {
 }
 
 .playground {
-  background: -62rem -14rem / 190% no-repeat url('~assets/img/clouds.png');
+  background: -50rem -11rem / 175% no-repeat url('~assets/img/clouds.png');
 }
 
 @media
@@ -144,7 +153,8 @@ p.playbook-right {
 
 /** community **/
 .community {
-	background: center top / cover no-repeat url('~assets/img/community.jpg');
+	background: center center / cover no-repeat url('~assets/img/community.jpg');
+  height: 3353px;
 }
 
 @media
@@ -164,7 +174,7 @@ p.playbook-right {
 }
 
 .community-break {
-	background: left / cover no-repeat url('~assets/img/break_4.svg');
+	background: center / cover no-repeat url('~assets/img/break_4.svg');
 	height: 184px;
   position: absolute;
   bottom: 0;
@@ -177,7 +187,7 @@ p.playbook-right {
 }
 
 .showcase-break {
-	background: left / cover no-repeat url('~assets/img/break_3.svg');
+	background: center / cover no-repeat url('~assets/img/break_3.svg');
 	height: 184px;
   position: absolute;
   top: 0;

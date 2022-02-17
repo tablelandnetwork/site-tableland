@@ -4,6 +4,7 @@ export default {
   theme: {
     extend: {
       fontSize: {
+        '4.25xl': '2.5rem',
         '4.5xl': '2.75rem',
         '5xl': '3.5rem',
         '6xl': '4.25rem',
@@ -16,6 +17,7 @@ export default {
       spacing: {
         18: '4.2rem',
         30: '7.8rem',
+        50: '14.5rem',
         62: '15.5rem',
         68: '17rem',
         70: '19rem',

@@ -271,7 +271,7 @@ export default {
 
 .web-terminal {
   font-family: monospace;
-  height: calc(22rem + 10vw);
+  height: calc(16rem + 10vw);
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
