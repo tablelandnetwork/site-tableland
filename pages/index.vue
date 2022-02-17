@@ -6,11 +6,10 @@
         <div class="py-4">
           <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
         </div>
-        <ul class="hidden sm:flex flex-1 justify-end items-center gap-x-10 lg:gap-x-24 uppercase text-sm">
-          <li><a href="https://textile.notion.site/Our-mission-is-to-accelerate-the-exchange-of-information-across-society-f49e389e12e14473a3475e755a8d9cd6">About</a></li>
-          <li><a href="https://discord.gg/7WDqyanQ" target="_blank">Join Us</a></li>
+        <ul class="flex flex-1 justify-end items-center gap-x-8 md:gap-x-10 lg:gap-x-24 uppercase text-sm">
+          <li><a href="https://tableland.substack.com">Blog</a></li>
+          <li><a href="https://discord.gg/7WDqyanQ" target="_blank">Discord</a></li>
           <li><a href="https://docs.tableland.xyz">Docs</a></li>
-          <!--<li><a href="#">Mint</a></li>-->
         </ul>
       </nav>
     </header>
@@ -248,10 +247,13 @@
 
     <footer class="text-white py-10">
       <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2">
-        <div class="hidden lg:inline-block py-4">
+        <div class="hidden xl:inline-block py-4">
           <img src="~assets/img/logo-white.svg" alt="Tableland" class="h-5">
         </div>
         <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-sm">
+          <li><a href="https://twitter.com/tableland__">Twitter</a></li>
+          <li><a href="https://textile.notion.site/Tableland-Grants-Funding-ebc1f398d53a481d94f090ab12d93be0">Grants</a></li>
+          <li><a href="https://boards.greenhouse.io/textileio">Jobs</a></li>
           <li><a href="https://hhueol4i6vp.typeform.com/to/sgtDW2Xt">Token Info</a></li>
           <li><a href="https://docs.tableland.xyz/general/community/partners">Partners</a></li>
           <li><a href="https://textile.notion.site/Tableland-Privacy-Policy-6fd160e7f485491d9dc4cbab188043d5">Privacy Policy</a></li>
