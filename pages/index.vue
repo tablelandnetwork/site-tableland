@@ -7,7 +7,7 @@
           <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
         </div>
         <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-24 uppercase text-sm ml-3">
-          <li><a href="https://tableland.substack.com">Blog</a></li>
+          <li><a href="https://mirror.xyz/tableland.eth">Blog</a></li>
           <li><a href="https://discord.gg/7WDqyanQ" target="_blank">Discord</a></li>
           <li><a href="https://docs.tableland.xyz">Docs</a></li>
         </ul>

@@ -25,7 +25,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: 'https://cdn.usefathom.com/script.js', datasite: 'QLCGWETC' }
+      { src: 'https://quiet-instinctive.tableland.xyz/script.js', datasite: 'QLCGWETC' }
     ]
   },
 
