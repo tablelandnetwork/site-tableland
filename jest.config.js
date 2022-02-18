@@ -1,6 +1,7 @@
 module.exports = {
   globalSetup: '<rootDir>/test/global.setup.js',
   moduleNameMapper: {
+    "^@textile/tableland$": "<rootDir>/test/mock_modules/tableland",
     '^@/(.*)$': '<rootDir>/$1',
     '^~/(.*)$': '<rootDir>/$1',
     '^vue$': 'vue/dist/vue.common.js'
@@ -12,6 +13,7 @@ module.exports = {
   ],
   transform: {
     '^.+\\.js$': 'babel-jest',
+    '^.+\\.ts$': 'babel-jest',
     '.*\\.(vue)$': 'vue-jest'
   },
   collectCoverage: true,

@@ -1,10 +1,17 @@
+import Vuex from 'vuex';
 import { createLocalVue, mount } from '@vue/test-utils';
 import { setupTest } from '@nuxt/test-utils'
-import Playground from '@/components/Playground.vue';
-import messages from '~/playground-messages';
 import flushPromises from 'flush-promises';
 
+import Playground from '@/components/Playground.vue';
+import {
+  state,
+  mutations,
+  actions
+} from '@/store/index.ts';
+import messages from '~/playground-messages';
 import { registerComponents } from './setup';
+
 
 describe('Playground component', function () {
   setupTest({
@@ -15,15 +22,23 @@ describe('Playground component', function () {
 
   beforeAll(async function () {
     const localVue = createLocalVue();
+    localVue.use(Vuex);
+
     registerComponents(localVue);
 
     // env defined in global setup
-    const storePath = `${process.env.buildDir}/store.js`;
-    const NuxtStore = await import(storePath);
-    const store = await NuxtStore.createStore();
+    // const storePath = `${process.env.buildDir}/store.js`;
+
+    // const NuxtStore = await import(storePath);
+
+    const store = new Vuex.Store({ // await NuxtStore.createStore({
+      state: state,
+      mutations: mutations,
+      actions: actions
+    });
 
     // hoisted
-    wrapper = mount(Playground, { localVue: localVue, store: store });
+    wrapper = mount(Playground, { localVue: localVue, mocks: { $store: store }});
   });
 
   test('is a Vue instance', function () {
@@ -53,6 +68,33 @@ describe('Playground component', function () {
 
     const messageLines = messages.help.split('\n');
     const terminalLines = wrapper.findAll('.web-terminal > span');
+
+    for (let i = 0; i < messageLines.length; i++) {
+      const line = messageLines[i];
+
+      await expect(terminalLines.at(i).text().replace(/\s+/g, '')).toMatch(messageLines[i].replace(/\s+/g, ''));
+    }
+  });
+
+  test('Shows help message when connection successful', async function () {
+    const form = wrapper.find('form.web-terminal-form');
+    const textInput = form.find('input[type="text"]');
+
+    textInput.element.value = 'connect';
+    form.trigger('submit');
+
+    // mock connect waits 500ms, we want to make sure we wait longer than that.
+    // This allows the Component to render the connnecting spinner
+    await new Promise(resolve => {
+      setTimeout(() => resolve(void 0), 1500);
+    });
+    await flushPromises();
+
+    const messageLines = messages.connected.split('\n');
+    const terminalLines = wrapper.findAll('.web-terminal > span');
+
+    console.log(terminalLines.at(0).text());
+    console.log(terminalLines.at(1).text());
 
     for (let i = 0; i < messageLines.length; i++) {
       const line = messageLines[i];
