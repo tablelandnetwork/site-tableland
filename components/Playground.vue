@@ -229,12 +229,11 @@ export default {
       }
     },
     processError: function (err) {
+      this.cls();
       if (err.message.includes('address not authorized')) {
-        this.cls();
         return this.printf(messages.warn.address);
       }
 
-      this.cls();
       this.printf('Error:\n' + err.message);
     }
   }
