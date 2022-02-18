@@ -17,6 +17,7 @@ export default {
     '    SELECT * FROM todo_todos_example_34 ORDER BY id ASC;',
   running: 'Running SQL on the Validator',
   warn: {
+    address: 'Get whitelisted on the Tableland Discord.\nhttps://discord.gg/b33QwuNm',
     connect: 'Before running commands you need to connect with a Tableland Validator. We currently only support connecting via Metamask. Make sure it\'s installed, then type `connect` and hit return.',
     statement: 'WARN: that is not a SQL statement that Tableland can use'
   }

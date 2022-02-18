@@ -174,8 +174,7 @@ export default {
         await this.runCommand(command);
       } catch (err) {
         this.loading = false;
-        this.cls();
-        this.printf('Command Failed:\n' + err.message);
+        this.processError(err);
       }
     },
     runCommand: async function (sql) {
@@ -188,9 +187,7 @@ export default {
         this.printf('Result: ');
       } catch (err) {
         this.loading = false;
-        this.cls();
-        this.printf(err.message);
-        this.printf('Error: ');
+        this.processError(err);
       }
     },
     runCreate: async function (sql) {
@@ -202,8 +199,7 @@ export default {
         this.printf('Table Created:\n' + JSON.stringify(response, null, 4));
       } catch (err) {
         this.loading = false;
-        this.cls();
-        this.printf('Error:\n' + err.message);
+        this.processError(err);
       }
     },
     list: async function () {
@@ -215,8 +211,7 @@ export default {
         this.printf('Result:\n' + JSON.stringify(tables, null, 4));
       } catch (err) {
         this.loading = false;
-        this.cls();
-        this.printf('Error:\n' + err.message);
+        this.processError(err);
       }
     },
     connect: async function () {
@@ -230,9 +225,17 @@ export default {
         this.printf(messages.connected);
       } catch (err) {
         this.loading = false;
-        this.cls();
-        this.printf('Error:\n' + err.message);
+        this.processError(err);
       }
+    },
+    processError: function (err) {
+      if (err.message.includes('address not authorized')) {
+        this.cls();
+        return this.printf(messages.warn.address);
+      }
+
+      this.cls();
+      this.printf('Error:\n' + err.message);
     }
   }
 };
