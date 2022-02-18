@@ -2,16 +2,17 @@ import Vuex from 'vuex';
 import { createLocalVue, mount } from '@vue/test-utils';
 import { setupTest } from '@nuxt/test-utils'
 import flushPromises from 'flush-promises';
+// get mock tableland's error stub
+import { nextError } from '@textile/tableland';
 
 import Playground from '@/components/Playground.vue';
+import messages from '~/playground-messages';
+import { registerComponents } from './setup';
 import {
   state,
   mutations,
   actions
-} from '@/store/index.ts';
-import messages from '~/playground-messages';
-import { registerComponents } from './setup';
-
+} from '../store/index.ts';
 
 describe('Playground component', function () {
   setupTest({
@@ -20,16 +21,11 @@ describe('Playground component', function () {
 
   let wrapper;
 
-  beforeAll(async function () {
+  beforeEach(async function () {
     const localVue = createLocalVue();
     localVue.use(Vuex);
 
     registerComponents(localVue);
-
-    // env defined in global setup
-    // const storePath = `${process.env.buildDir}/store.js`;
-
-    // const NuxtStore = await import(storePath);
 
     const store = new Vuex.Store({ // await NuxtStore.createStore({
       state: state,
@@ -93,13 +89,11 @@ describe('Playground component', function () {
     const messageLines = messages.connected.split('\n');
     const terminalLines = wrapper.findAll('.web-terminal > span');
 
-    console.log(terminalLines.at(0).text());
-    console.log(terminalLines.at(1).text());
-
     for (let i = 0; i < messageLines.length; i++) {
       const line = messageLines[i];
 
       await expect(terminalLines.at(i).text().replace(/\s+/g, '')).toMatch(messageLines[i].replace(/\s+/g, ''));
     }
   });
+
 });
