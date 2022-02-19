@@ -23,6 +23,7 @@ export default {
         70: '19rem',
         80: '21rem',
         100: '22rem',
+        110: '26rem',
         120: '30rem',
         280: '70rem',
         540: '135rem'

@@ -16,22 +16,24 @@
 
     <!-- hero -->
     <section class="hero">
-      <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-36">
-        <div class="lg:w-2/3 xl:w-1/2">
-          <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-10">
+      <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36">
+        <div class="lg:w-2/3">
+          <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
             Build web3 with <span class="font-black">SQL</span>
           </h1>
-          <p class="text-2xl md:text-3xl leading-normal md:leading-normal font-light mb-18">
-            Tableland is a network and relational metadata protocol for EVM chains like Ethereum. Built for developers, NFT creators, and web3 visionaries.
+          <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+            Tableland is a network and relational metadata protocol for EVM chains like Ethereum.
+            Built for developers, NFT creators, and web3 visionaries.
           </p>
-          <div class="hidden md:inline-block text-center lg:text-left mb-50">
+          <div class="hero-btn hidden md:inline-block text-center md:text-left mb-18 lg:mb-48 2xl:mb-100">
             <ButtonLink href="https://docs.tableland.xyz">Get started</ButtonLink>
           </div>
-          <div class="md:hidden text-center lg:text-left mb-50">
-            <ButtonLink href="https://discord.gg/7WDqyanQ">Join us on Discord</ButtonLink>
+          <div class="md:hidden text-center md:text-left">
+            <ButtonLink href="https://discord.gg/7WDqyanQ">Discord</ButtonLink>
           </div>
-          <p class="text-3xl md:text-4xl lg:text-4.25xl leading-normal md:leading-normal lg:leading-snug font-medium">
-            Use familiar SQL tables to read and write dynamic NFT metadata or application data–all orchestrated by token networks like Ethereum.
+          <p class="hidden md:inline-block text-2xl md:text-3xl lg:text-4.25xl 3xl:text-5xl leading-normal lg:leading-snug font-medium">
+            Use familiar SQL tables to read and write dynamic NFT metadata or application
+            data–all orchestrated by token networks like Ethereum.
           </p>
         </div>
       </div>
@@ -39,33 +41,28 @@
 
     <!-- garage -->
     <section class="garage">
-      <div class="container px-6 md:px-9 lg:px-16 flex items-center">
-        <div class="lg:w-2/3 xl:w-1/2">
-          <p class="text-white text-2xl md:text-3xl leading-normal md:leading-normal font-light mb-18">
-            Tableland isn't a new database—it’s just web3-native relational tables.
+      <div class="container px-6 md:px-9 lg:px-16 flex items-center md:pt-10">
+        <div class="lg:w-2/3">
+          <h3 class="font-Orbitron text-white text-4xl md:text-5xl lg:text-6xl leading-tighter mb-10 md:mb-4 lg:mb-10">
+            Welcome to Tableland
+          </h3>
+          <p class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2">
+            1—Use tables to store mutable, partially mutable, or immutable NFT metadata.
           </p>
-          <div class="text-center lg:text-left">
+          <p class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2">
+            2—Use tables to attach in-app or in-game metadata to existing NFTs.
+          </p>
+          <p class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2">
+            3—Control table write access with token or address-based rules.
+          </p>
+          <p class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2">
+            4—Use tables to build fully decentralized apps and games that require complex relational data models.
+          </p>
+          <p class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-10 lg:mb-18">
+            5—It's just SQL. Say goodbye to your backend and join the web3 movement.
+          </p>
+          <div class="text-center md:text-left">
             <ButtonLink href="https://docs.tableland.xyz/building/examples/playbooks">See playbooks</ButtonLink>
-          </div>
-        </div>
-      </div>
-      <div class="playbooks container px-6 md:px-9 lg:px-24 lg:flex justify-between">
-        <div class="lg:w-1/3 xl:w-1/3">
-          <div class="text-white playbook">
-            <p class="playbook-left bg-purple text-2xl lg:text-3xl px-6 py-4 font-medium rounded">Store NFT metadata</p>
-          </div>
-
-          <div class="text-white">
-            <p class="playbook-left bg-purple text-2xl lg:text-3xl px-6 py-4 font-medium rounded">Extend existing NFTs</p>
-          </div>
-        </div>
-        <div class="lg:w-1/3 xl:w-1/3">
-          <div class="text-white playbook">
-            <p class="playbook-right bg-purple text-2xl lg:text-3xl px-6 py-4 font-medium rounded">Control table access</p>
-          </div>
-
-          <div class="text-white">
-            <p class="playbook-right bg-purple text-2xl lg:text-3xl px-6 py-4 font-medium rounded">Compose with tables</p>
           </div>
         </div>
       </div>
@@ -74,49 +71,34 @@
     <!-- sql -->
     <section class="sql">
       <div class="garage-break"></div>
-      <div class="container px-6 md:px-9 lg:px-16 flex pt-20 2xl:pb-68">
+      <div class="container px-6 md:px-9 lg:px-16 flex pt-10 xl:pt-14">
         <div class="lg:w-2/3 xl:w-1/2">
-          <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-10">
+          <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
             In Tableland, we speak SQL
           </h3>
-          <p class="text-2xl md:text-3xl leading-normal md:leading-normal font-light mb-1">
+          <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2">
             1–The bulk of digital information is stored in relational tables.
           </p>
-          <p class="text-2xl md:text-3xl leading-normal md:leading-normal font-light mb-1">
+          <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2">
             2–Your familiar SQL tables are stored on a decentralized network of validators
             and anchored to Ethereum as transferable NFTs, providing ownership and access control.
           </p>
-          <p class="text-2xl md:text-3xl leading-normal md:leading-normal font-light mb-4">
+          <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light">
             3–Easy as pie, right?
           </p>
         </div>
       </div>
     </section>
 
+    <!-- playground -->
     <div class="bg-gradient bg-gradient-to-b from-violet to-pink">
-      <!-- tables -->
-      <section class="tables relative text-white hidden">
-        <div class="container px-6 md:px-9 lg:px-16 flex justify-end">
-          <div class="lg:w-2/3 xl:w-1/2">
-            <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-10">
-            </h3>
-            <p class="text-2xl md:text-3xl md:leading-normal font-light mb-18">
-            </p>
-            <div class="text-center lg:text-left">
-              <ButtonLink href="#"></ButtonLink>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- playground -->
-      <section class="playground text-white pt-32">
+      <section class="playground text-white pt-6 md:pt-32 pb-32">
         <div class="container px-6 md:px-9 lg:px-16 flex justify-center">
-          <div class="md:w-1/2">
-            <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-10">
+          <div class="md:w-2/3">
+            <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
               Try it out
             </h3>
-            <p class="text-2xl md:text-3xl leading-normal md:leading-normal font-light mb-10">
+            <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-4 lg:mb-6">
               Go ahead! Don't take our word for it.
             </p>
             <playground></playground>
@@ -128,124 +110,32 @@
     <!-- community -->
     <section class="community relative">
       <div class="container px-6 md:px-9 lg:px-16">
-        <div class="community-top pt-70">
+        <div class="community-top pt-32">
           <div class="md:w-2/3 xl:w-1/2">
-            <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-10">
+            <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
               Join the community
             </h3>
-            <p class="text-2xl md:text-3xl leading-normal md:leading-normal font-light mb-18">
+            <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
               Whether you're a developer, NFT creator, token holder, or just curious about web3, there's a place for you in Tableland. Join a fast-growing community of innovators from all over the world.
             </p>
-            <div class="text-center lg:text-left">
+            <div class="text-center md:text-left">
               <ButtonLink href="https://discord.gg/7WDqyanQ">Join us on Discord</ButtonLink>
             </div>
           </div>
         </div>
 
-        <div class="community-bottom md:flex justify-center md:justify-end text-white">
-          <div class="md:w-2/3 xl:w-1/2">
-            <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl lg:leading-tighter mb-10">
+        <div class="community-bottom md:flex justify-center lg:justify-end text-white">
+          <div>
+            <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10">
               User-owned token networks are the future of the internet
             </h3>
-            <p class="text-2xl md:text-3xl leading-normal md:leading-normal font-light">
-              Tableland is the meta-layer of web3. It encompasses everything from NFT metadata, social, financial, machine-learning, research data, or anything else. Tableland tables are also NFTs themselves, making them own-able, tradable, and composable assets.
+            <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light">
+              Web3 needs a relational and queryable metadata layer. Tableland is a decentralized user-owned network for structured metadata—data from apps, games, social, analytics, AI/ML, or whatever else you can imagine. Tableland tables are also NFTs, making them own-able, tradable, and composable assets themselves.
             </p>
           </div>
         </div>
       </div>
       <div class="community-break"></div>
-    </section>
-
-    <!-- phases -->
-    <section class="phases mb-48 hidden">
-      <div class="container px-6 md:px-9 lg:px-16">
-        <div class="mb-62">
-          <div class="xl:w-1/2">
-            <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-10">
-            </h3>
-            <p class="font-Orbitron text-2xl md:text-3xl lg:text-4.5xl mb-5"></p>
-            <div class="bg-black text-white py-8 md:py-10 lg:py-14 px-10 md:px-12 lg:px-16 rounded-3xl">
-              <p class="text-2xl md:text-3xl md:leading-normal font-light mb-4">
-              </p>
-              <p>
-                <a class="text-xl md:text-2xl uppercase underline" href="#">Learn More</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mb-62 xl:mb-14 xl:flex xl:justify-end">
-          <div class="xl:w-1/2">
-            <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-10">
-            </h3>
-            <p class="font-Orbitron text-2xl md:text-3xl lg:text-4.5xl mb-5"></p>
-            <div class="bg-black text-white py-8 md:py-10 lg:py-14 px-10 md:px-12 lg:px-16 rounded-3xl">
-              <p class="text-2xl md:text-3xl md:leading-normal font-light mb-4">
-              </p>
-              <p>
-                <a class="text-xl md:text-2xl uppercase underline" href="#">Learn More</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="mb-48">
-          <div class="xl:w-1/2">
-            <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-10">
-            </h3>
-            <p class="font-Orbitron text-2xl md:text-3xl lg:text-4.5xl mb-5"></p>
-            <div class="bg-black text-white py-8 md:py-10 lg:py-14 px-10 md:px-12 lg:px-16 rounded-3xl">
-              <p class="text-2xl md:text-3xl md:leading-normal font-light mb-4">
-              </p>
-              <p>
-                <a class="text-xl md:text-2xl uppercase underline" href="#">Learn More</a>
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center">
-          <p class="text-2xl md:text-3xl md:leading-normal font-light mb-4">Any suggestions?</p>
-          <ButtonLink href="#"></ButtonLink>
-        </div>
-      </div>
-    </section>
-
-    <!-- showcase -->
-    <section class="md:block showcase pt-24 pb-32 relative">
-      <div class="showcase-break hidden"></div>
-      <div class="container px-6 md:px-9 lg:px-16">
-        <div class="slider flex gap-x-3.5 mb-32 hidden">
-          <div class="bg-white pt-8 lg:pt-14 pb-120 px-10 lg:px-16 rounded-7xl lg:rounded-8xl slide active" @click="handleSliderClick">
-            <div class="md:w-1/2 xl:w-1/3">
-              <h4 class="text-3xl md:text-4xl xl:text-5xl xl:leading-tighter">
-              </h4>
-              <a class="text-2xl uppercase underline" href="#">Link</a>
-            </div>
-          </div>
-
-          <div class="bg-white pt-8 lg:pt-14 pb-120 px-10 lg:px-16 rounded-7xl lg:rounded-8xl slide inactive" @click="handleSliderClick">
-            <div class="md:w-1/2 xl:w-1/3">
-              <h4 class="text-3xl md:text-4xl xl:text-5xl xl:leading-tighter">
-              </h4>
-              <a class="text-2xl uppercase underline" href="#">Link</a>
-            </div>
-          </div>
-
-          <div class="bg-white pt-8 lg:pt-14 pb-120 px-10 lg:px-16 rounded-7xl lg:rounded-8xl slide inactive" @click="handleSliderClick">
-            <div class="md:w-1/2 xl:w-1/3">
-              <h4 class="text-3xl md:text-4xl xl:text-5xl xl:leading-tighter">
-              </h4>
-              <a class="text-2xl uppercase underline" href="#">Link</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center text-white">
-          <p class="text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10">What will you build?</p>
-          <ButtonLink href="https://docs.tableland.xyz">Get started</ButtonLink>
-        </div>
-      </div>
     </section>
 
     <footer class="text-white py-10">

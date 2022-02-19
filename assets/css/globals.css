@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;500;600&display=swap');
 
-.mock {
-	opacity: 0.1;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: auto;
-}
-
 html {
   max-width: 1920px;
   margin: 0 auto;
@@ -43,8 +34,11 @@ body {
 
 /** hero **/
 .hero {
-	background: center center / cover no-repeat url('~assets/img/hero.jpg');
-  height: 2550px;
+	background: center top / cover no-repeat url('~assets/img/hero.jpg');
+  height: calc(100vw * 1.43229166667);
+  max-height: 2750px;
+  width: 100vw;
+  max-width: 1920px !important;
 }
 
 @media
@@ -55,39 +49,34 @@ body {
   }
 }
 
-/** garage **/
-.garage {
-	background: center center / cover no-repeat url('~assets/img/garage.jpg');
-  height: 1450px;
-}
-
-.playbooks {
-  padding-top: 14rem;
-}
-
-@media (max-width: 1024px) {
-  .playbooks {
-    display: none;
+@media (min-width: 1640px) {
+  .hero-btn {
+    margin-bottom: 35rem !important;
   }
 }
 
-.playbook {
-  margin-bottom: 25rem;
+@media (min-width: 1760px) {
+  .hero-btn {
+    margin-bottom: 40rem !important;
+  }
 }
 
-p.playbook-left {
-  display: inline-block;
-  float: right;
-}
-
-p.playbook-right {
-  display: inline-block;
-  float: left;
+/** garage **/
+.garage {
+  position: relative;
+	background: center top / cover no-repeat url('~assets/img/garage.jpg');
+  height: calc(100vw * 0.96354166666);
+  max-height: 1850px;
+  min-height: 925px;
+  width: 100vw;
+  max-width: 1920px !important;
 }
 
 .garage-break {
+  position: relative;
 	background: center / cover no-repeat url('~assets/img/break_1.svg');
 	height: 184px;
+  top: -1px;
 }
 
 @media
@@ -100,8 +89,11 @@ p.playbook-right {
 
 /** sql **/
 .sql {
-	background: center center / cover no-repeat url('~assets/img/sql.jpg');
-  height: 1875px;
+	background: center top / cover no-repeat url('~assets/img/sql.jpg');
+  height: calc(100vw * 1.024);
+  min-height: 938px;
+  width: 100vw;
+  max-width: 1920px !important;
 }
 
 @media
@@ -112,35 +104,8 @@ p.playbook-right {
   }
 }
 
-/** tables **/
-.tables {
-  padding-bottom: 10rem;
-}
-
-@media (min-width: 1024px) {
-  .tables {
-    background: -10rem 15rem / 100% no-repeat url('~assets/img/tables.png');
-    padding-bottom: 50rem;
-  }
-
-  @media
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 2dppx) {
-    .tables {
-      background-image: url('~assets/img/tables@2x.png');
-    }
-  }
-}
-
-@media (min-width: 1900px) {
-  .tables {
-    background-position: left top;
-    background-size: 80%;
-  }
-}
-
 .playground {
-  background: -50rem -11rem / 175% no-repeat url('~assets/img/clouds.png');
+  background: -44rem 3rem / 150% no-repeat url('~assets/img/clouds.png');
 }
 
 @media
@@ -153,8 +118,12 @@ p.playbook-right {
 
 /** community **/
 .community {
-	background: center center / cover no-repeat url('~assets/img/community.jpg');
-  height: 3353px;
+	background: center top / cover no-repeat url('~assets/img/community.jpg');
+  height: calc(100vw * 1.74635416667);
+  max-height: 3353px;
+  min-height: 1677px;
+  width: 100vw;
+  max-width: 1920px !important;
 }
 
 @media
@@ -165,64 +134,45 @@ p.playbook-right {
   }
 }
 
-.community-top {
-  margin-bottom: 71rem;
+@media (min-width: 1500px) {
+  .community-top {
+    padding-top: 16rem !important;
+  }
+}
+
+@media (min-width: 1760px) {
+  .community-top {
+    padding-top: 24rem !important;
+  }
 }
 
 .community-bottom {
-  padding-bottom: 40rem;
+  position: absolute;
+  top: 54%;
+  left: 6%;
+  width: 90%;
+}
+
+@media (min-width: 1440px) {
+  .community-bottom {
+    left: 50%;
+    width: 42%;
+  }
+}
+
+@media (min-width: 1600px) {
+  .community-bottom {
+    top: 60%;
+  }
 }
 
 .community-break {
 	background: center / cover no-repeat url('~assets/img/break_4.svg');
 	height: 184px;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   right: 0;
-}
-
-.showcase {
-  background-color: #272627;
-}
-
-.showcase-break {
-	background: center / cover no-repeat url('~assets/img/break_3.svg');
-	height: 184px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-.showcase .slider .slide {
-  overflow: hidden;
-}
-
-.showcase .slider .slide.active {
-  @apply w-full
-}
-
-.showcase .slider .slide.inactive {
-  @apply w-0 cursor-pointer
-}
-
-.showcase .slider .slide.active * {
-  display: block;
-}
-
-.showcase .slider .slide.inactive * {
-  display: none;
-}
-
-.showcase .slider .slide {
-  transition: width linear .2s;
-}
-
-.showcase .slider .slide.active * {
-  transition-property: display;
-  transition-duration: 0s;
-  transition-delay: .2s;
 }
 
 footer {
