@@ -476,6 +476,41 @@ exports[`Index Page renders correctly 1`] = `
     />
   </section>
    
+  <section
+    class="md:block showcase py-32 relative"
+  >
+    <div
+      class="container px-6 md:px-9 lg:px-16"
+    >
+      <div
+        class="text-center text-white"
+      >
+        <p
+          class="text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10"
+        >
+          What will you build?
+        </p>
+         
+        <a
+          class="btn bg-black text-white"
+          href="https://docs.tableland.xyz"
+        >
+          <span
+            class="flex"
+          >
+            Get started 
+            <img
+              alt=""
+              class="hidden sm:inline-block ml-4"
+              src="~assets/img/arrow_white.png"
+              srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+            />
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+   
   <footer
     class="text-white py-10"
   >

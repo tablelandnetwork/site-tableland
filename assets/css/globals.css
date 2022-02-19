@@ -170,9 +170,14 @@ body {
 	background: center / cover no-repeat url('~assets/img/break_4.svg');
 	height: 184px;
   position: absolute;
-  bottom: -1px;
+  bottom: -57px;
   left: 0;
   right: 0;
+}
+
+/** showcase **/
+.showcase {
+  background-color: #272627;
 }
 
 footer {
