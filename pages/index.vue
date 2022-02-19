@@ -41,7 +41,7 @@
 
     <!-- garage -->
     <section class="garage">
-      <div class="container px-6 md:px-9 lg:px-16 flex items-center md:pt-10">
+      <div class="container px-6 md:px-9 lg:px-16 flex items-center">
         <div class="lg:w-2/3">
           <h3 class="font-Orbitron text-white text-4xl md:text-5xl lg:text-6xl leading-tighter mb-10 md:mb-4 lg:mb-10">
             Welcome to Tableland
@@ -55,11 +55,8 @@
           <p class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2">
             3—Control table write access with token or address-based rules.
           </p>
-          <p class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2">
-            4—Use tables to build fully decentralized apps and games that require complex relational data models.
-          </p>
           <p class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-10 lg:mb-18">
-            5—It's just SQL. Say goodbye to your backend and join the web3 movement.
+            4—Use tables to build fully decentralized apps and games that require complex relational data models.
           </p>
           <div class="text-center md:text-left">
             <ButtonLink href="https://docs.tableland.xyz/building/examples/playbooks">See playbooks</ButtonLink>
