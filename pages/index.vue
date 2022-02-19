@@ -156,34 +156,3 @@
     </footer>
   </div>
 </template>
-
-<script>
-
-export default {
-  data: function () {
-    return {
-    };
-  },
-
-  methods: {
-    activateSlide: function (slide) {
-      slide.classList.add('active');
-      slide.classList.remove('inactive');
-    },
-
-    deactivateSlide: function (slide) {
-      slide.classList.add('inactive');
-      slide.classList.remove('active');
-    },
-
-    handleSliderClick: function ({ target }) {
-      if (!target.classList.contains('active')) {
-        const siblings = Array.from(target.parentElement.children).filter(c => c !== target);
-        this.activateSlide(target);
-        siblings.forEach(this.deactivateSlide);
-      }
-    }
-  }
-};
-
-</script>
