@@ -16,8 +16,21 @@
         </form>
         <div ref="web-terminal" class="web-terminal p-5 overflow-y-scroll text-white">
           <span v-for="(line, i) in lines" :key="i">
-            {{ line }}
-            <br>
+            {{ line.type === 'text' ? line.value : '' }}
+            <br v-if="line.type === 'text'">
+
+            <table v-if="line.type === 'table'" class="table-auto mx-4 border border-solid border-white border-collapse">
+              <thead>
+                <tr>
+                  <th v-for="col in line.columns" :key="col.name" class="px-2 border border-white pull-left font-bold">{{ col.name }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(row, j) in line.rows" :key="j">
+                  <td v-for="(val, k) in row" :key="k"  class="px-2 border border-white">{{ val }}</td>
+                </tr>
+              </tbody>
+            </table>
           </span>
         </div>
       </div>
@@ -66,14 +79,21 @@ export default {
     printf: function (string) {
       const lines = string.replaceAll('  ', '\xA0\xA0').split('\n').reverse();
       for (let i = 0; i < lines.length; i++) {
-        const line = lines[i];
+        const line = { value: lines[i], type: 'text' };
         this.lines.unshift(line);
       }
 
       this.$refs['web-terminal'].scrollTop = 0;
     },
+    printTable: function (data) {
+      this.lines.unshift({
+        type: 'table',
+        columns: data.columns,
+        rows: data.rows
+      });
+    },
     replaceLine: function (string) {
-      this.$set(this.lines, 0, string);
+      this.$set(this.lines, 0, { value: string, type: 'text' });
     },
     cls: function () { // clear screen
       const fontHeight = 15;
@@ -183,8 +203,12 @@ export default {
         const response = await this.$store.dispatch('runSql', sql);
         this.loading = false;
         this.cls();
-        this.printf(JSON.stringify(response, null, 4));
-        this.printf('Result: ');
+        if (response.data && response.data.columns && response.data.rows) {
+          this.printTable(response.data);
+          return;
+        }
+
+        this.printf('Result:\n' + JSON.stringify(response, null, 4));
       } catch (err) {
         this.loading = false;
         this.processError(err);
