@@ -37,6 +37,11 @@ window.tableland = 'First connect with metamask, then start building web3 with S
 const getConnection = function () {
   let connection: any;
   return async function (options?: any) {
+    if (options?.disconnect) {
+      connection = void 0;
+      delete window.tableland;
+      return;
+    }
     if (connection) return connection;
 
     console.log(`connecting to validator at: ${process.env.validatorHost}`);
@@ -58,6 +63,9 @@ export const actions: ActionTree<RootState, RootState> = {
     const ethAddress = await tableland.signer.getAddress();
     // save the user's eth account address
     context.commit('set', {key: 'ethAddress', value: ethAddress});
+  },
+  disconnect: async function (context) {
+    await getConnection({disconnect: true});
   },
   runSql: async function (context, query) {
     const tableland = await getConnection();

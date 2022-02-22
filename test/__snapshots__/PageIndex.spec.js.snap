@@ -283,7 +283,9 @@ exports[`Index Page renders correctly 1`] = `
           
           </p>
            
-          <div>
+          <div
+            class="playground-component"
+          >
             <div
               class="w-full pt-6 flex items-center flex-col rounded-3xl border-2px-black bg-black overflow-hidden"
             >
@@ -313,72 +315,96 @@ exports[`Index Page renders correctly 1`] = `
           Available commands:
           
                     <br />
+                     
+                    <!---->
                   </span>
                   <span>
                     
               connect   Connect to tableland with Metamask. You must
           
                     <br />
+                     
+                    <!---->
                   </span>
                   <span>
                     
                         do this before any other commands can be run.
           
                     <br />
+                     
+                    <!---->
                   </span>
                   <span>
                     
               list      List your tables
           
                     <br />
+                     
+                    <!---->
                   </span>
                   <span>
                     
               clear     Clear this terminal
           
                     <br />
+                     
+                    <!---->
                   </span>
                   <span>
                     
               whoami    See your Eth Address
           
                     <br />
+                     
+                    <!---->
                   </span>
                   <span>
                     
               docs      Show url to the documentation
           
                     <br />
+                     
+                    <!---->
                   </span>
                   <span>
                     
               help      Show this message again
           
                     <br />
+                     
+                    <!---->
                   </span>
                   <span>
                     
           
           
                     <br />
+                     
+                    <!---->
                   </span>
                   <span>
                     
           Example Read Queries:
           
                     <br />
+                     
+                    <!---->
                   </span>
                   <span>
                     
               SELECT * FROM LootAttributes_3;
           
                     <br />
+                     
+                    <!---->
                   </span>
                   <span>
                     
               SELECT * FROM todo_todos_example_34 ORDER BY id ASC;
           
                     <br />
+                     
+                    <!---->
                   </span>
                 </div>
               </div>
