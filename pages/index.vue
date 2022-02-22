@@ -90,7 +90,7 @@
     <!-- playground -->
     <div class="bg-gradient bg-gradient-to-b from-violet to-pink">
       <section class="playground text-white pt-6 md:pt-32 pb-32">
-        <div class="container px-6 md:px-9 lg:px-16 flex justify-center">
+        <div v-if="ethereum" class="container px-6 md:px-9 lg:px-16 flex justify-center">
           <div class="md:w-2/3">
             <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
               Try it out
@@ -101,6 +101,8 @@
             <playground></playground>
           </div>
         </div>
+
+        <div v-if="!ethereum" class="container h-96"></div>
       </section>
     </div>
 
@@ -163,3 +165,15 @@
     </footer>
   </div>
 </template>
+
+<script>
+
+export default {
+  computed: {
+    ethereum: function () {
+      return window.ethereum;
+    }
+  }
+};
+
+</script>
