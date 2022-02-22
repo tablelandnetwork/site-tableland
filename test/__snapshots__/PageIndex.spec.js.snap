@@ -283,7 +283,9 @@ exports[`Index Page renders correctly 1`] = `
           
           </p>
            
-          <div>
+          <div
+            class="playground-component"
+          >
             <div
               class="w-full pt-6 flex items-center flex-col rounded-3xl border-2px-black bg-black overflow-hidden"
             >

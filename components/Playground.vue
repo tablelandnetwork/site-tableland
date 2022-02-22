@@ -1,5 +1,5 @@
 <template>
-  <div @click.once="init">
+  <div class="playground-component" @click.once="init">
     <div
       class="w-full pt-6 flex items-center flex-col rounded-3xl border-2px-black bg-black overflow-hidden"
     >
@@ -155,11 +155,11 @@ export default {
       } else if (buffer === 'help') {
         this.cls();
         this.printf(messages.help);
+      } else if (buffer === 'clear') {
+        this.cls();
       } else if (!this.ethAddress) {
         this.cls();
         this.printf(messages.warn.connect);
-      } else if (buffer === 'clear') {
-        this.cls();
       } else if (buffer === 'whoami') {
         this.cls();
         this.printf(this.ethAddress);
