@@ -90,26 +90,18 @@
     <!-- playground -->
     <div class="bg-gradient bg-gradient-to-b from-violet to-pink">
       <section class="playground text-white pt-6 md:pt-32 pb-32">
-        <div v-if="ethereum" class="container px-6 md:px-9 lg:px-16 flex justify-center">
+        <div class="container px-6 md:px-9 lg:px-16 flex justify-center">
           <div class="md:w-2/3">
             <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
               Try it out
             </h3>
-            <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-4 lg:mb-6">
+            <p v-if="ethereum" class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-4 lg:mb-6">
               Go ahead! Don't take our word for it.
             </p>
-            <playground></playground>
-          </div>
-        </div>
-
-        <div v-if="!ethereum" class="container min-h-96 px-6 md:px-9 lg:px-16 flex justify-center">
-          <div class="md:w-2/3">
-            <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
-              Try it out
-            </h3>
-            <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-4 lg:mb-6">
-              Sorry your browser does not have a Wallet available.  Come back with a browser that has a built-in Wallet, or one that has Metamask installed.
+            <p v-if="!ethereum" class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-4 lg:mb-6">
+              Uh oh! You need a browser wallet. Go install <a href="https://metamask.io/" target="_blank" class="underline">Metamask</a> or use a browser with a built-in wallet like <a href="https://brave.com/" target="_blank" class="underline">Brave</a>.
             </p>
+            <playground></playground>
           </div>
         </div>
       </section>

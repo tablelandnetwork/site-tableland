@@ -41,6 +41,7 @@ describe('Playground component', function () {
 
     await store.dispatch('disconnect');
 
+    window.ethereum = {};
     // hoisted
     wrapper = mount(Playground, {
       attachTo: document.body,

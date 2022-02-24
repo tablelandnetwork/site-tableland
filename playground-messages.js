@@ -18,7 +18,7 @@ export default {
   running: 'Running SQL on the Validator',
   warn: {
     address: 'Get whitelisted on the Tableland Discord.\nhttps://discord.gg/hpd5WWn4Ys',
-    connect: 'Before running commands you need to connect with a Tableland Validator. We currently only support connecting via Metamask. Make sure it\'s installed, then type `connect` and hit return.',
+    connect: 'Before running commands you need to connect with a Tableland Validator. We currently only support connecting via Metamask or the Brave browser. Make sure you are using one of those, then type `connect` and hit return.',
     statement: 'WARN: that is not a SQL statement that Tableland can use'
   }
 };
