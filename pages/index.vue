@@ -8,7 +8,7 @@
         </div>
         <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-24 uppercase text-sm ml-3">
           <li><a href="https://mirror.xyz/tableland.eth">Blog</a></li>
-          <li><a href="https://discord.gg/7WDqyanQ" target="_blank">Discord</a></li>
+          <li><a href="https://discord.gg/hpd5WWn4Ys" target="_blank">Discord</a></li>
           <li><a href="https://docs.tableland.xyz">Docs</a></li>
         </ul>
       </nav>
@@ -29,7 +29,7 @@
             <ButtonLink href="https://docs.tableland.xyz">Get started</ButtonLink>
           </div>
           <div class="md:hidden text-center md:text-left">
-            <ButtonLink href="https://discord.gg/7WDqyanQ">Discord</ButtonLink>
+            <ButtonLink href="https://discord.gg/hpd5WWn4Ys">Discord</ButtonLink>
           </div>
           <p class="hidden md:inline-block text-2xl md:text-3xl lg:text-4.25xl 3xl:text-5xl leading-normal lg:leading-snug font-medium">
             Use familiar SQL tables to read and write dynamic NFT metadata or application
@@ -116,7 +116,7 @@
               Whether you're a developer, NFT creator, token holder, or just curious about web3, there's a place for you in Tableland. Join a fast-growing community of innovators from all over the world.
             </p>
             <div class="text-center md:text-left">
-              <ButtonLink href="https://discord.gg/7WDqyanQ">Join us on Discord</ButtonLink>
+              <ButtonLink href="https://discord.gg/hpd5WWn4Ys">Join us on Discord</ButtonLink>
             </div>
           </div>
         </div>

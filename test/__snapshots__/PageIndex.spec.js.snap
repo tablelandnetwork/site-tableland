@@ -31,7 +31,7 @@ exports[`Index Page renders correctly 1`] = `
          
         <li>
           <a
-            href="https://discord.gg/7WDqyanQ"
+            href="https://discord.gg/hpd5WWn4Ys"
             target="_blank"
           >
             Discord
@@ -105,7 +105,7 @@ exports[`Index Page renders correctly 1`] = `
         >
           <a
             class="btn bg-black text-white"
-            href="https://discord.gg/7WDqyanQ"
+            href="https://discord.gg/hpd5WWn4Ys"
           >
             <span
               class="flex"
@@ -448,7 +448,7 @@ exports[`Index Page renders correctly 1`] = `
           >
             <a
               class="btn bg-black text-white"
-              href="https://discord.gg/7WDqyanQ"
+              href="https://discord.gg/hpd5WWn4Ys"
             >
               <span
                 class="flex"
