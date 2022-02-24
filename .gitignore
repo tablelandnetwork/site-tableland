@@ -70,7 +70,7 @@ typings/
 
 # static build output
 # need to build and commit since libs aren't public yet
-#dist/
+dist/
 
 # vuepress build output
 .vuepress/dist
