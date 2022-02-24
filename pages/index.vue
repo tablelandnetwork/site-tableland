@@ -102,7 +102,16 @@
           </div>
         </div>
 
-        <div v-if="!ethereum" class="container h-96"></div>
+        <div v-if="!ethereum" class="container min-h-96 px-6 md:px-9 lg:px-16 flex justify-center">
+          <div class="md:w-2/3">
+            <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
+              Try it out
+            </h3>
+            <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-4 lg:mb-6">
+              Sorry your browser does not have a Wallet available.  Come back with a browser that has a built-in Wallet, or one that has Metamask installed.
+            </p>
+          </div>
+        </div>
       </section>
     </div>
 
