@@ -46,7 +46,8 @@ const getConnection = function () {
 
     console.log(`connecting to validator at: ${process.env.validatorHost}`);
     connection = await connect({
-      host: process.env.validatorHost as string
+      host: process.env.validatorHost as string,
+      network: process.env.validatorNet as string
     });
 
     window.tableland = connection;
