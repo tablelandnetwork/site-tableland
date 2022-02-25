@@ -1,0 +1,19 @@
+name: Build - Test
+
+on: [push, pull_request]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+
+      - name: Install and Build 🔧
+        run: |
+          npm install
+          npm run generate
+
+      - name: Test 🔧
+        run: |
+          npm test

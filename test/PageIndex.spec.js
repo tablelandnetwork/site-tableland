@@ -23,14 +23,24 @@ describe('Index Page', function () {
     const store = await NuxtStore.createStore();
 
     // hoisted
-    wrapper = mount(IndexPage, { localVue: localVue, store: store });
+    wrapper = mount(IndexPage, {
+      localVue: localVue,
+      store: store,
+      attachTo: document.body
+    });
   });
 
-  test('is a Vue instance', function () {
-    expect(wrapper.vm).toBeTruthy();
+  test('is a Vue instance', async function () {
+    await expect(wrapper.vm).toBeTruthy();
   });
 
-  test('renders correctly', function () {
-    expect(wrapper.element).toMatchSnapshot();
+  test('renders correctly when browser has a wallet', async function () {
+    window.ethereum = {};
+    await expect(wrapper.element).toMatchSnapshot();
+    delete window.ethereum;
+  });
+
+  test('renders correctly when browser does not have a wallet', async function () {
+    await expect(wrapper.element).toMatchSnapshot();
   });
 });

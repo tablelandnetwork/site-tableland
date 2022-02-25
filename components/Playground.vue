@@ -1,40 +1,82 @@
 <template>
-  <div class="playground-component" @click.once="init">
-    <div
-      class="w-full pt-6 flex items-center flex-col rounded-3xl border-2px-black bg-black overflow-hidden"
-    >
-      <div class="w-full block">
-        <form class="web-terminal-form relative block w-full text-white font-mono" @submit.prevent="onSubmit">
-          <input
-            ref="web-terminal-input"
-            class="pl-8 pr-5 bg-black web-terminal-input block w-full text-white font-mono outline-none"
-            type="text"
-            autocomplete="off"
-            @keydown="keyCheck"
-          >
-          <input type="submit" class="w-0 hidden">
-        </form>
-        <div ref="web-terminal" class="web-terminal p-5 overflow-y-scroll text-white">
-          <span v-for="(line, i) in lines" :key="i">
-            {{ line.type === 'text' ? line.value : '' }}
-            <br v-if="line.type === 'text'">
+  <div>
 
-            <table v-if="line.type === 'table'" class="table-auto mx-4 border border-solid border-white border-collapse">
-              <thead>
-                <tr>
-                  <th v-for="col in line.columns" :key="col.name" class="px-2 border border-white pull-left font-bold">{{ col.name }}</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="(row, j) in line.rows" :key="j">
-                  <td v-for="(val, k) in row" :key="k"  class="px-2 border border-white">{{ val }}</td>
-                </tr>
-              </tbody>
-            </table>
-          </span>
+    <div v-if="ethereum" class="playground-component" @click.once="init">
+      <div
+        class="w-full pt-6 flex items-center flex-col rounded-3xl border-2px-black bg-black overflow-hidden"
+      >
+        <div class="w-full block">
+          <form class="web-terminal-form relative block w-full text-white font-mono" @submit.prevent="onSubmit">
+            <input
+              ref="web-terminal-input"
+              class="pl-8 pr-5 bg-black web-terminal-input block w-full text-white font-mono outline-none"
+              type="text"
+              autocomplete="off"
+              @keydown="keyCheck"
+            >
+            <input type="submit" class="w-0 hidden">
+          </form>
+          <div ref="web-terminal" class="web-terminal p-5 overflow-y-scroll text-white">
+            <span v-for="(line, i) in lines" :key="i">
+              {{ line.type === 'text' ? line.value : '' }}
+              <br v-if="line.type === 'text'">
+
+              <table v-if="line.type === 'table'" class="table-auto mx-4 border border-solid border-white border-collapse">
+                <thead>
+                  <tr>
+                    <th v-for="col in line.columns" :key="col.name" class="px-2 border border-white pull-left font-bold">{{ col.name }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(row, j) in line.rows" :key="j">
+                    <td v-for="(val, k) in row" :key="k" class="px-2 border border-white">{{ val }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </span>
+          </div>
         </div>
       </div>
     </div>
+
+    <div v-if="!ethereum" class="playground-component relative">
+      <div class="absolute overlay-disable top-0 bottom-0 left-0 right-0 z-50 rounded-3xl cursor-not-allowed"></div>
+      <div
+        class="w-full pt-6 flex items-center flex-col rounded-3xl border-2px-black bg-black overflow-hidden"
+      >
+        <div class="w-full block">
+          <form class="web-terminal-form relative block w-full text-white font-mono" @submit.prevent="() => false">
+            <input
+              ref="web-terminal-input"
+              class="pl-8 pr-5 bg-black web-terminal-input block w-full text-white font-mono outline-none"
+              type="text"
+              autocomplete="off"
+              disabled="disabled"
+            >
+          </form>
+          <div ref="web-terminal" class="web-terminal p-5 overflow-y-scroll text-white">
+            <span v-for="(line, i) in lines" :key="i">
+              {{ line.type === 'text' ? line.value : '' }}
+              <br v-if="line.type === 'text'">
+
+              <table v-if="line.type === 'table'" class="table-auto mx-4 border border-solid border-white border-collapse">
+                <thead>
+                  <tr>
+                    <th v-for="col in line.columns" :key="col.name" class="px-2 border border-white pull-left font-bold">{{ col.name }}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr v-for="(row, j) in line.rows" :key="j">
+                    <td v-for="(val, k) in row" :key="k" class="px-2 border border-white">{{ val }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -68,7 +110,8 @@ export default {
   },
   computed: {
     ...mapState({
-      ethAddress: state => state.ethAddress
+      ethAddress: state => state.ethAddress,
+      ethereum: state => window.ethereum
     })
   },
   mounted: function () {
@@ -97,9 +140,9 @@ export default {
     },
     cls: function () { // clear screen
       const fontHeight = 15;
-      for (let i = 0; i <= this.$refs['web-terminal'].clientHeight / fontHeight; i++) {
-        this.printf('');
-      }
+      const clientHeight = this.$refs['web-terminal'].clientHeight;
+
+      for (let i = 0; i <= clientHeight / fontHeight; i++) this.printf('');
     },
     keyCheck: function (e) {
       const keycode = window.event.keyCode;
@@ -121,9 +164,7 @@ export default {
       }
     },
     showSpinner: function (prefix = '') {
-      if (this.loading === true) {
-        return;
-      }
+      if (this.loading === true) return;
 
       this.cls();
       this.loading = true;
@@ -143,9 +184,7 @@ export default {
       buffer = this.$refs['web-terminal-input'].value;
       bhManage(); // manage buffer history
 
-      if (this.loading) {
-        return;
-      }
+      if (this.loading) return;
 
       if (buffer === 'connect') {
         this.connect();
@@ -182,9 +221,7 @@ export default {
       try {
         const sql = command.trim().toLowerCase();
 
-        if (!sql) {
-          return this.printf(messages.warn.statement);
-        }
+        if (!sql) return this.printf(messages.warn.statement);
 
         if (sql.indexOf('create') === 0) {
           await this.runCreate(command);
@@ -254,9 +291,7 @@ export default {
     },
     processError: function (err) {
       this.cls();
-      if (err.message.includes('address not authorized')) {
-        return this.printf(messages.warn.address);
-      }
+      if (err.message.includes('address not authorized')) return this.printf(messages.warn.address);
 
       this.printf('Error:\n' + err.message);
     }
@@ -268,6 +303,10 @@ export default {
 <style scoped>
 * {
     box-sizing: border-box;
+}
+
+.overlay-disable {
+  background-color: rgba(30, 30, 30,0.8)
 }
 
 .web-terminal {

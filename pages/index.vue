@@ -95,8 +95,11 @@
             <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
               Try it out
             </h3>
-            <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-4 lg:mb-6">
+            <p v-if="ethereum" class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-4 lg:mb-6">
               Go ahead! Don't take our word for it.
+            </p>
+            <p v-if="!ethereum" class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-4 lg:mb-6">
+              Uh oh! You need a browser wallet. Go install <a href="https://metamask.io/" target="_blank" class="underline">Metamask</a> or use a browser with a built-in wallet like <a href="https://brave.com/" target="_blank" class="underline">Brave</a>.
             </p>
             <playground></playground>
           </div>
@@ -163,3 +166,15 @@
     </footer>
   </div>
 </template>
+
+<script>
+
+export default {
+  computed: {
+    ethereum: function () {
+      return window.ethereum;
+    }
+  }
+};
+
+</script>

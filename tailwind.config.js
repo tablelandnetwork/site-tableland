@@ -41,6 +41,9 @@ export default {
         purple: '#4B1F66',
         violet: '#6f2560',
         pink: '#c36fab'
+      },
+      minHeight: {
+        '96': '24rem'
       }
     },
     fontFamily: {
