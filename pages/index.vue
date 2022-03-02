@@ -25,13 +25,13 @@
             Tableland is a network and relational metadata protocol for EVM chains like Ethereum.
             Built for developers, NFT creators, and web3 visionaries.
           </p>
-          <div class="hero-btn hidden md:inline-block text-center md:text-left mb-18 lg:mb-48 2xl:mb-100">
+          <div class="hero-btn hidden md:inline-block text-center md:text-left mb-18 lg:mb-48">
             <ButtonLink href="https://docs.tableland.xyz">Get started</ButtonLink>
           </div>
           <div class="md:hidden text-center md:text-left">
             <ButtonLink href="https://discord.gg/hpd5WWn4Ys">Discord</ButtonLink>
           </div>
-          <p class="hidden md:inline-block text-2xl md:text-3xl lg:text-4.25xl 3xl:text-5xl leading-normal lg:leading-snug font-medium">
+          <p class="hidden md:inline-block text-2xl md:text-3xl lg:text-4.25xl leading-snug md:leading-snug font-medium">
             Use familiar SQL tables to read and write dynamic NFT metadata or application
             data–all orchestrated by token networks like Ethereum.
           </p>
@@ -80,9 +80,12 @@
             2–Your familiar SQL tables are stored on a decentralized network of validators
             and anchored to Ethereum as transferable NFTs, providing ownership and access control.
           </p>
-          <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light">
+          <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
             3–Easy as pie, right?
           </p>
+          <div class="text-center md:text-left">
+            <ButtonLink href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f">See use cases</ButtonLink>
+          </div>
         </div>
       </div>
     </section>

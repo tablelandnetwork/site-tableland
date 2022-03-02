@@ -51,13 +51,13 @@ body {
 
 @media (min-width: 1640px) {
   .hero-btn {
-    margin-bottom: 35rem !important;
+    margin-bottom: 32rem !important;
   }
 }
 
 @media (min-width: 1760px) {
   .hero-btn {
-    margin-bottom: 40rem !important;
+    margin-bottom: 32rem !important;
   }
 }
 
