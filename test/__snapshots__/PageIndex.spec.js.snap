@@ -80,7 +80,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
         </p>
          
         <div
-          class="hero-btn hidden md:inline-block text-center md:text-left mb-18 lg:mb-48 2xl:mb-100"
+          class="hero-btn hidden md:inline-block text-center md:text-left mb-18 lg:mb-48"
         >
           <a
             class="btn bg-black text-white"
@@ -122,7 +122,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
         </div>
          
         <p
-          class="hidden md:inline-block text-2xl md:text-3xl lg:text-4.25xl 3xl:text-5xl leading-normal lg:leading-snug font-medium"
+          class="hidden md:inline-block text-2xl md:text-3xl lg:text-4.25xl leading-snug md:leading-snug font-medium"
         >
           
           Use familiar SQL tables to read and write dynamic NFT metadata or application
@@ -533,12 +533,12 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
          
         <a
           class="btn bg-black text-white"
-          href="https://docs.tableland.xyz"
+          href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f"
         >
           <span
             class="flex"
           >
-            Get started 
+            See use cases 
             <img
               alt=""
               class="hidden sm:inline-block ml-4"
@@ -715,7 +715,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
         </p>
          
         <div
-          class="hero-btn hidden md:inline-block text-center md:text-left mb-18 lg:mb-48 2xl:mb-100"
+          class="hero-btn hidden md:inline-block text-center md:text-left mb-18 lg:mb-48"
         >
           <a
             class="btn bg-black text-white"
@@ -757,7 +757,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
         </div>
          
         <p
-          class="hidden md:inline-block text-2xl md:text-3xl lg:text-4.25xl 3xl:text-5xl leading-normal lg:leading-snug font-medium"
+          class="hidden md:inline-block text-2xl md:text-3xl lg:text-4.25xl leading-snug md:leading-snug font-medium"
         >
           
           Use familiar SQL tables to read and write dynamic NFT metadata or application
@@ -1168,12 +1168,12 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
          
         <a
           class="btn bg-black text-white"
-          href="https://docs.tableland.xyz"
+          href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f"
         >
           <span
             class="flex"
           >
-            Get started 
+            See use cases 
             <img
               alt=""
               class="hidden sm:inline-block ml-4"

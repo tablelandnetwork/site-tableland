@@ -80,12 +80,9 @@
             2–Your familiar SQL tables are stored on a decentralized network of validators
             and anchored to Ethereum as transferable NFTs, providing ownership and access control.
           </p>
-          <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+          <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light">
             3–Easy as pie, right?
           </p>
-          <div class="text-center md:text-left">
-            <ButtonLink href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f">See use cases</ButtonLink>
-          </div>
         </div>
       </div>
     </section>
@@ -146,7 +143,7 @@
       <div class="container px-6 md:px-9 lg:px-16">
         <div class="text-center text-white">
           <p class="text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10">What will you build?</p>
-          <ButtonLink href="https://docs.tableland.xyz">Get started</ButtonLink>
+          <ButtonLink href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f">See use cases</ButtonLink>
         </div>
       </div>
     </section>
