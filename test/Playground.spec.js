@@ -3,7 +3,7 @@ import { createLocalVue, mount } from '@vue/test-utils';
 import { setupTest } from '@nuxt/test-utils'
 import flushPromises from 'flush-promises';
 // get mock tableland's error stub
-import { nextError } from '@textile/tableland';
+import { nextError } from '@tableland/sdk';
 
 import Playground from '@/components/Playground.vue';
 import messages from '~/playground-messages';
