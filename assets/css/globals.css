@@ -10,9 +10,13 @@ header {
 }
 
 body {
-	@apply font-Poppins;
+  font-family: AndaleMono;
   background-color: #f2f2f2;
   animation: reveal 2s;
+}
+
+div#webpack-hot-middleware-clientOverlay {
+  display: none;
 }
 
 @keyframes reveal {
@@ -21,7 +25,11 @@ body {
 }
 
 .bg-navbar {
-	background-color: #f2f2f2;
+	background: transparent;
+  position: fixed;
+  padding: 2em 1em;
+  width: 100%;
+  z-index: 999;
 }
 
 .btn {
@@ -30,6 +38,18 @@ body {
 
 .btn:active {
   background-color: #272627;
+}
+
+.text-pink {
+  color: #FF6868;
+}
+
+.text-orange {
+  color: #FF9774;
+}
+
+.text-purple {
+  color: #C07BDB;
 }
 
 /** hero **/
@@ -182,4 +202,47 @@ body {
 
 footer {
   background-color: #272627;
+}
+
+/** minting **/
+.minting {
+	background: center top / cover no-repeat url('~assets/img/minting.png');
+  height: calc(100vw * 1.43229166667);
+  max-height: 1250px;
+  width: 100vw;
+  max-width: 1920px !important;
+}
+
+/** rig **/
+.rig {
+	background: #232041;
+  height: calc(100vw * 1.43229166667);
+  max-height: 100vh;
+  width: 100vw;
+  max-width: 1920px !important;
+}
+
+.rig-break {
+  position: relative;
+	background: center / cover no-repeat url('~assets/img/break_5.svg');
+	height: 184px;
+  top: -80px;
+}
+
+.rig-break-bottom {
+  position: relative;
+	background: center / cover no-repeat url('~assets/img/break_5.svg');
+	height: 184px;
+  bottom: -30px;
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
+/** guilds **/
+.guild {
+	background: #372957;
+  height: calc(100vw * 1.43229166667);
+  max-height: 750px;
+  width: 100vw;
+  max-width: 1920px !important;
 }
