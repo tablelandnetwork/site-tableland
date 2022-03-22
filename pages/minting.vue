@@ -27,8 +27,8 @@
           <li><a href="https://docs.tableland.xyz">Docs</a></li>
         </ul>
       </nav>
-      <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-20 lg:pt-20" >
-        <div class="lg:w-2/3"  data-aos="fade-up">
+      <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-20 lg:pt-20">
+        <div class="lg:w-2/3" data-aos="fade-up" style="margin: auto;">
           <h1 class="text-white font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
             Tableland Awaits
           </h1>
@@ -76,11 +76,12 @@
           </section>
 
           <section class="guild-list">
-            <div class="container grid grid-cols-4 gap-4 pt-36 px-36" data-aos="fade-up">
-              <div class="vehicle"><img src="~assets/img/airlight_1.png"/></div>
-              <div class="vehicle a-1 pt-48"><img src="~assets/img/airlight_2.png"/></div>
-              <div class="vehicle a-2 pt-12"><img src="~assets/img/airlight_3.png"/></div>
-              <div class="vehicle a-3 pt-24"><img src="~assets/img/airlight_4.png"/></div>
+            <!-- Airlights -->
+            <div class="container grid grid-cols-4 gap-4 pt-48 px-36">
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/airlight_1.png"/></div>
+              <div class="vehicle a-1 pt-48" data-aos="fade-up"><img src="~assets/img/airlight_2.png"/></div>
+              <div class="vehicle a-2 pt-12" data-aos="fade-up"><img src="~assets/img/airlight_3.png"/></div>
+              <div class="vehicle a-3 pt-24" data-aos="fade-up"><img src="~assets/img/airlight_4.png"/></div>
             </div>
             <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
               <div class="lg:w-2/3" data-aos="fade-up">
@@ -90,9 +91,60 @@
                 <p class="text-m md:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
                   The heavy birds rule the alpine of Tableland. Perfect for fast inserts and massive lifts. But keep your diamond hands on the controls because what goes up must come down.
                 </p>
-
                 </div>
               </div>
+              <!-- Foils -->
+              <div class="container grid grid-cols-4 gap-4 pt-48 px-36" data-aos="fade-up">
+                <div class="vehicle"><img src="~assets/img/airlight_1.png"/></div>
+                <div class="vehicle a-1 pt-48"><img src="~assets/img/airlight_2.png"/></div>
+                <div class="vehicle a-2 pt-12"><img src="~assets/img/airlight_3.png"/></div>
+                <div class="vehicle a-3 pt-24"><img src="~assets/img/airlight_4.png"/></div>
+              </div>
+              <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
+                <div class="lg:w-2/3 text-left" data-aos="fade-up">
+                  <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
+                    Foils
+                  </h2>
+                  <p class="text-m md:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+                    The heavy birds rule the alpine of Tableland. Perfect for fast inserts and massive lifts. But keep your diamond hands on the controls because what goes up must come down.
+                  </p>
+                </div>
+              </div>
+              <!-- Hopper -->
+              <div class="container grid grid-cols-4 gap-4 pt-48 px-36" data-aos="fade-up">
+                <div class="vehicle"><img src="~assets/img/airlight_1.png"/></div>
+                <div class="vehicle a-1 pt-48"><img src="~assets/img/airlight_2.png"/></div>
+                <div class="vehicle a-2 pt-12"><img src="~assets/img/airlight_3.png"/></div>
+                <div class="vehicle a-3 pt-24"><img src="~assets/img/airlight_4.png"/></div>
+              </div>
+              <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
+                <div class="lg:w-2/3 text-left" data-aos="fade-up">
+                  <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
+                    Hoppers
+                  </h2>
+                  <p class="text-m md:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+                    The heavy birds rule the alpine of Tableland. Perfect for fast inserts and massive lifts. But keep your diamond hands on the controls because what goes up must come down.
+                  </p>
+                </div>
+              </div>
+              <!-- Sleds -->
+              <div class="container grid grid-cols-4 gap-4 pt-48 px-36" data-aos="fade-up">
+                <div class="vehicle"><img src="~assets/img/airlight_1.png"/></div>
+                <div class="vehicle a-1 pt-48"><img src="~assets/img/airlight_2.png"/></div>
+                <div class="vehicle a-2 pt-12"><img src="~assets/img/airlight_3.png"/></div>
+                <div class="vehicle a-3 pt-24"><img src="~assets/img/airlight_4.png"/></div>
+              </div>
+              <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
+                <div class="lg:w-2/3 text-left" data-aos="fade-up">
+                  <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
+                    Sleds
+                  </h2>
+                  <p class="text-m md:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+                    The heavy birds rule the alpine of Tableland. Perfect for fast inserts and massive lifts. But keep your diamond hands on the controls because what goes up must come down.
+                  </p>
+                </div>
+              </div>
+            <div class="guild-list-break"></div>
             </section>
 
       <!-- garage -->
