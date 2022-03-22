@@ -206,7 +206,7 @@ footer {
 
 /** minting **/
 .minting {
-	background: center top / cover no-repeat url('~assets/img/minting.png');
+	background: center / cover no-repeat url('~assets/img/minting.png');
   height: calc(100vw * 1.43229166667);
   max-height: 1250px;
   width: 100vw;
@@ -245,4 +245,46 @@ footer {
   max-height: 750px;
   width: 100vw;
   max-width: 1920px !important;
+}
+
+.guild-list {
+	background: center top / cover no-repeat url('~assets/img/guilds.png');
+  height: calc(100vw * 1.43229166667);
+  max-height: 3750px;
+  width: 100vw;
+  max-width: 1920px !important;
+}
+
+.vehicle {
+  transform: translatey(0px);
+  animation: float 10s ease-in-out infinite;
+  margin: 30px;
+  max-width: 260px;
+  float: left;
+}
+
+/** animations  **/
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-20px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.a-1 {
+  animation-delay: 1.2s;
+}
+
+.a-2 {
+  animation-delay: 2.5s;
+}
+
+.a-3 {
+  animation-delay: 3.75s;
 }
