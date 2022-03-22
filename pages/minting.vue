@@ -6,29 +6,38 @@
         <div class="py-4">
           <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
         </div>
-        <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-24 uppercase ml-3">
+        <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
           <li><a href="https://mirror.xyz/tableland.eth">Blog</a></li>
           <li><a href="https://discord.gg/hpd5WWn4Ys" target="_blank">Discord</a></li>
           <li><a href="https://docs.tableland.xyz">Docs</a></li>
+          <li><a href="https://docs.tableland.xyz" class="btn bg-black text-white">Get started</a></li>
         </ul>
       </nav>
     </header>
 
     <!-- minting -->
     <section class="minting">
-      <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36" id="js-scroll">
+      <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2 pt-10">
+        <div class="py-4">
+          <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
+        </div>
+        <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
+          <li><a href="https://mirror.xyz/tableland.eth">Blog</a></li>
+          <li><a href="https://discord.gg/hpd5WWn4Ys" target="_blank">Discord</a></li>
+          <li><a href="https://docs.tableland.xyz">Docs</a></li>
+        </ul>
+      </nav>
+      <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-20 lg:pt-20" >
         <div class="lg:w-2/3"  data-aos="fade-up">
-          <h1 data-scroll data-scroll-speed="1" class="text-white font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
+          <h1 class="text-white font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
             Tableland Awaits
           </h1>
-          <p data-scroll data-scroll-speed="2" class="text-white text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+          <p class="text-white text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
             Out beyond the megalopolis, where the broad boulevards of The Grid dissolve into dust and then yawn into great open source plains, you’ll find Tableland. The undeveloped frontier.</p>
             <p class="text-white text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
               Terabyte upon terabyte of space waiting to be written into history. It’s raw, uncoded, and simmering with endless opportunity – and incalculable peril. So climb into your Rig and hold onto your brain chips. If you play this one right, the possibilities are endless.
             </p>
-            <div class="hero-btn hidden md:inline-block text-center md:text-left mb-18 lg:mb-48">
-              <ButtonLink href="https://docs.tableland.xyz">Get started</ButtonLink>
-            </div>
+            <br id="js-scroll"/>
           </div>
         </div>
       </section>
@@ -63,19 +72,22 @@
 
               </div>
             </div>
+            <div class="guild-break"></div>
           </section>
 
           <section class="guild-list">
-            <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36">
+            <div class="container grid grid-cols-4 gap-4 pt-36 px-36" data-aos="fade-up">
+              <div class="vehicle"><img src="~assets/img/airlight_1.png"/></div>
+              <div class="vehicle a-1 pt-48"><img src="~assets/img/airlight_2.png"/></div>
+              <div class="vehicle a-2 pt-12"><img src="~assets/img/airlight_3.png"/></div>
+              <div class="vehicle a-3 pt-24"><img src="~assets/img/airlight_4.png"/></div>
+            </div>
+            <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
               <div class="lg:w-2/3" data-aos="fade-up">
-                <div class="vehicle"><img src="~assets/img/airlight_1.png"/></div>
-                <div class="vehicle a-1"><img src="~assets/img/airlight_2.png"/></div>
-                <div class="vehicle a-2"><img src="~assets/img/airlight_3.png"/></div>
-                <div class="vehicle a-3"><img src="~assets/img/airlight_4.png"/></div>
                 <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
                   Airlights
                 </h2>
-                <p class="text-m md:text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+                <p class="text-m md:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
                   The heavy birds rule the alpine of Tableland. Perfect for fast inserts and massive lifts. But keep your diamond hands on the controls because what goes up must come down.
                 </p>
 

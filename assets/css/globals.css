@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;500;600&display=swap');
 
+::selection {
+  color: #000;
+  background-color: #0BE291;
+}
+
+
 html {
   max-width: 1920px;
   margin: 0 auto;
@@ -30,6 +36,29 @@ div#webpack-hot-middleware-clientOverlay {
   padding: 2em 1em;
   width: 100%;
   z-index: 999;
+}
+
+nav .btn {
+  font-size: 1em;
+  padding: 0.75rem 2rem;
+  letter-spacing: 0px;
+}
+
+nav .btn:hover {
+  border-bottom: 0px;
+  background: white;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+nav li a {
+  border-bottom: 0px;
+  transition: all 0.2s ease-in-out;
+}
+
+nav li a:hover {
+  border-bottom: 2px solid;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn {
@@ -233,7 +262,7 @@ footer {
   position: relative;
 	background: center / cover no-repeat url('~assets/img/break_5.svg');
 	height: 184px;
-  bottom: -30px;
+  bottom: -60px;
   -webkit-transform: scaleY(-1);
   transform: scaleY(-1);
 }
@@ -242,9 +271,18 @@ footer {
 .guild {
 	background: #372957;
   height: calc(100vw * 1.43229166667);
-  max-height: 750px;
+  max-height: 550px;
   width: 100vw;
   max-width: 1920px !important;
+}
+
+.guild-break {
+  position: relative;
+	background: center / cover no-repeat url('~assets/img/break_6.svg');
+	height: 184px;
+  bottom: 0px;
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
 }
 
 .guild-list {
