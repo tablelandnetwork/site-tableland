@@ -1,19 +1,7 @@
-<script>
-  import Parallax from 'vue-parallaxy';
-  import AOS from 'aos'
-  import 'aos/dist/aos.css'
-
-  export default {
-    components: {
-      Parallax
-    }
-  };
-
-</script>
-<template >
+<template>
   <div>
     <!-- Header -->
-    <header class="bg-navbar" data-aos="fade-up" data-aos-anchor=".rig">
+    <header class="bg-navbar" data-aos="fade-down" data-aos-anchor=".rig">
       <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2">
         <div class="py-4">
           <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
@@ -27,13 +15,13 @@
     </header>
 
     <!-- minting -->
-    <section class="minting scroll-smooth">
-      <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36">
+    <section class="minting">
+      <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36" id="js-scroll">
         <div class="lg:w-2/3"  data-aos="fade-up">
-          <h1 class="text-white font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
+          <h1 data-scroll data-scroll-speed="1" class="text-white font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
             Tableland Awaits
           </h1>
-          <p class="text-white text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+          <p data-scroll data-scroll-speed="2" class="text-white text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
             Out beyond the megalopolis, where the broad boulevards of The Grid dissolve into dust and then yawn into great open source plains, you’ll find Tableland. The undeveloped frontier.</p>
             <p class="text-white text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
               Terabyte upon terabyte of space waiting to be written into history. It’s raw, uncoded, and simmering with endless opportunity – and incalculable peril. So climb into your Rig and hold onto your brain chips. If you play this one right, the possibilities are endless.
@@ -48,9 +36,9 @@
       <!-- rig -->
       <section class="rig">
         <div class="rig-break"></div>
-        <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36">
+        <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36" >
           <div class="lg:w-2/3" data-aos="fade-up">
-            <h1 class="text-pink font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
+            <h1 data-scroll data-scroll-speed="2" class="text-pink font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
               Your Rig
             </h1>
             <p class="text-pink text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
@@ -63,7 +51,7 @@
         </section>
 
         <!-- guild -->
-        <section class="guild js-show-on-scroll">
+        <section class="guild">
           <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36">
             <div class="lg:w-2/3" data-aos="fade-up">
               <h1 class="text-pink font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
@@ -76,6 +64,24 @@
               </div>
             </div>
           </section>
+
+          <section class="guild-list">
+            <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36">
+              <div class="lg:w-2/3" data-aos="fade-up">
+                <div class="vehicle"><img src="~assets/img/airlight_1.png"/></div>
+                <div class="vehicle a-1"><img src="~assets/img/airlight_2.png"/></div>
+                <div class="vehicle a-2"><img src="~assets/img/airlight_3.png"/></div>
+                <div class="vehicle a-3"><img src="~assets/img/airlight_4.png"/></div>
+                <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
+                  Airlights
+                </h2>
+                <p class="text-m md:text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+                  The heavy birds rule the alpine of Tableland. Perfect for fast inserts and massive lifts. But keep your diamond hands on the controls because what goes up must come down.
+                </p>
+
+                </div>
+              </div>
+            </section>
 
       <!-- garage -->
       <section class="garage">
@@ -145,6 +151,12 @@
       ethereum: function () {
         return window.ethereum;
       }
+    },
+    mounted() {
+      this.lmS = new this.locomotiveScroll({
+        el: document.querySelector('#js-scroll'),
+        smooth: true,
+      });
     }
   };
   </script>
