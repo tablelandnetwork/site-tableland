@@ -25,7 +25,7 @@ div#webpack-hot-middleware-clientOverlay {
 }
 
 .bg-navbar {
-	background: transparent;
+	background: #ff6567;
   position: fixed;
   padding: 2em 1em;
   width: 100%;

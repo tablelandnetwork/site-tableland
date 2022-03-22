@@ -1,7 +1,19 @@
-<template>
+<script>
+  import Parallax from 'vue-parallaxy';
+  import AOS from 'aos'
+  import 'aos/dist/aos.css'
+
+  export default {
+    components: {
+      Parallax
+    }
+  };
+
+</script>
+<template >
   <div>
     <!-- Header -->
-    <header class="bg-navbar">
+    <header class="bg-navbar" data-aos="fade-up" data-aos-anchor=".rig">
       <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2">
         <div class="py-4">
           <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
@@ -15,9 +27,9 @@
     </header>
 
     <!-- minting -->
-    <section class="minting">
+    <section class="minting scroll-smooth">
       <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36">
-        <div class="lg:w-2/3">
+        <div class="lg:w-2/3"  data-aos="fade-up">
           <h1 class="text-white font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
             Tableland Awaits
           </h1>
@@ -37,7 +49,7 @@
       <section class="rig">
         <div class="rig-break"></div>
         <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36">
-          <div class="lg:w-2/3">
+          <div class="lg:w-2/3" data-aos="fade-up">
             <h1 class="text-pink font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
               Your Rig
             </h1>
@@ -51,9 +63,9 @@
         </section>
 
         <!-- guild -->
-        <section class="guild">
+        <section class="guild js-show-on-scroll">
           <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36">
-            <div class="lg:w-2/3">
+            <div class="lg:w-2/3" data-aos="fade-up">
               <h1 class="text-pink font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
                 The Guilds
               </h1>
@@ -68,7 +80,7 @@
       <!-- garage -->
       <section class="garage">
         <div class="container px-12 md:px-12 lg:px-16 flex items-center pt-18 lg:pt-36">
-          <div class="lg:w-full text-center">
+          <div class="lg:w-full text-center" data-aos="fade-up">
             <h3 class="text-pink font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-10 md:mb-4 lg:mb-10">
             Congratulations, it’s a Rig!
             </h3>
@@ -83,7 +95,7 @@
       <section class="community relative">
         <div class="container px-6 md:px-9 lg:px-16">
 
-          <div class="community-bottom md:flex justify-center lg:justify-end text-white">
+          <div class="community-bottom md:flex justify-center lg:justify-end text-white" data-aos="fade-up">
             <div>
               <h3 class="text-purple font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10">
               We’re going to need to see some identification
@@ -135,13 +147,4 @@
       }
     }
   };
-  </script>
-  <script>
-    import Parallax from 'vue-parallaxy';
-    export default {
-      components: {
-        Parallax
-      }
-    };
-
   </script>
