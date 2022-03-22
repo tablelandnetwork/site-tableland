@@ -286,11 +286,17 @@ footer {
 }
 
 .guild-list {
-	background: center top / cover no-repeat url('~assets/img/guilds.png');
-  height: calc(100vw * 1.43229166667);
-  max-height: 3750px;
+	background: center top / cover no-repeat url('~assets/img/guild-list.jpg');
+  height: auto;
   width: 100vw;
   max-width: 1920px !important;
+}
+
+.guild-list-break {
+  position: relative;
+	background: center / cover no-repeat url('~assets/img/mod.png');
+	height: 700px;
+  bottom: 0px;
 }
 
 .vehicle {
