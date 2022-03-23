@@ -245,6 +245,11 @@ nav li a:hover {
   color: #6067EB!important;
 }
 
+.showcase .btn {
+  background: #6067EB;
+  color: #141034;
+}
+
 footer {
   background-color: #141034;
 }

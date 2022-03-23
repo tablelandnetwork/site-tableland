@@ -163,9 +163,9 @@
 
       <!-- identification -->
       <section class="id">
-        <div class="container px-6 md:px-9 lg:px-16 pt-32">
-          <div class="w-1/2"></div>
-          <div class="w-1/2 flex items-end justify-end text-white pl-100 flex-row-reverse ">
+        <div class="container flex px-6 md:px-9 lg:px-16 pt-32 pl-100">
+          <div class="w-1/3"></div>
+          <div class="w-2/3 text-white pl-32 text-left">
             <div>
               <h3 class="text-purple font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
               We’re going to need to see some identification
