@@ -161,22 +161,124 @@
         </div>
       </section>
 
-      <!-- community -->
-      <section class="community relative">
-        <div class="container px-6 md:px-9 lg:px-16">
+      <!-- identification -->
+      <section class="id">
+        <div class="container px-6 md:px-9 lg:px-16 pt-32">
 
-          <div class="community-bottom md:flex justify-center lg:justify-end text-white" data-aos="fade-up">
+          <div class="md:flex justify-center lg:justify-end text-white" >
             <div>
-              <h3 class="text-purple font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10">
+              <h3 class="text-purple font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
               We’re going to need to see some identification
               </h3>
-              <p class="text-purple text-xl md:text-3xl leading-normal md:leading-normal font-light">
+              <p class="text-purple text-xl md:text-3xl leading-normal md:leading-normal font-light" data-aos="fade-up">
                 Your Rig comes with an NFT certificate of its authenticity. It’s like the registration card for your machine. Proof that it’s yours and an invaluable document should you get stopped by QA. And it will really come in handy if a couple of Sock Puppets try to jack you out on Satoshi Mesa. You can also use your NFT to gain entry into Testnet and Tableland’s Discord. Don’t lose it.
               </p>
             </div>
           </div>
         </div>
-        <div class="community-break"></div>
+      </section>
+
+      <!-- details -->
+      <section class="details">
+        <div class="container px-6 md:px-9 lg:px-16 pt-32">
+
+          <div class="md:flex justify-center lg:justify-end text-white" >
+            <div>
+              <h3 class="text-center text-pink font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+              Frequenty Asked Questions
+              </h3>
+              <div class="tabs">
+                <div class="tab">
+                  <input type="checkbox" id="tab-1">
+                  <label class="tab-label" for="tab-1">When is the mint date?</label>
+                  <div class="tab-content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                  </div>
+                </div>
+                <div class="tab">
+                  <input type="checkbox" id="tab-2">
+                  <label class="tab-label" for="tab-2">Is there a fixed price? Or how will mint pricing take place?</label>
+                  <div class="tab-content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                  </div>
+                </div>
+                <div class="tab">
+                  <input type="checkbox" id="tab-3">
+                  <label class="tab-label" for="tab-3">What is the utility of the Tableland NFT?</label>
+                  <div class="tab-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                  </div>
+                </div>
+                <div class="tab">
+                  <input type="checkbox" id="tab-4">
+                  <label class="tab-label" for="tab-4">How many NFTs are there total?</label>
+                  <div class="tab-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                  </div>
+                </div>
+                <div class="tab">
+                  <input type="checkbox" id="tab-5">
+                  <label class="tab-label" for="tab-5">How many will be minted on the above mint date?</label>
+                  <div class="tab-content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                  </div>
+                </div>
+                <div class="tab">
+                  <input type="checkbox" id="tab-6">
+                  <label class="tab-label" for="tab-6">Do the different types of NFTs grant different roles or have different utility?</label>
+                  <div class="tab-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                  </div>
+                </div>
+                <div class="tab">
+                  <input type="checkbox" id="tab-7">
+                  <label class="tab-label" for="tab-7">Who are the artists?</label>
+                  <div class="tab-content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                  </div>
+                </div>
+                <div class="tab">
+                  <input type="checkbox" id="tab-8">
+                  <label class="tab-label" for="tab-8">Have they done other projects before?</label>
+                  <div class="tab-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                  </div>
+                </div>
+                <div class="tab">
+                  <input type="checkbox" id="tab-9">
+                  <label class="tab-label" for="tab-9">Is there a plan for the next round of NFTs to be minted?</label>
+                  <div class="tab-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                  </div>
+                </div>
+                <div class="tab">
+                  <input type="checkbox" id="tab-10">
+                  <label class="tab-label" for="tab-10">How do I get on the whitelist? </label>
+                  <div class="tab-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                  </div>
+                </div>
+                <div class="tab">
+                  <input type="checkbox" id="tab-11">
+                  <label class="tab-label" for="tab-11">Will they be sold in ETH?</label>
+                  <div class="tab-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                  </div>
+                </div>
+                <div class="tab">
+                  <input type="checkbox" id="tab-12">
+                  <label class="tab-label" for="tab-12">Is there a window of time they are open for sale? Or available until are all sold? </label>
+                  <div class="tab-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                  </div>
+                </div>
+              </div>
+              <p class="lg:w-3/2 text-pink text-xl md:text-3xl leading-normal md:leading-normal font-light" data-aos="fade-up">
+                Your Rig comes with an NFT certificate of its authenticity. It’s like the registration card for your machine. Proof that it’s yours and an invaluable document should you get stopped by QA. And it will really come in handy if a couple of Sock Puppets try to jack you out on Satoshi Mesa. You can also use your NFT to gain entry into Testnet and Tableland’s Discord. Don’t lose it.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- showcase -->

@@ -307,6 +307,23 @@ footer {
   float: left;
 }
 
+/** id section  **/
+
+.id {
+	background: center top / cover no-repeat url('~assets/img/id.jpg');
+  height: calc(100vw * 1.74635416667);
+  max-height: 1353px;
+  width: 100vw;
+  max-width: 1920px !important;
+}
+
+.details {
+  background: #232041;
+  height: auto;
+  width: 100vw;
+  max-width: 1920px !important;
+}
+
 /** animations  **/
 
 @keyframes float {
@@ -331,4 +348,89 @@ footer {
 
 .a-3 {
   animation-delay: 3.75s;
+}
+
+/* accordion */
+.tabs {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tab {
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  max-width: 980px;
+  margin: 20px auto;
+}
+
+.tab input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  outline: 0;
+}
+
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  background: transparent;
+  border: 2px solid #fe6868;
+  color: #fe6868;
+  font-size: 27px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tab-label:hover {
+  background: #fe6868;
+  color: #232041;
+}
+
+.tab-label::after {
+  content: "❯";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: #2c3e50;
+  background: transparent;
+  transition: all 0.35s;
+}
+
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: #2c3e50;
+  cursor: pointer;
+}
+
+.tab-close:hover {
+  background: #1a252f;
+}
+
+input:checked + .tab-label {
+  background: #fe6868;
+  color: #232041;
+}
+
+input:checked + .tab-label::after {
+  transform: rotate(90deg);
+}
+
+input:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 2em 1em;
+  font-size: 19px;
+  border: 2px solid #fd6968;
+  color: #fd6968;
+  outline: 0;
 }
