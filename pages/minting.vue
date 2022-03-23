@@ -150,11 +150,11 @@
       <!-- garage -->
       <section class="garage">
         <div class="container px-12 md:px-12 lg:px-16 flex items-center pt-18 lg:pt-36">
-          <div class="lg:w-full text-center" data-aos="fade-up">
-            <h3 class="text-pink font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-10 md:mb-4 lg:mb-10">
+          <div class="lg:w-full text-center" >
+            <h3 class="text-orange font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-10 md:mb-4 lg:mb-10" data-aos="fade-up">
             Congratulations, it’s a Rig!
             </h3>
-            <p class="text-pink text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2">
+            <p class="text-orange text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2" data-aos="fade-up">
               Each Rig is minted using randomization subroutines to ensure complete uniqueness. Rigs are born from a parts and Mods ledger called the Rarity Table. Every so often the components of a Rig come together in a infinitesimally elusive set called a Match Rig. If you got one, consider yourself lucky. They’re exceedingly rare and staggerlying valuable. If you have a Match, be prepared to guard it with your life.
             </p>
           </div>
@@ -164,8 +164,8 @@
       <!-- identification -->
       <section class="id">
         <div class="container px-6 md:px-9 lg:px-16 pt-32">
-
-          <div class="md:flex justify-center lg:justify-end text-white" >
+          <div class="w-1/2"></div>
+          <div class="w-1/2 flex items-end justify-end text-white pl-100 flex-row-reverse ">
             <div>
               <h3 class="text-purple font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
               We’re going to need to see some identification
@@ -180,121 +180,141 @@
 
       <!-- details -->
       <section class="details">
-        <div class="container px-6 md:px-9 lg:px-16 pt-32">
-
-          <div class="md:flex justify-center lg:justify-end text-white" >
-            <div>
-              <h3 class="text-center text-pink font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
-              Frequenty Asked Questions
-              </h3>
-              <div class="tabs">
-                <div class="tab">
-                  <input type="checkbox" id="tab-1">
-                  <label class="tab-label" for="tab-1">When is the mint date?</label>
-                  <div class="tab-content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                  </div>
-                </div>
-                <div class="tab">
-                  <input type="checkbox" id="tab-2">
-                  <label class="tab-label" for="tab-2">Is there a fixed price? Or how will mint pricing take place?</label>
-                  <div class="tab-content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                  </div>
-                </div>
-                <div class="tab">
-                  <input type="checkbox" id="tab-3">
-                  <label class="tab-label" for="tab-3">What is the utility of the Tableland NFT?</label>
-                  <div class="tab-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                  </div>
-                </div>
-                <div class="tab">
-                  <input type="checkbox" id="tab-4">
-                  <label class="tab-label" for="tab-4">How many NFTs are there total?</label>
-                  <div class="tab-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                  </div>
-                </div>
-                <div class="tab">
-                  <input type="checkbox" id="tab-5">
-                  <label class="tab-label" for="tab-5">How many will be minted on the above mint date?</label>
-                  <div class="tab-content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                  </div>
-                </div>
-                <div class="tab">
-                  <input type="checkbox" id="tab-6">
-                  <label class="tab-label" for="tab-6">Do the different types of NFTs grant different roles or have different utility?</label>
-                  <div class="tab-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                  </div>
-                </div>
-                <div class="tab">
-                  <input type="checkbox" id="tab-7">
-                  <label class="tab-label" for="tab-7">Who are the artists?</label>
-                  <div class="tab-content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                  </div>
-                </div>
-                <div class="tab">
-                  <input type="checkbox" id="tab-8">
-                  <label class="tab-label" for="tab-8">Have they done other projects before?</label>
-                  <div class="tab-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                  </div>
-                </div>
-                <div class="tab">
-                  <input type="checkbox" id="tab-9">
-                  <label class="tab-label" for="tab-9">Is there a plan for the next round of NFTs to be minted?</label>
-                  <div class="tab-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                  </div>
-                </div>
-                <div class="tab">
-                  <input type="checkbox" id="tab-10">
-                  <label class="tab-label" for="tab-10">How do I get on the whitelist? </label>
-                  <div class="tab-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                  </div>
-                </div>
-                <div class="tab">
-                  <input type="checkbox" id="tab-11">
-                  <label class="tab-label" for="tab-11">Will they be sold in ETH?</label>
-                  <div class="tab-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                  </div>
-                </div>
-                <div class="tab">
-                  <input type="checkbox" id="tab-12">
-                  <label class="tab-label" for="tab-12">Is there a window of time they are open for sale? Or available until are all sold? </label>
-                  <div class="tab-content">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                  </div>
-                </div>
-              </div>
-              <p class="lg:w-3/2 text-pink text-xl md:text-3xl leading-normal md:leading-normal font-light" data-aos="fade-up">
-                Your Rig comes with an NFT certificate of its authenticity. It’s like the registration card for your machine. Proof that it’s yours and an invaluable document should you get stopped by QA. And it will really come in handy if a couple of Sock Puppets try to jack you out on Satoshi Mesa. You can also use your NFT to gain entry into Testnet and Tableland’s Discord. Don’t lose it.
-              </p>
+        <div class="container px-6 md:px-9 lg:px-16 py-32 px-32 max-w-7xl">
+          <div class="flex text-right">
+            <h3 class="w-1/2 text-left text-pink font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+              The details on the NFT
+            </h3>
+            <div class="w-1/2 text-right pt-16">
+              <a href="https://docs.tableland.xyz" class="btn bg-black text-white" data-aos="fade-up">Join Whitelist</a>
             </div>
           </div>
+          <div class="flex text-left pt-16">
+            <div class="w-1/2 text-pink" data-aos="fade-up">
+              <h3 class="text-2xl">PRICE</h3>
+              <h2 class="text-4xl font-Orbitron">0.01 ETH</h2>
+              <br><br>
+              <h3 class="text-2xl">VALUE</h3>
+              <h2 class="text-4xl font-Orbitron">PLACEHOLDER</h2>
+            </div>
+            <div class="w-1/2 text-pink" data-aos="fade-up">
+              <h3 class="text-2xl">AVAILABLE</h3>
+              <h2 class="text-4xl font-Orbitron">1,001,101</h2>
+              <br><br>
+              <h3 class="text-2xl">VALUE</h3>
+              <h2 class="text-4xl font-Orbitron">PLACEHOLDER</h2>
+            </div>
+          </div>
+        </div>
+        <div class="container px-6 md:px-9 lg:px-16 py-32">
+          <div class="md:flex justify-center lg:justify-center">
+            <h3 class="text-center text-pink font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+            Frequenty Asked Questions
+            </h3>
+          </div>
+          <div class="tabs">
+              <div class="tab">
+                <input type="checkbox" id="tab-1">
+                <label class="tab-label" for="tab-1">When is the mint date?</label>
+                <div class="tab-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="tab-2">
+                <label class="tab-label" for="tab-2">Is there a fixed price? Or how will mint pricing take place?</label>
+                <div class="tab-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="tab-3">
+                <label class="tab-label" for="tab-3">What is the utility of the Tableland NFT?</label>
+                <div class="tab-content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="tab-4">
+                <label class="tab-label" for="tab-4">How many NFTs are there total?</label>
+                <div class="tab-content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="tab-5">
+                <label class="tab-label" for="tab-5">How many will be minted on the above mint date?</label>
+                <div class="tab-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="tab-6">
+                <label class="tab-label" for="tab-6">Do the different types of NFTs grant different roles or have different utility?</label>
+                <div class="tab-content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="tab-7">
+                <label class="tab-label" for="tab-7">Who are the artists?</label>
+                <div class="tab-content">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="tab-8">
+                <label class="tab-label" for="tab-8">Have they done other projects before?</label>
+                <div class="tab-content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="tab-9">
+                <label class="tab-label" for="tab-9">Is there a plan for the next round of NFTs to be minted?</label>
+                <div class="tab-content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="tab-10">
+                <label class="tab-label" for="tab-10">How do I get on the whitelist? </label>
+                <div class="tab-content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="tab-11">
+                <label class="tab-label" for="tab-11">Will they be sold in ETH?</label>
+                <div class="tab-content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                </div>
+              </div>
+              <div class="tab">
+                <input type="checkbox" id="tab-12">
+                <label class="tab-label" for="tab-12">Is there a window of time they are open for sale? Or available until are all sold? </label>
+                <div class="tab-content">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                </div>
+              </div>
+            </div>
         </div>
       </section>
 
       <!-- showcase -->
       <section class="md:block showcase py-32 relative">
         <div class="container px-6 md:px-9 lg:px-16">
-          <div class="text-center text-white">
-            <p class="text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10">What will you build?</p>
+          <div class="text-center">
+            <p class="font-Orbitron text-blue text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10">What will you build?</p>
             <ButtonLink href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f">See use cases</ButtonLink>
           </div>
         </div>
       </section>
 
-      <footer class="text-white py-10">
+      <footer class="text-blue py-10">
         <nav class="container px-6 md:px-9 lg:px-16 py-2">
           <div class="hidden py-4">
-            <img src="~assets/img/logo-white.svg" alt="Tableland" class="h-5">
+            <img src="~assets/img/logo-white.svg" alt="Tableland" class="h-5" id="js-scroll">
           </div>
           <ul class="flex justify-center items-center gap-x-3 sm:gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-xs">
             <li class="hidden md:inline-block"><a href="https://twitter.com/tableland__">Twitter</a></li>
