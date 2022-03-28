@@ -7,10 +7,11 @@
           <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
         </div>
         <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
-          <li><a href="#nft">The NFT</a></li>
-          <li><a href="#guilds" target="_blank">Guilds</a></li>
+          <li><a href="#start">The NFT</a></li>
+          <li><a href="#guilds">Guilds</a></li>
           <li><a href="#rig">Rigs</a></li>
           <li><a href="#faq">FAQ</a></li>
+          <li><a href="#whitelist" class="btn bg-black text-white">Join Whitelist</a></li>
         </ul>
       </nav>
     </header>
@@ -28,25 +29,26 @@
           <li><a href="https://docs.tableland.xyz" class="btn bg-black text-white">Get started</a></li>
         </ul>
       </nav>
-      <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-20 lg:pt-20">
+      <div class="container px-48 flex items-center pt-20 lg:pt-20">
         <div class="lg:w-2/3" data-aos="fade-up" style="margin: auto;">
           <h1 class="text-white font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
             Tableland Awaits
           </h1>
-          <p class="text-white text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+          <p class="text-white text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
             Out beyond the megalopolis, where the broad boulevards of The Grid dissolve into dust and then yawn into great open source plains, you’ll find Tableland. The undeveloped frontier.</p>
-            <p class="text-white text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+            <p class="text-white text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
               Terabyte upon terabyte of space waiting to be written into history. It’s raw, uncoded, and simmering with endless opportunity – and incalculable peril. So climb into your Rig and hold onto your brain chips. If you play this one right, the possibilities are endless.
             </p>
+            <a href="#start" class="btn bg-black text-white">Start your journey</a>
             <br id="js-scroll"/>
           </div>
         </div>
       </section>
 
       <!-- rig -->
-      <section class="rig">
+      <section class="rig" id="start">
         <div class="rig-break"></div>
-          <div class="container lg:px-12 py-16 px-16 ">
+          <div class="container py-16 px-16 ">
             <div class="flex">
               <div class="w-1/2 " >
                   <div class="vehicle" data-aos="fade-up"><img src="~assets/img/nft_1.png"/></div>
@@ -56,33 +58,49 @@
                   <div class="vehicle a-1 pt-48" style="margin-top: -250px;" data-aos="fade-up"><img src="~assets/img/nft_5.png"/></div>
                   <div class="vehicle a-2 pt-32" style="margin-top: -220px;margin-left: 335px;zoom: 0.8;" data-aos="fade-up"><img src="~assets/img/nft_6.png"/></div>
               </div>
-              <div class="w-1/2 px-6" >
-                <h1 data-aos="fade-up" class="text-pink font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
+              <div class="w-1/2 px-12" >
+                <h1 data-aos="fade-up" class="text-pink font-Orbitron w-full h-auto text-6xl  leading-tighter mb-4 lg:mb-10">
                   Choose an NFT
                 </h1>
-                <p class="text-pink text-l md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                <p class="text-pink text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
                   Your Rig is your custom machine. There are none that are like it, and this one is yours. It’s a purpose-built code-based machine and your key to Tableland. Each Rig is minted from a set of modular code blocks with unique attributes to achieve specific tasks. And what you’ll do with it is totally up to you.
                 </p>
               </div>
             </div>
             <div class="flex py-12">
-              <div class="w-1/2 px-6 py-32" >
-                <h1 data-aos="fade-up" class="text-pink font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
-                  Your Rig
+              <div class="w-1/2 px-12 py-32" >
+                <h1 data-aos="fade-up" class="text-pink font-Orbitron w-full h-auto text-6xl leading-tighter mb-4 lg:mb-10">
+                  Congrats, it's a Rig!
                 </h1>
-                <p data-aos="fade-up" class="text-pink text-l md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
-                  Your Rig is your custom machine. There are none that are like it, and this one is yours. It’s a purpose-built code-based machine and your key to Tableland. Each Rig is minted from a set of modular code blocks with unique attributes to achieve specific tasks. And what you’ll do with it is totally up to you.
+                <p data-aos="fade-up" class="text-pink text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+                  Each Rig is minted using randomization subroutines to ensure complete uniqueness. Rigs are born from a parts and Mods ledger called the Rarity Table. Every so often the components of a Rig come together in a infinitesimally elusive set called a Match Rig. If you got one, consider yourself lucky. They’re exceedingly rare and staggerlying valuable. If you have a Match, be prepared to guard it with your life.
                 </p>
+                <div class="feature w-1/3"> <img src="~assets/img/badge_1.png" data-aos="fade-up" /><p class="font-Orbitron text-pink text-4xl" data-aos="fade-up" >Feature</p></div>
+                <div class="feature w-1/3"> <img src="~assets/img/badge_2.png" data-aos="fade-up" /><p class="font-Orbitron text-pink text-4xl" data-aos="fade-up" >Feature</p></div>
+                <div class="feature w-1/3"> <img src="~assets/img/badge_3.png" data-aos="fade-up" /><p class="font-Orbitron text-pink text-4xl" data-aos="fade-up" >Feature</p></div>
               </div>
-              <div class="w-1/2" >
-                <img src="~assets/img/garagez.png" data-aos="fade-up"/>
+              <div class="w-1/2 mt-48" >
+                <img src="~assets/img/garagez.png" />
+              </div>
+            </div>
+            <div class="flex py-12">
+              <div class="w-1/2 mt-16" >
+                <img src="~assets/img/token.png" data-aos="fade-up" />
+              </div>
+              <div class="w-1/2 px-12 py-0" >
+                <h1 data-aos="fade-up" class="text-pink font-Orbitron w-full h-auto text-6xl leading-tighter mb-4 lg:mb-10">
+                We’re going to need to see some identification
+                </h1>
+                <p data-aos="fade-up" class="text-pink text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+                  Each Rig is minted using randomization subroutines to ensure complete uniqueness. Rigs are born from a parts and Mods ledger called the Rarity Table. Every so often the components of a Rig come together in a infinitesimally elusive set called a Match Rig. If you got one, consider yourself lucky. They’re exceedingly rare and staggerlying valuable. If you have a Match, be prepared to guard it with your life.
+                </p>
               </div>
             </div>
           </div>
-          <div class="container px-6 md:px-9 lg:px-16 py-2 px-32 max-w-7xl">
+          <div class="container px-6 md:px-9 lg:px-16 py-2 px-32 max-w-7xl" id="whitelist">
             <div class="flex text-right">
               <h3 class="w-1/2 text-left text-pink font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
-                The details on the NFT
+                What are you waiting for?
               </h3>
               <div class="w-1/2 text-right pt-16">
                 <a href="https://docs.tableland.xyz" class="btn bg-black text-white" data-aos="fade-up">Join Whitelist</a>
@@ -109,7 +127,7 @@
       </section>
 
         <!-- guild -->
-        <section class="guild">
+        <section class="guild" id="guilds">
           <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36">
             <div class="lg:w-2/3" data-aos="fade-up">
               <h1 class="text-pink font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
@@ -197,7 +215,7 @@
             </section>
 
       <!-- garage -->
-      <section class="garage">
+      <section class="garage" id="rig">
         <div class="container px-32 md:px-12 lg:px-16 flex items-center pt-18 lg:pt-36">
           <div class="lg:w-full text-center" >
             <h3 class="text-orange font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-10 md:mb-4 lg:mb-10" data-aos="fade-up">
@@ -228,7 +246,7 @@
       </section>
 
       <!-- details -->
-      <section class="details">
+      <section class="details" id="faq">
 
         <div class="container px-6 md:px-9 lg:px-16 py-32">
           <div class="md:flex justify-center lg:justify-center">

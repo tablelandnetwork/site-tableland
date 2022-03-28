@@ -47,7 +47,7 @@ div#webpack-hot-middleware-clientOverlay {
 }
 
 nav .btn {
-  font-size: 1em;
+  font-size: 1.2em;
   padding: 0.75rem 2rem;
   letter-spacing: 0px;
   color: #ff6567;
@@ -63,6 +63,7 @@ nav .btn:hover {
 nav li a {
   border-bottom: 0px;
   transition: all 0.2s ease-in-out;
+  font-size: 1.2em;
 }
 
 nav li a:hover {
@@ -304,6 +305,16 @@ footer {
 .rig .btn {
   background: #fd6968;
   color: #232041;
+}
+
+.feature {
+  margin-top: 4em;
+  float: left;
+  text-align: center;
+}
+
+.feature img {
+  margin: 20px auto;
 }
 
 /** guilds **/
