@@ -21,6 +21,10 @@ body {
   animation: reveal 2s;
 }
 
+.container {
+  zoom: 0.9;
+}
+
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: 2px;
 }
@@ -257,7 +261,7 @@ footer {
 /** minting **/
 .minting {
 	background: center / cover no-repeat url('~assets/img/minting.png');
-  height: calc(100vw * 1.43229166667);
+  height: 90vh;
   max-height: 1250px;
   width: 100vw;
   max-width: 1920px !important;
@@ -266,8 +270,7 @@ footer {
 /** rig **/
 .rig {
 	background: #232041;
-  height: calc(100vw * 1.43229166667);
-  max-height: 100vh;
+  height: auto;
   width: 100vw;
   max-width: 1920px !important;
 }
@@ -286,6 +289,21 @@ footer {
   bottom: -60px;
   -webkit-transform: scaleY(-1);
   transform: scaleY(-1);
+}
+
+.rig .vehicle {
+  margin: 10px;
+  max-width: 240px;
+  float: left;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.rig .btn {
+  background: #fd6968;
+  color: #232041;
 }
 
 /** guilds **/
@@ -343,11 +361,6 @@ footer {
   height: auto;
   width: 100vw;
   max-width: 1920px !important;
-}
-
-.details .btn {
-  background: #fd6968;
-  color: #232041;
 }
 
 /** animations  **/

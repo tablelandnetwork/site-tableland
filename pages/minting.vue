@@ -7,10 +7,10 @@
           <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
         </div>
         <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
-          <li><a href="https://mirror.xyz/tableland.eth">Blog</a></li>
-          <li><a href="https://discord.gg/hpd5WWn4Ys" target="_blank">Discord</a></li>
-          <li><a href="https://docs.tableland.xyz">Docs</a></li>
-          <li><a href="https://docs.tableland.xyz" class="btn bg-black text-white">Get started</a></li>
+          <li><a href="#nft">The NFT</a></li>
+          <li><a href="#guilds" target="_blank">Guilds</a></li>
+          <li><a href="#rig">Rigs</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </nav>
     </header>
@@ -25,6 +25,7 @@
           <li><a href="https://mirror.xyz/tableland.eth">Blog</a></li>
           <li><a href="https://discord.gg/hpd5WWn4Ys" target="_blank">Discord</a></li>
           <li><a href="https://docs.tableland.xyz">Docs</a></li>
+          <li><a href="https://docs.tableland.xyz" class="btn bg-black text-white">Get started</a></li>
         </ul>
       </nav>
       <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-20 lg:pt-20">
@@ -45,19 +46,67 @@
       <!-- rig -->
       <section class="rig">
         <div class="rig-break"></div>
-        <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36" >
-          <div class="lg:w-2/3" data-aos="fade-up">
-            <h1 data-scroll data-scroll-speed="2" class="text-pink font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
-              Your Rig
-            </h1>
-            <p class="text-pink text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
-              Your Rig is your custom machine. There are none that are like it, and this one is yours. It’s a purpose-built code-based machine and your key to Tableland. Each Rig is minted from a set of modular code blocks with unique attributes to achieve specific tasks. And what you’ll do with it is totally up to you.
-            </p>
-
+          <div class="container lg:px-12 py-16 px-16 ">
+            <div class="flex">
+              <div class="w-1/2 " >
+                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/nft_1.png"/></div>
+                  <div class="vehicle a-1 pt-48" data-aos="fade-up"><img src="~assets/img/nft_2.png"/></div>
+                  <div class="vehicle a-2 pt-12" data-aos="fade-up"><img src="~assets/img/nft_3.png"/></div>
+                  <div class="vehicle a-3 pt-24" data-aos="fade-up"><img src="~assets/img/nft_4.png"/></div>
+                  <div class="vehicle a-1 pt-48" style="margin-top: -250px;" data-aos="fade-up"><img src="~assets/img/nft_5.png"/></div>
+                  <div class="vehicle a-2 pt-32" style="margin-top: -220px;margin-left: 335px;zoom: 0.8;" data-aos="fade-up"><img src="~assets/img/nft_6.png"/></div>
+              </div>
+              <div class="w-1/2 px-6" >
+                <h1 data-aos="fade-up" class="text-pink font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
+                  Choose an NFT
+                </h1>
+                <p class="text-pink text-l md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                  Your Rig is your custom machine. There are none that are like it, and this one is yours. It’s a purpose-built code-based machine and your key to Tableland. Each Rig is minted from a set of modular code blocks with unique attributes to achieve specific tasks. And what you’ll do with it is totally up to you.
+                </p>
+              </div>
+            </div>
+            <div class="flex py-12">
+              <div class="w-1/2 px-6 py-32" >
+                <h1 data-aos="fade-up" class="text-pink font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
+                  Your Rig
+                </h1>
+                <p data-aos="fade-up" class="text-pink text-l md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+                  Your Rig is your custom machine. There are none that are like it, and this one is yours. It’s a purpose-built code-based machine and your key to Tableland. Each Rig is minted from a set of modular code blocks with unique attributes to achieve specific tasks. And what you’ll do with it is totally up to you.
+                </p>
+              </div>
+              <div class="w-1/2" >
+                <img src="~assets/img/garagez.png" data-aos="fade-up"/>
+              </div>
+            </div>
+          </div>
+          <div class="container px-6 md:px-9 lg:px-16 py-2 px-32 max-w-7xl">
+            <div class="flex text-right">
+              <h3 class="w-1/2 text-left text-pink font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+                The details on the NFT
+              </h3>
+              <div class="w-1/2 text-right pt-16">
+                <a href="https://docs.tableland.xyz" class="btn bg-black text-white" data-aos="fade-up">Join Whitelist</a>
+              </div>
+            </div>
+            <div class="flex text-left pt-16">
+              <div class="w-1/2 text-pink" data-aos="fade-up">
+                <h3 class="text-2xl">PRICE</h3>
+                <h2 class="text-4xl font-Orbitron">0.01 ETH</h2>
+                <br><br>
+                <h3 class="text-2xl">VALUE</h3>
+                <h2 class="text-4xl font-Orbitron">PLACEHOLDER</h2>
+              </div>
+              <div class="w-1/2 text-pink" data-aos="fade-up">
+                <h3 class="text-2xl">AVAILABLE</h3>
+                <h2 class="text-4xl font-Orbitron">1,001,101</h2>
+                <br><br>
+                <h3 class="text-2xl">VALUE</h3>
+                <h2 class="text-4xl font-Orbitron">PLACEHOLDER</h2>
+              </div>
             </div>
           </div>
           <div class="rig-break-bottom"></div>
-        </section>
+      </section>
 
         <!-- guild -->
         <section class="guild">
@@ -149,7 +198,7 @@
 
       <!-- garage -->
       <section class="garage">
-        <div class="container px-12 md:px-12 lg:px-16 flex items-center pt-18 lg:pt-36">
+        <div class="container px-32 md:px-12 lg:px-16 flex items-center pt-18 lg:pt-36">
           <div class="lg:w-full text-center" >
             <h3 class="text-orange font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-10 md:mb-4 lg:mb-10" data-aos="fade-up">
             Congratulations, it’s a Rig!
@@ -180,32 +229,7 @@
 
       <!-- details -->
       <section class="details">
-        <div class="container px-6 md:px-9 lg:px-16 py-32 px-32 max-w-7xl">
-          <div class="flex text-right">
-            <h3 class="w-1/2 text-left text-pink font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
-              The details on the NFT
-            </h3>
-            <div class="w-1/2 text-right pt-16">
-              <a href="https://docs.tableland.xyz" class="btn bg-black text-white" data-aos="fade-up">Join Whitelist</a>
-            </div>
-          </div>
-          <div class="flex text-left pt-16">
-            <div class="w-1/2 text-pink" data-aos="fade-up">
-              <h3 class="text-2xl">PRICE</h3>
-              <h2 class="text-4xl font-Orbitron">0.01 ETH</h2>
-              <br><br>
-              <h3 class="text-2xl">VALUE</h3>
-              <h2 class="text-4xl font-Orbitron">PLACEHOLDER</h2>
-            </div>
-            <div class="w-1/2 text-pink" data-aos="fade-up">
-              <h3 class="text-2xl">AVAILABLE</h3>
-              <h2 class="text-4xl font-Orbitron">1,001,101</h2>
-              <br><br>
-              <h3 class="text-2xl">VALUE</h3>
-              <h2 class="text-4xl font-Orbitron">PLACEHOLDER</h2>
-            </div>
-          </div>
-        </div>
+
         <div class="container px-6 md:px-9 lg:px-16 py-32">
           <div class="md:flex justify-center lg:justify-center">
             <h3 class="text-center text-pink font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
