@@ -26,6 +26,7 @@
           <li><a href="https://mirror.xyz/tableland.eth">Blog</a></li>
           <li><a href="https://discord.gg/hpd5WWn4Ys" target="_blank">Discord</a></li>
           <li><a href="https://docs.tableland.xyz">Docs</a></li>
+          <li><a href="/minting">Mint</a></li>
         </ul>
       </nav>
       <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36">
