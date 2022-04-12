@@ -199,6 +199,7 @@
 
               </div>
             </div>
+            <div class="fleet-break"></div>
           </section>
 
           <section class="guild-list">
