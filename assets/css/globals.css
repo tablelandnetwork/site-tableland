@@ -252,11 +252,19 @@ nav li a:hover {
 
 .showcase .btn {
   background: #6067EB;
-  color: #141034;
+  color: #fff;
 }
 
 footer {
   background-color: #141034;
+}
+
+/** cohort  **/
+.cohort {
+	background: left -250px / cover no-repeat url('~assets/img/cohort.png');
+  height: 125vh;
+  width: 100vw;
+  max-width: 1920px !important;
 }
 
 /** minting **/
@@ -285,6 +293,11 @@ footer {
   margin-top: -400px;
 }
 
+.info .vehicle img {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 .info video {
   border-radius: 50px;
   overflow: hidden;
@@ -309,7 +322,7 @@ footer {
   position: relative;
 	background: center / cover no-repeat url('~assets/img/break_5.svg');
 	height: 184px;
-  bottom: -60px;
+  bottom: -160px;
   -webkit-transform: scaleY(-1);
   transform: scaleY(-1);
 }
@@ -384,13 +397,11 @@ footer {
   margin-top: -150px;
 }
 
-.guild-break {
+.fleet-break {
   position: relative;
-	background: bottom / cover no-repeat url('~assets/img/break_purple2.svg');
-	height: 184px;
-  bottom: 0px;
-  -webkit-transform: scaleY(-1);
-  transform: scaleY(-1);
+	background: bottom / cover no-repeat url('~assets/img/fleet_break.svg');
+	height: 300px;
+  bottom: -60px;
 }
 
 .guild-list {
@@ -422,6 +433,18 @@ footer {
   border-radius: 20px;
   zoom: 0.8;
   border: 4px solid black;
+}
+
+.cohort-info {
+	background: left 200px / 100% no-repeat url('~assets/img/cohort2.png');
+  background-color: #c370aa;
+  height: auto;
+  width: 100vw;
+  max-width: 1920px !important;
+}
+
+.cohort-info .icon {
+  margin: auto;
 }
 
 /** id section  **/
