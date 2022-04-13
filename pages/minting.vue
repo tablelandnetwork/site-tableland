@@ -24,22 +24,41 @@
         </div>
         <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
           <li><a href="https://mirror.xyz/tableland.eth">Blog</a></li>
+          <li><a href="/cohort">Cohort</a></li>
+          <li><a href="/minting">Mint</a></li>
           <li><a href="https://discord.gg/hpd5WWn4Ys" target="_blank">Discord</a></li>
           <li><a href="https://docs.tableland.xyz">Docs</a></li>
           <li><a href="https://docs.tableland.xyz" class="btn bg-black text-white">Get started</a></li>
         </ul>
       </nav>
-      <div class="container px-48 flex items-center pt-20 lg:pt-20">
-        <div class="lg:w-2/3" data-aos="fade-up" style="margin: auto;">
-          <h1 class="text-white font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
-            Tableland Awaits
-          </h1>
-          <p class="text-white text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
-            Out beyond the megalopolis, where the broad boulevards of The Grid dissolve into dust and then yawn into great open source plains, you’ll find Tableland. The undeveloped frontier. Terabyte upon terabyte of space waiting to be written into history. It’s raw, uncoded, and simmering with endless opportunity – and incalculable peril. So climb into your Rig and hold onto your brain chips. If you play this one right, the possibilities are endless.
-          </p>
+      <div class="container px-48 flex pt-12 lg:pt-12">
+
+        <div class="lg:w-full px-12 pt-12" data-aos="fade-up">
+          <h1 data-aos="fade-up" class="font-Orbitron text-white w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">A generative 10K NFT with 1,043 handcrafted works of art</h1>
+          <div class="flex text-left">
+            <div class="w-1/3 " data-aos="fade-up">
+              <h3 class="text-2xl text-white">COUNTDOWN</h3>
+              <h2 class="text-4xl text-white font-Orbitron">5d:12h:18m</h2>
+              <br><br>
+              <h3 class="text-2xl text-white">PRICE</h3>
+              <h2 class="text-4xl text-white font-Orbitron">0.05 ETH</h2>
+            </div>
+            <div class="w-1/3" data-aos="fade-up">
+              <h3 class="text-2xl text-white">WHITELIST LOCK</h3>
+              <h2 class="text-4xl text-white font-Orbitron">05-30-22</h2>
+              <br><br>
+              <h3 class="text-2xl text-white">TOTAL SUPPLY</h3>
+              <h2 class="text-4xl text-white font-Orbitron">10,000</h2>
+            </div>
+            <div class="w-1/3" data-aos="fade-up">
+              <a href="https://docs.tableland.xyz" class="btn bg-black text-white" data-aos="fade-up">Join Discord</a>
+            </div>
+
           </div>
+
         </div>
-      </section>
+      </div>
+    </section>
 
       <!-- rig -->
       <section class="info" id="start">
@@ -59,6 +78,19 @@
               </div>
             </div>
             <div class="flex">
+              <div class="lg:w-1/2" data-aos="fade-up">
+                <h1 class="font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
+                  Tableland Awaits
+                </h1>
+                <p class="text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+                  Out beyond the megalopolis, where the broad boulevards of The Grid dissolve into dust and then yawn into great open source plains, you’ll find Tableland. The undeveloped frontier. Terabyte upon terabyte of space waiting to be written into history. It’s raw, uncoded, and simmering with endless opportunity – and incalculable peril. So climb into your Rig and hold onto your brain chips. If you play this one right, the possibilities are endless.
+                </p>
+              </div>
+              <div class="w-1/2 " data-aos="fade-up">
+                <img src="~assets/img/craft.png"/>
+              </div>
+            </div>
+            <div class="flex">
               <div class="w-1/2 px-12 py-32">
                 <video src="~assets/img/rig_piloting.mp4" autoplay loop muted ></video>
               </div>
@@ -73,9 +105,6 @@
                   Tableland Rigs are divided into eight mission specific Fleets . Each is engineered to navigate the harsh and unforgiving landscape of Tableland. Your Fleet is your new family and its customs, rituals, and alliances will guide and protect you.
                 </p>
               </div>
-            </div>
-            <div class="flex px-36 py-24">
-              <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-5xl text-center leading-tighter mb-4 lg:mb-10">A generative 10K NFT with 1,043 handcrafted works of art</h1>
             </div>
             <div class="flex py-12">
               <div class="w-1/2 px-12 py-0" >
@@ -229,7 +258,7 @@
                   </div>
                 </div>
                 </div>
-                <div class="w-2/3">
+                <div class="w-2/3 vehicle-right">
                   <div class="vehicle a-1 pt-48" data-aos="fade-up"><img src="~assets/img/airlight_2.png"/></div>
                   <div class="vehicle a-2 pt-12" data-aos="fade-up"><img src="~assets/img/airlight_3.png"/></div>
                   <div class="vehicle a-3 pt-14" data-aos="fade-up"><img src="~assets/img/airlight_4.png"/></div>
@@ -293,7 +322,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-2/3">
+                <div class="w-2/3 vehicle-right">
                   <div class="vehicle a-1 pt-48"><img src="~assets/img/hopper.png"/></div>
                   <div class="vehicle a-2 pt-12"><img src="~assets/img/hopper.png"/></div>
                   <div class="vehicle a-3 pt-14"><img src="~assets/img/hopper.png"/></div>
@@ -357,7 +386,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-2/3">
+                <div class="w-2/3 vehicle-right">
                   <div class="vehicle a-1 pt-48"><img src="~assets/img/sled.png"/></div>
                   <div class="vehicle a-2 pt-12"><img src="~assets/img/sled.png"/></div>
                   <div class="vehicle a-3 pt-14"><img src="~assets/img/sled.png"/></div>
@@ -422,7 +451,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-2/3">
+                <div class="w-2/3 vehicle-right">
                   <div class="vehicle a-1 pt-48"><img src="~assets/img/titan.png"/></div>
                   <div class="vehicle a-2 pt-12"><img src="~assets/img/titan.png"/></div>
                   <div class="vehicle a-3 pt-14"><img src="~assets/img/titan.png"/></div>

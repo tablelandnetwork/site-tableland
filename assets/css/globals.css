@@ -427,6 +427,10 @@ footer {
   float: left;
 }
 
+.vehicle-right .vehicle {
+  float: right;
+}
+
 .fleet-container {
   padding: 4em 5em;
   background-color: rgb(134 133 210 / 20%);

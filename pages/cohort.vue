@@ -22,6 +22,8 @@ co<template>
         </div>
         <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
           <li><a href="https://mirror.xyz/tableland.eth">Blog</a></li>
+          <li><a href="/cohort">Cohort</a></li>
+          <li><a href="/minting">Mint</a></li>
           <li><a href="https://discord.gg/hpd5WWn4Ys" target="_blank">Discord</a></li>
           <li><a href="https://docs.tableland.xyz">Docs</a></li>
           <li><a href="https://docs.tableland.xyz" class="btn bg-black text-white">Get started</a></li>
