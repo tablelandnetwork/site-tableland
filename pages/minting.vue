@@ -33,66 +33,72 @@
       </nav>
       <div class="container px-48 flex pt-12 lg:pt-12">
 
-        <div class="lg:w-full px-12 pt-12" data-aos="fade-up">
-          <h1 data-aos="fade-up" class="font-Orbitron text-white w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">A generative 10K NFT with 1,043 handcrafted works of art</h1>
-          <div class="flex text-left">
-            <div class="w-1/3 " data-aos="fade-up">
-              <h3 class="text-2xl text-white">COUNTDOWN</h3>
-              <h2 class="text-4xl text-white font-Orbitron">5d:12h:18m</h2>
-              <br><br>
-              <h3 class="text-2xl text-white">PRICE</h3>
-              <h2 class="text-4xl text-white font-Orbitron">0.05 ETH</h2>
-            </div>
-            <div class="w-1/3" data-aos="fade-up">
-              <h3 class="text-2xl text-white">WHITELIST LOCK</h3>
-              <h2 class="text-4xl text-white font-Orbitron">05-30-22</h2>
-              <br><br>
-              <h3 class="text-2xl text-white">TOTAL SUPPLY</h3>
-              <h2 class="text-4xl text-white font-Orbitron">10,000</h2>
-            </div>
-            <div class="w-1/3" data-aos="fade-up">
-              <a href="https://docs.tableland.xyz" class="btn bg-black text-white" data-aos="fade-up">Join Discord</a>
-            </div>
+        <div class="lg:w-full px-12 pb-32 pt-12" data-aos="fade-up">
 
+          <div class="flex">
+            <div class="lg:w-1/2" data-aos="fade-up">
+              <h1 class="text-white font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+                Tableland Awaits
+              </h1>
+              <p class="text-white text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                Out beyond the megalopolis, where the broad boulevards of The Grid dissolve into dust and then yawn into great open source plains, you’ll find Tableland. The undeveloped frontier. Terabyte upon terabyte of space waiting to be written into history. It’s raw, uncoded, and simmering with endless opportunity – and incalculable peril. So climb into your Rig and hold onto your brain chips. If you play this one right, the possibilities are endless.
+              </p>
+
+            </div>
+            <div class="lg:w-1/2 px-12 pt-4" data-aos="fade-up">
+
+              <h1 data-aos="fade-up" class="font-Orbitron text-white w-full h-auto text-3xl md:text-4xl leading-tighter mb-4 lg:mb-10">A generative 10K NFT with 1,043 handcrafted works of art</h1>
+              <div class="flex">
+                <div class="w-1/2 " data-aos="fade-up">
+                  <h3 class="text-2xl text-white" data-aos="fade-up">PRICE</h3>
+                  <h2 class="text-4xl text-white font-Orbitron" data-aos="fade-up">0.05 ETH</h2>
+                  <br><br>
+                  <h3 class="text-2xl text-white" data-aos="fade-up">TOTAL SUPPLY</h3>
+                  <h2 class="text-4xl text-white font-Orbitron" data-aos="fade-up">10,000</h2>
+
+                </div>
+                <div class="w-1/2">
+                  <h3 class="text-2xl text-white" data-aos="fade-up">WHITELIST LOCK</h3>
+                  <h2 class="text-4xl text-white font-Orbitron" data-aos="fade-up">05-30-22</h2>
+                  <br><br>
+                  <h3 class="text-2xl text-white" data-aos="fade-up">AVAILABLE IN</h3>
+                  <h2 class="text-4xl text-white font-Orbitron" data-aos="fade-up">5d12h5min</h2>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="w-full pt-12">
+                  <a href="https://docs.tableland.xyz" class="btn bg-black text-white" data-aos="fade-up">Join Discord</a>
+                </div>
+              </div>
+            </div>
           </div>
-
         </div>
       </div>
     </section>
 
       <!-- rig -->
       <section class="info" id="start">
-        <div class="info-break"></div>
           <div class="container px-16 ">
             <div class="flex">
-
-              <div class="w-full float-frame" >
+              <div class="animated-carousel w-full float-frame" >
                   <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_10.png"/></div>
-                  <div class="vehicle a-1 pt-48" data-aos="fade-up"><img src="~assets/img/veh_2.png"/></div>
-                  <div class="vehicle a-2 pt-12" data-aos="fade-up"><img src="~assets/img/veh_3.png"/></div>
-                  <div class="vehicle a-3 pt-24" data-aos="fade-up"><img src="~assets/img/veh_4.png"/></div>
-                  <div class="vehicle a-1 pt-14" data-aos="fade-up"><img src="~assets/img/veh_5.png"/></div>
-                  <div class="vehicle a-1 pt-48" style="margin-top: -250px;" data-aos="fade-up"><img src="~assets/img/veh_6.png"/></div>
-                  <div class="vehicle a-2 pt-32" style="margin-top: -220px;margin-left: 335px;zoom: 0.8;" data-aos="fade-up"><img src="~assets/img/veh_7.png"/></div>
-                  <div class="vehicle a-2 pt-32" style="margin-top: -160px;margin-left: 335px;" data-aos="fade-up"><img src="~assets/img/veh_9.png"/></div>
+                  <div class="vehicle pt-48" data-aos="fade-up"><img class="a-1" src="~assets/img/veh_2.png"/></div>
+                  <div class="vehicle pt-12" data-aos="fade-up"><img class="a-2" src="~assets/img/veh_3.png"/></div>
+                  <div class="vehicle pt-24" data-aos="fade-up"><img class="a-3" src="~assets/img/veh_4.png"/></div>
+                  <div class="vehicle pt-14" data-aos="fade-up"><img class="a-1" src="~assets/img/veh_5.png"/></div>
+                  <div class="vehicle pt-48" data-aos="fade-up"><img class="a-3" src="~assets/img/veh_6.png"/></div>
+                  <div class="vehicle pt-32" data-aos="fade-up"><img class="a-2" src="~assets/img/veh_7.png"/></div>
+                  <div class="vehicle pt-6" data-aos="fade-up"><img class="a-1" src="~assets/img/veh_9.png"/></div>
               </div>
             </div>
             <div class="flex">
-              <div class="lg:w-1/2" data-aos="fade-up">
-                <h1 class="font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
-                  Tableland Awaits
-                </h1>
-                <p class="text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
-                  Out beyond the megalopolis, where the broad boulevards of The Grid dissolve into dust and then yawn into great open source plains, you’ll find Tableland. The undeveloped frontier. Terabyte upon terabyte of space waiting to be written into history. It’s raw, uncoded, and simmering with endless opportunity – and incalculable peril. So climb into your Rig and hold onto your brain chips. If you play this one right, the possibilities are endless.
-                </p>
-              </div>
-              <div class="w-1/2 " data-aos="fade-up">
-                <img src="~assets/img/craft.png"/>
-              </div>
-            </div>
-            <div class="flex">
-              <div class="w-1/2 px-12 py-32">
-                <video src="~assets/img/rig_piloting.mp4" autoplay loop muted ></video>
+              <div class="w-1/2 px-12 py-0">
+                <div class="carousel">
+                	<div><img src="~assets/img/veh_2.png"/></div>
+                  <div><img src="~assets/img/veh_4.png"/></div>
+                  <div><img src="~assets/img/veh_6.png"/></div>
+                  <div><img src="~assets/img/veh_9.png"/></div>
+                </div>
               </div>
               <div class="w-1/2 px-12 py-32" >
                 <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-6xl  leading-tighter mb-4 lg:mb-10">

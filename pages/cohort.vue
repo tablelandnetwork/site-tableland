@@ -1,4 +1,4 @@
-co<template>
+<template>
   <div>
     <!-- Header -->
     <header class="bg-navbar" data-aos="fade-down" data-aos-anchor=".rig">
