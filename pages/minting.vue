@@ -61,7 +61,7 @@
                   <h2 class="lg:text-4xl text-2xl text-white font-Orbitron" data-aos="fade-up">05-30-22</h2>
                   <br><br>
                   <h3 class="lg:text-2xl text-xl text-white" data-aos="fade-up">AVAILABLE IN</h3>
-                  <h2 class="lg:text-4xl text-2xl text-white font-Orbitron" data-aos="fade-up"><countdown :time="2 * 24 * 60 * 60 * 1000"><template slot-scope="props">{{ props.days }}d:{{ props.hours }}h:{{ props.minutes }}m:{{ props.seconds }}s</template></countdown></h2>  
+                  <h2 class="lg:text-4xl text-2xl text-white font-Orbitron" data-aos="fade-up"><countdown :time="2 * 24 * 60 * 60 * 1000"><template slot-scope="props">{{ props.days }}d:{{ props.hours }}h:{{ props.minutes }}m:{{ props.seconds }}s</template></countdown></h2>
                 </div>
               </div>
               <div class="flex">
@@ -248,7 +248,7 @@
               <h1 class="font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
                 The Fleets
               </h1>
-              <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+              <p class="text-xl md:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
                 Were formed to give us each our purpose. Each one with its unique knowledge, tools, and practices. Your Guild is your new family and its customs, rituals, and alliances will guide and protect you.
               </p>
 
