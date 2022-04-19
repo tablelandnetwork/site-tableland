@@ -74,7 +74,7 @@
                   <div class="vehicle a-1 pt-14" data-aos="fade-up"><img src="~assets/img/veh_5.png"/></div>
                   <div class="vehicle a-1 pt-48" style="margin-top: -250px;" data-aos="fade-up"><img src="~assets/img/veh_6.png"/></div>
                   <div class="vehicle a-2 pt-32" style="margin-top: -220px;margin-left: 335px;zoom: 0.8;" data-aos="fade-up"><img src="~assets/img/veh_7.png"/></div>
-                  <div class="vehicle a-2 pt-32" style="margin-top: -220px;margin-left: 335px;" data-aos="fade-up"><img src="~assets/img/veh_9.png"/></div>
+                  <div class="vehicle a-2 pt-32" style="margin-top: -160px;margin-left: 335px;" data-aos="fade-up"><img src="~assets/img/veh_9.png"/></div>
               </div>
             </div>
             <div class="flex">
@@ -180,6 +180,26 @@
                     <li>• Access to bi-weekly protocol status updates from core Tableland team.</li>
                   </ul>
                 </p>
+              </div>
+            </div>
+            <div class="flex mb-48">
+
+              <div class="w-1/2 px-12 py-12" >
+                <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-6xl  leading-tighter mb-4 lg:mb-10">
+                  Rig Badges, powered by POAP
+                </h1>
+                <p class="text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                  Rig Badges are where the fun begins. Earners of Tableland POAP can alter the state of their Rig by layering Badges, leaving their mark on the token forever. This experience is enabled by Tableland’s unique blend of trait mutability governed by token-based rules. Use SQL to control which badges are visible in a particular context or world.
+                </p>
+                <p class="text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                  In Tableland, this kind of integration can be built into any NFT project using existing POAP or any other existing NFT or fungible token. The possibilities are endless.
+                </p>
+                <p class="text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                  Badges are just the beginning—we also have some post-launch enhancements for Rigs, including the ability to pilot your Rig and unlock animation.
+                </p>
+              </div>
+              <div class="w-1/2 px-12 py-32">
+                <img src="~assets/img/poap.png" />
               </div>
             </div>
           </div>
@@ -497,7 +517,7 @@
 
         <div class="container px-6 md:px-9 lg:px-16 py-32">
           <div class="md:flex justify-center lg:justify-center">
-            <h3 class="text-center text-white font-Orbitron text-4xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+            <h3 class="text-center text-white font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
             Frequenty Asked Questions
             </h3>
           </div>
