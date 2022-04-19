@@ -7,7 +7,7 @@
         <div class="py-4">
           <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
         </div>
-        <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-24 uppercase ml-3">
+        <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
           <li><a href="https://mirror.xyz/tableland.eth">Blog</a></li>
           <li><a href="/cohort">Cohort</a></li>
           <li><a href="/minting">Mint</a></li>
