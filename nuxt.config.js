@@ -45,6 +45,9 @@ export default {
     {
       src: "~/plugins/locomotiveScroll.js",
       mode: "client"
+    },
+    {
+      src: "~/plugins/countdown.js",
     }
   ],
 
