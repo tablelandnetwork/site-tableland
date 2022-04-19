@@ -7,9 +7,8 @@
           <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
         </div>
         <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
-          <li><a href="#start">The NFT</a></li>
+          <li><a href="#start">Rigs</a></li>
           <li><a href="#fleets">Fleets</a></li>
-          <li><a href="#rig">Rigs</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#whitelist" class="btn bg-black text-white">Join Discord</a></li>
         </ul>
