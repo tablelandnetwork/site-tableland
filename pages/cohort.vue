@@ -9,7 +9,7 @@ co<template>
         <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
           <li><a href="#rig">About</a></li>
           <li><a href="#faq">Why?</a></li>
-          <li><a href="#whitelist" class="btn bg-black text-white">Apply Noww</a></li>
+          <li><a href="#whitelist" class="btn bg-black text-white">Apply Now</a></li>
         </ul>
       </nav>
     </header>
@@ -100,17 +100,17 @@ co<template>
                 </div>
                 <div class="flex py-12 pb-12 text-center text-white">
                   <div class="w-1/3 px-12 py-0">
-                    <img class="icon py-12" src="~assets/img/wrench.png" data-aos="fade-up"/>
+                    <img class="icon py-12" src="~assets/img/wrench2.png" data-aos="fade-up"/>
                     <p class="font-Orbitron text-3xl" data-aos="fade-up">BUILDER COHORT ONBOARDING</p><br>
                     <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">Community is at the heart of Tableland. We’re excited to launch a developer mentoring and onboarding program. These cohorts will run seasonally. The summer session will be starting after the Rigs launch in early June.</p>
                   </div>
                   <div class="w-1/3 px-12 py-0">
-                    <img class="icon py-12" src="~assets/img/chip.png" data-aos="fade-up"/>
+                    <img class="icon py-12" src="~assets/img/chip2.png" data-aos="fade-up"/>
                     <p class="font-Orbitron text-3xl" data-aos="fade-up">BUILDER ACCESS TO TESTNET</p><br>
                     <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">We are aiming for a high-touch onboarding experience. Rigs are the key to testnet. After earning enough POAP to claim a Rig, cohort members will be able to join owner channels in Tableland Discord and start building.</p>
                   </div>
                   <div class="w-1/3 px-12 py-0">
-                    <img class="icon py-12 " src="~assets/img/match.png" data-aos="fade-up"/>
+                    <img class="icon py-12 " src="~assets/img/match2.png" data-aos="fade-up"/>
                     <p class="font-Orbitron text-3xl" data-aos="fade-up">EXCLUSIVE ACCESS TO PROGRAMS</p><br>
                     <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
                       <ul>
@@ -124,17 +124,17 @@ co<template>
                 </div>
                 <div class="flex py-12 pb-12 text-center text-white">
                   <div class="w-1/3 px-12 py-0">
-                    <img class="icon py-12" src="~assets/img/wrench.png" data-aos="fade-up"/>
+                    <img class="icon py-12" src="~assets/img/wrench2.png" data-aos="fade-up"/>
                     <p class="font-Orbitron text-3xl" data-aos="fade-up">BUILDER COHORT ONBOARDING</p><br>
                     <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">Community is at the heart of Tableland. We’re excited to launch a developer mentoring and onboarding program. These cohorts will run seasonally. The summer session will be starting after the Rigs launch in early June.</p>
                   </div>
                   <div class="w-1/3 px-12 py-0">
-                    <img class="icon py-12" src="~assets/img/chip.png" data-aos="fade-up"/>
+                    <img class="icon py-12" src="~assets/img/chip2.png" data-aos="fade-up"/>
                     <p class="font-Orbitron text-3xl" data-aos="fade-up">BUILDER ACCESS TO TESTNET</p><br>
                     <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">We are aiming for a high-touch onboarding experience. Rigs are the key to testnet. After earning enough POAP to claim a Rig, cohort members will be able to join owner channels in Tableland Discord and start building.</p>
                   </div>
                   <div class="w-1/3 px-12 py-0">
-                    <img class="icon py-12 " src="~assets/img/match.png" data-aos="fade-up"/>
+                    <img class="icon py-12 " src="~assets/img/match2.png" data-aos="fade-up"/>
                     <p class="font-Orbitron text-3xl" data-aos="fade-up">EXCLUSIVE ACCESS TO PROGRAMS</p><br>
                     <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
                       <ul>
@@ -153,6 +153,11 @@ co<template>
       <section class="md:block showcase py-32 relative">
         <div class="container px-24 md:px-32 lg:px-48">
           <div class="text-center">
+            <div class="flex">
+              <div class="w-full px-0 py-24" >
+                <img src="~assets/img/timeline.png" style="margin:auto"/>
+              </div>
+            </div>
             <p class="font-Orbitron text-pink text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10">We’re building a cohort based guild of pioneering builders.</p>
             <p class="font-Orbitron text-pink text-2xl md:text-2xl lg:text-3xl md:leading-normal lg:leading-normal font-light mb-10">If you’re ready to explore the frontiers together</p>
             <ButtonLink href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f">Apply Now</ButtonLink>
