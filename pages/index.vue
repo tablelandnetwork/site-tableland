@@ -45,13 +45,19 @@
           <div class="hero-btn hidden md:inline-block text-center md:text-left mb-18 lg:mb-48" data-aos="fade-up">
             <ButtonLink href="https://docs.tableland.xyz">Get started</ButtonLink>
           </div>
-          <div class="md:hidden text-center md:text-left">
-            <ButtonLink href="https://discord.gg/hpd5WWn4Ys">Discord</ButtonLink>
-          </div>
-          <p class="hidden md:inline-block text-2xl md:text-3xl lg:text-4.25xl leading-snug md:leading-snug font-medium" data-aos="fade-up">
+          <p class="hidden text-2xl md:text-3xl lg:text-4.25xl leading-snug md:leading-snug font-medium" data-aos="fade-up">
             Use familiar SQL tables to read and write dynamic NFT metadata or application
             data–all orchestrated by token networks like Ethereum.
           </p>
+          <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+            Choose your <span class="font-black">Rig</span>
+          </h1>
+          <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+            Your Rig is your custom machine. There are none that are like it, and this one is yours. It’s a purpose-built code-based machine and your key to Tableland.
+          </p>
+          <div class="hero-btn hidden md:inline-block text-center md:text-left mb-18 lg:mb-48" data-aos="fade-up">
+            <ButtonLink href="/minting">Learn more</ButtonLink>
+          </div>
         </div>
       </div>
     </section>
@@ -87,7 +93,7 @@
       <div class="garage-break"></div>
       <div class="container px-6 md:px-9 lg:px-16 flex pt-10 xl:pt-14">
         <div class="lg:w-2/3 xl:w-1/2">
-          <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+          <!-- <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
             In Tableland, we speak SQL
           </h3>
           <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2" data-aos="fade-up">
@@ -99,7 +105,16 @@
           </p>
           <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light" data-aos="fade-up">
             3–Easy as pie, right?
+          </p> -->
+          <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+            Learn, connect, and build on the frontiers of the Web.
+          </h3>
+          <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2" data-aos="fade-up">
+          Join our summer cohort for access to exclusive mentorship, hackathons, and small group learning on the cutting edge of the open web.
           </p>
+          <div class="text-center md:text-left" data-aos="fade-up">
+            <ButtonLink href="/cohort">Learn More</ButtonLink>
+          </div>
         </div>
       </div>
     </section>
