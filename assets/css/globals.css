@@ -118,6 +118,13 @@ nav li a:hover {
   }
 }
 
+
+@media (max-width: 1480px) {
+  .guild-list .vehicle {
+   max-width: 250px!important;
+  }
+}
+
 @media (min-width: 1640px) {
   .hero-btn {
     margin-bottom: 32rem !important;
@@ -401,7 +408,7 @@ footer {
   position: relative;
 	background: bottom / cover no-repeat url('~assets/img/fleet_break.svg');
 	height: 300px;
-  bottom: -60px;
+  bottom: 0px;
 }
 
 .guild-list {
