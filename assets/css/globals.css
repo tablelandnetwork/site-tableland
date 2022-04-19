@@ -419,6 +419,11 @@ footer {
   bottom: 0px;
 }
 
+.guild-list .vehicle {
+  margin: 0px;
+  max-width: 350px;
+}
+
 .vehicle {
   transform: translatey(0px);
   animation: float 10s ease-in-out infinite;

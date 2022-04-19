@@ -2,7 +2,7 @@
   <div>
 
     <!-- Header -->
-    <header class="bg-navbar" data-aos="fade-down" data-aos-anchor=".leading-snug">
+    <header class="bg-navbar" data-aos="fade-down" data-aos-anchor=".choose">
       <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2">
         <div class="py-4">
           <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
@@ -49,7 +49,7 @@
             Use familiar SQL tables to read and write dynamic NFT metadata or application
             data–all orchestrated by token networks like Ethereum.
           </p>
-          <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+          <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10 choose" data-aos="fade-up">
             Choose your <span class="font-black">Rig</span>
           </h1>
           <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">

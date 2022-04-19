@@ -259,12 +259,6 @@
 
           <section class="guild-list">
             <!-- Airlights -->
-            <!-- <div class="container grid grid-cols-4 gap-4 pt-48 px-36">
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/airlight.png"/></div>
-              <div class="vehicle a-1 pt-48" data-aos="fade-up"><img src="~assets/img/airlight_2.png"/></div>
-              <div class="vehicle a-2 pt-12" data-aos="fade-up"><img src="~assets/img/airlight_3.png"/></div>
-              <div class="vehicle a-3 pt-24" data-aos="fade-up"><img src="~assets/img/airlight_4.png"/></div>
-            </div> -->
             <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
               <div class="fleet-container lg:w-2/3" data-aos="fade-up">
                 <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
@@ -285,23 +279,18 @@
                 </div>
                 </div>
                 <div class="w-2/3 vehicle-right">
-                  <div class="vehicle a-1 pt-48" data-aos="fade-up"><img src="~assets/img/airlight_2.png"/></div>
-                  <div class="vehicle a-2 pt-12" data-aos="fade-up"><img src="~assets/img/airlight_3.png"/></div>
-                  <div class="vehicle a-3 pt-14" data-aos="fade-up"><img src="~assets/img/airlight_4.png"/></div>
+                  <div class="vehicle a-1 pt-48" data-aos="fade-up"><img src="~assets/img/air_1.png"/></div>
+                  <div class="vehicle a-2 pt-12" data-aos="fade-up"><img src="~assets/img/air_2.png"/></div>
+                  <div class="vehicle a-3 pt-4" data-aos="fade-up"><img src="~assets/img/air_3.png"/></div>
                 </div>
               </div>
               <!-- Foils -->
-              <!-- <div class="container grid grid-cols-4 gap-4 pt-48 px-36" data-aos="fade-up">
-                <div class="vehicle"><img src="~assets/img/foil.png"/></div>
-                <div class="vehicle a-1 pt-48"><img src="~assets/img/foil.png"/></div>
-                <div class="vehicle a-2 pt-12"><img src="~assets/img/foil.png"/></div>
-                <div class="vehicle a-3 pt-24"><img src="~assets/img/foil.png"/></div>
-              </div> -->
+
               <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
                 <div class="w-2/3">
-                  <div class="vehicle a-1 pt-48"><img src="~assets/img/foil.png"/></div>
-                  <div class="vehicle a-2 pt-12"><img src="~assets/img/foil.png"/></div>
-                  <div class="vehicle a-3 pt-14"><img src="~assets/img/foil.png"/></div>
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/foil_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/foil_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/foil_3.png"/></div>
                 </div>
                 <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
@@ -323,12 +312,6 @@
                 </div>
               </div>
               <!-- Hopper -->
-              <!-- <div class="container grid grid-cols-4 gap-4 pt-48 px-36" data-aos="fade-up">
-                <div class="vehicle"><img src="~assets/img/hopper.png"/></div>
-                <div class="vehicle a-1 pt-48"><img src="~assets/img/hopper.png"/></div>
-                <div class="vehicle a-2 pt-12"><img src="~assets/img/hopper.png"/></div>
-                <div class="vehicle a-3 pt-24"><img src="~assets/img/hopper.png"/></div>
-              </div> -->
               <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
                 <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
@@ -349,23 +332,17 @@
                   </div>
                 </div>
                 <div class="w-2/3 vehicle-right">
-                  <div class="vehicle a-1 pt-48"><img src="~assets/img/hopper.png"/></div>
-                  <div class="vehicle a-2 pt-12"><img src="~assets/img/hopper.png"/></div>
-                  <div class="vehicle a-3 pt-14"><img src="~assets/img/hopper.png"/></div>
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/hopper_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/hopper_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/hopper_3.png"/></div>
                 </div>
               </div>
               <!-- Tracer -->
-              <!-- <div class="container grid grid-cols-4 gap-4 pt-48 px-36" data-aos="fade-up">
-                <div class="vehicle"><img src="~assets/img/tracer.png"/></div>
-                <div class="vehicle a-1 pt-48"><img src="~assets/img/tracer.png"/></div>
-                <div class="vehicle a-2 pt-12"><img src="~assets/img/tracer.png"/></div>
-                <div class="vehicle a-3 pt-24"><img src="~assets/img/tracer.png"/></div>
-              </div> -->
               <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
                 <div class="w-2/3">
-                  <div class="vehicle a-1 pt-48"><img src="~assets/img/tracer.png"/></div>
-                  <div class="vehicle a-2 pt-12"><img src="~assets/img/tracer.png"/></div>
-                  <div class="vehicle a-3 pt-14"><img src="~assets/img/tracer.png"/></div>
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/tracer_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/tracer_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/tracer_3.png"/></div>
                 </div>
                 <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
@@ -387,12 +364,6 @@
                 </div>
               </div>
               <!-- Sleds -->
-              <!-- <div class="container grid grid-cols-4 gap-4 pt-48 px-36" data-aos="fade-up">
-                <div class="vehicle"><img src="~assets/img/sled.png"/></div>
-                <div class="vehicle a-1 pt-48"><img src="~assets/img/sled.png"/></div>
-                <div class="vehicle a-2 pt-12"><img src="~assets/img/sled.png"/></div>
-                <div class="vehicle a-3 pt-24"><img src="~assets/img/sled.png"/></div>
-              </div> -->
               <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
                 <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
@@ -413,23 +384,17 @@
                   </div>
                 </div>
                 <div class="w-2/3 vehicle-right">
-                  <div class="vehicle a-1 pt-48"><img src="~assets/img/sled.png"/></div>
-                  <div class="vehicle a-2 pt-12"><img src="~assets/img/sled.png"/></div>
-                  <div class="vehicle a-3 pt-14"><img src="~assets/img/sled.png"/></div>
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/sled_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/sled_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/sled_3.png"/></div>
                 </div>
               </div>
               <!-- Edgeriders -->
-              <!-- <div class="container grid grid-cols-4 gap-4 pt-48 px-36" data-aos="fade-up">
-                <div class="vehicle"><img src="~assets/img/edgerider.png"/></div>
-                <div class="vehicle a-1 pt-48"><img src="~assets/img/edgerider.png"/></div>
-                <div class="vehicle a-2 pt-12"><img src="~assets/img/edgerider.png"/></div>
-                <div class="vehicle a-3 pt-24"><img src="~assets/img/edgerider.png"/></div>
-              </div> -->
               <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
                 <div class="w-2/3">
-                  <div class="vehicle a-1 pt-48"><img src="~assets/img/edgerider.png"/></div>
-                  <div class="vehicle a-2 pt-12"><img src="~assets/img/edgerider.png"/></div>
-                  <div class="vehicle a-3 pt-14"><img src="~assets/img/edgerider.png"/></div>
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/edge_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/edge_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/edge_3.png"/></div>
                 </div>
                 <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
@@ -452,12 +417,6 @@
               </div>
 
               <!-- Titans -->
-              <!-- <div class="container grid grid-cols-4 gap-4 pt-48 px-36" data-aos="fade-up">
-                <div class="vehicle"><img src="~assets/img/titan.png"/></div>
-                <div class="vehicle a-1 pt-48"><img src="~assets/img/titan.png"/></div>
-                <div class="vehicle a-2 pt-12"><img src="~assets/img/titan.png"/></div>
-                <div class="vehicle a-3 pt-24"><img src="~assets/img/titan.png"/></div>
-              </div> -->
               <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
                 <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
@@ -478,23 +437,18 @@
                   </div>
                 </div>
                 <div class="w-2/3 vehicle-right">
-                  <div class="vehicle a-1 pt-48"><img src="~assets/img/titan.png"/></div>
-                  <div class="vehicle a-2 pt-12"><img src="~assets/img/titan.png"/></div>
-                  <div class="vehicle a-3 pt-14"><img src="~assets/img/titan.png"/></div>
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/titan_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/titan_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/titan_3.png"/></div>
                 </div>
               </div>
-              <!-- Tumblrs -->
-              <!-- <div class="container grid grid-cols-4 gap-4 pt-48 px-36" data-aos="fade-up">
-                <div class="vehicle"><img src="~assets/img/tumbler.png"/></div>
-                <div class="vehicle a-1 pt-48"><img src="~assets/img/tumbler.png"/></div>
-                <div class="vehicle a-2 pt-12"><img src="~assets/img/tumbler.png"/></div>
-                <div class="vehicle a-3 pt-24"><img src="~assets/img/tumbler.png"/></div>
-              </div> -->
+              <!-- Tumblers -->
+
               <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
                 <div class="w-2/3">
-                  <div class="vehicle a-1 pt-48"><img src="~assets/img/tumbler.png"/></div>
-                  <div class="vehicle a-2 pt-12"><img src="~assets/img/tumbler.png"/></div>
-                  <div class="vehicle a-3 pt-14"><img src="~assets/img/tumbler.png"/></div>
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/tumbler_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/tumbler_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/tumbler_3.png"/></div>
                 </div>
                 <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
