@@ -90,23 +90,23 @@
                 </div>
               </div>
               <div class="lg:w-1/2 lg:px-12 py-6 md:py-24 lg:py-32" >
-                <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-6xl choose leading-tighter mb-4 lg:mb-10">
+                <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-4xl lg:text-6xl choose leading-tighter mb-4 lg:mb-10">
                   Choose a RIG
                 </h1>
-                <p class="text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
                   Your Rig is your custom machine. There are none that are like it, and this one is yours. It’s a purpose-built code-based machine and your key to Tableland. Each Rig is minted from a set of modular code blocks with unique attributes to achieve specific tasks. And what you’ll do with it is totally up to you
                 </p>
-                <p class="text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
                   Tableland Rigs are divided into eight mission specific Fleets . Each is engineered to navigate the harsh and unforgiving landscape of Tableland. Your Fleet is your new family and its customs, rituals, and alliances will guide and protect you.
                 </p>
               </div>
             </div>
             <div class="lg:flex lg:py-12">
               <div class="lg:w-1/2 w-full lg:px-12 py-0" >
-                <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-6xl leading-tighter mb-4 lg:mb-10">
+                <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-4xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
                   Congrats, it's a MATCH!
                 </h1>
-                <p data-aos="fade-up" class="text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+                <p data-aos="fade-up" class="lg:text-2xl text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
                   Each Rig is minted using randomization subroutines to ensure complete uniqueness. Rigs are born from a parts and Mods ledger called the Rarity Table. Every so often the components of a Rig come together in an infinitesimally elusive set called a Match Rig . If you got one, consider yourself lucky. They’re exceedingly rare and staggeringly valuable. If you have a Match, be prepared to guard it with your life.
                 </p>
               <div class="flex">
@@ -131,8 +131,7 @@
                 </div>
               </div>
               <div class="lg:w-1/2 w-full mt-48 part-frame">
-
-                <img class="part part_1" src="~assets/img/part_1.png" data-aos="fade-up"/>
+                <img class="part part_1 hidden sm:block" src="~assets/img/part_1.png" data-aos="fade-up"/>
                 <img class="part a-2 part_2" src="~assets/img/part_2.png" data-aos="fade-up"/>
                 <img class="part a-1 part_3" src="~assets/img/part_3.png" data-aos="fade-up"/>
                 <img class="part a-3 part_4" src="~assets/img/part_4.png" data-aos="fade-up"/>
@@ -140,31 +139,31 @@
                 <img class="part light_2" src="~assets/img/light_2.png" data-aos="fade-up"/>
               </div>
             </div>
-            <div class="flex py-12">
+            <div class="lg:flex py-12">
               <div class="w-1/2 mt-16" >
                 <img src="~assets/img/token.png" data-aos="fade-up" />
               </div>
-              <div class="w-1/2 px-12 py-36" >
-                <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-6xl leading-tighter mb-4 lg:mb-10">
+              <div class="lg:w-1/2 w-full lg:px-12 lg:py-36" >
+                <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-4xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
                   Rigs are packed with utility and rich interaction.
                 </h1>
-                <p data-aos="fade-up" class="text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
+                <p data-aos="fade-up" class="lg:text-2xl text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
                   Each Rig is minted using randomization subroutines to ensure complete uniqueness. Rigs are born from a parts and Mods ledger called the Rarity Table. Every so often the components of a Rig come together in a infinitesimally elusive set called a Match Rig. If you got one, consider yourself lucky. They’re exceedingly rare and staggerlying valuable. If you have a Match, be prepared to guard it with your life.
                 </p>
               </div>
             </div>
-            <div class="flex py-12 pb-48 text-left">
-              <div class="w-1/3 px-12 py-0">
+            <div class="lg:flex py-12 pb-48 text-left">
+              <div class="lg:w-1/3 lg:px-12 w-full py-0">
                 <img class="icon py-12" src="~assets/img/wrench.png" data-aos="fade-up"/>
                 <p class="font-Orbitron text-3xl" data-aos="fade-up">BUILDER COHORT ONBOARDING</p><br>
                 <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">Community is at the heart of Tableland. We’re excited to launch a developer mentoring and onboarding program. These cohorts will run seasonally. The summer session will be starting after the Rigs launch in early June.</p>
               </div>
-              <div class="w-1/3 px-12 py-0">
+              <div class="lg:w-1/3 lg:px-12 w-full py-0">
                 <img class="icon py-12" src="~assets/img/chip.png" data-aos="fade-up"/>
                 <p class="font-Orbitron text-3xl" data-aos="fade-up">BUILDER ACCESS TO TESTNET</p><br>
                 <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">We are aiming for a high-touch onboarding experience. Rigs are the key to testnet. After earning enough POAP to claim a Rig, cohort members will be able to join owner channels in Tableland Discord and start building.</p>
               </div>
-              <div class="w-1/3 px-12 py-0">
+              <div class="lg:w-1/3 lg:px-12 w-full py-0">
                 <img class="icon py-12 " src="~assets/img/match.png" data-aos="fade-up"/>
                 <p class="font-Orbitron text-3xl" data-aos="fade-up">EXCLUSIVE ACCESS TO PROGRAMS</p><br>
                 <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
@@ -177,23 +176,23 @@
                 </p>
               </div>
             </div>
-            <div class="flex mb-48">
+            <div class="lg:flex mb-48">
 
-              <div class="w-1/2 px-12 py-12" >
-                <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-6xl  leading-tighter mb-4 lg:mb-10">
+              <div class="lg:w-1/2 lg:px-12 lg:py-12 w-full" >
+                <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-4xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
                   Rig Badges, powered by POAP
                 </h1>
-                <p class="text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
                   Rig Badges are where the fun begins. Earners of Tableland POAP can alter the state of their Rig by layering Badges, leaving their mark on the token forever. This experience is enabled by Tableland’s unique blend of trait mutability governed by token-based rules. Use SQL to control which badges are visible in a particular context or world.
                 </p>
-                <p class="text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
                   In Tableland, this kind of integration can be built into any NFT project using existing POAP or any other existing NFT or fungible token. The possibilities are endless.
                 </p>
-                <p class="text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
                   Badges are just the beginning—we also have some post-launch enhancements for Rigs, including the ability to pilot your Rig and unlock animation.
                 </p>
               </div>
-              <div class="w-1/2 px-12 py-32">
+              <div class="lg:w-1/2 lg:px-12 lg:py-32 w-full">
                 <img src="~assets/img/poap.png" />
               </div>
             </div>
@@ -202,12 +201,12 @@
 
       <section class="whitelist">
         <div class="whitelist-break"></div>
-        <div class="container px-6 md:px-9 lg:px-16 pt-0 pb-48 px-32 max-w-7xl" id="whitelist">
-          <div class="flex text-right">
-            <h3 class="w-1/2 text-left  font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+        <div class="container px-12 lg:px-16 pt-0 pb-48 lg:px-32 max-w-7xl" id="whitelist">
+          <div class="lg:flex lg:text-right">
+            <h3 class="lg:w-1/2 w-full text-left  font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
               What are you waiting for?
             </h3>
-            <div class="w-1/2 text-right pt-16">
+            <div class="lg:w-1/2 w-full lg:text-right pt-16">
               <a href="https://docs.tableland.xyz" class="btn bg-black text-white" data-aos="fade-up">Join Discord</a>
             </div>
           </div>
@@ -232,7 +231,7 @@
 
         <!-- guild -->
         <section class="guild" id="fleets">
-          <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36">
+          <div class="container px-12 lg:px-16 flex items-center pt-24 lg:pt-36">
             <div class="lg:w-2/3" data-aos="fade-up">
               <h1 class="font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
                 The Fleets
@@ -248,8 +247,13 @@
 
           <section class="guild-list">
             <!-- Airlights -->
-            <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
-              <div class="fleet-container lg:w-2/3" data-aos="fade-up">
+            <div class="container px-6 md:px-9 lg:px-16 lg:flex items-center pt-0 lg:pt-0">
+              <div class="lg:w-2/3 w-full">
+                <div class="vehicle a-1 pt-48" data-aos="fade-up"><img src="~assets/img/air_1.png"/></div>
+                <div class="vehicle a-2 pt-12" data-aos="fade-up"><img src="~assets/img/air_2.png"/></div>
+                <div class="vehicle a-3 pt-4" data-aos="fade-up"><img src="~assets/img/air_3.png"/></div>
+              </div>
+              <div class="fleet-container w-full lg:w-2/3" data-aos="fade-up">
                 <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                   Airelights
                 </h2>
@@ -267,21 +271,11 @@
                   </div>
                 </div>
                 </div>
-                <div class="w-2/3 vehicle-right">
-                  <div class="vehicle a-1 pt-48" data-aos="fade-up"><img src="~assets/img/air_1.png"/></div>
-                  <div class="vehicle a-2 pt-12" data-aos="fade-up"><img src="~assets/img/air_2.png"/></div>
-                  <div class="vehicle a-3 pt-4" data-aos="fade-up"><img src="~assets/img/air_3.png"/></div>
-                </div>
               </div>
               <!-- Foils -->
 
-              <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
-                <div class="w-2/3">
-                  <div class="vehicle a-1 pt-48"><img src="~assets/img/foil_1.png"/></div>
-                  <div class="vehicle a-2 pt-12"><img src="~assets/img/foil_2.png"/></div>
-                  <div class="vehicle a-3 pt-4"><img src="~assets/img/foil_3.png"/></div>
-                </div>
-                <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
+              <div class="container px-6 md:px-9 lg:px-16 lg:flex items-center pt-16 lg:pt-0">
+                <div class="fleet-container w-full lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Foils
                   </h2>
@@ -299,10 +293,20 @@
                     </div>
                   </div>
                 </div>
+                <div class="lg:w-2/3 lg-full vehicle-right">
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/foil_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/foil_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/foil_3.png"/></div>
+                </div>
               </div>
               <!-- Hopper -->
-              <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
-                <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
+              <div class="container px-6 md:px-9 lg:px-16 lg:flex items-center pt-16 lg:pt-0">
+                <div class="lg:w-2/3 w-full">
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/hopper_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/hopper_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/hopper_3.png"/></div>
+                </div>
+                <div class="fleet-container w-full lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Hoppers
                   </h2>
@@ -320,20 +324,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-2/3 vehicle-right">
-                  <div class="vehicle a-1 pt-48"><img src="~assets/img/hopper_1.png"/></div>
-                  <div class="vehicle a-2 pt-12"><img src="~assets/img/hopper_2.png"/></div>
-                  <div class="vehicle a-3 pt-4"><img src="~assets/img/hopper_3.png"/></div>
-                </div>
               </div>
               <!-- Tracer -->
-              <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
-                <div class="w-2/3">
-                  <div class="vehicle a-1 pt-48"><img src="~assets/img/tracer_1.png"/></div>
-                  <div class="vehicle a-2 pt-12"><img src="~assets/img/tracer_2.png"/></div>
-                  <div class="vehicle a-3 pt-4"><img src="~assets/img/tracer_3.png"/></div>
-                </div>
-                <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
+              <div class="container px-6 md:px-9 lg:px-16 lg:flex items-center pt-16 lg:pt-0">
+                <div class="fleet-container w-full lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Tracers
                   </h2>
@@ -351,9 +345,19 @@
                     </div>
                   </div>
                 </div>
+                <div class="lg:w-2/3 w-full vehicle-right">
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/tracer_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/tracer_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/tracer_3.png"/></div>
+                </div>
               </div>
               <!-- Sleds -->
               <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
+                <div class="w-2/3">
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/sled_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/sled_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/sled_3.png"/></div>
+                </div>
                 <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Sleds
@@ -372,19 +376,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-2/3 vehicle-right">
-                  <div class="vehicle a-1 pt-48"><img src="~assets/img/sled_1.png"/></div>
-                  <div class="vehicle a-2 pt-12"><img src="~assets/img/sled_2.png"/></div>
-                  <div class="vehicle a-3 pt-4"><img src="~assets/img/sled_3.png"/></div>
-                </div>
+
               </div>
               <!-- Edgeriders -->
               <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
-                <div class="w-2/3">
-                  <div class="vehicle a-1 pt-48"><img src="~assets/img/edge_1.png"/></div>
-                  <div class="vehicle a-2 pt-12"><img src="~assets/img/edge_2.png"/></div>
-                  <div class="vehicle a-3 pt-4"><img src="~assets/img/edge_3.png"/></div>
-                </div>
                 <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Edgeriders
@@ -403,10 +398,20 @@
                     </div>
                   </div>
                 </div>
+                <div class="w-2/3 vehicle-right">
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/edge_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/edge_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/edge_3.png"/></div>
+                </div>
               </div>
 
               <!-- Titans -->
               <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
+                <div class="w-2/3">
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/titan_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/titan_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/titan_3.png"/></div>
+                </div>
                 <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Titans
@@ -425,20 +430,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-2/3 vehicle-right">
-                  <div class="vehicle a-1 pt-48"><img src="~assets/img/titan_1.png"/></div>
-                  <div class="vehicle a-2 pt-12"><img src="~assets/img/titan_2.png"/></div>
-                  <div class="vehicle a-3 pt-4"><img src="~assets/img/titan_3.png"/></div>
-                </div>
               </div>
               <!-- Tumblers -->
 
               <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
-                <div class="w-2/3">
-                  <div class="vehicle a-1 pt-48"><img src="~assets/img/tumbler_1.png"/></div>
-                  <div class="vehicle a-2 pt-12"><img src="~assets/img/tumbler_2.png"/></div>
-                  <div class="vehicle a-3 pt-4"><img src="~assets/img/tumbler_3.png"/></div>
-                </div>
                 <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Tumblers
@@ -456,6 +451,11 @@
                       <h2 class="text-4xl font-Orbitron">27</h2>
                     </div>
                   </div>
+                </div>
+                <div class="w-2/3 vehicle-right">
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/tumbler_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/tumbler_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/tumbler_3.png"/></div>
                 </div>
               </div>
             <div class="guild-list-break"></div>

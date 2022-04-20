@@ -1,6 +1,6 @@
 <template>
   <div
-    class="text-white nav-bar" :class="{ 'absolute w-full h-screen top-0 left-0': menu }">
+    class="nav-bar" :class="{ 'absolute w-full h-screen top-0 left-0': menu }">
     <div class="sm:mx-auto flex flex-wrap">
 
       <!-- Desktop nav -->

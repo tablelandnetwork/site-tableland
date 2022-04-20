@@ -2,6 +2,8 @@
   <div>
 
     <!-- Header -->
+    <HeaderNav></HeaderNav>
+
     <header class="bg-navbar" data-aos="fade-down" data-aos-anchor=".choose">
       <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2">
         <div class="py-4">
@@ -18,21 +20,9 @@
       </nav>
     </header>
 
+
     <!-- hero -->
     <section class="hero">
-      <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2 pt-10">
-        <div class="py-4">
-          <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
-        </div>
-        <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
-          <li><a href="https://mirror.xyz/tableland.eth">Blog</a></li>
-          <li><a href="/cohort">Cohort</a></li>
-          <li><a href="/minting">Mint</a></li>
-          <li><a href="https://discord.gg/hpd5WWn4Ys" target="_blank">Discord</a></li>
-          <li><a href="https://docs.tableland.xyz">Docs</a></li>
-          <li><a href="https://docs.tableland.xyz" class="btn bg-black text-white">Get started</a></li>
-        </ul>
-      </nav>
       <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36">
         <div class="lg:w-2/3">
           <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
