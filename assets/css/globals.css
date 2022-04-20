@@ -38,6 +38,15 @@ div#webpack-hot-middleware-clientOverlay {
   to {opacity: 1;}
 }
 
+.nav-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  height: 90px;
+}
+
 .bg-navbar {
 	background: #ff6567;
   position: fixed;

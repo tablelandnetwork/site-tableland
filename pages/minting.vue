@@ -1,6 +1,8 @@
 <template>
   <div>
     <!-- Header -->
+    <HeaderNav></HeaderNav>
+
     <header class="bg-navbar" data-aos="fade-down" data-aos-anchor=".choose">
       <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2">
         <div class="py-4">
@@ -14,22 +16,9 @@
         </ul>
       </nav>
     </header>
-
     <!-- minting -->
     <section class="minting">
-      <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2 pt-10">
-        <div class="py-4">
-          <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
-        </div>
-        <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
-          <li><a href="https://mirror.xyz/tableland.eth">Blog</a></li>
-          <li><a href="/cohort">Cohort</a></li>
-          <li><a href="/minting">Mint</a></li>
-          <li><a href="https://discord.gg/hpd5WWn4Ys" target="_blank">Discord</a></li>
-          <li><a href="https://docs.tableland.xyz">Docs</a></li>
-          <li><a href="https://docs.tableland.xyz" class="btn bg-black text-white">Get started</a></li>
-        </ul>
-      </nav>
+      
       <div class="container px-6 sm:px-12 md:px-36 lg:px-48 flex pt-12 lg:pt-12">
 
         <div class="lg:w-full px-12 lg:pb-32 pb-12 pt-12" data-aos="fade-up">
