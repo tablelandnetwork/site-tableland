@@ -275,6 +275,11 @@
               <!-- Foils -->
 
               <div class="container px-6 md:px-9 lg:px-16 lg:flex items-center pt-16 lg:pt-0">
+                <div class="lg:w-2/3 w-full vehicle-right sm:hidden">
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/foil_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/foil_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/foil_3.png"/></div>
+                </div>
                 <div class="fleet-container w-full lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Foils
@@ -293,7 +298,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="lg:w-2/3 lg-full vehicle-right">
+                <div class="lg:w-2/3 w-full vehicle-right hidden sm:block">
                   <div class="vehicle a-1 pt-48"><img src="~assets/img/foil_1.png"/></div>
                   <div class="vehicle a-2 pt-12"><img src="~assets/img/foil_2.png"/></div>
                   <div class="vehicle a-3 pt-4"><img src="~assets/img/foil_3.png"/></div>
@@ -327,6 +332,11 @@
               </div>
               <!-- Tracer -->
               <div class="container px-6 md:px-9 lg:px-16 lg:flex items-center pt-16 lg:pt-0">
+                <div class="lg:w-2/3 w-full vehicle-right sm:hidden">
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/tracer_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/tracer_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/tracer_3.png"/></div>
+                </div>
                 <div class="fleet-container w-full lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Tracers
@@ -345,20 +355,20 @@
                     </div>
                   </div>
                 </div>
-                <div class="lg:w-2/3 w-full vehicle-right">
+                <div class="lg:w-2/3 w-full vehicle-right hidden sm:block">
                   <div class="vehicle a-1 pt-48"><img src="~assets/img/tracer_1.png"/></div>
                   <div class="vehicle a-2 pt-12"><img src="~assets/img/tracer_2.png"/></div>
                   <div class="vehicle a-3 pt-4"><img src="~assets/img/tracer_3.png"/></div>
                 </div>
               </div>
               <!-- Sleds -->
-              <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
-                <div class="w-2/3">
+              <div class="container px-6 md:px-9 lg:px-16 lg:flex items-center pt-16 lg:pt-0">
+                <div class="lg:w-2/3 w-full">
                   <div class="vehicle a-1 pt-48"><img src="~assets/img/sled_1.png"/></div>
                   <div class="vehicle a-2 pt-12"><img src="~assets/img/sled_2.png"/></div>
                   <div class="vehicle a-3 pt-4"><img src="~assets/img/sled_3.png"/></div>
                 </div>
-                <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
+                <div class="fleet-container lg:w-2/3 w-full text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Sleds
                   </h2>
@@ -379,8 +389,13 @@
 
               </div>
               <!-- Edgeriders -->
-              <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
-                <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
+              <div class="container px-6 md:px-9 lg:px-16 lg:flex items-center pt-16 lg:pt-0">
+                <div class="lg:w-2/3 w-full vehicle-right sm:hidden">
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/edge_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/edge_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/edge_3.png"/></div>
+                </div>
+                <div class="fleet-container lg:w-2/3 w-full text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Edgeriders
                   </h2>
@@ -398,7 +413,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-2/3 vehicle-right">
+                <div class="lg:w-2/3 w-full vehicle-right hidden sm:block">
                   <div class="vehicle a-1 pt-48"><img src="~assets/img/edge_1.png"/></div>
                   <div class="vehicle a-2 pt-12"><img src="~assets/img/edge_2.png"/></div>
                   <div class="vehicle a-3 pt-4"><img src="~assets/img/edge_3.png"/></div>
@@ -406,13 +421,13 @@
               </div>
 
               <!-- Titans -->
-              <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
-                <div class="w-2/3">
+              <div class="container px-6 md:px-9 lg:px-16 lg:flex items-center pt-16 lg:pt-0">
+                <div class="lg:w-2/3 w-full">
                   <div class="vehicle a-1 pt-48"><img src="~assets/img/titan_1.png"/></div>
                   <div class="vehicle a-2 pt-12"><img src="~assets/img/titan_2.png"/></div>
                   <div class="vehicle a-3 pt-4"><img src="~assets/img/titan_3.png"/></div>
                 </div>
-                <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
+                <div class="fleet-container lg:w-2/3 w-full text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Titans
                   </h2>
@@ -433,8 +448,13 @@
               </div>
               <!-- Tumblers -->
 
-              <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-0 lg:pt-0">
-                <div class="fleet-container lg:w-2/3 text-left" data-aos="fade-up">
+              <div class="container px-6 md:px-9 lg:px-16 lg:flex items-center pt-16 lg:pt-0">
+                <div class="lg:w-2/3 w-full vehicle-right sm:hidden">
+                  <div class="vehicle a-1 pt-48"><img src="~assets/img/tumbler_1.png"/></div>
+                  <div class="vehicle a-2 pt-12"><img src="~assets/img/tumbler_2.png"/></div>
+                  <div class="vehicle a-3 pt-4"><img src="~assets/img/tumbler_3.png"/></div>
+                </div>
+                <div class="fleet-container w-full lg:w-2/3 text-left" data-aos="fade-up">
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Tumblers
                   </h2>
@@ -452,7 +472,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="w-2/3 vehicle-right">
+                <div class="lg:w-2/3 w-full vehicle-right hidden sm:block">
                   <div class="vehicle a-1 pt-48"><img src="~assets/img/tumbler_1.png"/></div>
                   <div class="vehicle a-2 pt-12"><img src="~assets/img/tumbler_2.png"/></div>
                   <div class="vehicle a-3 pt-4"><img src="~assets/img/tumbler_3.png"/></div>
