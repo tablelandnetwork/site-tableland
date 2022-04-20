@@ -212,18 +212,18 @@
           </div>
           <div class="flex text-left pt-16">
             <div class="w-1/2 " data-aos="fade-up">
-              <h3 class="text-2xl">PRICE</h3>
-              <h2 class="text-4xl font-Orbitron">0.05 ETH</h2>
+              <h3 class="lg:text-2xl text-xl">PRICE</h3>
+              <h2 class="lg:text-4xl text-2xl font-Orbitron">0.05 ETH</h2>
               <br><br>
-              <h3 class="text-2xl">WHITELIST LOCK</h3>
-              <h2 class="text-4xl font-Orbitron">05-30-22</h2>
+              <h3 class="lg:text-2xl text-xl">WHITELIST LOCK</h3>
+              <h2 class="lg:text-4xl text-2xl font-Orbitron">05-30-22</h2>
             </div>
             <div class="w-1/2" data-aos="fade-up">
-              <h3 class="text-2xl">TOTAL SUPPLY</h3>
-              <h2 class="text-4xl font-Orbitron">10,000</h2>
+              <h3 class="lg:text-2xl text-xl">TOTAL SUPPLY</h3>
+              <h2 class="lg:text-4xl text-2xl font-Orbitron">10,000</h2>
               <br><br>
-              <h3 class="text-2xl">MINT DATE</h3>
-              <h2 class="text-4xl font-Orbitron">05-31-22</h2>
+              <h3 class="lg:text-2xl text-xl">MINT DATE</h3>
+              <h2 class="lg:text-4xl text-2xl font-Orbitron">05-31-22</h2>
             </div>
           </div>
         </div>
@@ -257,7 +257,7 @@
                 <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                   Airelights
                 </h2>
-                <div class="flex">
+                <div class="lg:flex">
                   <p class="text-3xl" data-aos="fade-up" >The heavy birds rule the alpine of Tableland. Perfect for fast inserts and massive lifts. But keep your diamond hands on the controls because what goes up must come down.</p>
                 </div>
                 <div class="flex py-12">
@@ -284,7 +284,7 @@
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Foils
                   </h2>
-                  <div class="flex">
+                  <div class="lg:flex">
                     <p class="text-3xl" data-aos="fade-up">Aero, fast, and light. Foils are Moore’s Law personified. If you need to get off-chain in a hurry, you’ll be glad you’ve got a foil.</p>
                   </div>
                   <div class="flex py-12">
@@ -315,7 +315,7 @@
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Hoppers
                   </h2>
-                  <div class="flex">
+                  <div class="lg:flex">
                     <p class="text-3xl" data-aos="fade-up" >Hoppers are Tracers’ smaller, more nimble cousins. If you’re prone to whiting out, you’re gonna want a G-suit to keep the blood from pooling in your boots.</p>
                   </div>
                   <div class="flex py-12">
@@ -332,7 +332,7 @@
               </div>
               <!-- Tracer -->
               <div class="container px-6 md:px-9 lg:px-16 lg:flex items-center pt-16 lg:pt-0">
-                <div class="lg:w-2/3 w-full vehicle-right sm:hidden">
+                <div class="lg:w-2/3 w-full vehicle-right md:hidden">
                   <div class="vehicle a-1 pt-48"><img src="~assets/img/tracer_1.png"/></div>
                   <div class="vehicle a-2 pt-12"><img src="~assets/img/tracer_2.png"/></div>
                   <div class="vehicle a-3 pt-4"><img src="~assets/img/tracer_3.png"/></div>
@@ -341,7 +341,7 @@
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Tracers
                   </h2>
-                  <div class="flex">
+                  <div class="lg:flex">
                     <p class="text-3xl" data-aos="fade-up" >If you’ve got verticality issues then Tracers are what you seek. Designed to hug the canyonlands and rise and fall faster than Gamestonk.</p>
                   </div>
                   <div class="flex py-12">
@@ -355,7 +355,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="lg:w-2/3 w-full vehicle-right hidden sm:block">
+                <div class="lg:w-2/3 w-full vehicle-right hidden md:block">
                   <div class="vehicle a-1 pt-48"><img src="~assets/img/tracer_1.png"/></div>
                   <div class="vehicle a-2 pt-12"><img src="~assets/img/tracer_2.png"/></div>
                   <div class="vehicle a-3 pt-4"><img src="~assets/img/tracer_3.png"/></div>
@@ -372,7 +372,7 @@
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Sleds
                   </h2>
-                  <div class="flex">
+                  <div class="lg:flex">
                     <p class="text-3xl" data-aos="fade-up" >Running the salt flats takes focus. If you need a stable Rig for the fast and straight, set your sights on a sled. Sure they’re loud, but it drowns out the sound of your teeth vibrating in your skull as you break the sound barrier.</p>
                   </div>
                   <div class="flex py-12">
@@ -390,7 +390,7 @@
               </div>
               <!-- Edgeriders -->
               <div class="container px-6 md:px-9 lg:px-16 lg:flex items-center pt-16 lg:pt-0">
-                <div class="lg:w-2/3 w-full vehicle-right sm:hidden">
+                <div class="lg:w-2/3 w-full vehicle-right md:hidden">
                   <div class="vehicle a-1 pt-48"><img src="~assets/img/edge_1.png"/></div>
                   <div class="vehicle a-2 pt-12"><img src="~assets/img/edge_2.png"/></div>
                   <div class="vehicle a-3 pt-4"><img src="~assets/img/edge_3.png"/></div>
@@ -399,7 +399,7 @@
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Edgeriders
                   </h2>
-                  <div class="flex">
+                  <div class="lg:flex">
                     <p class="text-3xl" data-aos="fade-up" >Two wheels. One Edge. Nuff said.</p>
                   </div>
                   <div class="flex py-12">
@@ -413,7 +413,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="lg:w-2/3 w-full vehicle-right hidden sm:block">
+                <div class="lg:w-2/3 w-full vehicle-right hidden md:block">
                   <div class="vehicle a-1 pt-48"><img src="~assets/img/edge_1.png"/></div>
                   <div class="vehicle a-2 pt-12"><img src="~assets/img/edge_2.png"/></div>
                   <div class="vehicle a-3 pt-4"><img src="~assets/img/edge_3.png"/></div>
@@ -431,7 +431,7 @@
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Titans
                   </h2>
-                  <div class="flex">
+                  <div class="lg:flex">
                     <p class="text-3xl" data-aos="fade-up" >Heavy loader, lifters, and haulers of the high desert. The Titans are the muscle of Tableland. If you need to get sh*t done, you’re gonna need a Titan.</p>
                   </div>
                   <div class="flex py-12">
@@ -449,7 +449,7 @@
               <!-- Tumblers -->
 
               <div class="container px-6 md:px-9 lg:px-16 lg:flex items-center pt-16 lg:pt-0">
-                <div class="lg:w-2/3 w-full vehicle-right sm:hidden">
+                <div class="lg:w-2/3 w-full vehicle-right md:hidden">
                   <div class="vehicle a-1 pt-48"><img src="~assets/img/tumbler_1.png"/></div>
                   <div class="vehicle a-2 pt-12"><img src="~assets/img/tumbler_2.png"/></div>
                   <div class="vehicle a-3 pt-4"><img src="~assets/img/tumbler_3.png"/></div>
@@ -458,7 +458,7 @@
                   <h2 class="font-Orbitron w-full h-auto text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10">
                     Tumblers
                   </h2>
-                  <div class="flex">
+                  <div class="lg:flex">
                     <p class="text-3xl" data-aos="fade-up" >Titans younger brother. Tumblers are a bundle of might packed into a small package. They can fit into tight spaces and what they lack in cargo capacity they make up for in range and agility.</p>
                   </div>
                   <div class="flex py-12">
@@ -472,7 +472,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="lg:w-2/3 w-full vehicle-right hidden sm:block">
+                <div class="lg:w-2/3 w-full vehicle-right hidden md:block">
                   <div class="vehicle a-1 pt-48"><img src="~assets/img/tumbler_1.png"/></div>
                   <div class="vehicle a-2 pt-12"><img src="~assets/img/tumbler_2.png"/></div>
                   <div class="vehicle a-3 pt-4"><img src="~assets/img/tumbler_3.png"/></div>

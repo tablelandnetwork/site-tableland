@@ -128,29 +128,14 @@ nav li a:hover {
 
 }
 
-@media (max-width: 1080px) {
-  .info .float-frame {
-    margin-top: 0px!important;
-  }
-  .carousel {
-    height: 750px!important;
-  }
-
-}
-
-@media (max-width: 720px) {
-  .info .float-frame {
-    margin-top: 0px!important;
-  }
-  .carousel {
-    height: 500px!important;
-  }
-
-}
-
 @media (max-width: 1480px) {
   .guild-list .vehicle {
    max-width: 250px!important;
+  }
+  .cohort {
+    background: left 0px / 180% no-repeat url('~assets/img/cohort.png')!important;
+    height: 125vh;
+    width: 100vw;
   }
 }
 
@@ -165,6 +150,33 @@ nav li a:hover {
     margin-bottom: 32rem !important;
   }
 }
+
+@media (max-width: 1080px) {
+  .info .float-frame {
+    margin-top: 0px!important;
+  }
+  .carousel {
+    height: 750px!important;
+  }
+  .guild-list .vehicle {
+    max-width: 200px!important;
+  }
+  .tab-label {
+    font-size: 19px!important;
+  }
+
+}
+
+@media (max-width: 720px) {
+  .info .float-frame {
+    margin-top: 0px!important;
+  }
+  .carousel {
+    height: 500px!important;
+  }
+
+}
+
 
 /** garage **/
 .garage {
