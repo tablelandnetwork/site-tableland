@@ -570,10 +570,12 @@ footer {
 }
 
 .animated-carousel {
-  overflow: visible;
+  overflow: hidden;
   display: flex;
   height: 500px;
-  width: 100%;
+  width: 120%;
+  margin-left: -10%!important;
+  margin-right: -10%!important;
   margin: 0 auto;
 }
 
