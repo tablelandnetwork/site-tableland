@@ -11,7 +11,7 @@
 
     <!-- hero -->
     <section class="hero">
-      <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-24 lg:pt-36">
+      <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-36 lg:pt-48">
         <div class="lg:w-2/3">
           <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
             Build web3 with <span class="font-black">SQL</span>
@@ -27,7 +27,7 @@
             Use familiar SQL tables to read and write dynamic NFT metadata or application
             data–all orchestrated by token networks like Ethereum.
           </p>
-          <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10 choose" data-aos="fade-up">
+          <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10 mt-24 choose" data-aos="fade-up">
             Choose your <span class="font-black">Rig</span>
           </h1>
           <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
