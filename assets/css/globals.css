@@ -125,8 +125,28 @@ nav li a:hover {
   .hero {
 		background-image: url('~assets/img/hero@2x.jpg');
   }
+
 }
 
+@media (max-width: 1080px) {
+  .info .float-frame {
+    margin-top: 0px!important;
+  }
+  .carousel {
+    height: 750px!important;
+  }
+
+}
+
+@media (max-width: 720px) {
+  .info .float-frame {
+    margin-top: 0px!important;
+  }
+  .carousel {
+    height: 500px!important;
+  }
+
+}
 
 @media (max-width: 1480px) {
   .guild-list .vehicle {
