@@ -32,7 +32,7 @@
       </div>
 
       <!-- Mobile nav  -->
-      <nav v-show="menu" class="w-full" style="background: #b172a1; transition: all 0.2s ease-in-out">
+      <nav v-show="menu" data-aos="fade-down" class="aos-animate w-full" style="background: #b172a1; transition: all 0.2s ease-in-out">
         <ul class="flex flex-col text-center">
         <li v-for="(item, index) in items" :key="index">
           <a :href="item.href" class="hover: p-6 block">

@@ -4,26 +4,14 @@
     <!-- Header -->
     <HeaderNav></HeaderNav>
 
-    <header class="bg-navbar" data-aos="fade-down" data-aos-anchor=".choose">
-      <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2">
-        <div class="py-4">
-          <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
-        </div>
-        <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
-          <li><a href="https://mirror.xyz/tableland.eth">Blog</a></li>
-          <li><a href="/cohort">Cohort</a></li>
-          <li><a href="/minting">Mint</a></li>
-          <li><a href="https://discord.gg/hpd5WWn4Ys" target="_blank">Discord</a></li>
-          <li><a href="https://docs.tableland.xyz">Docs</a></li>
-          <li><a href="https://docs.tableland.xyz" class="btn bg-black text-white">Get started</a></li>
-        </ul>
-      </nav>
+    <header class="bg-navbar pt-0" data-aos="fade-down" data-aos-anchor=".sql">
+      <HeaderNav></HeaderNav>
     </header>
 
 
     <!-- hero -->
     <section class="hero">
-      <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36">
+      <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-24 lg:pt-36">
         <div class="lg:w-2/3">
           <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
             Build web3 with <span class="font-black">SQL</span>
@@ -45,7 +33,7 @@
           <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
             Your Rig is your custom machine. There are none that are like it, and this one is yours. It’s a purpose-built code-based machine and your key to Tableland.
           </p>
-          <div class="hero-btn hidden md:inline-block text-center md:text-left mb-18 lg:mb-48" data-aos="fade-up">
+          <div class="hero-btn md:inline-block md:text-left mb-18 lg:mb-48" data-aos="fade-up">
             <ButtonLink href="/minting">Learn more</ButtonLink>
           </div>
         </div>
@@ -102,7 +90,7 @@
           <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2" data-aos="fade-up">
           Join our summer cohort for access to exclusive mentorship, hackathons, and small group learning on the cutting edge of the open web.
           </p>
-          <div class="text-center md:text-left" data-aos="fade-up">
+          <div class="md:text-left" data-aos="fade-up">
             <ButtonLink href="/cohort">Learn More</ButtonLink>
           </div>
         </div>
@@ -140,7 +128,7 @@
             <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
               Whether you're a developer, NFT creator, token holder, or just curious about web3, there's a place for you in Tableland. Join a fast-growing community of innovators from all over the world.
             </p>
-            <div class="text-center md:text-left" data-aos="fade-up">
+            <div class="text-center md:text-left mt-5" data-aos="fade-up">
               <ButtonLink href="https://discord.gg/hpd5WWn4Ys">Join us on Discord</ButtonLink>
             </div>
           </div>
