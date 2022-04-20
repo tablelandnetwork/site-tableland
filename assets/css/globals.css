@@ -50,6 +50,7 @@ div#webpack-hot-middleware-clientOverlay {
 .bg-navbar {
 	background: #ff6567;
   position: fixed;
+  height: 110px;
   padding: 2em 1em;
   width: 100%;
   z-index: 999;
