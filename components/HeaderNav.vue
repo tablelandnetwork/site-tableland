@@ -5,7 +5,7 @@
 
       <!-- Desktop nav -->
 
-      <nav class="container hidden sm:inline-flex justify-between px-6 md:px-9 lg:px-16 flex items-center py-2 pt-6">
+      <nav class="container hidden md:inline-flex justify-between px-6 md:px-9 lg:px-16 flex items-center py-2 pt-6">
         <div class="py-4">
           <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
         </div>
@@ -22,12 +22,12 @@
       </nav>
 
       <!-- Toggle menu mobile -->
-      <div class="py-12 px-6 sm:hidden">
+      <div class="py-12 px-6 md:hidden">
         <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-4">
       </div>
         <button
-          class="ml-auto sm:hidden p-6" @click="menu = !menu">
-        menu
+          class="ml-auto md:hidden p-6" @click="menu = !menu">
+        MENU
       </button>
       </div>
 
