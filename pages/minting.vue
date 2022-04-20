@@ -6,25 +6,25 @@
     <header class="bg-navbar" data-aos="fade-down" data-aos-anchor=".choose">
       <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2">
         <div class="py-4">
-          <img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5">
+          <img src="~assets/img/logo-black.svg" alt="Tableland" class="lg:h-5 h-4">
         </div>
         <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
-          <li><a href="#start">Rigs</a></li>
-          <li><a href="#fleets">Fleets</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li class="hidden sm:inline-block"><a href="#start">Rigs</a></li>
+          <li class="hidden sm:inline-block"><a href="#fleets">Fleets</a></li>
+          <li class="hidden sm:inline-block"><a href="#faq">FAQ</a></li>
           <li><a href="#whitelist" class="btn bg-black text-white">Join Discord</a></li>
         </ul>
       </nav>
     </header>
     <!-- minting -->
     <section class="minting">
-      
-      <div class="container px-6 sm:px-12 md:px-36 lg:px-48 flex pt-12 lg:pt-12">
+
+      <div class="container px-6 sm:px-12 md:px-36 lg:px-48 flex pt-24 lg:pt-36">
 
         <div class="lg:w-full px-12 lg:pb-32 pb-12 pt-12" data-aos="fade-up">
 
-          <div class="lg:flex">
-            <div class="lg:w-1/2 w-full" data-aos="fade-up">
+          <div class="lg:flex ">
+            <div class="lg:w-1/2 w-full hidden md:block" data-aos="fade-up">
               <h1 class="text-white font-Orbitron w-full h-auto text-3xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
                 Tableland Awaits
               </h1>
@@ -79,8 +79,8 @@
                   <div class="vehicle pt-6" data-aos="fade-up"><img class="a-1" src="~assets/img/veh_9.png"/></div>
               </div>
             </div>
-            <div class="flex">
-              <div class="w-1/2 px-12 py-0">
+            <div class="lg:flex">
+              <div class="lg:w-1/2 lg:px-12 py-0">
                 <div class="carousel" data-aos="fade-up">
                 	<div><img src="~assets/img/slide_1.jpg"/></div>
                   <div><img src="~assets/img/slide_2.jpg"/></div>
@@ -89,7 +89,7 @@
                   <div><img src="~assets/img/slide_5.jpg"/></div>
                 </div>
               </div>
-              <div class="w-1/2 px-12 py-32" >
+              <div class="lg:w-1/2 lg:px-12 py-6 md:py-24 lg:py-32" >
                 <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-6xl choose leading-tighter mb-4 lg:mb-10">
                   Choose a RIG
                 </h1>
@@ -101,8 +101,8 @@
                 </p>
               </div>
             </div>
-            <div class="flex py-12">
-              <div class="w-1/2 px-12 py-0" >
+            <div class="lg:flex lg:py-12">
+              <div class="lg:w-1/2 w-full lg:px-12 py-0" >
                 <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-6xl leading-tighter mb-4 lg:mb-10">
                   Congrats, it's a MATCH!
                 </h1>
@@ -130,7 +130,7 @@
                   </div>
                 </div>
               </div>
-              <div class="w-1/2 mt-48 part-frame">
+              <div class="lg:w-1/2 w-full mt-48 part-frame">
 
                 <img class="part part_1" src="~assets/img/part_1.png" data-aos="fade-up"/>
                 <img class="part a-2 part_2" src="~assets/img/part_2.png" data-aos="fade-up"/>
