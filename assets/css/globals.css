@@ -51,7 +51,7 @@ div#webpack-hot-middleware-clientOverlay {
 	background: #ff6567;
   position: fixed;
   height: 110px;
-  padding: 2em 1em;
+  padding: 1.5em 1em;
   width: 100%;
   z-index: 999;
 }
