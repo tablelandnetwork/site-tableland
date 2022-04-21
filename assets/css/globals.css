@@ -564,10 +564,10 @@ footer {
 
 @keyframes slide {
   0% {
-    transform: translate3d(0, 0, 0);
+    transform: translateX(0);
   }
   100% {
-    transform: translate3d(-100%, 0, 0);
+    transform: translateX(calc(-250px * 7));
   }
 }
 
@@ -575,7 +575,7 @@ footer {
   height: 200px;
   min-width: 210px;
   margin-left: 0px;
-  animation: slide 30s linear infinite;
+  animation: slide 50s linear infinite;
 }
 
 .animated-carousel div img {
@@ -586,7 +586,7 @@ footer {
   overflow: hidden;
   display: flex;
   height: 500px;
-  width: 120%;
+  width: calc(250px * 14);
   margin-left: -10%!important;
   margin-right: -10%!important;
   margin: 0 auto;
