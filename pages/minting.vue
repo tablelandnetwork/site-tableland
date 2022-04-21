@@ -24,19 +24,19 @@
         <div class="lg:w-full px-12 lg:pb-32 pb-12 pt-12" data-aos="fade-up">
 
           <div class="lg:flex ">
-            <div class="lg:w-1/2 w-full hidden md:block" data-aos="fade-up">
-              <h1 class="text-white font-Orbitron w-full h-auto text-3xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
-                Tableland Awaits
+            <div class="lg:w-1/2 w-full pt-6 " data-aos="fade-up">
+              <h1 class="text-white font-Orbitron w-full h-auto text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+                Tableland Rigs
               </h1>
-              <p class="text-white text-l lg:text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
-                Out beyond the megalopolis, where the broad boulevards of The Grid dissolve into dust and then yawn into great open source plains, you’ll find Tableland. The undeveloped frontier. Terabyte upon terabyte of space waiting to be written into history. It’s raw, uncoded, and simmering with endless opportunity – and incalculable peril. So climb into your Rig and hold onto your brain chips. If you play this one right, the possibilities are endless.
-              </p>
-
+              <h1 data-aos="fade-up" class="font-Orbitron text-white w-full h-auto text-2xl md:text-3xl leading-tighter mb-4 lg:mb-10">A generative 10K NFT with 1,043 handcrafted works of art</h1>
+                <div class="w-full">
+                  <a href="https://docs.tableland.xyz" class="btn bg-black text-white" data-aos="fade-up">Join Discord</a>
+                </div>
             </div>
             <div class="lg:w-1/2 w-full px-0 lg:px-12 pt-4" data-aos="fade-up">
 
-              <h1 data-aos="fade-up" class="font-Orbitron text-white w-full h-auto text-2xl md:text-4xl leading-tighter mb-4 lg:mb-10">A generative 10K NFT with 1,043 handcrafted works of art</h1>
-              <div class="flex">
+
+              <div class="flex pt-2">
                 <div class="w-1/2 " data-aos="fade-up">
                   <h3 class="lg:text-2xl text-xl text-white" data-aos="fade-up">PRICE</h3>
                   <h2 class="lg:text-4xl text-2xl text-white font-Orbitron" data-aos="fade-up">0.05 ETH</h2>
@@ -50,14 +50,10 @@
                   <h2 class="lg:text-4xl text-2xl text-white font-Orbitron" data-aos="fade-up">05-30-22</h2>
                   <br><br>
                   <h3 class="lg:text-2xl text-xl text-white" data-aos="fade-up">AVAILABLE IN</h3>
-                  <h2 class="lg:text-4xl text-2xl text-white font-Orbitron" data-aos="fade-up"><countdown :time="2 * 24 * 60 * 60 * 1000"><template slot-scope="props">{{ props.days }}d:{{ props.hours }}h:{{ props.minutes }}m:{{ props.seconds }}s</template></countdown></h2>
+                  <h2 class="lg:text-4xl text-2xl text-white font-Orbitron" data-aos="fade-up"><countdown :time="time"><template slot-scope="props">{{ props.days }}d:{{ props.hours }}h:{{ props.minutes }}m:{{ props.seconds }}s</template></countdown></h2>
                 </div>
               </div>
-              <div class="flex">
-                <div class="w-full pt-12">
-                  <a href="https://docs.tableland.xyz" class="btn bg-black text-white" data-aos="fade-up">Join Discord</a>
-                </div>
-              </div>
+
             </div>
           </div>
         </div>
@@ -91,14 +87,15 @@
               </div>
               <div class="lg:w-1/2 lg:px-12 py-6 md:py-24 lg:py-32" >
                 <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-4xl lg:text-6xl choose leading-tighter mb-4 lg:mb-10">
-                  Choose a RIG
+                  Grab a RIG
                 </h1>
+                <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                  Out beyond the megalopolis, where the broad boulevards of The Grid dissolve into dust and then yawn into great open source plains, you’ll find Tableland. The undeveloped frontier. Terabyte upon terabyte of space waiting to be written into history. It’s raw, uncoded, and simmering with endless opportunity – and incalculable peril. So climb into your Rig and hold onto your brain chips. If you play this one right, the possibilities are endless.
+                </p>
                 <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
                   Your Rig is your custom machine. There are none that are like it, and this one is yours. It’s a purpose-built code-based machine and your key to Tableland. Each Rig is minted from a set of modular code blocks with unique attributes to achieve specific tasks. And what you’ll do with it is totally up to you
                 </p>
-                <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
-                  Tableland Rigs are divided into eight mission specific Fleets . Each is engineered to navigate the harsh and unforgiving landscape of Tableland. Your Fleet is your new family and its customs, rituals, and alliances will guide and protect you.
-                </p>
+
               </div>
             </div>
             <div class="lg:flex lg:py-12">
@@ -180,53 +177,23 @@
 
               <div class="lg:w-1/2 lg:px-12 lg:py-12 w-full" >
                 <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-4xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
-                  Rig Badges, powered by POAP
+                  Upgrade your Rig with Badges
                 </h1>
                 <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
-                  Rig Badges are where the fun begins. Earners of Tableland POAP can alter the state of their Rig by layering Badges, leaving their mark on the token forever. This experience is enabled by Tableland’s unique blend of trait mutability governed by token-based rules. Use SQL to control which badges are visible in a particular context or world.
+                  Rig Badges are where the fun begins. Badges are soul- bound NFTs earned by Tableland contributors, builders, validators, and partners. Earners can upgrade their Rig with Badges to signal roles and contributions. Badges are a way to track reputation. Since upgraded Rigs stay upgraded, Badges are also a way for Tablelanders to leave their mark on their Rig forever. This experience is enabled by Tableland’s unique blend of relational trait mutability governed by token-based rules.
                 </p>
                 <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
-                  In Tableland, this kind of integration can be built into any NFT project using existing POAP or any other existing NFT or fungible token. The possibilities are endless.
+                  In Tableland, this kind of integration can be built into any NFT project using existing NFTs, fungible tokens, or any other state from the execution layer. The possibilities are endless.
                 </p>
                 <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
                   Badges are just the beginning—we also have some post-launch enhancements for Rigs, including the ability to pilot your Rig and unlock animation.
                 </p>
               </div>
-              <div class="lg:w-1/2 lg:px-12 lg:py-32 w-full">
-                <img src="~assets/img/poap.png" />
+              <div class="lg:w-1/2 lg:px-0 lg:py-32 w-full text-center" data-aos="fade-up">
+                <img src="~assets/img/badge.png" />
               </div>
             </div>
           </div>
-      </section>
-
-      <section class="whitelist">
-        <div class="whitelist-break"></div>
-        <div class="container px-12 lg:px-16 pt-0 pb-48 lg:px-32 max-w-7xl" id="whitelist">
-          <div class="lg:flex lg:text-right">
-            <h3 class="lg:w-1/2 w-full text-left  font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
-              What are you waiting for?
-            </h3>
-            <div class="lg:w-1/2 w-full lg:text-right pt-16">
-              <a href="https://docs.tableland.xyz" class="btn bg-black text-white" data-aos="fade-up">Join Discord</a>
-            </div>
-          </div>
-          <div class="flex text-left pt-16">
-            <div class="w-1/2 " data-aos="fade-up">
-              <h3 class="lg:text-2xl text-xl">PRICE</h3>
-              <h2 class="lg:text-4xl text-2xl font-Orbitron">0.05 ETH</h2>
-              <br><br>
-              <h3 class="lg:text-2xl text-xl">WHITELIST LOCK</h3>
-              <h2 class="lg:text-4xl text-2xl font-Orbitron">05-30-22</h2>
-            </div>
-            <div class="w-1/2" data-aos="fade-up">
-              <h3 class="lg:text-2xl text-xl">TOTAL SUPPLY</h3>
-              <h2 class="lg:text-4xl text-2xl font-Orbitron">10,000</h2>
-              <br><br>
-              <h3 class="lg:text-2xl text-xl">MINT DATE</h3>
-              <h2 class="lg:text-4xl text-2xl font-Orbitron">05-31-22</h2>
-            </div>
-          </div>
-        </div>
       </section>
 
         <!-- guild -->
@@ -239,7 +206,9 @@
               <p class="text-xl md:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
                 Were formed to give us each our purpose. Each one with its unique knowledge, tools, and practices. Your Guild is your new family and its customs, rituals, and alliances will guide and protect you.
               </p>
-
+              <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                Tableland Rigs are divided into eight mission specific Fleets . Each is engineered to navigate the harsh and unforgiving landscape of Tableland. Your Fleet is your new family and its customs, rituals, and alliances will guide and protect you.
+              </p>
               </div>
             </div>
             <div class="fleet-break"></div>
@@ -622,6 +591,14 @@
         el: document.querySelector('#js-scroll'),
         smooth: true,
       });
-    }
+    },
+    data() {
+      const now = new Date();
+      const launchDate = new Date(2022, 4, 31, 0, 0);
+
+      return {
+        time: launchDate - now,
+      };
+    },
   };
   </script>
