@@ -574,12 +574,12 @@ footer {
 .animated-carousel div {
   height: 200px;
   min-width: 210px;
-  margin-left: 10px;
+  margin-left: 0px;
   animation: slide 30s linear infinite;
 }
 
 .animated-carousel div img {
-  animation: float 10s ease-in-out infinite;
+  animation: none;
 }
 
 .animated-carousel {
