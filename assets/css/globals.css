@@ -17,7 +17,7 @@ header {
 
 body {
   font-family: AndaleMono;
-  background-color: #f2f2f2;
+  background-color: white;
   animation: reveal 2s;
 }
 
@@ -320,6 +320,7 @@ footer {
 .minting {
 	background: center / cover no-repeat url('~assets/img/minting.png');
   height: auto;
+  min-height: 75vh;
   width: 100vw;
   max-width: 1920px !important;
 }
@@ -439,11 +440,10 @@ footer {
 /** guilds **/
 .guild {
 	background: top / cover no-repeat url('~assets/img/break_purple2.svg');
-  height: calc(100vw * 1.43229166667);
-  max-height: 550px;
+  height: auto;
+  max-height: 600px;
   width: 100vw;
   max-width: 1920px !important;
-  margin-top: -150px;
 }
 
 .fleet-break {
