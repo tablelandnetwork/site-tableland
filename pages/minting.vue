@@ -26,7 +26,7 @@
           <div class="lg:flex ">
             <div class="lg:w-1/2 w-full pt-6 " data-aos="fade-up">
               <h1 class="text-white font-Orbitron w-full h-auto text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
-                Tableland Rigs
+                Meet the "Rigs"
               </h1>
               <h1 data-aos="fade-up" class="font-Orbitron text-white w-full h-auto text-2xl md:text-3xl leading-tighter mb-4 lg:mb-10">A generative 10K NFT with 1,043 handcrafted works of art</h1>
                 <div class="w-full">
@@ -105,7 +105,7 @@
               </div>
             </div> -->
             <div class="lg:flex">
-              <div class="lg:w-1/2 lg:px-12 py-0">
+              <div class="lg:w-1/2 lg:px-12 py-24">
                 <div class="carousel" data-aos="fade-up">
                 	<div><img src="~assets/img/slide_1.jpg"/></div>
                   <div><img src="~assets/img/slide_2.jpg"/></div>
