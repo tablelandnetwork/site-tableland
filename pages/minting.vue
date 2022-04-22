@@ -21,23 +21,21 @@
 
       <div class="container px-6 sm:px-12 md:px-36 lg:px-48 flex pt-24 lg:pt-48">
 
-        <div class="lg:w-full px-12 lg:pb-32 pb-6 pt-12" data-aos="fade-up">
+        <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-12" data-aos="fade-up">
 
           <div class="lg:flex ">
             <div class="lg:w-1/2 w-full pt-6 " data-aos="fade-up">
               <h1 class="text-white font-Orbitron w-full h-auto text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
                 Meet the "Rigs"
               </h1>
-              <h1 data-aos="fade-up" class="font-Orbitron text-white w-full h-auto text-2xl md:text-3xl leading-tighter mb-4 lg:mb-10">A generative 10K NFT with 1,043 handcrafted works of art</h1>
-                <div class="w-full">
-                  <a href="https://docs.tableland.xyz" class="btn bg-black text-white" data-aos="fade-up">Join Discord</a>
-                </div>
+
             </div>
 
-            <div class="lg:w-1/2 w-full px-0 lg:px-12 pt-4" data-aos="fade-up">
+            <div class="lg:w-1/2 w-full px-0 lg:px-12 pt-10" data-aos="fade-up">
 
+              <h2 class="lg:text-4xl text-2xl text-white font-Orbitron" data-aos="fade-up"><countdown :time="time"><template slot-scope="props">{{ props.days }}d:{{ props.hours }}h:{{ props.minutes }}m:{{ props.seconds }}s</template></countdown></h2>
 
-              <div class="flex pt-2">
+              <!-- <div class="flex pt-2">
                 <div class="w-1/2 " data-aos="fade-up">
                   <h3 class="lg:text-2xl text-xl text-white" data-aos="fade-up">PRICE</h3>
                   <h2 class="lg:text-4xl text-2xl text-white font-Orbitron" data-aos="fade-up">0.05 ETH</h2>
@@ -53,7 +51,7 @@
                   <h3 class="lg:text-2xl text-xl text-white" data-aos="fade-up">AVAILABLE IN</h3>
                   <h2 class="lg:text-4xl text-2xl text-white font-Orbitron" data-aos="fade-up"><countdown :time="time"><template slot-scope="props">{{ props.days }}d:{{ props.hours }}h:{{ props.minutes }}m:{{ props.seconds }}s</template></countdown></h2>
                 </div>
-              </div>
+              </div> -->
 
             </div>
           </div>
@@ -77,6 +75,19 @@
             <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_6.png"/></div>
             <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_7.png"/></div>
             <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_9.png"/></div>
+        </div>
+
+      </div>
+      <div class="container px-6 sm:px-12 md:px-36 lg:px-48 pt-0 lg:pt-0">
+        <div class="flex">
+          <div class="w-1/3 px-12 lg:pb-0 pb-0 pt-0">
+            <h1 class="text-white w-full h-auto text-xl md:text-2xl leading-tighter mb-4 lg:mb-10">A generative 10K NFT with 1,043 handcrafted works of art</h1>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="w-full px-12 lg:pb-0 pb-0 pt-0">
+            <a href="https://docs.tableland.xyz" class="btn bg-black text-white">Join Discord</a>
+          </div>
         </div>
       </div>
     </section>
