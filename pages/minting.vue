@@ -2,7 +2,7 @@
   <div>
     <!-- Header -->
     <HeaderNav></HeaderNav>
-
+    <div class="ship"></div>
     <header class="bg-navbar" data-aos="fade-down" data-aos-anchor=".choose">
       <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2">
         <div class="py-4">
@@ -21,7 +21,7 @@
 
       <div class="container px-6 sm:px-12 md:px-36 lg:px-48 flex pt-24 lg:pt-48">
 
-        <div class="lg:w-full px-12 lg:pb-32 pb-12 pt-12" data-aos="fade-up">
+        <div class="lg:w-full px-12 lg:pb-32 pb-6 pt-12" data-aos="fade-up">
 
           <div class="lg:flex ">
             <div class="lg:w-1/2 w-full pt-6 " data-aos="fade-up">
@@ -59,7 +59,7 @@
           </div>
         </div>
       </div>
-      <div class="flex">
+      <div class="flex" style="margin-top:-50px;">
         <div class="animated-carousel w-full" >
             <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_10.png"/></div>
             <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_2.png"/></div>
@@ -624,7 +624,6 @@
     data() {
       const now = new Date();
       const launchDate = new Date(2022, 4, 31, 0, 0);
-
       return {
         time: launchDate - now,
       };
