@@ -33,6 +33,7 @@
                   <a href="https://docs.tableland.xyz" class="btn bg-black text-white" data-aos="fade-up">Join Discord</a>
                 </div>
             </div>
+
             <div class="lg:w-1/2 w-full px-0 lg:px-12 pt-4" data-aos="fade-up">
 
 
@@ -58,12 +59,32 @@
           </div>
         </div>
       </div>
+      <div class="flex">
+        <div class="animated-carousel w-full" >
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_10.png"/></div>
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_2.png"/></div>
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_3.png"/></div>
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_4.png"/></div>
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_5.png"/></div>
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_6.png"/></div>
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_7.png"/></div>
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_9.png"/></div>
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_10.png"/></div>
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_2.png"/></div>
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_3.png"/></div>
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_4.png"/></div>
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_5.png"/></div>
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_6.png"/></div>
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_7.png"/></div>
+            <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_9.png"/></div>
+        </div>
+      </div>
     </section>
 
       <!-- rig -->
       <section class="info" id="start">
           <div class="container px-16 ">
-            <div class="flex">
+            <!-- <div class="flex">
               <div class="animated-carousel w-full" >
                   <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_10.png"/></div>
                   <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_2.png"/></div>
@@ -82,7 +103,7 @@
                   <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_7.png"/></div>
                   <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_9.png"/></div>
               </div>
-            </div>
+            </div> -->
             <div class="lg:flex">
               <div class="lg:w-1/2 lg:px-12 py-0">
                 <div class="carousel" data-aos="fade-up">
