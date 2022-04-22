@@ -574,7 +574,7 @@ footer {
 
 .ship {
   position: fixed;
-  bottom: -50px;
+  bottom: -20px;
   left: 0px;
   width: 100%;
   height: 350px;
@@ -596,7 +596,7 @@ footer {
 .animated-carousel {
   overflow: hidden;
   display: flex;
-  height: 500px;
+  height: 250px;
   width: calc(250px * 14);
   margin-left: -10%!important;
   margin-right: -10%!important;
