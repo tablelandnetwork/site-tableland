@@ -320,7 +320,7 @@ footer {
 .minting {
 	background: center / cover no-repeat url('~assets/img/minting.png');
   height: auto;
-  min-height: 75vh;
+  min-height: 100vh;
   width: 100vw;
   max-width: 1920px !important;
 }
@@ -590,6 +590,12 @@ footer {
   margin-left: -10%!important;
   margin-right: -10%!important;
   margin: 0 auto;
+}
+
+.animated-carousel .vehicle {
+  margin: 0px!important;
+  min-width: 200px!important;
+  margin-left:0px!important;
 }
 
 .carousel {
