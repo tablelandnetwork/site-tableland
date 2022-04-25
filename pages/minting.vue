@@ -3,10 +3,10 @@
     <!-- Header -->
     <HeaderNav></HeaderNav>
     <div class="ship"></div>
-    <header class="bg-navbar" data-aos="fade-down" data-aos-anchor=".choose">
+    <header class="bg-navbar" data-aos="fade-down" data-aos-anchor=".choose" data-aos-offset="0">
       <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2">
         <div class="py-4 logo">
-          <img src="~assets/img/logo-black.svg" alt="Tableland" class="lg:h-5 h-4">
+        <a href="/"><img src="~assets/img/logo-black.svg" alt="Tableland" class="lg:h-5 h-4"></a>
         </div>
         <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
           <li class="hidden sm:inline-block"><a href="#start">Rigs</a></li>
@@ -552,7 +552,14 @@
 
       <!-- showcase -->
       <section class="md:block showcase py-32 relative">
-        <div class="container px-6 md:px-9 lg:px-16">
+      <div class="showcase-break"></div>
+      <div class="lg:w-1/2 w-full " style="margin-top:-100px;z-index:999;position: absolute;left: 0;overflow:auto;">
+        <img src="~assets/img/wall2.png"/>
+      </div>
+      <div data-aos="fade-up" class="w-1/3" style="margin-top: -700px;overflow: auto;position: absolute;right: 0;">
+        <img src="~assets/img/wall.png"/>
+      </div>
+        <div class="container" style="margin-top:-150px;">
           <div class="text-center">
             <p class="font-Orbitron text-blue text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10">What will you build?</p>
             <ButtonLink href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f">See use cases</ButtonLink>
@@ -576,6 +583,7 @@
           </ul>
         </nav>
       </footer>
+
     </div>
   </template>
 

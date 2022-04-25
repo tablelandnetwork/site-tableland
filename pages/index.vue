@@ -149,19 +149,26 @@
     </section>
 
     <!-- showcase -->
-    <section class="md:block showcase py-32 relative" >
-      <div class="container px-6 md:px-9 lg:px-16">
-        <div class="text-center text-white">
-          <p class="text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10" data-aos="fade-up">What will you build?</p>
-          <ButtonLink href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f" data-aos="fade-up">See use cases</ButtonLink>
+    <section class="md:block showcase py-32 relative">
+    <div class="showcase-break"></div>
+    <div class="lg:w-1/2 w-full " style="margin-top:-100px;z-index:999;position: absolute;left: 0;overflow:auto;">
+      <img src="~assets/img/wall2.png"/>
+    </div>
+    <div data-aos="fade-up" class="w-1/3" style="margin-top: -700px;overflow: auto;position: absolute;right: 0;">
+      <img src="~assets/img/wall.png"/>
+    </div>
+      <div class="container" style="margin-top:-150px;">
+        <div class="text-center">
+          <p class="font-Orbitron text-blue text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10">What will you build?</p>
+          <ButtonLink href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f">See use cases</ButtonLink>
         </div>
       </div>
     </section>
 
-    <footer class="text-white py-10">
+    <footer class="text-blue py-10">
       <nav class="container px-6 md:px-9 lg:px-16 py-2">
         <div class="hidden py-4">
-          <img src="~assets/img/logo-white.svg" alt="Tableland" class="h-5">
+          <img src="~assets/img/logo-white.svg" alt="Tableland" class="h-5" id="js-scroll">
         </div>
         <ul class="flex justify-center items-center gap-x-3 sm:gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-xs">
           <li class="hidden md:inline-block"><a href="https://twitter.com/tableland__">Twitter</a></li>
