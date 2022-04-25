@@ -21,7 +21,7 @@
 
       <div class="container px-6 sm:px-12 md:px-36 lg:px-48 flex pt-24 lg:pt-48">
 
-        <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-12" data-aos="fade-up">
+        <div class="lg:w-full px-6 lg:pb-12 pb-6 pt-12" data-aos="fade-up">
 
           <div class="lg:flex ">
             <div class="lg:w-1/2 w-full pt-6 " data-aos="fade-up">
@@ -34,24 +34,6 @@
             <div class="lg:w-1/2 w-full px-0 lg:px-12 pt-10" data-aos="fade-up">
 
               <h2 class="lg:text-4xl text-2xl text-white font-Orbitron" data-aos="fade-up"><countdown :time="time"><template slot-scope="props">{{ props.days }}d:{{ props.hours }}h:{{ props.minutes }}m:{{ props.seconds }}s</template></countdown></h2>
-
-              <!-- <div class="flex pt-2">
-                <div class="w-1/2 " data-aos="fade-up">
-                  <h3 class="lg:text-2xl text-xl text-white" data-aos="fade-up">PRICE</h3>
-                  <h2 class="lg:text-4xl text-2xl text-white font-Orbitron" data-aos="fade-up">0.05 ETH</h2>
-                  <br><br>
-                  <h3 class="lg:text-2xl text-xl text-white" data-aos="fade-up">TOTAL SUPPLY</h3>
-                  <h2 class="lg:text-4xl text-2xl text-white font-Orbitron" data-aos="fade-up">10,000</h2>
-
-                </div>
-                <div class="w-1/2">
-                  <h3 class="lg:text-2xl text-xl text-white" data-aos="fade-up">WHITELIST LOCK</h3>
-                  <h2 class="lg:text-4xl text-2xl text-white font-Orbitron" data-aos="fade-up">05-30-22</h2>
-                  <br><br>
-                  <h3 class="lg:text-2xl text-xl text-white" data-aos="fade-up">AVAILABLE IN</h3>
-                  <h2 class="lg:text-4xl text-2xl text-white font-Orbitron" data-aos="fade-up"><countdown :time="time"><template slot-scope="props">{{ props.days }}d:{{ props.hours }}h:{{ props.minutes }}m:{{ props.seconds }}s</template></countdown></h2>
-                </div>
-              </div> -->
 
             </div>
           </div>
@@ -78,14 +60,14 @@
         </div>
 
       </div>
-      <div class="container px-6 sm:px-12 md:px-36 lg:px-48 pt-0 lg:pt-0">
+      <div class="container px-6 pt-0 sm:px-12 md:px-36 lg:px-48 pt-0 lg:pt-0">
         <div class="flex">
-          <div class="w-1/3 px-12 lg:pb-0 pb-0 pt-0">
+          <div class="w-full lg:w-1/3 px-6 lg:pb-0 pb-0 pt-0">
             <h1 class="text-white w-full h-auto text-xl md:text-2xl leading-tighter mb-4 lg:mb-10">A generative 10K NFT with 1,043 handcrafted works of art</h1>
           </div>
         </div>
         <div class="flex">
-          <div class="w-full px-12 lg:pb-0 pb-0 pt-0">
+          <div class="w-full px-6 lg:pb-0 pb-0 pt-0">
             <a href="https://docs.tableland.xyz" class="btn bg-black text-white">Join Discord</a>
           </div>
         </div>
@@ -95,26 +77,6 @@
       <!-- rig -->
       <section class="info" id="start">
           <div class="container px-16 ">
-            <!-- <div class="flex">
-              <div class="animated-carousel w-full" >
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_10.png"/></div>
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_2.png"/></div>
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_3.png"/></div>
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_4.png"/></div>
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_5.png"/></div>
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_6.png"/></div>
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_7.png"/></div>
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_9.png"/></div>
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_10.png"/></div>
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_2.png"/></div>
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_3.png"/></div>
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_4.png"/></div>
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_5.png"/></div>
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_6.png"/></div>
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_7.png"/></div>
-                  <div class="vehicle" data-aos="fade-up"><img src="~assets/img/veh_9.png"/></div>
-              </div>
-            </div> -->
             <div class="lg:flex">
               <div class="lg:w-1/2 lg:px-12 py-24">
                 <div class="carousel" data-aos="fade-up">
