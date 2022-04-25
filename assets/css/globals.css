@@ -126,93 +126,6 @@ nav li a:hover {
   max-width: 1920px !important;
 }
 
-@media
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 2dppx) {
-  .hero {
-		background-image: url('~assets/img/hero@2x.jpg');
-    height: calc(250vw * 1.43229166667);
-  }
-
-}
-
-@media (max-width: 1480px) {
-  .guild-list .vehicle {
-   max-width: 250px!important;
-  }
-  .cohort {
-    background: left 0px / 180% no-repeat url('~assets/img/cohort.png')!important;
-    height: 125vh;
-    width: 100vw;
-  }
-}
-
-@media (min-width: 1640px) {
-  .hero-btn {
-    margin-bottom: 32rem !important;
-  }
-}
-
-@media (min-width: 1760px) {
-  .hero-btn {
-    margin-bottom: 32rem !important;
-  }
-}
-
-@media (max-width: 1080px) {
-  .info .float-frame {
-    margin-top: 0px!important;
-  }
-  .carousel {
-    height: 750px!important;
-  }
-  .guild-list .vehicle {
-    max-width: 200px!important;
-  }
-  .tab-label {
-    font-size: 19px!important;
-  }
-  .ship {
-    bottom: -150px!important;
-  }
-
-}
-
-@media (max-width: 720px) {
-  .info .float-frame {
-    margin-top: 0px!important;
-  }
-  .carousel {
-    height: 350px!important;
-  }
-
-  .bg-navbar {
-    padding: 25px 0px;
-  }
-
-  .fleet-container {
-    padding: 1em 2em!important;
-  }
-
-  .text-xl {
-    font-size: 1.15rem!important;
-  }
-
-  .container {
-    zoom: 0.8;
-  }
-
-  .minting {
-    min-height: 125vh!important;
-  }
-  
-  .guild {
-    max-height: 750px!important;
-  }
-
-}
-
-
 /** garage **/
 .garage {
   position: relative;
@@ -817,4 +730,120 @@ input:checked ~ .tab-content {
   border: 2px solid #fff;
   color: #fff;
   outline: 0;
+}
+
+
+@media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx) {
+  .hero {
+		background-image: url('~assets/img/hero@2x.jpg');
+    height: calc(250vw * 1.43229166667);
+  }
+
+}
+
+@media (max-width: 1480px) {
+  .guild-list .vehicle {
+   max-width: 250px!important;
+  }
+  .cohort {
+    background: left 0px / 180% no-repeat url('~assets/img/cohort.png')!important;
+    height: 125vh;
+    width: 100vw;
+  }
+}
+
+@media (min-width: 1640px) {
+  .hero-btn {
+    margin-bottom: 32rem !important;
+  }
+}
+
+@media (min-width: 1760px) {
+  .hero-btn {
+    margin-bottom: 32rem !important;
+  }
+}
+
+@media (max-width: 1080px) {
+  .animated-carousel {
+    margin-left: 0!important;
+    margin-right: 0!important;
+  }
+  .info .float-frame {
+    margin-top: 0px!important;
+  }
+  .carousel {
+    height: 750px!important;
+  }
+  .guild-list .vehicle {
+    max-width: 200px!important;
+  }
+  .tab-label {
+    font-size: 19px!important;
+  }
+  .ship {
+    bottom: -150px!important;
+    display: none;
+  }
+
+}
+
+@media (max-width: 720px) {
+  .logo {
+    max-width: 175px;
+  }
+
+  nav .btn {
+    font-size: 1em;
+  }
+
+  .btn {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .guild-list .vehicle {
+    max-width: 170px!important;
+  }
+
+  .info .float-frame {
+    margin-top: 0px!important;
+  }
+  .carousel {
+    height: 350px!important;
+  }
+
+  .bg-navbar {
+    padding: 25px 0px;
+  }
+
+  .fleet-container {
+    padding: 1em 2em!important;
+  }
+
+  .text-xl {
+    font-size: 1.15rem!important;
+  }
+
+  .minting {
+    min-height: 125vh!important;
+  }
+
+  .guild {
+    max-height: 820px!important;
+    padding-top: 60px;
+  }
+
+  .part-frame {
+    margin-top: -0px;
+    overflow: hidden;
+    height: 600px;
+  }
+
+  .token {
+    display: none;
+  }
+
 }

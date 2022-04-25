@@ -5,7 +5,7 @@
     <div class="ship"></div>
     <header class="bg-navbar" data-aos="fade-down" data-aos-anchor=".choose">
       <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2">
-        <div class="py-4">
+        <div class="py-4 logo">
           <img src="~assets/img/logo-black.svg" alt="Tableland" class="lg:h-5 h-4">
         </div>
         <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
@@ -76,7 +76,7 @@
 
       <!-- rig -->
       <section class="info" id="start">
-          <div class="container px-16 ">
+          <div class="container px-8 ">
             <div class="lg:flex">
               <div class="lg:w-1/2 lg:px-12 py-24">
                 <div class="carousel" data-aos="fade-up">
@@ -114,17 +114,17 @@
                 </div>
                 <div class="flex py-12">
                   <div class="w-1/2" data-aos="fade-up">
-                    <h3 class="text-2xl">TOTAL RIG STYLES</h3>
+                    <h3 class="lg:text-2xl text-xl">TOTAL RIG STYLES</h3>
                     <h2 class="text-4xl font-Orbitron">67</h2>
                   </div>
                   <div class="w-1/2" data-aos="fade-up">
-                    <h3 class="text-2xl">TOTAL MATCH RIGS</h3>
+                    <h3 class="lg:text-2xl text-xl">TOTAL MATCH RIGS</h3>
                     <h2 class="text-4xl font-Orbitron">187</h2>
                   </div>
                 </div>
                 <div class="flex">
                   <div class="w-1/2" data-aos="fade-up">
-                    <h3 class="text-2xl">POSSIBLE RIG SETUPS</h3>
+                    <h3 class="lg:text-2xl text-xl">POSSIBLE RIG SETUPS</h3>
                     <h2 class="text-4xl font-Orbitron">1,000,000,000+</h2>
                   </div>
                 </div>
@@ -139,7 +139,7 @@
               </div>
             </div>
             <div class="lg:flex py-12">
-              <div class="w-1/2 mt-16" >
+              <div class="w-1/2 mt-16 token">
                 <img src="~assets/img/token.png" data-aos="fade-up" />
               </div>
               <div class="lg:w-1/2 w-full lg:px-12 lg:py-36" >
@@ -200,7 +200,7 @@
 
         <!-- guild -->
         <section class="guild" id="fleets">
-          <div class="container px-12 lg:px-16 flex items-center pt-24 lg:pt-36">
+          <div class="container px-8 lg:px-16 flex items-center pt-24 lg:pt-36">
             <div class="lg:w-2/3" data-aos="fade-up">
               <h1 class="font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
                 The Fleets
@@ -229,15 +229,15 @@
                   Airelights
                 </h2>
                 <div class="lg:flex">
-                  <p class="text-3xl" data-aos="fade-up" >The heavy birds rule the alpine of Tableland. Perfect for fast inserts and massive lifts. But keep your diamond hands on the controls because what goes up must come down.</p>
+                  <p class="text-xl lg:text-3xl" data-aos="fade-up" >The heavy birds rule the alpine of Tableland. Perfect for fast inserts and massive lifts. But keep your diamond hands on the controls because what goes up must come down.</p>
                 </div>
                 <div class="flex py-12">
                   <div class="w-1/2" data-aos="fade-up">
-                    <h3 class="text-2xl">TOTAL RIG STYLES</h3>
+                    <h3 class="lg:text-2xl text-xl">TOTAL RIG STYLES</h3>
                     <h2 class="text-4xl font-Orbitron">8</h2>
                   </div>
                   <div class="w-1/2" data-aos="fade-up">
-                    <h3 class="text-2xl">TOTAL MATCH RIGS</h3>
+                    <h3 class="lg:text-2xl text-xl">TOTAL MATCH RIGS</h3>
                     <h2 class="text-4xl font-Orbitron">21</h2>
                   </div>
                 </div>
@@ -256,15 +256,15 @@
                     Foils
                   </h2>
                   <div class="lg:flex">
-                    <p class="text-3xl" data-aos="fade-up">Aero, fast, and light. Foils are Moore’s Law personified. If you need to get off-chain in a hurry, you’ll be glad you’ve got a foil.</p>
+                    <p class="text-xl lg:text-3xl" data-aos="fade-up">Aero, fast, and light. Foils are Moore’s Law personified. If you need to get off-chain in a hurry, you’ll be glad you’ve got a foil.</p>
                   </div>
                   <div class="flex py-12">
                     <div class="w-1/2" data-aos="fade-up">
-                      <h3 class="text-2xl">TOTAL RIG STYLES</h3>
+                      <h3 class="lg:text-2xl text-xl">TOTAL RIG STYLES</h3>
                       <h2 class="text-4xl font-Orbitron">6</h2>
                     </div>
                     <div class="w-1/2" data-aos="fade-up">
-                      <h3 class="text-2xl">TOTAL MATCH RIGS</h3>
+                      <h3 class="lg:text-2xl text-xl">TOTAL MATCH RIGS</h3>
                       <h2 class="text-4xl font-Orbitron">18</h2>
                     </div>
                   </div>
@@ -287,15 +287,15 @@
                     Hoppers
                   </h2>
                   <div class="lg:flex">
-                    <p class="text-3xl" data-aos="fade-up" >Hoppers are Tracers’ smaller, more nimble cousins. If you’re prone to whiting out, you’re gonna want a G-suit to keep the blood from pooling in your boots.</p>
+                    <p class="text-xl lg:text-3xl" data-aos="fade-up" >Hoppers are Tracers’ smaller, more nimble cousins. If you’re prone to whiting out, you’re gonna want a G-suit to keep the blood from pooling in your boots.</p>
                   </div>
                   <div class="flex py-12">
                     <div class="w-1/2" data-aos="fade-up">
-                      <h3 class="text-2xl">TOTAL RIG STYLES</h3>
+                      <h3 class="lg:text-2xl text-xl">TOTAL RIG STYLES</h3>
                       <h2 class="text-4xl font-Orbitron">8</h2>
                     </div>
                     <div class="w-1/2" data-aos="fade-up">
-                      <h3 class="text-2xl">TOTAL MATCH RIGS</h3>
+                      <h3 class="lg:text-2xl text-xl">TOTAL MATCH RIGS</h3>
                       <h2 class="text-4xl font-Orbitron">25</h2>
                     </div>
                   </div>
@@ -313,15 +313,15 @@
                     Tracers
                   </h2>
                   <div class="lg:flex">
-                    <p class="text-3xl" data-aos="fade-up" >If you’ve got verticality issues then Tracers are what you seek. Designed to hug the canyonlands and rise and fall faster than Gamestonk.</p>
+                    <p class="text-xl lg:text-3xl" data-aos="fade-up" >If you’ve got verticality issues then Tracers are what you seek. Designed to hug the canyonlands and rise and fall faster than Gamestonk.</p>
                   </div>
                   <div class="flex py-12">
                     <div class="w-1/2" data-aos="fade-up">
-                      <h3 class="text-2xl">TOTAL RIG STYLES</h3>
+                      <h3 class="lg:text-2xl text-xl">TOTAL RIG STYLES</h3>
                       <h2 class="text-4xl font-Orbitron">8</h2>
                     </div>
                     <div class="w-1/2" data-aos="fade-up">
-                      <h3 class="text-2xl">TOTAL MATCH RIGS</h3>
+                      <h3 class="lg:text-2xl text-xl">TOTAL MATCH RIGS</h3>
                       <h2 class="text-4xl font-Orbitron">21</h2>
                     </div>
                   </div>
@@ -344,15 +344,15 @@
                     Sleds
                   </h2>
                   <div class="lg:flex">
-                    <p class="text-3xl" data-aos="fade-up" >Running the salt flats takes focus. If you need a stable Rig for the fast and straight, set your sights on a sled. Sure they’re loud, but it drowns out the sound of your teeth vibrating in your skull as you break the sound barrier.</p>
+                    <p class="text-xl lg:text-3xl" data-aos="fade-up" >Running the salt flats takes focus. If you need a stable Rig for the fast and straight, set your sights on a sled. Sure they’re loud, but it drowns out the sound of your teeth vibrating in your skull as you break the sound barrier.</p>
                   </div>
                   <div class="flex py-12">
                     <div class="w-1/2" data-aos="fade-up">
-                      <h3 class="text-2xl">TOTAL RIG STYLES</h3>
+                      <h3 class="lg:text-2xl text-xl">TOTAL RIG STYLES</h3>
                       <h2 class="text-4xl font-Orbitron">8</h2>
                     </div>
                     <div class="w-1/2" data-aos="fade-up">
-                      <h3 class="text-2xl">TOTAL MATCH RIGS</h3>
+                      <h3 class="lg:text-2xl text-xl">TOTAL MATCH RIGS</h3>
                       <h2 class="text-4xl font-Orbitron">19</h2>
                     </div>
                   </div>
@@ -371,15 +371,15 @@
                     Edgeriders
                   </h2>
                   <div class="lg:flex">
-                    <p class="text-3xl" data-aos="fade-up" >Two wheels. One Edge. Nuff said.</p>
+                    <p class="text-xl lg:text-3xl" data-aos="fade-up" >Two wheels. One Edge. Nuff said.</p>
                   </div>
                   <div class="flex py-12">
                     <div class="w-1/2" data-aos="fade-up">
-                      <h3 class="text-2xl">TOTAL RIG STYLES</h3>
+                      <h3 class="lg:text-2xl text-xl">TOTAL RIG STYLES</h3>
                       <h2 class="text-4xl font-Orbitron">10</h2>
                     </div>
                     <div class="w-1/2" data-aos="fade-up">
-                      <h3 class="text-2xl">TOTAL MATCH RIGS</h3>
+                      <h3 class="lg:text-2xl text-xl">TOTAL MATCH RIGS</h3>
                       <h2 class="text-4xl font-Orbitron">24</h2>
                     </div>
                   </div>
@@ -403,15 +403,15 @@
                     Titans
                   </h2>
                   <div class="lg:flex">
-                    <p class="text-3xl" data-aos="fade-up" >Heavy loader, lifters, and haulers of the high desert. The Titans are the muscle of Tableland. If you need to get sh*t done, you’re gonna need a Titan.</p>
+                    <p class="text-xl lg:text-3xl" data-aos="fade-up" >Heavy loader, lifters, and haulers of the high desert. The Titans are the muscle of Tableland. If you need to get sh*t done, you’re gonna need a Titan.</p>
                   </div>
                   <div class="flex py-12">
                     <div class="w-1/2" data-aos="fade-up">
-                      <h3 class="text-2xl">TOTAL RIG STYLES</h3>
+                      <h3 class="lg:text-2xl text-xl">TOTAL RIG STYLES</h3>
                       <h2 class="text-4xl font-Orbitron">11</h2>
                     </div>
                     <div class="w-1/2" data-aos="fade-up">
-                      <h3 class="text-2xl">TOTAL MATCH RIGS</h3>
+                      <h3 class="lg:text-2xl text-xl">TOTAL MATCH RIGS</h3>
                       <h2 class="text-4xl font-Orbitron">32</h2>
                     </div>
                   </div>
@@ -430,15 +430,15 @@
                     Tumblers
                   </h2>
                   <div class="lg:flex">
-                    <p class="text-3xl" data-aos="fade-up" >Titans younger brother. Tumblers are a bundle of might packed into a small package. They can fit into tight spaces and what they lack in cargo capacity they make up for in range and agility.</p>
+                    <p class="text-xl lg:text-3xl" data-aos="fade-up" >Titans younger brother. Tumblers are a bundle of might packed into a small package. They can fit into tight spaces and what they lack in cargo capacity they make up for in range and agility.</p>
                   </div>
                   <div class="flex py-12">
                     <div class="w-1/2" data-aos="fade-up">
-                      <h3 class="text-2xl">TOTAL RIG STYLES</h3>
+                      <h3 class="lg:text-2xl text-xl">TOTAL RIG STYLES</h3>
                       <h2 class="text-4xl font-Orbitron">9</h2>
                     </div>
                     <div class="w-1/2" data-aos="fade-up">
-                      <h3 class="text-2xl">TOTAL MATCH RIGS</h3>
+                      <h3 class="lg:text-2xl text-xl">TOTAL MATCH RIGS</h3>
                       <h2 class="text-4xl font-Orbitron">27</h2>
                     </div>
                   </div>

@@ -22,7 +22,7 @@
       </nav>
 
       <!-- Toggle menu mobile -->
-      <div class="py-12 px-6 md:hidden">
+      <div class="py-12 px-6 md:hidden logo">
         <a href="/"><img src="~assets/img/logo-black.svg" alt="Tableland" class="h-4"></a>
       </div>
         <button
