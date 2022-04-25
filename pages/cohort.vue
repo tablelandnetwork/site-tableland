@@ -6,7 +6,7 @@
     <header class="bg-navbar" data-aos="fade-down" data-aos-anchor=".rig">
       <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2">
         <div class="py-4">
-          <img src="~assets/img/logo-black.svg" alt="Tableland" class="lg:h-5 h-4">
+          <a href="/"><img src="~assets/img/logo-black.svg" alt="Tableland" class="lg:h-5 h-4"></a>
         </div>
         <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
           <li><a class="hidden sm:inline-block" href="#rig">About</a></li>

@@ -244,6 +244,7 @@ nav li a:hover {
 .showcase {
   background-color: #141034;
   color: #6067EB!important;
+  min-height: 650px;
 }
 
 .showcase .btn {
@@ -253,6 +254,13 @@ nav li a:hover {
 
 footer {
   background-color: #141034;
+}
+
+.showcase-break {
+    position: relative;
+  	background: center / cover no-repeat url('~assets/img/break_footer.svg');
+  	height: 184px;
+    top: -200px;
 }
 
 /** cohort  **/
