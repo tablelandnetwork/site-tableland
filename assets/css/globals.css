@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;500;600&display=swap');
 
+@font-face {
+  font-family: 'AndaleMono';
+  src:  url('~assets/fonts/andale-mono.woff2') format('woff2'),
+        url('~assets/fonts/andale-mono.woff') format('woff');
+}
+
 ::selection {
   color: #000;
   background-color: #0BE291;
@@ -16,7 +22,7 @@ header {
 }
 
 body {
-  font-family: AndaleMono;
+  font-family: "AndaleMono", AndaleMono, monospace;
   background-color: white;
   animation: reveal 2s;
 }
