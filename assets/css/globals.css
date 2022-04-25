@@ -131,7 +131,7 @@ nav li a:hover {
   (min-resolution: 2dppx) {
   .hero {
 		background-image: url('~assets/img/hero@2x.jpg');
-    height: calc(200vw * 1.43229166667);
+    height: calc(250vw * 1.43229166667);
   }
 
 }
@@ -173,7 +173,7 @@ nav li a:hover {
     font-size: 19px!important;
   }
   .ship {
-    bottom: -150px;
+    bottom: -150px!important;
   }
 
 }
@@ -183,11 +183,31 @@ nav li a:hover {
     margin-top: 0px!important;
   }
   .carousel {
-    height: 500px!important;
+    height: 350px!important;
   }
 
   .bg-navbar {
     padding: 25px 0px;
+  }
+
+  .fleet-container {
+    padding: 1em 2em!important;
+  }
+
+  .text-xl {
+    font-size: 1.15rem!important;
+  }
+
+  .container {
+    zoom: 0.8;
+  }
+
+  .minting {
+    min-height: 125vh!important;
+  }
+  
+  .guild {
+    max-height: 750px!important;
   }
 
 }
