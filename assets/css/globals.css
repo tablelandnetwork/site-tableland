@@ -131,6 +131,7 @@ nav li a:hover {
   (min-resolution: 2dppx) {
   .hero {
 		background-image: url('~assets/img/hero@2x.jpg');
+    height: calc(200vw * 1.43229166667);
   }
 
 }
@@ -171,6 +172,9 @@ nav li a:hover {
   .tab-label {
     font-size: 19px!important;
   }
+  .ship {
+    bottom: -150px;
+  }
 
 }
 
@@ -180,6 +184,10 @@ nav li a:hover {
   }
   .carousel {
     height: 500px!important;
+  }
+
+  .bg-navbar {
+    padding: 25px 0px;
   }
 
 }
