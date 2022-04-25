@@ -175,7 +175,7 @@
                 </p>
               </div>
             </div>
-            <div class="lg:flex mb-48">
+            <div class="lg:flex lg:mb-48">
 
               <div class="lg:w-1/2 lg:px-12 lg:py-12 w-full" >
                 <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-4xl lg:text-6xl leading-tighter mb-4 lg:mb-10">

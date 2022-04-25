@@ -796,7 +796,13 @@ input:checked ~ .tab-content {
   }
 
   nav .btn {
-    font-size: 1em;
+    font-size: 0.75em;
+  }
+
+  .cohort {
+    background: left 100px / 250% no-repeat url(/_nuxt/assets/img/cohort.png)!important;
+    height: 155vh;
+    width: 100vw;
   }
 
   .btn {
