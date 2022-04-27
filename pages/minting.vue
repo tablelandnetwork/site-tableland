@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="mint-page">
     <!-- Header -->
     <HeaderNav></HeaderNav>
-    <div class="ship"></div>
+    <div class="ship" data-aos="fade-down" data-aos-anchor=".info" data-aos-offset="0"></div>
     <header class="bg-navbar" data-aos="fade-down" data-aos-anchor=".choose" data-aos-offset="0">
       <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2">
         <div class="py-4 logo">
@@ -26,7 +26,7 @@
           <div class="lg:flex ">
             <div class="lg:w-1/2 w-full pt-6 " data-aos="fade-up">
               <h1 class="text-white font-Orbitron w-full h-auto text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
-                Meet the "Rigs"
+                Meet the "RIGS"
               </h1>
 
             </div>
@@ -63,7 +63,7 @@
       <div class="container px-6 pt-0 sm:px-12 md:px-36 lg:px-48 pt-0 lg:pt-0">
         <div class="flex">
           <div class="w-full lg:w-1/3 px-6 lg:pb-0 pb-0 pt-0">
-            <h1 class="text-white w-full h-auto text-xl md:text-2xl leading-tighter mb-4 lg:mb-10">A generative 10K NFT with 1,043 handcrafted works of art</h1>
+            <h1 class="text-white w-full h-auto text-xl md:text-2xl leading-tighter mb-4 lg:mb-10">A generative 10K NFT with 1,043 handcrafted works of art. Rigs are your ride to Tableland.</h1>
           </div>
         </div>
         <div class="flex">
@@ -89,7 +89,7 @@
               </div>
               <div class="lg:w-1/2 lg:px-12 py-6 md:py-24 lg:py-32" >
                 <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-4xl lg:text-6xl choose leading-tighter mb-4 lg:mb-10">
-                  Grab a RIG
+                  Grab your RIGS
                 </h1>
                 <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
                   Out beyond the megalopolis, where the broad boulevards of The Grid dissolve into dust and then yawn into great open source plains, you’ll find Tableland. The undeveloped frontier. Terabyte upon terabyte of space waiting to be written into history. It’s raw, uncoded, and simmering with endless opportunity – and incalculable peril. So climb into your Rig and hold onto your brain chips. If you play this one right, the possibilities are endless.
@@ -187,7 +187,7 @@
                 <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
                   In Tableland, this kind of integration can be built into any NFT project using existing NFTs, fungible tokens, or any other state from the execution layer. The possibilities are endless.
                 </p>
-                <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-48 lg:mb-18" data-aos="fade-up">
                   Badges are just the beginning—we also have some post-launch enhancements for Rigs, including the ability to pilot your Rig and unlock animation.
                 </p>
               </div>
@@ -205,9 +205,6 @@
               <h1 class="font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10">
                 The Fleets
               </h1>
-              <p class="text-xl md:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
-                Were formed to give us each our purpose. Each one with its unique knowledge, tools, and practices. Your Guild is your new family and its customs, rituals, and alliances will guide and protect you.
-              </p>
               <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
                 Tableland Rigs are divided into eight mission specific Fleets . Each is engineered to navigate the harsh and unforgiving landscape of Tableland. Your Fleet is your new family and its customs, rituals, and alliances will guide and protect you.
               </p>
