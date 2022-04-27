@@ -60,7 +60,7 @@
             <div class="lg:flex py-12">
               <div class="lg:w-1/2 px-0 py-12" >
                 <h1 data-aos="fade-up" class="text-pink font-Orbitron w-full h-auto text-4xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
-                This summer we’re offering an cohort based community experience
+                This summer we’re offering a cohort based community experience
                 </h1>
                 <p data-aos="fade-up" class="text-pink text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
                   for a small group of pioneer developers to hone their skills, envision, and build radically new web3 experiences using Tableland.</p>
@@ -88,49 +88,32 @@
                 <div class="lg:flex py-12 pb-12 text-center text-white">
                   <div class="lg:w-1/3 w-full px-12 py-0">
                     <img class="icon py-12" src="~assets/img/wrench2.png" data-aos="fade-up"/>
-                    <p class="font-Orbitron text-3xl" data-aos="fade-up">BUILDER COHORT ONBOARDING</p><br>
-                    <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">Community is at the heart of Tableland. We’re excited to launch a developer mentoring and onboarding program. These cohorts will run seasonally. The summer session will be starting after the Rigs launch in early June.</p>
+                    <p class="font-Orbitron text-3xl" data-aos="fade-up">Connect and Learn at the Frontier </p><br>
+                    <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">You will receive mentoring from our genesis team and mentor pool and direct onboarding onto the Tableland stack.  Connect with other leading developers at the frontier.</p>
                   </div>
                   <div class="lg:w-1/3 w-full px-12 py-0">
                     <img class="icon py-12" src="~assets/img/chip2.png" data-aos="fade-up"/>
-                    <p class="font-Orbitron text-3xl" data-aos="fade-up">BUILDER ACCESS TO TESTNET</p><br>
-                    <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">We are aiming for a high-touch onboarding experience. Rigs are the key to testnet. After earning enough POAP to claim a Rig, cohort members will be able to join owner channels in Tableland Discord and start building.</p>
+                    <p class="font-Orbitron text-3xl" data-aos="fade-up">Access to Tableland TestNet</p><br>
+                    <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">Join owner channels in Tableland Discord and start building your own unique use cases.</p>
                   </div>
                   <div class="lg:w-1/3 w-full px-12 py-0">
                     <img class="icon py-12 " src="~assets/img/match2.png" data-aos="fade-up"/>
-                    <p class="font-Orbitron text-3xl" data-aos="fade-up">EXCLUSIVE ACCESS TO PROGRAMS</p><br>
+                    <p class="font-Orbitron text-3xl" data-aos="fade-up">Weekly Events and Hackathons</p><br>
                     <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
-                      <ul>
-                        <li>• Funding opportunities including grant and reward incentives only available to Rig holders. </li>
-                        <li>• Investor pitches for builders. </li>
-                        <li>• Events including virtual and in-person. </li>
-                        <li>• Access to bi-weekly protocol status updates from core Tableland team.</li>
-                      </ul>
+                      Build alongside the best at monthly hackathons and in weekly small group sessions.
                     </p>
                   </div>
                 </div>
-                <div class="lg:flex py-12 pb-12 text-center text-white">
-                  <div class="lg:w-1/3 w-full px-12 py-0">
+                <div class="lg:flex px-48 py-0 pb-12 text-center text-white">
+                  <div class="lg:w-1/2 w-full px-12 py-0">
                     <img class="icon py-12" src="~assets/img/wrench2.png" data-aos="fade-up"/>
-                    <p class="font-Orbitron text-3xl" data-aos="fade-up">BUILDER COHORT ONBOARDING</p><br>
-                    <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">Community is at the heart of Tableland. We’re excited to launch a developer mentoring and onboarding program. These cohorts will run seasonally. The summer session will be starting after the Rigs launch in early June.</p>
+                    <p class="font-Orbitron text-3xl" data-aos="fade-up">Build Fundable Prototypes</p><br>
+                    <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">Create portfolio-worthy prototypes with the help of mentors and peers.</p>
                   </div>
-                  <div class="lg:w-1/3 w-full px-12 py-0">
+                  <div class="lg:w-1/2 w-full px-12 py-0">
                     <img class="icon py-12" src="~assets/img/chip2.png" data-aos="fade-up"/>
-                    <p class="font-Orbitron text-3xl" data-aos="fade-up">BUILDER ACCESS TO TESTNET</p><br>
-                    <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">We are aiming for a high-touch onboarding experience. Rigs are the key to testnet. After earning enough POAP to claim a Rig, cohort members will be able to join owner channels in Tableland Discord and start building.</p>
-                  </div>
-                  <div class="lg:w-1/3 w-full px-12 py-0">
-                    <img class="icon py-12 " src="~assets/img/match2.png" data-aos="fade-up"/>
-                    <p class="font-Orbitron text-3xl" data-aos="fade-up">EXCLUSIVE ACCESS TO PROGRAMS</p><br>
-                    <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
-                      <ul>
-                        <li>• Funding opportunities including grant and reward incentives only available to Rig holders. </li>
-                        <li>• Investor pitches for builders. </li>
-                        <li>• Events including virtual and in-person. </li>
-                        <li>• Access to bi-weekly protocol status updates from core Tableland team.</li>
-                      </ul>
-                    </p>
+                    <p class="font-Orbitron text-3xl" data-aos="fade-up">Access Exclusive Opportunities</p><br>
+                    <p class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">Access exclusive funding opportunities including grants and rewards only available to cohort participants.</p>
                   </div>
                 </div>
               </div>
@@ -143,6 +126,28 @@
             <div class="flex">
               <div class="w-full px-0 py-24" >
                 <img src="~assets/img/timeline.png" style="margin:auto"/>
+              </div>
+            </div>
+            <div class="lg:flex py-12 pb-12 text-center text-white">
+              <div class="lg:w-1/4 w-full px-12 py-0">
+                <p class="text-pink text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                  Three month learning journey runs July through September 2022
+                </p>
+              </div>
+              <div class="lg:w-1/4 w-full px-12 py-0">
+                <p class="text-pink text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                  Monthly hackathons with mentors and advisors
+                </p>
+              </div>
+              <div class="lg:w-1/4 w-full px-12 py-0">
+                <p class="text-pink text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                  Weekly small group learning sessions to explore the frontiers
+                </p>
+              </div>
+              <div class="lg:w-1/4 w-full px-12 py-0">
+                <p class="text-pink text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                  Pod based mentorship with the Tableland team and other world class developers
+                </p>
               </div>
             </div>
             <p class="font-Orbitron text-pink text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10">We’re building a cohort based guild of pioneering builders.</p>

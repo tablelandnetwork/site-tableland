@@ -274,6 +274,7 @@ footer {
 .mint-page {
   background: bottom / cover no-repeat url('~assets/img/minting.png');
   background-attachment: fixed;
+  overflow: hidden;
 }
 
 /** minting **/
