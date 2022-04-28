@@ -27,10 +27,6 @@ body {
   animation: reveal 2s;
 }
 
-.container {
-  zoom: 0.9;
-}
-
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: 2px;
 }
@@ -209,6 +205,27 @@ nav li a:hover {
   .community-top {
     padding-top: 24rem !important;
   }
+  .animated-carousel {
+    height: 350px!important;
+  }
+  .animated-carousel .vehicle {
+    min-width: 350px!important;
+  }
+}
+
+@media (min-width: 2160px) {
+  .community-top {
+    padding-top: 24rem !important;
+  }
+  .animated-carousel {
+    height: 400px!important;
+  }
+  .animated-carousel .vehicle {
+    min-width: 400px!important;
+  }
+  .minting {
+    padding-top: 5%;
+  }
 }
 
 .community-bottom {
@@ -283,6 +300,15 @@ footer {
   height: auto;
   min-height: 100vh;
   width: 100%;
+}
+
+.minting .vehicle img {
+  width: 100%;
+}
+
+.minting .btn {
+  z-index: 999!important;
+  position: absolute;
 }
 
 .info {
@@ -540,7 +566,7 @@ footer {
   width: 100%;
   height: 350px;
   background: right / cover no-repeat url('~assets/img/ship.png');
-  z-index: 999;
+  z-index: 2;
 }
 
 .ship.aos-init {
@@ -566,7 +592,8 @@ footer {
 .animated-carousel {
   overflow: hidden;
   display: flex;
-  height: 250px;
+  height: 300px;
+  margin-bottom: 30px!important;
   width: calc(250px * 14);
   margin-left: -10%!important;
   margin-right: -10%!important;
@@ -575,7 +602,7 @@ footer {
 
 .animated-carousel .vehicle {
   margin: 0px!important;
-  min-width: 200px!important;
+  min-width: 200px;
   margin-left:0px!important;
 }
 
