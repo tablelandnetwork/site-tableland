@@ -300,6 +300,7 @@ footer {
   height: auto;
   min-height: 100vh;
   width: 100%;
+  background-image: linear-gradient(0deg, rgba(255,0,0,0), #b176a2);
 }
 
 .minting .vehicle img {
