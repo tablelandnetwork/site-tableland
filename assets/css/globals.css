@@ -533,7 +533,7 @@ footer {
   background-image: linear-gradient(180deg, #8d5392 0%, #8CC5E3 100%);
   height: auto;
   width: 100vw;
-  max-width: 1920px !important;
+  max-width: 100%!important;
 }
 
 /** animations  **/
