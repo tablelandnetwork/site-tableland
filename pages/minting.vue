@@ -19,21 +19,21 @@
     <!-- minting -->
     <section class="minting">
 
-      <div class="container px-6 sm:px-12 md:px-36 lg:px-48 xl:px-12 flex pt-24 lg:pt-48 justify-between">
+      <div class="container px-6 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-24 lg:pt-24 xl:pt-36 justify-between">
 
-        <div class="lg:w-full px-6 lg:pb-12 pb-6 pt-12" data-aos="fade-up">
+        <div class="lg:w-full px-0 lg:pb-12 pb-6 pt-12" data-aos="fade-up">
 
           <div class="lg:flex ">
-            <div class="lg:w-1/2 w-full pt-6 " data-aos="fade-up">
-              <h1 class="text-white font-bold font-Orbitron w-full h-auto text-3xl md:text-4xl lg:text-5xl xl:text-7xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+            <div class="lg:w-2/3 w-full pt-6 " data-aos="fade-up">
+              <h1 class="text-white font-bold font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
                 Meet the "RIGS"
               </h1>
 
             </div>
 
-            <div class="lg:w-1/2 w-full px-0 lg:px-0 pt-10 text-right" data-aos="fade-up">
+            <div class="lg:w-1/3 w-full px-0 lg:px-0 lg:pt-10 pt-0 text-right" data-aos="fade-up">
 
-              <h2 class="xl:text-5xl lg:text-4xl font-bold text-2xl text-white font-Orbitron" data-aos="fade-up"><countdown :time="time"><template slot-scope="props">{{ props.days }}d:{{ props.hours }}h:{{ props.minutes }}m:{{ props.seconds }}s</template></countdown></h2>
+              <h2 class="xl:text-5xl lg:text-4xl md:text-2xl font-bold text-2xl text-white font-Orbitron" data-aos="fade-up"><countdown :time="time"><template slot-scope="props">{{ props.days }}d:{{ props.hours }}h:{{ props.minutes }}m:{{ props.seconds }}s</template></countdown></h2>
 
             </div>
           </div>
@@ -60,10 +60,10 @@
         </div>
 
       </div>
-      <div class="container px-6 pt-0 sm:px-12 md:px-36 lg:px-48 xl:px-12 pt-0 lg:pt-0">
+      <div class="container px-0 pt-0 sm:px-12 md:px-36 lg:px-48 xl:px-12 pt-0 lg:pt-0">
         <div class="flex">
-          <div class="w-full lg:w-1/3 xl:w-1/2 px-6 lg:pb-0 pb-0 pt-0">
-            <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-4xl leading-tighter mb-4 lg:mb-10">A generative 10K NFT with 1,043 handcrafted works of art. Rigs are your ride to Tableland.</h1>
+          <div class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 lg:pb-0 pb-0 pt-0">
+            <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-3xl leading-tighter mb-4 lg:mb-10">A generative 10K NFT with 1,043 handcrafted works of art. Rigs are your ride to Tableland.</h1>
           </div>
         </div>
         <div class="flex">
