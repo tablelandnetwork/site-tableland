@@ -585,7 +585,7 @@ footer {
 }
 
 .ship.aos-init.aos-animate {
-  bottom: -400px;
+  bottom: -500px!important;
   transition: all 0.8s ease-in-out;
 }
 
