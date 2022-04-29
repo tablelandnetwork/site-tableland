@@ -34,11 +34,11 @@
       <!-- rig -->
       <section class="rig" id="start">
         <div class="rig-break"></div>
-          <div class="container py-16 px-16 ">
+          <div class="container lg:py-16 px-4 lg:px-16">
             <div class="flex">
 
               <div class="lg:w-2/3 px-2" >
-                <h1 data-aos="fade-up" class="text-pink font-Orbitron w-full h-auto text-4xl lg:text-6xl leading-tighter mb-0 lg:mb-10">
+                <h1 data-aos="fade-up" class="text-pink font-Orbitron w-full h-auto text-3xl lg:text-6xl leading-tighter mb-0 lg:mb-10">
                   Tableland enables developers to build dynamic Web3 experiences through relational metadata and SQL
                 </h1>
               </div>
@@ -47,10 +47,10 @@
               </div>
             </div>
             <div class="lg:flex lg:py-12">
-              <div class="lg:w-1/2 w-full mt-48" >
+              <div class="lg:w-1/2 w-full lg:mt-48" >
                 <img src="~assets/img/wall2.png"/>
               </div>
-              <div class="lg:w-1/2 px-12 py-32 lg:mt-32" >
+              <div class="lg:w-1/2 px-12 py-12 lg:py-32 lg:mt-32" >
                 <p data-aos="fade-up" class="text-pink text-xl lg:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
                   We’re home to those who are in pursuit of that same vision, and we’re ready to support them with tools, resources, and rewards.
                 </p>
@@ -59,7 +59,7 @@
 
             <div class="lg:flex py-12">
               <div class="lg:w-1/2 px-0 py-12" >
-                <h1 data-aos="fade-up" class="text-pink font-Orbitron w-full h-auto text-4xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
+                <h1 data-aos="fade-up" class="text-pink font-Orbitron w-full h-auto text-3xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
                 This summer we’re offering a cohort based community experience
                 </h1>
                 <p data-aos="fade-up" class="text-pink text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
@@ -104,7 +104,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="lg:flex px-48 py-0 pb-12 text-center text-white">
+                <div class="lg:flex lg:px-48 py-0 pb-12 text-center text-white">
                   <div class="lg:w-1/2 w-full px-12 py-0">
                     <img class="icon py-12" src="~assets/img/wrench2.png" data-aos="fade-up"/>
                     <p class="font-Orbitron text-3xl" data-aos="fade-up">Build Fundable Prototypes</p><br>

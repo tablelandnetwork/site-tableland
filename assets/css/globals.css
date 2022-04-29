@@ -494,7 +494,7 @@ footer {
 
 .cohort-info {
 	background: left 200px / 100% no-repeat url('~assets/img/cohort2.png');
-  background-color: #c370aa;
+  background-color: #311b41;
   height: auto;
   width: 100vw;
   max-width: 100%!important;
@@ -894,7 +894,7 @@ input:checked ~ .tab-content {
   }
 
   .guild-list .vehicle {
-    max-width: 170px!important;
+    max-width: 160px!important;
   }
 
   .info .float-frame {
