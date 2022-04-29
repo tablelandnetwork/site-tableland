@@ -19,7 +19,7 @@
     <!-- minting -->
     <section class="minting">
 
-      <div class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-6 lg:pt-24 xl:pt-36 justify-between">
+      <div class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-8 lg:pt-24 xl:pt-36 justify-between">
 
         <div class="lg:w-full px-0 lg:pb-12 pb-6 pt-12" data-aos="fade-up">
 
