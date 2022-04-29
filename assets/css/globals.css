@@ -199,18 +199,19 @@ nav li a:hover {
   .community-top {
     padding-top: 16rem !important;
   }
-}
-
-@media (min-width: 1760px) {
-  .community-top {
-    padding-top: 24rem !important;
-  }
   .animated-carousel {
     height: 350px!important;
   }
   .animated-carousel .vehicle {
     min-width: 350px!important;
   }
+}
+
+@media (min-width: 1760px) {
+  .community-top {
+    padding-top: 24rem !important;
+  }
+
 }
 
 @media (min-width: 2160px) {
@@ -223,8 +224,11 @@ nav li a:hover {
   .animated-carousel .vehicle {
     min-width: 400px!important;
   }
-  .minting {
-    padding-top: 5%;
+  .ship {
+    height: 700px!important;
+    bottom: -200px!important;
+    left: 0px;
+    width: 100%;
   }
 }
 
@@ -562,10 +566,10 @@ footer {
 
 .ship {
   position: fixed;
-  bottom: -100px;
+  bottom: -150px;
   left: 0px;
   width: 100%;
-  height: 350px;
+  height: 500px;
   background: right / cover no-repeat url('~assets/img/ship.png');
   z-index: 2;
 }
@@ -593,9 +597,9 @@ footer {
 .animated-carousel {
   overflow: hidden;
   display: flex;
-  height: 300px;
+  height: 350px;
   margin-bottom: 30px!important;
-  width: calc(250px * 14);
+  width: calc(250px * 17);
   margin-left: -10%!important;
   margin-right: -10%!important;
   margin: 0 auto;
@@ -603,7 +607,7 @@ footer {
 
 .animated-carousel .vehicle {
   margin: 0px!important;
-  min-width: 200px;
+  min-width: 350px;
   margin-left:0px!important;
 }
 
@@ -838,6 +842,14 @@ input:checked ~ .tab-content {
     bottom: -150px!important;
     display: none;
   }
+  nav li a {
+    border-bottom: 0px;
+    transition: all 0.2s ease-in-out;
+    font-size: 1em;
+  }
+  nav .btn {
+    font-size: 1em;
+  }
 
 }
 
@@ -882,10 +894,6 @@ input:checked ~ .tab-content {
 
   .text-xl {
     font-size: 1.15rem!important;
-  }
-
-  .minting {
-    min-height: 125vh!important;
   }
 
   .guild {

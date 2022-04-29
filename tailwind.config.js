@@ -53,8 +53,10 @@ export default {
     container: {
       center: true,
       screens: {
+        sm: '1280px',
+        md: '1480px',
         lg: '1760px',
-        xl: '1760px',
+        xl: '2150px',
         '2xl': '1760px'
       }
     }
