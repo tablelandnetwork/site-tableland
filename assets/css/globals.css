@@ -200,16 +200,22 @@ nav li a:hover {
     padding-top: 16rem !important;
   }
   .animated-carousel {
-    height: 350px!important;
+    height: 300px!important;
   }
   .animated-carousel .vehicle {
-    min-width: 350px!important;
+    min-width: 300px!important;
   }
 }
 
 @media (min-width: 1760px) {
   .community-top {
     padding-top: 24rem !important;
+  }
+  .animated-carousel {
+    height: 350px!important;
+  }
+  .animated-carousel .vehicle {
+    min-width: 350px!important;
   }
 
 }
@@ -566,7 +572,7 @@ footer {
 
 .ship {
   position: fixed;
-  bottom: -150px;
+  bottom: -200px;
   left: 0px;
   width: 100%;
   height: 500px;
@@ -807,6 +813,12 @@ input:checked ~ .tab-content {
     height: 125vh;
     width: 100vw;
   }
+  .animated-carousel {
+    height: 300px!important;
+  }
+  .animated-carousel .vehicle {
+    min-width: 300px!important;
+  }
 }
 
 @media (min-width: 1640px) {
@@ -839,7 +851,7 @@ input:checked ~ .tab-content {
     font-size: 19px!important;
   }
   .ship {
-    bottom: -150px!important;
+    bottom: -250px!important;
     display: none;
   }
   nav li a {
