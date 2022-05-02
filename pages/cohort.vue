@@ -179,6 +179,20 @@
   <script>
 
   export default {
+    head(){
+      return {
+        title: 'Cohort - Tableland',
+        meta:[
+          { hid: 'og-type', property: 'og:type', content: 'website' },
+          { hid: 'og-title', property: 'og:title', content: 'Summer Cohort' },
+          { hid: 'og-sitename', property: 'og:site_name', content: 'Tableland - Build web3 with SQL' },
+          { hid: 'og-desc', property: 'og:description', content: 'Learn, connect, and build on the frontiers of the Web.' },
+          { hid: 'og-image', property: 'og:image',
+            content: 'https://i.imgur.com/o1i83B0.jpg'
+          },
+        ]
+      }
+    },
     computed: {
       ethereum: function () {
         return window.ethereum;
@@ -189,6 +203,7 @@
         el: document.querySelector('#js-scroll'),
         smooth: true,
       });
-    }
+    },
+
   };
   </script>
