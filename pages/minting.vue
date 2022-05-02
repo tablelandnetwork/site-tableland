@@ -175,7 +175,7 @@
                 </p>
               </div>
             </div>
-            <div class="lg:flex lg:mb-48">
+            <div class="lg:flex lg:mb-48 justify-between">
 
               <div class="lg:w-1/2 lg:px-12 lg:py-12 w-full" >
                 <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-4xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
@@ -192,7 +192,7 @@
                 </p>
               </div>
               <div class="lg:w-1/2 lg:px-0 lg:py-32 w-full text-center" data-aos="fade-up">
-                <img src="~assets/img/badge.png" />
+                <img src="~assets/img/badge.png" style="margin: auto;"/>
               </div>
             </div>
           </div>
@@ -550,13 +550,7 @@
       <!-- showcase -->
       <section class="md:block showcase py-32 relative">
       <div class="showcase-break"></div>
-      <div class="lg:w-1/2 w-full " style="margin-top:-100px;z-index:999;position: absolute;left: 0;overflow:auto;">
-        <img src="~assets/img/wall2.png"/>
-      </div>
-      <div data-aos="fade-up" class="w-1/3" style="margin-top: -700px;overflow: auto;position: absolute;right: 0;">
-        <img src="~assets/img/wall.png"/>
-      </div>
-        <div class="container" style="margin-top:-150px;">
+        <div class="container" style="margin-top:-100px;">
           <div class="text-center">
             <p class="font-Orbitron text-blue text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10">What will you build?</p>
             <ButtonLink href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f">See use cases</ButtonLink>

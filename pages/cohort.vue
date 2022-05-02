@@ -79,7 +79,7 @@
             <!-- Airlights -->
               <div class="container px-6 md:px-9 lg:px-16 pt-24 ">
                 <div class="flex py-12 px-12 text-center">
-                  <div class="w-full px-12 pt-24 py-0">
+                  <div class="w-full px-12 lg:pt-24 py-0">
                     <h1 class="font-Orbitron w-full h-auto text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10 text-white">
                     Why should i apply?
                     </h1>
@@ -124,30 +124,11 @@
         <div class="container px-24 md:px-32 lg:px-48">
           <div class="text-center">
             <div class="flex">
-              <div class="w-full px-0 py-24" >
+              <div class="w-full hidden md:block px-0 py-24" >
                 <img src="~assets/img/timeline.png" style="margin:auto"/>
               </div>
-            </div>
-            <div class="lg:flex py-12 pb-12 text-center text-white">
-              <div class="lg:w-1/4 w-full px-12 py-0">
-                <p class="text-pink text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
-                  Three month learning journey runs July through September 2022
-                </p>
-              </div>
-              <div class="lg:w-1/4 w-full px-12 py-0">
-                <p class="text-pink text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
-                  Monthly hackathons with mentors and advisors
-                </p>
-              </div>
-              <div class="lg:w-1/4 w-full px-12 py-0">
-                <p class="text-pink text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
-                  Weekly small group learning sessions to explore the frontiers
-                </p>
-              </div>
-              <div class="lg:w-1/4 w-full px-12 py-0">
-                <p class="text-pink text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
-                  Pod based mentorship with the Tableland team and other world class developers
-                </p>
+              <div class="w-full block md:hidden px-0 py-24" >
+                <img src="~assets/img/timeline_mobile.png" style="margin:auto"/>
               </div>
             </div>
             <p class="font-Orbitron text-pink text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10">We’re building a cohort based guild of pioneering builders.</p>

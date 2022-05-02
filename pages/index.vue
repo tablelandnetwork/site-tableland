@@ -151,13 +151,7 @@
     <!-- showcase -->
     <section class="md:block showcase py-32 relative">
     <div class="showcase-break"></div>
-    <div class="lg:w-1/2 w-full " style="margin-top:-100px;z-index:999;position: absolute;left: 0;overflow:auto;">
-      <img src="~assets/img/wall2.png"/>
-    </div>
-    <div data-aos="fade-up" class="w-1/3" style="margin-top: -700px;overflow: auto;position: absolute;right: 0;">
-      <img src="~assets/img/wall.png"/>
-    </div>
-      <div class="container" style="margin-top:-150px;">
+      <div class="container" style="margin-top:-100px;z-index:999!important;">
         <div class="text-center">
           <p class="font-Orbitron text-blue text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10">What will you build?</p>
           <ButtonLink href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f">See use cases</ButtonLink>
