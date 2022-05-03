@@ -11,7 +11,8 @@
 
     <!-- hero -->
     <section class="hero">
-      <div class="container px-6 md:px-9 lg:px-16 flex items-center pt-36 lg:pt-48">
+      <div class="container">
+      <div class="px-6 md:px-9 lg:px-16 flex items-center pt-36 lg:pt-48">
         <div class="lg:w-2/3">
           <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
             Build web3 with <span class="font-black">SQL</span>
@@ -20,24 +21,38 @@
             Tableland is a network and relational metadata protocol for EVM chains like Ethereum.
             Built for developers, NFT creators, and web3 visionaries.
           </p>
-          <div class="hero-btn hidden md:inline-block text-center md:text-left mb-18 lg:mb-48" data-aos="fade-up">
+          <div class="hero-btn hidden md:inline-block text-center md:text-left" data-aos="fade-up">
             <ButtonLink href="https://docs.tableland.xyz">Get started</ButtonLink>
           </div>
           <p class="hidden text-2xl md:text-3xl lg:text-4.25xl leading-snug md:leading-snug font-medium" data-aos="fade-up">
             Use familiar SQL tables to read and write dynamic NFT metadata or application
             data–all orchestrated by token networks like Ethereum.
           </p>
-          <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10 mt-24 choose" data-aos="fade-up">
+        </div>
+      </div>
+      <div class="px-6 md:px-9 lg:px-16 flex justify-between mt-24">
+        <div class="lg:w-1/2">
+          <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10 choose lg:px-6" data-aos="fade-up">
             Choose your <span class="font-black">Rig</span>
           </h1>
-          <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+          <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18 lg:px-6" data-aos="fade-up">
             Your Rig is your custom machine. There are none that are like it, and this one is yours. It’s a purpose-built code-based machine and your key to Tableland.
           </p>
           <div class="hero-btn md:inline-block md:text-left mb-18 lg:mb-48" data-aos="fade-up">
-            <ButtonLink href="/minting">Learn more</ButtonLink>
+            <ButtonLink href="/rigs">Learn more</ButtonLink>
+          </div>
+        </div>
+        <div class="lg:w-1/2 px-12 py-12">
+          <div class="carousel">
+            <div><img src="~assets/img/slide_1.jpg"/></div>
+            <div><img src="~assets/img/slide_2.jpg"/></div>
+            <div><img src="~assets/img/slide_3.jpg"/></div>
+            <div><img src="~assets/img/slide_4.jpg"/></div>
+            <div><img src="~assets/img/slide_5.jpg"/></div>
           </div>
         </div>
       </div>
+    </div>
     </section>
 
     <!-- garage -->
