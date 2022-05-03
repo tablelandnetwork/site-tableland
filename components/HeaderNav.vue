@@ -55,12 +55,8 @@ export default {
           href: 'https://mirror.xyz/tableland.eth'
         },
         {
-          title: 'Cohort',
-          href: '/cohort'
-        },
-        {
-          title: 'Mint',
-          href: '/minting'
+          title: 'Rigs',
+          href: '/rigs'
         },
         {
           title: 'Discord',

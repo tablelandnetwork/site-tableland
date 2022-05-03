@@ -4,7 +4,7 @@
     <!-- Header -->
     <HeaderNav></HeaderNav>
 
-    <header class="bg-navbar pt-0" data-aos="fade-down" data-aos-anchor=".sql">
+    <header class="bg-navbar pt-0" data-aos="fade-down" data-aos-anchor=".bg-gradient">
       <HeaderNav></HeaderNav>
     </header>
 
@@ -67,23 +67,11 @@
     </section>
 
     <!-- sql -->
-    <section class="sql">
+    <!-- <section class="sql">
       <div class="garage-break"></div>
       <div class="container px-6 md:px-9 lg:px-16 flex pt-10 xl:pt-14">
         <div class="lg:w-2/3 xl:w-1/2">
-          <!-- <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
-            In Tableland, we speak SQL
-          </h3>
-          <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2" data-aos="fade-up">
-            1–The bulk of digital information is stored in relational tables.
-          </p>
-          <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2" data-aos="fade-up">
-            2–Your familiar SQL tables are stored on a decentralized network of validators
-            and anchored to Ethereum as transferable NFTs, providing ownership and access control.
-          </p>
-          <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light" data-aos="fade-up">
-            3–Easy as pie, right?
-          </p> -->
+
           <h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
             Learn, connect, and build on the frontiers of the Web.
           </h3>
@@ -95,7 +83,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- playground -->
     <div class="bg-gradient bg-gradient-to-b from-violet to-pink">

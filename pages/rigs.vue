@@ -175,7 +175,7 @@
                 </p>
               </div>
             </div>
-            <div class="lg:flex lg:mb-48 justify-between">
+            <div class="lg:flex justify-between">
 
               <div class="lg:w-1/2 lg:px-12 lg:py-12 w-full" >
                 <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-4xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
@@ -193,6 +193,23 @@
               </div>
               <div class="lg:w-1/2 lg:px-0 lg:py-32 w-full text-center" data-aos="fade-up">
                 <img src="~assets/img/badge.png" style="margin: auto;"/>
+              </div>
+            </div>
+            <div class="lg:flex lg:mb-48 ">
+              <div class="lg:w-1/2 lg:px-12 py-24">
+                <img src="~assets/img/oddfellow.png"/>
+              </div>
+              <div class="lg:w-1/2 lg:px-12 py-6 md:py-24 lg:py-32" >
+                <h1 data-aos="fade-up" class="font-Orbitron w-full h-auto text-4xl lg:text-6xl choose leading-tighter mb-4 lg:mb-10">
+                  Tableland + Oddfellows = unfettered creativity
+                </h1>
+                <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                  Tableland’s unique blend of relational trait mutability governed by token-based rules gives creatives like Oddfellows the tools they need to dream up new Web3 experiences with rich interaction and utility. More primitives = more innovation.
+                </p>
+                <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
+                  Read more about Oddfellows at <a href="https://oddfellows.tv" target="_blank">https://oddfellows.tv</a>.
+                </p>
+
               </div>
             </div>
           </div>
