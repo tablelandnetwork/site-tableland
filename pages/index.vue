@@ -184,6 +184,20 @@
 <script>
 
 export default {
+  head(){
+    return {
+      title: 'Tableland - Build web3 with SQL',
+      meta:[
+        { hid: 'og-type', property: 'og:type', content: 'website' },
+        { hid: 'og-title', property: 'og:title', content: 'Summer Cohort' },
+        { hid: 'og-sitename', property: 'og:site_name', content: 'Tableland - Build web3 with SQL' },
+        { hid: 'og-desc', property: 'og:description', content: 'Tableland is a network and relational metadata protocol for EVM chains like Ethereum. Built for developers, NFT creators, and web3 visionaries.' },
+        { hid: 'og-image', property: 'og:image',
+          content: 'https://i.imgur.com/5ErjwNI.png'
+        },
+      ]
+    }
+  },
   computed: {
     ethereum: function () {
       return window.ethereum;
