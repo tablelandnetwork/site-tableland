@@ -8,7 +8,7 @@ export default {
   ssr: false,
 
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'server',
+  target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -80,5 +80,11 @@ export default {
     options: {
            fix: true
          }
-  }
+  },
+
+  hooks: {
+    'generate:page': page => {
+      page.html = page.html.replace(/ data-n-head=".*?"/gi, '').replace(/ data-hid=".*?"/gi, '')
+    },
+  },
 };
