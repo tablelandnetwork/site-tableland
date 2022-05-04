@@ -12,7 +12,7 @@
           <li class="hidden sm:inline-block"><a href="#start">Rigs</a></li>
           <li class="hidden sm:inline-block"><a href="#fleets">Fleets</a></li>
           <li class="hidden sm:inline-block"><a href="#faq">FAQ</a></li>
-          <li><a href="#whitelist" class="btn bg-black text-white">Join Discord</a></li>
+          <li><a href="https://discord.gg/hpd5WWn4Ys" target="_blank" class="btn bg-black text-white">Join Discord</a></li>
         </ul>
       </nav>
     </header>
@@ -68,7 +68,7 @@
         </div>
         <div class="flex">
           <div class="w-full px-6 lg:pb-0 pb-0 pt-0">
-            <a href="https://docs.tableland.xyz" class="btn bg-black text-white">Join Discord</a>
+            <a href="https://discord.gg/hpd5WWn4Ys" class="btn bg-black text-white">Join Discord</a>
           </div>
         </div>
       </div>
