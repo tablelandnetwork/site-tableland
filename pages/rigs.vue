@@ -603,6 +603,7 @@
       return {
         title: 'Meet the RIGS - Tableland',
         meta:[
+          { hid: `og-url`, property: 'og:url', content: `/${this.$route.path}`},
           { hid: 'og-type', property: 'og:type', content: 'website' },
           { hid: 'og-title', property: 'og:title', content: 'Meet the RIGS' },
           { hid: 'og-sitename', property: 'og:site_name', content: 'Tableland - Build web3 with SQL' },
@@ -610,6 +611,7 @@
           { hid: 'og-image', property: 'og:image',
             content: 'https://i.imgur.com/5YHLnkC.png'
           },
+
         ]
       }
     },
