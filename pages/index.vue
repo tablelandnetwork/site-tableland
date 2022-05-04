@@ -31,7 +31,7 @@
         </div>
       </div>
       <div class="px-6 md:px-9 lg:px-16 flex justify-between mt-24">
-        <div class="w-full">
+        <div class="w-full lg:w-1/2">
           <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10 choose" data-aos="fade-up">
             Grab your <span class="font-black">Rig</span>
           </h1>

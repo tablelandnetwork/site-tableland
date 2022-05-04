@@ -16,7 +16,7 @@
                 {{ item.title }}
               </a>
             </li>
-            <li><a href="https://docs.tableland.xyz" class="btn bg-black text-white">Get started</a></li>
+            <li><a href="/rigs" class="btn bg-black text-white">Rigs</a></li>
           </ul>
         </div>
       </nav>
@@ -51,16 +51,12 @@ export default {
       menu: false,
       items: [
         {
-          title: 'Blog',
-          href: 'https://mirror.xyz/tableland.eth'
-        },
-        {
-          title: 'Rigs',
-          href: '/rigs'
-        },
-        {
           title: 'Discord',
           href: 'https://discord.gg/hpd5WWn4Ys'
+        },
+        {
+          title: 'Blog',
+          href: 'https://mirror.xyz/tableland.eth'
         },
         {
           title: 'Docs',

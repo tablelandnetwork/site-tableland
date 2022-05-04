@@ -35,6 +35,10 @@ div#webpack-hot-middleware-clientOverlay {
   display: none;
 }
 
+.container {
+  max-width: 1920px;
+}
+
 @keyframes reveal {
   from {opacity: 0.5;}
   to {opacity: 1;}
