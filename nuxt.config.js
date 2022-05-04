@@ -26,7 +26,7 @@ export default {
       { hid: 'og-sitename', property: 'og:site_name', content: 'Tableland - Build web3 with SQL' },
       { hid: 'og-desc', property: 'og:description', content: 'A generative 10K NFT with 1,043 handcrafted works of art. Rigs are your ride to Tableland.' },
       { hid: 'og-image', property: 'og:image',
-        content: 'https://i.imgur.com/5YHLnkC.png'
+        content: 'https://i.imgur.com/Akd149E.jpg'
       },
     ],
     link: [
