@@ -5,14 +5,14 @@ export default {
     validatorNet: process.env.NETWORK || 'testnet'
   },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: true,
+  ssr: false,
 
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Tableland',
+    title: 'Meet the RIGS - Tableland',
     htmlAttrs: {
       lang: 'en'
     },
@@ -22,11 +22,11 @@ export default {
       { hid: 'description', name: 'description', content: 'Build web3 with SQL' },
       { name: 'format-detection', content: 'telephone=no' },
       { hid: 'og-type', property: 'og:type', content: 'website' },
-      { hid: 'og-title', property: 'og:title', content: 'Tableland - Build web3 with SQL ' },
-      { hid: 'og-sitename', property: 'og:site_name', content: 'Tableland' },
-      { hid: 'og-desc', property: 'og:description', content: 'Tableland is a network and relational metadata protocol for EVM chains like Ethereum. Built for developers, NFT creators, and web3 visionaries.' },
+      { hid: 'og-title', property: 'og:title', content: 'Meet the RIGS' },
+      { hid: 'og-sitename', property: 'og:site_name', content: 'Tableland - Build web3 with SQL' },
+      { hid: 'og-desc', property: 'og:description', content: 'A generative 10K NFT with 1,043 handcrafted works of art. Rigs are your ride to Tableland.' },
       { hid: 'og-image', property: 'og:image',
-        content: 'https://i.imgur.com/5ErjwNI.png'
+        content: 'https://i.imgur.com/5YHLnkC.png'
       },
     ],
     link: [
