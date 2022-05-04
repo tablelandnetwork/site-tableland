@@ -119,7 +119,8 @@ nav li a:hover {
   height: calc(100vw * 1.43229166667);
   max-height: 2750px;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 1920px!important;
+  margin: auto;
 }
 
 /** garage **/
@@ -130,7 +131,8 @@ nav li a:hover {
   max-height: 1850px;
   min-height: 925px;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 1920px!important;
+  margin: auto;
 }
 
 .garage-break {
@@ -154,7 +156,8 @@ nav li a:hover {
   height: calc(100vw * 1.024);
   min-height: 938px;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 1920px!important;
+  margin: auto;
 }
 
 @media
@@ -184,7 +187,13 @@ nav li a:hover {
   max-height: 3353px;
   min-height: 1677px;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 1920px!important;
+  margin: auto;
+}
+
+.landing {
+  max-width: 1920px!important;
+  margin: auto;
 }
 
 @media
@@ -545,6 +554,11 @@ footer {
   height: auto;
   width: 100vw;
   max-width: 100%!important;
+}
+
+.console {
+  max-width: 1920px!important;
+  margin: auto;
 }
 
 /** animations  **/

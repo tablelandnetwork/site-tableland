@@ -25,13 +25,13 @@
 
           <div class="lg:flex ">
             <div class="lg:w-2/3 w-full pt-6 " data-aos="fade-up">
-              <h1 class="text-white font-bold font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+              <h1 class="text-white font-bold font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up">
                 Meet the "RIGS"
               </h1>
 
             </div>
 
-            <div class="lg:w-1/3 w-full px-0 lg:px-0 lg:pt-10 pt-0 text-right" data-aos="fade-up">
+            <div class="lg:w-1/3 w-full px-0 lg:px-0 lg:pt-10 pt-0 text-right hidden" data-aos="fade-up">
 
               <h2 class="xl:text-5xl lg:text-4xl md:text-2xl font-bold text-2xl text-white font-Orbitron" data-aos="fade-up"><countdown :time="time"><template slot-scope="props">{{ props.days }}d:{{ props.hours }}h:{{ props.minutes }}m:{{ props.seconds }}s</template></countdown></h2>
 
@@ -63,7 +63,7 @@
       <div class="container px-0 pt-0 sm:px-12 md:px-36 lg:px-48 xl:px-12 pt-0 lg:pt-0">
         <div class="flex">
           <div class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 lg:pb-0 pb-0 pt-0">
-            <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-3xl leading-tighter mb-4 lg:mb-10">A generative 10K NFT with 1,043 handcrafted works of art. Rigs are your ride to Tableland.</h1>
+            <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-3xl leading-tighter mb-4 lg:mb-10">A generative NFT with 1,043 handcrafted works of art. Rigs are your ride to Tableland.</h1>
           </div>
         </div>
         <div class="flex">
@@ -480,84 +480,28 @@
                 <input type="checkbox" id="tab-1">
                 <label class="tab-label" for="tab-1">When is the mint date?</label>
                 <div class="tab-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                Spring 2022. Date TBD.
                 </div>
               </div>
               <div class="tab">
                 <input type="checkbox" id="tab-2">
-                <label class="tab-label" for="tab-2">Is there a fixed price? Or how will mint pricing take place?</label>
+                <label class="tab-label" for="tab-2">What chain are the Rigs on?</label>
                 <div class="tab-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                  Ethereum
                 </div>
               </div>
               <div class="tab">
                 <input type="checkbox" id="tab-3">
-                <label class="tab-label" for="tab-3">What is the utility of the Tableland NFT?</label>
+                <label class="tab-label" for="tab-3">Who are the artists?</label>
                 <div class="tab-content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                  <a href="https://oddfellows.tv">Oddfellows.tv</a>
                 </div>
               </div>
               <div class="tab">
                 <input type="checkbox" id="tab-4">
-                <label class="tab-label" for="tab-4">How many NFTs are there total?</label>
+                <label class="tab-label" for="tab-4">How does the allowlist work?</label>
                 <div class="tab-content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                </div>
-              </div>
-              <div class="tab">
-                <input type="checkbox" id="tab-5">
-                <label class="tab-label" for="tab-5">How many will be minted on the above mint date?</label>
-                <div class="tab-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                </div>
-              </div>
-              <div class="tab">
-                <input type="checkbox" id="tab-6">
-                <label class="tab-label" for="tab-6">Do the different types of NFTs grant different roles or have different utility?</label>
-                <div class="tab-content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                </div>
-              </div>
-              <div class="tab">
-                <input type="checkbox" id="tab-7">
-                <label class="tab-label" for="tab-7">Who are the artists?</label>
-                <div class="tab-content">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                </div>
-              </div>
-              <div class="tab">
-                <input type="checkbox" id="tab-8">
-                <label class="tab-label" for="tab-8">Have they done other projects before?</label>
-                <div class="tab-content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                </div>
-              </div>
-              <div class="tab">
-                <input type="checkbox" id="tab-9">
-                <label class="tab-label" for="tab-9">Is there a plan for the next round of NFTs to be minted?</label>
-                <div class="tab-content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                </div>
-              </div>
-              <div class="tab">
-                <input type="checkbox" id="tab-10">
-                <label class="tab-label" for="tab-10">How do I get on the whitelist? </label>
-                <div class="tab-content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                </div>
-              </div>
-              <div class="tab">
-                <input type="checkbox" id="tab-11">
-                <label class="tab-label" for="tab-11">Will they be sold in ETH?</label>
-                <div class="tab-content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
-                </div>
-              </div>
-              <div class="tab">
-                <input type="checkbox" id="tab-12">
-                <label class="tab-label" for="tab-12">Is there a window of time they are open for sale? Or available until are all sold? </label>
-                <div class="tab-content">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec tortor cursus risus lacinia fringilla. Fusce nec arcu in nunc varius viverra. Maecenas nec tempus felis. Phasellus id urna erat. Mauris lacus ex, fringilla ac odio elementum, finibus porttitor urna. Duis augue leo, egestas ut sodales eget, dictum in tellus.
+                  Details coming soon. <a href="https://discord.gg/hpd5WWn4Ys">Join our Discord</a> for updates.
                 </div>
               </div>
             </div>
@@ -607,7 +551,7 @@
           { hid: 'og-type', property: 'og:type', content: 'website' },
           { hid: 'og-title', property: 'og:title', content: 'Meet the RIGS' },
           { hid: 'og-sitename', property: 'og:site_name', content: 'Tableland - Build web3 with SQL' },
-          { hid: 'og-desc', property: 'og:description', content: 'A generative 10K NFT with 1,043 handcrafted works of art. Rigs are your ride to Tableland.' },
+          { hid: 'og-desc', property: 'og:description', content: 'A generative NFT with 1,043 handcrafted works of art. Rigs are your ride to Tableland.' },
           { hid: 'og-image', property: 'og:image',
             content: 'https://i.imgur.com/5YHLnkC.png'
           },
