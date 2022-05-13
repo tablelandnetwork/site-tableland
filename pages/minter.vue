@@ -74,14 +74,22 @@
               <img src="~assets/img/piece1.png"/>
             </div>
           </div>
+          <div class="rig-result" v-bind:class="{'active': isAddClass}">
+            <img src="~assets/img/card.png"/>
+            <div class="flex">
+              <div class="w-full px-0 py-12">
+                <a class="btn btn-mint text-white">VIEW TRANSACTION</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
         <div class="container" style="margin-top:-150px;">
           <div class="flex px-48 py-0">
-            <div class="lg:w-1/2 minter-console">
+            <div class="lg:w-1/2 minter-console" v-bind:class="{'active': isAddClass}">
               <MinterConsole></MinterConsole>
             </div>
-            <div class="lg:w-1/2">
+            <div class="lg:w-1/2 minter-details" v-bind:class="{'active': isAddClass}">
               <div class="flex py-12 px-12">
                 <div class="w-1/2" >
                   <h3 class="text-white lg:text-xl text-l">PRICE</h3>

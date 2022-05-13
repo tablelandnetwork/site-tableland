@@ -483,31 +483,53 @@ footer {
 }
 
 .part-frame.part1.mint {
-  animation: mint1 1s ease-in-out;
+  animation: mint1 0.75s ease-in-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-delay: 5s;
 }
 
 .part-frame.part2.mint {
-  animation: mint2 1s ease-in-out;
+  animation: mint2 0.75s ease-in-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-delay: 5s;
 }
 
 .part-frame.part3.mint {
-  animation: mint3 1s ease-in-out;
+  animation: mint3 0.75s ease-in-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-delay: 5s;
 }
 
 .part-frame.part4.mint {
-  animation: mint4 1s ease-in-out;
+  animation: mint4 0.75s ease-in-out;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-delay: 5s;
+}
+
+.rig-result {
+  position: absolute;
+  top: -100px;
+  left: 40%;
+  max-width: 370px;
+  opacity: 0;
+}
+
+.rig-result.active {
+  animation: result 0.5s linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 5.75s;
+}
+
+.minter-details.active, .minter-console.active {
+  animation: fadeInDown 0.1s linear;
+  animation-delay: 5.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 
@@ -714,6 +736,17 @@ footer {
 
 /** animations  **/
 
+@keyframes fadeInDown {
+   0% {
+      opacity: 1;
+      transform: translateY(0px);
+   }
+   100% {
+      opacity: 0;
+      transform: translateY(100px);
+   }
+}
+
 @keyframes float {
 	0% {
 		transform: translatey(0px);
@@ -740,7 +773,7 @@ footer {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(300px);
+    transform: translateX(450px);
   }
 }
 
@@ -749,7 +782,7 @@ footer {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(100px);
+    transform: translateX(150px);
   }
 }
 
@@ -758,7 +791,7 @@ footer {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100px);
+    transform: translateX(-150px);
   }
 }
 
@@ -767,7 +800,7 @@ footer {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-300px);
+    transform: translateX(-450px);
   }
 }
 
@@ -781,7 +814,7 @@ footer {
     transform: scale(1.2);
   }
   40%, 60% {
-    transform: rotate(-20deg) scale(1.2);
+    transform: rotate(-20deg) scale(1.2) ;
   }
   50% {
     transform: rotate(20deg) scale(1.2);
@@ -792,6 +825,32 @@ footer {
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes result {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+    transform: scale(1.5);
+    transform: translatey(0px);
+  }
+
+  40% {
+    transform: rotate(2deg);
+  }
+
+  60% {
+    transform: translatey(20px) rotate(-2deg);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    transform: translatey(0px) rotate(0deg);
   }
 }
 
