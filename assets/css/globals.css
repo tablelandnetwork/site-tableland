@@ -380,6 +380,14 @@ footer {
   max-width: 100%!important;
 }
 
+.user-garage {
+  background: left -500px / cover no-repeat url('~assets/img/cohort.png')!important;
+  background-color: #ff9675;
+  height: 50vh;
+  width: 100vw;
+  max-width: 100%!important;
+}
+
 .minter-break {
     position: relative;
   	background: center / cover no-repeat url('~assets/img/break_footer.svg');

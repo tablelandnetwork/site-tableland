@@ -62,10 +62,10 @@
               </div>
             </div>
             <div class="lg:w-1/2 halo1 hidden" v-bind:class="{'active': isAddClass}">
-              <img class="vehicle a-1" src="~assets/img/light_1.png" data-aos="fade-up"/>
+              <img class=" a-1" src="~assets/img/light_1.png" data-aos="fade-up"/>
             </div>
             <div class="lg:w-1/2 halo2 hidden" v-bind:class="{'active': isAddClass}">
-              <img class="vehicle a-2" src="~assets/img/light_2.png" data-aos="fade-up"/>
+              <img class="a-2" src="~assets/img/light_2.png" data-aos="fade-up"/>
             </div>
           </div>
         </div>
