@@ -372,6 +372,14 @@ footer {
   max-width: 100%!important;
 }
 
+.minted {
+  background: left -500px / cover no-repeat url('~assets/img/cohort.png')!important;
+  background-color: #ff9675;
+  height: 80vh;
+  width: 100vw;
+  max-width: 100%!important;
+}
+
 .minter-break {
     position: relative;
   	background: center / cover no-repeat url('~assets/img/break_footer.svg');
@@ -511,11 +519,14 @@ footer {
 }
 
 .rig-result {
+  background: center / cover no-repeat url('~assets/img/holo.png');
   position: absolute;
   top: -100px;
   left: 40%;
+  height: 100vh;
   max-width: 370px;
   opacity: 0;
+  background:
 }
 
 .rig-result.active {
@@ -532,6 +543,27 @@ footer {
   animation-fill-mode: forwards;
 }
 
+.halo1 {
+  position: absolute;
+  right: -250px;
+  bottom: 100px;
+}
+
+.halo2 {
+  position: absolute;
+  right: 550px;
+  bottom: 120px;
+  transform: scaleX(-1);
+}
+
+.halo1.active, .halo2.active {
+  animation: fadeOutDown 0.1s linear;
+  animation-delay: 5.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  display: block;
+  opacity: 0;
+}
 
 /** rig **/
 .rig {
@@ -615,6 +647,22 @@ footer {
 .light_1 {
   bottom: 0px;
   right: -70px;
+}
+
+.rig-frame {
+   width: 750px;
+   height: 750px;
+   background-image: linear-gradient(180deg, #B2D1FC 0%, #DD6C90 100%);
+   border-radius: 50px;
+   overflow: hidden;
+   padding: 10px;
+   margin: 40px auto;
+   animation: float 10s ease-in-out infinite;
+
+}
+
+.rig-frame img {
+  border-radius: 50px;
 }
 
 /** guilds **/
@@ -880,6 +928,20 @@ footer {
     transform: scale(1);
     opacity: 1;
     transform: translatey(0px) rotate(0deg);
+  }
+}
+
+@keyframes colorchange {
+  0% {
+    filter: hue-rotate(0);
+  }
+
+  50% {
+    filter: hue-rotate(180);
+  }
+
+  100% {
+    filter: hue-rotate(270);
   }
 }
 
