@@ -13,9 +13,11 @@
 
           <div class="lg:flex ">
             <div class="text-center w-full pt-6 " data-aos="fade-up">
-              <h1 class="font-bold text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up">
-              Mint a Rig
+              <h1 class="font-bold text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
+              <span>Mint a Rig</span>
+              <!-- <span class="ghost" v-bind:class="{'progress': isAddClass}">Finding your parts</span><span class="ghost" v-bind:class="{'done': isAddClass}">It's your rig!</span> -->
               </h1>
+
             </div>
           </div>
 

@@ -582,7 +582,7 @@ footer {
   margin: 20px auto;
 }
 
-.part-frame {
+.parts-frame {
   position: relative;
   max-height: 600px;
 }
@@ -734,7 +734,37 @@ footer {
   margin: auto;
 }
 
+.hide {
+  animation: fadeInDown 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.progress {
+  animation: fadeOutDown 1s ease-in-out;
+  margin-top: -80px;
+  display: block;
+}
+
+.done {
+  animation: fadeOutDown 1s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+  margin-top: -160px;
+  display: block;
+}
+
 /** animations  **/
+
+@keyframes fadeOutDown {
+   0% {
+      opacity: 0;
+      transform: translateY(100px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0px);
+   }
+}
 
 @keyframes fadeInDown {
    0% {
@@ -835,8 +865,7 @@ footer {
 
   30% {
     opacity: 1;
-    transform: scale(1.5);
-    transform: translatey(0px);
+    transform: translatey(0px) scale(1.1);
   }
 
   40% {
