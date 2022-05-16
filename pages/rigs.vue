@@ -129,7 +129,7 @@
                   </div>
                 </div>
               </div>
-              <div class="lg:w-1/2 w-full mt-48 part-frame">
+              <div class="lg:w-1/2 w-full mt-48 parts-frame">
                 <img class="part part_1 hidden sm:block" src="~assets/img/part_1.png" data-aos="fade-up"/>
                 <img class="part a-2 part_2" src="~assets/img/part_2.png" data-aos="fade-up"/>
                 <img class="part a-1 part_3" src="~assets/img/part_3.png" data-aos="fade-up"/>
