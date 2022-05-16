@@ -87,6 +87,7 @@
         </div>
       </div>
         <div class="container" style="margin-top:-150px;">
+
           <div class="flex px-48 py-0">
             <div class="lg:w-1/2 minter-console" v-bind:class="{'active': isAddClass}">
               <MinterConsole></MinterConsole>
@@ -117,6 +118,12 @@
                   <a v-on:click="addClass" class="btn btn-mint text-white">MINT RIG</a>
                 </div>
               </div>
+            </div>
+            <div class="lg:w-1/2 halo1 hidden" v-bind:class="{'active': isAddClass}">
+              <img class="vehicle a-1" src="~assets/img/light_1.png" data-aos="fade-up"/>
+            </div>
+            <div class="lg:w-1/2 halo2 hidden" v-bind:class="{'active': isAddClass}">
+              <img class="vehicle a-2" src="~assets/img/light_2.png" data-aos="fade-up"/>
             </div>
           </div>
         </div>
