@@ -23,18 +23,48 @@
     <!-- showcase -->
     <section class="md:block showcase py-24 relative">
     <div class="minter-break flex container text-center justify-between"></div>
-      <div class="container">
-        <h1 class="text-pink font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
-          Your Rigs
-        </h1>
-        <div class="flex px-48 py-0">
-          <div class="lg:w-full">
+      <div class="container px-12 sm:px-12 md:px-36 lg:px-36 xl:px-36" style="margin-top:-300px;">
+        <div class="flex">
+          <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-0" data-aos="fade-up">
+          <h1 class="text-pink font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
+            Your Rigs
+          </h1>
           </div>
-          <div class="lg:w-1/2 halo1 hidden" v-bind:class="{'active': isAddClass}">
-            <img class="vehicle a-1" src="~assets/img/light_1.png" data-aos="fade-up"/>
+        </div>
+        <div class="flex py-0">
+          <div class="w-1/3 px-12 rigs">
+            <a href="/minted"><img src="~assets/img/card.png"/></a>
           </div>
-          <div class="lg:w-1/2 halo2 hidden" v-bind:class="{'active': isAddClass}">
-            <img class="vehicle a-2" src="~assets/img/light_2.png" data-aos="fade-up"/>
+          <div class="w-1/3 px-12 rigs">
+            <a href="/minted"><img src="~assets/img/card2.png"/></a>
+          </div>
+          <div class="w-1/3 px-12 rigs">
+            <a href="/minted"><img src="~assets/img/card3.png"/></a>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-36" data-aos="fade-up">
+          <h1 class="text-pink font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
+            Your Badges
+          </h1>
+          </div>
+        </div>
+        <div class="flex py-0 ">
+          <div class="w-1/3 px-12">
+            <img src="~assets/img/card.png"/>
+          </div>
+          <div class="w-1/3 px-12">
+            <img src="~assets/img/card.png"/>
+          </div>
+          <div class="w-1/3 px-12">
+            <img src="~assets/img/card.png"/>
+          </div>
+        </div>
+        <div class="flex">
+          <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-36" data-aos="fade-up">
+          <h1 class="text-pink font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
+            Your Components
+          </h1>
           </div>
         </div>
       </div>

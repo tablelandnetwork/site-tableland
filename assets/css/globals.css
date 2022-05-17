@@ -388,6 +388,15 @@ footer {
   max-width: 100%!important;
 }
 
+.rigs a img {
+  transition: all 0.2s ease-in-out;
+}
+
+.rigs a:hover img {
+  transform: translatey(-20px)!important;
+  transition: all 0.2s ease-in-out;
+}
+
 .minter-break {
     position: relative;
   	background: center / cover no-repeat url('~assets/img/break_footer.svg');
@@ -827,6 +836,9 @@ footer {
       opacity: 1;
       transform: translateY(0px);
    }
+   50% {
+ 		transform: translatey(-20px);
+ 	}
    100% {
       opacity: 0;
       transform: translateY(100px);
@@ -850,7 +862,7 @@ footer {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(250px * 5));
+    transform: translateX(calc(-250px * 5));
   }
 }
 
@@ -977,6 +989,17 @@ footer {
   min-width: 210px;
   margin-left: 0px;
   animation: slide 20s linear infinite;
+}
+
+.animated-carousel.mint {
+  animation: fadeInDown 1s ease-in-out;
+  animation-delay: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.animated-carousel.mint div {
+  animation: slide 0.2s ease-in-out infinite;
 }
 
 .animated-carousel div img {
