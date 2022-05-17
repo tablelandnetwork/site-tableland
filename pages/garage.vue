@@ -50,21 +50,20 @@
           </div>
         </div>
         <div class="flex py-0 ">
-          <div class="w-1/3 px-12">
-            <img src="~assets/img/card.png"/>
+          <div class="w-1/3 px-12 text-center">
+            <img src="~assets/img/badge1.png"/>
+            <h3 class="text-pink lg:text-xl text-l py-2">badge_name</h3>
+            <h3 class="text-pink lg:text-xl text-l">earned 05/05/2022</h3>
           </div>
-          <div class="w-1/3 px-12">
-            <img src="~assets/img/card.png"/>
+          <div class="w-1/3 px-12 text-center">
+            <img src="~assets/img/badge2.png"/>
+            <h3 class="text-pink lg:text-xl text-l py-2">badge_name</h3>
+            <h3 class="text-pink lg:text-xl text-l">earned 05/05/2022</h3>
           </div>
-          <div class="w-1/3 px-12">
-            <img src="~assets/img/card.png"/>
-          </div>
-        </div>
-        <div class="flex">
-          <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-36" data-aos="fade-up">
-          <h1 class="text-pink font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
-            Your Components
-          </h1>
+          <div class="w-1/3 px-12 text-center">
+            <img src="~assets/img/badge3.png"/>
+            <h3 class="text-pink lg:text-xl text-l py-2">badge_name</h3>
+            <h3 class="text-pink lg:text-xl text-l">earned 05/05/2022</h3>
           </div>
         </div>
       </div>
