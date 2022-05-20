@@ -383,7 +383,8 @@ footer {
 .user-garage {
   background: left -500px / cover no-repeat url('~assets/img/cohort.png')!important;
   background-color: #ff9675;
-  height: 50vh;
+  height: auto;
+  min-height: 50vh;
   width: 100vw;
   max-width: 100%!important;
 }
@@ -550,12 +551,12 @@ footer {
   animation: result 0.5s linear;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  animation-delay: 5.75s;
+  animation-delay: 2.75s;
 }
 
 .minter-details.active, .minter-console.active {
   animation: fadeInDown 0.1s linear;
-  animation-delay: 5.5s;
+  animation-delay: 2.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -580,6 +581,20 @@ footer {
   animation-fill-mode: forwards;
   display: block;
   opacity: 0;
+}
+
+/** Gallery **/
+
+.filters button {
+  background: #615C89;
+  border-radius: 50px;
+  padding: 10px 30px;
+  font-size: 1.2em;
+}
+
+.filters .active, .filters button:hover {
+  background: #FF6667;
+  color: #232041;
 }
 
 /** rig **/
@@ -866,6 +881,15 @@ footer {
   }
 }
 
+@keyframes slide-slow {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 13));
+  }
+}
+
 @keyframes mint1 {
   0% {
     transform: translateX(0);
@@ -993,13 +1017,13 @@ footer {
 
 .animated-carousel.mint {
   animation: fadeInDown 1s ease-in-out;
-  animation-delay: 5s;
+  animation-delay: 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
 .animated-carousel.mint div {
-  animation: slide 0.2s ease-in-out infinite;
+  animation: slide-slow 0.2s ease-in-out infinite;
 }
 
 .animated-carousel div img {
