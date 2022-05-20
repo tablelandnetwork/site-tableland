@@ -14,7 +14,7 @@
                 Tableland Gallery
               </h1>
               <div class="hero-btn md:inline-block md:text-left mb-18 lg:mb-24 px-6" data-aos="fade-up">
-                <ButtonLink href="/rigs">Mint a Rig</ButtonLink>
+                <ButtonLink href="/minter">Mint a Rig</ButtonLink>
               </div>
             </div>
           </div>

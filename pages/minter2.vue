@@ -30,22 +30,22 @@
       <div class="minter-break flex container text-center justify-between">
         <div class="w-full">
             <div class="animated-carousel w-full" v-bind:class="{'mint': isAddClass}" style="margin-top:-100px">
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_1.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_2.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_3.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_4.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_5.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_6.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_7.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_8.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_9.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_10.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_11.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_12.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_5.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_6.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_7.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_9.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_1.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_2.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_3.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_4.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_5.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_6.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_7.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_8.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_9.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_10.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_11.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_12.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_5.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_6.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_7.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_9.png"/></div>
 
             </div>
 

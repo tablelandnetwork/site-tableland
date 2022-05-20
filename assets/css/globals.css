@@ -888,6 +888,25 @@ footer {
   100% {
     transform: translateX(calc(-250px * 13));
   }
+
+}
+
+@keyframes a1 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(250px);
+  }
+}
+
+@keyframes a2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-250px);
+  }
 }
 
 @keyframes mint1 {
@@ -1017,17 +1036,29 @@ footer {
 
 .animated-carousel.mint {
   animation: fadeInDown 1s ease-in-out;
-  animation-delay: 2s;
+  animation-delay: 1.25s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 
 .animated-carousel.mint div {
-  animation: slide-slow 0.2s ease-in-out infinite;
+  animation: slide-slow 1s ease-in-out infinite;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
-.animated-carousel div img {
-  animation: none;
+.animated-carousel.mint .a1 {
+  animation: a1 2s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1.25s;
+}
+
+.animated-carousel.mint .a2 {
+  animation: a2 2s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1.25s;
 }
 
 .animated-carousel {
