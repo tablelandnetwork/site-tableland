@@ -138,9 +138,19 @@
               </div>
               <div class="flex">
                 <div class="w-full px-12 py-18">
-                  <a v-on:click="addClass" class="btn btn-mint text-white">MINT RIG</a>
-                  <p class="text-white pt-6 px-6 text-center">Address: {{$wallet.account}}</p>
-                  <p class="text-white text-center">Balance: {{$wallet.balance}} ETH</p>
+                  <div v-if="$wallet.account">
+                    <a v-on:click="addClass" class="btn btn-mint text-white">MINT RIG</a>
+                    <p class="text-white pt-6 px-6 text-center">Address: {{$wallet.account}}</p>
+                    <p class="text-white text-center">Balance: {{$wallet.balance}} ETH</p>
+                  </div>
+                  <div v-else>
+                    <a class="btn bg-black text-white"
+                         @click="$wallet.connect">
+                         <strong>{{
+                             !!$wallet.account ? $wallet.accountCompact : 'Connect Wallet to Mint'
+                         }}</strong>
+                     </a>
+                  </div>
                 </div>
               </div>
             </div>
