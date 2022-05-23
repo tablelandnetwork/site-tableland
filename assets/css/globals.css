@@ -715,8 +715,7 @@ footer {
 }
 
 .guild-list {
-	background: left -1400px / 140% no-repeat url('~assets/img/guild-list.jpg');
-  background-color: #ff9675;
+	background-image: linear-gradient(0deg, rgba(255,255,255,0.75), rgb(234 225 253));
   height: auto;
   width: 100vw;
   max-width: 100%!important;
@@ -730,7 +729,7 @@ footer {
 }
 
 .guild-list .vehicle {
-  margin: 0px;
+  margin: 10px;
   max-width: 350px;
 }
 
@@ -748,10 +747,9 @@ footer {
 
 .fleet-container {
   padding: 4em 5em;
-  background-color: rgb(134 133 210 / 20%);
+  background-color: white;
   border-radius: 20px;
   zoom: 0.8;
-  border: 4px solid black;
 }
 
 .cohort-info {
@@ -1036,7 +1034,7 @@ footer {
 
 .animated-carousel.mint {
   animation: fadeInDown 1s ease-in-out;
-  animation-delay: 1.25s;
+  animation-delay: 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -1268,6 +1266,7 @@ input:checked ~ .tab-content {
 @media (max-width: 1480px) {
   .guild-list .vehicle {
    max-width: 250px!important;
+   margin: 0px!important;
   }
   .hero-btn {
     margin-bottom: 14rem !important;
@@ -1285,9 +1284,12 @@ input:checked ~ .tab-content {
   }
 }
 
-@media (min-width: 1640px) {
+@media (max-width: 1640px) {
   .hero-btn {
     margin-bottom: 14rem !important;
+  }
+  .guild-list .vehicle {
+   max-width: 300px!important;
   }
 }
 

@@ -230,7 +230,7 @@
             <div class="fleet-break"></div>
           </section>
 
-          <section class="guild-list">
+          <section class="guild-list pb-48">
             <!-- Airlights -->
             <div class="container px-6 md:px-9 lg:px-16 lg:flex items-center pt-0 lg:pt-0">
               <div class="lg:w-2/3 w-full">
@@ -463,7 +463,7 @@
                   <div class="vehicle a-3 pt-4"><img src="~assets/img/tumbler_3.png"/></div>
                 </div>
               </div>
-            <div class="guild-list-break"></div>
+
             </section>
 
       <!-- faq -->
