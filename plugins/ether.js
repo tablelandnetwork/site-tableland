@@ -23,17 +23,9 @@ export default async ({env}, inject) => {
 
             !!account && this.setAccount(account)
             window.ethereum.request({
-              method: "wallet_addEthereumChain",
+              method: "wallet_switchEthereumChain",
               params: [{
-                  chainId: "4",
-                  rpcUrls: ["https://rinkeby.infura.io/v3/"],
-                  chainName: "Rinkeby Test Network",
-                  // nativeCurrency: {
-                  //     name: "Ethereum",
-                  //     symbol: "ETH",
-                  //     decimals: 18
-                  // },
-                  blockExplorerUrls: ["https://rinkeby.etherscan.io"]
+                  chainId: "0x4",
               }]
           });
         },
