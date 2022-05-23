@@ -56,6 +56,9 @@ export default {
     {
       src: "~/plugins/countdown.js",
     },
+    {
+      src: "~/plugins/ether.js",
+    },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

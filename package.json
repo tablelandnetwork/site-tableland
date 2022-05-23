@@ -16,6 +16,7 @@
     "@chenfengyuan/vue-countdown": "^1.1.5",
     "aos": "^2.3.4",
     "core-js": "^3.15.1",
+    "ethers": "^5.6.7",
     "locomotive-scroll": "^4.1.4",
     "nuxt": "^2.15.7",
     "vue": "^2.6.14",
