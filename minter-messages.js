@@ -5,12 +5,13 @@ export default {
   creating: 'Creating Your Table, the steps are:\n  Mint the table on Ethereum\n  Register it with the Validator\n  It may take a little while\n',
   docs: 'Read the full docs here: https://docs.tableland.xyz',
   help:
-  'Welcome to the Rig Minter!:\n' +
-'' +
+  'Welcome to the Rig Minter!\n' +
+  'Use this terminal to access information about rigs before minting\n' +
+  '\n' +
   'Available commands:\n' +
     '    connect   Connect to tableland with Metamask. You must\n' +
     '              do this before any other commands can be run.\n' +
-    '    parts      List your tables\n' +
+    '    parts     List your tables\n' +
     '    clear     Clear this terminal\n' +
     '    whoami    See your Eth Address\n' +
     '    docs      Show url to the documentation\n' +
