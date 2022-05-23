@@ -3,6 +3,8 @@ import { ethers } from 'ethers'
 
 export default async ({env}, inject) => {
 
+    const nftContractAddress = "0x2acb10fb88268d3cfc5ee4fcf8b37d8e63e4167d"
+
     const wallet = Vue.observable({
         account: null,
         accountCompact: null,
@@ -55,6 +57,44 @@ export default async ({env}, inject) => {
             if(account) {
                 await wallet.setAccount(account)
             }
+        },
+
+        async mint() {
+          try {
+           const { ethereum } = window
+
+           if (ethereum) {
+               const provider = new ethers.providers.Web3Provider(ethereum)
+               const signer = provider.getSigner()
+               const nftContract = new ethers.Contract(
+                   nftContractAddress,
+                   // NFT.abi,
+                   signer
+               )
+
+               let nftTx = await nftContract.createEternalNFT()
+               console.log('Minting rig...', nftTx.hash)
+               setMiningStatus(0)
+
+               let tx = await nftTx.wait()
+               setLoadingState(1)
+               console.log('minted rig!!', tx)
+               let event = tx.events[0]
+               let value = event.args[2]
+               let tokenId = value.toNumber()
+
+               console.log(
+                   `Minted your rig, see transaction: https://rinkeby.etherscan.io/tx/${nftTx.hash}`
+               )
+
+               getMintedNFT(tokenId)
+           } else {
+               console.log("object doesnt exist!")
+           }
+       } catch (error) {
+           console.log('Error minting rig', error)
+       }
+
         },
 
         async switchNetwork(config) {

@@ -139,7 +139,7 @@
               <div class="flex">
                 <div class="w-full px-12 py-18">
                   <div v-if="$wallet.account">
-                    <a v-on:click="addClass" class="btn btn-mint text-white">MINT RIG</a>
+                    <a v-on:click="addClass" class="btn btn-mint text-white"  @click="$wallet.mint">MINT RIG</a>
                     <p class="text-white pt-6 px-6 text-center">Address: {{$wallet.account}}</p>
                     <p class="text-white text-center">Balance: {{$wallet.balance}} ETH</p>
                   </div>
