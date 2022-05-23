@@ -139,8 +139,8 @@
               <div class="flex">
                 <div class="w-full px-12 py-18">
                   <a v-on:click="addClass" class="btn btn-mint text-white">MINT RIG</a>
-                  <p class="text-white py-6 px-6 text-center">{{$wallet.account}}</p>
-                  <p class="text-white text-center">{{$wallet.balance}}</p>
+                  <p class="text-white pt-6 px-6 text-center">Address: {{$wallet.account}}</p>
+                  <p class="text-white text-center">Balance: {{$wallet.balance}} ETH</p>
                 </div>
               </div>
             </div>

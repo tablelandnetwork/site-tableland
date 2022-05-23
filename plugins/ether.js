@@ -22,6 +22,20 @@ export default async ({env}, inject) => {
             const [account] = await this.provider.listAccounts()
 
             !!account && this.setAccount(account)
+            window.ethereum.request({
+              method: "wallet_addEthereumChain",
+              params: [{
+                  chainId: "4",
+                  rpcUrls: ["https://rinkeby.infura.io/v3/"],
+                  chainName: "Rinkeby Test Network",
+                  // nativeCurrency: {
+                  //     name: "Ethereum",
+                  //     symbol: "ETH",
+                  //     decimals: 18
+                  // },
+                  blockExplorerUrls: ["https://rinkeby.etherscan.io"]
+              }]
+          });
         },
 
         async setAccount(newAccount) {
