@@ -23,13 +23,7 @@ export default async ({env}, inject) => {
             this.network = this.provider.getNetwork()
             const [account] = await this.provider.listAccounts()
 
-            !!account && this.setAccount(account)
-            window.ethereum.request({
-              method: "wallet_switchEthereumChain",
-              params: [{
-                  chainId: "0x4",
-              }]
-          });
+
         },
 
         async setAccount(newAccount) {
@@ -57,6 +51,7 @@ export default async ({env}, inject) => {
             if(account) {
                 await wallet.setAccount(account)
             }
+            
         },
 
         async mint() {
