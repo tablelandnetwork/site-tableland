@@ -9,7 +9,7 @@ export default async ({env}, inject) => {
     const rig = {
         address: "0xB70C91df903AC3F2A3aD0BeabFeC3fe89dc69c99",
         abi: [
-          "function gimmeSome() external",
+          "function mintRig() external",
           "function balanceOf(address _owner) public view returns (uint256 balance)",
           "function transfer(address _to, uint256 _value) public returns (bool success)",
         ],
@@ -80,7 +80,7 @@ export default async ({env}, inject) => {
           let userAddress = await signer.getAddress();
           const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
 
-          const tx = await nftContract.gimmeSome({ gasPrice: 1e9, gasLimit: 80000 });
+          const tx = await nftContract.mintRig({ gasPrice: 2e9, gasLimit: 80000 });
           console.log = function(message) {
           document.getElementById('mint-log').innerHTML = message;
           };
