@@ -2,7 +2,56 @@
   <div class="mint-page">
 
     <!-- Header -->
-    <HeaderNav></HeaderNav>
+    <div class="nav-bar" :class="{ 'absolute w-full h-screen top-0 left-0': menu }">
+      <div class="sm:mx-auto flex flex-wrap">
+
+        <!-- Desktop nav -->
+
+        <nav class="container hidden md:inline-flex justify-between px-6 md:px-9 lg:px-16 flex items-center py-2 pt-6">
+          <div class="py-4">
+            <a href="/"><img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5"></a>
+          </div>
+          <div class="py-4">
+            <ul class="flex justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
+              <li v-for="(item, index) in items" :key="index">
+                <a :href="item.href">
+                  {{ item.title }}
+                </a>
+              </li>
+              <li>
+                <a class="btn bg-black text-white"
+                     :disabled="!!$wallet.account"
+                     @click="$wallet.connect">
+                     <strong>{{
+                         !!$wallet.account ? $wallet.accountCompact : 'Connect Wallet'
+                     }}</strong>
+                 </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Toggle menu mobile -->
+        <div class="py-12 px-6 md:hidden logo">
+          <a href="/"><img src="~assets/img/logo-black.svg" alt="Tableland" class="h-4"></a>
+        </div>
+          <button
+            class="ml-auto md:hidden p-6" @click="menu = !menu">
+          MENU
+        </button>
+        </div>
+
+        <!-- Mobile nav  -->
+        <nav v-show="menu" data-aos="fade-down" class="aos-animate w-full" style="background: #b172a1; transition: all 0.2s ease-in-out">
+          <ul class="flex flex-col text-center">
+          <li v-for="(item, index) in items" :key="index">
+            <a :href="item.href" class="hover: p-6 block">
+              {{ item.title }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
     <!-- minter -->
     <section class="minter">
@@ -29,53 +78,26 @@
       <section class="md:block showcase py-32 relative">
       <div class="minter-break flex container text-center justify-between">
         <div class="w-full">
-          <div class="part-frame part1" v-bind:class="{'mint': isAddClass}">
-            <div class="carousel" data-aos="fade-up">
-              <div><img src="~assets/img/piece1.png"/></div>
-              <div><img src="~assets/img/piece2.png"/></div>
-              <div><img src="~assets/img/piece3.png"/></div>
-              <div><img src="~assets/img/piece4.png"/></div>
-            </div>
-            <div class="part-result" v-bind:class="{'active': isAddClass}">
-              <img src="~assets/img/piece4.png"/>
-            </div>
-          </div>
+            <div class="animated-carousel w-full" v-bind:class="{'mint': isAddClass}" style="margin-top:-100px">
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_1.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_2.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_3.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_4.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_5.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_6.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_7.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_8.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_9.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_10.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_11.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_12.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_5.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_6.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_7.png"/></div>
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_9.png"/></div>
 
-          <div class="part-frame part2" v-bind:class="{'mint': isAddClass}">
-            <div class="carousel" data-aos="fade-up">
-              <div><img src="~assets/img/piece3.png"/></div>
-              <div><img src="~assets/img/piece4.png"/></div>
-              <div><img src="~assets/img/piece1.png"/></div>
-              <div><img src="~assets/img/piece2.png"/></div>
             </div>
-            <div class="part-result" v-bind:class="{'active': isAddClass}">
-              <img src="~assets/img/piece3.png"/>
-            </div>
-          </div>
 
-          <div class="part-frame part3" v-bind:class="{'mint': isAddClass}">
-            <div class="carousel" data-aos="fade-up">
-              <div><img src="~assets/img/piece2.png"/></div>
-              <div><img src="~assets/img/piece3.png"/></div>
-              <div><img src="~assets/img/piece4.png"/></div>
-              <div><img src="~assets/img/piece1.png"/></div>
-            </div>
-            <div class="part-result" v-bind:class="{'active': isAddClass}">
-              <img src="~assets/img/piece2.png"/>
-            </div>
-          </div>
-
-          <div class="part-frame part4" v-bind:class="{'mint': isAddClass}">
-            <div class="carousel" data-aos="fade-up">
-              <div><img src="~assets/img/piece4.png"/></div>
-              <div><img src="~assets/img/piece1.png"/></div>
-              <div><img src="~assets/img/piece2.png"/></div>
-              <div><img src="~assets/img/piece3.png"/></div>
-            </div>
-            <div class="part-result" v-bind:class="{'active': isAddClass}">
-              <img src="~assets/img/piece1.png"/>
-            </div>
-          </div>
           <div class="rig-result" v-bind:class="{'active': isAddClass}">
             <img src="~assets/img/card.png"/>
             <div class="flex">
@@ -115,7 +137,20 @@
               </div>
               <div class="flex">
                 <div class="w-full px-12 py-18">
-                  <a v-on:click="addClass" class="btn btn-mint text-white">MINT RIG</a>
+                  <div v-if="$wallet.account">
+                    <a id="mint-button" class="btn btn-mint text-white"  @click="$wallet.mintRig">MINT RIG</a>
+                    <p class="text-white pt-6 px-6 text-center">Address: {{$wallet.account}}</p>
+                    <p class="text-white text-center">Balance: {{$wallet.balance}} ETH</p>
+                    <p id="mint-log"></p>
+                  </div>
+                  <div v-else>
+                    <a class="btn bg-black text-white"
+                         @click="$wallet.connect">
+                         <strong>{{
+                             !!$wallet.account ? $wallet.accountCompact : 'Connect Wallet to Mint'
+                         }}</strong>
+                     </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -155,7 +190,7 @@
   export default {
     head(){
       return {
-        title: 'Meet the RIGS - Tableland',
+        title: 'Mint a Rig - Tableland',
         meta:[
           { hid: `og-url`, property: 'og:url', content: `/${this.$route.path}`},
           { hid: 'og-type', property: 'og:type', content: 'website' },
@@ -169,22 +204,15 @@
         ]
       }
     },
-
     computed: {
       ethereum: function () {
         return window.ethereum;
       }
     },
-    mounted() {
-      this.lmS = new this.locomotiveScroll({
-        el: document.querySelector('#js-scroll'),
-        smooth: true,
-      });
-    },
     methods: {
            addClass: function() {
                this.isAddClass = true;
-       }
+       },
    },
     data() {
       const now = new Date();
@@ -192,7 +220,6 @@
       return {
         time: launchDate - now,
         isAddClass: false,
-
       };
     },
   };
