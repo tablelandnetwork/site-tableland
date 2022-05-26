@@ -459,7 +459,38 @@ footer {
 
 .minter-console {
   color: #12FFA6!important;
+  position: relative;
 }
+
+#mint-log {
+  height: 400px;
+  background: #1b72e2;
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  z-index: 99999;
+  color: white;
+  font-family: monospace;
+  text-align: left;
+  padding: 50px 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+#mint-log .frame {
+  animation: typing 2.5s steps(40, end);
+  overflow-y: hidden;
+  overflow-x:scroll;
+  word-break: break-all;
+  max-height: 400px;
+
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { height: 0 }
+  to { height: 100% }
+}
+
 
 .part-frame {
   width: 250px;
@@ -875,7 +906,7 @@ footer {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 5));
+    transform: translateX(calc(-300px * 11));
   }
 }
 
@@ -1027,9 +1058,15 @@ footer {
 
 .animated-carousel div {
   height: 200px;
-  min-width: 210px;
+  min-width: 200px;
   margin-left: 0px;
   animation: slide 20s linear infinite;
+  transition: all 1s ease-in-out;
+}
+
+.animated-carousel.progress div {
+  animation: slide 1s linear infinite;
+  transition: all 1s ease-in-out;
 }
 
 .animated-carousel.mint {
@@ -1037,6 +1074,7 @@ footer {
   animation-delay: 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  transition: all 1s ease-in-out;
 }
 
 .animated-carousel.mint div {

@@ -57,7 +57,7 @@ export default {
       src: "~/plugins/countdown.js",
     },
     {
-      src: "~/plugins/ether.js",
+      src: "~/plugins/minter.js",
     },
   ],
 
