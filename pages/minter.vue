@@ -78,7 +78,7 @@
       <section class="md:block showcase py-32 relative">
       <div class="minter-break flex container text-center justify-between">
         <div class="w-full">
-            <div class="animated-carousel w-full" v-bind:class="{'mint': isAddClass}" style="margin-top:-100px">
+            <div id="animated-carousel" class="animated-carousel w-full" v-bind:class="{'mint': isAddClass}" style="margin-top:-100px">
                 <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_1.png"/></div>
                 <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_2.png"/></div>
                 <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_3.png"/></div>
@@ -95,10 +95,10 @@
                 <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_6.png"/></div>
                 <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_7.png"/></div>
                 <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_9.png"/></div>
-
+                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_10.png"/></div>
             </div>
 
-          <div class="rig-result" v-bind:class="{'active': isAddClass}">
+          <div id="rig-result" class="rig-result" v-bind:class="{'active': isAddClass}">
             <img src="~assets/img/card.png"/>
             <div class="flex">
               <div class="w-full px-0 py-12">
@@ -113,6 +113,17 @@
           <div class="flex px-48 py-0">
             <div class="lg:w-1/2 minter-console" v-bind:class="{'active': isAddClass}">
               <MinterConsole></MinterConsole>
+              <div v-if="$wallet.account" class="text-white text-center" id="mint-log"><div id="mint-terminal" class="frame">
+                ==========================  WALLET CONNECTED ===============================
+
+                <p>WALLET: {{$wallet.account}}</p>
+                <p>BALANCE: {{$wallet.balance}} ETH</p>
+                ============================================================================
+                ============================================================================
+                ============================================================================
+                =============== READY TO MINT CONFIRM TRANSACTION TO PROCEED ===============
+                PRICE 0.01ETH - AVAILABLE 3232</div>
+              </div>
             </div>
             <div class="lg:w-1/2 minter-details" v-bind:class="{'active': isAddClass}">
               <div class="flex py-12 px-12">
@@ -139,9 +150,8 @@
                 <div class="w-full px-12 py-18">
                   <div v-if="$wallet.account">
                     <a id="mint-button" class="btn btn-mint text-white"  @click="$wallet.mintRig">MINT RIG</a>
-                    <p class="text-white pt-6 px-6 text-center">Address: {{$wallet.account}}</p>
-                    <p class="text-white text-center">Balance: {{$wallet.balance}} ETH</p>
-                    <p id="mint-log"></p>
+
+
                   </div>
                   <div v-else>
                     <a class="btn bg-black text-white"
