@@ -102,7 +102,8 @@
             <img src="~assets/img/card.png"/>
             <div class="flex">
               <div class="w-full px-0 py-12">
-                <a id="tx-btn" class="btn btn-mint text-white" target="_blank">VIEW TRANSACTION</a>
+                <a id="tx-btn" class="btn text-white" target="_blank">VIEW TRANSACTION</a>
+                <a href="/minter" class="btn btn-mint text-white">MINT ANOTHER</a>
               </div>
             </div>
           </div>
@@ -220,9 +221,12 @@
       }
     },
     methods: {
-           addClass: function() {
-               this.isAddClass = true;
+       addClass: function() {
+        this.isAddClass = true;
        },
+       refresh() {
+        this.$nuxt.refresh()
+      }
    },
     data() {
       const now = new Date();
