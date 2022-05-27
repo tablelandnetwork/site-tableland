@@ -88,7 +88,7 @@ export default async ({env}, inject) => {
           // Minting in progress
           const tx = await nftContract.mint(1);
           console.log = function(message) {document.getElementById('mint-log').innerHTML = message;};
-          console.log(`Transaction hash: ${tx.hash}`);
+          console.log(`MINTING IN PROCESS // Transaction hash: ${tx.hash}`);
           document.getElementById("mint-button").innerHTML="Minting in Progress";
           document.getElementById("animated-carousel").classList.add("progress");
 
