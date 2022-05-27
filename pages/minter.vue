@@ -102,7 +102,7 @@
             <img src="~assets/img/card.png"/>
             <div class="flex">
               <div class="w-full px-0 py-12">
-                <a class="btn btn-mint text-white">VIEW TRANSACTION</a>
+                <a id="tx-btn" class="btn btn-mint text-white" target="_blank">VIEW TRANSACTION</a>
               </div>
             </div>
           </div>

@@ -472,7 +472,7 @@ footer {
   color: white;
   font-family: monospace;
   text-align: left;
-  padding: 50px 20px;
+  padding: 0px 20px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -575,7 +575,7 @@ footer {
   height: 100vh;
   max-width: 370px;
   opacity: 0;
-  background:
+  z-index: 999;
 }
 
 .rig-result.active {
@@ -906,7 +906,7 @@ footer {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-300px * 11));
+    transform: translateX(calc(-250px * 12));
   }
 }
 
@@ -915,7 +915,7 @@ footer {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 13));
+    transform: translateX(calc(-250px * 12));
   }
 
 }
@@ -1060,7 +1060,7 @@ footer {
   height: 200px;
   min-width: 200px;
   margin-left: 0px;
-  animation: slide 20s linear infinite;
+  animation: slide 20s ease-in-out infinite;
   transition: all 1s ease-in-out;
 }
 
