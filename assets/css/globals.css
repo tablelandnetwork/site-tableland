@@ -578,6 +578,13 @@ footer {
   z-index: 999;
 }
 
+.rig-result .btn {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 10px 0px;
+  width: 100%;
+}
+
 .rig-result.active {
   animation: result 0.5s linear;
   animation-iteration-count: 1;
