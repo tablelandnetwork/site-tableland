@@ -85,27 +85,24 @@ export default async ({env}, inject) => {
           let userAddress = await signer.getAddress();
           const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
 
-
+          // Minting in progress
           const tx = await nftContract.mint(1);
-          console.log = function(message) {
-          document.getElementById('mint-log').innerHTML = message;
-          };
+          console.log = function(message) {document.getElementById('mint-log').innerHTML = message;};
           console.log(`Transaction hash: ${tx.hash}`);
           document.getElementById("mint-button").innerHTML="Minting in Progress";
-          var element = document.getElementById("myDIV");
           document.getElementById("animated-carousel").classList.add("progress");
 
+          // Minting results
           const receipt = await tx.wait();
           document.getElementById("mint-button").innerHTML="Rig Minted";
           document.getElementById("rig-result").classList.add("active");
           document.getElementById("minter-details").classList.add("active");
           document.getElementById("minter-console").classList.add("active");
           document.getElementById("animated-carousel").classList.add("mint");
-          console.log(`Transaction confirmed in block ${receipt.blockNumber}`);
-          console.log(`Gas used: ${receipt.gasUsed.toString()}`);
           console.log(
-              `Minted your rig, see transaction: https://rinkeby.etherscan.io/tx/${tx.hash}`
+              `Minted your rig, see transaction: https://rinkeby.etherscan.io/tx/${tx.hash}, Gas used: ${receipt.gasUsed.toString()}, Transaction confirmed in block ${receipt.blockNumber}`
           );
+          document.getElementById("tx-btn").setAttribute("href", `https://rinkeby.etherscan.io/tx/${tx.hash}`);
 
           } else {
             console.log("Can't find your rig captain")
