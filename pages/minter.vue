@@ -111,7 +111,7 @@
         <div class="container" style="margin-top:-150px;">
 
           <div class="flex px-48 py-0">
-            <div class="lg:w-1/2 minter-console" v-bind:class="{'active': isAddClass}">
+            <div class="lg:w-1/2 minter-console" id="minter-console" v-bind:class="{'active': isAddClass}">
               <MinterConsole></MinterConsole>
               <div v-if="$wallet.account" class="text-white text-center" id="mint-log"><div id="mint-terminal" class="frame">
                 ==========================  WALLET CONNECTED ===============================
@@ -125,7 +125,7 @@
                 PRICE 0.01ETH - AVAILABLE 3232</div>
               </div>
             </div>
-            <div class="lg:w-1/2 minter-details" v-bind:class="{'active': isAddClass}">
+            <div class="lg:w-1/2 minter-details" v-bind:class="{'active': isAddClass}" id="minter-details">
               <div class="flex py-12 px-12">
                 <div class="w-1/2" >
                   <h3 class="text-white lg:text-xl text-l">PRICE</h3>
