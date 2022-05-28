@@ -210,7 +210,7 @@ nav li a:hover {
 
 @media (min-width: 1500px) {
   .community-top {
-    padding-top: 16rem !important;
+    padding-top: 16rem!important;
   }
   .animated-carousel {
     height: 300px!important;
@@ -222,7 +222,7 @@ nav li a:hover {
 
 @media (min-width: 1760px) {
   .community-top {
-    padding-top: 24rem !important;
+    padding-top: 24rem!important;
   }
   .animated-carousel {
     height: 350px!important;
@@ -235,7 +235,7 @@ nav li a:hover {
 
 @media (min-width: 2160px) {
   .community-top {
-    padding-top: 24rem !important;
+    padding-top: 24rem!important;
   }
   .animated-carousel {
     height: 400px!important;
@@ -278,6 +278,7 @@ nav li a:hover {
   bottom: -57px;
   left: 0;
   right: 0;
+  display: none;
 }
 
 /** showcase **/
@@ -312,9 +313,48 @@ footer {
 }
 
 .mint-page {
-  background: bottom / cover no-repeat url('~assets/img/minting.png');
+  background: bottom / cover no-repeat url('~assets/img/story/hero.jpg');
   background-attachment: fixed;
   overflow: hidden;
+}
+
+/** sander additions **/
+img.text-flow {
+  border-radius: 0.5em;
+  margin-bottom: 1em;
+}
+
+img.text-flow.left {
+  float: left;
+  margin-right: 1.5em;
+}
+
+img.text-flow.right {
+  float: right;
+  margin-left: 1.5em;
+}
+
+pre, code {
+  white-space: normal;
+}
+
+.code pre {
+  background-color: black;
+  color: white;
+  width: 60%;
+  padding: 1em;
+  margin: 0;
+  border-radius: 0.5em;
+}
+
+.code pre code {
+  padding: 0;
+  margin: 0;
+}
+
+.fleet-rig {
+  width: 200px;
+  height: 200px;
 }
 
 /** minting **/
@@ -323,7 +363,14 @@ footer {
   height: auto;
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(0deg, rgba(255,0,0,0), #b176a2);
+}
+
+.minting-top {
+  width: 100%;
+  height: 400px;
+  background-color: #815691;
+  opacity: 0.5;
+  position: absolute;
 }
 
 .minting .vehicle img {
@@ -340,7 +387,6 @@ footer {
   height: auto;
   width: 100vw;
   max-width: 100%!important;
-  padding-bottom: 200px;
 }
 
 .info-break {
@@ -352,11 +398,6 @@ footer {
 
 .info .float-frame {
   margin-top: -200px;
-}
-
-.info .vehicle img {
-  border-radius: 20px;
-  overflow: hidden;
 }
 
 .info video {
@@ -773,7 +814,7 @@ footer {
 
 .vehicle {
   transform: translatey(0px);
-  animation: float 10s ease-in-out infinite;
+  /* animation: float 10s ease-in-out infinite; */
   margin: 30px;
   max-width: 260px;
   float: left;
@@ -1067,7 +1108,7 @@ footer {
   height: 200px;
   min-width: 200px;
   margin-left: 0px;
-  animation: slide 20s ease-in-out infinite;
+  animation: slide 60s linear infinite;
   transition: all 1s ease-in-out;
 }
 
