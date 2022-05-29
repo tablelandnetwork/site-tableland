@@ -2,12 +2,17 @@
   <div>
 
     <!-- Header -->
-    <HeaderNav></HeaderNav>
-
-    <header class="bg-navbar pt-0" data-aos="fade-down" data-aos-anchor=".bg-gradient">
-      <HeaderNav></HeaderNav>
-    </header>
-
+    <HeaderNav
+      :titles="nav.map(i => i.title)"
+      :hrefs="nav.map(i => i.href)"
+      :targets="nav.map(i => i.target)"
+    />
+    <HeaderScrollNav
+      anchor=".garage"
+      :titles="nav.map(i => i.title)"
+      :hrefs="nav.map(i => i.href)"
+      :targets="nav.map(i => i.target)"
+    />
 
     <!-- hero -->
     <section class="hero">
@@ -168,28 +173,47 @@
       </div>
     </section>
 
-    <footer class="text-blue py-10 landing">
-      <nav class="container px-6 md:px-9 lg:px-16 py-2">
-        <div class="hidden py-4">
-          <img id="js-scroll" src="~assets/img/logo-white.svg" alt="Tableland" class="h-5">
-        </div>
-        <ul class="flex justify-center items-center gap-x-3 sm:gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-xs">
-          <li class="hidden md:inline-block"><a href="https://twitter.com/tableland__">Twitter</a></li>
-          <li><a href="https://textile.notion.site/Tableland-Grants-Funding-ebc1f398d53a481d94f090ab12d93be0">Grants</a></li>
-          <li class="hidden md:inline-block"><a href="https://boards.greenhouse.io/textileio">Jobs</a></li>
-          <li><a href="https://hhueol4i6vp.typeform.com/to/sgtDW2Xt">Token Info</a></li>
-          <li><a href="https://docs.tableland.xyz/general/community/partners">Partners</a></li>
-          <li><a href="https://textile.notion.site/Tableland-Privacy-Policy-6fd160e7f485491d9dc4cbab188043d5">Privacy</a></li>
-          <li><a href="https://textile.notion.site/Tableland-Terms-of-Use-cf80f1b550b843ad9d4b8c3140b78e35">Terms</a></li>
-        </ul>
-      </nav>
-    </footer>
+    <FooterNav />
   </div>
 </template>
 
 <script>
+import HeaderNavVue from '~/components/HeaderNav.vue';
+import HeaderScrollNavVue from '~/components/HeaderScrollNav.vue';
 
 export default {
+  components: {
+    HeaderNavVue: HeaderNavVue,
+    HeaderScrollNavVue: HeaderScrollNavVue
+  },
+
+  data: function () {
+    return {
+      nav: [
+        {
+          title: 'Discord',
+          href: 'https://discord.gg/hpd5WWn4Ys',
+          target: '_blank'
+        },
+        {
+          title: 'Blog',
+          href: 'https://mirror.xyz/tableland.eth',
+          target: '_blank'
+        },
+        {
+          title: 'Docs',
+          href: 'https://docs.tableland.xyz',
+          target: '_blank'
+        },
+        {
+          title: 'Rigs',
+          href: 'rigs',
+          main: true
+        }
+      ]
+    };
+  },
+
   head: function () {
     return {
       title: 'Tableland - Build web3 with SQL',
@@ -206,12 +230,12 @@ export default {
       ]
     };
   },
+
   computed: {
     ethereum: function () {
       return window.ethereum;
     }
   }
 };
-
 
 </script>

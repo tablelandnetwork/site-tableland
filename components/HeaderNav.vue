@@ -1,22 +1,25 @@
 <template>
   <div
-    class="nav-bar" :class="{ 'absolute w-full h-screen top-0 left-0': menu }">
+    class="nav-bar"
+    :class="{ 'absolute w-full h-screen top-0 left-0': menu }"
+  >
     <div class="sm:mx-auto flex flex-wrap">
 
       <!-- Desktop nav -->
-
       <nav class="container hidden md:inline-flex justify-between px-6 md:px-9 lg:px-16 flex items-center py-2 pt-6">
         <div class="py-4">
           <a href="/"><img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5"></a>
         </div>
         <div class="py-4">
           <ul class="flex justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
-            <li v-for="(item, index) in items" :key="index">
-              <a :href="item.href">
-                {{ item.title }}
+            <li v-for="(item, index) in titles" :key="index">
+              <a v-if="index != titles.length-1" :href="hrefs[index]" :target="targets[index] ? targets[index] : ''">
+                {{ item }}
+              </a>
+              <a v-else :href="hrefs[index]" :target="targets[index] ? targets[index] : ''" class="btn bg-black text-white">
+                {{ item }}
               </a>
             </li>
-            <li><a href="/rigs" class="btn bg-black text-white">Rigs</a></li>
           </ul>
         </div>
       </nav>
@@ -25,18 +28,20 @@
       <div class="py-12 px-6 md:hidden logo">
         <a href="/"><img src="~assets/img/logo-black.svg" alt="Tableland" class="h-4"></a>
       </div>
-        <button
-          class="ml-auto md:hidden p-6" @click="menu = !menu">
+      <button
+        class="ml-auto md:hidden p-6"
+        @click="menu = !menu"
+      >
         MENU
       </button>
-      </div>
+    </div>
 
-      <!-- Mobile nav  -->
-      <nav v-show="menu" data-aos="fade-down" class="aos-animate w-full" style="background: #b172a1; transition: all 0.2s ease-in-out">
-        <ul class="flex flex-col text-center">
-        <li v-for="(item, index) in items" :key="index">
-          <a :href="item.href" class="hover: p-6 block">
-            {{ item.title }}
+    <!-- Mobile nav  -->
+    <nav v-show="menu" data-aos="fade-down" class="aos-animate w-full" style="background-color: #815691; transition: all 0.2s ease-in-out">
+      <ul class="flex flex-col text-center">
+        <li v-for="(item, index) in titles" :key="index">
+          <a :href="hrefs[index]" :target="targets[index] ? targets[index] : ''" class="p-6 block">
+            {{ item }}
           </a>
         </li>
       </ul>
@@ -46,24 +51,11 @@
 
 <script>
 export default {
-  data() {
+  props: ['titles', 'hrefs', 'targets'],
+  data: function () {
     return {
-      menu: false,
-      items: [
-        {
-          title: 'Discord',
-          href: 'https://discord.gg/hpd5WWn4Ys'
-        },
-        {
-          title: 'Blog',
-          href: 'https://mirror.xyz/tableland.eth'
-        },
-        {
-          title: 'Docs',
-          href: 'https://docs.tableland.xyz'
-        }
-      ]
-    }
+      menu: false
+    };
   }
-}
+};
 </script>
