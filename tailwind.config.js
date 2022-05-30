@@ -42,8 +42,14 @@ export default {
         violet: '#6f2560',
         pink: '#c36fab'
       },
+      height: {
+        '322px': '322px',
+        '308px': '308px',
+        '271px': '271px',
+        '207px': '207px'
+      },
       minHeight: {
-        '96': '24rem'
+        96: '24rem'
       }
     },
     fontFamily: {

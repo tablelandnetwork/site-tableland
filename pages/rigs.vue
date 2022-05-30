@@ -15,7 +15,7 @@
     />
     <!-- hero -->
     <section class="rigs-hero">
-      <div class="rigs-hero-top"></div>
+      <div class="rigs-hero-top h-271px sm:h-207px lg:h-308px xl:h-322px"></div>
       <div class="container px-0 sm:px-6 md:px-12 pt-12 sm:pt-12 lg:pt-32 justify-between flex">
         <div class="lg:w-full px-6 pb-6 lg:pb-10 pt-12" data-aos="fade-up">
           <div class="lg:flex">
