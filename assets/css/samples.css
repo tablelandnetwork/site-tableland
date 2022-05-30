@@ -4,7 +4,7 @@
 
 .v-lazy-image {
   filter: blur(5px);
-  transition: filter 1.6s ease-out, opacity 1s ease-out;
+  transition: filter 1s ease-out, opacity 1s ease-out;
   will-change: filter;
   opacity: 0;
 }
