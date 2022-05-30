@@ -214,35 +214,35 @@ Sleds       Decrypter   Spoiler     Verkle                  Midnight
               <div class="container flex flex-col items-center text-sm mb-10 lg:mb-18">
                 <div class="w-full grid gap-6 grid-cols-2 sm:grid-cols-4">
                   <figure class="m-auto">
-                    <img src="~assets/img/rigs/originals/titan.jpg" />
+                    <img src="~assets/img/rigs/originals/titan.jpg" class="rounded-lg" />
                     <figcaption class="text-center pt-2">Solar Tank in Sunset</figcaption>
                   </figure>
                   <figure class="m-auto">
-                    <img src="~assets/img/rigs/originals/tumbler.jpg" />
+                    <img src="~assets/img/rigs/originals/tumbler.jpg" class="rounded-lg" />
                     <figcaption class="text-center pt-2">Sonic Scribe in Sunset</figcaption>
                   </figure>
                   <figure class="m-auto">
-                    <img src="~assets/img/rigs/originals/sled.jpg" />
+                    <img src="~assets/img/rigs/originals/sled.jpg" class="rounded-lg" />
                     <figcaption class="text-center pt-2">Darkmatter in Midnight</figcaption>
                   </figure>
                   <figure class="m-auto">
-                    <img src="~assets/img/rigs/originals/edge_rider.jpg" />
+                    <img src="~assets/img/rigs/originals/edge_rider.jpg" class="rounded-lg" />
                     <figcaption class="text-center pt-2">Radio Fang in Moonlight</figcaption>
                   </figure>
                   <figure class="m-auto">
-                    <img src="~assets/img/rigs/originals/tracer.jpg" />
+                    <img src="~assets/img/rigs/originals/tracer.jpg" class="rounded-lg" />
                     <figcaption class="text-center pt-2">Skipjack Thunderbolt in Electric</figcaption>
                   </figure>
                   <figure class="m-auto">
-                    <img src="~assets/img/rigs/originals/hopper.jpg" />
+                    <img src="~assets/img/rigs/originals/hopper.jpg" class="rounded-lg" />
                     <figcaption class="text-center pt-2">The Canyonlander in Dawn</figcaption>
                   </figure>
                   <figure class="m-auto">
-                    <img src="~assets/img/rigs/originals/airelight.jpg" />
+                    <img src="~assets/img/rigs/originals/airelight.jpg" class="rounded-lg" />
                     <figcaption class="text-center pt-2">The Monitor in Dawn</figcaption>
                   </figure>
                   <figure class="m-auto">
-                    <img src="~assets/img/rigs/originals/foil.jpg" />
+                    <img src="~assets/img/rigs/originals/foil.jpg" class="rounded-lg" />
                     <figcaption class="text-center pt-2">Hydro Wasp in Electric</figcaption>
                   </figure>
                 </div>
