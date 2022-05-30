@@ -64,7 +64,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
             <li>
               <a
                 class="btn bg-black text-white"
-                href="rigs"
+                href="/rigs"
                 target=""
               >
                 
@@ -143,7 +143,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
         <li>
           <a
             class="p-6 block"
-            href="rigs"
+            href="/rigs"
             target=""
           >
             
@@ -214,7 +214,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
         <li>
           <a
             class="btn bg-black text-white"
-            href="rigs"
+            href="/rigs"
             target=""
           >
             
@@ -952,7 +952,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
             <li>
               <a
                 class="btn bg-black text-white"
-                href="rigs"
+                href="/rigs"
                 target=""
               >
                 
@@ -1031,7 +1031,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
         <li>
           <a
             class="p-6 block"
-            href="rigs"
+            href="/rigs"
             target=""
           >
             
@@ -1102,7 +1102,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
         <li>
           <a
             class="btn bg-black text-white"
-            href="rigs"
+            href="/rigs"
             target=""
           >
             

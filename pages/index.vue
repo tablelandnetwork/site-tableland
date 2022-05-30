@@ -190,7 +190,7 @@ export default {
         },
         {
           title: 'Rigs',
-          href: 'rigs',
+          href: '/rigs',
           main: true
         }
       ]

@@ -91,12 +91,30 @@ export default {
         },
         {
           title: 'Rigs',
-          href: 'rigs',
+          href: '/rigs',
           main: true
         }
       ],
       rigs: helpers.getRigs(1000),
       imageHeight: '0px'
+    };
+  },
+
+  head: function () {
+    return {
+      title: 'The Tableland NFT: Test Rigs',
+      meta: [
+        { hid: 'og-url', property: 'og:url', content: `${this.$route.path}` },
+        { hid: 'og-type', property: 'og:type', content: 'website' },
+        { hid: 'og-title', property: 'og:title', content: 'The Tableland NFT: Test Rigs' },
+        { hid: 'og-sitename', property: 'og:site_name', content: 'tableland.xyz/test-rigs' },
+        { hid: 'og-desc', property: 'og:description', content: 'A generative NFT built from 1,043 handcrafted works of art for the builders and creatives of cyberspace.' },
+        {
+          hid: 'og-image',
+          property: 'og:image',
+          content: 'https://i.imgur.com/5YHLnkC.png'
+        }
+      ]
     };
   },
 
@@ -125,25 +143,7 @@ export default {
     imageLoad: function () {
       console.log('image loaded'); // eslint-disable-line no-console
     }
-  },
-
-  head: function () {
-    return {
-      title: 'The Tableland NFT: Test Rigs',
-      meta: [
-        { hid: 'og-url', property: 'og:url', content: `${this.$route.path}` },
-        { hid: 'og-type', property: 'og:type', content: 'website' },
-        { hid: 'og-title', property: 'og:title', content: 'The Tableland NFT: Test Rigs' },
-        { hid: 'og-sitename', property: 'og:site_name', content: 'tableland.xyz/test-rigs' },
-        { hid: 'og-desc', property: 'og:description', content: 'A generative NFT built from 1,043 handcrafted works of art for the builders and creatives of cyberspace.' },
-        {
-          hid: 'og-image',
-          property: 'og:image',
-          content: 'https://i.imgur.com/5YHLnkC.png'
-        }
-      ]
-    };
-  },
+  }
 };
 
 </script>
