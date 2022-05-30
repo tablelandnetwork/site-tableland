@@ -1,10 +1,8 @@
 import { createLocalVue, mount } from '@vue/test-utils';
 import { setupTest } from '@nuxt/test-utils';
-import IndexPage from '@/pages/index.vue';
-import flushPromises from 'flush-promises';
 
 import { registerComponents } from './setup';
-
+import IndexPage from '@/pages/index.vue';
 
 describe('Index Page', function () {
   setupTest({

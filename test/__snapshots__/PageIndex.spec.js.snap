@@ -2,47 +2,224 @@
 
 exports[`Index Page renders correctly when browser does not have a wallet 1`] = `
 <div>
+  <div
+    class="nav-bar"
+  >
+    <div
+      class="sm:mx-auto flex flex-wrap"
+    >
+      <nav
+        class="container hidden md:inline-flex justify-between px-6 md:px-9 lg:px-16 flex items-center py-2 pt-6"
+      >
+        <div
+          class="py-4"
+        >
+          <a
+            href="/"
+          >
+            <img
+              alt="Tableland"
+              class="h-5"
+              src="~assets/img/logo-black.svg"
+            />
+          </a>
+        </div>
+         
+        <div
+          class="py-4"
+        >
+          <ul
+            class="flex justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3"
+          >
+            <li>
+              <a
+                href="https://discord.gg/hpd5WWn4Ys"
+                target="_blank"
+              >
+                
+              Discord
+            
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://mirror.xyz/tableland.eth"
+                target="_blank"
+              >
+                
+              Blog
+            
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://docs.tableland.xyz"
+                target="_blank"
+              >
+                
+              Docs
+            
+              </a>
+            </li>
+            <li>
+              <a
+                class="btn bg-black text-white"
+                href="rigs"
+                target=""
+              >
+                
+              Rigs
+            
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+       
+      <div
+        class="py-12 px-6 md:hidden logo"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="Tableland"
+            class="h-4"
+            src="~assets/img/logo-black.svg"
+          />
+        </a>
+      </div>
+       
+      <button
+        class="ml-auto md:hidden p-6"
+      >
+        
+      MENU
+    
+      </button>
+    </div>
+     
+    <nav
+      class="aos-animate w-full"
+      data-aos="fade-down"
+      style="background-color: rgb(129, 86, 145); transition: all 0.2s ease-in-out; display: none;"
+    >
+      <ul
+        class="flex flex-col text-center"
+      >
+        <li>
+          <a
+            class="p-6 block"
+            href="https://discord.gg/hpd5WWn4Ys"
+            target="_blank"
+          >
+            
+          Discord
+        
+          </a>
+        </li>
+        <li>
+          <a
+            class="p-6 block"
+            href="https://mirror.xyz/tableland.eth"
+            target="_blank"
+          >
+            
+          Blog
+        
+          </a>
+        </li>
+        <li>
+          <a
+            class="p-6 block"
+            href="https://docs.tableland.xyz"
+            target="_blank"
+          >
+            
+          Docs
+        
+          </a>
+        </li>
+        <li>
+          <a
+            class="p-6 block"
+            href="rigs"
+            target=""
+          >
+            
+          Rigs
+        
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+   
   <header
-    class="bg-navbar"
+    class="bg-navbar hidden sm:inline-block"
+    data-aos="fade-down"
+    data-aos-anchor=".garage"
+    data-aos-offset="0"
   >
     <nav
       class="container px-6 md:px-9 lg:px-16 flex items-center py-2"
     >
       <div
-        class="py-4"
+        class="py-4 logo"
       >
-        <img
-          alt="Tableland"
-          class="h-5"
-          src="~assets/img/logo-black.svg"
-        />
+        <a
+          href="/"
+        >
+          <img
+            alt="Tableland"
+            class="lg:h-5 h-4"
+            src="~assets/img/logo-black.svg"
+          />
+        </a>
       </div>
        
       <ul
-        class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-24 uppercase text-sm ml-3"
+        class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3"
       >
-        <li>
-          <a
-            href="https://mirror.xyz/tableland.eth"
-          >
-            Blog
-          </a>
-        </li>
-         
         <li>
           <a
             href="https://discord.gg/hpd5WWn4Ys"
             target="_blank"
           >
-            Discord
+            
+          Discord
+        
           </a>
         </li>
-         
+        <li>
+          <a
+            href="https://mirror.xyz/tableland.eth"
+            target="_blank"
+          >
+            
+          Blog
+        
+          </a>
+        </li>
         <li>
           <a
             href="https://docs.tableland.xyz"
+            target="_blank"
           >
-            Docs
+            
+          Docs
+        
+          </a>
+        </li>
+        <li>
+          <a
+            class="btn bg-black text-white"
+            href="rigs"
+            target=""
+          >
+            
+          Rigs
+        
           </a>
         </li>
       </ul>
@@ -53,82 +230,133 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
     class="hero"
   >
     <div
-      class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36"
+      class="container"
     >
       <div
-        class="lg:w-2/3"
+        class="px-6 md:px-9 lg:px-16 flex items-center pt-36 lg:pt-48 mb-48"
       >
-        <h1
-          class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10"
-        >
-          
-          Build web3 with 
-          <span
-            class="font-black"
-          >
-            SQL
-          </span>
-        </h1>
-         
-        <p
-          class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18"
-        >
-          
-          Tableland is a network and relational metadata protocol for EVM chains like Ethereum.
-          Built for developers, NFT creators, and web3 visionaries.
-        
-        </p>
-         
         <div
-          class="hero-btn hidden md:inline-block text-center md:text-left mb-18 lg:mb-48"
+          class="lg:w-2/3"
         >
-          <a
-            class="btn bg-black text-white"
-            href="https://docs.tableland.xyz"
+          <h1
+            class="font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10"
+            data-aos="fade-up"
           >
+            
+            Build web3 with 
             <span
-              class="flex"
+              class="font-black"
             >
-              Get started 
-              <img
-                alt=""
-                class="hidden sm:inline-block ml-4"
-                src="~assets/img/arrow_white.png"
-                srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
-              />
+              SQL
             </span>
-          </a>
-        </div>
-         
-        <div
-          class="md:hidden text-center md:text-left"
-        >
-          <a
-            class="btn bg-black text-white"
-            href="https://discord.gg/hpd5WWn4Ys"
+          </h1>
+           
+          <p
+            class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18"
+            data-aos="fade-up"
           >
-            <span
-              class="flex"
-            >
-              Discord 
-              <img
-                alt=""
-                class="hidden sm:inline-block ml-4"
-                src="~assets/img/arrow_white.png"
-                srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
-              />
-            </span>
-          </a>
-        </div>
-         
-        <p
-          class="hidden md:inline-block text-2xl md:text-3xl lg:text-4.25xl leading-snug md:leading-snug font-medium"
-        >
+            
+            Tableland is a network and relational metadata protocol for EVM chains like Ethereum.
+            Built for developers, NFT creators, and web3 visionaries.
           
-          Use familiar SQL tables to read and write dynamic NFT metadata or application
-          data–all orchestrated by token networks like Ethereum.
-        
-        </p>
+          </p>
+           
+          <div
+            class="hero-btn hidden md:inline-block text-center md:text-left"
+            data-aos="fade-up"
+          >
+            <a
+              class="btn bg-black text-white"
+              href="https://docs.tableland.xyz"
+            >
+              <span
+                class="flex"
+              >
+                Get started 
+                <img
+                  alt=""
+                  class="hidden sm:inline-block ml-4"
+                  src="~assets/img/arrow_white.png"
+                  srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+                />
+              </span>
+            </a>
+          </div>
+           
+          <p
+            class="hidden text-2xl md:text-3xl lg:text-4.25xl leading-snug md:leading-snug font-medium"
+            data-aos="fade-up"
+          >
+            
+            Use familiar SQL tables to read and write NFT metadata or application
+            data governed by immutable rules–all orchestrated by token networks like Ethereum.
+          
+          </p>
+        </div>
+      </div>
+       
+      <div
+        class="px-6 md:px-9 lg:px-16 flex justify-between mt-24"
+      >
+        <div
+          class="w-full lg:w-1/2"
+        >
+          <h1
+            class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10 choose"
+            data-aos="fade-up"
+          >
+            
+            Grab your 
+            <span
+              class="font-black"
+            >
+              Rig
+            </span>
+          </h1>
+           
+          <img
+            src="~assets/img/main_rigs.png"
+          />
+        </div>
+      </div>
+       
+      <div
+        class="flex"
+      >
+        <div
+          class="xl:w-1/2 w-full px-12 py-12"
+        >
+          <p
+            class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18 lg:px-6"
+            data-aos="fade-up"
+          >
+            
+            NFTs can be a building block to unite technological communities. Well-crafted NFTs can link technology, art, community, and incentives in ways unlike any previous innovation. Rigs are where we will experiment and demonstrate what is possible.
+          
+          </p>
+           
+          <div
+            class="hero-btn md:inline-block md:text-left mb-18 lg:mb-48 px-6"
+            data-aos="fade-up"
+          >
+            <a
+              class="btn bg-black text-white"
+              href="/rigs"
+            >
+              <span
+                class="flex"
+              >
+                Learn more 
+                <img
+                  alt=""
+                  class="hidden sm:inline-block ml-4"
+                  src="~assets/img/arrow_white.png"
+                  srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+                />
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -144,6 +372,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
       >
         <h3
           class="font-Orbitron text-white text-4xl md:text-5xl lg:text-6xl leading-tighter mb-10 md:mb-4 lg:mb-10"
+          data-aos="fade-up"
         >
           
           Welcome to Tableland
@@ -152,38 +381,43 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
          
         <p
           class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2"
+          data-aos="fade-up"
         >
           
-          1—Use tables to store mutable, partially mutable, or immutable NFT metadata.
+          1&gt; Use tables to store mutable NFT metadata governed by immutable rules.
         
         </p>
          
         <p
           class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2"
+          data-aos="fade-up"
         >
           
-          2—Use tables to attach in-app or in-game metadata to existing NFTs.
+          2&gt; Use tables to attach in-app or in-game metadata to existing NFTs.
         
         </p>
          
         <p
           class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2"
+          data-aos="fade-up"
         >
           
-          3—Control table write access with token or address-based rules.
+          3&gt; Control table write access with token or address-based rules.
         
         </p>
          
         <p
           class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-10 lg:mb-18"
+          data-aos="fade-up"
         >
           
-          4—Use tables to build fully decentralized apps and games that require complex relational data models.
+          4&gt; Use tables to build fully decentralized apps and games that require complex relational data models.
         
         </p>
          
         <div
           class="text-center md:text-left"
+          data-aos="fade-up"
         >
           <a
             class="btn bg-black text-white"
@@ -223,40 +457,40 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
           class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10"
         >
           
-          In Tableland, we speak SQL
-        
+      In Tableland, we speak SQL
+    
         </h3>
          
         <p
           class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2"
         >
           
-          1–The bulk of digital information is stored in relational tables.
-        
+      1&gt; The bulk of digital information is stored in relational tables.
+    
         </p>
          
         <p
           class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2"
         >
           
-          2–Your familiar SQL tables are stored on a decentralized network of validators
-          and anchored to Ethereum as transferable NFTs, providing ownership and access control.
-        
+      2&gt; Your familiar SQL tables are stored on a decentralized network of validators
+      and anchored to an EVM layer of your choice as transferable NFTs, providing ownership and access control.
+    
         </p>
          
         <p
           class="text-xl md:text-3xl leading-normal md:leading-normal font-light"
         >
           
-          3–Easy as pie, right?
-        
+      3&gt; Easy as pie, right?
+    
         </p>
       </div>
     </div>
   </section>
    
   <div
-    class="bg-gradient bg-gradient-to-b from-violet to-pink"
+    class="console bg-gradient bg-gradient-to-b from-violet to-pink"
   >
     <section
       class="playground text-white pt-6 md:pt-32 pb-32"
@@ -269,6 +503,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
         >
           <h3
             class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10"
+            data-aos="fade-up"
           >
             
             Try it out
@@ -279,6 +514,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
            
           <p
             class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-4 lg:mb-6"
+            data-aos="fade-up"
           >
             
             Uh oh! You need a browser wallet. Go install 
@@ -451,6 +687,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
         >
           <h3
             class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10"
+            data-aos="fade-up"
           >
             
             Join the community
@@ -459,6 +696,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
            
           <p
             class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18"
+            data-aos="fade-up"
           >
             
             Whether you're a developer, NFT creator, token holder, or just curious about web3, there's a place for you in Tableland. Join a fast-growing community of innovators from all over the world.
@@ -466,7 +704,8 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
           </p>
            
           <div
-            class="text-center md:text-left"
+            class="text-center md:text-left mt-5"
+            data-aos="fade-up"
           >
             <a
               class="btn bg-black text-white"
@@ -494,6 +733,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
         <div>
           <h3
             class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10"
+            data-aos="fade-up"
           >
             
             User-owned token networks are the future of the internet
@@ -502,6 +742,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
            
           <p
             class="text-xl md:text-3xl leading-normal md:leading-normal font-light"
+            data-aos="fade-up"
           >
             
             Web3 needs a relational and queryable metadata layer. Tableland is a decentralized user-owned network for structured metadata—data from apps, games, social, analytics, AI/ML, or whatever else you can imagine. Tableland tables are also NFTs, making them own-able, tradable, and composable assets themselves.
@@ -517,28 +758,32 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
   </section>
    
   <section
-    class="md:block showcase py-32 relative"
+    class="md:block showcase py-12 md:py-32 relative landing"
   >
     <div
-      class="container px-6 md:px-9 lg:px-16"
+      class="showcase-break"
+    />
+     
+    <div
+      class="container"
     >
       <div
-        class="text-center text-white"
+        class="text-center"
       >
         <p
-          class="text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10"
+          class="font-Orbitron text-blue text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10"
         >
           What will you build?
         </p>
          
         <a
           class="btn bg-black text-white"
-          href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f"
+          href="https://docs.tableland.xyz"
         >
           <span
             class="flex"
           >
-            See use cases 
+            Read the docs 
             <img
               alt=""
               class="hidden sm:inline-block ml-4"
@@ -552,7 +797,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
   </section>
    
   <footer
-    class="text-white py-10"
+    class="text-blue py-10 landing"
   >
     <nav
       class="container px-6 md:px-9 lg:px-16 py-2"
@@ -563,18 +808,18 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
         <img
           alt="Tableland"
           class="h-5"
+          id="js-scroll"
           src="~assets/img/logo-white.svg"
         />
       </div>
        
       <ul
-        class="flex justify-center items-center gap-x-3 sm:gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-xs"
+        class="flex justify-center items-center gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-xs"
       >
-        <li
-          class="hidden md:inline-block"
-        >
+        <li>
           <a
             href="https://twitter.com/tableland__"
+            target="_blank"
           >
             Twitter
           </a>
@@ -582,7 +827,28 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
          
         <li>
           <a
+            href="https://mirror.xyz/tableland.eth"
+            target="_blank"
+          >
+            Blog
+          </a>
+        </li>
+         
+        <li>
+          <a
+            href="https://docs.tableland.xyz"
+            target="_blank"
+          >
+            Docs
+          </a>
+        </li>
+         
+        <li
+          class="hidden md:inline-block"
+        >
+          <a
             href="https://textile.notion.site/Tableland-Grants-Funding-ebc1f398d53a481d94f090ab12d93be0"
+            target="_blank"
           >
             Grants
           </a>
@@ -592,15 +858,8 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
           class="hidden md:inline-block"
         >
           <a
-            href="https://boards.greenhouse.io/textileio"
-          >
-            Jobs
-          </a>
-        </li>
-         
-        <li>
-          <a
             href="https://hhueol4i6vp.typeform.com/to/sgtDW2Xt"
+            target="_blank"
           >
             Token Info
           </a>
@@ -608,15 +867,8 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
          
         <li>
           <a
-            href="https://docs.tableland.xyz/general/community/partners"
-          >
-            Partners
-          </a>
-        </li>
-         
-        <li>
-          <a
             href="https://textile.notion.site/Tableland-Privacy-Policy-6fd160e7f485491d9dc4cbab188043d5"
+            target="_blank"
           >
             Privacy
           </a>
@@ -625,6 +877,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
         <li>
           <a
             href="https://textile.notion.site/Tableland-Terms-of-Use-cf80f1b550b843ad9d4b8c3140b78e35"
+            target="_blank"
           >
             Terms
           </a>
@@ -637,47 +890,224 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
 
 exports[`Index Page renders correctly when browser has a wallet 1`] = `
 <div>
+  <div
+    class="nav-bar"
+  >
+    <div
+      class="sm:mx-auto flex flex-wrap"
+    >
+      <nav
+        class="container hidden md:inline-flex justify-between px-6 md:px-9 lg:px-16 flex items-center py-2 pt-6"
+      >
+        <div
+          class="py-4"
+        >
+          <a
+            href="/"
+          >
+            <img
+              alt="Tableland"
+              class="h-5"
+              src="~assets/img/logo-black.svg"
+            />
+          </a>
+        </div>
+         
+        <div
+          class="py-4"
+        >
+          <ul
+            class="flex justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3"
+          >
+            <li>
+              <a
+                href="https://discord.gg/hpd5WWn4Ys"
+                target="_blank"
+              >
+                
+              Discord
+            
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://mirror.xyz/tableland.eth"
+                target="_blank"
+              >
+                
+              Blog
+            
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://docs.tableland.xyz"
+                target="_blank"
+              >
+                
+              Docs
+            
+              </a>
+            </li>
+            <li>
+              <a
+                class="btn bg-black text-white"
+                href="rigs"
+                target=""
+              >
+                
+              Rigs
+            
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+       
+      <div
+        class="py-12 px-6 md:hidden logo"
+      >
+        <a
+          href="/"
+        >
+          <img
+            alt="Tableland"
+            class="h-4"
+            src="~assets/img/logo-black.svg"
+          />
+        </a>
+      </div>
+       
+      <button
+        class="ml-auto md:hidden p-6"
+      >
+        
+      MENU
+    
+      </button>
+    </div>
+     
+    <nav
+      class="aos-animate w-full"
+      data-aos="fade-down"
+      style="background-color: rgb(129, 86, 145); transition: all 0.2s ease-in-out; display: none;"
+    >
+      <ul
+        class="flex flex-col text-center"
+      >
+        <li>
+          <a
+            class="p-6 block"
+            href="https://discord.gg/hpd5WWn4Ys"
+            target="_blank"
+          >
+            
+          Discord
+        
+          </a>
+        </li>
+        <li>
+          <a
+            class="p-6 block"
+            href="https://mirror.xyz/tableland.eth"
+            target="_blank"
+          >
+            
+          Blog
+        
+          </a>
+        </li>
+        <li>
+          <a
+            class="p-6 block"
+            href="https://docs.tableland.xyz"
+            target="_blank"
+          >
+            
+          Docs
+        
+          </a>
+        </li>
+        <li>
+          <a
+            class="p-6 block"
+            href="rigs"
+            target=""
+          >
+            
+          Rigs
+        
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+   
   <header
-    class="bg-navbar"
+    class="bg-navbar hidden sm:inline-block"
+    data-aos="fade-down"
+    data-aos-anchor=".garage"
+    data-aos-offset="0"
   >
     <nav
       class="container px-6 md:px-9 lg:px-16 flex items-center py-2"
     >
       <div
-        class="py-4"
+        class="py-4 logo"
       >
-        <img
-          alt="Tableland"
-          class="h-5"
-          src="~assets/img/logo-black.svg"
-        />
+        <a
+          href="/"
+        >
+          <img
+            alt="Tableland"
+            class="lg:h-5 h-4"
+            src="~assets/img/logo-black.svg"
+          />
+        </a>
       </div>
        
       <ul
-        class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-24 uppercase text-sm ml-3"
+        class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3"
       >
-        <li>
-          <a
-            href="https://mirror.xyz/tableland.eth"
-          >
-            Blog
-          </a>
-        </li>
-         
         <li>
           <a
             href="https://discord.gg/hpd5WWn4Ys"
             target="_blank"
           >
-            Discord
+            
+          Discord
+        
           </a>
         </li>
-         
+        <li>
+          <a
+            href="https://mirror.xyz/tableland.eth"
+            target="_blank"
+          >
+            
+          Blog
+        
+          </a>
+        </li>
         <li>
           <a
             href="https://docs.tableland.xyz"
+            target="_blank"
           >
-            Docs
+            
+          Docs
+        
+          </a>
+        </li>
+        <li>
+          <a
+            class="btn bg-black text-white"
+            href="rigs"
+            target=""
+          >
+            
+          Rigs
+        
           </a>
         </li>
       </ul>
@@ -688,82 +1118,133 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
     class="hero"
   >
     <div
-      class="container px-6 md:px-9 lg:px-16 flex items-center pt-18 lg:pt-36"
+      class="container"
     >
       <div
-        class="lg:w-2/3"
+        class="px-6 md:px-9 lg:px-16 flex items-center pt-36 lg:pt-48 mb-48"
       >
-        <h1
-          class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10"
-        >
-          
-          Build web3 with 
-          <span
-            class="font-black"
-          >
-            SQL
-          </span>
-        </h1>
-         
-        <p
-          class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18"
-        >
-          
-          Tableland is a network and relational metadata protocol for EVM chains like Ethereum.
-          Built for developers, NFT creators, and web3 visionaries.
-        
-        </p>
-         
         <div
-          class="hero-btn hidden md:inline-block text-center md:text-left mb-18 lg:mb-48"
+          class="lg:w-2/3"
         >
-          <a
-            class="btn bg-black text-white"
-            href="https://docs.tableland.xyz"
+          <h1
+            class="font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10"
+            data-aos="fade-up"
           >
+            
+            Build web3 with 
             <span
-              class="flex"
+              class="font-black"
             >
-              Get started 
-              <img
-                alt=""
-                class="hidden sm:inline-block ml-4"
-                src="~assets/img/arrow_white.png"
-                srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
-              />
+              SQL
             </span>
-          </a>
-        </div>
-         
-        <div
-          class="md:hidden text-center md:text-left"
-        >
-          <a
-            class="btn bg-black text-white"
-            href="https://discord.gg/hpd5WWn4Ys"
+          </h1>
+           
+          <p
+            class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18"
+            data-aos="fade-up"
           >
-            <span
-              class="flex"
-            >
-              Discord 
-              <img
-                alt=""
-                class="hidden sm:inline-block ml-4"
-                src="~assets/img/arrow_white.png"
-                srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
-              />
-            </span>
-          </a>
-        </div>
-         
-        <p
-          class="hidden md:inline-block text-2xl md:text-3xl lg:text-4.25xl leading-snug md:leading-snug font-medium"
-        >
+            
+            Tableland is a network and relational metadata protocol for EVM chains like Ethereum.
+            Built for developers, NFT creators, and web3 visionaries.
           
-          Use familiar SQL tables to read and write dynamic NFT metadata or application
-          data–all orchestrated by token networks like Ethereum.
-        
-        </p>
+          </p>
+           
+          <div
+            class="hero-btn hidden md:inline-block text-center md:text-left"
+            data-aos="fade-up"
+          >
+            <a
+              class="btn bg-black text-white"
+              href="https://docs.tableland.xyz"
+            >
+              <span
+                class="flex"
+              >
+                Get started 
+                <img
+                  alt=""
+                  class="hidden sm:inline-block ml-4"
+                  src="~assets/img/arrow_white.png"
+                  srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+                />
+              </span>
+            </a>
+          </div>
+           
+          <p
+            class="hidden text-2xl md:text-3xl lg:text-4.25xl leading-snug md:leading-snug font-medium"
+            data-aos="fade-up"
+          >
+            
+            Use familiar SQL tables to read and write NFT metadata or application
+            data governed by immutable rules–all orchestrated by token networks like Ethereum.
+          
+          </p>
+        </div>
+      </div>
+       
+      <div
+        class="px-6 md:px-9 lg:px-16 flex justify-between mt-24"
+      >
+        <div
+          class="w-full lg:w-1/2"
+        >
+          <h1
+            class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10 choose"
+            data-aos="fade-up"
+          >
+            
+            Grab your 
+            <span
+              class="font-black"
+            >
+              Rig
+            </span>
+          </h1>
+           
+          <img
+            src="~assets/img/main_rigs.png"
+          />
+        </div>
+      </div>
+       
+      <div
+        class="flex"
+      >
+        <div
+          class="xl:w-1/2 w-full px-12 py-12"
+        >
+          <p
+            class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18 lg:px-6"
+            data-aos="fade-up"
+          >
+            
+            NFTs can be a building block to unite technological communities. Well-crafted NFTs can link technology, art, community, and incentives in ways unlike any previous innovation. Rigs are where we will experiment and demonstrate what is possible.
+          
+          </p>
+           
+          <div
+            class="hero-btn md:inline-block md:text-left mb-18 lg:mb-48 px-6"
+            data-aos="fade-up"
+          >
+            <a
+              class="btn bg-black text-white"
+              href="/rigs"
+            >
+              <span
+                class="flex"
+              >
+                Learn more 
+                <img
+                  alt=""
+                  class="hidden sm:inline-block ml-4"
+                  src="~assets/img/arrow_white.png"
+                  srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+                />
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -779,6 +1260,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
       >
         <h3
           class="font-Orbitron text-white text-4xl md:text-5xl lg:text-6xl leading-tighter mb-10 md:mb-4 lg:mb-10"
+          data-aos="fade-up"
         >
           
           Welcome to Tableland
@@ -787,38 +1269,43 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
          
         <p
           class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2"
+          data-aos="fade-up"
         >
           
-          1—Use tables to store mutable, partially mutable, or immutable NFT metadata.
+          1&gt; Use tables to store mutable NFT metadata governed by immutable rules.
         
         </p>
          
         <p
           class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2"
+          data-aos="fade-up"
         >
           
-          2—Use tables to attach in-app or in-game metadata to existing NFTs.
+          2&gt; Use tables to attach in-app or in-game metadata to existing NFTs.
         
         </p>
          
         <p
           class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2"
+          data-aos="fade-up"
         >
           
-          3—Control table write access with token or address-based rules.
+          3&gt; Control table write access with token or address-based rules.
         
         </p>
          
         <p
           class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-10 lg:mb-18"
+          data-aos="fade-up"
         >
           
-          4—Use tables to build fully decentralized apps and games that require complex relational data models.
+          4&gt; Use tables to build fully decentralized apps and games that require complex relational data models.
         
         </p>
          
         <div
           class="text-center md:text-left"
+          data-aos="fade-up"
         >
           <a
             class="btn bg-black text-white"
@@ -858,40 +1345,40 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
           class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10"
         >
           
-          In Tableland, we speak SQL
-        
+      In Tableland, we speak SQL
+    
         </h3>
          
         <p
           class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2"
         >
           
-          1–The bulk of digital information is stored in relational tables.
-        
+      1&gt; The bulk of digital information is stored in relational tables.
+    
         </p>
          
         <p
           class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2"
         >
           
-          2–Your familiar SQL tables are stored on a decentralized network of validators
-          and anchored to Ethereum as transferable NFTs, providing ownership and access control.
-        
+      2&gt; Your familiar SQL tables are stored on a decentralized network of validators
+      and anchored to an EVM layer of your choice as transferable NFTs, providing ownership and access control.
+    
         </p>
          
         <p
           class="text-xl md:text-3xl leading-normal md:leading-normal font-light"
         >
           
-          3–Easy as pie, right?
-        
+      3&gt; Easy as pie, right?
+    
         </p>
       </div>
     </div>
   </section>
    
   <div
-    class="bg-gradient bg-gradient-to-b from-violet to-pink"
+    class="console bg-gradient bg-gradient-to-b from-violet to-pink"
   >
     <section
       class="playground text-white pt-6 md:pt-32 pb-32"
@@ -904,6 +1391,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
         >
           <h3
             class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10"
+            data-aos="fade-up"
           >
             
             Try it out
@@ -914,6 +1402,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
            
           <p
             class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-4 lg:mb-6"
+            data-aos="fade-up"
           >
             
             Uh oh! You need a browser wallet. Go install 
@@ -1086,6 +1575,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
         >
           <h3
             class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10"
+            data-aos="fade-up"
           >
             
             Join the community
@@ -1094,6 +1584,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
            
           <p
             class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18"
+            data-aos="fade-up"
           >
             
             Whether you're a developer, NFT creator, token holder, or just curious about web3, there's a place for you in Tableland. Join a fast-growing community of innovators from all over the world.
@@ -1101,7 +1592,8 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
           </p>
            
           <div
-            class="text-center md:text-left"
+            class="text-center md:text-left mt-5"
+            data-aos="fade-up"
           >
             <a
               class="btn bg-black text-white"
@@ -1129,6 +1621,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
         <div>
           <h3
             class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter md:leading-tighter lg:leading-tighter mb-4 lg:mb-10"
+            data-aos="fade-up"
           >
             
             User-owned token networks are the future of the internet
@@ -1137,6 +1630,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
            
           <p
             class="text-xl md:text-3xl leading-normal md:leading-normal font-light"
+            data-aos="fade-up"
           >
             
             Web3 needs a relational and queryable metadata layer. Tableland is a decentralized user-owned network for structured metadata—data from apps, games, social, analytics, AI/ML, or whatever else you can imagine. Tableland tables are also NFTs, making them own-able, tradable, and composable assets themselves.
@@ -1152,28 +1646,32 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
   </section>
    
   <section
-    class="md:block showcase py-32 relative"
+    class="md:block showcase py-12 md:py-32 relative landing"
   >
     <div
-      class="container px-6 md:px-9 lg:px-16"
+      class="showcase-break"
+    />
+     
+    <div
+      class="container"
     >
       <div
-        class="text-center text-white"
+        class="text-center"
       >
         <p
-          class="text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10"
+          class="font-Orbitron text-blue text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10"
         >
           What will you build?
         </p>
          
         <a
           class="btn bg-black text-white"
-          href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f"
+          href="https://docs.tableland.xyz"
         >
           <span
             class="flex"
           >
-            See use cases 
+            Read the docs 
             <img
               alt=""
               class="hidden sm:inline-block ml-4"
@@ -1187,7 +1685,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
   </section>
    
   <footer
-    class="text-white py-10"
+    class="text-blue py-10 landing"
   >
     <nav
       class="container px-6 md:px-9 lg:px-16 py-2"
@@ -1198,18 +1696,18 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
         <img
           alt="Tableland"
           class="h-5"
+          id="js-scroll"
           src="~assets/img/logo-white.svg"
         />
       </div>
        
       <ul
-        class="flex justify-center items-center gap-x-3 sm:gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-xs"
+        class="flex justify-center items-center gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-xs"
       >
-        <li
-          class="hidden md:inline-block"
-        >
+        <li>
           <a
             href="https://twitter.com/tableland__"
+            target="_blank"
           >
             Twitter
           </a>
@@ -1217,7 +1715,28 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
          
         <li>
           <a
+            href="https://mirror.xyz/tableland.eth"
+            target="_blank"
+          >
+            Blog
+          </a>
+        </li>
+         
+        <li>
+          <a
+            href="https://docs.tableland.xyz"
+            target="_blank"
+          >
+            Docs
+          </a>
+        </li>
+         
+        <li
+          class="hidden md:inline-block"
+        >
+          <a
             href="https://textile.notion.site/Tableland-Grants-Funding-ebc1f398d53a481d94f090ab12d93be0"
+            target="_blank"
           >
             Grants
           </a>
@@ -1227,15 +1746,8 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
           class="hidden md:inline-block"
         >
           <a
-            href="https://boards.greenhouse.io/textileio"
-          >
-            Jobs
-          </a>
-        </li>
-         
-        <li>
-          <a
             href="https://hhueol4i6vp.typeform.com/to/sgtDW2Xt"
+            target="_blank"
           >
             Token Info
           </a>
@@ -1243,15 +1755,8 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
          
         <li>
           <a
-            href="https://docs.tableland.xyz/general/community/partners"
-          >
-            Partners
-          </a>
-        </li>
-         
-        <li>
-          <a
             href="https://textile.notion.site/Tableland-Privacy-Policy-6fd160e7f485491d9dc4cbab188043d5"
+            target="_blank"
           >
             Privacy
           </a>
@@ -1260,6 +1765,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
         <li>
           <a
             href="https://textile.notion.site/Tableland-Terms-of-Use-cf80f1b550b843ad9d4b8c3140b78e35"
+            target="_blank"
           >
             Terms
           </a>
