@@ -11,24 +11,25 @@
       :hrefs="nav.map(i => i.href)"
       :targets="nav.map(i => i.target)"
     />
+    <!-- hero -->
     <section class="rigs-hero">
       <div class="container px-0 sm:px-6 md:px-12 pt-12 sm:pt-24 lg:pt-32 xl:pt-48 justify-between">
         <div class="w-full px-6 pb-6 lg:pb-10 pt-12" data-aos="fade-up">
           <div class="w-full pt-6">
-            <h1 class="w-full h-auto text-white font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter">
+            <h1 class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter">
               Test <span class="font-black">Rigs</span>
             </h1>
           </div>
         </div>
       </div>
       <div class="container px-0 sm:px-6 md:px-12 pt-0 lg:pt-0 pb-24" data-aos="fade-up">
-        <div class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 lg:pb-0 pb-0 pt-0">
-          <h1 class="w-full h-auto text-white text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18">
+        <div class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0">
+          <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18">
             Rigs is a generative NFT built from 1,043 handcrafted works of art for the builders and creatives of cyberspace. Here are 1,000 randomly generated sample Rigs.
           </h1>
         </div>
-        <div class="w-full px-6 lg:pb-0 pb-0 pt-0">
-          <ButtonLink href="/samples">More info</ButtonLink>
+        <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
+          <ButtonLink href="/rigs">More info</ButtonLink>
         </div>
       </div>
     </section>
@@ -56,6 +57,7 @@
         </div>
       </div>
     </div>
+    <Showcase />
     <FooterNav />
   </div>
 </template>

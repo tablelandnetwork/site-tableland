@@ -285,7 +285,7 @@ nav li a:hover, nav li a:active {
 .showcase {
   background-color: #141034;
   color: #6067EB!important;
-  min-height: 650px;
+  position: relative;
 }
 
 .showcase .btn {
@@ -298,10 +298,11 @@ footer {
 }
 
 .showcase-break {
-    position: relative;
+    position: absolute;
   	background: center / cover no-repeat url('~assets/img/break_footer.svg');
   	height: 184px;
-    top: -200px;
+    top: -184px;
+    width: 100%;
 }
 
 /** cohort  **/
@@ -351,13 +352,18 @@ footer {
   padding-top: 0.5em;
 }
 
+.section-header-small {
+  border-top: 4px solid black;
+  padding-top: 0.5em;
+}
+
 .section-container {
   max-width: 1200px;
 }
 
 img.text-flow {
   border-radius: 0.5em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 img.text-flow.left {
@@ -371,15 +377,18 @@ img.text-flow.right {
 }
 
 pre, code {
-  white-space: normal;
+  white-space: pre;
 }
 
 .code pre {
-  background-color: black;
+  background-color: #1a1a1a;
   color: white;
-  padding: 1em;
+  padding: 0 2em;
   margin: 0;
   border-radius: 0.5em;
+  font-size: 0.8em;
+  max-height: 30vh;
+  overflow: auto;
 }
 
 .code pre code {
@@ -399,7 +408,7 @@ pre, code {
 	background: top / cover no-repeat url('~assets/img/break_purple2.svg');
   height: auto;
   height: 200px;
-  width: 100%!important;
+  width: 110%!important;
   position: absolute;
   top: -200px;
 }
@@ -410,6 +419,11 @@ a {
 
 nav a, a.btn {
   text-decoration: none;
+}
+
+.bg-black {
+  background-color: #1a1a1a;
+  color: white;
 }
 
 /** minting **/

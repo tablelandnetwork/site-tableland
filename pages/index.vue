@@ -19,7 +19,7 @@
       <div class="container">
         <div class="px-6 md:px-9 lg:px-16 flex items-center pt-36 lg:pt-48 mb-48">
           <div class="lg:w-2/3">
-            <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+            <h1 class="font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
               Build web3 with <span class="font-black">SQL</span>
             </h1>
             <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
@@ -30,8 +30,8 @@
               <ButtonLink href="https://docs.tableland.xyz">Get started</ButtonLink>
             </div>
             <p class="hidden text-2xl md:text-3xl lg:text-4.25xl leading-snug md:leading-snug font-medium" data-aos="fade-up">
-              Use familiar SQL tables to read and write dynamic NFT metadata or application
-              data–all orchestrated by token networks like Ethereum.
+              Use familiar SQL tables to read and write NFT metadata or application
+              data governed by immutable rules–all orchestrated by token networks like Ethereum.
             </p>
           </div>
         </div>
@@ -46,7 +46,7 @@
         <div class="flex">
           <div class="xl:w-1/2 w-full px-12 py-12">
             <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18 lg:px-6" data-aos="fade-up">
-              Your Rig is your custom machine. There are none that are like it, and this one is yours. It’s a purpose-built code-based machine and your key to Tableland.
+              NFTs can be a building block to unite technological communities. Well-crafted NFTs can link technology, art, community, and incentives in ways unlike any previous innovation. Rigs are where we will experiment and demonstrate what is possible.
             </p>
             <div class="hero-btn md:inline-block md:text-left mb-18 lg:mb-48 px-6" data-aos="fade-up">
               <ButtonLink href="/rigs">Learn more</ButtonLink>
@@ -64,16 +64,16 @@
             Welcome to Tableland
           </h3>
           <p class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2" data-aos="fade-up">
-            1—Use tables to store mutable, partially mutable, or immutable NFT metadata.
+            1> Use tables to store mutable NFT metadata governed by immutable rules.
           </p>
           <p class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2" data-aos="fade-up">
-            2—Use tables to attach in-app or in-game metadata to existing NFTs.
+            2> Use tables to attach in-app or in-game metadata to existing NFTs.
           </p>
           <p class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-2" data-aos="fade-up">
-            3—Control table write access with token or address-based rules.
+            3> Control table write access with token or address-based rules.
           </p>
           <p class="text-white text-xl md:text-2xl lg:text-3xl leading-normal md:leading-normal lg:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
-            4—Use tables to build fully decentralized apps and games that require complex relational data models.
+            4> Use tables to build fully decentralized apps and games that require complex relational data models.
           </p>
           <div class="text-center md:text-left" data-aos="fade-up">
             <ButtonLink href="https://docs.tableland.xyz/building/examples/playbooks">See playbooks</ButtonLink>
@@ -102,12 +102,12 @@
       <div class="container px-6 md:px-9 lg:px-16 flex pt-10 xl:pt-14"><div class="lg:w-2/3 xl:w-1/2"><h3 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
         In Tableland, we speak SQL
       </h3> <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2">
-        1–The bulk of digital information is stored in relational tables.
+        1> The bulk of digital information is stored in relational tables.
       </p> <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2">
-        2–Your familiar SQL tables are stored on a decentralized network of validators
-        and anchored to Ethereum as transferable NFTs, providing ownership and access control.
+        2> Your familiar SQL tables are stored on a decentralized network of validators
+        and anchored to an EVM layer of your choice as transferable NFTs, providing ownership and access control.
       </p> <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light">
-        3–Easy as pie, right?
+        3> Easy as pie, right?
       </p></div></div>
     </section>
 
@@ -162,31 +162,14 @@
       <div class="community-break"></div>
     </section>
 
-    <!-- showcase -->
-    <section class="md:block showcase py-32 relative landing">
-      <div class="showcase-break"></div>
-      <div class="container" style="margin-top:-100px;z-index:999!important;">
-        <div class="text-center">
-          <p class="font-Orbitron text-blue text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10">What will you build?</p>
-          <ButtonLink href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f">See use cases</ButtonLink>
-        </div>
-      </div>
-    </section>
-
-    <FooterNav />
+    <Showcase use-break="true" class="landing" />
+    <FooterNav classs="landing" />
   </div>
 </template>
 
 <script>
-import HeaderNavVue from '~/components/HeaderNav.vue';
-import HeaderScrollNavVue from '~/components/HeaderScrollNav.vue';
 
 export default {
-  components: {
-    HeaderNavVue: HeaderNavVue,
-    HeaderScrollNavVue: HeaderScrollNavVue
-  },
-
   data: function () {
     return {
       nav: [
