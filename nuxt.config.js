@@ -12,7 +12,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'Tableland',
+    title: 'Meet the RIGS - Tableland',
     htmlAttrs: {
       lang: 'en'
     },
@@ -20,7 +20,14 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Build web3 with SQL' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { name: 'format-detection', content: 'telephone=no' },
+      { hid: 'og-type', property: 'og:type', content: 'website' },
+      { hid: 'og-title', property: 'og:title', content: 'Meet the RIGS' },
+      { hid: 'og-sitename', property: 'og:site_name', content: 'Tableland - Build web3 with SQL' },
+      { hid: 'og-desc', property: 'og:description', content: 'A generative NFT with 1,043 handcrafted works of art. Rigs are your ride to Tableland.' },
+      { hid: 'og-image', property: 'og:image',
+        content: 'https://i.imgur.com/Akd149E.jpg'
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -37,7 +44,22 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    {
+      src: "~/plugins/aos",
+      ssr: false
+    },
+    {
+      src: "~/plugins/locomotiveScroll.js",
+      mode: "client"
+    },
+    {
+      src: "~/plugins/countdown.js",
+    },
+    {
+      src: "~/plugins/minter.js",
+    },
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -58,5 +80,14 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+    options: {
+           fix: true
+         }
+  },
+
+  hooks: {
+    'generate:page': page => {
+      page.html = page.html.replace(/ data-n-head=".*?"/gi, '').replace(/ data-hid=".*?"/gi, '')
+    },
+  },
 };

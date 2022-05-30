@@ -45,8 +45,8 @@ const buildNuxt = async () => {
 
 module.exports = async () => {
   const nuxt = await buildNuxt();
-  
-  // we surface this path as an env var now 
+
+  // we surface this path as an env var now
   // so we can import the store dynamically later on
   process.env.buildDir = nuxt.options.buildDir;
 };

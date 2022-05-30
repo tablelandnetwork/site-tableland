@@ -1,24 +1,24 @@
 import Vuex from 'vuex';
 import { createLocalVue, mount } from '@vue/test-utils';
-import { setupTest } from '@nuxt/test-utils'
+import { setupTest } from '@nuxt/test-utils';
 import flushPromises from 'flush-promises';
 // get mock tableland's error stub
 import { nextError } from '@tableland/sdk';
 
-import Playground from '@/components/Playground.vue';
-import messages from '~/playground-messages';
-import { registerComponents } from './setup';
 import {
   state,
   mutations,
   actions
 } from '../store/index.ts';
+import { registerComponents } from './setup';
+import Playground from '@/components/Playground.vue';
+import messages from '~/playground-messages';
 
 const wait = function (ms) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(() => resolve(void 0), ms);
   });
-}
+};
 
 describe('Playground component', function () {
   setupTest({
@@ -79,8 +79,6 @@ describe('Playground component', function () {
     const terminalLines = wrapper.findAll('.web-terminal > span');
 
     for (let i = 0; i < messageLines.length; i++) {
-      const line = messageLines[i];
-
       await expect(terminalLines.at(i).text().replace(/\s+/g, '')).toMatch(messageLines[i].replace(/\s+/g, ''));
     }
   });
@@ -98,8 +96,6 @@ describe('Playground component', function () {
     const terminalLines = wrapper.findAll('.web-terminal > span');
 
     for (let i = 0; i < messageLines.length; i++) {
-      const line = messageLines[i];
-
       await expect(terminalLines.at(i).text().replace(/\s+/g, '')).toMatch(messageLines[i].replace(/\s+/g, ''));
     }
   });
@@ -148,8 +144,6 @@ describe('Playground component', function () {
     const terminalLines = wrapper.findAll('.web-terminal > span');
 
     for (let i = 0; i < messageLines.length; i++) {
-      const line = messageLines[i];
-
       await expect(terminalLines.at(i).text().replace(/\s+/g, '')).toMatch(messageLines[i].replace(/\s+/g, ''));
     }
   });
@@ -191,8 +185,6 @@ describe('Playground component', function () {
     const terminalLines = wrapper.findAll('.web-terminal > span');
 
     for (let i = 0; i < messageLines.length; i++) {
-      const line = messageLines[i];
-
       await expect(terminalLines.at(i).text().replace(/\s+/g, '')).toMatch(messageLines[i].replace(/\s+/g, ''));
     }
   });
@@ -300,7 +292,6 @@ describe('Playground component', function () {
     await flushPromises();
 
     await expect(textInput.element.value === 'rty').toBe(true);
-
   });
 
   test('clicking the terminal puts focus on input', async function () {
@@ -336,8 +327,6 @@ describe('Playground component', function () {
     const terminalLines = wrapper.findAll('.web-terminal > span');
 
     for (let i = 0; i < messageLines.length; i++) {
-      const line = messageLines[i];
-
       await expect(terminalLines.at(i).text().replace(/\s+/g, '')).toMatch(messageLines[i].replace(/\s+/g, ''));
     }
   });
@@ -437,5 +426,4 @@ describe('Playground component', function () {
     await expect(terminalLines.at(0).text()).toMatch('Error:');
     await expect(terminalLines.at(1).text()).toMatch('test error');
   });
-
 });
