@@ -25,7 +25,7 @@
       <div class="container px-0 sm:px-6 md:px-12 pt-0 lg:pt-0 pb-24" data-aos="fade-up">
         <div class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0">
           <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18">
-            Rigs is a generative NFT built from 1,043 handcrafted works of art for the builders and creatives of cyberspace. Here are 1,000 randomly generated sample Rigs.
+            Each Rig is generated from 1,043 handcrafted works of art for the builders and creatives of cyberspace. Here are 1,000 random Rigs.
           </h1>
         </div>
         <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
@@ -125,7 +125,25 @@ export default {
     imageLoad: function () {
       console.log('image loaded'); // eslint-disable-line no-console
     }
-  }
+  },
+
+  head: function () {
+    return {
+      title: 'The Tableland NFT: Test Rigs',
+      meta: [
+        { hid: 'og-url', property: 'og:url', content: `${this.$route.path}` },
+        { hid: 'og-type', property: 'og:type', content: 'website' },
+        { hid: 'og-title', property: 'og:title', content: 'The Tableland NFT: Test Rigs' },
+        { hid: 'og-sitename', property: 'og:site_name', content: 'tableland.xyz/test-rigs' },
+        { hid: 'og-desc', property: 'og:description', content: 'A generative NFT built from 1,043 handcrafted works of art for the builders and creatives of cyberspace.' },
+        {
+          hid: 'og-image',
+          property: 'og:image',
+          content: 'https://i.imgur.com/5YHLnkC.png'
+        }
+      ]
+    };
+  },
 };
 
 </script>

@@ -478,6 +478,7 @@ Sleds       Decrypter   Spoiler     Verkle                  Midnight
 </template>
 
 <script>
+import helpers from '~/plugins/helpers';
 
 export default {
   data: function () {
@@ -508,15 +509,15 @@ export default {
         }
       ],
       time: launchDate - now,
-      rigs: this.getRigs(20),
-      titans: this.getRigs(20, 'titans'),
-      tumblers: this.getRigs(20, 'tumblers'),
-      sleds: this.getRigs(20, 'sleds'),
-      edge_riders: this.getRigs(20, 'edge_riders'),
-      tracers: this.getRigs(20, 'tracers'),
-      hoppers: this.getRigs(20, 'hoppers'),
-      airelights: this.getRigs(20, 'airelights'),
-      foils: this.getRigs(20, 'foils')
+      rigs: helpers.getRigs(20),
+      titans: helpers.getRigs(20, 'titans'),
+      tumblers: helpers.getRigs(20, 'tumblers'),
+      sleds: helpers.getRigs(20, 'sleds'),
+      edge_riders: helpers.getRigs(20, 'edge_riders'),
+      tracers: helpers.getRigs(20, 'tracers'),
+      hoppers: helpers.getRigs(20, 'hoppers'),
+      airelights: helpers.getRigs(20, 'airelights'),
+      foils: helpers.getRigs(20, 'foils')
     };
   },
 
@@ -524,11 +525,11 @@ export default {
     return {
       title: 'The Tableland NFT: Rigs',
       meta: [
-        { hid: 'og-url', property: 'og:url', content: `/${this.$route.path}` },
+        { hid: 'og-url', property: 'og:url', content: `${this.$route.path}` },
         { hid: 'og-type', property: 'og:type', content: 'website' },
-        { hid: 'og-title', property: 'og:title', content: 'Meet the Rigs' },
-        { hid: 'og-sitename', property: 'og:site_name', content: 'Tableland—Build web3 with SQL' },
-        { hid: 'og-desc', property: 'og:description', content: 'A generative NFT with 1,043 handcrafted works of art. Rigs are your ride to Tableland.' },
+        { hid: 'og-title', property: 'og:title', content: 'The Tableland NFT: Rigs' },
+        { hid: 'og-sitename', property: 'og:site_name', content: 'tableland.xyz/rigs' },
+        { hid: 'og-desc', property: 'og:description', content: 'A generative NFT built from 1,043 handcrafted works of art for the builders and creatives of cyberspace.' },
         {
           hid: 'og-image',
           property: 'og:image',
@@ -550,22 +551,6 @@ export default {
       el: document.querySelector('#js-scroll'),
       smooth: true
     });
-  },
-
-  methods: {
-    getRigs: function (count, fleet) {
-      const rigs = [];
-      let max = 100;
-      const path = fleet || 'all';
-      if (!fleet) {
-        max = 1000;
-      }
-      for (let i = 0; i < count; i++) {
-        const j = Math.floor(Math.random() * (max));
-        rigs.push('/rigs/' + path + '/' + j + '.jpg');
-      }
-      return rigs;
-    }
   }
 };
 
