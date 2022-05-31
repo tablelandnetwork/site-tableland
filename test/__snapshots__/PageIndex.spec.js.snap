@@ -316,6 +316,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
            
           <img
             class="rounded-lg"
+            data-aos="fade-up"
             src="~assets/img/main_rigs.png"
           />
         </div>
@@ -1205,6 +1206,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
            
           <img
             class="rounded-lg"
+            data-aos="fade-up"
             src="~assets/img/main_rigs.png"
           />
         </div>
