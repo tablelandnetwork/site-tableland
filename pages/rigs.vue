@@ -196,7 +196,7 @@ Foils       Stark Tangler    Propulsion  Zero-Knowledge          Sunset
               <p class="code mb-10 lg:mb-18" data-aos="fade-up">
                 <pre>
                   <code>
-> SELECT * FROM rig_parts where original = 'Decrypter' and color = 'Midnight';
+tableland> SELECT * FROM rig_parts where original = 'Decrypter' and color = 'Midnight';
 
 fleet       original    type        name                    color
 ----------  ----------  ----------  ----------------------  ----------
@@ -374,7 +374,7 @@ Sleds       Decrypter   Spoiler     Verkle                  Midnight
               <p class="code mb-8 lg:mb-10" data-aos="fade-up">
                 <pre>
                   <code>
-> UPDATE rig_badges SET visible = true WHERE rig_id = 56 AND badge_id = 17;
+tableland> UPDATE rig_badges SET visible = true WHERE rig_id = 56 AND badge_id = 17;
                   </code>
                 </pre>
               </p>
