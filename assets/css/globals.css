@@ -913,7 +913,7 @@ footer {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 12));
+    transform: translateX(calc(-200px * 12));
   }
 }
 
@@ -1067,12 +1067,12 @@ footer {
   height: 200px;
   min-width: 200px;
   margin-left: 0px;
-  animation: slide 20s ease-in-out infinite;
+  animation: slide 20s linear infinite;
   transition: all 1s ease-in-out;
 }
 
 .animated-carousel.progress div {
-  animation: slide 1s linear infinite;
+  animation: slide 0.5s linear infinite;
   transition: all 1s ease-in-out;
 }
 
@@ -1109,7 +1109,7 @@ footer {
   display: flex;
   height: 350px;
   margin-bottom: 30px!important;
-  width: calc(250px * 17);
+  width: calc(250px * 24);
   margin-left: -10%!important;
   margin-right: -10%!important;
   margin: 0 auto;
