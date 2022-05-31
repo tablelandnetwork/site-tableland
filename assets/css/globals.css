@@ -1434,7 +1434,7 @@ input:checked ~ .tab-content {
    margin: 0px!important;
   }
   .hero-btn {
-    margin-bottom: 14rem !important;
+    /* margin-bottom: 14rem !important; */
   }
   .cohort {
     background: left 0px / 180% no-repeat url('~assets/img/cohort.png')!important;
@@ -1451,7 +1451,7 @@ input:checked ~ .tab-content {
 
 @media (max-width: 1640px) {
   .hero-btn {
-    margin-bottom: 14rem !important;
+    /* margin-bottom: 14rem !important; */
   }
   .guild-list .vehicle {
    max-width: 300px!important;
@@ -1460,7 +1460,7 @@ input:checked ~ .tab-content {
 
 @media (min-width: 1760px) {
   .hero-btn {
-    margin-bottom: 14rem !important;
+    /* margin-bottom: 14rem !important; */
   }
 }
 
@@ -1497,7 +1497,7 @@ input:checked ~ .tab-content {
     border-radius: 20px;
   }
   .hero-btn {
-    margin-bottom: 14rem !important;
+    /* margin-bottom: 14rem !important; */
   }
 }
 
@@ -1515,7 +1515,7 @@ input:checked ~ .tab-content {
     font-size: 0.75em;
   }
   .hero-btn {
-    margin-bottom: 14rem !important;
+    /* margin-bottom: 14rem !important; */
   }
   .cohort {
     background: left 100px / 250% no-repeat url(/_nuxt/assets/img/cohort.png)!important;

@@ -17,9 +17,9 @@
     <!-- hero -->
     <section class="hero">
       <div class="container">
-        <div class="px-6 md:px-9 lg:px-16 flex items-center pt-36 lg:pt-48 mb-48">
+        <div class="px-6 md:px-9 lg:px-16 flex items-center pt-36 md:pt-48 mb-4 sm:mb-48">
           <div class="lg:w-2/3">
-            <h1 class="font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
+            <h1 class="font-Orbitron text-5xl md:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10" data-aos="fade-up">
               Build web3 with <span class="font-black">SQL</span>
             </h1>
             <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
@@ -35,20 +35,20 @@
             </p>
           </div>
         </div>
-        <div class="px-6 md:px-9 lg:px-16 flex justify-between mt-24">
+        <div class="px-6 md:px-9 lg:px-16 flex">
           <div class="w-full lg:w-1/2">
-            <h1 class="font-Orbitron text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-4 lg:mb-10 choose" data-aos="fade-up">
+            <h1 class="font-Orbitron text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10 choose" data-aos="fade-up">
               Grab your <span class="font-black">Rig</span>
             </h1>
-            <img src="~assets/img/main_rigs.png" />
+            <img src="~assets/img/main_rigs.png" class="rounded-lg" />
           </div>
         </div>
-        <div class="flex">
-          <div class="xl:w-1/2 w-full px-12 py-12">
-            <p class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18 lg:px-6" data-aos="fade-up">
+        <div class="px-6 md:px-9 lg:px-16 flex">
+          <div class="xl:w-1/2 w-full py-12">
+            <p class="hidden sm:block text-xl md:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
               NFTs can be a building block to unite technological communities. Well-crafted NFTs can link technology, art, community, and incentives in ways unlike any previous innovation. Rigs are where we will experiment and demonstrate what is possible.
             </p>
-            <div class="hero-btn md:inline-block md:text-left mb-18 lg:mb-48 px-6" data-aos="fade-up">
+            <div class="text-center md:text-left" data-aos="fade-up">
               <ButtonLink href="/rigs">Learn more</ButtonLink>
             </div>
           </div>
