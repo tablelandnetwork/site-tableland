@@ -459,7 +459,7 @@ tableland> UPDATE rig_badges SET visible = true WHERE rig_id = 56 AND badge_id =
                 </ul>
               </p>
               <h2 data-aos="fade-up" class="font-Orbitron h-auto text-2xl lg:text-4xl choose leading-tighter mb-4 lg:mb-10">
-                Writing Direction
+                Story Development
               </h2>
               <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
                 <ul>
