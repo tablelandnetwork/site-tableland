@@ -117,6 +117,7 @@ export default async ({env}, inject) => {
 
           // Minting results
           const receipt = await tx.wait();
+
           console.log = function(message) {document.getElementById('mint-log').innerHTML = message;};
           document.getElementById("mint-button").innerHTML="Rig Minted";
           document.getElementById("rig-result").classList.add("active");
@@ -124,9 +125,10 @@ export default async ({env}, inject) => {
           document.getElementById("minter-console").classList.add("active");
           document.getElementById("animated-carousel").classList.add("mint");
           console.log(
-              `Minted your rig, see transaction: https://rinkeby.etherscan.io/tx/${tx.hash}, Gas used: ${receipt.gasUsed.toString()}, Transaction confirmed in block ${receipt.blockNumber}`
+              `Minted your rig, see transaction: https://rinkeby.etherscan.io/tx/${tx.hash}, Gas used: ${receipt.gasUsed.toString()}, Transaction confirmed in block ${receipt.blockNumber}, Token ID 1`
           );
           document.getElementById("tx-btn").setAttribute("href", `https://rinkeby.etherscan.io/tx/${tx.hash}`);
+          document.getElementById("os-btn").setAttribute("href", `https://testnets.opensea.io/assets/rinkeby/${rig.address}/${receipt.tokenId}`);
 
           } else {
             console.log("Can't find your rig captain")
@@ -141,6 +143,35 @@ export default async ({env}, inject) => {
         }
 
         },
+
+        // Gets the minted NFT data
+      	async getRig()  {
+      		try {
+      			const { ethereum } = window
+
+      			if (ethereum) {
+      				const provider = new ethers.providers.Web3Provider(ethereum)
+      				const signer = provider.getSigner()
+      				const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
+
+      				let tokenUri = await nftContract.tokenURI(tokenId)
+      				let data = await axios.get(tokenUri)
+      				let meta = data.data
+
+              console.log(
+                  `your rig is minted ${tokenId}`
+              );
+
+
+      			} else {
+      				console.log("Ethereum object doesn't exist!")
+      			}
+      		} catch (error) {
+      			console.log(error)
+
+      		}
+      	},
+
 
         async switchNetwork(config) {
             if(this.network?.chainId === config.chainId || `0x${this.network?.chainId.toString(16)}` === config.chainId) {

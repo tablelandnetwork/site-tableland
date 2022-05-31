@@ -102,6 +102,7 @@
             <div class="flex">
               <div class="w-full px-0 py-12">
                 <a id="tx-btn" class="btn text-white" target="_blank">VIEW TRANSACTION</a>
+                <a id="os-btn" class="btn text-white" target="_blank">ON OPENSEA</a>
                 <a href="/minter" class="btn btn-mint text-white">MINT ANOTHER</a>
               </div>
             </div>
@@ -132,25 +133,25 @@
                   <h2 class="text-white text-4xl font-Orbitron">0.01ETH</h2>
                 </div>
                 <div class="w-1/2">
-                  <h3 class="text-white lg:text-xl text-l">AVAILABLE</h3>
+                  <h3 class="text-white lg:text-xl text-l">TOTAL SUPPLY</h3>
                   <h2 class="text-white text-4xl font-Orbitron">10,000</h2>
                 </div>
               </div>
               <div class="flex py-0 px-12">
                 <div class="w-1/2" >
-                  <h3 class="text-white lg:text-xl text-l">METAVALUE</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">placeholder</h2>
+                  <h3 class="text-white lg:text-xl text-l" v-if="$wallet.account">YOUR BALANCE</h3>
+                  <h2 class="text-white text-4xl font-Orbitron">{{$wallet.balance}}</h2>
                 </div>
                 <div class="w-1/2">
-                  <h3 class="text-white lg:text-xl text-l">METAVALUE</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">placeholder</h2>
+                  <h3 class="text-white lg:text-xl text-l" v-if="$wallet.account">QUANTITY</h3>
+                  <h2 class="text-white text-4xl font-Orbitron" v-if="$wallet.account">placeholder</h2>
                 </div>
               </div>
               <div class="flex">
                 <div class="w-full px-12 py-18">
                   <div v-if="$wallet.account">
                     <a id="mint-button" class="btn btn-mint text-white"  @click="$wallet.mintRig">MINT RIG</a>
-
+                    <!-- <a id="mint-button" class="btn btn-mint text-white"  @click="$wallet.getRig">VIEW YOUR RIGS</a> -->
 
                   </div>
                   <div v-else>
