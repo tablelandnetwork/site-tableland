@@ -376,7 +376,7 @@ img.text-flow.right {
 }
 
 pre, code {
-  white-space: pre;
+  white-space: pre-line;
 }
 
 .code pre {
