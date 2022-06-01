@@ -40,7 +40,9 @@
             <h1 class="font-Orbitron text-4xl md:text-5xl leading-tighter mb-4 lg:mb-10 choose" data-aos="fade-up">
               Grab your <span class="font-black">Rig</span>
             </h1>
-            <img src="~assets/img/main_rigs.png" class="rounded-lg" data-aos="fade-up" />
+            <a href="/rigs">
+              <img src="~assets/img/main_rigs.png" height="150px" class="rounded-lg" data-aos="fade-up" />
+            </a>
           </div>
         </div>
         <div class="px-6 md:px-9 lg:px-16 flex">
