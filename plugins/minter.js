@@ -2,7 +2,7 @@ import Vue from 'vue';
 import { ethers } from 'ethers';
 import { connect } from "@tableland/sdk";
 import { BigNumber} from 'ethers';
-import rigsMeta from '~/assets/rigs.json';
+import rigsMeta from '~/assets/rigsMeta.json';
 
 export default async ({env}, inject) => {
 
@@ -82,7 +82,10 @@ export default async ({env}, inject) => {
 
             const [account] = await wallet.provider.send('eth_requestAccounts')
             console.log('wallet connect', {account})
-            console.log('print rigs json', rigsMeta)
+            console.log('print rigs json', rigsMeta.rigs[1])
+            console.log('rig image', rigsMeta.rigs[1].image)
+            console.log('rig ID', rigsMeta.rigs[1].id)
+            console.log('rig attributes', rigsMeta.rigs[1].attributes)
             if(account) {
                 await wallet.setAccount(account)
             }

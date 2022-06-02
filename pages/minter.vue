@@ -101,10 +101,19 @@
             <div class="rig-frame">
               <img :src="rigs.image"/>
             </div>
-            <h3 id="tx-mint" class="text-white lg:text-xl text-l"></h3>
-            <h3 id="tkn-mint" class="text-white lg:text-xl text-l"></h3>
-            <div class="flex py-0 pt-12 px-0 text-left">
-              <div class="w-1/2">
+            <div class="py-6 pt-12 px-0 text-left">
+              <p id="tx-mint" class="text-white"></p>
+              <p id="tkn-mint" class="text-white"></p>
+              <p class="text-white text-xl">Rig attributes</p>
+              <p class="text-white">{{rigs.attributes[1].trait_type}} - {{rigs.attributes[1].value}}</p>
+              <p class="text-white">{{rigs.attributes[2].trait_type}} - {{rigs.attributes[2].value}}</p>
+              <p class="text-white">{{rigs.attributes[3].trait_type}} - {{rigs.attributes[3].value}}</p>
+              <p class="text-white">{{rigs.attributes[4].trait_type}} - {{rigs.attributes[4].value}}</p>
+              <p class="text-white">{{rigs.attributes[5].trait_type}} - {{rigs.attributes[5].value}}</p>
+              <p class="text-white">{{rigs.attributes[6].trait_type}} - {{rigs.attributes[6].value}}</p>
+              <p class="text-white">{{rigs.attributes[7].trait_type}} - {{rigs.attributes[7].value}}</p>
+              <p class="text-white">Rig ID - {{rigs.id}}</p>
+              <!-- <div class="w-1/2">
               <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[1].trait_type}}</h3>
               <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[1].value}}</h2>
               </div>
@@ -131,9 +140,8 @@
               <div class="w-1/2">
               <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[6].trait_type}}</h3>
               <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[6].value}}</h2>
-              </div>
+              </div> -->
             </div>
-            <div>RIG ID {{rigs.id}}</div>
             <div class="flex">
               <div class="w-full px-0 py-6">
                 <a id="tx-btn" class="btn text-white" target="_blank">VIEW TRANSACTION</a>
@@ -154,12 +162,15 @@
 
                 <p>WALLET: {{$wallet.account}}</p>
                 <p>BALANCE: {{$wallet.balance}} ETH</p>
+                <p>PRICE: 0.01 ETH</p>
                 ============================================================================
                 ============================================================================
                 ============================================================================
                 =============== READY TO MINT CONFIRM TRANSACTION TO PROCEED ===============
-                PRICE 0.01ETH - AVAILABLE 3232</div>
+                PRICE 0.01ETH </div>
                 =============== RIGS CONNECTION TEST ===============
+                <p>RIG ID - {{rigs.id}}</p>
+                <p>IMAGE - {{rigs.image}}</p>
                 <p>{{rigs.attributes[1].trait_type}} - {{rigs.attributes[1].value}}</p>
                 <p>{{rigs.attributes[2].trait_type}} - {{rigs.attributes[2].value}}</p>
                 <p>{{rigs.attributes[3].trait_type}} - {{rigs.attributes[3].value}}</p>
@@ -167,7 +178,6 @@
                 <p>{{rigs.attributes[5].trait_type}} - {{rigs.attributes[5].value}}</p>
                 <p>{{rigs.attributes[6].trait_type}} - {{rigs.attributes[6].value}}</p>
                 <p>{{rigs.attributes[7].trait_type}} - {{rigs.attributes[7].value}}</p>
-                <p>{{rigs.attributes[8].trait_type}} - {{rigs.attributes[8].value}}</p>
 
               </div>
             </div>

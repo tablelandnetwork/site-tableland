@@ -576,6 +576,7 @@ footer {
   max-width: 500px;
   opacity: 0;
   z-index: 999;
+  overflow-wrap: break-word;
 }
 
 .rig-result .rig-frame {
