@@ -375,8 +375,12 @@ img.text-flow.right {
   margin-left: 1.5em;
 }
 
-pre, code {
+pre {
   white-space: pre-line;
+}
+
+code {
+  white-space: pre;
 }
 
 .code pre {
