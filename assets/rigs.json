@@ -1,0 +1,46 @@
+{
+  "id": 1,
+  "image": "https://ipfs.infura-ipfs.io/ipfs/QmWqvdRLZzKVu1VbpZEJGrzukyJs6P6dSYujxNcdxTya8q",
+  "attributes": [
+    {
+      "display_type": "number",
+      "trait_type": "Original",
+      "value": 20
+    },
+    {
+      "display_type": "string",
+      "trait_type": "Fleet",
+      "value": "Sleds"
+    },
+    {
+      "display_type": "string",
+      "trait_type": "Monocoque",
+      "value": "Electric MD5"
+    },
+    {
+      "display_type": "string",
+      "trait_type": "Mod",
+      "value": "Dawn SK Sync"
+    },
+    {
+      "display_type": "string",
+      "trait_type": "Bonnet",
+      "value": "Midnight Sniffer"
+    },
+    {
+      "display_type": "string",
+      "trait_type": "Chassis",
+      "value": "Midnight TLV"
+    },
+    {
+      "display_type": "string",
+      "trait_type": "Spoiler",
+      "value": "Spark Utility Token"
+    },
+    {
+      "display_type": "string",
+      "trait_type": "Background",
+      "value": "Hue Shift Salt Flat 2"
+    }
+  ]
+}

@@ -102,7 +102,7 @@ export default async ({env}, inject) => {
           const signer = provider.getSigner();
           let userAddress = await signer.getAddress();
           const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
-          const rigUrl = 'ipfs://bafybeiaiczntivzp4cjd7jdw5ucx7qs4vprwq5g5ebii3ezhkx274flkay.ipfs.infura-ipfs.io/';
+          const rigUrl = 'ipfs://QmczRHsZ6GnJGRKMEwX54YwhbyN8Kme1CjGFS7FvBB9sLQ';
           // Minting in progress
 
           // tx = await nftContract.setBaseURI(rigUrl, {gasLimit: 9000000});

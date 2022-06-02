@@ -98,9 +98,44 @@
             </div>
 
           <div id="rig-result" class="rig-result" v-bind:class="{'active': isAddClass}">
-            <img src="~assets/img/card.png"/>
+            <div class="rig-frame">
+              <img :src="rigs.image"/>
+            </div>
+            <h3 id="tx-mint" class="text-white lg:text-xl text-l"></h3>
+            <h3 id="tkn-mint" class="text-white lg:text-xl text-l"></h3>
+            <div class="flex py-0 pt-12 px-0 text-left">
+              <div class="w-1/2">
+              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[1].trait_type}}</h3>
+              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[1].value}}</h2>
+              </div>
+              <div class="w-1/2">
+              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[2].trait_type}}</h3>
+              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[2].value}}</h2>
+              </div>
+            </div>
+            <div class="flex py-3 px-0 text-left">
+              <div class="w-1/2">
+              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[3].trait_type}}</h3>
+              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[3].value}}</h2>
+              </div>
+              <div class="w-1/2">
+              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[4].trait_type}}</h3>
+              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[4].value}}</h2>
+              </div>
+            </div>
+            <div class="flex py-3 px-0 text-left">
+              <div class="w-1/2">
+              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[5].trait_type}}</h3>
+              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[5].value}}</h2>
+              </div>
+              <div class="w-1/2">
+              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[6].trait_type}}</h3>
+              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[6].value}}</h2>
+              </div>
+            </div>
+            <div>RIG ID {{rigs.id}}</div>
             <div class="flex">
-              <div class="w-full px-0 py-12">
+              <div class="w-full px-0 py-6">
                 <a id="tx-btn" class="btn text-white" target="_blank">VIEW TRANSACTION</a>
                 <a id="os-btn" class="btn text-white" target="_blank">ON OPENSEA</a>
                 <a href="/minter" class="btn btn-mint text-white">MINT ANOTHER</a>
@@ -146,6 +181,7 @@
                   <h3 class="text-white lg:text-xl text-l" v-if="$wallet.account">QUANTITY</h3>
                   <h2 class="text-white text-4xl font-Orbitron" v-if="$wallet.account">placeholder</h2>
                 </div>
+
               </div>
               <div class="flex">
                 <div class="w-full px-12 py-18">
@@ -197,7 +233,7 @@
   </template>
 
   <script>
-
+  import rigsMeta from '~/assets/rigs.json';
   export default {
     head(){
       return {
@@ -234,6 +270,7 @@
       return {
         time: launchDate - now,
         isAddClass: false,
+        rigs: rigsMeta,
       };
     },
   };
