@@ -56,7 +56,7 @@ export default async ({env}, inject) => {
         async setAccount(newAccount) {
             if(newAccount) {
                 this.account = newAccount
-                this.accountCompact = `${newAccount.substring(0, 4)}...${newAccount.substring(newAccount.length - 4)}`
+                this.accountCompact = `${newAccount.substring(0, 5)}...${newAccount.substring(newAccount.length - 4)}`
 
                 const balance = (await this.provider.getBalance(newAccount)).toString()
                 this.balance = (+ethers.utils.formatEther(balance)).toFixed(3)
@@ -114,7 +114,7 @@ export default async ({env}, inject) => {
           // document.getElementById("mint-terminal").innerHTML="========================== TOKEN URI UPDATED! =============================== ";
           // await tx.wait();
 
-          let tx = await nftContract.connect(signer).mint(1, {value: "10000000000000000",});
+          let tx = await nftContract.connect(signer).mint(1, {value: "1000000000000000",});
           // const tx = await nftContract.mintRig({gasLimit: 0x100000});
           // const tx = await nftContract.Transfer(userAddress, 1, {gasLimit: 0x100000});
           document.getElementById("mint-terminal").innerHTML="========================== MINTING IN PROGRESS =============================== 0x6060604052341561000f57600080fd5b61053a8061001e6000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde031461005c57806320965255146100ea57806393a0935214610178575b600080fd5b341561006757600080fd5b61006f61024e565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100af578082015181840152602081019050610094565b50505050905090810190601f1680156100dc5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156100f557600080fd5b6100fd6102ec565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561013d578082015181840152602081019050610122565b50505050905090810190601f16801561016a5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561018357600080fd5b6101d3600480803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610394565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102135780820151818401526020810190506101f8565b50505050905090810190601f1680156102405780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b60008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156102e45780601f106102b9576101008083540402835291602001916102e4565b820191906000526020600020905b8154815290600101906020018083116102c757829003601f168201915b505050505081565b6102f4610455565b60008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561038a5780601f1061035f5761010080835404028352916020019161038a565b820191906000526020600020905b81548152906001019060200180831161036d57829003601f168201915b5050505050905090565b61039c610455565b81600090805190602001906103b2929190610469565b5060008054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156104495780601f1061041e57610100808354040283529160200191610449565b820191906000526020600020905b81548152906001019060200180831161042c57829003601f168201915b50505050509050919050565b602060405190810160405280600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106104aa57805160ff19168380011785556104d8565b828001600101855582156104d8579182015b828111156104d75782518255916020019190600101906104bc565b5b5090506104e591906104e9565b5090565b61050b91905b808211156105075760008160009055506001016104ef565b5090565b905600a165627a7a72305820e87c1ae6e9c6351a8d6f94a0299f6bf2d3a8915ad643a72763a97167cd8035220029";
@@ -134,9 +134,9 @@ export default async ({env}, inject) => {
           document.getElementById("minter-details").classList.add("active");
           document.getElementById("minter-console").classList.add("active");
           document.getElementById("animated-carousel").classList.add("mint");
-          console.log(`========================== RIG MINTED =============================== transaction tx ${tx.hash}, ${event.args?.tokenId}, token id ${event.args?.tokenId}, see transaction: https://rinkeby.etherscan.io/tx/${tx.hash}, Gas used: ${receipt.gasUsed.toString()}, Transaction confirmed in block ${receipt.blockNumber}`);
-          document.getElementById("tx-btn").setAttribute("href", `https://rinkeby.etherscan.io/tx/${tx.hash}`);
-          document.getElementById("os-btn").setAttribute("href", `https://testnets.opensea.io/assets/rinkeby/${rig.address}/${event.args?.tokenId}`);
+          console.log(`========================== RIG MINTED =============================== transaction tx ${tx.hash}, ${event.args?.tokenId}, token id ${event.args?.tokenId}, see transaction: https://goerli.etherscan.io/tx/${tx.hash}, Gas used: ${receipt.gasUsed.toString()}, Transaction confirmed in block ${receipt.blockNumber}`);
+          document.getElementById("tx-btn").setAttribute("href", `https://goerli.etherscan.io/tx/${tx.hash}`);
+          document.getElementById("os-btn").setAttribute("href", `https://testnets.opensea.io/assets/goerli/${rig.address}/${event.args?.tokenId}`);
           document.getElementById("tx-mint").innerHTML=`tx ${tx.hash}`;
           document.getElementById("tkn-mint").innerHTML=`token id ${event.args?.tokenId}`;
 
@@ -145,7 +145,7 @@ export default async ({env}, inject) => {
           }
         }
         catch (error) {
-          console.log('Error minting rig see transaction: https://rinkeby.etherscan.io/tx/${tx.hash}', error);
+          console.log('Error minting rig see transaction: https://goerli.etherscan.io/tx/${tx.hash}', error);
           document.getElementById("mint-button").innerHTML="Error minting rig";
           document.getElementById("animated-carousel").classList.remove("progress");
           document.getElementById("mint-terminal").innerHTML=error;
