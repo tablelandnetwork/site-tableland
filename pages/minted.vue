@@ -93,7 +93,7 @@
   </template>
 
   <script>
-
+  import rigsMeta from '~/assets/rigs.json';
   export default {
     head(){
       return {
@@ -129,7 +129,7 @@
       return {
         time: launchDate - now,
         isAddClass: false,
-
+        rigs: rigsMeta,
       };
     },
   };

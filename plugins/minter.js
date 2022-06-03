@@ -75,10 +75,10 @@ export default async ({env}, inject) => {
             );
             wallet.network = wallet.provider.getNetwork()
 
-            const connection = await connect({
-              network: "testnet",
-              host: "http://testnet.tableland.network",
-            });
+            // const connection = await connect({
+            //   network: "testnet",
+            //   host: "http://testnet.tableland.network",
+            // });
 
             const [account] = await wallet.provider.send('eth_requestAccounts')
             console.log('wallet connect', {account})
