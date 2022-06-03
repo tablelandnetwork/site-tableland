@@ -199,7 +199,7 @@
           { hid: 'og-type', property: 'og:type', content: 'website' },
           { hid: 'og-title', property: 'og:title', content: 'Mint a rig' },
           { hid: 'og-sitename', property: 'og:site_name', content: 'Tableland - Build web3 with SQL' },
-          { hid: 'og-desc', property: 'og:description', content: 'A generative NFT with 1,043 handcrafted works of art. Rigs are your ride to Tableland.' },
+          { hid: 'og-desc', property: 'og:description', content: 'A generative NFT with 1,074 handcrafted works of art. Rigs are your ride to Tableland.' },
           { hid: 'og-image', property: 'og:image',
             content: 'https://i.imgur.com/5YHLnkC.png'
           },

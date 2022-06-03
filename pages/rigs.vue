@@ -44,7 +44,7 @@
       <div class="container px-0 sm:px-6 md:px-12 pt-0 lg:pt-0 pb-24" data-aos="fade-up">
         <div class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0">
           <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18">
-            A generative NFT built from 1,043 handcrafted works of art for the builders and creatives of cyberspace. Coming June 2022.
+            A generative NFT built from 1,074 handcrafted works of art for the builders and creatives of cyberspace. Coming June 2022.
           </h1>
         </div>
         <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
@@ -108,7 +108,7 @@
                 Each Rig is assembled from the parts of machines that built the first truly user-owned metaverse a century before—now affectionately called The Original—decades before the rise of The Grid. These were the <span style="font-weight: 900;">Original Rigs</span>, now discarded, disassembled, and forgotten in the back alleys of The Grid.
               </p>
               <p class="text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18" data-aos="fade-up">
-                Most builders fly parts from different Original Rigs. Since the beginning, they have maintained a Rig part table. The table contains 1,043 known parts that have been tracked from The Grid. Within Fleets, parts are modular, interoperable, and differ in rarity. If a rare part is ever lost, it may never be seen in Tableland again.
+                Most builders fly parts from different Original Rigs. Since the beginning, they have maintained a Rig part table. The table contains 1,074 known parts that have been tracked from The Grid. Within Fleets, parts are modular, interoperable, and differ in rarity. If a rare part is ever lost, it may never be seen in Tableland again.
               </p>
               <p class="code mb-10 lg:mb-18" data-aos="fade-up">
                 <pre>
@@ -529,7 +529,7 @@ export default {
         { hid: 'og-type', property: 'og:type', content: 'website' },
         { hid: 'og-title', property: 'og:title', content: 'The Tableland NFT: Rigs' },
         { hid: 'og-sitename', property: 'og:site_name', content: 'tableland.xyz/rigs' },
-        { hid: 'og-desc', property: 'og:description', content: 'A generative NFT built from 1,043 handcrafted works of art for the builders and creatives of cyberspace.' },
+        { hid: 'og-desc', property: 'og:description', content: 'A generative NFT built from 1,074 handcrafted works of art for the builders and creatives of cyberspace.' },
         {
           hid: 'og-image',
           property: 'og:image',

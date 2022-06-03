@@ -201,10 +201,10 @@ export default {
 
   head: function () {
     return {
-      title: 'Tableland - Build web3 with SQL',
+      title: 'Tableland-Build web3 with SQL',
       meta: [
         { hid: 'og-type', property: 'og:type', content: 'website' },
-        { hid: 'og-title', property: 'og:title', content: 'Tableland-Build web3 with SQL ' },
+        { hid: 'og-title', property: 'og:title', content: 'Tableland-Build web3 with SQL' },
         { hid: 'og-sitename', property: 'og:site_name', content: 'tableland.xyz' },
         { hid: 'og-desc', property: 'og:description', content: 'Tableland is a network and relational metadata protocol for EVM chains like Ethereum. Built for developers, NFT creators, and web3 visionaries.' },
         {
