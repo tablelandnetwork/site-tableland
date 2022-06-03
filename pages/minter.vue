@@ -187,7 +187,7 @@
                 </div>
                 <div class="w-1/2">
                   <h3 class="text-white lg:text-xl text-l" v-if="$wallet.account">QUANTITY</h3>
-                  <h2 class="text-white text-4xl font-Orbitron" v-if="$wallet.account">placeholder</h2>
+                  <h2 class="text-white text-4xl font-Orbitron" v-if="$wallet.account">1</h2>
                 </div>
 
               </div>

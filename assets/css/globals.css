@@ -389,11 +389,11 @@ footer {
   max-width: 100%!important;
 }
 
-.rigs a img {
+.rigs a .rig-frame {
   transition: all 0.2s ease-in-out;
 }
 
-.rigs a:hover img {
+.rigs a:hover .rig-frame {
   transform: translatey(-20px)!important;
   transition: all 0.2s ease-in-out;
 }
@@ -605,6 +605,12 @@ footer {
   animation-fill-mode: forwards;
 }
 
+.rig-garage .rig-frame {
+  width: 100%;
+  height: 460px;
+  animation: none;
+}
+
 .halo1 {
   position: absolute;
   right: -250px;
@@ -734,11 +740,28 @@ footer {
    padding: 10px;
    margin: 20px auto;
    animation: float 10s ease-in-out infinite;
-
 }
 
 .rig-frame img {
   border-radius: 50px;
+}
+
+.rig-frame.rarity-100 {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 1s linear infinite;
+}
+
+.Airelights {
+  background-image: linear-gradient(180deg, #B2D1FC 0%, #DD6C90 100%);
+}
+
+.Sleds {
+  background-image: linear-gradient(180deg, #F1FF68 0%, #6FB0C2 100%);
+}
+
+.Titans {
+  background-image: linear-gradient(180deg, #687FFF 0%, #AA6FC2 100%);
 }
 
 /** guilds **/
@@ -1037,17 +1060,25 @@ footer {
 }
 
 @keyframes colorchange {
-  0% {
-    filter: hue-rotate(0);
+  from {
+    background: linear-gradient(180deg, #B2D1FC 0%, #DD6C90 100%);
   }
 
-  50% {
-    filter: hue-rotate(180);
+  to {
+    background: linear-gradient(180deg, #F1FF68 0%, #6FB0C2 100%);
   }
+}
 
-  100% {
-    filter: hue-rotate(270);
-  }
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .ship {

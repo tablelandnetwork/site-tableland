@@ -75,7 +75,7 @@
     <div class="minter-break flex container text-center justify-between"></div>
 
       <div class="container px-12 sm:px-12 md:px-36 lg:px-36 xl:px-36" style="margin-top:-300px;" v-if="$wallet.account">
-        <div class="flex">
+        <div class="flex flex-wrap">
           <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-0" data-aos="fade-up">
           <h1 class="text-pink font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
             Your Rigs
@@ -83,17 +83,15 @@
 
           </div>
         </div>
-        <div class="flex py-0">
-          <div class="w-1/3 px-12 rigs" v-for="(rig, index) in rigsMeta.rigs">
-            <a href="/minted"><img :src="rig.image"/>
-              {{ rig.id }}
+        <div class="flex flex-wrap py-0 rig-garage">
+          <div class="w-1/3 px-3 py-3 rigs" v-for="(rig, index) in rigsMeta.rigs" data-aos="fade-up">
+            <a href="/minted">
+             <div class="rig-frame" :class="rig.attributes[1].value + ' rarity-' + rig.attributes[0].value">
+             <img :src="rig.image"/>
+           </div>
+             <h2 class="text-white font-Orbitron text-l">RIG ID {{ rig.id }}</h2>
+             <p class="text-white">FLEET: {{ rig.attributes[1].value }}</p>
             </a>
-          </div>
-          <div class="w-1/3 px-12 rigs">
-            <a href="/minted"><img src="~assets/img/card2.png"/></a>
-          </div>
-          <div class="w-1/3 px-12 rigs">
-            <a href="/minted"><img src="~assets/img/card3.png"/></a>
           </div>
         </div>
         <div class="flex">
