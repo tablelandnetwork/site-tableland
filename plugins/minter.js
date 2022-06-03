@@ -86,6 +86,7 @@ export default async ({env}, inject) => {
             console.log('rig image', rigsMeta.rigs[1].image)
             console.log('rig ID', rigsMeta.rigs[1].id)
             console.log('rig attributes', rigsMeta.rigs[1].attributes)
+
             if(account) {
                 await wallet.setAccount(account)
             }
@@ -128,6 +129,7 @@ export default async ({env}, inject) => {
           // Minting results
           const receipt = await tx.wait();
           const [event] = receipt.events ?? [];
+          const tokenId = event.args?.tokenId;
           console.log = function(message) {document.getElementById('mint-log').innerHTML = message;};
           document.getElementById("mint-button").innerHTML="Rig Minted";
           document.getElementById("rig-result").classList.add("active");
@@ -139,6 +141,19 @@ export default async ({env}, inject) => {
           document.getElementById("os-btn").setAttribute("href", `https://testnets.opensea.io/assets/goerli/${rig.address}/${event.args?.tokenId}`);
           document.getElementById("tx-mint").innerHTML=`tx ${tx.hash}`;
           document.getElementById("tkn-mint").innerHTML=`token id ${event.args?.tokenId}`;
+          document.getElementById("rig-img").src = rigsMeta.rigs[tokenId].image;
+          // document.getElementById("trait-1").innerHTML=`${rigsMeta.rigs[tokenId].attributes.trait_type} - ${rigsMeta.rigs[tokenId].attributes.value}`;
+          rigsMeta.rigs[tokenId].attributes.forEach(obj => {
+               Object.entries(obj).forEach(([trait_type, value]) => {
+                  document.getElementById("trait-1").innerHTML=`${value}`;
+               });
+           });
+          // document.getElementById("trait-2").innerHTML=`${rigsMeta.rigs[tokenId].attributes[2].trait_type} - ${rigsMeta.rigs[tokenId].attributes[2].value}`;
+          // document.getElementById("trait-3").innerHTML=`${rigsMeta.rigs[tokenId].attributes[3].trait_type} - ${rigsMeta.rigs[tokenId].attributes[3].value}`;
+          // document.getElementById("trait-4").innerHTML=`${rigsMeta.rigs[tokenId].attributes[4].trait_type} - ${rigsMeta.rigs[tokenId].attributes[4].value}`;
+          // document.getElementById("trait-5").innerHTML=`${rigsMeta.rigs[tokenId].attributes[5].trait_type} - ${rigsMeta.rigs[tokenId].attributes[5].value}`;
+          // document.getElementById("trait-6").innerHTML=`${rigsMeta.rigs[tokenId].attributes[6].trait_type} - ${rigsMeta.rigs[tokenId].attributes[6].value}`;
+          // document.getElementById("trait-7").innerHTML=`${rigsMeta.rigs[tokenId].attributes[7].trait_type} - ${rigsMeta.rigs[tokenId].attributes[7].value}`;
 
           } else {
             console.log("Can't find your rig captain")
@@ -172,6 +187,12 @@ export default async ({env}, inject) => {
                   `your rig is minted ${tokenId}`
               );
 
+              rigsMeta.rigs.forEach(obj => {
+                   Object.entries(obj).forEach(([key, value]) => {
+                       console.log(`${key} ${value}`);
+                   });
+                   console.log('-------------------');
+               });
 
       			} else {
       				console.log("Ethereum object doesn't exist!")

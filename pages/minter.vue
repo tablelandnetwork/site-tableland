@@ -99,20 +99,18 @@
 
           <div id="rig-result" class="rig-result" v-bind:class="{'active': isAddClass}">
             <div class="rig-frame">
-              <img :src="rigs.image"/>
+              <img id="rig-img" />
             </div>
             <div class="py-6 pt-12 px-0 text-left">
               <p id="tx-mint" class="text-white"></p>
               <p id="tkn-mint" class="text-white"></p>
-              <p class="text-white text-xl">Rig attributes</p>
-              <p class="text-white">{{rigs.attributes[1].trait_type}} - {{rigs.attributes[1].value}}</p>
-              <p class="text-white">{{rigs.attributes[2].trait_type}} - {{rigs.attributes[2].value}}</p>
-              <p class="text-white">{{rigs.attributes[3].trait_type}} - {{rigs.attributes[3].value}}</p>
-              <p class="text-white">{{rigs.attributes[4].trait_type}} - {{rigs.attributes[4].value}}</p>
-              <p class="text-white">{{rigs.attributes[5].trait_type}} - {{rigs.attributes[5].value}}</p>
-              <p class="text-white">{{rigs.attributes[6].trait_type}} - {{rigs.attributes[6].value}}</p>
-              <p class="text-white">{{rigs.attributes[7].trait_type}} - {{rigs.attributes[7].value}}</p>
-              <p class="text-white">Rig ID - {{rigs.id}}</p>
+              <p id="trait-1" class="text-white"></p>
+              <p id="trait-2" class="text-white"></p>
+              <p id="trait-3" class="text-white"></p>
+              <p id="trait-4" class="text-white"></p>
+              <p id="trait-5" class="text-white"></p>
+              <p id="trait-6" class="text-white"></p>
+              <p id="trait-7" class="text-white"></p>
               <!-- <div class="w-1/2">
               <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[1].trait_type}}</h3>
               <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[1].value}}</h2>
