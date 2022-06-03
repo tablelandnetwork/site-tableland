@@ -166,16 +166,6 @@
                 ============================================================================
                 =============== READY TO MINT CONFIRM TRANSACTION TO PROCEED ===============
                 PRICE 0.01ETH </div>
-                =============== RIGS CONNECTION TEST ===============
-                <p>RIG ID - {{rigs.id}}</p>
-                <p>IMAGE - {{rigs.image}}</p>
-                <p>{{rigs.attributes[1].trait_type}} - {{rigs.attributes[1].value}}</p>
-                <p>{{rigs.attributes[2].trait_type}} - {{rigs.attributes[2].value}}</p>
-                <p>{{rigs.attributes[3].trait_type}} - {{rigs.attributes[3].value}}</p>
-                <p>{{rigs.attributes[4].trait_type}} - {{rigs.attributes[4].value}}</p>
-                <p>{{rigs.attributes[5].trait_type}} - {{rigs.attributes[5].value}}</p>
-                <p>{{rigs.attributes[6].trait_type}} - {{rigs.attributes[6].value}}</p>
-                <p>{{rigs.attributes[7].trait_type}} - {{rigs.attributes[7].value}}</p>
 
               </div>
             </div>

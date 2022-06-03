@@ -2,7 +2,57 @@
   <div class="mint-page">
 
     <!-- Header -->
-    <HeaderNav></HeaderNav>
+    <!-- Header -->
+    <div class="nav-bar" :class="{ 'absolute w-full h-screen top-0 left-0': menu }">
+      <div class="sm:mx-auto flex flex-wrap">
+
+        <!-- Desktop nav -->
+
+        <nav class="container hidden md:inline-flex justify-between px-6 md:px-9 lg:px-16 flex items-center py-2 pt-6">
+          <div class="py-4">
+            <a href="/"><img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5"></a>
+          </div>
+          <div class="py-4">
+            <ul class="flex justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
+              <li v-for="(item, index) in items" :key="index">
+                <a :href="item.href">
+                  {{ item.title }}
+                </a>
+              </li>
+              <li>
+                <a class="btn bg-black text-white"
+                     :disabled="!!$wallet.account"
+                     @click="$wallet.connect">
+                     <strong>{{
+                         !!$wallet.account ? $wallet.accountCompact : 'Connect Wallet'
+                     }}</strong>
+                 </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- Toggle menu mobile -->
+        <div class="py-12 px-6 md:hidden logo">
+          <a href="/"><img src="~assets/img/logo-black.svg" alt="Tableland" class="h-4"></a>
+        </div>
+          <button
+            class="ml-auto md:hidden p-6" @click="menu = !menu">
+          MENU
+        </button>
+        </div>
+
+        <!-- Mobile nav  -->
+        <nav v-show="menu" data-aos="fade-down" class="aos-animate w-full" style="background: #b172a1; transition: all 0.2s ease-in-out">
+          <ul class="flex flex-col text-center">
+          <li v-for="(item, index) in items" :key="index">
+            <a :href="item.href" class="hover: p-6 block">
+              {{ item.title }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
     <!-- minter -->
     <section class="user-garage">
@@ -10,8 +60,8 @@
         <div class="lg:w-full px-0 lg:pb-12 pb-6 pt-0" data-aos="fade-up">
           <div class="lg:flex ">
             <div class="text-left w-full pt-24 px-24" data-aos="fade-up">
-              <h3 class="text-black lg:text-xl text-l">WALLET ID: x0324jf23j2jjdjsadj3es</h3>
-              <h1 class="text-black font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
+              <h3 class="text-black lg:text-xl text-l" v-if="$wallet.account">WALLET ID: {{$wallet.account}}</h3>
+              <h1 class="text-black font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" v-if="$wallet.account">
                 Welcome to your Garage
               </h1>
             </div>
@@ -23,17 +73,21 @@
     <!-- showcase -->
     <section class="md:block showcase py-24 relative">
     <div class="minter-break flex container text-center justify-between"></div>
-      <div class="container px-12 sm:px-12 md:px-36 lg:px-36 xl:px-36" style="margin-top:-300px;">
+
+      <div class="container px-12 sm:px-12 md:px-36 lg:px-36 xl:px-36" style="margin-top:-300px;" v-if="$wallet.account">
         <div class="flex">
           <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-0" data-aos="fade-up">
           <h1 class="text-pink font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
             Your Rigs
           </h1>
+
           </div>
         </div>
         <div class="flex py-0">
-          <div class="w-1/3 px-12 rigs">
-            <a href="/minted"><img src="~assets/img/card.png"/></a>
+          <div class="w-1/3 px-12 rigs" v-for="(rig, index) in rigsMeta.rigs">
+            <a href="/minted"><img :src="rig.image"/>
+              {{ rig.id }}
+            </a>
           </div>
           <div class="w-1/3 px-12 rigs">
             <a href="/minted"><img src="~assets/img/card2.png"/></a>
@@ -110,25 +164,19 @@
         ]
       }
     },
-
     computed: {
       ethereum: function () {
         return window.ethereum;
       }
     },
 
-    methods: {
-           addClass: function() {
-               this.isAddClass = true;
-       }
-   },
     data() {
       const now = new Date();
       const launchDate = new Date(2022, 4, 31, 0, 0);
       return {
         time: launchDate - now,
         isAddClass: false,
-        rigs: rigsMeta,
+        rigsMeta: rigsMeta,
       };
     },
   };
