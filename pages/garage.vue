@@ -28,6 +28,13 @@
                      }}</strong>
                  </a>
               </li>
+              <!-- <li>
+                <a class="btn bg-black text-white" v-if="$wallet.account"
+
+                     @click="$wallet.getRig">
+                     <strong>test</strong>
+                 </a>
+              </li> -->
             </ul>
           </div>
         </nav>
@@ -148,11 +155,11 @@
   export default {
     head(){
       return {
-        title: 'Meet the RIGS - Tableland',
+        title: 'Garage - Tableland',
         meta:[
           { hid: `og-url`, property: 'og:url', content: `/${this.$route.path}`},
           { hid: 'og-type', property: 'og:type', content: 'website' },
-          { hid: 'og-title', property: 'og:title', content: 'Mint a rig' },
+          { hid: 'og-title', property: 'og:title', content: 'Garage' },
           { hid: 'og-sitename', property: 'og:site_name', content: 'Tableland - Build web3 with SQL' },
           { hid: 'og-desc', property: 'og:description', content: 'A generative NFT with 1,043 handcrafted works of art. Rigs are your ride to Tableland.' },
           { hid: 'og-image', property: 'og:image',

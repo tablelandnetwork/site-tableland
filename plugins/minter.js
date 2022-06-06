@@ -166,10 +166,11 @@ export default async ({env}, inject) => {
               let userAddress = await signer.getAddress();
               const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
               const tokenBalance = await nftContract.balanceOf(userAddress);
-              const rigBalance = await provider.getBalance(rig.address)
+              const nftBalance = await provider.getBalance(rig.address)
+              const rigBalance = await provider.tokensOfOwner(rig.address)
               console.log(userAddress);
               console.log(tokenBalance);
-              console.log(rigBalance);
+              console.log(ethers.utils.formatEther(rigBalance));
 
               // rigsMeta.rigs[tokenId].forEach(obj => {
               //      Object.entries(obj).forEach(([trait_type, value]) => {
