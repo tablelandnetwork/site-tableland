@@ -11,7 +11,6 @@
   background-color: #0BE291;
 }
 
-
 html {
   max-width: 100%;
   margin: 0 auto;
@@ -92,7 +91,6 @@ nav li a:hover, nav li a:active {
 }
 
 .btn:hover {
-  /* color: #000!important; */
   background-color: #0BE291!important;
   transition: all 0.2s ease-in-out;
 }
@@ -278,14 +276,13 @@ nav li a:hover, nav li a:active {
   bottom: -57px;
   left: 0;
   right: 0;
-  display: none;
 }
 
 /** showcase **/
 .showcase {
   background-color: #141034;
   color: #6067EB!important;
-  position: relative;
+  min-height: 650px;
 }
 
 .showcase .btn {
@@ -301,8 +298,7 @@ footer {
     position: absolute;
   	background: center / cover no-repeat url('~assets/img/break_footer.svg');
   	height: 184px;
-    top: -184px;
-    width: 100%;
+    top: -200px;
 }
 
 /** cohort  **/
@@ -450,14 +446,7 @@ nav a, a.btn {
   height: auto;
   min-height: 100vh;
   width: 100%;
-}
-
-.minting-top {
-  width: 100%;
-  height: 400px;
-  background-color: #815691;
-  opacity: 0.5;
-  position: absolute;
+  background-image: linear-gradient(0deg, rgba(255,0,0,0), #b176a2);
 }
 
 .minting .vehicle img {
@@ -486,6 +475,11 @@ nav a, a.btn {
 
 .info .float-frame {
   margin-top: -200px;
+}
+
+.info .vehicle img {
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .info video {
@@ -518,11 +512,11 @@ nav a, a.btn {
   max-width: 100%!important;
 }
 
-.rigs a img {
+.rigs a .rig-frame {
   transition: all 0.2s ease-in-out;
 }
 
-.rigs a:hover img {
+.rigs a:hover .rig-frame {
   transform: translatey(-20px)!important;
   transition: all 0.2s ease-in-out;
 }
@@ -534,9 +528,6 @@ nav a, a.btn {
     top: -200px;
 }
 
-.minter-console {
-
-}
 
 .part-frame .carousel {
   height: 250px;
@@ -620,6 +611,7 @@ nav a, a.btn {
   to { height: 100% }
 }
 
+
 .part-frame {
   width: 250px;
   height: 300px;
@@ -627,6 +619,7 @@ nav a, a.btn {
   margin: 20px;
   padding: 80px 60px;
   margin-top: -100px;
+
 }
 
 .part1 {
@@ -648,6 +641,7 @@ nav a, a.btn {
 }
 
 .part3 {
+
   background: center / 100% no-repeat url('~assets/img/part3.png');
 }
 
@@ -696,12 +690,18 @@ nav a, a.btn {
 .rig-result {
   background: center / cover no-repeat url('~assets/img/holo.png');
   position: absolute;
-  top: -100px;
-  left: 40%;
+  top: -300px;
+  left: 35%;
   height: 100vh;
-  max-width: 370px;
+  max-width: 500px;
   opacity: 0;
   z-index: 999;
+  overflow-wrap: break-word;
+}
+
+.rig-result .rig-frame {
+  width: 500px;
+  height: 500px;
 }
 
 .rig-result .btn {
@@ -723,6 +723,12 @@ nav a, a.btn {
   animation-delay: 2.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+}
+
+.rig-garage .rig-frame {
+  width: 100%;
+  height: 470px;
+  animation: none;
 }
 
 .halo1 {
@@ -852,13 +858,30 @@ nav a, a.btn {
    border-radius: 50px;
    overflow: hidden;
    padding: 10px;
-   margin: 40px auto;
+   margin: 20px auto;
    animation: float 10s ease-in-out infinite;
-
 }
 
 .rig-frame img {
   border-radius: 50px;
+}
+
+.rig-frame.rarity-100 {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 1s linear infinite;
+}
+
+.Airelights {
+  background-image: linear-gradient(180deg, #B2D1FC 0%, #DD6C90 100%);
+}
+
+.Sleds {
+  background-image: linear-gradient(180deg, #F1FF68 0%, #6FB0C2 100%);
+}
+
+.Titans {
+  background-image: linear-gradient(180deg, #687FFF 0%, #AA6FC2 100%);
 }
 
 /** guilds **/
@@ -1037,7 +1060,7 @@ nav a, a.btn {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 12));
+    transform: translateX(calc(-200px * 12));
   }
 }
 
@@ -1155,17 +1178,25 @@ nav a, a.btn {
 }
 
 @keyframes colorchange {
-  0% {
-    filter: hue-rotate(0);
+  from {
+    background: linear-gradient(180deg, #B2D1FC 0%, #DD6C90 100%);
   }
 
-  50% {
-    filter: hue-rotate(180);
+  to {
+    background: linear-gradient(180deg, #F1FF68 0%, #6FB0C2 100%);
   }
+}
 
-  100% {
-    filter: hue-rotate(270);
-  }
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 .ship {
@@ -1175,6 +1206,7 @@ nav a, a.btn {
   width: 100%;
   height: 500px;
   background: right / cover no-repeat url('~assets/img/ship.png');
+  z-index: 2;
 }
 
 .ship.aos-init {
@@ -1184,7 +1216,6 @@ nav a, a.btn {
 .ship.aos-init.aos-animate {
   bottom: -700px!important;
   transition: all 0.8s ease-in-out;
-  z-index: 2;
 }
 
 .animated-carousel div {
@@ -1196,7 +1227,7 @@ nav a, a.btn {
 }
 
 .animated-carousel.progress div {
-  animation: slide 1s linear infinite;
+  animation: slide 0.5s linear infinite;
   transition: all 1s ease-in-out;
 }
 
@@ -1233,7 +1264,7 @@ nav a, a.btn {
   display: flex;
   height: 350px;
   margin-bottom: 30px!important;
-  width: calc(250px * 17);
+  width: calc(250px * 24);
   margin-left: -10%!important;
   margin-right: -10%!important;
   margin: 0 auto;
@@ -1438,7 +1469,7 @@ input:checked ~ .tab-content {
    margin: 0px!important;
   }
   .hero-btn {
-    /* margin-bottom: 14rem !important; */
+    margin-bottom: 14rem!important;
   }
   .cohort {
     background: left 0px / 180% no-repeat url('~assets/img/cohort.png')!important;
@@ -1455,7 +1486,7 @@ input:checked ~ .tab-content {
 
 @media (max-width: 1640px) {
   .hero-btn {
-    /* margin-bottom: 14rem !important; */
+    margin-bottom: 14rem!important;
   }
   .guild-list .vehicle {
    max-width: 300px!important;
@@ -1464,7 +1495,7 @@ input:checked ~ .tab-content {
 
 @media (min-width: 1760px) {
   .hero-btn {
-    /* margin-bottom: 14rem !important; */
+    margin-bottom: 14rem!important;
   }
 }
 
@@ -1501,7 +1532,7 @@ input:checked ~ .tab-content {
     border-radius: 20px;
   }
   .hero-btn {
-    /* margin-bottom: 14rem !important; */
+    margin-bottom: 14rem!important;
   }
 }
 
@@ -1519,7 +1550,7 @@ input:checked ~ .tab-content {
     font-size: 0.75em;
   }
   .hero-btn {
-    /* margin-bottom: 14rem !important; */
+    margin-bottom: 14rem!important;
   }
   .cohort {
     background: left 100px / 250% no-repeat url(/_nuxt/assets/img/cohort.png)!important;
