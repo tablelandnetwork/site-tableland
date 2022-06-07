@@ -241,7 +241,7 @@
   </template>
 
   <script>
-  import rigsMeta from '~/assets/rigs.json';
+  import rigsMeta from '~/assets/rigsMeta.json';
   export default {
     head(){
       return {
