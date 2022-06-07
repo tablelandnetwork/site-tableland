@@ -126,7 +126,16 @@
 
           <div class="flex px-48 py-0">
             <div class="lg:w-1/2 minter-console" id="minter-console" v-bind:class="{'active': isAddClass}">
-              <MinterConsole></MinterConsole>
+
+                <div class="text-white text-center" id="mint-log"><div id="mint-terminal" class="frame">
+                    ==========================  CONNECT YOUR WALLET ===============================
+                    <p>PRICE: 0.05 ETH</p>
+                    ============================================================================
+                    ============================================================================
+                    ============================================================================
+                    ================= CONNECT WALLET TO PROCEED =============
+                  </div>
+                </div>
                 <div v-if="$wallet.account" class="text-white text-center" id="mint-log"><div id="mint-terminal" class="frame">
                   ==========================  WALLET CONNECTED ===============================
                   <p>WALLET: {{$wallet.account}}</p>

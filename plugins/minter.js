@@ -95,13 +95,6 @@ export default async ({env}, inject) => {
             console.log("user wallet:", userAddress);
             console.log("token balance:", tokenBalance);
             console.log("rigs owned:", rigBalance);
-            rigBalance.forEach(item => {
-              console.log("rig: ",item);
-              console.log("=========");
-              const rigImg = rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].image;
-              let rigLog = document.getElementById("rig-log");
-              rigLog.innerHTML += '<p>RIG ID #00' + ethers.utils.formatUnits(item._hex, 0) + '</p><p>' + rigImg + '</p>' ;
-            });
 
         },
 
@@ -111,6 +104,7 @@ export default async ({env}, inject) => {
 
            if (ethereum) {
 
+          console.log = function(message) {document.getElementById('mint-log').innerHTML = message;};
           document.getElementById("mint-button").innerHTML="Confirm the Transaction";
           document.getElementById("mint-terminal").innerHTML="============================= CONFIRM TRANSACTION ================================= 0x10806040523480156200001157600080fd5b506040805190810160405280600481526020017f5049535300000000000000000000000000000000000000000000000000000000815250600090805190602001906200005f929190620001bb565b506040805190810160405280600881526020017f50495353434f494e00000000000000000000000000000000000000000000000081525060019080519060200190620000ad929190620001bb565b506004600260006101000a81548160ff021916908360ff16021790555065019f9e67fdad6003819055506501235477e0096004600073f73a4da8d034774d5b18de694e5d2b0fbb0aaff473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555073f73a4da8d034774d5b18de694e5d2b0fbb0aaff473ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef6501235477e0096040518082815260200191505060405180910390a36200026a565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10620001fe57805160ff19168380011785556200022f565b828001600101855582156200022f579182015b828111156200022e57825182559160200191906001019062000211565b5b5090506200023e919062000242565b5090565b6200026791905b808211156200026357600081600090555060010162000249565b5090565b90565b6110fe806200027a6000396000f3006080604052600436106100db576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde03146100e0578063095ea7b31461017057806318160ddd146101d557806323b872dd14610200578063313ce567146102855780633eaaf86b146102b657806370a08231146102e157806395d89b411461";
 
@@ -131,7 +125,7 @@ export default async ({env}, inject) => {
           const receipt = await tx.wait();
           const [event] = receipt.events ?? [];
           const tokenId = event.args?.tokenId;
-          console.log = function(message) {document.getElementById('mint-log').innerHTML = message;};
+
           document.getElementById("mint-button").innerHTML="Rig Minted";
           document.getElementById("rig-result").classList.add("active");
           document.getElementById("minter-details").classList.add("active");
@@ -155,7 +149,7 @@ export default async ({env}, inject) => {
           }
         }
         catch (error) {
-          console.log('Error minting rig see transaction: https://goerli.etherscan.io/tx/${tx.hash}', error);
+          console.log(error);
           document.getElementById("mint-button").innerHTML="Error minting rig";
           document.getElementById("animated-carousel").classList.remove("progress");
         }

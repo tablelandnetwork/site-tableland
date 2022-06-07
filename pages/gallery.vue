@@ -112,7 +112,7 @@
             <div v-if="tab === 1">
               <div class="flex flex-wrap py-0 rig-garage">
                 <div class="w-1/3 px-3 py-3 rigs" v-for="(rig, index) in rigsMeta.rigs" data-aos="fade-up">
-                  <a href="/minted">
+                  <a href="/rigs/${ rig.attributes[1].value }">
                    <div class="rig-frame" :class="rig.attributes[1].value + ' rarity-' + rig.attributes[0].value">
                    <img :src="rig.image"/>
                  </div>

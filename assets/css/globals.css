@@ -581,14 +581,15 @@ nav a, a.btn {
   height: 400px;
   background: #1b72e2;
   position: absolute;
-  top: 20px;
+  top: 16px;
   width: 100%;
   z-index: 99999;
   color: white;
   font-family: monospace;
   text-align: left;
-  padding: 0px 20px;
+  padding: 20px;
   transition: all 0.2s ease-in-out;
+  overflow: hidden;
 }
 
 #mint-log .frame {
