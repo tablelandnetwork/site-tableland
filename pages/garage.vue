@@ -173,7 +173,6 @@
         return window.ethereum;
       }
     },
-
     data() {
       const now = new Date();
       const launchDate = new Date(2022, 4, 31, 0, 0);

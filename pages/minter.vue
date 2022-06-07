@@ -165,8 +165,6 @@
                 <div class="w-full px-12 py-18">
                   <div v-if="$wallet.account">
                     <a id="mint-button" class="btn btn-mint text-white"  @click="$wallet.mintRig">MINT RIG</a>
-                    <!-- <a id="mint-button" class="btn btn-mint text-white"  @click="$wallet.getRig">VIEW YOUR RIGS</a> -->
-
                   </div>
                   <div v-else>
                     <a id="connect-button" class="btn bg-black text-white"

@@ -72,7 +72,6 @@ export default async ({env}, inject) => {
             );
             wallet.network = wallet.provider.getNetwork()
 
-            const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
             // const connection = await connect({
             //   network: "testnet",
             //   host: "http://testnet.tableland.network",
@@ -80,17 +79,21 @@ export default async ({env}, inject) => {
 
             const [account] = await wallet.provider.send('eth_requestAccounts')
 
-            console.log('wallet connect', {account})
-            console.log('print rigs json', rigsMeta.rigs[1])
-            console.log('rig image', rigsMeta.rigs[1].image)
-            console.log('rig ID', rigsMeta.rigs[1].id)
-            console.log('rig attributes', rigsMeta.rigs[1].attributes)
-
             if(account) {
                 await wallet.setAccount(account)
             }
             await provider.send("eth_requestAccounts", []);
             const signer = provider.getSigner();
+
+            //Connect to contract and spit out owned rig data
+            let userAddress = await signer.getAddress();
+            const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
+            const tokenBalance = await nftContract.balanceOf(userAddress);
+            const nftBalance = await provider.getBalance(rig.address)
+            const rigBalance = await nftContract.tokensOfOwner(userAddress)
+            console.log("user wallet:", userAddress);
+            console.log("token balance:", tokenBalance);
+            console.log("rigs owned:", rigBalance);
 
         },
 
@@ -164,10 +167,10 @@ export default async ({env}, inject) => {
               const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
               const tokenBalance = await nftContract.balanceOf(userAddress);
               const nftBalance = await provider.getBalance(rig.address)
-              const rigBalance = await provider.tokensOfOwner(rig.address)
-              console.log(userAddress);
-              console.log(tokenBalance);
-              console.log(ethers.utils.formatEther(rigBalance));
+              const rigBalance = await nftContract.tokensOfOwner(userAddress)
+              console.log("user wallet:", userAddress);
+              console.log("token balance:", tokenBalance);
+              console.log("rigs owned:", rigBalance);
 
               // rigsMeta.rigs[tokenId].forEach(obj => {
               //      Object.entries(obj).forEach(([trait_type, value]) => {
