@@ -110,46 +110,15 @@
           </ul>
           <div>
             <div v-if="tab === 1">
-              <div class="flex py-6">
-                <div class="w-1/4 px-6 rigs">
-                  <a href="/minted"><img src="~assets/img/card.png"/></a>
-                </div>
-                <div class="w-1/4 px-6 rigs">
-                  <a href="/minted"><img src="~assets/img/card2.png"/></a>
-                </div>
-                <div class="w-1/4 px-6 rigs">
-                  <a href="/minted"><img src="~assets/img/card3.png"/></a>
-                </div>
-                <div class="w-1/4 px-6 rigs">
-                  <a href="/minted"><img src="~assets/img/card.png"/></a>
-                </div>
-              </div>
-              <div class="flex py-6">
-                <div class="w-1/4 px-6 rigs">
-                  <a href="/minted"><img src="~assets/img/card.png"/></a>
-                </div>
-                <div class="w-1/4 px-6 rigs">
-                  <a href="/minted"><img src="~assets/img/card2.png"/></a>
-                </div>
-                <div class="w-1/4 px-6 rigs">
-                  <a href="/minted"><img src="~assets/img/card3.png"/></a>
-                </div>
-                <div class="w-1/4 px-6 rigs">
-                  <a href="/minted"><img src="~assets/img/card.png"/></a>
-                </div>
-              </div>
-              <div class="flex py-6">
-                <div class="w-1/4 px-6 rigs">
-                  <a href="/minted"><img src="~assets/img/card.png"/></a>
-                </div>
-                <div class="w-1/4 px-6 rigs">
-                  <a href="/minted"><img src="~assets/img/card2.png"/></a>
-                </div>
-                <div class="w-1/4 px-6 rigs">
-                  <a href="/minted"><img src="~assets/img/card3.png"/></a>
-                </div>
-                <div class="w-1/4 px-6 rigs">
-                  <a href="/minted"><img src="~assets/img/card.png"/></a>
+              <div class="flex flex-wrap py-0 rig-garage">
+                <div class="w-1/3 px-3 py-3 rigs" v-for="(rig, index) in rigsMeta.rigs" data-aos="fade-up">
+                  <a href="/minted">
+                   <div class="rig-frame" :class="rig.attributes[1].value + ' rarity-' + rig.attributes[0].value">
+                   <img :src="rig.image"/>
+                 </div>
+                   <h2 class="text-white font-Orbitron text-l">RIG ID {{ rig.id }}</h2>
+                   <p class="text-white">FLEET: {{ rig.attributes[1].value }}</p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -189,7 +158,7 @@
   </template>
 
   <script>
-
+  import rigsMeta from '~/assets/rigsMeta.json';
   export default {
     head(){
       return {
@@ -229,7 +198,7 @@
         time: launchDate - now,
         isAddClass: false,
         tab: 1,
-
+        rigsMeta: rigsMeta,
       };
     },
   };

@@ -21,7 +21,7 @@
               <li>
                 <a class="btn bg-black text-white"
                      :disabled="!!$wallet.account"
-                     @click="$wallet.connect">
+                     @click="$wallet.rigsGarage">
                      <strong>{{
                          !!$wallet.account ? $wallet.accountCompact : 'Connect Wallet'
                      }}</strong>
@@ -86,20 +86,9 @@
           <h1 class="text-pink font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
             Your Rigs
           </h1>
-
           </div>
         </div>
-        <div class="flex flex-wrap py-0 rig-garage">
-          <div class="w-1/3 px-3 py-3 rigs" v-for="(rig, index) in rigsMeta.rigs" data-aos="fade-up">
-            <a href="/minted">
-             <div class="rig-frame" :class="rig.attributes[1].value + ' rarity-' + rig.attributes[0].value">
-             <img :src="rig.image"/>
-           </div>
-             <h2 class="text-white font-Orbitron text-l">RIG ID {{ rig.id }}</h2>
-             <p class="text-white">FLEET: {{ rig.attributes[1].value }}</p>
-            </a>
-          </div>
-        </div>
+        <div id="rig-garage" class="flex flex-wrap py-0 rig-garage"></div>
         <div class="flex">
           <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-36" data-aos="fade-up">
           <h1 class="text-pink font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >

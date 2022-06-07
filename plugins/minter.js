@@ -90,10 +90,17 @@ export default async ({env}, inject) => {
             const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
             const tokenBalance = await nftContract.balanceOf(userAddress);
             const nftBalance = await provider.getBalance(rig.address)
-            const rigBalance = await nftContract.tokensOfOwner(userAddress)
+            const rigBalance = await nftContract.tokensOfOwnerIn(userAddress, 0, 10000)
             console.log("user wallet:", userAddress);
             console.log("token balance:", tokenBalance);
             console.log("rigs owned:", rigBalance);
+            rigBalance.forEach(item => {
+              console.log("rig: ",item);
+              console.log("=========");
+              const rigImg = rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].image;
+              let rigLog = document.getElementById("rig-log");
+              rigLog.innerHTML += '<p>RIG ID #00' + ethers.utils.formatUnits(item._hex, 0) + '</p><p>' + rigImg + '</p>' ;
+            });
 
         },
 
@@ -154,6 +161,54 @@ export default async ({env}, inject) => {
 
         },
 
+        async rigsGarage() {
+          const provider = new ethers.providers.Web3Provider(
+              window.ethereum,
+              "any"
+            );
+            wallet.network = wallet.provider.getNetwork()
+
+            // const connection = await connect({
+            //   network: "testnet",
+            //   host: "http://testnet.tableland.network",
+            // });
+
+            const [account] = await wallet.provider.send('eth_requestAccounts')
+
+            if(account) {
+                await wallet.setAccount(account)
+            }
+            await provider.send("eth_requestAccounts", []);
+            const signer = provider.getSigner();
+
+            //Connect to contract and spit out owned rig data
+            let userAddress = await signer.getAddress();
+            const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
+            const tokenBalance = await nftContract.balanceOf(userAddress);
+            const nftBalance = await provider.getBalance(rig.address)
+            const rigBalance = await nftContract.tokensOfOwnerIn(userAddress, 0, 10000)
+            // console.log("user wallet:", userAddress);
+            // console.log("token balance:", tokenBalance);
+            // console.log("rigs owned:", rigBalance);
+            rigBalance.forEach(item => {
+              // console.log("rig: ",item);
+              // console.log("=========");
+              const rigImg = rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].image;
+              let rigLog = document.getElementById("rig-garage");
+              // rigLog.innerHTML += '<p>RIG ID #00' + ethers.utils.formatUnits(item._hex, 0) + '</p><p>' + rigImg + '</p>' ;
+              rigLog.innerHTML += `<div class="w-1/3 px-3 py-3 rigs">
+                <a href="/rigs/${ethers.utils.formatUnits(item._hex, 0)}">
+                 <div class="rig-frame">
+                  <img src="${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].image}"/>
+                 </div>
+                 <h2 class="text-white font-Orbitron text-l">RIG ID ${ethers.utils.formatUnits(item._hex, 0)}</h2>
+                <p class="text-white">FLEET:${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].attributes[1].value}</p>
+                </a>
+              </div>`;
+            });
+
+        },
+
         // Gets the minted NFT data
       	async getRig(tokenId)  {
       		try {
@@ -171,6 +226,10 @@ export default async ({env}, inject) => {
               console.log("user wallet:", userAddress);
               console.log("token balance:", tokenBalance);
               console.log("rigs owned:", rigBalance);
+              rigBalance.forEach(item => {
+                console.log("rig: ",item);
+                console.log("=========");
+              });
 
               // rigsMeta.rigs[tokenId].forEach(obj => {
               //      Object.entries(obj).forEach(([trait_type, value]) => {
