@@ -160,12 +160,12 @@
 
                 <p>WALLET: {{$wallet.account}}</p>
                 <p>BALANCE: {{$wallet.balance}} ETH</p>
-                <p>PRICE: 0.01 ETH</p>
+                <p>PRICE: 0.05 ETH</p>
                 ============================================================================
                 ============================================================================
                 ============================================================================
                 =============== READY TO MINT CONFIRM TRANSACTION TO PROCEED ===============
-                PRICE 0.01ETH </div>
+                PRICE 0.05ETH </div>
 
               </div>
             </div>
@@ -173,21 +173,21 @@
               <div class="flex py-12 px-12">
                 <div class="w-1/2" >
                   <h3 class="text-white lg:text-xl text-l">PRICE</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">0.01ETH</h2>
+                  <h2 class="text-white text-4xl font-Orbitron">0.05ETH</h2>
                 </div>
                 <div class="w-1/2">
                   <h3 class="text-white lg:text-xl text-l">TOTAL SUPPLY</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">10,000</h2>
+                  <h2 id="rig-supply" class="text-white text-4xl font-Orbitron"></h2>
                 </div>
               </div>
-              <div class="flex py-0 px-12">
+              <div class="flex py-0 px-12" v-if="$wallet.account">
                 <div class="w-1/2" >
-                  <h3 class="text-white lg:text-xl text-l" v-if="$wallet.account">YOUR BALANCE</h3>
+                  <h3 class="text-white lg:text-xl text-l">YOUR BALANCE</h3>
                   <h2 class="text-white text-4xl font-Orbitron">{{$wallet.balance}}</h2>
                 </div>
                 <div class="w-1/2">
-                  <h3 class="text-white lg:text-xl text-l" v-if="$wallet.account">QUANTITY</h3>
-                  <h2 class="text-white text-4xl font-Orbitron" v-if="$wallet.account">1</h2>
+                  <h3 class="text-white lg:text-xl text-l" >QUANTITY</h3>
+                  <h2 class="text-white text-4xl font-Orbitron">1</h2>
                 </div>
 
               </div>
@@ -199,7 +199,7 @@
 
                   </div>
                   <div v-else>
-                    <a class="btn bg-black text-white"
+                    <a id="connect-button" class="btn bg-black text-white"
                          @click="$wallet.connect">
                          <strong>{{
                              !!$wallet.account ? $wallet.accountCompact : 'Connect Wallet to Mint'

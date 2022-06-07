@@ -489,24 +489,18 @@ nav a, a.btn {
 }
 
 .minter {
-  background: left -1400px / 100% no-repeat url('~assets/img/guild-list.jpg');
-  background-color: #ff9675;
   height: 40vh;
   width: 100vw;
   max-width: 100%!important;
 }
 
 .minted {
-  background: left -500px / cover no-repeat url('~assets/img/cohort.png')!important;
-  background-color: #ff9675;
   height: 80vh;
   width: 100vw;
   max-width: 100%!important;
 }
 
 .user-garage {
-  background: left -500px / cover no-repeat url('~assets/img/cohort.png')!important;
-  background-color: #ff9675;
   height: auto;
   min-height: 50vh;
   width: 100vw;
