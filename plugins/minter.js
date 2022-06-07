@@ -131,7 +131,7 @@ export default async ({env}, inject) => {
           document.getElementById("minter-details").classList.add("active");
           document.getElementById("minter-console").classList.add("active");
           document.getElementById("animated-carousel").classList.add("mint");
-          console.log(`========================== RIG MINTED =============================== transaction tx ${tx.hash}, ${event.args?.tokenId}, token id ${event.args?.tokenId}, see transaction: https://goerli.etherscan.io/tx/${tx.hash}, Gas used: ${receipt.gasUsed.toString()}, Transaction confirmed in block ${receipt.blockNumber}`);
+          console.log(`========================== RIG MINTED =============================== transaction tx ${tx.hash}, ${event.args?.tokenId}, token id ${event.args?.tokenId}, see transaction: https://goerli.etherscan.io/tx/${tx.hash}, Gas used: ${receipt.gasUsed.toString()}, Transaction confirmed in block ${receipt.blockNumber}, arguements ${event.args}`);
           document.getElementById("tx-btn").setAttribute("href", `https://goerli.etherscan.io/tx/${tx.hash}`);
           document.getElementById("os-btn").setAttribute("href", `https://testnets.opensea.io/assets/goerli/${rig.address}/${event.args?.tokenId}`);
           document.getElementById("tx-mint").innerHTML=`${tx.hash}`;

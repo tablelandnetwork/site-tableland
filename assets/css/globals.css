@@ -590,6 +590,7 @@ nav a, a.btn {
   padding: 20px;
   transition: all 0.2s ease-in-out;
   overflow: hidden;
+  word-wrap: break-word;
 }
 
 #mint-log .frame {
