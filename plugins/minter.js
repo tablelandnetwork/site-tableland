@@ -198,11 +198,11 @@ export default async ({env}, inject) => {
               // rigLog.innerHTML += '<p>RIG ID #00' + ethers.utils.formatUnits(item._hex, 0) + '</p><p>' + rigImg + '</p>' ;
               rigLog.innerHTML += `<div class="w-1/3 px-3 py-3 rigs">
                 <a href="/rigs/${ethers.utils.formatUnits(item._hex, 0)}">
-                 <div class="rig-frame">
+                 <div class="rig-frame ${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].attributes[1].value} rarity-${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].attributes[0].value}" >
                   <img src="${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].image}"/>
                  </div>
                  <h2 class="text-white font-Orbitron text-l">RIG ID ${ethers.utils.formatUnits(item._hex, 0)}</h2>
-                <p class="text-white">FLEET:${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].attributes[1].value}</p>
+                <p class="text-white">FLEET: ${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].attributes[1].value}</p>
                 </a>
               </div>`;
             });
