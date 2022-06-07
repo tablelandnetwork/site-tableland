@@ -79,30 +79,71 @@
       <div class="minter-break flex container text-center justify-between">
         <div class="w-full">
             <div id="animated-carousel" class="animated-carousel w-full" v-bind:class="{'mint': isAddClass}" style="margin-top:-100px">
-                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_1.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_2.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_3.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_4.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_5.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_6.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_7.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_8.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_9.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_10.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_11.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_12.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_5.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_6.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a1" src="~assets/img/rig_7.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_9.png"/></div>
-                <div class="vehicle" data-aos="fade-up"><img class="a2" src="~assets/img/rig_10.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_1.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_2.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_3.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_4.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_5.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_6.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_7.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_8.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_9.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_10.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_11.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_12.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_1.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_2.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_3.png"/></div>
+              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_4.png"/></div>
             </div>
 
           <div id="rig-result" class="rig-result" v-bind:class="{'active': isAddClass}">
-            <img src="~assets/img/card.png"/>
+            <div class="rig-frame">
+              <img id="rig-img" />
+            </div>
+            <div class="py-6 pt-12 px-0 text-left">
+              <p id="tx-mint" class="text-white"></p>
+              <p id="tkn-mint" class="text-white"></p>
+              <p id="trait-1" class="text-white"></p>
+              <p id="trait-2" class="text-white"></p>
+              <p id="trait-3" class="text-white"></p>
+              <p id="trait-4" class="text-white"></p>
+              <p id="trait-5" class="text-white"></p>
+              <p id="trait-6" class="text-white"></p>
+              <p id="trait-7" class="text-white"></p>
+              <!-- <div class="w-1/2">
+              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[1].trait_type}}</h3>
+              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[1].value}}</h2>
+              </div>
+              <div class="w-1/2">
+              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[2].trait_type}}</h3>
+              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[2].value}}</h2>
+              </div>
+            </div>
+            <div class="flex py-3 px-0 text-left">
+              <div class="w-1/2">
+              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[3].trait_type}}</h3>
+              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[3].value}}</h2>
+              </div>
+              <div class="w-1/2">
+              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[4].trait_type}}</h3>
+              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[4].value}}</h2>
+              </div>
+            </div>
+            <div class="flex py-3 px-0 text-left">
+              <div class="w-1/2">
+              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[5].trait_type}}</h3>
+              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[5].value}}</h2>
+              </div>
+              <div class="w-1/2">
+              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[6].trait_type}}</h3>
+              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[6].value}}</h2>
+              </div> -->
+            </div>
             <div class="flex">
-              <div class="w-full px-0 py-12">
+              <div class="w-full px-0 py-6">
                 <a id="tx-btn" class="btn text-white" target="_blank">VIEW TRANSACTION</a>
+                <a id="os-btn" class="btn text-white" target="_blank">ON OPENSEA</a>
                 <a href="/minter" class="btn btn-mint text-white">MINT ANOTHER</a>
               </div>
             </div>
@@ -119,11 +160,13 @@
 
                 <p>WALLET: {{$wallet.account}}</p>
                 <p>BALANCE: {{$wallet.balance}} ETH</p>
+                <p>PRICE: 0.01 ETH</p>
                 ============================================================================
                 ============================================================================
                 ============================================================================
                 =============== READY TO MINT CONFIRM TRANSACTION TO PROCEED ===============
-                PRICE 0.01ETH - AVAILABLE 3232</div>
+                PRICE 0.01ETH </div>
+
               </div>
             </div>
             <div class="lg:w-1/2 minter-details" v-bind:class="{'active': isAddClass}" id="minter-details">
@@ -133,25 +176,26 @@
                   <h2 class="text-white text-4xl font-Orbitron">0.01ETH</h2>
                 </div>
                 <div class="w-1/2">
-                  <h3 class="text-white lg:text-xl text-l">AVAILABLE</h3>
+                  <h3 class="text-white lg:text-xl text-l">TOTAL SUPPLY</h3>
                   <h2 class="text-white text-4xl font-Orbitron">10,000</h2>
                 </div>
               </div>
               <div class="flex py-0 px-12">
                 <div class="w-1/2" >
-                  <h3 class="text-white lg:text-xl text-l">METAVALUE</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">placeholder</h2>
+                  <h3 class="text-white lg:text-xl text-l" v-if="$wallet.account">YOUR BALANCE</h3>
+                  <h2 class="text-white text-4xl font-Orbitron">{{$wallet.balance}}</h2>
                 </div>
                 <div class="w-1/2">
-                  <h3 class="text-white lg:text-xl text-l">METAVALUE</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">placeholder</h2>
+                  <h3 class="text-white lg:text-xl text-l" v-if="$wallet.account">QUANTITY</h3>
+                  <h2 class="text-white text-4xl font-Orbitron" v-if="$wallet.account">1</h2>
                 </div>
+
               </div>
               <div class="flex">
                 <div class="w-full px-12 py-18">
                   <div v-if="$wallet.account">
                     <a id="mint-button" class="btn btn-mint text-white"  @click="$wallet.mintRig">MINT RIG</a>
-
+                    <!-- <a id="mint-button" class="btn btn-mint text-white"  @click="$wallet.getRig">VIEW YOUR RIGS</a> -->
 
                   </div>
                   <div v-else>
@@ -197,7 +241,7 @@
   </template>
 
   <script>
-
+  import rigsMeta from '~/assets/rigs.json';
   export default {
     head(){
       return {
@@ -207,7 +251,7 @@
           { hid: 'og-type', property: 'og:type', content: 'website' },
           { hid: 'og-title', property: 'og:title', content: 'Mint a rig' },
           { hid: 'og-sitename', property: 'og:site_name', content: 'Tableland - Build web3 with SQL' },
-          { hid: 'og-desc', property: 'og:description', content: 'A generative NFT with 1,074 handcrafted works of art. Rigs are your ride to Tableland.' },
+          { hid: 'og-desc', property: 'og:description', content: 'A generative NFT with 1,043 handcrafted works of art. Rigs are your ride to Tableland.' },
           { hid: 'og-image', property: 'og:image',
             content: 'https://i.imgur.com/5YHLnkC.png'
           },
@@ -234,6 +278,7 @@
       return {
         time: launchDate - now,
         isAddClass: false,
+        rigs: rigsMeta,
       };
     },
   };
