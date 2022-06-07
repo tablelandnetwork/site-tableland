@@ -111,34 +111,6 @@
               <p id="trait-5" class="text-white"></p>
               <p id="trait-6" class="text-white"></p>
               <p id="trait-7" class="text-white"></p>
-              <!-- <div class="w-1/2">
-              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[1].trait_type}}</h3>
-              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[1].value}}</h2>
-              </div>
-              <div class="w-1/2">
-              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[2].trait_type}}</h3>
-              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[2].value}}</h2>
-              </div>
-            </div>
-            <div class="flex py-3 px-0 text-left">
-              <div class="w-1/2">
-              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[3].trait_type}}</h3>
-              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[3].value}}</h2>
-              </div>
-              <div class="w-1/2">
-              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[4].trait_type}}</h3>
-              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[4].value}}</h2>
-              </div>
-            </div>
-            <div class="flex py-3 px-0 text-left">
-              <div class="w-1/2">
-              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[5].trait_type}}</h3>
-              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[5].value}}</h2>
-              </div>
-              <div class="w-1/2">
-              <h3 class="text-white lg:text-xl text-l">{{rigs.attributes[6].trait_type}}</h3>
-              <h2 class="text-white text-2xl font-Orbitron">{{rigs.attributes[6].value}}</h2>
-              </div> -->
             </div>
             <div class="flex">
               <div class="w-full px-0 py-6">
@@ -155,18 +127,16 @@
           <div class="flex px-48 py-0">
             <div class="lg:w-1/2 minter-console" id="minter-console" v-bind:class="{'active': isAddClass}">
               <MinterConsole></MinterConsole>
-              <div v-if="$wallet.account" class="text-white text-center" id="mint-log"><div id="mint-terminal" class="frame">
-                ==========================  WALLET CONNECTED ===============================
-
-                <p>WALLET: {{$wallet.account}}</p>
-                <p>BALANCE: {{$wallet.balance}} ETH</p>
-                <p>PRICE: 0.05 ETH</p>
-                ============================================================================
-                ============================================================================
-                ============================================================================
-                =============== READY TO MINT CONFIRM TRANSACTION TO PROCEED ===============
-                PRICE 0.05ETH </div>
-
+                <div v-if="$wallet.account" class="text-white text-center" id="mint-log"><div id="mint-terminal" class="frame">
+                  ==========================  WALLET CONNECTED ===============================
+                  <p>WALLET: {{$wallet.account}}</p>
+                  <p>BALANCE: {{$wallet.balance}} ETH</p>
+                  <p>PRICE: 0.05 ETH</p>
+                  ============================================================================
+                  ============================================================================
+                  ============================================================================
+                  ================= READY TO MINT CONFIRM TRANSACTION TO PROCEED =============
+                </div>
               </div>
             </div>
             <div class="lg:w-1/2 minter-details" v-bind:class="{'active': isAddClass}" id="minter-details">
