@@ -39,15 +39,16 @@ export default async ({env}, inject) => {
             const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
             const totalSupply = await nftContract.totalSupply();
 
-            //Check contract totalSupply
-            const maxSupply = 3000 - totalSupply;
-            document.getElementById("rig-supply").innerHTML=maxSupply;
-            if (maxSupply === 0) {
-              console.log('no more left!')
-              document.getElementById("connect-button").innerHTML="RIGS SOLD OUT!";
-              document.querySelector('#connect-button').disabled = true;
+            if(window.location.pathname == '/minter') {
+              //Check contract totalSupply
+              const maxSupply = 3000 - totalSupply;
+              document.getElementById("rig-supply").innerHTML=maxSupply;
+              if (maxSupply === 0) {
+                console.log('no more left!')
+                document.getElementById("connect-button").innerHTML="RIGS SOLD OUT!";
+                document.querySelector('#connect-button').disabled = true;
+              }
             }
-
         },
 
         async setAccount(newAccount) {
