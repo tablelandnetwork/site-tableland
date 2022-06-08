@@ -4,21 +4,8 @@
     <!-- Header -->
     <HeaderNav></HeaderNav>
 
-    <!-- minter -->
-    <section class="user-garage">
+    <section class="rig-gallery">
       <div class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-8 lg:pt-12 2xl:pt-24 justify-between">
-        <div class="lg:w-full px-0 lg:pb-12 pb-6 pt-0" data-aos="fade-up">
-          <div class="lg:flex ">
-            <div class="text-left w-full pt-24 px-24" data-aos="fade-up">
-              <h1 class="text-black font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
-                Tableland Gallery
-              </h1>
-              <div class="hero-btn md:inline-block md:text-left mb-18 lg:mb-24 px-6" data-aos="fade-up">
-                <ButtonLink href="/minter">Mint a Rig</ButtonLink>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -111,7 +98,7 @@
           <div>
             <div v-if="tab === 1">
               <div class="flex flex-wrap py-0 rig-garage">
-                <div class="w-1/3 px-3 py-3 rigs" v-for="(rig, index) in rigsMeta.rigs" data-aos="fade-up">
+                <div class="w-1/4 px-3 py-3 rigs" v-for="(rig, index) in rigsMeta.rigs" data-aos="fade-up">
                   <a :href="'/rig/' + rig.id">
                    <div class="rig-frame" :class="rig.attributes[1].value + ' rarity-' + rig.attributes[0].value">
                    <img :src="rig.image"/>

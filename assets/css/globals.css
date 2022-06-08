@@ -507,6 +507,13 @@ nav a, a.btn {
   max-width: 100%!important;
 }
 
+.rig-gallery {
+  height: auto;
+  min-height: 20vh;
+  width: 100vw;
+  max-width: 100%!important;
+}
+
 .rigs a {
   text-decoration: none;
 }
