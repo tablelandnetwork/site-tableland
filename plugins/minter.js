@@ -51,8 +51,8 @@ export default async ({env}, inject) => {
               }
             }
             if(window.location.pathname == '/rig/1') {
-              const pageId = 1;
-              const rigOwner = await nftContract.ownerOf(1);
+              const pageId = $route.params.id;
+              const rigOwner = await nftContract.ownerOf(pageId);
               //Check rig owned address
               document.getElementById("rig-owner").innerHTML='OWNED BY ' + rigOwner;
             }
