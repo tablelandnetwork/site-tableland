@@ -507,6 +507,10 @@ nav a, a.btn {
   max-width: 100%!important;
 }
 
+.rigs a {
+  text-decoration: none;
+}
+
 .rigs a .rig-frame {
   transition: all 0.2s ease-in-out;
 }
