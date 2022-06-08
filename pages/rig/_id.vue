@@ -33,41 +33,17 @@
             <img :src="rigsMeta.rigs[rigId].image"/>
           </div>
           <h3 id="rig-owner" class="text-white text-center lg:text-xl text-l"></h3>
-          <div class="flex px-48 py-0">
+          <div class="flex px-48 py-12">
             <div class="lg:w-full minter-details">
-              <div class="flex flex-wrap py-12 px-24">
-                <div class="w-1/2" >
-                  <h3 class="text-white lg:text-xl text-l">{{rigsMeta.rigs[rigId].attributes[0].trait_type}}</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">{{rigsMeta.rigs[rigId].attributes[0].value}} %</h2>
-                </div>
-                <div class="w-1/2" >
-                  <h3 class="text-white lg:text-xl text-l">{{rigsMeta.rigs[rigId].attributes[1].trait_type}}</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">{{rigsMeta.rigs[rigId].attributes[1].value}}</h2>
-                </div>
-                <div class="w-1/2">
-                  <h3 class="text-white lg:text-xl text-l">{{rigsMeta.rigs[rigId].attributes[2].trait_type}}</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">{{rigsMeta.rigs[rigId].attributes[2].value}}</h2>
-                </div>
-                <div class="w-1/2" >
-                  <h3 class="text-white lg:text-xl text-l">{{rigsMeta.rigs[rigId].attributes[3].trait_type}}</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">{{rigsMeta.rigs[rigId].attributes[3].value}}</h2>
-                </div>
-                <div class="w-1/2">
-                  <h3 class="text-white lg:text-xl text-l">{{rigsMeta.rigs[rigId].attributes[4].trait_type}}</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">{{rigsMeta.rigs[rigId].attributes[4].value}}</h2>
-                </div>
-                <div class="w-1/2" >
-                  <h3 class="text-white lg:text-xl text-l">{{rigsMeta.rigs[rigId].attributes[5].trait_type}}</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">{{rigsMeta.rigs[rigId].attributes[5].value}}</h2>
-                </div>
-                <div class="w-1/2">
-                  <h3 class="text-white lg:text-xl text-l">{{rigsMeta.rigs[rigId].attributes[6].trait_type}}</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">{{rigsMeta.rigs[rigId].attributes[6].value}}</h2>
+              <div class="flex flex-wrap py-0 px-24" >
+                <div class="w-1/2 px-0 py-3" v-for="(rig, index) in rigsMeta.rigs[rigId].attributes" data-aos="fade-up">
+                  <h3 class="text-white lg:text-xl text-l">{{rig.trait_type}}</h3>
+                  <h2 class="text-white text-3xl font-Orbitron">{{rig.value}}</h2>
                 </div>
               </div>
               <div class="flex">
                 <div class="w-full px-24 py-18">
-                  <a class="btn btn-mint text-white">VIEW TRANSACTION</a>
+                  <a class="btn btn-mint text-white" href="https://goerli.etherscan.io/token/0x88694d0b8c8e800ab3d9eecbf9a8923b3b5825fa?a=">VIEW TRANSACTION</a>
                 </div>
               </div>
             </div>

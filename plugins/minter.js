@@ -203,7 +203,7 @@ export default async ({env}, inject) => {
                  <div class="rig-frame ${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].attributes[1].value} rarity-${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].attributes[0].value}" >
                   <img src="${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].image}"/>
                  </div>
-                 <h2 class="text-white font-Orbitron text-l">RIG ID ${ethers.utils.formatUnits(item._hex, 0)}</h2>
+                 <h2 class="text-white font-Orbitron text-l">RIG ID #00${ethers.utils.formatUnits(item._hex, 0)}</h2>
                 <p class="text-white">FLEET: ${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].attributes[1].value}</p>
                 </a>
               </div>`;
