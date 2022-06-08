@@ -39,6 +39,7 @@ export default async ({env}, inject) => {
             const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
             const totalSupply = await nftContract.totalSupply();
 
+
             if(window.location.pathname == '/minter') {
               //Check contract totalSupply
               const maxSupply = 3000 - totalSupply;
@@ -48,6 +49,12 @@ export default async ({env}, inject) => {
                 document.getElementById("connect-button").innerHTML="RIGS SOLD OUT!";
                 document.querySelector('#connect-button').disabled = true;
               }
+            }
+            if(window.location.pathname == '/rig/1') {
+              const pageId = 1;
+              const rigOwner = await nftContract.ownerOf(1);
+              //Check rig owned address
+              document.getElementById("rig-owner").innerHTML='OWNED BY ' + rigOwner;
             }
         },
 
@@ -192,7 +199,7 @@ export default async ({env}, inject) => {
               let rigLog = document.getElementById("rig-garage");
               // rigLog.innerHTML += '<p>RIG ID #00' + ethers.utils.formatUnits(item._hex, 0) + '</p><p>' + rigImg + '</p>' ;
               rigLog.innerHTML += `<div class="w-1/3 px-3 py-3 rigs">
-                <a href="/rigs/${ethers.utils.formatUnits(item._hex, 0)}">
+                <a href="/rig/${ethers.utils.formatUnits(item._hex, 0)}">
                  <div class="rig-frame ${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].attributes[1].value} rarity-${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].attributes[0].value}" >
                   <img src="${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].image}"/>
                  </div>
