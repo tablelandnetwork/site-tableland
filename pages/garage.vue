@@ -70,6 +70,9 @@
               <h1 class="text-black font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" v-if="$wallet.account">
                 Welcome to your Garage
               </h1>
+              <h1 class="text-black text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" v-if="!$wallet.account">
+                Connect your wallet
+              </h1>
             </div>
           </div>
         </div>

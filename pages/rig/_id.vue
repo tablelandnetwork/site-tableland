@@ -75,7 +75,7 @@
       <!-- showcase -->
       <section class="md:block showcase py-12 relative">
       <div class="minter-break flex container text-center justify-between"></div>
-        <div class="container" style="margin-top:-900px;max-width: 1280px;z-index:999">
+        <div class="container" style="margin-top:-900px;max-width: 1280px;z-index:999" v-if="rigId">
           <h1 class="text-black text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
             RIG ID #00{{ rigsMeta.rigs[rigIdName].id }}
           </h1>
@@ -97,13 +97,11 @@
                 </div>
               </div>
             </div>
-            <div class="lg:w-1/2 halo1 hidden" v-bind:class="{'active': isAddClass}">
-              <img class=" a-1" src="~assets/img/light_1.png" data-aos="fade-up"/>
-            </div>
-            <div class="lg:w-1/2 halo2 hidden" v-bind:class="{'active': isAddClass}">
-              <img class="a-2" src="~assets/img/light_2.png" data-aos="fade-up"/>
-            </div>
+
           </div>
+        </div>
+        <div class="container" style="margin-top:-900px;max-width: 1280px;z-index:999" v-if="!rigId">
+          Rig not found!
         </div>
       </section>
 

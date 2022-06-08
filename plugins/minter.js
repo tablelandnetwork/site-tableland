@@ -51,7 +51,8 @@ export default async ({env}, inject) => {
               }
             }
             if(window.location.pathname == '/rig/1') {
-              const pageId = $route.params.id;
+
+              const pageId = 1;
               const rigOwner = await nftContract.ownerOf(pageId);
               //Check rig owned address
               document.getElementById("rig-owner").innerHTML='OWNED BY ' + rigOwner;
@@ -187,10 +188,9 @@ export default async ({env}, inject) => {
             let userAddress = await signer.getAddress();
             const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
             const tokenBalance = await nftContract.balanceOf(userAddress);
-            const nftBalance = await provider.getBalance(rig.address)
             const rigBalance = await nftContract.tokensOfOwnerIn(userAddress, 0, 10000)
             // console.log("user wallet:", userAddress);
-            // console.log("token balance:", tokenBalance);
+            // console.log("contract total balance:", nftBalance);
             // console.log("rigs owned:", rigBalance);
             rigBalance.forEach(item => {
               // console.log("rig: ",item);

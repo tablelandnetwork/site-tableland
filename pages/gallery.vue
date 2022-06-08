@@ -99,7 +99,7 @@
             <div v-if="tab === 1">
               <div class="flex flex-wrap py-0 rig-garage">
                 <div class="w-1/4 px-3 py-3 rigs" v-for="(rig, index) in rigsMeta.rigs" data-aos="fade-up">
-                  <a :href="'/rig/' + rig.id">
+                  <a :href="'/rig/' + rig.id ">
                    <div class="rig-frame" :class="rig.attributes[1].value + ' rarity-' + rig.attributes[0].value">
                    <img :src="rig.image"/>
                  </div>
@@ -110,12 +110,10 @@
               </div>
             </div>
             <div v-if="tab === 2">
-              Tab 2 Content show Lorem ipsum dolor sit amet consectetur, adipisicing
-              elit. aliquam rem. Exercitationem corporis eius voluptatibus.
+
             </div>
             <div v-if="tab === 3">
-              Tab 3 Content show Lorem ipsum dolor sit amet consectetur adipisicing
-              elit.
+
             </div>
           </div>
         </div>
