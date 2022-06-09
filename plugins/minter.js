@@ -6,7 +6,7 @@ import rigsMeta from '~/assets/rigsMeta.json';
 
 export default async ({env}, inject) => {
 
-    const provider = ((window.ethereum != null) ? new ethers.providers.Web3Provider(window.ethereum, "any"): ethers.getDefaultProvider());;
+    const provider = ((window.ethereum != null) ? new ethers.providers.Web3Provider(window.ethereum, "any"): ethers.getDefaultProvider());
 
     const rig = {
         address: "0x88694d0b8c8E800AB3D9eecBF9A8923B3b5825fA",
@@ -29,9 +29,9 @@ export default async ({env}, inject) => {
 
         async init() {
 
-            if(!window.ethereum) return {
-              blank
-            }
+          if(!window.ethereum)  {
+            console.log('No compatible wallet detected!')
+           }
 
             this.provider = new ethers.providers.Web3Provider(window.ethereum)
             this.network = this.provider.getNetwork()
@@ -42,9 +42,7 @@ export default async ({env}, inject) => {
             const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
             const totalSupply = await nftContract.totalSupply();
 
-
             if(window.location.pathname == '/minter') {
-
               //Check contract totalSupply
               const maxSupply = 3000 - totalSupply;
               document.getElementById("rig-supply").innerHTML=maxSupply;
@@ -68,6 +66,7 @@ export default async ({env}, inject) => {
               //Check rig owned address
               document.getElementById("rig-owner").innerHTML='OWNED BY ' + rigOwner;
             }
+
             else {
 
             }

@@ -20,15 +20,18 @@
                 {{ item }}
               </a> -->
             </li>
-            <!-- <li v-if="$wallet.provider">
-              <a class="btn bg-black text-white"
-                   :disabled="!!$wallet.account"
-                   @click="$wallet.connect">
-                   <strong>{{
-                       !!$wallet.account ? $wallet.accountCompact : 'Connect Wallet'
-                   }}</strong>
-               </a>
-            </li> -->
+            <li>
+               <a v-if="provider" class="btn bg-black text-white"
+                    :disabled="!!$wallet.account"
+                    @click="$wallet.connect">
+                    <strong>{{
+                        !!$wallet.account ? $wallet.accountCompact : 'Connect Wallet'
+                    }}</strong>
+                </a>
+                <a v-else class="btn bg-black text-white">
+                     <strong>Get Metamask</strong>
+                </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -61,10 +64,16 @@
 <script>
 export default {
   props: ['titles', 'hrefs', 'targets'],
+  computed: {
+    ethereum: function () {
+      return window.ethereum;
+    }
+  },
   data: function () {
     return {
-      menu: false
+      menu: false,
+      provider: window.ethereum,
     };
-  }
+  },
 };
 </script>

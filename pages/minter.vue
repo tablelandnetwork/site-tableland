@@ -71,7 +71,7 @@
           </div>
         </div>
       </div>
-        <div class="container" style="margin-top:-150px;">
+        <div class="container" style="margin-top:-150px;" v-if="provider">
 
           <div class="flex px-48 py-0">
             <div class="lg:w-1/2 minter-console" id="minter-console" v-bind:class="{'active': isAddClass}">
@@ -111,7 +111,7 @@
 
               </div>
               <div class="flex">
-                <div class="w-full px-12 py-18">
+                <div v-if="provider" class="w-full px-12 py-18">
                   <div v-if="$wallet.account">
                     <a id="mint-button" class="btn btn-mint text-white"  @click="$wallet.mintRig">MINT RIG</a>
                   </div>
@@ -134,6 +134,44 @@
             </div>
           </div>
         </div>
+
+        <div class="container" style="margin-top:-150px;" v-else>
+
+          <div class="flex px-48 py-0">
+            <div class="lg:w-1/2 minter-console" id="minter-console" v-bind:class="{'active': isAddClass}">
+
+                <div class="text-white text-center" id="mint-log"><div id="mint-terminal" class="frame">
+                  =============================  NO WALLET DETECTED! ===============================
+                  <p>In order to mint one of our Tableland rigs, you need to first install Metamask chrome extension: https://metamask.io/</p>
+                  <p>Afterwards, visit this link again to gain access to minting functions</p>
+                  ============================================================================
+                  ============================================================================
+                  ===============================================================================
+                  ================= INSTALL METAMASK TO CONTINUE =============================
+                </div>
+              </div>
+            </div>
+            <div class="lg:w-1/2 minter-details" v-bind:class="{'active': isAddClass}" id="minter-details">
+              <div class="flex flex-wrap py-12 px-12">
+                <div class="w-1/2" >
+                  <h3 class="text-white lg:text-xl text-l">PRICE</h3>
+                  <h2 class="text-white text-4xl font-Orbitron">0.05ETH</h2>
+                </div>
+                <div class="w-1/2">
+                  <h3 class="text-white lg:text-xl text-l">TOTAL SUPPLY</h3>
+                  <h2 id="rig-supply" class="text-white text-4xl font-Orbitron">3000</h2>
+                </div>
+                <div class="w-full px-0 py-24">
+                  <a id="mint-button" class="btn btn-mint text-white"  href="">GET METAMASK</a>
+                </div>
+                <div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </section>
 
       <footer class="text-blue py-10">
@@ -196,6 +234,7 @@
         time: launchDate - now,
         isAddClass: false,
         rigs: rigsMeta,
+        provider: window.ethereum,
         nav: [
           {
             title: 'Gallery',
