@@ -107,10 +107,24 @@ export default async ({env}, inject) => {
           const tokenBalance = await nftContract.balanceOf(userAddress);
           const nftBalance = await provider.getBalance(rig.address)
           const rigBalance = await nftContract.tokensOfOwnerIn(userAddress, 0, 10000)
-          console.log("user wallet:", userAddress);
-          console.log("token balance:", tokenBalance);
-          console.log("rigs owned:", rigBalance);
 
+          if(window.location.pathname == '/garage') {
+
+            rigBalance.forEach(item => {
+              let rigLog = document.getElementById("rig-garage");
+              const rigId = ethers.utils.formatUnits(item._hex, 0) ;
+              const rigIdSub = ethers.utils.formatUnits(item._hex, 0) -1;
+              rigLog.innerHTML += `<div class="w-1/3 px-3 py-3 rigs">
+                <a href="/rig/${rigId}">
+                 <div class="rig-frame ${rigsMeta.rigs[rigIdSub].attributes[1].value} rarity-${rigsMeta.rigs[rigIdSub].attributes[0].value}" >
+                  <img src="${rigsMeta.rigs[rigIdSub].image}"/>
+                 </div>
+                 <h2 class="text-white font-Orbitron text-l">RIG ID #00${rigId}</h2>
+                <p class="text-white">FLEET: ${rigsMeta.rigs[rigIdSub].attributes[1].value}</p>
+                </a>
+              </div>`;
+            });
+          }
         },
 
         async mintRig() {

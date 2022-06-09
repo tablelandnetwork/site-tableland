@@ -2,56 +2,11 @@
   <div class="mint-page">
 
     <!-- Header -->
-    <div class="nav-bar" :class="{ 'absolute w-full h-screen top-0 left-0': menu }">
-      <div class="sm:mx-auto flex flex-wrap">
-
-        <!-- Desktop nav -->
-
-        <nav class="container hidden md:inline-flex justify-between px-6 md:px-9 lg:px-16 flex items-center py-2 pt-6">
-          <div class="py-4">
-            <a href="/"><img src="~assets/img/logo-black.svg" alt="Tableland" class="h-5"></a>
-          </div>
-          <div class="py-4">
-            <ul class="flex justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
-              <li v-for="(item, index) in items" :key="index">
-                <a :href="item.href">
-                  {{ item.title }}
-                </a>
-              </li>
-              <li>
-                <a class="btn bg-black text-white"
-                     :disabled="!!$wallet.account"
-                     @click="$wallet.connect">
-                     <strong>{{
-                         !!$wallet.account ? $wallet.accountCompact : 'Connect Wallet'
-                     }}</strong>
-                 </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-
-        <!-- Toggle menu mobile -->
-        <div class="py-12 px-6 md:hidden logo">
-          <a href="/"><img src="~assets/img/logo-black.svg" alt="Tableland" class="h-4"></a>
-        </div>
-          <button
-            class="ml-auto md:hidden p-6" @click="menu = !menu">
-          MENU
-        </button>
-        </div>
-
-        <!-- Mobile nav  -->
-        <nav v-show="menu" data-aos="fade-down" class="aos-animate w-full" style="background: #b172a1; transition: all 0.2s ease-in-out">
-          <ul class="flex flex-col text-center">
-          <li v-for="(item, index) in items" :key="index">
-            <a :href="item.href" class="hover: p-6 block">
-              {{ item.title }}
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <HeaderNav
+      :titles="nav.map(i => i.title)"
+      :hrefs="nav.map(i => i.href)"
+      :targets="nav.map(i => i.target)"
+    />
 
     <!-- minter -->
     <section class="minter">
@@ -241,6 +196,25 @@
         time: launchDate - now,
         isAddClass: false,
         rigs: rigsMeta,
+        nav: [
+          {
+            title: 'Gallery',
+            href: '/gallery',
+          },
+          {
+            title: 'Garage',
+            href: '/garage',
+          },
+          {
+            title: 'Docs',
+            href: 'https://docs.tableland.xyz',
+            target: '_blank'
+          },
+          {
+            title: 'Rigs',
+            href: '/rigs',
+          },
+        ]
       };
     },
   };

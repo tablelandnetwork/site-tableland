@@ -2,7 +2,12 @@
   <div class="mint-page">
 
     <!-- Header -->
-    <HeaderNav></HeaderNav>
+    <HeaderNav
+      :titles="nav.map(i => i.title)"
+      :hrefs="nav.map(i => i.href)"
+      :targets="nav.map(i => i.target)"
+    />
+
 
     <section class="rig-gallery">
       <div class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-8 lg:pt-12 2xl:pt-24 justify-between">
@@ -184,6 +189,25 @@
         isAddClass: false,
         tab: 1,
         rigsMeta: rigsMeta,
+        nav: [
+          {
+            title: 'Gallery',
+            href: '/gallery',
+          },
+          {
+            title: 'Garage',
+            href: '/garage',
+          },
+          {
+            title: 'Docs',
+            href: 'https://docs.tableland.xyz',
+            target: '_blank'
+          },
+          {
+            title: 'Rigs',
+            href: '/rigs',
+          },
+        ]
       };
     },
   };

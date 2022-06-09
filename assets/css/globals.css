@@ -509,7 +509,7 @@ nav a, a.btn {
 
 .rig-gallery {
   height: auto;
-  min-height: 20vh;
+  min-height: 250px;
   width: 100vw;
   max-width: 100%!important;
 }
