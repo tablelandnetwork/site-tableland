@@ -24,7 +24,7 @@
                 Meet the <span class="font-black">Rigs</span>
               </h1>
             </div>
-            <div class="hidden lg:inline-block lg:w-1/3 w-full px-0 lg:px-0 pt-0 lg:pt-9 xl:pt-11 text-right">
+            <div class="hidden lg:w-1/3 w-full px-0 lg:px-0 pt-0 lg:pt-9 xl:pt-11 text-right">
               <h2 class="text-white font-Orbitron text-2xl md:text-2xl lg:text-3xl xl:text-4xl pt-6">
                 <countdown :time="time">
                   <template slot-scope="props">{{ props.days }}d:{{ props.hours }}h:{{ props.minutes }}m:{{ props.seconds }}s</template>
