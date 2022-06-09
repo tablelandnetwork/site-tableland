@@ -7,7 +7,7 @@ import rigsMeta from '~/assets/rigsMeta.json';
 export default async ({env}, inject) => {
 
     const provider = ((window.ethereum != null) ? new ethers.providers.Web3Provider(window.ethereum, "any"): ethers.getDefaultProvider());
-
+    
     const rig = {
         address: "0x88694d0b8c8E800AB3D9eecBF9A8923B3b5825fA",
         abi: [
@@ -29,11 +29,7 @@ export default async ({env}, inject) => {
 
         async init() {
 
-          if(!window.ethereum)  {
-            console.log('No compatible wallet detected!')
-           }
-
-            this.provider = new ethers.providers.Web3Provider(window.ethereum)
+            this.provider = provider;
             this.network = this.provider.getNetwork()
             const [account] = await this.provider.listAccounts()
 
@@ -41,6 +37,7 @@ export default async ({env}, inject) => {
             const signer = provider.getSigner();
             const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
             const totalSupply = await nftContract.totalSupply();
+            console.log(totalSupply)
 
             if(window.location.pathname == '/minter') {
               //Check contract totalSupply
@@ -59,7 +56,7 @@ export default async ({env}, inject) => {
               const rigBalance = await nftContract.tokensOfOwnerIn(userAddress, 0, 10000)
             }
 
-            if(window.location.pathname == '/rig/:id') {
+            if(window.location.pathname == '/rig/1') {
 
               const pageId = 1;
               const rigOwner = await nftContract.ownerOf(pageId);

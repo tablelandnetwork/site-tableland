@@ -96,7 +96,7 @@
                 </div>
                 <div class="w-1/2">
                   <h3 class="text-white lg:text-xl text-l">TOTAL SUPPLY</h3>
-                  <h2 id="rig-supply" class="text-white text-4xl font-Orbitron"></h2>
+                  <h2 id="rig-supply" class="text-white text-4xl font-Orbitron">3000</h2>
                 </div>
               </div>
               <div class="flex py-0 px-12" v-if="$wallet.account">
@@ -159,7 +159,7 @@
                 </div>
                 <div class="w-1/2">
                   <h3 class="text-white lg:text-xl text-l">TOTAL SUPPLY</h3>
-                  <h2 id="rig-supply" class="text-white text-4xl font-Orbitron">3000</h2>
+                  <h2 class="text-white text-4xl font-Orbitron">3000</h2>
                 </div>
                 <div class="w-full px-0 py-24">
                   <a id="mint-button" class="btn btn-mint text-white"  href="">GET METAMASK</a>
