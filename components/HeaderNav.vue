@@ -20,8 +20,7 @@
                 {{ item }}
               </a> -->
             </li>
-            <li>
-              <KeepAlive>
+            <!-- <li v-if="$wallet.provider">
               <a class="btn bg-black text-white"
                    :disabled="!!$wallet.account"
                    @click="$wallet.connect">
@@ -29,8 +28,7 @@
                        !!$wallet.account ? $wallet.accountCompact : 'Connect Wallet'
                    }}</strong>
                </a>
-             </KeepAlive>
-            </li>
+            </li> -->
           </ul>
         </div>
       </nav>
