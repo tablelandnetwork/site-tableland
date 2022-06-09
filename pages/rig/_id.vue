@@ -47,7 +47,7 @@
               </div>
               <div class="flex">
                 <div class="w-full px-24 py-18">
-                  <a class="btn btn-mint text-white" href="https://goerli.etherscan.io/token/0x88694d0b8c8e800ab3d9eecbf9a8923b3b5825fa?a=">VIEW TRANSACTION</a>
+                  <a class="btn btn-mint text-white" href="https://testnets.opensea.io/assets/goerli/0x88694d0b8c8E800AB3D9eecBF9A8923B3b5825fA/">VIEW ON OPENSEA</a>
                 </div>
               </div>
             </div>

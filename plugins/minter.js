@@ -59,7 +59,7 @@ export default async ({env}, inject) => {
               const rigBalance = await nftContract.tokensOfOwnerIn(userAddress, 0, 10000)
             }
 
-            if(window.location.pathname == '/rig/1') {
+            if(window.location.pathname == '/rig/:id') {
 
               const pageId = 1;
               const rigOwner = await nftContract.ownerOf(pageId);
