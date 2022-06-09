@@ -104,13 +104,7 @@
             <div class="py-6 pt-12 px-0 text-left">
               <p id="tx-mint" class="text-white"></p>
               <p id="tkn-mint" class="text-white"></p>
-              <p id="trait-1" class="text-white"></p>
-              <p id="trait-2" class="text-white"></p>
-              <p id="trait-3" class="text-white"></p>
-              <p id="trait-4" class="text-white"></p>
-              <p id="trait-5" class="text-white"></p>
-              <p id="trait-6" class="text-white"></p>
-              <p id="trait-7" class="text-white"></p>
+              <div id="trait" class="text-white"></div>
             </div>
             <div class="flex">
               <div class="w-full px-0 py-6">

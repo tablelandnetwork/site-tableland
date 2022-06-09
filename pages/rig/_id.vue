@@ -79,14 +79,14 @@
           <h1 class="text-black text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
             RIG ID #00{{ rigsMeta.rigs[rigIdName].id }}
           </h1>
-          <div class="rig-frame" :class="rigsMeta.rigs[rigId].attributes[1].value + ' rarity-' + rigsMeta.rigs[rigId].attributes[0].value">
-            <img :src="rigsMeta.rigs[rigId].image"/>
+          <div class="rig-frame" :class="rigsMeta.rigs[rigIdName].attributes[1].value + ' rarity-' + rigsMeta.rigs[rigIdName].attributes[0].value">
+            <img :src="rigsMeta.rigs[rigIdName].image"/>
           </div>
           <h3 id="rig-owner" class="text-white text-center lg:text-xl text-l"></h3>
           <div class="flex px-48 py-12">
             <div class="lg:w-full minter-details">
               <div class="flex flex-wrap py-0 px-24" >
-                <div class="w-1/2 px-0 py-3" v-for="(rig, index) in rigsMeta.rigs[rigId].attributes" data-aos="fade-up">
+                <div class="w-1/2 px-0 py-3" v-for="(rig, index) in rigsMeta.rigs[rigIdName].attributes" data-aos="fade-up">
                   <h3 class="text-white lg:text-xl text-l">{{rig.trait_type}}</h3>
                   <h2 class="text-white text-3xl font-Orbitron">{{rig.value}}</h2>
                 </div>

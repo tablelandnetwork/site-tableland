@@ -50,6 +50,13 @@ export default async ({env}, inject) => {
                 document.querySelector('#connect-button').disabled = true;
               }
             }
+            if(window.location.pathname == '/gallery') {
+              let userAddress = await signer.getAddress();
+              const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
+              const tokenBalance = await nftContract.balanceOf(userAddress);
+              const rigBalance = await nftContract.tokensOfOwnerIn(userAddress, 0, 10000)
+            }
+
             if(window.location.pathname == '/rig/1') {
 
               const pageId = 1;
@@ -76,33 +83,33 @@ export default async ({env}, inject) => {
 
         async connect() {
           const provider = new ethers.providers.Web3Provider(
-              window.ethereum,
-              "any"
-            );
-            wallet.network = wallet.provider.getNetwork()
+            window.ethereum,
+            "any"
+          );
+          wallet.network = wallet.provider.getNetwork()
 
-            // const connection = await connect({
-            //   network: "testnet",
-            //   host: "http://testnet.tableland.network",
-            // });
+          // const connection = await connect({
+          //   network: "testnet",
+          //   host: "http://testnet.tableland.network",
+          // });
 
-            const [account] = await wallet.provider.send('eth_requestAccounts')
+          const [account] = await wallet.provider.send('eth_requestAccounts')
 
-            if(account) {
-                await wallet.setAccount(account)
-            }
-            await provider.send("eth_requestAccounts", []);
-            const signer = provider.getSigner();
+          if(account) {
+              await wallet.setAccount(account)
+          }
+          await provider.send("eth_requestAccounts", []);
+          const signer = provider.getSigner();
 
-            //Connect to contract and spit out owned rig data
-            let userAddress = await signer.getAddress();
-            const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
-            const tokenBalance = await nftContract.balanceOf(userAddress);
-            const nftBalance = await provider.getBalance(rig.address)
-            const rigBalance = await nftContract.tokensOfOwnerIn(userAddress, 0, 10000)
-            console.log("user wallet:", userAddress);
-            console.log("token balance:", tokenBalance);
-            console.log("rigs owned:", rigBalance);
+          //Connect to contract and spit out owned rig data
+          let userAddress = await signer.getAddress();
+          const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
+          const tokenBalance = await nftContract.balanceOf(userAddress);
+          const nftBalance = await provider.getBalance(rig.address)
+          const rigBalance = await nftContract.tokensOfOwnerIn(userAddress, 0, 10000)
+          console.log("user wallet:", userAddress);
+          console.log("token balance:", tokenBalance);
+          console.log("rigs owned:", rigBalance);
 
         },
 
@@ -133,7 +140,7 @@ export default async ({env}, inject) => {
           const receipt = await tx.wait();
           const [event] = receipt.events ?? [];
           const tokenId = event.args?.tokenId;
-
+          const tokenIdFix = tokenId - 1;
           document.getElementById("mint-button").innerHTML="Rig Minted";
           document.getElementById("rig-result").classList.add("active");
           document.getElementById("minter-details").classList.add("active");
@@ -144,14 +151,12 @@ export default async ({env}, inject) => {
           document.getElementById("os-btn").setAttribute("href", `https://testnets.opensea.io/assets/goerli/${rig.address}/${event.args?.tokenId}`);
           document.getElementById("tx-mint").innerHTML=`${tx.hash}`;
           document.getElementById("tkn-mint").innerHTML=`RIG ID / #${event.args?.tokenId}`;
-          document.getElementById("rig-img").src = rigsMeta.rigs[tokenId].image;
-          rigsMeta.rigs[tokenId].attributes.forEach(function(item) {
-              document.getElementById("trait-1").innerHTML=item.trait_type + ': ' + item.value;
-          })
-         document.getElementById("trait-2").innerHTML=`${rigsMeta.rigs[tokenId].attributes[2].trait_type} - ${rigsMeta.rigs[tokenId].attributes[2].value}`;
-         document.getElementById("trait-3").innerHTML=`${rigsMeta.rigs[tokenId].attributes[3].trait_type} - ${rigsMeta.rigs[tokenId].attributes[3].value}`;
-         document.getElementById("trait-4").innerHTML=`${rigsMeta.rigs[tokenId].attributes[4].trait_type} - ${rigsMeta.rigs[tokenId].attributes[4].value}`;
-         document.getElementById("trait-5").innerHTML=`${rigsMeta.rigs[tokenId].attributes[5].trait_type} - ${rigsMeta.rigs[tokenId].attributes[5].value}`;
+          document.getElementById("rig-img").src = rigsMeta.rigs[tokenIdFix].image;
+          rigsMeta.rigs[tokenIdFix].attributes.forEach(item => {
+           let traitBox = document.getElementById("trait");
+           traitBox.innerHTML += `<p class="text-white">${item.trait_type}: ${item.value}</p>`;
+          }
+        );
           } else {
             console.log("Can't find your rig captain")
           }
@@ -189,22 +194,18 @@ export default async ({env}, inject) => {
             const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
             const tokenBalance = await nftContract.balanceOf(userAddress);
             const rigBalance = await nftContract.tokensOfOwnerIn(userAddress, 0, 10000)
-            // console.log("user wallet:", userAddress);
-            // console.log("contract total balance:", nftBalance);
-            // console.log("rigs owned:", rigBalance);
+
             rigBalance.forEach(item => {
-              // console.log("rig: ",item);
-              // console.log("=========");
-              const rigImg = rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].image;
               let rigLog = document.getElementById("rig-garage");
-              // rigLog.innerHTML += '<p>RIG ID #00' + ethers.utils.formatUnits(item._hex, 0) + '</p><p>' + rigImg + '</p>' ;
+              const rigId = ethers.utils.formatUnits(item._hex, 0) ;
+              const rigIdSub = ethers.utils.formatUnits(item._hex, 0) -1;
               rigLog.innerHTML += `<div class="w-1/3 px-3 py-3 rigs">
-                <a href="/rig/${ethers.utils.formatUnits(item._hex, 0)}">
-                 <div class="rig-frame ${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].attributes[1].value} rarity-${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].attributes[0].value}" >
-                  <img src="${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].image}"/>
+                <a href="/rig/${rigId}">
+                 <div class="rig-frame ${rigsMeta.rigs[rigIdSub].attributes[1].value} rarity-${rigsMeta.rigs[rigIdSub].attributes[0].value}" >
+                  <img src="${rigsMeta.rigs[rigIdSub].image}"/>
                  </div>
-                 <h2 class="text-white font-Orbitron text-l">RIG ID #00${ethers.utils.formatUnits(item._hex, 0)}</h2>
-                <p class="text-white">FLEET: ${rigsMeta.rigs[ethers.utils.formatUnits(item._hex, 0)].attributes[1].value}</p>
+                 <h2 class="text-white font-Orbitron text-l">RIG ID #00${rigId}</h2>
+                <p class="text-white">FLEET: ${rigsMeta.rigs[rigIdSub].attributes[1].value}</p>
                 </a>
               </div>`;
             });
@@ -232,12 +233,6 @@ export default async ({env}, inject) => {
                 console.log("rig: ",item);
                 console.log("=========");
               });
-
-              // rigsMeta.rigs[tokenId].forEach(obj => {
-              //      Object.entries(obj).forEach(([trait_type, value]) => {
-              //          console.log(`${trait_type}`);
-              //      });
-              //  });
 
       			} else {
       				console.log("Ethereum object doesn't exist!")

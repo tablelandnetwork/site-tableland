@@ -147,7 +147,7 @@
   export default {
     head(){
       return {
-        title: 'Meet the RIGS - Tableland',
+        title: 'Gallery - Tableland',
         meta:[
           { hid: `og-url`, property: 'og:url', content: `/${this.$route.path}`},
           { hid: 'og-type', property: 'og:type', content: 'website' },
