@@ -494,6 +494,26 @@ nav a, a.btn {
   max-width: 100%!important;
 }
 
+input {
+  background: transparent;
+  outline: 0;
+  border-bottom: 0px;
+}
+
+input.quantity {
+  max-width: 200px;
+}
+
+input::placeholder {
+  color: white;
+}
+
+input:focus {
+  border-bottom: 2px solid white;
+  outline: 0;
+  transition: border 0.2s ease-in-out;
+}
+
 .minted {
   height: 80vh;
   width: 100vw;
@@ -1282,6 +1302,7 @@ nav a, a.btn {
   margin: 0px!important;
   min-width: 350px;
   margin-left:0px!important;
+  z-index: 999;
 }
 
 .carousel {

@@ -34,22 +34,22 @@
       <div class="minter-break flex container text-center justify-between">
         <div class="w-full">
             <div id="animated-carousel" class="animated-carousel w-full" v-bind:class="{'mint': isAddClass}" style="margin-top:-100px">
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_1.png"/></div>
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_2.png"/></div>
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_3.png"/></div>
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_4.png"/></div>
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_5.png"/></div>
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_6.png"/></div>
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_7.png"/></div>
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_8.png"/></div>
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_9.png"/></div>
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_10.png"/></div>
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_11.png"/></div>
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_12.png"/></div>
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_1.png"/></div>
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_2.png"/></div>
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_3.png"/></div>
-              <div class="vehicle" data-aos="fade-up"><img src="~assets/img/rig_4.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_1.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_2.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_3.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_4.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_5.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_6.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_7.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_8.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_9.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_10.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_11.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_12.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_1.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_2.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_3.png"/></div>
+              <div class="vehicle"><img src="~assets/img/rig_4.png"/></div>
             </div>
 
           <div id="rig-result" class="rig-result" v-bind:class="{'active': isAddClass}">
@@ -76,7 +76,9 @@
           <div class="flex px-48 py-0">
             <div class="lg:w-1/2 minter-console" id="minter-console" v-bind:class="{'active': isAddClass}">
 
-                <div v-if="$wallet.account" class="text-white text-center" id="mint-log"><div id="mint-terminal" class="frame">
+                <div class="text-white text-center" id="mint-log">
+                  <div id="mint-terminal" class="frame">
+                  <div v-if="$wallet.account" >
                   ==========================  WALLET CONNECTED ===============================
                   <p>WALLET: {{$wallet.account}}</p>
                   <p>BALANCE: {{$wallet.balance}} ETH</p>
@@ -85,6 +87,17 @@
                   ============================================================================
                   ============================================================================
                   ================= READY TO MINT CONFIRM TRANSACTION TO PROCEED =============
+                </div>
+                <div v-else >
+                =============================  CONNECT YOUR WALLET ===================================
+                <p>Tableland awaits! Connect your wallet to start your adventure by grabbing one
+                  of the Rigs. Rigs give valuable access to Tableland. Start your journey</p>
+                <p>PRICE: 0.05 ETH</p>
+                ============================================================================
+                ============================================================================
+                ============================================================================
+                ========================== CONNECT YOUR WALLET =============
+              </div>
                 </div>
               </div>
             </div>
@@ -106,7 +119,7 @@
                 </div>
                 <div class="w-1/2">
                   <h3 class="text-white lg:text-xl text-l" >QUANTITY</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">1</h2>
+                  <input class="quantity text-white text-4xl font-Orbitron" v-model="quantity" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="1"  placeholder="1"/>
                 </div>
 
               </div>

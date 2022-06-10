@@ -503,9 +503,8 @@ export default {
           href: '#artists'
         },
         {
-          title: 'Discord',
-          href: 'https://discord.gg/hpd5WWn4Ys',
-          target: '_blank'
+          title: 'Mint a Rig',
+          href: '/minter/'
         }
       ],
       time: launchDate - now,
