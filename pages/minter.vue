@@ -52,8 +52,8 @@
               <div class="vehicle"><img src="~assets/img/rig_4.png"/></div>
             </div>
 
-          <div id="rig-result" class="rig-result" v-bind:class="{'active': isAddClass}">
-            <div class="rig-frame">
+          <div id="rig-result" class="flex flex-wrap rig-result" v-bind:class="{'active': isAddClass}">
+            <!-- <div class="rig-frame">
               <img id="rig-img" />
             </div>
             <div class="py-6 pt-12 px-0 text-left">
@@ -67,7 +67,7 @@
                 <a id="os-btn" class="btn text-white" target="_blank">ON OPENSEA</a>
                 <a href="/minter" class="btn btn-mint text-white">MINT ANOTHER</a>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
@@ -82,7 +82,9 @@
                   ==========================  WALLET CONNECTED ===============================
                   <p>WALLET: {{$wallet.account}}</p>
                   <p>BALANCE: {{$wallet.balance}} ETH</p>
-                  <p>PRICE: 0.05 ETH</p>
+                  wallet:{{$wallet.quantity}}
+                  quantity: {{ quantity }}
+                  <p>PRICE: {{ 0.05 * quantity }} ETH</p>
                   ============================================================================
                   ============================================================================
                   ============================================================================
@@ -105,7 +107,7 @@
               <div class="flex py-12 px-12">
                 <div class="w-1/2" >
                   <h3 class="text-white lg:text-xl text-l">PRICE</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">0.05ETH</h2>
+                  <h2 class="text-white text-4xl font-Orbitron">{{ 0.05 * quantity }}ETH</h2>
                 </div>
                 <div class="w-1/2">
                   <h3 class="text-white lg:text-xl text-l">TOTAL SUPPLY</h3>
@@ -119,7 +121,12 @@
                 </div>
                 <div class="w-1/2">
                   <h3 class="text-white lg:text-xl text-l" >QUANTITY</h3>
-                  <input class="quantity text-white text-4xl font-Orbitron" v-model="quantity" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" type="number" maxlength="1"  placeholder="1"/>
+                  <!-- <input class="quantity text-white text-4xl font-Orbitron" v-model="quantity" v-on:change="updateQuantity" type="number" maxlength="1" value="1" /> -->
+                  <select v-model="quantity" v-on:change="updateQuantity">
+  <option selected value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
                 </div>
 
               </div>
@@ -211,6 +218,8 @@
   <script>
   import rigsMeta from '~/assets/rigsMeta.json';
   export default {
+    props: ['quantity'],
+    emits: ['update:quantity'],
     head(){
       return {
         title: 'Mint a Rig - Tableland',
@@ -238,7 +247,10 @@
        },
        refresh() {
         this.$nuxt.refresh()
-      }
+       },
+       updateQuantity() {
+           console.log(this.quantity);
+       }
    },
     data() {
       const now = new Date();
@@ -248,6 +260,7 @@
         isAddClass: false,
         rigs: rigsMeta,
         provider: window.ethereum,
+        quantity: '1',
         nav: [
           {
             title: 'Gallery',
