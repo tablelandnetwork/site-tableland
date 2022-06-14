@@ -18,7 +18,7 @@
           <div class="lg:flex ">
             <div class="text-center w-full pt-6 " data-aos="fade-up">
               <h1 class="font-bold text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
-              <span>Mint a Rig</span>
+              <span id="minter-title">Mint a Rig</span>
               <!-- <span class="ghost" v-bind:class="{'progress': isAddClass}">Finding your parts</span><span class="ghost" v-bind:class="{'done': isAddClass}">It's your rig!</span> -->
               </h1>
 
@@ -52,11 +52,10 @@
               <div class="vehicle"><img src="~assets/img/rig_4.png"/></div>
             </div>
 
-          <div id="rig-result" class="rig-result flex flex-wrap justify-center" v-bind:class="{'active': isAddClass}">
-            <p class="text-white" id="tx-mint"></p>
+          <div id="rig-result" class="rig-result" v-bind:class="{'active': isAddClass}">
             <div id="rig-box" class="flex flex-wrap justify-center"></div>
             <a id="tx-btn" class="btn text-white" target="_blank">VIEW TRANSACTION</a>
-            <a id="os-btn" class="btn text-white" target="_blank">ON OPENSEA</a>
+            <a id="os-btn" class="btn text-white" target="_blank">VISIT GARAGE</a>
             <a href="/minter" class="btn btn-mint text-white">MINT ANOTHER</a>
           </div>
         </div>
