@@ -34,6 +34,7 @@ export default async ({env}, inject) => {
             this.network = this.provider.getNetwork()
             const [account] = await this.provider.listAccounts()
 
+
             // Check contract on page load
             const signer = provider.getSigner();
             const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
@@ -57,9 +58,7 @@ export default async ({env}, inject) => {
               const rigBalance = await nftContract.tokensOfOwnerIn(userAddress, 0, 10000)
             }
 
-            if(window.location.pathname == '/rigs/1') {
-
-              const pageId = 1;
+            if(window.location.pathname == '/rigs/1' ) {
               const rigOwner = await nftContract.ownerOf(pageId);
               //Check rig owned address
               document.getElementById("rig-owner").innerHTML='OWNED BY ' + rigOwner;
@@ -138,7 +137,7 @@ export default async ({env}, inject) => {
 
            if (ethereum) {
 
-          // console.log = function(message) {document.getElementById('mint-log').innerHTML = message;};
+          console.log = function(message) {document.getElementById('mint-log').innerHTML = message;};
           document.getElementById("mint-button").innerHTML="Confirm the Transaction";
           document.getElementById("mint-terminal").innerHTML="============================= CONFIRM TRANSACTION ================================= 0x10806040523480156200001157600080fd5b506040805190810160405280600481526020017f5049535300000000000000000000000000000000000000000000000000000000815250600090805190602001906200005f929190620001bb565b506040805190810160405280600881526020017f50495353434f494e00000000000000000000000000000000000000000000000081525060019080519060200190620000ad929190620001bb565b506004600260006101000a81548160ff021916908360ff16021790555065019f9e67fdad6003819055506501235477e0096004600073f73a4da8d034774d5b18de694e5d2b0fbb0aaff473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000208190555073f73a4da8d034774d5b18de694e5d2b0fbb0aaff473ffffffffffffffffffffffffffffffffffffffff16600073ffffffffffffffffffffffffffffffffffffffff167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef6501235477e0096040518082815260200191505060405180910390a36200026a565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10620001fe57805160ff19168380011785556200022f565b828001600101855582156200022f579182015b828111156200022e57825182559160200191906001019062000211565b5b5090506200023e919062000242565b5090565b6200026791905b808211156200026357600081600090555060010162000249565b5090565b90565b6110fe806200027a6000396000f3006080604052600436106100db576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde03146100e0578063095ea7b31461017057806318160ddd146101d557806323b872dd14610200578063313ce567146102855780633eaaf86b146102b657806370a08231146102e157806395d89b411461";
 
@@ -170,20 +169,16 @@ export default async ({env}, inject) => {
           console.log(`========================== RIG MINTED =============================== transaction tx ${tx.hash}, ${event.args?.tokenId}, token id ${event.args?.tokenId}, see transaction: https://goerli.etherscan.io/tx/${tx.hash}, Gas used: ${receipt.gasUsed.toString()}, Transaction confirmed in block ${receipt.blockNumber}, arguements ${event.args}, event ${receipt.events}`);
           console.log(receipt.events);
           receipt.events.forEach(item => {
-            let rigResult = document.getElementById("rig-result");
+            let rigResult = document.getElementById("rig-box");
             const tokenId = item.args?.tokenId;
             const tokenIdSub = item.args?.tokenId - 1;
 
             rigResult.innerHTML += `<div class="w-1/3 px-3 py-3 rigs">
-              <a href="/rigs/${tokenIdSub}">
                <div class="rig-frame ${rigsMeta.rigs[tokenIdSub].attributes[1].value} rarity-${rigsMeta.rigs[tokenIdSub].attributes[0].value}" >
                 <img src="${rigsMeta.rigs[tokenIdSub].image}"/>
                </div>
                <h2 class="text-white font-Orbitron text-l">RIG ID #00${tokenId}</h2>
-              <p class="text-white">FLEET: ${rigsMeta.rigs[tokenIdSub].attributes[1].value}</p>
               <div id="trait-${tokenIdSub}"></div>
-
-              </a>
             </div>`;
             rigsMeta.rigs[tokenIdSub].attributes.forEach(item => {
               let traitBox = document.getElementById("trait-"+tokenIdSub);
@@ -192,7 +187,7 @@ export default async ({env}, inject) => {
           });
           document.getElementById("tx-btn").setAttribute("href", `https://goerli.etherscan.io/tx/${tx.hash}`);
           document.getElementById("os-btn").setAttribute("href", `/garage/`);
-        //   document.getElementById("tx-mint").innerHTML=`${tx.hash}`;
+          document.getElementById("tx-mint").innerHTML=`transaction tx ${tx.hash}`;
         //   document.getElementById("tkn-mint").innerHTML=`RIG ID / #${event.args?.tokenId}`;
         //   document.getElementById("rig-img").src = rigsMeta.rigs[tokenIdFix].image;
         //   rigsMeta.rigs[tokenIdFix].attributes.forEach(item => {
