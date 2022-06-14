@@ -82,8 +82,7 @@
                   ==========================  WALLET CONNECTED ===============================
                   <p>WALLET: {{$wallet.account}}</p>
                   <p>BALANCE: {{$wallet.balance}} ETH</p>
-                  wallet:{{$wallet.quantity}}
-                  quantity: {{ quantity }}
+                  <p>QUANTITY:{{$wallet.quantity}} {{ quantity }}</p>
                   <p>PRICE: {{ 0.05 * quantity }} ETH</p>
                   ============================================================================
                   ============================================================================
@@ -94,7 +93,7 @@
                 =============================  CONNECT YOUR WALLET ===================================
                 <p>Tableland awaits! Connect your wallet to start your adventure by grabbing one
                   of the Rigs. Rigs give valuable access to Tableland. Start your journey</p>
-                <p>PRICE: 0.05 ETH</p>
+                <p>PRICE: {{ 0.05 * quantity }} ETH</p>
                 ============================================================================
                 ============================================================================
                 ============================================================================
@@ -107,7 +106,8 @@
               <div class="flex py-12 px-12">
                 <div class="w-1/2" >
                   <h3 class="text-white lg:text-xl text-l">PRICE</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">{{ 0.05 * quantity }}ETH</h2>
+                  <h2 v-if="quantity" class="text-white text-4xl font-Orbitron">{{ 0.05 * quantity}}ETH</h2>
+                  <h2 v-else class="text-white text-4xl font-Orbitron">0.05ETH</h2>
                 </div>
                 <div class="w-1/2">
                   <h3 class="text-white lg:text-xl text-l">TOTAL SUPPLY</h3>
@@ -121,19 +121,18 @@
                 </div>
                 <div class="w-1/2">
                   <h3 class="text-white lg:text-xl text-l" >QUANTITY</h3>
-                  <!-- <input class="quantity text-white text-4xl font-Orbitron" v-model="quantity" v-on:change="updateQuantity" type="number" maxlength="1" value="1" /> -->
                   <select v-model="quantity" v-on:change="updateQuantity">
-  <option selected value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-</select>
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
                 </div>
 
               </div>
               <div class="flex">
                 <div v-if="provider" class="w-full px-12 py-18">
                   <div v-if="$wallet.account">
-                    <a id="mint-button" class="btn btn-mint text-white"  @click="$wallet.mintRig">MINT RIG</a>
+                    <a id="mint-button" class="btn btn-mint text-white"  @click="$wallet.mintRig(quantity)">MINT RIG</a>
                   </div>
                   <div v-else>
                     <a id="connect-button" class="btn bg-black text-white"
@@ -218,8 +217,7 @@
   <script>
   import rigsMeta from '~/assets/rigsMeta.json';
   export default {
-    props: ['quantity'],
-    emits: ['update:quantity'],
+
     head(){
       return {
         title: 'Mint a Rig - Tableland',
@@ -250,6 +248,7 @@
        },
        updateQuantity() {
            console.log(this.quantity);
+           this.$wallet.quantity = this.quantity
        }
    },
     data() {
@@ -260,7 +259,7 @@
         isAddClass: false,
         rigs: rigsMeta,
         provider: window.ethereum,
-        quantity: '1',
+        quantity: '',
         nav: [
           {
             title: 'Gallery',

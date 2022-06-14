@@ -31,7 +31,7 @@
       <div class="minter-break flex container text-center justify-between"></div>
         <div class="container" style="margin-top:-900px;max-width: 1280px;z-index:999" v-if="rigId">
           <h1 class="text-black text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
-            RIG ID #00{{ rigsMeta.rigs[rigIdName].id }}
+            RIG ID #00{{rigId}}
           </h1>
           <div class="rig-frame" :class="rigsMeta.rigs[rigIdName].attributes[1].value + ' rarity-' + rigsMeta.rigs[rigIdName].attributes[0].value">
             <img :src="rigsMeta.rigs[rigIdName].image"/>

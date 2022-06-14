@@ -725,6 +725,7 @@ input:focus {
   opacity: 0;
   z-index: 999;
   overflow-wrap: break-word;
+  display: none;
 }
 
 .rig-result .rig-frame {
@@ -744,6 +745,7 @@ input:focus {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   animation-delay: 2.75s;
+  display: block;
 }
 
 .minter-details.active, .minter-console.active {
