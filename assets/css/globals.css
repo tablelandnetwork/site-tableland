@@ -1445,7 +1445,7 @@ input:focus {
 .filters {
   margin: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 
 .filter {
