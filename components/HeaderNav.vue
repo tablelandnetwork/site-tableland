@@ -22,7 +22,7 @@
             </li>
             <li>
                <a v-if="provider" class="btn bg-black text-white"
-                    :disabled="!provider"
+                    :disabled="!$wallet.accountCompact"
                     @click="$wallet.connect">
                     <strong>{{
                         !!$wallet.account ? $wallet.accountCompact : 'Connect Wallet'

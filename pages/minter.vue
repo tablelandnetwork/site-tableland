@@ -62,8 +62,8 @@
       </div>
         <div class="container" style="margin-top:-150px;" v-if="provider">
 
-          <div class="flex px-48 py-0">
-            <div class="lg:w-1/2 minter-console" id="minter-console" v-bind:class="{'active': isAddClass}">
+          <div class="flex lg:px-48 py-0">
+            <div class="lg:w-1/2 minter-console hidden md:block" id="minter-console" v-bind:class="{'active': isAddClass}">
 
                 <div class="text-white text-center" id="mint-log">
                   <div id="mint-terminal" class="frame">
@@ -93,24 +93,24 @@
             </div>
             <div class="lg:w-1/2 minter-details" v-bind:class="{'active': isAddClass}" id="minter-details">
               <div class="flex py-12 px-12">
-                <div class="w-1/2" >
+                <div class="w-full lg:w-1/2" >
                   <h3 class="text-white lg:text-xl text-l">PRICE</h3>
-                  <h2 v-if="quantity" class="overflow-hidden text-white text-4xl font-Orbitron pr-12">{{ 0.05 * quantity}}ETH</h2>
-                  <h2 v-else class="text-white text-4xl font-Orbitron">0.05ETH</h2>
+                  <h2 v-if="quantity" class="overflow-hidden text-white lg:text-4xl text-2xl font-Orbitron pr-12">{{ 0.05 * quantity}}ETH</h2>
+                  <h2 v-else class="text-white text-2xl lg:text-4xl font-Orbitron">0.05ETH</h2>
                 </div>
-                <div class="w-1/2">
+                <div class="w-full lg:w-1/2">
                   <h3 class="text-white lg:text-xl text-l">TOTAL SUPPLY</h3>
-                  <h2 id="rig-supply" class="text-white text-4xl font-Orbitron">3000</h2>
+                  <h2 id="rig-supply" class="text-white text-2xl lg:text-4xl font-Orbitron">3000</h2>
                 </div>
               </div>
               <div class="flex py-0 px-12" v-if="$wallet.account">
-                <div class="w-1/2" >
+                <div class="w-full lg:w-1/2" >
                   <h3 class="text-white lg:text-xl text-l">YOUR BALANCE</h3>
-                  <h2 class="text-white text-4xl font-Orbitron">{{$wallet.balance}}</h2>
+                  <h2 class="text-white text-2xl lg:text-4xl font-Orbitron">{{$wallet.balance}}</h2>
                 </div>
-                <div class="w-1/2">
+                <div class="w-full lg:w-1/2">
                   <h3 class="text-white lg:text-xl text-l" >QUANTITY</h3>
-                  <input class="quantity text-white text-4xl font-Orbitron" v-model="quantity" v-on:change="updateQuantity" value="quantity" type="number"  min="1" max="9"/>
+                  <input class="quantity text-white text-2xl lg:text-4xl font-Orbitron" v-model="quantity" v-on:change="updateQuantity" value="quantity" type="number"  min="1" max="9"/>
                 </div>
 
               </div>
@@ -166,7 +166,7 @@
                   <h2 class="text-white text-4xl font-Orbitron">3000</h2>
                 </div>
                 <div class="w-full px-0 py-24">
-                  <a id="mint-button" class="btn btn-mint text-white"  href="">GET METAMASK</a>
+                  <a id="mint-button" class="btn btn-mint text-white" href="https://metamask.io/" target="_blank">GET METAMASK</a>
                 </div>
                 <div>
 
