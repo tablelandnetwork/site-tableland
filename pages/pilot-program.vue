@@ -1,20 +1,18 @@
 <template>
   <div>
     <!-- Header -->
-    <HeaderNav></HeaderNav>
-
-    <header class="bg-navbar" data-aos="fade-down" data-aos-anchor=".rig">
-      <nav class="container px-6 md:px-9 lg:px-16 flex items-center py-2">
-        <div class="py-4">
-          <a href="/"><img src="~assets/img/logo-black.svg" alt="Tableland" class="lg:h-5 h-4"></a>
-        </div>
-        <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
-          <li><a class="hidden sm:inline-block" href="#rig">About</a></li>
-          <li><a class="hidden sm:inline-block" href="#faq">Why?</a></li>
-          <li><a href="https://hhueol4i6vp.typeform.com/to/b1VDj6sU" class="btn bg-black text-white">Apply Now</a></li>
-        </ul>
-      </nav>
-    </header>
+    <HeaderNav
+      :titles="nav.map(i => i.title)"
+      :hrefs="nav.map(i => i.href)"
+      :targets="nav.map(i => i.target)"
+    />
+    <div class="ship" data-aos="fade-down" data-aos-anchor=".story" data-aos-offset="0"></div>
+    <HeaderScrollNav
+      anchor=".choose"
+      :titles="nav.map(i => i.title)"
+      :hrefs="nav.map(i => i.href)"
+      :targets="nav.map(i => i.target)"
+    />
 
     <!-- cohort -->
     <section class="cohort">
@@ -32,7 +30,7 @@
     </section>
 
     <!-- rig -->
-    <section id="start" class="rig">
+    <section id="about" class="rig">
       <div class="rig-break"></div>
       <div class="container lg:py-16 px-4 lg:px-16">
         <div class="flex">
@@ -75,7 +73,7 @@
     </section>
 
 
-    <section class="cohort-info">
+    <section id="why" class="cohort-info">
       <!-- Airlights -->
       <div class="container px-6 md:px-9 lg:px-16 pt-24 ">
         <div class="flex py-12 px-12 text-center">
@@ -151,13 +149,34 @@
 <script>
 
 export default {
+  data: function () {
+    return {
+      nav: [
+        {
+          title: 'About',
+          href: '#about'
+        },
+        {
+          title: 'Why?',
+          href: '#why'
+        },
+        {
+          title: 'Apply Now',
+          href: 'https://hhueol4i6vp.typeform.com/to/b1VDj6sU',
+          target: '_blank'
+        }
+      ]
+    };
+  },
+
   head: function () {
     return {
-      title: 'Cohort - Tableland',
+      title: 'Tableland Pilot Program',
       meta: [
+        { hid: 'og-url', property: 'og:url', content: `${this.$route.path}` },
         { hid: 'og-type', property: 'og:type', content: 'website' },
-        { hid: 'og-title', property: 'og:title', content: 'Summer Cohort' },
-        { hid: 'og-sitename', property: 'og:site_name', content: 'Tableland - Build web3 with SQL' },
+        { hid: 'og-title', property: 'og:title', content: 'Tableland Pilot Program' },
+        { hid: 'og-sitename', property: 'og:site_name', content: 'tableland.xyz/pilot-program' },
         { hid: 'og-desc', property: 'og:description', content: 'Learn, connect, and build on the frontiers of the Web.' },
         {
           hid: 'og-image',
@@ -167,12 +186,15 @@ export default {
       ]
     };
   },
+
   computed: {
     ethereum: function () {
       return window.ethereum;
     }
   },
+
   mounted: function () {
+    // eslint-disable-next-line new-cap
     this.lmS = new this.locomotiveScroll({
       el: document.querySelector('#js-scroll'),
       smooth: true
@@ -180,4 +202,5 @@ export default {
   }
 
 };
+
 </script>
