@@ -44,7 +44,7 @@
       <div class="container px-0 sm:px-6 md:px-12 pt-0 lg:pt-0 pb-24" data-aos="fade-up">
         <div class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0">
           <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18">
-            A generative NFT built from 1,074 handcrafted works of art for the builders and creatives of cyberspace. Coming June 2022.
+            A generative NFT built from 1,074 handcrafted works of art for the builders and creatives of cyberspace. Coming July 2022.
           </h1>
         </div>
         <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
