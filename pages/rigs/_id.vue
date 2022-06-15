@@ -88,6 +88,7 @@
         rigsMeta: rigsMeta,
         rigId: this.$route.params.id,
         rigIdName: this.$route.params.id - 1,
+        provider: window.ethereum,
         nav: [
           {
             title: 'Gallery',
@@ -129,7 +130,9 @@
     },
 
     beforeMount(){
-      this.$wallet.rigId = this.rigId;
+      if(this.provider) {
+        this.$wallet.rigId = this.rigId;
+      }
    },
 
     methods: {

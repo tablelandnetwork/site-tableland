@@ -35,6 +35,10 @@ export default async ({env}, inject) => {
             this.network = this.provider.getNetwork()
             const [account] = await this.provider.listAccounts()
 
+            if(account) {
+                await wallet.setAccount(account)
+            }
+
             // Check contract on page load
             const signer = provider.getSigner();
             const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
@@ -57,6 +61,21 @@ export default async ({env}, inject) => {
               const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
               const tokenBalance = await nftContract.balanceOf(userAddress);
               const rigBalance = await nftContract.tokensOfOwnerIn(userAddress, 0, 10000)
+              console.log('rig balance' + rigBalance)
+              rigBalance.forEach(item => {
+                let rigLog = document.getElementById("rig-garage");
+                const rigId = ethers.utils.formatUnits(item._hex, 0) ;
+                const rigIdSub = ethers.utils.formatUnits(item._hex, 0) -1;
+                rigLog.innerHTML += `<div class="w-1/3 px-3 py-3 rigs">
+                  <a href="/rigs/${rigId}">
+                   <div class="rig-frame ${rigsMeta.rigs[rigIdSub].attributes[1].value} rarity-${rigsMeta.rigs[rigIdSub].attributes[0].value}" >
+                    <img src="${rigsMeta.rigs[rigIdSub].image}"/>
+                   </div>
+                   <h2 class="text-white font-Orbitron text-l">RIG ID #00${rigId}</h2>
+                  <p class="text-white">FLEET: ${rigsMeta.rigs[rigIdSub].attributes[1].value}</p>
+                  </a>
+                </div>`;
+              });
             }
 
             if(window.location.pathname == '/rigs/' + rigId ) {
@@ -116,20 +135,7 @@ export default async ({env}, inject) => {
 
           if(window.location.pathname == '/garage') {
 
-            rigBalance.forEach(item => {
-              let rigLog = document.getElementById("rig-garage");
-              const rigId = ethers.utils.formatUnits(item._hex, 0) ;
-              const rigIdSub = ethers.utils.formatUnits(item._hex, 0) -1;
-              rigLog.innerHTML += `<div class="w-1/3 px-3 py-3 rigs">
-                <a href="/rigs/${rigId}">
-                 <div class="rig-frame ${rigsMeta.rigs[rigIdSub].attributes[1].value} rarity-${rigsMeta.rigs[rigIdSub].attributes[0].value}" >
-                  <img src="${rigsMeta.rigs[rigIdSub].image}"/>
-                 </div>
-                 <h2 class="text-white font-Orbitron text-l">RIG ID #00${rigId}</h2>
-                <p class="text-white">FLEET: ${rigsMeta.rigs[rigIdSub].attributes[1].value}</p>
-                </a>
-              </div>`;
-            });
+
           }
         },
 
