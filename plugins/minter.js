@@ -189,14 +189,7 @@ export default async ({env}, inject) => {
           });
           document.getElementById("tx-btn").setAttribute("href", `https://goerli.etherscan.io/tx/${tx.hash}`);
           document.getElementById("os-btn").setAttribute("href", `/garage/`);
-          // document.getElementById("tx-mint").innerHTML=`transaction tx ${tx.hash}`;
-        //   document.getElementById("tkn-mint").innerHTML=`RIG ID / #${event.args?.tokenId}`;
-        //   document.getElementById("rig-img").src = rigsMeta.rigs[tokenIdFix].image;
-        //   rigsMeta.rigs[tokenIdFix].attributes.forEach(item => {
-        //    let traitBox = document.getElementById("trait");
-        //    traitBox.innerHTML += `<p class="text-white">${item.trait_type}: ${item.value}</p>`;
-        //   }
-        // );
+
           } else {
             console.log("Can't find your rig captain")
           }
