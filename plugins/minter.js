@@ -51,7 +51,7 @@ export default async ({env}, inject) => {
                 document.querySelector('#connect-button').disabled = true;
               }
             }
-            if(window.location.pathname == '/gallery') {
+            if(window.location.pathname == '/garage') {
               let userAddress = await signer.getAddress();
               const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
               const tokenBalance = await nftContract.balanceOf(userAddress);

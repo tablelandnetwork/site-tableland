@@ -1396,6 +1396,75 @@ input:focus {
   animation-delay: 3.75s!important;
 }
 
+/* rig gallery filters */
+/*  Needed for filters */
+
+.hide { /* You can play with the seconds to change the "animation" */
+  animation: hide .5s ease 0s 1 normal forwards;
+  transform-origin: center;
+}
+.show { /* You can play with the seconds to change the "animation" */
+    animation: show .5s ease 0s 1 normal forwards;
+    transform-origin: center;
+}
+
+@keyframes hide {
+  0%{
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+}
+@keyframes show {
+  0%{
+    transform: scale(0);
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/*  // Needed for filters */
+
+/* For decoration only */
+
+.projects {
+  display: flex;
+  background: gray;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+.project {
+  background: rebeccapurple;
+  width: 230px;
+  height: 100px;
+  margin: 20px;
+  padding-top: 20px;
+  text-align: center;
+}
+.project:nth-child(odd) {
+  background: greenyellow;
+}
+.filters {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+.filter {
+  margin: 20px;
+}
+.filter:hover {
+  cursor: pointer;
+}
+
+
 /* accordion */
 .tabs {
   border-radius: 10px;

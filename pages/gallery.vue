@@ -12,6 +12,7 @@
     <section class="rig-gallery">
       <div class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-8 lg:pt-12 2xl:pt-24 justify-between">
       </div>
+
     </section>
 
     <!-- showcase -->
@@ -26,101 +27,7 @@
           </div>
         </div>
         <div class="container mx-auto">
-          <ul class="filters flex justify-right space-x-2 text-white px-6 py-12">
-            <li>
-              <button
-                @click="currentTab(1)"
-                class="inline-block px-4 py-2 active"
-              >
-                View All
-              </button>
-            </li>
-            <li>
-              <button
-                @click="currentTab(2)"
-                class="inline-block px-4 py-2 "
-              >
-                Tumblers
-              </button>
-            </li>
-            <li>
-              <button
-                @click="currentTab(3)"
-                class="inline-block px-4 py-2 "
-              >
-                Foils
-              </button>
-            </li>
-            <li>
-              <button
-                @click="currentTab(4)"
-                class="inline-block px-4 py-2 "
-              >
-                Hoppers
-              </button>
-            </li>
-            <li>
-              <button
-                @click="currentTab(5)"
-                class="inline-block px-4 py-2 "
-              >
-                Titans
-              </button>
-            </li>
-            <li>
-              <button
-                @click="currentTab(6)"
-                class="inline-block px-4 py-2 "
-              >
-                Airelights
-              </button>
-            </li>
-            <li>
-              <button
-                @click="currentTab(7)"
-                class="inline-block px-4 py-2 "
-              >
-                Sleds
-              </button>
-            </li>
-            <li>
-              <button
-                @click="currentTab(8)"
-                class="inline-block px-4 py-2 "
-              >
-                Tracers
-              </button>
-            </li>
-            <li>
-              <button
-                @click="currentTab(9)"
-                class="inline-block px-4 py-2 "
-              >
-                Edgeriders
-              </button>
-            </li>
-          </ul>
-          <div>
-            <div v-if="tab === 1">
-              <div class="flex flex-wrap py-0 rig-garage">
-                <div class="w-1/4 px-3 py-3 rigs" v-for="(rig, index) in rigsMeta.rigs" data-aos="fade-up">
-                  <a :href="'/rigs/' + rig.id ">
-                   <div class="rig-frame" :class="rig.attributes[1].value + ' rarity-' + rig.attributes[0].value">
-                   <img :src="rig.image"/>
-                 </div>
-                   <h2 class="text-white font-Orbitron text-l">RIG ID #00{{ rig.id }}</h2>
-                   <p class="text-white">FLEET: {{ rig.attributes[1].value }}</p>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div v-if="tab === 2">
-
-            </div>
-            <div v-if="tab === 3">
-
-            </div>
-          </div>
+          <rigGallery></rigGallery>
         </div>
 
       </div>
@@ -148,7 +55,6 @@
   </template>
 
   <script>
-  import rigsMeta from '~/assets/rigsMeta.json';
   export default {
     head(){
       return {
@@ -177,9 +83,6 @@
         addClass: function() {
          this.isAddClass = true;
        },
-       currentTab: function (tabNumber) {
-         this.tab = tabNumber;
-       },
    },
     data() {
       const now = new Date();
@@ -187,8 +90,6 @@
       return {
         time: launchDate - now,
         isAddClass: false,
-        tab: 1,
-        rigsMeta: rigsMeta,
         nav: [
           {
             title: 'Gallery',
