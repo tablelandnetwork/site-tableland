@@ -11,7 +11,7 @@
         <ul class="flex flex-1 justify-end items-center gap-x-3 sm:gap-x-6 md:gap-x-10 lg:gap-x-12 uppercase ml-3">
           <li><a class="hidden sm:inline-block" href="#rig">About</a></li>
           <li><a class="hidden sm:inline-block" href="#faq">Why?</a></li>
-          <li><a href="#whitelist" class="btn bg-black text-white">Apply Now</a></li>
+          <li><a href="https://hhueol4i6vp.typeform.com/to/b1VDj6sU" class="btn bg-black text-white">Apply Now</a></li>
         </ul>
       </nav>
     </header>
@@ -125,7 +125,7 @@
         <div class="text-center">
           <p class="font-Orbitron text-pink text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10">Launches on July 11th.</p>
           <p class="font-Orbitron text-pink text-2xl md:text-2xl lg:text-3xl md:leading-normal lg:leading-normal font-light mb-10">If you’re ready to explore the frontiers together</p>
-          <ButtonLink href="https://textile.notion.site/Tableland-Use-cases-466b4ab8bb1248a497dd457f057abf5f">Apply Now</ButtonLink>
+          <ButtonLink href="https://hhueol4i6vp.typeform.com/to/b1VDj6sU">Apply Now</ButtonLink>
         </div>
       </div>
     </section>
