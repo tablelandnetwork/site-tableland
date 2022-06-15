@@ -63,7 +63,7 @@
               Tableland is seeking pioneers on a mission to push the boundaries of web3.
             </h1>
             <p data-aos="fade-up" class="text-pink text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
-              Our Pilot Program is here to support you with funding, technical mentors, public showcases, and more. Starting in July, the 7-week program is low-lift and high reward for any builder with a vision and dedication.</p>
+              The Pilot Program is here to support you with funding, technical mentors, public showcases, and more. Starting in July, the 7-week program is low-lift and high reward for any builder with a vision and dedication.</p>
           </div>
           <div class="lg:w-1/2 lg:mt-48">
             <img src="~assets/img/craft.png" />
@@ -123,7 +123,7 @@
     <section class="md:block showcase py-32 relative">
       <div class="container px-24 md:px-32 lg:px-48">
         <div class="text-center">
-          <p class="font-Orbitron text-pink text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10">Launches on July 11th.</p>
+          <p class="font-Orbitron text-pink text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10">Launching on July 11th.</p>
           <p class="font-Orbitron text-pink text-2xl md:text-2xl lg:text-3xl md:leading-normal lg:leading-normal font-light mb-10">If you’re ready to explore the frontiers together</p>
           <ButtonLink href="https://hhueol4i6vp.typeform.com/to/b1VDj6sU">Apply Now</ButtonLink>
         </div>
