@@ -38,7 +38,7 @@
         <div class="flex">
 
           <div class="lg:w-2/3 px-2">
-            <h1 data-aos="fade-up" class="text-pink font-Orbitron w-full h-auto text-3xl lg:text-6xl leading-tighter mb-0 lg:mb-10">
+            <h1 data-aos="fade-up" class="text-pink font-Orbitron w-full h-auto text-2xl lg:text-4xl leading-tighter mb-0 lg:mb-10">
               Tableland is a composable data network that brings SQL to smart contracts on Ethereum and other EVM-compatible chains. Read and write structured data to the blockchain to supercharge NFTs, games, metaverse experiences, and all of web3.
             </h1>
           </div>
@@ -60,10 +60,10 @@
         <div class="lg:flex py-12">
           <div class="lg:w-1/2 px-0 py-12">
             <h1 data-aos="fade-up" class="text-pink font-Orbitron w-full h-auto text-3xl lg:text-6xl leading-tighter mb-4 lg:mb-10">
-              Tableland is seeking pioneers on a mission to push the boundaries of web3. Our Pilot Program is here to support you with funding, technical mentors, public showcases, and more.
+              Tableland is seeking pioneers on a mission to push the boundaries of web3.
             </h1>
             <p data-aos="fade-up" class="text-pink text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18">
-              Starting in July, the 7-week program is low-lift and high reward for any builder with a vision and dedication.</p>
+              Our Pilot Program is here to support you with funding, technical mentors, public showcases, and more. Starting in July, the 7-week program is low-lift and high reward for any builder with a vision and dedication.</p>
           </div>
           <div class="lg:w-1/2 lg:mt-48">
             <img src="~assets/img/craft.png" />
