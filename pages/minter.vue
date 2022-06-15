@@ -232,7 +232,6 @@
         this.$nuxt.refresh()
        },
        updateQuantity() {
-           console.log('quantity selected' + this.quantity);
            this.$wallet.quantity = this.quantity;
        }
    },

@@ -35,12 +35,11 @@ export default async ({env}, inject) => {
             this.network = this.provider.getNetwork()
             const [account] = await this.provider.listAccounts()
 
-
             // Check contract on page load
             const signer = provider.getSigner();
             const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
             const totalSupply = await nftContract.totalSupply();
-            console.log(totalSupply)
+            const rigId = this.rigId;
 
             if(window.location.pathname == '/minter') {
               //Check contract totalSupply
@@ -52,6 +51,7 @@ export default async ({env}, inject) => {
                 document.querySelector('#connect-button').disabled = true;
               }
             }
+
             if(window.location.pathname == '/garage') {
               let userAddress = await signer.getAddress();
               const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
@@ -59,9 +59,9 @@ export default async ({env}, inject) => {
               const rigBalance = await nftContract.tokensOfOwnerIn(userAddress, 0, 10000)
             }
 
-            if(window.location.pathname == '/rigs/1' ) {
-              const rigOwner = await nftContract.ownerOf(pageId);
+            if(window.location.pathname == '/rigs/' + rigId ) {
               //Check rig owned address
+              const rigOwner = await nftContract.ownerOf(rigId);
               document.getElementById("rig-owner").innerHTML='OWNED BY ' + rigOwner;
             }
 

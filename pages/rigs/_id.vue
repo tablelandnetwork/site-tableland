@@ -47,7 +47,7 @@
               </div>
               <div class="flex">
                 <div class="w-full px-24 py-18">
-                  <a class="btn btn-mint text-white" href="https://testnets.opensea.io/assets/goerli/0x88694d0b8c8E800AB3D9eecBF9A8923B3b5825fA/">VIEW ON OPENSEA</a>
+                  <a class="btn btn-mint text-white" :href="'https://testnets.opensea.io/assets/goerli/0x88694d0b8c8E800AB3D9eecBF9A8923B3b5825fA/' + rigId" >VIEW ON OPENSEA</a>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@
 <script>
   import rigsMeta from '~/assets/rigsMeta.json';
   export default {
-    data() {
+    data: function() {
       return {
         rigsMeta: rigsMeta,
         rigId: this.$route.params.id,
@@ -109,5 +109,34 @@
         ]
       }
     },
+
+    head: function () {
+      return {
+        title: 'Rig #00' + this.rigId + ' - The Tableland NFT: Rigs',
+        meta: [
+          { hid: 'og-url', property: 'og:url', content: `${this.$route.path}` },
+          { hid: 'og-type', property: 'og:type', content: 'website' },
+          { hid: 'og-title', property: 'og:title', content: 'Rig #00' + this.rigId + ' - The Tableland NFT: Rigs' },
+          { hid: 'og-sitename', property: 'og:site_name', content: 'tableland.xyz/rigs' },
+          { hid: 'og-desc', property: 'og:description', content: 'A generative NFT built from 1,074 handcrafted works of art for the builders and creatives of cyberspace.' },
+          {
+            hid: 'og-image',
+            property: 'og:image',
+            content: 'https://i.imgur.com/5YHLnkC.png'
+          }
+        ]
+      };
+    },
+
+    beforeMount(){
+      this.$wallet.rigId = this.rigId;
+   },
+
+    methods: {
+     refresh() {
+      this.$nuxt.refresh()
+     },
+   },
+
   }
 </script>
