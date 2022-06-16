@@ -44,8 +44,11 @@
           ><img src="~assets/img/logo-black.svg" alt="Tableland" class="h-4"
         /></a>
       </div>
-      <button class="ml-auto md:hidden p-6" @click="menu = !menu">
-        {{ !!menu ? "CLOSE" : "MENU" }}
+      <button
+        class="ml-auto md:hidden p-6"
+        @click="menu = !menu"
+      >
+        {{ !!menu ? 'CLOSE' : 'MENU'}}
       </button>
     </div>
 
