@@ -31,9 +31,9 @@
 
       <!-- showcase -->
       <section class="md:block showcase py-32 relative">
-      <div class="minter-break flex container text-center justify-between">
-        <div class="w-full">
-            <div id="animated-carousel" class="animated-carousel w-full" v-bind:class="{'mint': isAddClass}" style="margin-top:-100px">
+        <div class="minter-break flex container text-center justify-between"></div>
+        <div class="w-full" style="margin-top:-300px">
+            <div id="animated-carousel" class="animated-carousel w-full" v-bind:class="{'mint': isAddClass}" >
               <div class="vehicle"><img src="~assets/img/rig_1.png"/></div>
               <div class="vehicle"><img src="~assets/img/rig_2.png"/></div>
               <div class="vehicle"><img src="~assets/img/rig_3.png"/></div>
@@ -51,17 +51,17 @@
               <div class="vehicle"><img src="~assets/img/rig_3.png"/></div>
               <div class="vehicle"><img src="~assets/img/rig_4.png"/></div>
             </div>
-
-          <div id="rig-result" class="rig-result" v-bind:class="{'active': isAddClass}">
-            <div id="rig-box" class="flex flex-wrap justify-center"></div>
-            <a id="tx-btn" class="btn text-white" target="_blank">VIEW TRANSACTION</a>
-            <a id="os-btn" class="btn text-white" target="_blank">VISIT GARAGE</a>
-            <a href="/minter" class="btn btn-mint text-white">MINT ANOTHER</a>
-          </div>
         </div>
-      </div>
-        <div class="container" style="margin-top:-150px;" v-if="provider">
 
+        <div class="container relative" v-if="provider">
+          <div id="rig-result" class="rig-result" v-bind:class="{'active': isAddClass}">
+            <div id="rig-box" class="flex flex-wrap justify-center text-center"></div>
+            <div class="rig-btn">
+              <a id="tx-btn" class="btn text-white" target="_blank">VIEW TRANSACTION</a>
+              <a id="os-btn" class="btn text-white" target="_blank">VISIT GARAGE</a>
+              <a href="/minter" class="btn btn-mint text-white">MINT ANOTHER</a>
+            </div>
+          </div>
           <div class="flex lg:px-12 xl:px-48 py-0">
             <div class="lg:w-1/2 w-full minter-console hidden md:block" id="minter-console" v-bind:class="{'active': isAddClass}">
 
@@ -130,16 +130,10 @@
                 </div>
               </div>
             </div>
-            <div class="lg:w-1/2 halo1 hidden" v-bind:class="{'active': isAddClass}">
-              <img class="vehicle a-1" src="~assets/img/light_1.png" data-aos="fade-up"/>
-            </div>
-            <div class="lg:w-1/2 halo2 hidden" v-bind:class="{'active': isAddClass}">
-              <img class="vehicle a-2" src="~assets/img/light_2.png" data-aos="fade-up"/>
-            </div>
           </div>
         </div>
 
-        <div class="container" style="margin-top:-150px;" v-else>
+        <div class="container" v-else>
 
           <div class="flex xl:px-48 py-0">
             <div class="lg:w-1/2 w-full minter-console" id="minter-console" v-bind:class="{'active': isAddClass}">

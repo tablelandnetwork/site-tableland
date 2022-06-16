@@ -554,10 +554,10 @@ input:focus {
 }
 
 .minter-break {
-    position: relative;
+    position: absolute;
   	background: center / cover no-repeat url('~assets/img/break_footer.svg');
   	height: 184px;
-    top: -200px;
+    top: -100px;
 }
 
 
@@ -724,17 +724,19 @@ input:focus {
 .rig-result {
   background: transparent;
   position: absolute;
-  top: -100px;
+  top: -400px;
   height: auto;
   max-width: 100%;
   width: 100%;
   opacity: 0;
   z-index: -999;
+  zoom: 0.8;
 }
 
 .rig-result .rig-frame {
-  width: 400px;
-  height: 400px;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
 }
 
 .rig-result .btn {
@@ -743,6 +745,14 @@ input:focus {
   margin: 40px 10px;
   width: 100%;
   max-width: 350px;
+  text-align: center;
+}
+
+.rig-btn {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  height: auto;
 }
 
 .rig-result.active {
@@ -1625,6 +1635,13 @@ input:checked ~ .tab-content {
   }
   .animated-carousel .vehicle {
     min-width: 300px!important;
+  }
+}
+
+@media (max-width: 2140px) {
+  .rig-result {
+    zoom: 1;
+    top: -500px;
   }
 }
 

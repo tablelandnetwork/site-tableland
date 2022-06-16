@@ -37,10 +37,10 @@
             <img :src="rigsMeta.rigs[rigIdName].image"/>
           </div>
           <h3 id="rig-owner" class="text-white text-center lg:text-xl text-l"></h3>
-          <div class="flex px-48 py-12">
+          <div class="flex px-6 lg:px-48 py-12">
             <div class="lg:w-full minter-details">
-              <div class="flex flex-wrap py-0 px-24" >
-                <div class="w-1/2 px-0 py-3" v-for="(rig, index) in rigsMeta.rigs[rigIdName].attributes" data-aos="fade-up">
+              <div class="flex flex-wrap py-0 lg:px-12 px-12" >
+                <div class="lg:w-1/2 w-full px-0 py-3" v-for="(rig, index) in rigsMeta.rigs[rigIdName].attributes" data-aos="fade-up">
                   <h3 class="text-white lg:text-xl text-l">{{rig.trait_type}}</h3>
                   <h2 class="text-white text-3xl font-Orbitron">{{rig.value}}</h2>
                 </div>

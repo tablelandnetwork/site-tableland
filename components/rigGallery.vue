@@ -17,7 +17,7 @@
     </ul> -->
 
     <div class="flex flex-wrap py-0 rig-garage">
-     <div class="w-1/2 lg:w-1/4 md:w-1/3 sm:w-1/2 px-3 py-3 rigs" v-for="(rig, index) in rigsMeta.rigs" :key="index" data-aos="fade-up" v-if="currentFilter === rig.attributes[1].value || currentFilter === 'All'">
+     <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 sm:w-1/2 px-3 py-3 rigs" v-for="(rig, index) in rigsMeta.rigs" :key="index" data-aos="fade-up" v-if="currentFilter === rig.attributes[1].value || currentFilter === 'All'">
        <a :href="'/rigs/' + rig.id ">
         <div class="rig-frame" :class="rig.attributes[1].value + ' rarity-' + rig.attributes[0].value">
         <img :src="rig.image"/>
