@@ -286,10 +286,12 @@ export default {
 
         if (sql.indexOf("receipt") === 0) {
           const parts = sql.split(" ").filter((c) => c);
+
           const txnHash = parts[1];
           await this.getReceipt(txnHash);
           return;
         }
+
         let mutate = false;
         if (
           sql.indexOf("insert") === 0 ||
@@ -298,6 +300,7 @@ export default {
         ) {
           mutate = true;
         }
+
         await this.runCommand(command, mutate);
       } catch (err) {
         this.loading = false;
@@ -348,7 +351,19 @@ export default {
         this.processError(err);
       }
     },
-    async list() {
+    getReceipt: async function (txnHash) {
+      try {
+        this.showSpinner(messages.fetching);
+        const response = await this.$store.dispatch('getReceipt', txnHash);
+        this.loading = false;
+        this.cls();
+        this.printf('Transaction Receipt:\n' + JSON.stringify(response, null, 4));
+      } catch (err) {
+        this.loading = false;
+        this.processError(err);
+      }
+    },
+    list: async function () {
       try {
         this.showSpinner();
         const tables = await this.$store.dispatch("myTables");
