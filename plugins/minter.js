@@ -1,9 +1,10 @@
 import Vue from 'vue';
 import { reactive } from 'vue';
-import { ethers } from 'ethers';
+import { ethers, providers } from 'ethers';
 import { connect } from "@tableland/sdk";
 import { BigNumber} from 'ethers';
 import rigsMeta from '~/assets/rigsMeta.json';
+import WalletConnectProvider from "@walletconnect/web3-provider";
 
 export default async ({env}, inject) => {
 
@@ -44,6 +45,20 @@ export default async ({env}, inject) => {
             const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
             const totalSupply = await nftContract.totalSupply();
             const rigId = this.rigId;
+
+            // Force page refreshes on network changes
+            {
+                // The "any" network will allow spontaneous network changes
+                const provider = new ethers.providers.Web3Provider(window.ethereum, "any");
+                provider.on("network", (newNetwork, oldNetwork) => {
+                    // When a Provider makes its initial connection, it emits a "network"
+                    // event with a null oldNetwork along with the newNetwork. So, if the
+                    // oldNetwork exists, it represents a changing network
+                    if (oldNetwork) {
+                        window.location.reload();
+                    }
+                });
+            }
 
             if(window.location.pathname == '/minter') {
               //Check contract totalSupply
@@ -103,6 +118,17 @@ export default async ({env}, inject) => {
                 this.accountCompact = null
                 this.balance = null
             }
+        },
+
+        async connectMobile() {
+          const walletConnectProvider = new WalletConnectProvider({
+            infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
+          });
+          await walletConnectProvider.enable();
+          this.provider = new ethers.providers.Web3Provider(walletConnectProvider);
+          // this.signer = this.provider.getSigner();
+          // console.log(this.web3.eth.accounts[0]);
+          // this.coinbase = await this.web3.eth.getAccounts()[0];
         },
 
         async connect() {

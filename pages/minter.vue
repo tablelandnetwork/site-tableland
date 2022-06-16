@@ -11,13 +11,13 @@
     <!-- minter -->
     <section class="minter">
 
-      <div class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-8 lg:pt-12 2xl:pt-24 justify-between">
+      <div class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-24 lg:pt-24 2xl:pt-24 justify-between">
 
         <div class="lg:w-full px-0 lg:pb-12 pb-6 pt-0" data-aos="fade-up">
 
           <div class="lg:flex ">
             <div class="text-center w-full pt-6 " data-aos="fade-up">
-              <h1 class="font-bold text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
+              <h1 class="font-bold text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12" data-aos="fade-up" >
               <span id="minter-title">Mint a Rig</span>
               <!-- <span class="ghost" v-bind:class="{'progress': isAddClass}">Finding your parts</span><span class="ghost" v-bind:class="{'done': isAddClass}">It's your rig!</span> -->
               </h1>
@@ -62,7 +62,7 @@
       </div>
         <div class="container" style="margin-top:-150px;" v-if="provider">
 
-          <div class="flex lg:px-48 py-0">
+          <div class="flex lg:px-12 xl:px-48 py-0">
             <div class="lg:w-1/2 minter-console hidden md:block" id="minter-console" v-bind:class="{'active': isAddClass}">
 
                 <div class="text-white text-center" id="mint-log">
@@ -141,7 +141,7 @@
 
         <div class="container" style="margin-top:-150px;" v-else>
 
-          <div class="flex px-48 py-0">
+          <div class="flex xl:px-48 py-0">
             <div class="lg:w-1/2 minter-console" id="minter-console" v-bind:class="{'active': isAddClass}">
 
                 <div class="text-white text-center" id="mint-log"><div id="mint-terminal" class="frame">
