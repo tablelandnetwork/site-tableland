@@ -236,16 +236,27 @@ export default {
           return;
         }
 
-        await this.runCommand(command);
+        let mutate = false;
+        if (sql.indexOf('insert') === 0 ||
+        sql.indexOf('update') === 0 ||
+        sql.indexOf('delete') === 0
+        ) {
+          mutate = true;
+        }
+
+
+
+        await this.runCommand(command, mutate);
       } catch (err) {
         this.loading = false;
         this.processError(err);
       }
     },
-    runCommand: async function (sql) {
+    runCommand: async function (sql, mutate) {
       try {
         this.showSpinner(messages.running);
-        const response = await this.$store.dispatch('runSql', sql);
+        const command = mutate ? 'runWrite' : 'runRead';
+        const response = await this.$store.dispatch(command, sql);
         this.loading = false;
         this.cls();
         if (response.data && response.data.columns && response.data.rows) {
