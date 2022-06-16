@@ -228,6 +228,14 @@ export default {
           return;
         }
 
+        if (sql.indexOf('receipt') === 0) {
+          const parts = sql.split(' ').filter(c => c);
+          console.log(sql);
+          const txnHash = parts[1];
+          await this.getReceipt(txnHash);
+          return;
+        }
+
         await this.runCommand(command);
       } catch (err) {
         this.loading = false;
@@ -258,6 +266,18 @@ export default {
         this.loading = false;
         this.cls();
         this.printf('Table Created:\n' + JSON.stringify(response, null, 4));
+      } catch (err) {
+        this.loading = false;
+        this.processError(err);
+      }
+    },
+    getReceipt: async function (txnHash) {
+      try {
+        this.showSpinner(messages.fetching);
+        const response = await this.$store.dispatch('getReceipt', txnHash);
+        this.loading = false;
+        this.cls();
+        this.printf('Transaction Receipt:\n' + JSON.stringify(response, null, 4));
       } catch (err) {
         this.loading = false;
         this.processError(err);

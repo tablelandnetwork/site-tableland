@@ -46,6 +46,7 @@ const getConnection = function () {
 
     console.log(`connecting to validator at: ${process.env.validatorHost}`);
     connection = await connect({
+      token: {token: 'foozball'},
       host: process.env.validatorHost as string,
       network: process.env.validatorNet as string
     });
@@ -67,6 +68,11 @@ export const actions: ActionTree<RootState, RootState> = {
   },
   disconnect: async function (context) {
     await getConnection({disconnect: true});
+  },
+  getReceipt: async function (context, txnHash) {
+    const tableland = await getConnection();
+    console.log(txnHash);
+    return await tableland.receipt(txnHash);
   },
   runSql: async function (context, query) {
     const tableland = await getConnection();
