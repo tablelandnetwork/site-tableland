@@ -31,7 +31,7 @@
     <section class="md:block showcase py-24 relative">
     <div class="minter-break flex container text-center justify-between"></div>
 
-      <div class="container px-4 sm:px-12 md:px-12 lg:px-24 xl:px-24" style="margin-top:-250px;" v-if="$wallet.account">
+      <div class="container px-4 sm:px-12 md:px-12 lg:px-24 xl:px-24" v-if="$wallet.account">
         <div class="flex flex-wrap">
           <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-0" data-aos="fade-up">
           <h1 class="text-pink font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >

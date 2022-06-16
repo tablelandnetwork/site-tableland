@@ -730,7 +730,7 @@ input:focus {
   width: 100%;
   opacity: 0;
   z-index: -999;
-  zoom: 0.8;
+  zoom: 0.9;
 }
 
 .rig-result .rig-frame {
@@ -1638,7 +1638,7 @@ input:checked ~ .tab-content {
   }
 }
 
-@media (max-width: 2140px) {
+@media (min-width: 2140px) {
   .rig-result {
     zoom: 1;
     top: -500px;
