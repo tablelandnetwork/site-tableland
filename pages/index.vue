@@ -193,7 +193,7 @@ export default {
         {
           title: 'Rigs',
           href: '/rigs',
-          main: true
+          main: true,
         }
       ]
     };

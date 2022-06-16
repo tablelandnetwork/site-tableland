@@ -81,9 +81,10 @@ nav li a {
   font-size: 1.2em;
 }
 
-nav li a:hover, nav li a:active {
+nav li a:hover, nav li a:active, .nav-bar button:hover {
   text-decoration: underline;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .btn {
@@ -313,6 +314,11 @@ footer {
   background: bottom / cover no-repeat url('~assets/img/rigs/hero.jpg');
   background-attachment: fixed;
   overflow: hidden;
+}
+
+.mint-page .animated-carousel {
+  z-index: 0;
+  position: relative;
 }
 
 
