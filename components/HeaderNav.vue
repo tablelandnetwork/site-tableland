@@ -21,7 +21,7 @@
               </a>
             </li>
             <li v-if="isMinter">
-               <a v-if="provider" class="btn bg-black text-white"
+               <a v-if="provider" class="btn bg-white text-white"
                     :disabled="!$wallet.accountCompact"
                     @click="$wallet.connect">
                     <strong>{{
@@ -59,7 +59,7 @@
         </li>
         <h1 v-if="provider" class="font-Orbitron px-6 py-6 text-xl"> Your Wallet</h1>
         <li>
-           <a v-if="provider" class="btn bg-black text-white text-xl"
+           <a v-if="provider" class="btn bg-white text-white text-xl"
                 :disabled="!$wallet.accountCompact"
                 @click="$wallet.connect">
                 <strong>{{

@@ -737,6 +737,8 @@ input:focus {
   width: 100%;
   height: auto;
   max-width: 500px;
+  animation: none;
+  -webkit-animation: none;
 }
 
 .rig-result .btn {
@@ -907,13 +909,16 @@ input:focus {
 
 .rig-frame {
    width: 750px;
-   height: 750px;
+   max-width: 100%;
+   height: auto;
    background-image: linear-gradient(180deg, #B2D1FC 0%, #DD6C90 100%);
    border-radius: 25px;
    overflow: hidden;
    padding: 10px;
    margin: 20px auto;
    animation: float 10s ease-in-out infinite;
+   position: relative;
+   z-index: 999;
 }
 
 .rig-frame img {
