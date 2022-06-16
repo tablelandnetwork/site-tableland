@@ -69,16 +69,12 @@ export const actions: ActionTree<RootState, RootState> = {
   disconnect: async function (context) {
     await getConnection({ disconnect: true });
   },
-<<<<<<< HEAD
-  runWrite: async function (context, query) {
-=======
   getReceipt: async function (context, txnHash) {
     const tableland = await getConnection();
     console.log(txnHash);
     return await tableland.receipt(txnHash);
   },
-  runSql: async function (context, query) {
->>>>>>> Updates for v2
+  runWrite: async function (context, query) {
     const tableland = await getConnection();
     return await tableland.write(query);
   },
