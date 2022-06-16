@@ -13,9 +13,9 @@
 
       <div class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-24 lg:pt-24 2xl:pt-24 justify-between">
 
-        <div class="lg:w-full px-0 lg:pb-12 pb-6 pt-0" data-aos="fade-up">
+        <div class="lg:w-full w-full px-0 lg:pb-12 pb-6 pt-0" data-aos="fade-up">
 
-          <div class="lg:flex ">
+          <div class="flex">
             <div class="text-center w-full pt-6 " data-aos="fade-up">
               <h1 class="font-bold text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12" data-aos="fade-up" >
               <span id="minter-title">Mint a Rig</span>
@@ -63,7 +63,7 @@
         <div class="container" style="margin-top:-150px;" v-if="provider">
 
           <div class="flex lg:px-12 xl:px-48 py-0">
-            <div class="lg:w-1/2 minter-console hidden md:block" id="minter-console" v-bind:class="{'active': isAddClass}">
+            <div class="lg:w-1/2 w-full minter-console hidden md:block" id="minter-console" v-bind:class="{'active': isAddClass}">
 
                 <div class="text-white text-center" id="mint-log">
                   <div id="mint-terminal" class="frame">
@@ -91,7 +91,7 @@
                 </div>
               </div>
             </div>
-            <div class="lg:w-1/2 minter-details" v-bind:class="{'active': isAddClass}" id="minter-details">
+            <div class="lg:w-1/2 w-full minter-details" v-bind:class="{'active': isAddClass}" id="minter-details">
               <div class="flex py-12 px-12">
                 <div class="w-full lg:w-1/2" >
                   <h3 class="text-white lg:text-xl text-l">PRICE</h3>
@@ -142,7 +142,7 @@
         <div class="container" style="margin-top:-150px;" v-else>
 
           <div class="flex xl:px-48 py-0">
-            <div class="lg:w-1/2 minter-console" id="minter-console" v-bind:class="{'active': isAddClass}">
+            <div class="lg:w-1/2 w-full minter-console" id="minter-console" v-bind:class="{'active': isAddClass}">
 
                 <div class="text-white text-center" id="mint-log"><div id="mint-terminal" class="frame">
                   =============================  NO WALLET DETECTED! ===============================
@@ -155,7 +155,7 @@
                 </div>
               </div>
             </div>
-            <div class="lg:w-1/2 minter-details" v-bind:class="{'active': isAddClass}" id="minter-details">
+            <div class="lg:w-1/2 w-full minter-details" v-bind:class="{'active': isAddClass}" id="minter-details">
               <div class="flex flex-wrap py-12 px-12">
                 <div class="w-1/2" >
                   <h3 class="text-white lg:text-xl text-l">PRICE</h3>
@@ -244,6 +244,7 @@
         rigs: rigsMeta,
         provider: window.ethereum,
         quantity: '1',
+        useWallet: true,
         nav: [
           {
             title: 'Gallery',

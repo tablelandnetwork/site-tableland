@@ -81,7 +81,7 @@ export default async ({env}, inject) => {
                 let rigLog = document.getElementById("rig-garage");
                 const rigId = ethers.utils.formatUnits(item._hex, 0) ;
                 const rigIdSub = ethers.utils.formatUnits(item._hex, 0) -1;
-                rigLog.innerHTML += `<div class="w-1/3 px-3 py-3 rigs">
+                rigLog.innerHTML += `<div class="lg:w-1/3 md:w-1/2 w-full px-3 py-3 rigs">
                   <a href="/rigs/${rigId}">
                    <div class="rig-frame ${rigsMeta.rigs[rigIdSub].attributes[1].value} rarity-${rigsMeta.rigs[rigIdSub].attributes[0].value}" >
                     <img src="${rigsMeta.rigs[rigIdSub].image}"/>

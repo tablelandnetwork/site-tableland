@@ -16,11 +16,11 @@
               <a v-if="index != titles.length" :href="hrefs[index]" :target="targets[index] ? targets[index] : ''">
                 {{ item }}
               </a>
-              <!-- <a v-else :href="hrefs[index]" :target="targets[index] ? targets[index] : ''" class="btn bg-black text-white">
+              <a v-else :href="hrefs[index]" :target="targets[index] ? targets[index] : ''" class="btn bg-black text-white">
                 {{ item }}
-              </a> -->
+              </a>
             </li>
-            <li>
+            <li v-if="isMinter">
                <a v-if="provider" class="btn bg-black text-white"
                     :disabled="!$wallet.accountCompact"
                     @click="$wallet.connect">
@@ -44,7 +44,7 @@
         class="ml-auto md:hidden p-6"
         @click="menu = !menu"
       >
-        MENU
+      {{ !!menu ? 'CLOSE' : 'MENU'}}
       </button>
     </div>
 
@@ -53,13 +53,13 @@
     <nav v-show="menu" class="w-full mobile-nav">
       <ul class="flex flex-col text-center">
         <li v-for="(item, index) in titles" :key="index">
-          <a :href="hrefs[index]" :target="targets[index] ? targets[index] : ''" class="p-6 block">
+          <a :href="hrefs[index]" :target="targets[index] ? targets[index] : ''" class="p-6 block text-l">
             {{ item }}
           </a>
         </li>
-        <h1 class="font-Orbitron px-6 py-6">Wallet</h1>
+        <h1 v-if="provider" class="font-Orbitron px-6 py-6 text-xl"> Your Wallet</h1>
         <li>
-           <a v-if="provider" class="btn bg-black text-white"
+           <a v-if="provider" class="btn bg-black text-white text-xl"
                 :disabled="!$wallet.accountCompact"
                 @click="$wallet.connect">
                 <strong>{{
@@ -82,6 +82,9 @@ export default {
   computed: {
     ethereum: function () {
       return window.ethereum;
+    },
+    isMinter() {
+      return this.$route.name == 'minter';
     }
   },
   data: function () {

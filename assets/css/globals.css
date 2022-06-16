@@ -522,7 +522,7 @@ input:focus {
 
 .user-garage {
   height: auto;
-  min-height: 50vh;
+  min-height: 400px;
   width: 100vw;
   max-width: 100%!important;
 }
@@ -1056,6 +1056,15 @@ input:focus {
 
 /** animations  **/
 
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+
 @keyframes fadeOutDown {
    0% {
       opacity: 0;
@@ -1562,6 +1571,13 @@ input:checked ~ .tab-content {
 }
 .mobile-leave-active {
   animation: bounce-in 0.5s reverse;
+}
+
+.mobile-enter-active li, .mobile-enter-active h1 {
+  animation: fadeIn 1.5s ease-in-out;
+}
+.mobile-leave-active li, .mobile-enter-active h1 {
+  animation: fadeIn 0.5s reverse;
 }
 
 @keyframes bounce-in {

@@ -90,6 +90,7 @@
       return {
         time: launchDate - now,
         isAddClass: false,
+        useWallet: true,
         nav: [
           {
             title: 'Gallery',

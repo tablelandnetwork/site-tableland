@@ -10,13 +10,13 @@
 
     <!-- minter -->
     <section class="user-garage">
-      <div class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-8 lg:pt-12 2xl:pt-24 justify-between">
-        <div class="lg:w-full px-0 lg:pb-12 pb-6 pt-0" data-aos="fade-up">
+      <div class="container px-4 sm:px-12 xl:px-24 flex pt-24 lg:pt-24 2xl:pt-24 justify-between">
+        <div class="lg:w-full w-full px-0 lg:pb-12 pb-6 pt-0" data-aos="fade-up">
           <div class="lg:flex ">
-            <div class="text-left w-full pt-24 px-24" data-aos="fade-up">
-              <h3 class="text-black lg:text-xl text-l" v-if="$wallet.account">WALLET ID: {{$wallet.account}}</h3>
+            <div class="text-left w-full pt-6 px-12" data-aos="fade-up">
+              <h4 class="text-black lg:text-xl text-md" v-if="$wallet.account">WALLET ID: {{$wallet.account}}</h4>
               <h1 class="text-black font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" v-if="$wallet.account">
-                Welcome to your Garage
+                Welcome to the Garage
               </h1>
               <h1 class="text-black text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" v-if="!$wallet.account">
                 Connect your wallet
@@ -31,7 +31,7 @@
     <section class="md:block showcase py-24 relative">
     <div class="minter-break flex container text-center justify-between"></div>
 
-      <div class="container px-12 sm:px-12 md:px-36 lg:px-36 xl:px-36" style="margin-top:-300px;" v-if="$wallet.account">
+      <div class="container px-12 sm:px-12 md:px-12 lg:px-24 xl:px-24" style="margin-top:-250px;" v-if="$wallet.account">
         <div class="flex flex-wrap">
           <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-0" data-aos="fade-up">
           <h1 class="text-pink font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
@@ -39,7 +39,7 @@
           </h1>
           </div>
         </div>
-        <div id="rig-garage" class="flex flex-wrap py-0 rig-garage"></div>
+        <div id="rig-garage" class="flex flex-wrap py-0 px-12 rig-garage"></div>
         <div class="flex">
           <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-36" data-aos="fade-up">
           <h1 class="text-pink font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10" data-aos="fade-up" >
@@ -120,6 +120,7 @@
         time: launchDate - now,
         isAddClass: false,
         rigsMeta: rigsMeta,
+        useWallet: true,
         nav: [
           {
             title: 'Gallery',
