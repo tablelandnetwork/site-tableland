@@ -40,7 +40,7 @@
                 class="btn bg-white text-white w-50 text-center"
                 :disabled="!$wallet.accountCompact"
                 @click="
-                  $wallet.account ? (account = !account) : $wallet.connect
+                  !!$wallet.account ? (account = !account) : $wallet.connect
                 "
               >
                 <strong>{{
@@ -132,9 +132,9 @@ export default {
     },
     isMinter() {
       if (
-        this.$route.path == "/minter" ||
-        this.$route.path == "/garage" ||
-        this.$route.path == "/gallery"
+        this.$route.path === "/minter" ||
+        this.$route.path === "/garage" ||
+        this.$route.path === "/gallery"
       ) {
         return true;
       } else {
