@@ -378,6 +378,7 @@ export default {
     },
     processError(err) {
       this.cls();
+
       if (err.message.includes("address not authorized")) {
         return this.printf(messages.warn.address);
       }

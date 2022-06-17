@@ -6,6 +6,7 @@ import flushPromises from "flush-promises";
 // eslint-disable-next-line import/named
 import { nextError } from "@tableland/sdk";
 
+
 import { state, mutations, actions } from "../store/index.ts";
 import { registerComponents } from "./setup";
 import Playground from "@/components/Playground.vue";
