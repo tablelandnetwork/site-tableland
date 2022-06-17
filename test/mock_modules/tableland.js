@@ -90,7 +90,8 @@ module.exports = {
         }
         return {};
       },
-      write: async function (query) {
+      
+      async write (query) {
         if (testErr) {
           const err = testErr;
           testErr = null;
@@ -116,7 +117,7 @@ module.exports = {
           name: "unittests_180",
         };
       },
-      siwe: async function () {}
+      async siwe () {}
     };
   },
   nextError(err) {

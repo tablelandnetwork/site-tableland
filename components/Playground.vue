@@ -303,7 +303,7 @@ export default {
         this.processError(err);
       }
     },
-    getReceipt: async function (txnHash) {
+    async getReceipt (txnHash) {
       try {
         this.showSpinner(messages.fetching);
         const response = await this.$store.dispatch('getReceipt', txnHash);
