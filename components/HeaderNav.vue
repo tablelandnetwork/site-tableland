@@ -119,6 +119,20 @@
                 !!$wallet.account ? $wallet.accountCompact : "Connect Wallet"
               }}</strong>
             </a>
+            <a v-if="provider"
+            v-show="$wallet.account"
+            class="p-6 block text-l"
+            href="/garage"
+            >
+              <strong>Your Garage</strong>
+            </a>
+            <a v-if="provider"
+            v-show="$wallet.account"
+            class="p-6 block text-l"
+            href=""
+            >
+              <strong>Disconnect</strong>
+            </a>
             <a v-else class="btn bg-black text-white">
               <strong>Get Metamask</strong>
             </a>

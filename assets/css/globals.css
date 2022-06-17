@@ -736,7 +736,7 @@ input:focus {
 .rig-result {
   background: transparent;
   position: absolute;
-  top: -400px;
+  top: -450px;
   height: auto;
   max-width: 100%;
   width: 100%;
