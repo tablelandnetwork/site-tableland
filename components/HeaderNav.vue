@@ -37,15 +37,21 @@
             <li v-if="isMinter">
               <a
                 v-if="provider"
+                v-show="!$wallet.account"
                 class="btn bg-white text-white w-50 text-center"
                 :disabled="!$wallet.accountCompact"
-                @click="
-                  !!$wallet.account ? (account = !account) : $wallet.connect
-                "
+                @click="$wallet.connect"
               >
-                <strong>{{
-                  !!$wallet.account ? $wallet.accountCompact : "Connect Wallet "
-                }}</strong>
+                <strong>Connect Wallet</strong>
+              </a>
+              <a
+                v-if="provider"
+                v-show="$wallet.account"
+                class="btn bg-white text-white w-50 text-center"
+                :disabled="!$wallet.accountCompact"
+                @click="account = !account "
+              >
+                <strong>{{ $wallet.accountCompact }}</strong>
               </a>
               <a v-else class="btn bg-black text-white">
                 <strong>Get Metamask</strong>
