@@ -1,3 +1,4 @@
+/* eslint-disable require-await */
 let testErr = null;
 
 module.exports = {
@@ -122,7 +123,7 @@ module.exports = {
   },
   ConnectOptions: {},
   nextError: function (err) {
-    console.log("nextError " + err);
+    // console.log('nextError ' + err);
     testErr = err;
   },
 };
