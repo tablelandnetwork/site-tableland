@@ -52,7 +52,7 @@ module.exports = {
           }
         ];
       },
-      query: async function (query) {
+      read: async function (query) {
         if (testErr) {
           const err = testErr;
           testErr = null;
@@ -100,6 +100,15 @@ module.exports = {
           };
         }
 
+        return {};
+      },
+      write: async function (query) {
+        if (testErr) {
+          const err = testErr;
+          testErr = null;
+          throw err;
+        }
+
         if (query === 'updatequery1') {
           return {
             data: null
@@ -118,9 +127,11 @@ module.exports = {
         return {
           name: 'unittests_180'
         };
-      }
+      },
+      siwe: async function () {}
     };
   },
+  ConnectOptions: {},
   nextError: function (err) {
     console.log('nextError ' + err);
     testErr = err;

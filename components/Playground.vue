@@ -230,7 +230,7 @@ export default {
 
         if (sql.indexOf('receipt') === 0) {
           const parts = sql.split(' ').filter(c => c);
-          console.log(sql);
+
           const txnHash = parts[1];
           await this.getReceipt(txnHash);
           return;
