@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;500;600&display=swap");
 
 @font-face {
-  font-family: 'AndaleMono';
-  src:  url('~assets/fonts/andale-mono.woff2') format('woff2'),
-        url('~assets/fonts/andale-mono.woff') format('woff');
+  font-family: "AndaleMono";
+  src: url("~assets/fonts/andale-mono.woff2") format("woff2"),
+    url("~assets/fonts/andale-mono.woff") format("woff");
 }
 
 ::selection {
   color: #000;
-  background-color: #0BE291;
+  background-color: #0be291;
 }
 
 html {
@@ -26,7 +26,12 @@ body {
   animation: reveal 2s;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   letter-spacing: 2px;
 }
 
@@ -39,8 +44,12 @@ div#webpack-hot-middleware-clientOverlay {
 }
 
 @keyframes reveal {
-  from {opacity: 0.5;}
-  to {opacity: 1;}
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .nav-bar {
@@ -53,7 +62,7 @@ div#webpack-hot-middleware-clientOverlay {
 }
 
 .bg-navbar {
-	background: #ff6567;
+  background: #ff6567;
   position: fixed;
   height: 110px;
   padding: 1.5em 1em;
@@ -81,18 +90,20 @@ nav li a {
   font-size: 1.2em;
 }
 
-nav li a:hover, nav li a:active, .nav-bar button:hover {
+nav li a:hover,
+nav li a:active,
+.nav-bar button:hover {
   text-decoration: underline;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
 .btn {
-	@apply inline-block md:text-xl py-5 px-12 lg:px-24 rounded-2xl uppercase tracking-wider lg:tracking-widest cursor-pointer
+  @apply inline-block md:text-xl py-5 px-12 lg:px-24 rounded-2xl uppercase tracking-wider lg:tracking-widest cursor-pointer;
 }
 
 .btn:hover {
-  background-color: #0BE291!important;
+  background-color: #0be291 !important;
   transition: all 0.2s ease-in-out;
 }
 
@@ -105,146 +116,137 @@ nav li a:hover, nav li a:active, .nav-bar button:hover {
 }
 
 .text-orange {
-  color: #FF9774;
+  color: #ff9774;
 }
 
 .text-purple {
-  color: #C07BDB;
+  color: #c07bdb;
 }
 
 .text-blue {
-  color: #6067EB;
+  color: #6067eb;
 }
 
 /** hero **/
 .hero {
-	background: center top / cover no-repeat url('~assets/img/hero.jpg');
+  background: center top / cover no-repeat url("~assets/img/hero.jpg");
   height: calc(100vw * 1.43229166667);
   max-height: 2750px;
   width: 100vw;
-  max-width: 1920px!important;
+  max-width: 1920px !important;
   margin: auto;
 }
 
 /** garage **/
 .garage {
   position: relative;
-	background: center top / cover no-repeat url('~assets/img/garage.jpg');
+  background: center top / cover no-repeat url("~assets/img/garage.jpg");
   height: calc(100vw * 0.96354166666);
   max-height: 1850px;
   min-height: 925px;
   width: 100vw;
-  max-width: 1920px!important;
+  max-width: 1920px !important;
   margin: auto;
 }
 
 .garage-break {
   position: relative;
-	background: center / cover no-repeat url('~assets/img/break_1.svg');
-	height: 184px;
+  background: center / cover no-repeat url("~assets/img/break_1.svg");
+  height: 184px;
   top: -1px;
 }
 
-@media
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .garage {
-		background-image: url('~assets/img/garage@2x.jpg');
+    background-image: url("~assets/img/garage@2x.jpg");
   }
 }
 
 /** sql **/
 .sql {
-	background: center top / cover no-repeat url('~assets/img/sql.jpg');
+  background: center top / cover no-repeat url("~assets/img/sql.jpg");
   height: calc(100vw * 1.024);
   min-height: 938px;
   width: 100vw;
-  max-width: 1920px!important;
+  max-width: 1920px !important;
   margin: auto;
 }
 
-@media
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .sql {
-		background-image: url('~assets/img/sql@2x.jpg');
+    background-image: url("~assets/img/sql@2x.jpg");
   }
 }
 
 .playground {
-  background: -44rem 3rem / 150% no-repeat url('~assets/img/clouds.png');
+  background: -44rem 3rem / 150% no-repeat url("~assets/img/clouds.png");
 }
 
-@media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .playground {
-    background-image: url('~assets/img/clouds@2x.png');
+    background-image: url("~assets/img/clouds@2x.png");
   }
 }
 
 /** community **/
 .community {
-	background: center top / cover no-repeat url('~assets/img/community.jpg');
+  background: center top / cover no-repeat url("~assets/img/community.jpg");
   height: calc(100vw * 1.74635416667);
   max-height: 3353px;
   min-height: 1677px;
   width: 100vw;
-  max-width: 1920px!important;
+  max-width: 1920px !important;
   margin: auto;
 }
 
 .landing {
-  max-width: 1920px!important;
+  max-width: 1920px !important;
   margin: auto;
 }
 
-@media
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .community {
-		background-image: url('~assets/img/community@2x.jpg');
+    background-image: url("~assets/img/community@2x.jpg");
   }
 }
 
 @media (min-width: 1500px) {
   .community-top {
-    padding-top: 16rem!important;
+    padding-top: 16rem !important;
   }
   .animated-carousel {
-    height: 300px!important;
+    height: 300px !important;
   }
   .animated-carousel .vehicle {
-    min-width: 300px!important;
+    min-width: 300px !important;
   }
 }
 
 @media (min-width: 1760px) {
   .community-top {
-    padding-top: 24rem!important;
+    padding-top: 24rem !important;
   }
   .animated-carousel {
-    height: 350px!important;
+    height: 350px !important;
   }
   .animated-carousel .vehicle {
-    min-width: 350px!important;
+    min-width: 350px !important;
   }
-
 }
 
 @media (min-width: 2160px) {
   .community-top {
-    padding-top: 24rem!important;
+    padding-top: 24rem !important;
   }
   .animated-carousel {
-    height: 400px!important;
+    height: 400px !important;
   }
   .animated-carousel .vehicle {
-    min-width: 400px!important;
+    min-width: 400px !important;
   }
   .ship {
-    height: 700px!important;
-    bottom: -200px!important;
+    height: 700px !important;
+    bottom: -200px !important;
     left: 0px;
     width: 100%;
   }
@@ -271,8 +273,8 @@ nav li a:hover, nav li a:active, .nav-bar button:hover {
 }
 
 .community-break {
-	background: center / cover no-repeat url('~assets/img/break_4.svg');
-	height: 184px;
+  background: center / cover no-repeat url("~assets/img/break_4.svg");
+  height: 184px;
   position: absolute;
   bottom: -57px;
   left: 0;
@@ -282,12 +284,12 @@ nav li a:hover, nav li a:active, .nav-bar button:hover {
 /** showcase **/
 .showcase {
   background-color: #141034;
-  color: #6067EB!important;
+  color: #6067eb !important;
   min-height: 650px;
 }
 
 .showcase .btn {
-  background: #6067EB;
+  background: #6067eb;
   color: #fff;
 }
 
@@ -296,22 +298,22 @@ footer {
 }
 
 .showcase-break {
-    position: absolute;
-  	background: center / cover no-repeat url('~assets/img/break_footer.svg');
-  	height: 184px;
-    top: -200px;
+  position: absolute;
+  background: center / cover no-repeat url("~assets/img/break_footer.svg");
+  height: 184px;
+  top: -200px;
 }
 
 /** cohort  **/
 .cohort {
-	background: left -250px / cover no-repeat url('~assets/img/cohort.png');
+  background: left -250px / cover no-repeat url("~assets/img/cohort.png");
   height: 125vh;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .mint-page {
-  background: bottom / cover no-repeat url('~assets/img/rigs/hero.jpg');
+  background: bottom / cover no-repeat url("~assets/img/rigs/hero.jpg");
   background-attachment: fixed;
   overflow: hidden;
 }
@@ -320,7 +322,6 @@ footer {
   z-index: 0;
   position: relative;
 }
-
 
 /** sander additions **/
 .rigs-hero {
@@ -342,10 +343,14 @@ footer {
 }
 
 .story {
-  background-image: linear-gradient(180deg, rgba(255,0,0,0), rgb(255 255 255));
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 0),
+    rgb(255 255 255)
+  );
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
   padding-bottom: 200px;
 }
 
@@ -403,18 +408,22 @@ code {
 }
 
 .bg-solid {
-	background-image: linear-gradient(0deg, rgba(255,255,255,0.75), rgb(234 225 253));
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.75),
+    rgb(234 225 253)
+  );
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
   position: relative;
 }
 
 .bg-solid-top {
-	background: top / cover no-repeat url('~assets/img/break_purple2.svg');
+  background: top / cover no-repeat url("~assets/img/break_purple2.svg");
   height: auto;
   height: 200px;
-  width: 110%!important;
+  width: 110% !important;
   position: absolute;
   top: -200px;
 }
@@ -423,7 +432,8 @@ a {
   text-decoration: underline;
 }
 
-nav a, a.btn {
+nav a,
+a.btn {
   text-decoration: none;
 }
 
@@ -453,7 +463,7 @@ nav a, a.btn {
   height: auto;
   min-height: 100vh;
   width: 100%;
-  background-image: linear-gradient(0deg, rgba(255,0,0,0), #b176a2);
+  background-image: linear-gradient(0deg, rgba(255, 0, 0, 0), #b176a2);
 }
 
 .minting .vehicle img {
@@ -461,22 +471,26 @@ nav a, a.btn {
 }
 
 .minting .btn {
-  z-index: 999!important;
+  z-index: 999 !important;
   position: absolute;
 }
 
 .info {
-  background-image: linear-gradient(180deg, rgba(255,0,0,0), rgb(255 255 255));
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 0),
+    rgb(255 255 255)
+  );
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
   padding-bottom: 200px;
 }
 
 .info-break {
   position: relative;
-	background: top / cover no-repeat url('~assets/img/break_white.svg');
-	height: 184px;
+  background: top / cover no-repeat url("~assets/img/break_white.svg");
+  height: 184px;
   top: -180px;
 }
 
@@ -497,7 +511,7 @@ nav a, a.btn {
 .minter {
   height: 40vh;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 input {
@@ -523,21 +537,21 @@ input:focus {
 .minted {
   height: 80vh;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .user-garage {
   height: auto;
   min-height: 400px;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .rig-gallery {
   height: auto;
   min-height: 250px;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .rigs a {
@@ -549,36 +563,35 @@ input:focus {
 }
 
 .rigs a:hover .rig-frame {
-  transform: translatey(-20px)!important;
+  transform: translatey(-20px) !important;
   transition: all 0.2s ease-in-out;
 }
 
 .minter-break {
-    position: absolute;
-  	background: center / cover no-repeat url('~assets/img/break_footer.svg');
-  	height: 184px;
-    top: -100px;
+  position: absolute;
+  background: center / cover no-repeat url("~assets/img/break_footer.svg");
+  height: 184px;
+  top: -100px;
 }
-
 
 .part-frame .carousel {
   height: 250px;
 }
 
-.mint .carousel>*:nth-child(1) {
-	animation:fade1 0.5s infinite;
+.mint .carousel > *:nth-child(1) {
+  animation: fade1 0.5s infinite;
 }
-.mint .carousel>*:nth-child(2) {
-	animation:fade2 0.5s infinite;
+.mint .carousel > *:nth-child(2) {
+  animation: fade2 0.5s infinite;
 }
-.mint .carousel>*:nth-child(3) {
-	animation:fade3 0.5s infinite;
+.mint .carousel > *:nth-child(3) {
+  animation: fade3 0.5s infinite;
 }
-.mint .carousel>*:nth-child(4) {
-	animation:fade4 0.5s infinite;
+.mint .carousel > *:nth-child(4) {
+  animation: fade4 0.5s infinite;
 }
-.mint .carousel>*:nth-child(5) {
-	animation:fade5 0.5s infinite;
+.mint .carousel > *:nth-child(5) {
+  animation: fade5 0.5s infinite;
 }
 
 .part-result {
@@ -586,7 +599,7 @@ input:focus {
   top: 0px;
   left: 0px;
   padding: 60px 40px;
-  background: center / 100% no-repeat url('~assets/img/part2.png');
+  background: center / 100% no-repeat url("~assets/img/part2.png");
   width: 250px;
   height: 300px;
   display: inline-block;
@@ -600,17 +613,17 @@ input:focus {
 }
 
 .btn-mint {
-  background: #FF5B7A!important;
+  background: #ff5b7a !important;
   width: 100%;
   text-align: center;
 }
 
 .minter-console .bg-black {
-  background: #1C73E2;
+  background: #1c73e2;
 }
 
 .minter-console {
-  color: #12FFA6!important;
+  color: #12ffa6 !important;
   position: relative;
 }
 
@@ -633,18 +646,20 @@ input:focus {
 #mint-log .frame {
   animation: typing 2.5s steps(40, end);
   overflow-y: hidden;
-  overflow-x:scroll;
+  overflow-x: scroll;
   word-break: break-all;
   max-height: 400px;
-
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { height: 0 }
-  to { height: 100% }
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
 }
-
 
 .part-frame {
   width: 250px;
@@ -653,11 +668,10 @@ input:focus {
   margin: 20px;
   padding: 80px 60px;
   margin-top: -100px;
-
 }
 
 .part1 {
-  background: center / 100% no-repeat url('~assets/img/part1.png');
+  background: center / 100% no-repeat url("~assets/img/part1.png");
 }
 
 .part1 .part-result.active {
@@ -665,32 +679,30 @@ input:focus {
 }
 
 .part2 {
-
-  background: center / 100% no-repeat url('~assets/img/part2.png');
+  background: center / 100% no-repeat url("~assets/img/part2.png");
 }
 
 .part2 .part-result.active {
   animation-delay: 2s;
-  background: center / 100% no-repeat url('~assets/img/part3.png');
+  background: center / 100% no-repeat url("~assets/img/part3.png");
 }
 
 .part3 {
-
-  background: center / 100% no-repeat url('~assets/img/part3.png');
+  background: center / 100% no-repeat url("~assets/img/part3.png");
 }
 
 .part3 .part-result.active {
   animation-delay: 3s;
-  background: center / 100% no-repeat url('~assets/img/part4.png');
+  background: center / 100% no-repeat url("~assets/img/part4.png");
 }
 
 .part4 {
-  background: center / 100% no-repeat url('~assets/img/part4.png');
+  background: center / 100% no-repeat url("~assets/img/part4.png");
 }
 
 .part4 .part-result.active {
   animation-delay: 4s;
-  background: center / 100% no-repeat url('~assets/img/part2.png');
+  background: center / 100% no-repeat url("~assets/img/part2.png");
 }
 
 .part-frame.part1.mint {
@@ -765,7 +777,8 @@ input:focus {
   z-index: 999;
 }
 
-.minter-details.active, .minter-console.active {
+.minter-details.active,
+.minter-console.active {
   animation: fadeInDown 0.1s linear;
   animation-delay: 2.5s;
   animation-iteration-count: 1;
@@ -800,7 +813,8 @@ input:focus {
   transform: scaleX(-1);
 }
 
-.halo1.active, .halo2.active {
+.halo1.active,
+.halo2.active {
   animation: fadeOutDown 0.1s linear;
   animation-delay: 5.5s;
   animation-iteration-count: 1;
@@ -812,36 +826,37 @@ input:focus {
 /** Gallery **/
 
 .filters button {
-  background: #615C89;
+  background: #615c89;
   border-radius: 50px;
   padding: 10px 30px;
   font-size: 1.2em;
 }
 
-.filters .active, .filters button:hover {
+.filters .active,
+.filters button:hover {
   background: #ff2f5b;
   color: #232041;
 }
 
 /** rig **/
 .rig {
-	background: #232041;
+  background: #232041;
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .rig-break {
   position: relative;
-	background: center / cover no-repeat url('~assets/img/break_5.svg');
-	height: 184px;
+  background: center / cover no-repeat url("~assets/img/break_5.svg");
+  height: 184px;
   top: -80px;
 }
 
 .rig-break-bottom {
   position: relative;
-	background: center / cover no-repeat url('~assets/img/break_5.svg');
-	height: 184px;
+  background: center / cover no-repeat url("~assets/img/break_5.svg");
+  height: 184px;
   bottom: -160px;
   -webkit-transform: scaleY(-1);
   transform: scaleY(-1);
@@ -908,17 +923,17 @@ input:focus {
 }
 
 .rig-frame {
-   width: 750px;
-   max-width: 100%;
-   height: auto;
-   background-image: linear-gradient(180deg, #B2D1FC 0%, #DD6C90 100%);
-   border-radius: 25px;
-   overflow: hidden;
-   padding: 10px;
-   margin: 20px auto;
-   animation: float 10s ease-in-out infinite;
-   position: relative;
-   z-index: 999;
+  width: 750px;
+  max-width: 100%;
+  height: auto;
+  background-image: linear-gradient(180deg, #b2d1fc 0%, #dd6c90 100%);
+  border-radius: 25px;
+  overflow: hidden;
+  padding: 10px;
+  margin: 20px auto;
+  animation: float 10s ease-in-out infinite;
+  position: relative;
+  z-index: 999;
 }
 
 .rig-frame img {
@@ -927,50 +942,54 @@ input:focus {
 
 .rig-frame.rarity-100 {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-	background-size: 400% 400%;
-	animation: gradient 1s linear infinite;
+  background-size: 400% 400%;
+  animation: gradient 1s linear infinite;
 }
 
 .Airelights {
-  background-image: linear-gradient(180deg, #B2D1FC 0%, #DD6C90 100%);
+  background-image: linear-gradient(180deg, #b2d1fc 0%, #dd6c90 100%);
 }
 
 .Sleds {
-  background-image: linear-gradient(180deg, #F1FF68 0%, #6FB0C2 100%);
+  background-image: linear-gradient(180deg, #f1ff68 0%, #6fb0c2 100%);
 }
 
 .Titans {
-  background-image: linear-gradient(180deg, #687FFF 0%, #AA6FC2 100%);
+  background-image: linear-gradient(180deg, #687fff 0%, #aa6fc2 100%);
 }
 
 /** guilds **/
 .guild {
-	background: top / cover no-repeat url('~assets/img/break_purple2.svg');
+  background: top / cover no-repeat url("~assets/img/break_purple2.svg");
   height: auto;
   max-height: 600px;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
   margin-top: -350px;
 }
 
 .fleet-break {
   position: relative;
-	background: bottom / cover no-repeat url('~assets/img/fleet_break.svg');
-	height: 300px;
+  background: bottom / cover no-repeat url("~assets/img/fleet_break.svg");
+  height: 300px;
   bottom: 0px;
 }
 
 .guild-list {
-	background-image: linear-gradient(0deg, rgba(255,255,255,0.75), rgb(234 225 253));
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.75),
+    rgb(234 225 253)
+  );
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .guild-list-break {
   position: relative;
-	background: center / cover no-repeat url('~assets/img/mod.png');
-	height: 700px;
+  background: center / cover no-repeat url("~assets/img/mod.png");
+  height: 700px;
   bottom: 0px;
 }
 
@@ -997,11 +1016,11 @@ input:focus {
 }
 
 .cohort-info {
-	background: left 200px / 100% no-repeat url('~assets/img/cohort2.png');
+  background: left 200px / 100% no-repeat url("~assets/img/cohort2.png");
   background-color: #311b41;
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .cohort-info .icon {
@@ -1011,22 +1030,22 @@ input:focus {
 /** id section  **/
 
 .id {
-	background: center top / cover no-repeat url('~assets/img/id.jpg');
+  background: center top / cover no-repeat url("~assets/img/id.jpg");
   height: calc(100vw * 1.74635416667);
   max-height: 1353px;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .details {
   background: #232041;
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .whitelist {
-  background: #F5F1FF;
+  background: #f5f1ff;
   height: auto;
   width: 100vw;
   max-width: 1920px !important;
@@ -1034,8 +1053,8 @@ input:focus {
 
 .whitelist-break {
   position: relative;
-	background: center / cover no-repeat url('~assets/img/break_purple.svg');
-	height: 184px;
+  background: center / cover no-repeat url("~assets/img/break_purple.svg");
+  height: 184px;
   top: -150px;
 }
 
@@ -1045,14 +1064,14 @@ input:focus {
 }
 
 .faq {
-  background-image: linear-gradient(180deg, #8d5392 0%, #8CC5E3 100%);
+  background-image: linear-gradient(180deg, #8d5392 0%, #8cc5e3 100%);
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .console {
-  max-width: 1920px!important;
+  max-width: 1920px !important;
   margin: auto;
 }
 
@@ -1078,49 +1097,49 @@ input:focus {
 /** animations  **/
 
 @keyframes fadeIn {
-   0% {
-      opacity: 0;
-   }
-   100% {
-      opacity: 1;
-   }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOutDown {
-   0% {
-      opacity: 0;
-      transform: translateY(100px);
-   }
-   100% {
-      opacity: 1;
-      transform: translateY(0px);
-   }
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 @keyframes fadeInDown {
-   0% {
-      opacity: 1;
-      transform: translateY(0px);
-   }
-   50% {
- 		transform: translatey(-20px);
- 	}
-   100% {
-      opacity: 0;
-      transform: translateY(100px);
-   }
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
 }
 
 @keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-20px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 
 @keyframes slide {
@@ -1139,7 +1158,6 @@ input:focus {
   100% {
     transform: translateX(calc(-250px * 12));
   }
-
 }
 
 @keyframes a1 {
@@ -1205,8 +1223,9 @@ input:focus {
     opacity: 1;
     transform: scale(1.2);
   }
-  40%, 60% {
-    transform: rotate(-20deg) scale(1.2) ;
+  40%,
+  60% {
+    transform: rotate(-20deg) scale(1.2);
   }
   50% {
     transform: rotate(20deg) scale(1.2);
@@ -1247,24 +1266,24 @@ input:focus {
 
 @keyframes colorchange {
   from {
-    background: linear-gradient(180deg, #B2D1FC 0%, #DD6C90 100%);
+    background: linear-gradient(180deg, #b2d1fc 0%, #dd6c90 100%);
   }
 
   to {
-    background: linear-gradient(180deg, #F1FF68 0%, #6FB0C2 100%);
+    background: linear-gradient(180deg, #f1ff68 0%, #6fb0c2 100%);
   }
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .ship {
@@ -1273,16 +1292,16 @@ input:focus {
   left: 0px;
   width: 100%;
   height: 500px;
-  background: right / cover no-repeat url('~assets/img/ship.png');
+  background: right / cover no-repeat url("~assets/img/ship.png");
   z-index: 2;
 }
 
 .ship.aos-init {
-  opacity: 1!important;
+  opacity: 1 !important;
 }
 
 .ship.aos-init.aos-animate {
-  bottom: -700px!important;
+  bottom: -700px !important;
   transition: all 0.8s ease-in-out;
 }
 
@@ -1331,124 +1350,186 @@ input:focus {
   overflow: hidden;
   display: flex;
   height: 350px;
-  margin-bottom: 30px!important;
+  margin-bottom: 30px !important;
   width: calc(250px * 24);
-  margin-left: -10%!important;
-  margin-right: -10%!important;
+  margin-left: -10% !important;
+  margin-right: -10% !important;
   margin: 0 auto;
 }
 
 .animated-carousel .vehicle {
-  margin: 0px!important;
+  margin: 0px !important;
   min-width: 350px;
-  margin-left:0px!important;
+  margin-left: 0px !important;
   z-index: 999;
 }
 
 .carousel {
-	position: relative!important;
-	overflow: hidden;
+  position: relative !important;
+  overflow: hidden;
   height: 1000px;
   width: 100%;
 }
 
-.carousel>* {
-	position:absolute;
-	left:0;
-	top:0;
-	background-size: cover;
+.carousel > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-size: cover;
 }
 
 .carousel img {
   border-radius: 50px;
 }
 
-.carousel>*:nth-child(1) {
-	animation:fade1 20s infinite;
+.carousel > *:nth-child(1) {
+  animation: fade1 20s infinite;
 }
 @keyframes fade1 {
-	0%   {opacity:1}
-	20%  {opacity:0}
-	40%  {opacity:0}
-	60%  {opacity:0}
-	80%  {opacity:0}
-	100% {opacity:1}
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.carousel>*:nth-child(2) {
-	animation:fade2 20s infinite;
+.carousel > *:nth-child(2) {
+  animation: fade2 20s infinite;
 }
 @keyframes fade2 {
-	0%   {opacity:0}
-	20%  {opacity:1}
-	40%  {opacity:0}
-	60%  {opacity:0}
-	80%  {opacity:0}
-	100% {opacity:0}
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.carousel>*:nth-child(3) {
-	animation:fade3 20s infinite;
+.carousel > *:nth-child(3) {
+  animation: fade3 20s infinite;
 }
 @keyframes fade3 {
-	0%   {opacity:0}
-	20%  {opacity:0}
-	40%  {opacity:1}
-	60%  {opacity:0}
-	80%  {opacity:0}
-	100% {opacity:0}
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.carousel>*:nth-child(4) {
-	animation:fade4 20s infinite;
+.carousel > *:nth-child(4) {
+  animation: fade4 20s infinite;
 }
 @keyframes fade4 {
-	0%   {opacity:0}
-	20%  {opacity:0}
-	40%  {opacity:0}
-	60%  {opacity:1}
-	80%  {opacity:0}
-	100% {opacity:0}
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.carousel>*:nth-child(5) {
-	animation:fade5 20s infinite;
+.carousel > *:nth-child(5) {
+  animation: fade5 20s infinite;
 }
 @keyframes fade5 {
-	0%   {opacity:0}
-	20%  {opacity:0}
-	40%  {opacity:0}
-	60%  {opacity:0}
-	80%  {opacity:1}
-	100% {opacity:0}
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .a-1 {
-  animation-delay: 1.2s!important;
+  animation-delay: 1.2s !important;
 }
 
 .a-2 {
-  animation-delay: 2.5s!important;
+  animation-delay: 2.5s !important;
 }
 
 .a-3 {
-  animation-delay: 3.75s!important;
+  animation-delay: 3.75s !important;
 }
 
 /* rig gallery filters */
 /*  Needed for filters */
 
-.hide { /* You can play with the seconds to change the "animation" */
-  animation: hide .5s ease 0s 1 normal forwards;
+.hide {
+  /* You can play with the seconds to change the "animation" */
+  animation: hide 0.5s ease 0s 1 normal forwards;
   transform-origin: center;
 }
-.show { /* You can play with the seconds to change the "animation" */
-    animation: show .5s ease 0s 1 normal forwards;
-    transform-origin: center;
+.show {
+  /* You can play with the seconds to change the "animation" */
+  animation: show 0.5s ease 0s 1 normal forwards;
+  transform-origin: center;
 }
 
 @keyframes hide {
-  0%{
+  0% {
     transform: scale(1);
   }
   100% {
@@ -1459,7 +1540,7 @@ input:focus {
   }
 }
 @keyframes show {
-  0%{
+  0% {
     transform: scale(0);
     width: 0;
     height: 0;
@@ -1490,7 +1571,6 @@ input:focus {
   transition: all 0.2s ease-in-out;
   color: #141034;
 }
-
 
 /* accordion */
 .tabs {
@@ -1594,16 +1674,18 @@ input:checked ~ .tab-content {
   animation: bounce-in 0.5s reverse;
 }
 
-.mobile-enter-active li, .mobile-enter-active h1 {
+.mobile-enter-active li,
+.mobile-enter-active h1 {
   animation: fadeIn 1.5s ease-in-out;
 }
-.mobile-leave-active li, .mobile-enter-active h1 {
+.mobile-leave-active li,
+.mobile-enter-active h1 {
   animation: fadeIn 0.5s reverse;
 }
 
 @keyframes bounce-in {
   0% {
-    height:0px;
+    height: 0px;
     transition: all 0.2s ease-in-out;
   }
   100% {
@@ -1612,34 +1694,31 @@ input:checked ~ .tab-content {
   }
 }
 
-@media
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .hero {
-		background-image: url('~assets/img/hero@2x.jpg');
+    background-image: url("~assets/img/hero@2x.jpg");
     height: calc(250vw * 1.43229166667);
   }
-
 }
 
 @media (max-width: 1480px) {
   .guild-list .vehicle {
-   max-width: 250px!important;
-   margin: 0px!important;
+    max-width: 250px !important;
+    margin: 0px !important;
   }
   .hero-btn {
-    margin-bottom: 14rem!important;
+    margin-bottom: 14rem !important;
   }
   .cohort {
-    background: left 0px / 180% no-repeat url('~assets/img/cohort.png')!important;
+    background: left 0px / 180% no-repeat url("~assets/img/cohort.png") !important;
     height: 125vh;
     width: 100vw;
   }
   .animated-carousel {
-    height: 300px!important;
+    height: 300px !important;
   }
   .animated-carousel .vehicle {
-    min-width: 300px!important;
+    min-width: 300px !important;
   }
 }
 
@@ -1652,38 +1731,38 @@ input:checked ~ .tab-content {
 
 @media (max-width: 1640px) {
   .hero-btn {
-    margin-bottom: 14rem!important;
+    margin-bottom: 14rem !important;
   }
   .guild-list .vehicle {
-   max-width: 300px!important;
+    max-width: 300px !important;
   }
 }
 
 @media (min-width: 1760px) {
   .hero-btn {
-    margin-bottom: 14rem!important;
+    margin-bottom: 14rem !important;
   }
 }
 
 @media (max-width: 1080px) {
   .animated-carousel {
-    margin-left: 0!important;
-    margin-right: 0!important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   .info .float-frame {
-    margin-top: 0px!important;
+    margin-top: 0px !important;
   }
   .carousel {
-    height: 750px!important;
+    height: 750px !important;
   }
   .guild-list .vehicle {
-    max-width: 200px!important;
+    max-width: 200px !important;
   }
   .tab-label {
-    font-size: 19px!important;
+    font-size: 19px !important;
   }
   .ship {
-    bottom: -250px!important;
+    bottom: -250px !important;
     display: none;
   }
   nav li a {
@@ -1698,7 +1777,7 @@ input:checked ~ .tab-content {
     border-radius: 20px;
   }
   .hero-btn {
-    margin-bottom: 14rem!important;
+    margin-bottom: 14rem !important;
   }
 }
 
@@ -1707,19 +1786,19 @@ input:checked ~ .tab-content {
     max-width: 160px;
   }
   .animated-carousel {
-    height: 275px!important;
+    height: 275px !important;
   }
   .animated-carousel .vehicle {
-    min-width: 275px!important;
+    min-width: 275px !important;
   }
   nav .btn {
     font-size: 0.75em;
   }
   .hero-btn {
-    margin-bottom: 14rem!important;
+    margin-bottom: 14rem !important;
   }
   .cohort {
-    background: left 100px / 250% no-repeat url(/_nuxt/assets/img/cohort.png)!important;
+    background: left 100px / 250% no-repeat url(/_nuxt/assets/img/cohort.png) !important;
     height: 155vh;
     width: 100vw;
   }
@@ -1730,14 +1809,14 @@ input:checked ~ .tab-content {
   }
 
   .guild-list .vehicle {
-    max-width: 160px!important;
+    max-width: 160px !important;
   }
 
   .info .float-frame {
-    margin-top: 0px!important;
+    margin-top: 0px !important;
   }
   .carousel {
-    height: 350px!important;
+    height: 350px !important;
   }
 
   .bg-navbar {
@@ -1745,15 +1824,15 @@ input:checked ~ .tab-content {
   }
 
   .fleet-container {
-    padding: 1em 2em!important;
+    padding: 1em 2em !important;
   }
 
   .text-xl {
-    font-size: 1.15rem!important;
+    font-size: 1.15rem !important;
   }
 
   .guild {
-    max-height: 820px!important;
+    max-height: 820px !important;
     padding-top: 60px;
   }
 
@@ -1766,5 +1845,4 @@ input:checked ~ .tab-content {
   .token {
     display: none;
   }
-
 }
