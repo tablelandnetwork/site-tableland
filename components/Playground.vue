@@ -182,7 +182,9 @@ export default {
       const fontHeight = 15;
       const clientHeight = this.$refs["web-terminal"].clientHeight;
 
-      for (let i = 0; i <= clientHeight / fontHeight; i++) this.printf("");
+      for (let i = 0; i <= clientHeight / fontHeight; i++) {
+        this.printf("");
+      }
     },
     keyCheck(e) {
       const keycode = window.event.keyCode;
@@ -204,7 +206,9 @@ export default {
       }
     },
     showSpinner(prefix = "") {
-      if (this.loading === true) return;
+      if (this.loading === true) {
+        return;
+      }
 
       this.cls();
       this.loading = true;
@@ -224,7 +228,9 @@ export default {
       buffer = this.$refs["web-terminal-input"].value;
       bhManage(); // manage buffer history
 
-      if (this.loading) return;
+      if (this.loading) {
+        return;
+      }
 
       if (buffer === "connect") {
         this.connect();
@@ -269,23 +275,54 @@ export default {
       try {
         const sql = command.trim().toLowerCase();
 
-        if (!sql) return this.printf(messages.warn.statement);
+        if (!sql) {
+          return this.printf(messages.warn.statement);
+        }
 
         if (sql.indexOf("create") === 0) {
           await this.runCreate(command);
           return;
         }
 
-        await this.runCommand(command);
+        if (sql.indexOf("receipt") === 0) {
+          const parts = sql.split(" ").filter((c) => c);
+          const txnHash = parts[1];
+          await this.getReceipt(txnHash);
+          return;
+        }
+        let mutate = false;
+        if (
+          sql.indexOf("insert") === 0 ||
+          sql.indexOf("update") === 0 ||
+          sql.indexOf("delete") === 0
+        ) {
+          mutate = true;
+        }
+        await this.runCommand(command, mutate);
       } catch (err) {
         this.loading = false;
         this.processError(err);
       }
     },
-    async runCommand(sql) {
+    async getReceipt(txnHash) {
+      try {
+        this.showSpinner(messages.fetching);
+        const response = await this.$store.dispatch("getReceipt", txnHash);
+        this.loading = false;
+        this.cls();
+        this.printf(
+          "Transaction Receipt:\n" + JSON.stringify(response, null, 4)
+        );
+      } catch (err) {
+        this.loading = false;
+        this.processError(err);
+      }
+    },
+    async runCommand(sql, mutate) {
       try {
         this.showSpinner(messages.running);
-        const response = await this.$store.dispatch("runSql", sql);
+        const command = mutate ? "runWrite" : "runRead";
+        const response = await this.$store.dispatch(command, sql);
         this.loading = false;
         this.cls();
         if (response.data && response.data.columns && response.data.rows) {
@@ -339,8 +376,9 @@ export default {
     },
     processError(err) {
       this.cls();
-      if (err.message.includes("address not authorized"))
+      if (err.message.includes("address not authorized")) {
         return this.printf(messages.warn.address);
+      }
 
       this.printf("Error:\n" + err.message);
     },
