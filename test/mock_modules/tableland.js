@@ -90,7 +90,7 @@ module.exports = {
         }
         return {};
       },
-      
+      /* eslint-disable require-await */
       async write (query) {
         if (testErr) {
           const err = testErr;
