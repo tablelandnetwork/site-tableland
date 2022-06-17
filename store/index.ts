@@ -1,5 +1,5 @@
 import { ActionTree, GetterTree, MutationTree } from "vuex";
-import { connect, ConnectOptions } from '@tableland/sdk';
+import { connect, ConnectOptions } from "@tableland/sdk";
 
 export const state = function () {
   return {
@@ -48,7 +48,7 @@ const getConnection = (function () {
 
     console.log(`connecting to validator at: ${process.env.validatorHost}`);
     connection = await connect({
-      chain: process.env.chain as string
+      chain: process.env.chain as string,
     } as ConnectOptions);
     await connection.siwe();
 
@@ -60,7 +60,6 @@ const getConnection = (function () {
 
 export const actions: ActionTree<RootState, RootState> = {
   connect: async function (context) {
-    
     // connect to tableland
     const tableland = await getConnection();
 
@@ -80,11 +79,14 @@ export const actions: ActionTree<RootState, RootState> = {
     return await tableland.read(query);
   },
   createTable: async function (context, createStatement) {
-    const parts = createStatement.split(' ');
+    const parts = createStatement.split(" ");
     const tableName = parts[2];
     const defintionParts = parts.slice(3);
-    let definition = defintionParts.join(' ');
-    definition = definition.slice(definition.indexOf('(') + 1, definition.lastIndexOf(')'));
+    let definition = defintionParts.join(" ");
+    definition = definition.slice(
+      definition.indexOf("(") + 1,
+      definition.lastIndexOf(")")
+    );
 
     const tableland = await getConnection();
     return await tableland.create(definition, tableName);
