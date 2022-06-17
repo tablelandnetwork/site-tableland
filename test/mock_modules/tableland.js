@@ -1,9 +1,10 @@
+/* eslint-disable require-await */
 let testErr = null;
 
 module.exports = {
   connect: async function () {
     await new Promise((resolve) => {
-      setTimeout(() => resolve(void 0), 500);
+      setTimeout(() => resolve(undefined), 500);
     });
 
     if (testErr) {
@@ -133,7 +134,7 @@ module.exports = {
   },
   ConnectOptions: {},
   nextError: function (err) {
-    console.log('nextError ' + err);
+    // console.log('nextError ' + err);
     testErr = err;
   }
 };
