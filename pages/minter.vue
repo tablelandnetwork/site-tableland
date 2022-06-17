@@ -116,13 +116,13 @@
                 <h3 class="text-white lg:text-xl text-l">PRICE</h3>
                 <h2
                   v-if="quantity"
-                  class="overflow-hidden text-white lg:text-4xl text-2xl font-Orbitron pr-12"
+                  class="overflow-hidden text-white lg:text-4xl text-xl font-Orbitron pr-12"
                 >
                   {{ 0.05 * quantity }}ETH
                 </h2>
                 <h2
                   v-else
-                  class="text-white text-2xl lg:text-4xl font-Orbitron"
+                  class="text-white text-xl lg:text-4xl font-Orbitron"
                 >
                   0.05ETH
                 </h2>
@@ -131,7 +131,7 @@
                 <h3 class="text-white lg:text-xl text-l">TOTAL SUPPLY</h3>
                 <h2
                   id="rig-supply"
-                  class="text-white text-2xl lg:text-4xl font-Orbitron"
+                  class="text-white text-xl lg:text-4xl font-Orbitron"
                 >
                   3000
                 </h2>
@@ -140,7 +140,7 @@
             <div class="flex py-0 px-12" v-if="$wallet.account">
               <div class="w-full lg:w-1/2">
                 <h3 class="text-white lg:text-xl text-l">YOUR BALANCE</h3>
-                <h2 class="text-white text-2xl lg:text-4xl font-Orbitron">
+                <h2 class="text-white text-xl lg:text-4xl font-Orbitron">
                   {{ $wallet.balance }}
                 </h2>
               </div>
@@ -189,7 +189,7 @@
       <div class="container" v-else>
         <div class="flex xl:px-48 py-0">
           <div
-            class="lg:w-1/2 w-full minter-console"
+            class="lg:w-1/2 w-full minter-console hidden md:block"
             id="minter-console"
             v-bind:class="{ active: isAddClass }"
           >
