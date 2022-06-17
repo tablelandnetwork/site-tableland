@@ -93,9 +93,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
       <button
         class="ml-auto md:hidden p-6"
       >
-        
-      MENU
-    
+        MENU
       </button>
     </div>
      
@@ -256,8 +254,9 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
             data-aos="fade-up"
           >
             
-            Tableland is a network and relational metadata protocol for EVM chains like Ethereum.
-            Built for developers, NFT creators, and web3 visionaries.
+            Tableland is a network and relational metadata protocol for EVM
+            chains like Ethereum. Built for developers, NFT creators, and web3
+            visionaries.
           
           </p>
            
@@ -277,7 +276,10 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
                   alt=""
                   class="hidden sm:inline-block ml-4"
                   src="~assets/img/arrow_white.png"
-                  srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+                  srcset="
+        ~assets/img/arrow_white.png    1x,
+        ~assets/img/arrow_white@2x.png 2x
+      "
                 />
               </span>
             </a>
@@ -288,8 +290,9 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
             data-aos="fade-up"
           >
             
-            Use familiar SQL tables to read and write NFT metadata or application
-            data governed by immutable rules–all orchestrated by token networks like Ethereum.
+            Use familiar SQL tables to read and write NFT metadata or
+            application data governed by immutable rules–all orchestrated by
+            token networks like Ethereum.
           
           </p>
         </div>
@@ -338,7 +341,10 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
             data-aos="fade-up"
           >
             
-            NFTs can be a building block to unite technological communities. Well-crafted NFTs can link technology, art, community, and incentives in ways unlike any previous innovation. Rigs are where we will experiment and demonstrate what is possible.
+            NFTs can be a building block to unite technological communities.
+            Well-crafted NFTs can link technology, art, community, and
+            incentives in ways unlike any previous innovation. Rigs are where
+            we will experiment and demonstrate what is possible.
           
           </p>
            
@@ -358,7 +364,10 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
                   alt=""
                   class="hidden sm:inline-block ml-4"
                   src="~assets/img/arrow_white.png"
-                  srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+                  srcset="
+        ~assets/img/arrow_white.png    1x,
+        ~assets/img/arrow_white@2x.png 2x
+      "
                 />
               </span>
             </a>
@@ -391,7 +400,8 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
           data-aos="fade-up"
         >
           
-          1&gt; Use tables to store mutable NFT metadata governed by immutable rules.
+          1&gt; Use tables to store mutable NFT metadata governed by immutable
+          rules.
         
         </p>
          
@@ -418,7 +428,8 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
           data-aos="fade-up"
         >
           
-          4&gt; Use tables to build fully decentralized apps and games that require complex relational data models.
+          4&gt; Use tables to build fully decentralized apps and games that
+          require complex relational data models.
         
         </p>
          
@@ -438,7 +449,10 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
                 alt=""
                 class="hidden sm:inline-block ml-4"
                 src="~assets/img/arrow_white.png"
-                srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+                srcset="
+        ~assets/img/arrow_white.png    1x,
+        ~assets/img/arrow_white@2x.png 2x
+      "
               />
             </span>
           </a>
@@ -464,33 +478,34 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
           class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10"
         >
           
-      In Tableland, we speak SQL
-    
+          In Tableland, we speak SQL
+        
         </h3>
          
         <p
           class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2"
         >
           
-      1&gt; The bulk of digital information is stored in relational tables.
-    
+          1&gt; The bulk of digital information is stored in relational tables.
+        
         </p>
          
         <p
           class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2"
         >
           
-      2&gt; Your familiar SQL tables are stored on a decentralized network of validators
-      and anchored to an EVM layer of your choice as transferable NFTs, providing ownership and access control.
-    
+          2&gt; Your familiar SQL tables are stored on a decentralized network of
+          validators and anchored to an EVM layer of your choice as
+          transferable NFTs, providing ownership and access control.
+        
         </p>
          
         <p
           class="text-xl md:text-3xl leading-normal md:leading-normal font-light"
         >
           
-      3&gt; Easy as pie, right?
-    
+          3&gt; Easy as pie, right?
+        
         </p>
       </div>
     </div>
@@ -524,7 +539,8 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
             data-aos="fade-up"
           >
             
-            Uh oh! You need a browser wallet. Go install 
+            Uh oh! You need a browser wallet. Go install
+            
             <a
               class="underline"
               href="https://metamask.io/"
@@ -532,7 +548,9 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
             >
               Metamask
             </a>
-             or use a browser with a built-in wallet like 
+            
+            or use a browser with a built-in wallet like
+            
             <a
               class="underline"
               href="https://brave.com/"
@@ -706,7 +724,9 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
             data-aos="fade-up"
           >
             
-            Whether you're a developer, NFT creator, token holder, or just curious about web3, there's a place for you in Tableland. Join a fast-growing community of innovators from all over the world.
+            Whether you're a developer, NFT creator, token holder, or just
+            curious about web3, there's a place for you in Tableland. Join a
+            fast-growing community of innovators from all over the world.
           
           </p>
            
@@ -726,7 +746,10 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
                   alt=""
                   class="hidden sm:inline-block ml-4"
                   src="~assets/img/arrow_white.png"
-                  srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+                  srcset="
+        ~assets/img/arrow_white.png    1x,
+        ~assets/img/arrow_white@2x.png 2x
+      "
                 />
               </span>
             </a>
@@ -752,7 +775,11 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
             data-aos="fade-up"
           >
             
-            Web3 needs a relational and queryable metadata layer. Tableland is a decentralized user-owned network for structured metadata—data from apps, games, social, analytics, AI/ML, or whatever else you can imagine. Tableland tables are also NFTs, making them own-able, tradable, and composable assets themselves.
+            Web3 needs a relational and queryable metadata layer. Tableland is
+            a decentralized user-owned network for structured metadata—data
+            from apps, games, social, analytics, AI/ML, or whatever else you
+            can imagine. Tableland tables are also NFTs, making them own-able,
+            tradable, and composable assets themselves.
           
           </p>
         </div>
@@ -780,7 +807,9 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
         <p
           class="font-Orbitron text-blue text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10"
         >
-          What will you build?
+          
+        What will you build?
+      
         </p>
          
         <a
@@ -795,7 +824,10 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
               alt=""
               class="hidden sm:inline-block ml-4"
               src="~assets/img/arrow_white.png"
-              srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+              srcset="
+        ~assets/img/arrow_white.png    1x,
+        ~assets/img/arrow_white@2x.png 2x
+      "
             />
           </span>
         </a>
@@ -988,9 +1020,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
       <button
         class="ml-auto md:hidden p-6"
       >
-        
-      MENU
-    
+        MENU
       </button>
     </div>
      
@@ -1151,8 +1181,9 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
             data-aos="fade-up"
           >
             
-            Tableland is a network and relational metadata protocol for EVM chains like Ethereum.
-            Built for developers, NFT creators, and web3 visionaries.
+            Tableland is a network and relational metadata protocol for EVM
+            chains like Ethereum. Built for developers, NFT creators, and web3
+            visionaries.
           
           </p>
            
@@ -1172,7 +1203,10 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
                   alt=""
                   class="hidden sm:inline-block ml-4"
                   src="~assets/img/arrow_white.png"
-                  srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+                  srcset="
+        ~assets/img/arrow_white.png    1x,
+        ~assets/img/arrow_white@2x.png 2x
+      "
                 />
               </span>
             </a>
@@ -1183,8 +1217,9 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
             data-aos="fade-up"
           >
             
-            Use familiar SQL tables to read and write NFT metadata or application
-            data governed by immutable rules–all orchestrated by token networks like Ethereum.
+            Use familiar SQL tables to read and write NFT metadata or
+            application data governed by immutable rules–all orchestrated by
+            token networks like Ethereum.
           
           </p>
         </div>
@@ -1233,7 +1268,10 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
             data-aos="fade-up"
           >
             
-            NFTs can be a building block to unite technological communities. Well-crafted NFTs can link technology, art, community, and incentives in ways unlike any previous innovation. Rigs are where we will experiment and demonstrate what is possible.
+            NFTs can be a building block to unite technological communities.
+            Well-crafted NFTs can link technology, art, community, and
+            incentives in ways unlike any previous innovation. Rigs are where
+            we will experiment and demonstrate what is possible.
           
           </p>
            
@@ -1253,7 +1291,10 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
                   alt=""
                   class="hidden sm:inline-block ml-4"
                   src="~assets/img/arrow_white.png"
-                  srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+                  srcset="
+        ~assets/img/arrow_white.png    1x,
+        ~assets/img/arrow_white@2x.png 2x
+      "
                 />
               </span>
             </a>
@@ -1286,7 +1327,8 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
           data-aos="fade-up"
         >
           
-          1&gt; Use tables to store mutable NFT metadata governed by immutable rules.
+          1&gt; Use tables to store mutable NFT metadata governed by immutable
+          rules.
         
         </p>
          
@@ -1313,7 +1355,8 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
           data-aos="fade-up"
         >
           
-          4&gt; Use tables to build fully decentralized apps and games that require complex relational data models.
+          4&gt; Use tables to build fully decentralized apps and games that
+          require complex relational data models.
         
         </p>
          
@@ -1333,7 +1376,10 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
                 alt=""
                 class="hidden sm:inline-block ml-4"
                 src="~assets/img/arrow_white.png"
-                srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+                srcset="
+        ~assets/img/arrow_white.png    1x,
+        ~assets/img/arrow_white@2x.png 2x
+      "
               />
             </span>
           </a>
@@ -1359,33 +1405,34 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
           class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10"
         >
           
-      In Tableland, we speak SQL
-    
+          In Tableland, we speak SQL
+        
         </h3>
          
         <p
           class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2"
         >
           
-      1&gt; The bulk of digital information is stored in relational tables.
-    
+          1&gt; The bulk of digital information is stored in relational tables.
+        
         </p>
          
         <p
           class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-2"
         >
           
-      2&gt; Your familiar SQL tables are stored on a decentralized network of validators
-      and anchored to an EVM layer of your choice as transferable NFTs, providing ownership and access control.
-    
+          2&gt; Your familiar SQL tables are stored on a decentralized network of
+          validators and anchored to an EVM layer of your choice as
+          transferable NFTs, providing ownership and access control.
+        
         </p>
          
         <p
           class="text-xl md:text-3xl leading-normal md:leading-normal font-light"
         >
           
-      3&gt; Easy as pie, right?
-    
+          3&gt; Easy as pie, right?
+        
         </p>
       </div>
     </div>
@@ -1419,7 +1466,8 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
             data-aos="fade-up"
           >
             
-            Uh oh! You need a browser wallet. Go install 
+            Uh oh! You need a browser wallet. Go install
+            
             <a
               class="underline"
               href="https://metamask.io/"
@@ -1427,7 +1475,9 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
             >
               Metamask
             </a>
-             or use a browser with a built-in wallet like 
+            
+            or use a browser with a built-in wallet like
+            
             <a
               class="underline"
               href="https://brave.com/"
@@ -1601,7 +1651,9 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
             data-aos="fade-up"
           >
             
-            Whether you're a developer, NFT creator, token holder, or just curious about web3, there's a place for you in Tableland. Join a fast-growing community of innovators from all over the world.
+            Whether you're a developer, NFT creator, token holder, or just
+            curious about web3, there's a place for you in Tableland. Join a
+            fast-growing community of innovators from all over the world.
           
           </p>
            
@@ -1621,7 +1673,10 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
                   alt=""
                   class="hidden sm:inline-block ml-4"
                   src="~assets/img/arrow_white.png"
-                  srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+                  srcset="
+        ~assets/img/arrow_white.png    1x,
+        ~assets/img/arrow_white@2x.png 2x
+      "
                 />
               </span>
             </a>
@@ -1647,7 +1702,11 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
             data-aos="fade-up"
           >
             
-            Web3 needs a relational and queryable metadata layer. Tableland is a decentralized user-owned network for structured metadata—data from apps, games, social, analytics, AI/ML, or whatever else you can imagine. Tableland tables are also NFTs, making them own-able, tradable, and composable assets themselves.
+            Web3 needs a relational and queryable metadata layer. Tableland is
+            a decentralized user-owned network for structured metadata—data
+            from apps, games, social, analytics, AI/ML, or whatever else you
+            can imagine. Tableland tables are also NFTs, making them own-able,
+            tradable, and composable assets themselves.
           
           </p>
         </div>
@@ -1675,7 +1734,9 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
         <p
           class="font-Orbitron text-blue text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10"
         >
-          What will you build?
+          
+        What will you build?
+      
         </p>
          
         <a
@@ -1690,7 +1751,10 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
               alt=""
               class="hidden sm:inline-block ml-4"
               src="~assets/img/arrow_white.png"
-              srcset="~assets/img/arrow_white.png 1x, ~assets/img/arrow_white@2x.png 2x"
+              srcset="
+        ~assets/img/arrow_white.png    1x,
+        ~assets/img/arrow_white@2x.png 2x
+      "
             />
           </span>
         </a>
