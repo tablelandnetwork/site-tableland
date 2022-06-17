@@ -537,40 +537,39 @@ export default async ({ env }, inject) => {
 
     async connect() {
       try {
-      const provider = new ethers.providers.Web3Provider(
-        window.ethereum,
-        "any"
-      );
-      wallet.network = wallet.provider.getNetwork();
+        const provider = new ethers.providers.Web3Provider(
+          window.ethereum,
+          "any"
+        );
+        wallet.network = wallet.provider.getNetwork();
 
-      // const connection = await connect({
-      //   network: "testnet",
-      //   host: "http://testnet.tableland.network",
-      // });
+        // const connection = await connect({
+        //   network: "testnet",
+        //   host: "http://testnet.tableland.network",
+        // });
 
-      const [account] = await wallet.provider.send("eth_requestAccounts");
+        const [account] = await wallet.provider.send("eth_requestAccounts");
 
-      if (account) {
-        await wallet.setAccount(account);
-      }
-      await provider.send("eth_requestAccounts", []);
-      const signer = provider.getSigner();
+        if (account) {
+          await wallet.setAccount(account);
+        }
+        await provider.send("eth_requestAccounts", []);
+        const signer = provider.getSigner();
 
-      //Connect to contract and spit out owned rig data
-      let userAddress = await signer.getAddress();
-      const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
-      const tokenBalance = await nftContract.balanceOf(userAddress);
-      const nftBalance = await provider.getBalance(rig.address);
-      const rigBalance = await nftContract.tokensOfOwnerIn(
-        userAddress,
-        0,
-        10000
-      );
+        //Connect to contract and spit out owned rig data
+        let userAddress = await signer.getAddress();
+        const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
+        const tokenBalance = await nftContract.balanceOf(userAddress);
+        const nftBalance = await provider.getBalance(rig.address);
+        const rigBalance = await nftContract.tokensOfOwnerIn(
+          userAddress,
+          0,
+          10000
+        );
 
-      if (window.location.pathname == "/garage") {
-      }
-    }
-      catch (error) {
+        if (window.location.pathname == "/garage") {
+        }
+      } catch (error) {
         console.log(JSON.stringify(error));
         console.log = function (message) {
           document.getElementById("mint-log").innerHTML = message;

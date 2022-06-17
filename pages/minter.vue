@@ -297,7 +297,7 @@
 </template>
 
 <script>
-import helpers from '~/plugins/helpers';
+import helpers from "~/plugins/helpers";
 import rigsMeta from "~/assets/rigsMeta.json";
 export default {
   head() {

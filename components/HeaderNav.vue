@@ -39,7 +39,9 @@
                 v-if="provider"
                 class="btn bg-white text-white w-50 text-center"
                 :disabled="!$wallet.accountCompact"
-                @click="$wallet.account ? account = !account : $wallet.connect"
+                @click="
+                  $wallet.account ? (account = !account) : $wallet.connect
+                "
               >
                 <strong>{{
                   !!$wallet.account ? $wallet.accountCompact : "Connect Wallet "
@@ -48,15 +50,25 @@
               <a v-else class="btn bg-black text-white">
                 <strong>Get Metamask</strong>
               </a>
-              <div v-show="account" class="absolute px-3 py-3 mt-2  z-10 bg-white divide-y divide-gray-100 rounded shadow w-50 dark:bg-gray-700">
-                  <ul class="py-1 text-sm text-gray-700 dark:text-gray-200">
-                    <li>
-                      <a href="/garage" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Your Garage</a>
-                    </li>
-                    <li>
-                      <a  class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Disconnect</a>
-                    </li>
-                  </ul>
+              <div
+                v-show="account"
+                class="absolute px-3 py-3 mt-2 z-10 bg-white divide-y divide-gray-100 rounded shadow w-50 dark:bg-gray-700"
+              >
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200">
+                  <li>
+                    <a
+                      href="/garage"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Your Garage</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Disconnect</a
+                    >
+                  </li>
+                </ul>
               </div>
             </li>
           </ul>
@@ -119,11 +131,15 @@ export default {
       return window.ethereum;
     },
     isMinter() {
-      if(this.$route.path == "/minter" || this.$route.path == "/garage" || this.$route.path == "/gallery" ) {
-         return true
-       } else {
-         return false
-       }
+      if (
+        this.$route.path == "/minter" ||
+        this.$route.path == "/garage" ||
+        this.$route.path == "/gallery"
+      ) {
+        return true;
+      } else {
+        return false;
+      }
     },
   },
   data: function () {
