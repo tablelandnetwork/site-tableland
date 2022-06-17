@@ -3,6 +3,7 @@ import { createLocalVue, mount } from '@vue/test-utils';
 import { setupTest } from '@nuxt/test-utils';
 import flushPromises from 'flush-promises';
 // get mock tableland's error stub
+/* eslint-disable-next-line import/named */
 import { nextError } from '@tableland/sdk';
 
 import {
@@ -16,7 +17,7 @@ import messages from '~/playground-messages';
 
 const wait = function (ms) {
   return new Promise((resolve) => {
-    setTimeout(() => resolve(void 0), ms);
+    setTimeout(() => resolve(undefined), ms);
   });
 };
 
@@ -33,6 +34,7 @@ describe('Playground component', function () {
 
     registerComponents(localVue);
 
+    /* eslint-disable-next-line import/no-named-as-default-member */
     const store = new Vuex.Store({ // await NuxtStore.createStore({
       state: state,
       mutations: mutations,

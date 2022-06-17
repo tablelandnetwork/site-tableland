@@ -142,7 +142,9 @@ export default {
       const fontHeight = 15;
       const clientHeight = this.$refs['web-terminal'].clientHeight;
 
-      for (let i = 0; i <= clientHeight / fontHeight; i++) this.printf('');
+      for (let i = 0; i <= clientHeight / fontHeight; i++) {
+        this.printf('');
+      }
     },
     keyCheck: function (e) {
       const keycode = window.event.keyCode;
@@ -164,7 +166,9 @@ export default {
       }
     },
     showSpinner: function (prefix = '') {
-      if (this.loading === true) return;
+      if (this.loading === true) {
+        return;
+      }
 
       this.cls();
       this.loading = true;
@@ -184,7 +188,9 @@ export default {
       buffer = this.$refs['web-terminal-input'].value;
       bhManage(); // manage buffer history
 
-      if (this.loading) return;
+      if (this.loading) {
+        return;
+      }
 
       if (buffer === 'connect') {
         this.connect();
@@ -221,7 +227,9 @@ export default {
       try {
         const sql = command.trim().toLowerCase();
 
-        if (!sql) return this.printf(messages.warn.statement);
+        if (!sql) {
+          return this.printf(messages.warn.statement);
+        }
 
         if (sql.indexOf('create') === 0) {
           await this.runCreate(command);
@@ -322,7 +330,9 @@ export default {
     },
     processError: function (err) {
       this.cls();
-      if (err.message.includes('address not authorized')) return this.printf(messages.warn.address);
+      if (err.message.includes('address not authorized')) {
+        return this.printf(messages.warn.address);
+      }
 
       this.printf('Error:\n' + err.message);
     }
