@@ -358,10 +358,6 @@ export default {
           href: "/gallery",
         },
         {
-          title: "Garage",
-          href: "/garage",
-        },
-        {
           title: "Rigs",
           href: "/rigs",
         },

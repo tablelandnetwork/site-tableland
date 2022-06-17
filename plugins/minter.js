@@ -733,6 +733,20 @@ export default async ({ env }, inject) => {
       }
     },
 
+    async disconnect() {
+      await provider.clearCache();
+      // const accounts = await window.ethereum.request({
+      //     method: "wallet_requestPermissions",
+      //     params: [{
+      //         eth_accounts: {}
+      //     }]
+      // }).then(() => ethereum.request({
+      //     method: 'eth_requestAccounts'
+      // }))
+      //
+      // const account = accounts[0]
+    },
+
     async switchNetwork(config) {
       if (
         this.network?.chainId === config.chainId ||
