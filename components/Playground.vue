@@ -183,7 +183,7 @@ export default {
       const clientHeight = this.$refs["web-terminal"].clientHeight;
 
       for (let i = 0; i <= clientHeight / fontHeight; i++) {
-        this.printf('');
+        this.printf("");
       }
     },
     keyCheck(e) {
@@ -228,7 +228,7 @@ export default {
       buffer = this.$refs["web-terminal-input"].value;
       bhManage(); // manage buffer history
 
-      if (this.loading)  {
+      if (this.loading) {
         return;
       }
 
@@ -275,7 +275,7 @@ export default {
       try {
         const sql = command.trim().toLowerCase();
 
-        if (!sql) { 
+        if (!sql) {
           return this.printf(messages.warn.statement);
         }
 
@@ -284,16 +284,17 @@ export default {
           return;
         }
 
-        if (sql.indexOf('receipt') === 0) {
-          const parts = sql.split(' ').filter(c => c);
+        if (sql.indexOf("receipt") === 0) {
+          const parts = sql.split(" ").filter((c) => c);
           const txnHash = parts[1];
           await this.getReceipt(txnHash);
           return;
         }
         let mutate = false;
-        if (sql.indexOf('insert') === 0 ||
-        sql.indexOf('update') === 0 ||
-        sql.indexOf('delete') === 0
+        if (
+          sql.indexOf("insert") === 0 ||
+          sql.indexOf("update") === 0 ||
+          sql.indexOf("delete") === 0
         ) {
           mutate = true;
         }
@@ -303,13 +304,15 @@ export default {
         this.processError(err);
       }
     },
-    async getReceipt (txnHash) {
+    async getReceipt(txnHash) {
       try {
         this.showSpinner(messages.fetching);
-        const response = await this.$store.dispatch('getReceipt', txnHash);
+        const response = await this.$store.dispatch("getReceipt", txnHash);
         this.loading = false;
         this.cls();
-        this.printf('Transaction Receipt:\n' + JSON.stringify(response, null, 4));
+        this.printf(
+          "Transaction Receipt:\n" + JSON.stringify(response, null, 4)
+        );
       } catch (err) {
         this.loading = false;
         this.processError(err);
@@ -318,7 +321,7 @@ export default {
     async runCommand(sql, mutate) {
       try {
         this.showSpinner(messages.running);
-        const command = mutate ? 'runWrite' : 'runRead';
+        const command = mutate ? "runWrite" : "runRead";
         const response = await this.$store.dispatch(command, sql);
         this.loading = false;
         this.cls();

@@ -91,7 +91,7 @@ module.exports = {
         return {};
       },
       /* eslint-disable require-await */
-      async write (query) {
+      async write(query) {
         if (testErr) {
           const err = testErr;
           testErr = null;
@@ -117,7 +117,7 @@ module.exports = {
           name: "unittests_180",
         };
       },
-      async siwe () {}
+      async siwe() {},
     };
   },
   nextError(err) {
