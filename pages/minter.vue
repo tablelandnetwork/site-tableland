@@ -120,10 +120,7 @@
                 >
                   {{ 0.05 * quantity }}ETH
                 </h2>
-                <h2
-                  v-else
-                  class="text-white text-xl lg:text-4xl font-Orbitron"
-                >
+                <h2 v-else class="text-white text-xl lg:text-4xl font-Orbitron">
                   0.05ETH
                 </h2>
               </div>

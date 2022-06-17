@@ -49,7 +49,7 @@
                 v-show="$wallet.account"
                 class="btn bg-white text-white w-50 text-center"
                 :disabled="!$wallet.accountCompact"
-                @click="account = !account "
+                @click="account = !account"
               >
                 <strong>{{ $wallet.accountCompact }}</strong>
               </a>
@@ -70,6 +70,7 @@
                   </li>
                   <li>
                     <a
+                      @click="$wallet.disconnect"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >Disconnect</a
                     >
@@ -119,17 +120,19 @@
                 !!$wallet.account ? $wallet.accountCompact : "Connect Wallet"
               }}</strong>
             </a>
-            <a v-if="provider"
-            v-show="$wallet.account"
-            class="p-6 block text-l"
-            href="/garage"
+            <a
+              v-if="provider"
+              v-show="$wallet.account"
+              class="p-6 block text-l"
+              href="/garage"
             >
               <strong>Your Garage</strong>
             </a>
-            <a v-if="provider"
-            v-show="$wallet.account"
-            class="p-6 block text-l"
-            href=""
+            <a
+              v-if="provider"
+              v-show="$wallet.account"
+              class="p-6 block text-l"
+              href=""
             >
               <strong>Disconnect</strong>
             </a>
@@ -152,9 +155,9 @@ export default {
     },
     isMinter() {
       if (
-        this.$route.path === "/minter" ||
-        this.$route.path === "/garage" ||
-        this.$route.path === "/gallery"
+        this.$route.path === "/minter/" ||
+        this.$route.path === "/garage/" ||
+        this.$route.path === "/gallery/"
       ) {
         return true;
       } else {
