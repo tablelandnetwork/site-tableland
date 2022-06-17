@@ -96,41 +96,6 @@ nav li a:active {
   transition: all 0.2s ease-in-out;
 }
 
-
-.mobile-nav {
-  background-color: #815691;
-  transition: all 0.2s ease-in-out;
-  z-index: 9999;
-  color: white;
-  height: 100vh;
-}
-
-.mobile-enter-active {
-  animation: bounce-in 0.5s ease-in-out;
-  animation-fill-mode: forwards;
-}
-.mobile-leave-active {
-  animation: bounce-in 0.5s reverse;
-}
-
-.mobile-enter-active li, .mobile-enter-active h1 {
-  animation: fadeIn 1.5s ease-in-out;
-}
-.mobile-leave-active li, .mobile-enter-active h1 {
-  animation: fadeIn 0.5s reverse;
-}
-
-@keyframes bounce-in {
-  0% {
-    height:0px;
-    transition: all 0.2s ease-in-out;
-  }
-  100% {
-    height: 100vh;
-    transition: height 0.2s ease-in-out;
-  }
-}
-
 .btn {
   @apply inline-block md:text-xl py-5 px-12 lg:px-24 rounded-2xl uppercase tracking-wider lg:tracking-widest cursor-pointer;
 }
