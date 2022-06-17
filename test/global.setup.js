@@ -1,5 +1,5 @@
-import { Nuxt, Builder } from 'nuxt';
-import nuxtConfig from '../nuxt.config';
+import { Nuxt, Builder } from "nuxt";
+import nuxtConfig from "../nuxt.config";
 
 // these boolean switches turn off the build for all but the store
 const resetConfig = {
@@ -7,7 +7,7 @@ const resetConfig = {
   loadingIndicator: false,
   fetch: {
     client: false,
-    server: false
+    server: false,
   },
   features: {
     store: true,
@@ -23,18 +23,18 @@ const resetConfig = {
     clientPrefetch: false,
     clientUseUrl: false,
     componentAliases: false,
-    componentClientOnly: false
+    componentClientOnly: false,
   },
   build: {
     indicator: false,
-    terser: false
-  }
+    terser: false,
+  },
 };
 
 // we take our nuxt config, lay the resets on top of it,
 // and lastly we apply the non-boolean overrides
 const config = Object.assign({}, nuxtConfig, resetConfig, {
-  ignore: ['**/components/**/*', '**/layouts/**/*', '**/pages/**/*']
+  ignore: ["**/components/**/*", "**/layouts/**/*", "**/pages/**/*"],
 });
 
 const buildNuxt = async () => {
