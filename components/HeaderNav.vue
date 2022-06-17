@@ -32,13 +32,12 @@
         class="ml-auto md:hidden p-6"
         @click="menu = !menu"
       >
-      {{ !!menu ? 'CLOSE' : 'MENU'}}
+        MENU
       </button>
     </div>
 
     <!-- Mobile nav  -->
-    <transition name="mobile">
-    <nav v-show="menu" class="mobile-nav w-full">
+    <nav v-show="menu" data-aos="fade-down" class="aos-animate w-full" style="background-color: #815691; transition: all 0.2s ease-in-out">
       <ul class="flex flex-col text-center">
         <li v-for="(item, index) in titles" :key="index">
           <a :href="hrefs[index]" :target="targets[index] ? targets[index] : ''" class="p-6 block">
@@ -47,7 +46,6 @@
         </li>
       </ul>
     </nav>
-  </transition>
   </div>
 </template>
 
