@@ -659,7 +659,7 @@ export default async ({ env }, inject) => {
           console.log("Can't find your rig captain");
         }
       } catch (error) {
-        console.log(error);
+        console.log(JSON.stringify(error));
         document.getElementById("mint-button").innerHTML = "Error minting rig";
         document
           .getElementById("animated-carousel")
@@ -737,7 +737,7 @@ export default async ({ env }, inject) => {
           console.log("Ethereum object doesn't exist!");
         }
       } catch (error) {
-        console.log(error);
+        console.log(JSON.stringify(error));
       }
     },
 
