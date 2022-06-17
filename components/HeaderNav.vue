@@ -19,7 +19,7 @@
           >
             <li v-for="(item, index) in titles" :key="index">
               <a
-                v-if="index != titles.length"
+                v-if="index != titles.length - 1"
                 :href="hrefs[index]"
                 :target="targets[index] ? targets[index] : ''"
               >
@@ -109,7 +109,11 @@ export default {
       return window.ethereum;
     },
     isMinter() {
-      return this.$route.name == "minter";
+      if(this.$route.path == "/minter/" || this.$route.path == "/garage" || this.$route.path == "/gallery" ) {
+         return true
+       } else {
+         return false
+       }
     },
   },
   data: function () {

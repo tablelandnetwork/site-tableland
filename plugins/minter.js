@@ -1,5 +1,4 @@
 import Vue from "vue";
-import { reactive } from "vue";
 import { ethers, providers } from "ethers";
 import { connect } from "@tableland/sdk";
 import { BigNumber } from "ethers";
@@ -10,7 +9,10 @@ export default async ({ env }, inject) => {
   const provider =
     window.ethereum != null
       ? new ethers.providers.Web3Provider(window.ethereum, "any")
-      : ethers.getDefaultProvider();
+      : new WalletConnectProvider({
+          infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
+        });
+  ethers.getDefaultProvider();
 
   const rig = Vue.observable({
     address: "0x88694d0b8c8E800AB3D9eecBF9A8923B3b5825fA",
@@ -423,6 +425,17 @@ export default async ({ env }, inject) => {
     provider: null,
     price: "5000000000000000",
 
+    async connectMobile() {
+      const walletConnectProvider = new WalletConnectProvider({
+        infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
+      });
+      await walletConnectProvider.enable();
+      this.provider = new ethers.providers.Web3Provider(walletConnectProvider);
+      // this.signer = this.provider.getSigner();
+      // console.log(this.web3.eth.accounts[0]);
+      // this.coinbase = await this.web3.eth.getAccounts()[0];
+    },
+
     get hexChainId() {
       return "0x" + this.network?.chainId.toString(16);
     },
@@ -520,17 +533,6 @@ export default async ({ env }, inject) => {
         this.accountCompact = null;
         this.balance = null;
       }
-    },
-
-    async connectMobile() {
-      const walletConnectProvider = new WalletConnectProvider({
-        infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
-      });
-      await walletConnectProvider.enable();
-      this.provider = new ethers.providers.Web3Provider(walletConnectProvider);
-      // this.signer = this.provider.getSigner();
-      // console.log(this.web3.eth.accounts[0]);
-      // this.coinbase = await this.web3.eth.getAccounts()[0];
     },
 
     async connect() {

@@ -42,22 +42,9 @@
           class="animated-carousel w-full"
           v-bind:class="{ mint: isAddClass }"
         >
-          <div class="vehicle"><img src="~assets/img/rig_1.png" /></div>
-          <div class="vehicle"><img src="~assets/img/rig_2.png" /></div>
-          <div class="vehicle"><img src="~assets/img/rig_3.png" /></div>
-          <div class="vehicle"><img src="~assets/img/rig_4.png" /></div>
-          <div class="vehicle"><img src="~assets/img/rig_5.png" /></div>
-          <div class="vehicle"><img src="~assets/img/rig_6.png" /></div>
-          <div class="vehicle"><img src="~assets/img/rig_7.png" /></div>
-          <div class="vehicle"><img src="~assets/img/rig_8.png" /></div>
-          <div class="vehicle"><img src="~assets/img/rig_9.png" /></div>
-          <div class="vehicle"><img src="~assets/img/rig_10.png" /></div>
-          <div class="vehicle"><img src="~assets/img/rig_11.png" /></div>
-          <div class="vehicle"><img src="~assets/img/rig_12.png" /></div>
-          <div class="vehicle"><img src="~assets/img/rig_1.png" /></div>
-          <div class="vehicle"><img src="~assets/img/rig_2.png" /></div>
-          <div class="vehicle"><img src="~assets/img/rig_3.png" /></div>
-          <div class="vehicle"><img src="~assets/img/rig_4.png" /></div>
+          <div v-for="(item, index) in rigs" :key="index" class="vehicle">
+            <img :src="item" />
+          </div>
         </div>
       </div>
 
@@ -310,6 +297,7 @@
 </template>
 
 <script>
+import helpers from '~/plugins/helpers';
 import rigsMeta from "~/assets/rigsMeta.json";
 export default {
   head() {
@@ -363,7 +351,7 @@ export default {
       rigs: rigsMeta,
       provider: window.ethereum,
       quantity: "1",
-      useWallet: true,
+      rigs: helpers.getRigs(20),
       nav: [
         {
           title: "Gallery",
@@ -372,11 +360,6 @@ export default {
         {
           title: "Garage",
           href: "/garage",
-        },
-        {
-          title: "Docs",
-          href: "https://docs.tableland.xyz",
-          target: "_blank",
         },
         {
           title: "Rigs",

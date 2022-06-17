@@ -145,13 +145,13 @@ export default {
           href: "/garage",
         },
         {
-          title: "Docs",
-          href: "https://docs.tableland.xyz",
-          target: "_blank",
-        },
-        {
           title: "Rigs",
           href: "/rigs",
+        },
+        {
+          title: "Mint a Rig",
+          href: "/minter",
+          main: true,
         },
       ],
     };
