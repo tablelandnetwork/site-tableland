@@ -14,7 +14,7 @@ import messages from "~/playground-messages";
 const wait = function (ms) {
   return new Promise((resolve) => {
     // eslint-disable-next-line no-void
-    setTimeout(() => resolve(void 0), ms);
+    setTimeout(() => resolve(undefined), ms);
   });
 };
 
@@ -247,6 +247,30 @@ describe("Playground component", function () {
     await expect(terminalLines.at(1).text()).toMatch("{");
     await expect(terminalLines.at(2).text()).toMatch('"name": "unittests_180');
     await expect(terminalLines.at(3).text()).toMatch("}");
+  });
+
+  test('create table statements are not case sensitive', async function () {
+    const form = wrapper.find('form.web-terminal-form');
+    const textInput = form.find('input[type="text"]');
+
+    textInput.element.value = 'connect';
+    form.trigger('submit');
+
+    // mock connect waits 500ms, we want to make sure we wait longer than that.
+    await wait(1000);
+    await flushPromises();
+
+    textInput.element.value = 'CREaTE TaBLE unittests (a int);';
+    form.trigger('submit');
+
+    await wait(1);
+    await flushPromises();
+
+    const terminalLines = wrapper.findAll('.web-terminal > span');
+    await expect(terminalLines.at(0).text()).toMatch('Table Created:');
+    await expect(terminalLines.at(1).text()).toMatch('{');
+    await expect(terminalLines.at(2).text()).toMatch('"name": "unittests_180');
+    await expect(terminalLines.at(3).text()).toMatch('}');
   });
 
   test("list show user their existing tables", async function () {

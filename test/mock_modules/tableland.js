@@ -4,7 +4,7 @@ module.exports = {
   async connect() {
     await new Promise((resolve) => {
       // eslint-disable-next-line no-void
-      setTimeout(() => resolve(void 0), 500);
+      setTimeout(() => resolve(undefined), 500);
     });
 
     if (testErr) {
@@ -56,7 +56,7 @@ module.exports = {
           },
         ];
       },
-      query(query) {
+      read(query) {
         if (testErr) {
           const err = testErr;
           testErr = null;
@@ -88,6 +88,14 @@ module.exports = {
             },
           };
         }
+        return {};
+      },
+      write: async function (query) {
+        if (testErr) {
+          const err = testErr;
+          testErr = null;
+          throw err;
+        }
 
         if (query === "updatequery1") {
           return {
@@ -108,6 +116,7 @@ module.exports = {
           name: "unittests_180",
         };
       },
+      siwe: async function () {}
     };
   },
   nextError(err) {

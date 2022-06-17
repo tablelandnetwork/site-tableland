@@ -6,6 +6,7 @@ export default {
   creating:
     "Creating Your Table, the steps are:\n  Mint the table on Ethereum\n  Register it with the Validator\n  It may take a little while\n",
   docs: "Read the full docs here: https://docs.tableland.xyz",
+  fetching: 'Getting receipt for transaction',
   help:
     "Available commands:\n" +
     "    connect   Connect to tableland with Metamask. You must\n" +

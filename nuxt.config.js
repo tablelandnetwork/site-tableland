@@ -1,8 +1,9 @@
 export default {
   env: {
     // http://localhost:8545
-    validatorHost: process.env.VALIDATOR || "https://testnet.tableland.network",
-    validatorNet: process.env.NETWORK || "testnet",
+    validatorHost: process.env.VALIDATOR || 'http://127.0.0.1:8080',
+    validatorNet: process.env.NETWORK || 'local',
+    chain: 'ethereum-goerli'
   },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
