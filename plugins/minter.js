@@ -536,6 +536,7 @@ export default async ({ env }, inject) => {
     },
 
     async connect() {
+      try {
       const provider = new ethers.providers.Web3Provider(
         window.ethereum,
         "any"
@@ -567,6 +568,13 @@ export default async ({ env }, inject) => {
       );
 
       if (window.location.pathname == "/garage") {
+      }
+    }
+      catch (error) {
+        console.log(JSON.stringify(error));
+        console.log = function (message) {
+          document.getElementById("mint-log").innerHTML = message;
+        };
       }
     },
 
