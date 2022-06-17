@@ -46,7 +46,6 @@ const getConnection = (function () {
     }
     if (connection) return connection;
 
-    console.log(`connecting to validator at: ${process.env.validatorHost}`);
     connection = await connect({
       chain: process.env.chain as string,
     } as ConnectOptions);
