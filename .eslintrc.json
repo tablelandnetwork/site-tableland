@@ -9,7 +9,7 @@
     "requireConfigFile": false
   },
   "extends": ["@nuxtjs", "plugin:nuxt/recommended", "prettier"],
-  "plugins": [],
+  "plugins": ["@typescript-eslint"],
   "ignorePatterns": ["store/index.ts"],
   "rules": {
     "vue/require-prop-types": "off"
