@@ -3,7 +3,6 @@ let testErr = null;
 module.exports = {
   async connect() {
     await new Promise((resolve) => {
-      // eslint-disable-next-line no-void
       setTimeout(() => resolve(undefined), 500);
     });
 

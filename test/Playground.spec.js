@@ -13,7 +13,6 @@ import messages from "~/playground-messages";
 
 const wait = function (ms) {
   return new Promise((resolve) => {
-    // eslint-disable-next-line no-void
     setTimeout(() => resolve(undefined), ms);
   });
 };

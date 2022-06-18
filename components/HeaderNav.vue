@@ -44,28 +44,27 @@
           ><img src="~assets/img/logo-black.svg" alt="Tableland" class="h-4"
         /></a>
       </div>
-      <button class="ml-auto md:hidden p-6" @click="menu = !menu">MENU</button>
+      <button class="ml-auto md:hidden p-6" @click="menu = !menu">
+        {{ !!menu ? "CLOSE" : "MENU" }}
+      </button>
     </div>
 
     <!-- Mobile nav  -->
-    <nav
-      v-show="menu"
-      data-aos="fade-down"
-      class="aos-animate w-full"
-      style="background-color: #815691; transition: all 0.2s ease-in-out"
-    >
-      <ul class="flex flex-col text-center">
-        <li v-for="(item, index) in titles" :key="index">
-          <a
-            :href="hrefs[index]"
-            :target="targets[index] ? targets[index] : ''"
-            class="p-6 block"
-          >
-            {{ item }}
-          </a>
-        </li>
-      </ul>
-    </nav>
+    <transition name="mobile">
+      <nav v-show="menu" class="w-full mobile-nav">
+        <ul class="flex flex-col text-center">
+          <li v-for="(item, index) in titles" :key="index">
+            <a
+              :href="hrefs[index]"
+              :target="targets[index] ? targets[index] : ''"
+              class="p-6 block text-l"
+            >
+              {{ item }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </transition>
   </div>
 </template>
 

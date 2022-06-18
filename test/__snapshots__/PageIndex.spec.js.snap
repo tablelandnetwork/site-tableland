@@ -93,64 +93,69 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
       <button
         class="ml-auto md:hidden p-6"
       >
-        MENU
+        
+      MENU
+    
       </button>
     </div>
      
-    <nav
-      class="aos-animate w-full"
-      data-aos="fade-down"
-      style="background-color: rgb(129, 86, 145); transition: all 0.2s ease-in-out; display: none;"
+    <transition-stub
+      name="mobile"
     >
-      <ul
-        class="flex flex-col text-center"
+      <nav
+        class="w-full mobile-nav"
+        style="display: none;"
       >
-        <li>
-          <a
-            class="p-6 block"
-            href="https://discord.gg/hpd5WWn4Ys"
-            target="_blank"
-          >
-            
-          Discord
-        
-          </a>
-        </li>
-        <li>
-          <a
-            class="p-6 block"
-            href="https://mirror.xyz/tableland.eth"
-            target="_blank"
-          >
-            
-          Blog
-        
-          </a>
-        </li>
-        <li>
-          <a
-            class="p-6 block"
-            href="https://docs.tableland.xyz"
-            target="_blank"
-          >
-            
-          Docs
-        
-          </a>
-        </li>
-        <li>
-          <a
-            class="p-6 block"
-            href="/rigs"
-            target=""
-          >
-            
-          Rigs
-        
-          </a>
-        </li>
-      </ul>
-    </nav>
+        <ul
+          class="flex flex-col text-center"
+        >
+          <li>
+            <a
+              class="p-6 block text-l"
+              href="https://discord.gg/hpd5WWn4Ys"
+              target="_blank"
+            >
+              
+            Discord
+          
+            </a>
+          </li>
+          <li>
+            <a
+              class="p-6 block text-l"
+              href="https://mirror.xyz/tableland.eth"
+              target="_blank"
+            >
+              
+            Blog
+          
+            </a>
+          </li>
+          <li>
+            <a
+              class="p-6 block text-l"
+              href="https://docs.tableland.xyz"
+              target="_blank"
+            >
+              
+            Docs
+          
+            </a>
+          </li>
+          <li>
+            <a
+              class="p-6 block text-l"
+              href="/rigs"
+              target=""
+            >
+              
+            Rigs
+          
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </transition-stub>
   </div>
    
   <header
@@ -1020,64 +1025,69 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
       <button
         class="ml-auto md:hidden p-6"
       >
-        MENU
+        
+      MENU
+    
       </button>
     </div>
      
-    <nav
-      class="aos-animate w-full"
-      data-aos="fade-down"
-      style="background-color: rgb(129, 86, 145); transition: all 0.2s ease-in-out; display: none;"
+    <transition-stub
+      name="mobile"
     >
-      <ul
-        class="flex flex-col text-center"
+      <nav
+        class="w-full mobile-nav"
+        style="display: none;"
       >
-        <li>
-          <a
-            class="p-6 block"
-            href="https://discord.gg/hpd5WWn4Ys"
-            target="_blank"
-          >
-            
-          Discord
-        
-          </a>
-        </li>
-        <li>
-          <a
-            class="p-6 block"
-            href="https://mirror.xyz/tableland.eth"
-            target="_blank"
-          >
-            
-          Blog
-        
-          </a>
-        </li>
-        <li>
-          <a
-            class="p-6 block"
-            href="https://docs.tableland.xyz"
-            target="_blank"
-          >
-            
-          Docs
-        
-          </a>
-        </li>
-        <li>
-          <a
-            class="p-6 block"
-            href="/rigs"
-            target=""
-          >
-            
-          Rigs
-        
-          </a>
-        </li>
-      </ul>
-    </nav>
+        <ul
+          class="flex flex-col text-center"
+        >
+          <li>
+            <a
+              class="p-6 block text-l"
+              href="https://discord.gg/hpd5WWn4Ys"
+              target="_blank"
+            >
+              
+            Discord
+          
+            </a>
+          </li>
+          <li>
+            <a
+              class="p-6 block text-l"
+              href="https://mirror.xyz/tableland.eth"
+              target="_blank"
+            >
+              
+            Blog
+          
+            </a>
+          </li>
+          <li>
+            <a
+              class="p-6 block text-l"
+              href="https://docs.tableland.xyz"
+              target="_blank"
+            >
+              
+            Docs
+          
+            </a>
+          </li>
+          <li>
+            <a
+              class="p-6 block text-l"
+              href="/rigs"
+              target=""
+            >
+              
+            Rigs
+          
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </transition-stub>
   </div>
    
   <header
