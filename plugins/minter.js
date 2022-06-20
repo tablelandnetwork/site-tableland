@@ -501,11 +501,13 @@ export default async ({ env }, inject) => {
           const rigIdSub = ethers.utils.formatUnits(item._hex, 0) - 1;
           rigLog.innerHTML += `<div class="lg:w-1/3 md:w-1/2 w-full px-3 py-3 rigs">
                   <a href="/rigs/${rigId}">
-                   <div class="rig-frame ${rigsMeta.rigs[rigIdSub].attributes[1].value} rarity-${rigsMeta.rigs[rigIdSub].attributes[0].value}" >
+                   <div class="rig-frame ${rigsMeta.rigs[rigIdSub].attributes[1].value}" >
                     <img src="${rigsMeta.rigs[rigIdSub].image}"/>
                    </div>
-                   <h2 class="text-white font-Orbitron text-l">RIG ID #00${rigId}</h2>
-                  <p class="text-white">FLEET: ${rigsMeta.rigs[rigIdSub].attributes[1].value}</p>
+                   <h2 class="text-black font-Orbitron text-l">RIG ID #00${rigId}</h2>
+                  <p class="text-black">${rigsMeta.rigs[rigIdSub].attributes[1].value}</p>
+                  <p class="text-black px-3 py-0">${rigsMeta.rigs[rigIdSub].attributes[1].value}</p>
+                  <p class="text-black px-3 py-3 pb-3 ${rigsMeta.rigs[rigIdSub].attributes[1].value} rarity-${rigsMeta.rigs[rigIdSub].attributes[0].value}">${rigsMeta.rigs[rigIdSub].attributes[0].value}/100</p>
                   </a>
                 </div>`;
         });
@@ -643,12 +645,12 @@ export default async ({ env }, inject) => {
                <div class="rig-frame ${rigsMeta.rigs[tokenIdSub].attributes[1].value} rarity-${rigsMeta.rigs[tokenIdSub].attributes[0].value}" >
                 <img src="${rigsMeta.rigs[tokenIdSub].image}"/>
                </div>
-               <h2 class="text-white font-Orbitron text-l">RIG ID #00${tokenId}</h2>
+               <h2 class="text-black font-Orbitron text-l">RIG ID #00${tokenId}</h2>
               <div id="trait-${tokenIdSub}"></div>
             </div>`;
             rigsMeta.rigs[tokenIdSub].attributes.forEach((item) => {
               let traitBox = document.getElementById("trait-" + tokenIdSub);
-              traitBox.innerHTML += `<p class="text-white">${item.trait_type}: ${item.value}</p>`;
+              traitBox.innerHTML += `<p class="text-black">${item.trait_type}: ${item.value}</p>`;
             });
           });
           document

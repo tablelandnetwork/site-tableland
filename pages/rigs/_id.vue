@@ -8,27 +8,10 @@
     />
 
     <!-- minter -->
-    <section class="minted">
+    <section class="rig-id">
       <div
-        class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-8 lg:pt-12 2xl:pt-24 justify-between"
-      >
-        <div class="lg:w-full px-0 lg:pb-12 pb-6 pt-0" data-aos="fade-up">
-          <div class="lg:flex">
-            <div class="text-center w-full pt-6" data-aos="fade-up"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- showcase -->
-    <section class="md:block showcase py-12 relative">
-      <div
-        class="minter-break flex container text-center justify-between"
-      ></div>
-      <div
-        class="container"
-        style="margin-top: -700px; max-width: 1280px; z-index: 999"
         v-if="rigId"
+        class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-36 pt-24 lg:pt-48 justify-between"
       >
         <h1
           class="text-black text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
@@ -50,7 +33,7 @@
           id="rig-owner"
           class="text-white text-center lg:text-xl text-l"
         ></h3>
-        <div class="flex px-6 lg:px-48 py-12">
+        <div class="flex px-6 lg:px-24 py-12">
           <div class="lg:w-full minter-details">
             <div class="flex flex-wrap py-0 lg:px-12 px-12">
               <div

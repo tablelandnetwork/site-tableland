@@ -32,10 +32,7 @@
     </section>
 
     <!-- showcase -->
-    <section class="md:block showcase py-32 relative">
-      <div
-        class="minter-break flex container text-center justify-between"
-      ></div>
+    <section class="md:block story py-32 relative">
       <div class="w-full" style="margin-top: -300px">
         <div
           id="animated-carousel"
@@ -59,10 +56,10 @@
             class="flex flex-wrap justify-center text-center"
           ></div>
           <div class="rig-btn">
-            <a id="tx-btn" class="btn text-white" target="_blank"
+            <a id="tx-btn" class="btn bg-black text-white" target="_blank"
               >VIEW TRANSACTION</a
             >
-            <a id="os-btn" class="btn text-white" target="_blank"
+            <a id="os-btn" class="btn bg-black text-white" target="_blank"
               >VISIT GARAGE</a
             >
             <a href="/minter" class="btn btn-mint text-white">MINT ANOTHER</a>
@@ -115,22 +112,23 @@
           >
             <div class="flex py-12 px-12">
               <div class="w-full lg:w-1/2">
-                <h3 class="text-white lg:text-xl text-l">PRICE</h3>
+                <h3 class="text-black lg:text-xl text-l">PRICE</h3>
                 <h2
                   v-if="quantity"
-                  class="overflow-hidden text-white lg:text-4xl text-xl font-Orbitron pr-12"
+                  class="overflow-hidden text-black lg:text-4xl text-xl font-Orbitron pr-12 price-box"
                 >
-                  {{ 0.05 * quantity }}ETH
+                  <span>{{ 0.05 * quantity }}</span
+                  >ETH
                 </h2>
-                <h2 v-else class="text-white text-xl lg:text-4xl font-Orbitron">
+                <h2 v-else class="text-black text-xl lg:text-4xl font-Orbitron">
                   0.05ETH
                 </h2>
               </div>
               <div class="w-full lg:w-1/2">
-                <h3 class="text-white lg:text-xl text-l">TOTAL SUPPLY</h3>
+                <h3 class="text-black lg:text-xl text-l">TOTAL SUPPLY</h3>
                 <h2
                   id="rig-supply"
-                  class="text-white text-xl lg:text-4xl font-Orbitron"
+                  class="text-black text-xl lg:text-4xl font-Orbitron"
                 >
                   3000
                 </h2>
@@ -138,13 +136,13 @@
             </div>
             <div class="flex py-0 px-12" v-if="$wallet.account">
               <div class="w-full lg:w-1/2">
-                <h3 class="text-white lg:text-xl text-l">YOUR BALANCE</h3>
-                <h2 class="text-white text-xl lg:text-4xl font-Orbitron">
+                <h3 class="text-black lg:text-xl text-l">YOUR BALANCE</h3>
+                <h2 class="text-black text-xl lg:text-4xl font-Orbitron">
                   {{ $wallet.balance }}
                 </h2>
               </div>
               <div class="w-full lg:w-1/2">
-                <h3 class="text-white lg:text-xl text-l">QUANTITY</h3>
+                <h3 class="text-black lg:text-xl text-l">QUANTITY</h3>
                 <!-- <input
                   class="quantity text-white text-2xl lg:text-4xl font-Orbitron"
                   v-model="quantity"
@@ -154,7 +152,11 @@
                   min="1"
                   max="9"
                 /> -->
-                <select class="quantity text-white text-2xl lg:text-4xl font-Orbitron" v-model="quantity" v-on:change="updateQuantity" >
+                <select
+                  class="quantity text-black text-2xl lg:text-4xl font-Orbitron"
+                  v-model="quantity"
+                  v-on:change="updateQuantity"
+                >
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -162,7 +164,7 @@
               </div>
             </div>
             <div class="flex">
-              <div v-if="provider" class="w-full px-12 py-18">
+              <div v-if="provider" class="w-full px-12 py-12">
                 <div v-if="$wallet.account">
                   <a
                     id="mint-button"
@@ -225,11 +227,15 @@
             <div class="flex flex-wrap py-12 px-12">
               <div class="w-full lg:w-1/2">
                 <h3 class="text-white lg:text-xl text-l">PRICE</h3>
-                <h2 class="text-white text-xl lg:text-4xl font-Orbitron">0.05ETH</h2>
+                <h2 class="text-white text-xl lg:text-4xl font-Orbitron">
+                  0.05ETH
+                </h2>
               </div>
               <div class="w-full lg:w-1/2">
                 <h3 class="text-white lg:text-xl text-l">TOTAL SUPPLY</h3>
-                <h2 class="text-white text-xl lg:text-4xl font-Orbitron">3000</h2>
+                <h2 class="text-white text-xl lg:text-4xl font-Orbitron">
+                  3000
+                </h2>
               </div>
               <div class="w-full px-0 py-24">
                 <a

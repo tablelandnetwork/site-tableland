@@ -131,7 +131,11 @@
               {{ item }}
             </a>
           </li>
-          <h1 v-if="isMinter" v-show="provider" class="font-Orbitron px-6 py-6 text-xl">
+          <h1
+            v-if="isMinter"
+            v-show="provider"
+            class="font-Orbitron px-6 py-6 text-xl"
+          >
             Your Wallet
           </h1>
           <li v-if="isMinter">
@@ -149,7 +153,7 @@
               v-if="provider"
               v-show="$wallet.account"
               class="p-6 block text-l"
-              href="/garage"
+              href="/garage/"
             >
               <strong>Your Garage</strong>
             </a>

@@ -520,14 +520,16 @@ input {
   border-bottom: 0px;
 }
 
-input.quantity, select.quantity {
-  max-width: 200px;
+input.quantity,
+select.quantity {
+  max-width: 110px;
+  width: 100%;
   background: transparent;
 }
 
 select.quantity:focus {
   outline: 0;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid black;
 }
 
 input::placeholder {
@@ -546,16 +548,26 @@ input:focus {
   max-width: 100% !important;
 }
 
+.rig-id {
+  height: auto;
+  width: 100vw;
+  max-width: 100% !important;
+}
+
+.rig-id .container {
+  max-width: 1280px;
+}
+
 .user-garage {
   height: auto;
-  min-height: 400px;
+  min-height: 140px;
   width: 100vw;
   max-width: 100% !important;
 }
 
 .rig-gallery {
   height: auto;
-  min-height: 250px;
+  min-height: 140px;
   width: 100vw;
   max-width: 100% !important;
 }
@@ -633,14 +645,19 @@ input:focus {
   position: relative;
 }
 
+.price-box span {
+  width: 155px;
+}
+
 #mint-log {
   height: 400px;
-  background: #1b72e2;
+  background: #fff;
   position: absolute;
   top: 16px;
   width: 100%;
   z-index: 99999;
-  color: white;
+  color: black;
+  border-radius: 10px;
   font-family: monospace;
   text-align: left;
   padding: 20px;
@@ -741,14 +758,14 @@ input:focus {
 
 .rig-result {
   background: transparent;
-  position: absolute;
-  top: -450px;
+  margin-top: -400px;
   height: auto;
   max-width: 100%;
   width: 100%;
   opacity: 0;
   z-index: -999;
   zoom: 0.9;
+  display: none;
 }
 
 .rig-result .rig-frame {
@@ -781,6 +798,7 @@ input:focus {
   animation-fill-mode: forwards;
   animation-delay: 2.75s;
   z-index: 999;
+  display: block;
 }
 
 .minter-details.active,
@@ -936,7 +954,7 @@ input:focus {
   border-radius: 25px; */
   overflow: hidden;
   padding: 10px;
-  margin: 20px auto;
+  margin: 0px auto;
   animation: float 10s ease-in-out infinite;
   position: relative;
   z-index: 999;
@@ -946,12 +964,16 @@ input:focus {
   border-radius: 25px;
 } */
 
-/* .rig-frame.rarity-100 {
+.rarity-100 {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 1s linear infinite;
+  color: white;
+  border-radius: 10px;
+  margin: 10px;
 }
 
+/*
 .Airelights {
   background-image: linear-gradient(180deg, #b2d1fc 0%, #dd6c90 100%);
 }

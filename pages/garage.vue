@@ -10,42 +10,28 @@
     <!-- minter -->
     <section class="user-garage">
       <div
-        class="container px-4 sm:px-12 xl:px-24 flex pt-24 lg:pt-24 2xl:pt-24 justify-between"
-      >
-        <div
-          class="lg:w-full w-full px-0 lg:pb-12 pb-6 pt-0"
-          data-aos="fade-up"
-        >
-          <div class="lg:flex">
-            <div class="text-left w-full pt-6 px-12" data-aos="fade-up">
-              <h4 class="text-black lg:text-xl text-md" v-if="$wallet.account">
-                WALLET ID: {{ $wallet.account }}
-              </h4>
-              <h1
-                class="text-black font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
-                data-aos="fade-up"
-                v-if="$wallet.account"
-              >
-                Welcome to the Garage
-              </h1>
-              <h1
-                class="text-black text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
-                data-aos="fade-up"
-                v-if="!$wallet.account"
-              >
-                Connect your wallet
-              </h1>
-            </div>
-          </div>
-        </div>
-      </div>
+        class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-8 lg:pt-12 2xl:pt-24 justify-between"
+      ></div>
     </section>
 
-    <!-- showcase -->
-    <section class="md:block showcase py-24 relative">
-      <div
-        class="minter-break flex container text-center justify-between"
-      ></div>
+    <section class="md:block bg-solid py-24 relative">
+      <h4 class="text-black lg:text-xl text-md" v-if="$wallet.account">
+        WALLET ID: {{ $wallet.account }}
+      </h4>
+      <h1
+        class="text-black font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
+        data-aos="fade-up"
+        v-if="$wallet.account"
+      >
+        Welcome to the Garage
+      </h1>
+      <h1
+        class="text-black text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
+        data-aos="fade-up"
+        v-if="!$wallet.account"
+      >
+        Connect your wallet
+      </h1>
 
       <div
         class="container px-4 sm:px-12 md:px-12 lg:px-24 xl:px-24"
@@ -54,7 +40,7 @@
         <div class="flex flex-wrap">
           <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-0" data-aos="fade-up">
             <h1
-              class="text-pink font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
+              class="text-black font-Orbitron w-full h-auto text-3xl sm:text-4xl lg:text-5xl md:text-4xl leading-tighter mb-12 lg:mb-10"
               data-aos="fade-up"
             >
               Your Rigs
@@ -65,7 +51,7 @@
         <div class="flex">
           <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-36" data-aos="fade-up">
             <h1
-              class="text-pink font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
+              class="text-black font-Orbitron w-full h-auto text-3xl sm:text-4xl lg:text-5xl md:text-4xl leading-tighter mb-12 lg:mb-10"
               data-aos="fade-up"
             >
               Your Badges
@@ -75,18 +61,18 @@
         <div class="flex py-0">
           <div class="w-1/3 px-12 text-center">
             <img src="~assets/img/badge1.png" />
-            <h3 class="text-pink lg:text-xl text-l py-2">badge_name</h3>
-            <h3 class="text-pink lg:text-xl text-l">earned 05/05/2022</h3>
+            <h3 class="text-black lg:text-xl text-l py-2">badge_name</h3>
+            <h3 class="text-black lg:text-xl text-l">earned 05/05/2022</h3>
           </div>
           <div class="w-1/3 px-12 text-center">
             <img src="~assets/img/badge2.png" />
-            <h3 class="text-pink lg:text-xl text-l py-2">badge_name</h3>
-            <h3 class="text-pink lg:text-xl text-l">earned 05/05/2022</h3>
+            <h3 class="text-black lg:text-xl text-l py-2">badge_name</h3>
+            <h3 class="text-black lg:text-xl text-l">earned 05/05/2022</h3>
           </div>
           <div class="w-1/3 px-12 text-center">
             <img src="~assets/img/badge3.png" />
-            <h3 class="text-pink lg:text-xl text-l py-2">badge_name</h3>
-            <h3 class="text-pink lg:text-xl text-l">earned 05/05/2022</h3>
+            <h3 class="text-black lg:text-xl text-l py-2">badge_name</h3>
+            <h3 class="text-black lg:text-xl text-l">earned 05/05/2022</h3>
           </div>
         </div>
       </div>
