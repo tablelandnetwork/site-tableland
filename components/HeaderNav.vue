@@ -62,6 +62,7 @@
               </a>
               <div
                 v-show="account"
+                v-if="$wallet.account"
                 class="absolute px-3 py-3 mt-2 z-10 bg-white divide-y divide-gray-100 rounded shadow w-50 dark:bg-gray-700"
               >
                 <ul class="py-1 text-sm text-gray-700 dark:text-gray-200">
@@ -162,7 +163,7 @@
               v-if="provider"
               v-show="$wallet.account"
               class="p-6 block text-l"
-              href=""
+              @click="$wallet.disconnect"
             >
               <strong>Disconnect</strong>
             </a>

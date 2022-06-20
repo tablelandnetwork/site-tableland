@@ -749,7 +749,6 @@ export default async ({ env }, inject) => {
     async disconnect() {
 
       const [account] = await wallet.provider.send("eth_requestAccounts");
-
       if (account) {
         await wallet.setAccount(0);
       }
