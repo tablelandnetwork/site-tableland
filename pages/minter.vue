@@ -145,7 +145,7 @@
               </div>
               <div class="w-full lg:w-1/2">
                 <h3 class="text-white lg:text-xl text-l">QUANTITY</h3>
-                <input
+                <!-- <input
                   class="quantity text-white text-2xl lg:text-4xl font-Orbitron"
                   v-model="quantity"
                   v-on:change="updateQuantity"
@@ -153,7 +153,12 @@
                   type="number"
                   min="1"
                   max="9"
-                />
+                /> -->
+                <select class="quantity text-white text-2xl lg:text-4xl font-Orbitron" v-model="quantity" v-on:change="updateQuantity" >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
               </div>
             </div>
             <div class="flex">
@@ -218,13 +223,13 @@
             id="minter-details"
           >
             <div class="flex flex-wrap py-12 px-12">
-              <div class="w-1/2">
+              <div class="w-full lg:w-1/2">
                 <h3 class="text-white lg:text-xl text-l">PRICE</h3>
-                <h2 class="text-white text-4xl font-Orbitron">0.05ETH</h2>
+                <h2 class="text-white text-xl lg:text-4xl font-Orbitron">0.05ETH</h2>
               </div>
-              <div class="w-1/2">
+              <div class="w-full lg:w-1/2">
                 <h3 class="text-white lg:text-xl text-l">TOTAL SUPPLY</h3>
-                <h2 class="text-white text-4xl font-Orbitron">3000</h2>
+                <h2 class="text-white text-xl lg:text-4xl font-Orbitron">3000</h2>
               </div>
               <div class="w-full px-0 py-24">
                 <a

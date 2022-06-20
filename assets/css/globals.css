@@ -520,8 +520,14 @@ input {
   border-bottom: 0px;
 }
 
-input.quantity {
+input.quantity, select.quantity {
   max-width: 200px;
+  background: transparent;
+}
+
+select.quantity:focus {
+  outline: 0;
+  border-bottom: 2px solid white;
 }
 
 input::placeholder {

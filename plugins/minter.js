@@ -473,7 +473,7 @@ export default async ({ env }, inject) => {
         });
       }
 
-      if (window.location.pathname == "/minter") {
+      if (window.location.pathname == "/minter/") {
         //Check contract totalSupply
         const maxSupply = 3000 - totalSupply;
         document.getElementById("rig-supply").innerHTML = maxSupply + "/3000";
@@ -485,7 +485,7 @@ export default async ({ env }, inject) => {
         }
       }
 
-      if (window.location.pathname == "/garage") {
+      if (window.location.pathname == "/garage/") {
         let userAddress = await signer.getAddress();
         const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
         const tokenBalance = await nftContract.balanceOf(userAddress);

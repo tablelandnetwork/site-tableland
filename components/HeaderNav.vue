@@ -131,10 +131,10 @@
               {{ item }}
             </a>
           </li>
-          <h1 v-if="provider" class="font-Orbitron px-6 py-6 text-xl">
+          <h1 v-if="isMinter" v-show="provider" class="font-Orbitron px-6 py-6 text-xl">
             Your Wallet
           </h1>
-          <li>
+          <li v-if="isMinter">
             <a
               v-if="provider"
               class="btn bg-white text-white text-xl"
