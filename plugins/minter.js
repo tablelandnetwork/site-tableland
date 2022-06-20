@@ -787,6 +787,7 @@ export default async ({ env }, inject) => {
     window.ethereum.on("accountsChanged", ([newAddress]) => {
       console.log("accountsChanged", newAddress);
       wallet.setAccount(newAddress);
+      window.location.reload();
     });
 
     window.ethereum.on("chainChanged", (chainId) => {
