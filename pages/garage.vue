@@ -69,8 +69,9 @@
         id="rig-garage"
         class="flex flex-wrap py-0 px-6 md:px-38 lg:px-40 rig-garage"
       >
-        <div id="rig-message px-12" v-if="$wallet.tokenBalance == '0' ">
-          No rigs found! Visit the <a href="/minter/">mint a rig</a> page to grab your first rig captain!
+        <div id="rig-message px-12" v-if="$wallet.tokenBalance == '0'">
+          No rigs found! Visit the <a href="/minter/">mint a rig</a> page to
+          grab your first rig captain!
         </div>
       </div>
     </section>

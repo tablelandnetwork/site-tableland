@@ -9,7 +9,7 @@
 
     <!-- minter -->
     <section class="minter">
-      <div class="rigs-hero-top h-271px sm:h-207px lg:h-308px xl:h-322px"></div>
+      <div class="rigs-hero-top h-271px lg:h-308px xl:h-322px"></div>
       <div
         class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-24 lg:pt-24 2xl:pt-24 justify-between"
       >
@@ -20,7 +20,7 @@
           <div class="flex">
             <div class="text-center w-full pt-6" data-aos="fade-up">
               <h1
-                class="font-bold text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12"
+                class="font-bold text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-0"
                 data-aos="fade-up"
               >
                 <span id="minter-title">Mint a Rig</span>
@@ -32,8 +32,8 @@
       </div>
     </section>
 
-    <section class="md:block story py-32 relative">
-      <div class="w-full" style="margin-top: -300px">
+    <section class="md:block story py-0 pb-48 relative">
+      <div class="w-full">
         <div
           id="animated-carousel"
           class="animated-carousel w-full"
@@ -111,7 +111,7 @@
             id="minter-details"
           >
             <div class="flex py-12 px-12">
-              <div class="w-full lg:w-1/2">
+              <div class="w-1/2 lg:w-1/2">
                 <h3 class="text-black lg:text-xl text-l">PRICE</h3>
                 <h2
                   v-if="quantity"
@@ -124,7 +124,7 @@
                   0.05ETH
                 </h2>
               </div>
-              <div class="w-full lg:w-1/2">
+              <div class="w-1/2 lg:w-1/2">
                 <h3 class="text-black lg:text-xl text-l">TOTAL SUPPLY</h3>
                 <h2
                   id="rig-supply"
@@ -224,20 +224,20 @@
             v-bind:class="{ active: isAddClass }"
             id="minter-details"
           >
-            <div class="flex flex-wrap py-12 px-12">
-              <div class="w-full lg:w-1/2">
+            <div class="flex flex-wrap py-3 lg:py-12 px-12">
+              <div class="w-1/2 lg:w-1/2">
                 <h3 class="text-white lg:text-xl text-l">PRICE</h3>
                 <h2 class="text-white text-xl lg:text-4xl font-Orbitron">
                   0.05ETH
                 </h2>
               </div>
-              <div class="w-full lg:w-1/2">
+              <div class="w-1/2 lg:w-1/2">
                 <h3 class="text-white lg:text-xl text-l">TOTAL SUPPLY</h3>
                 <h2 class="text-white text-xl lg:text-4xl font-Orbitron">
                   3000
                 </h2>
               </div>
-              <div class="w-full px-0 py-24">
+              <div class="w-full px-0 py-6">
                 <a
                   id="mint-button"
                   class="btn btn-mint text-white"
