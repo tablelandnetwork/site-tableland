@@ -53,8 +53,8 @@
               >
                 <strong>{{ $wallet.accountCompact }}</strong>
               </a>
-              <a v-else class="btn bg-black text-white">
-                <strong>Get Metamask</strong>
+              <a @click="wallet = !wallet"  v-else class="btn bg-black text-white">
+                <strong>Connect Wallet</strong>
               </a>
               <div
                 v-show="account"
@@ -69,9 +69,32 @@
                     >
                   </li>
                   <li>
-                    <a 
+                    <a
+
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >Disconnect</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div
+                v-show="wallet"
+                class="absolute px-3 py-3 mt-2 z-10 bg-white divide-y divide-gray-100 rounded shadow w-50 dark:bg-gray-700"
+              >
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200">
+                  <li>
+                    <a
+                      href="metamask.io"
+                      target="_blank"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Get Metamask</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      @click="connectWallet"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >WalletConnect</a
                     >
                   </li>
                 </ul>
@@ -135,8 +158,8 @@
             >
               <strong>Disconnect</strong>
             </a>
-            <a v-else class="btn bg-black text-white">
-              <strong>Get Metamask</strong>
+            <a @click="connectWallet" v-else class="btn bg-black text-white" >
+              <strong>Connect Wallet</strong>
             </a>
           </li>
         </ul>
@@ -146,8 +169,23 @@
 </template>
 
 <script>
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import { ethers, providers } from "ethers";
+
 export default {
   props: ["titles", "hrefs", "targets"],
+  methods: {
+    connectWallet () {
+      const provider = new WalletConnectProvider({
+          infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
+        });
+        console.log(provider);
+        const ethers = new providers.Web3Provider(provider);
+        provider.enable();
+        if (provider) {
+        }
+    },
+  },
   computed: {
     ethereum: function () {
       return window.ethereum;
@@ -168,6 +206,7 @@ export default {
     return {
       menu: false,
       account: false,
+      wallet: false,
       provider: window.ethereum,
     };
   },

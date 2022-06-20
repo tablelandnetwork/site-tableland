@@ -1,6 +1,6 @@
 import Vue from "vue";
 import { ethers, providers } from "ethers";
-import { connect } from "@tableland/sdk";
+import { state } from "~/plugins/state.js";
 import { BigNumber } from "ethers";
 import rigsMeta from "~/assets/rigsMeta.json";
 import WalletConnectProvider from "@walletconnect/web3-provider";
@@ -417,6 +417,8 @@ export default async ({ env }, inject) => {
     price: "50000000000000",
   });
 
+
+
   const wallet = Vue.observable({
     account: null,
     accountCompact: null,
@@ -425,6 +427,10 @@ export default async ({ env }, inject) => {
     provider: null,
     price: "5000000000000000",
     quantity: "1",
+
+    get hexChainId() {
+      return "0x" + this.network?.chainId.toString(16);
+    },
 
     async connectMobile() {
       const walletConnectProvider = new WalletConnectProvider({
@@ -435,10 +441,6 @@ export default async ({ env }, inject) => {
       // this.signer = this.provider.getSigner();
       // console.log(this.web3.eth.accounts[0]);
       // this.coinbase = await this.web3.eth.getAccounts()[0];
-    },
-
-    get hexChainId() {
-      return "0x" + this.network?.chainId.toString(16);
     },
 
     async init() {
@@ -742,6 +744,9 @@ export default async ({ env }, inject) => {
     },
 
     async disconnect() {
+      localStorage.removeItem("userState");
+      this.account = null;
+      this.provider = null;
       // const accounts = await window.ethereum.request({
       //     method: "wallet_requestPermissions",
       //     params: [{
