@@ -56,7 +56,7 @@ module.exports = {
           },
         ];
       },
-      read: async function (query) {
+      async read (query) {
         if (testErr) {
           const err = testErr;
           testErr = null;
@@ -118,11 +118,11 @@ module.exports = {
           name: "unittests_180",
         };
       },
-      siwe: async function () {}
+      async siwe () {}
     };
   },
   ConnectOptions: {},
-  nextError: function (err) {
+  nextError (err) {
     // console.log('nextError ' + err);
     testErr = err;
   },
