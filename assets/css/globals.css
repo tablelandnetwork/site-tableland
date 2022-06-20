@@ -1818,6 +1818,9 @@ input:checked ~ .tab-content {
 }
 
 @media (max-width: 720px) {
+  .filters {
+    display: none;
+  }
   .minter {
     height: 200px;
   }
