@@ -10,7 +10,7 @@ export default async ({ env }, inject) => {
     window.ethereum != null
       ? new ethers.providers.Web3Provider(window.ethereum, "any")
       : new WalletConnectProvider({
-          infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
+          infuraId: "e949e17ac40246f0a00ff2a4119be7a2",
         });
   ethers.getDefaultProvider();
 
@@ -434,94 +434,102 @@ export default async ({ env }, inject) => {
 
     async connectMobile() {
       const walletConnectProvider = new WalletConnectProvider({
-        infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
+        infuraId: "e949e17ac40246f0a00ff2a4119be7a2",
       });
       await walletConnectProvider.enable();
-      this.provider = new ethers.providers.Web3Provider(walletConnectProvider);
+      provider = new ethers.providers.Web3Provider(walletConnectProvider);
       // this.signer = this.provider.getSigner();
       // console.log(this.web3.eth.accounts[0]);
       // this.coinbase = await this.web3.eth.getAccounts()[0];
       const signer = provider.getSigner();
+      console.log(signer.accounts);
+      const account = await provider.getAccounts();
+      console.log("account id",account)
+
+
     },
 
     async init() {
       this.provider = provider;
       this.network = this.provider.getNetwork();
       this.priceFix = ethers.utils.formatEther(this.price);
-      const [account] = await this.provider.listAccounts();
 
-      if (account) {
-        await wallet.setAccount(account);
-      }
+      if (window.ethereum) {
+        const [account] = await this.provider.listAccounts();
 
-      // Check contract on page load
-      const signer = provider.getSigner();
-      const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
-      const totalSupply = await nftContract.totalSupply();
-      const rigId = this.rigId;
-
-      // Force page refreshes on network changes
-      {
-        // The "any" network will allow spontaneous network changes
-        const provider = new ethers.providers.Web3Provider(
-          window.ethereum,
-          "any"
-        );
-        provider.on("network", (newNetwork, oldNetwork) => {
-          // When a Provider makes its initial connection, it emits a "network"
-          // event with a null oldNetwork along with the newNetwork. So, if the
-          // oldNetwork exists, it represents a changing network
-          if (oldNetwork) {
-            window.location.reload();
-          }
-        });
-      }
-
-      if (window.location.pathname == "/minter/") {
-        //Check contract totalSupply
-        const maxSupply = 3000 - totalSupply;
-        document.getElementById("rig-supply").innerHTML = maxSupply + "/3000";
-        if (maxSupply === 0) {
-          console.log("no more left!");
-          document.getElementById("connect-button").innerHTML =
-            "RIGS SOLD OUT!";
-          document.querySelector("#connect-button").disabled = true;
+        if (account) {
+          await wallet.setAccount(account);
         }
-      }
 
-      if (window.location.pathname == "/garage/") {
-        let userAddress = await signer.getAddress();
+        // Check contract on page load
+        const signer = provider.getSigner();
         const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
-        const tokenBalance = await nftContract.balanceOf(userAddress);
-        this.tokenBalance = tokenBalance;
-        const rigBalance = await nftContract.tokensOfOwnerIn(
-          userAddress,
-          0,
-          10000
-        );
+        const totalSupply = await nftContract.totalSupply();
+        const rigId = this.rigId;
 
-        rigBalance.forEach((item) => {
-          let rigLog = document.getElementById("rig-garage");
-          const rigId = ethers.utils.formatUnits(item._hex, 0);
-          const rigIdSub = ethers.utils.formatUnits(item._hex, 0) - 1;
-          rigLog.innerHTML += `<div class="lg:w-1/3 md:w-1/2 w-full px-3 py-3 rigs">
-                  <a href="/rigs/${rigId}">
-                   <div class="rig-frame ${rigsMeta.rigs[rigIdSub].attributes[1].value}" >
-                    <img src="${rigsMeta.rigs[rigIdSub].image}"/>
-                   </div>
-                   <h2 class="text-black font-Orbitron text-xl px-3 py-3">RIG ID #00${rigId}</h2>
-                    <p class="text-black px-3 py-0">${rigsMeta.rigs[rigIdSub].attributes[1].value}</p>
-                    <p class="text-black px-3 py-3 pb-3 ${rigsMeta.rigs[rigIdSub].attributes[1].value} rarity-${rigsMeta.rigs[rigIdSub].attributes[0].value}">${rigsMeta.rigs[rigIdSub].attributes[0].value}/100</p>
-                  </a>
-                </div>`;
-        });
-      }
+        // Force page refreshes on network changes
+        {
+          // The "any" network will allow spontaneous network changes
+          const provider = new ethers.providers.Web3Provider(
+            window.ethereum,
+            "any"
+          );
+          provider.on("network", (newNetwork, oldNetwork) => {
+            // When a Provider makes its initial connection, it emits a "network"
+            // event with a null oldNetwork along with the newNetwork. So, if the
+            // oldNetwork exists, it represents a changing network
+            if (oldNetwork) {
+              window.location.reload();
+            }
+          });
+        }
 
-      if (window.location.pathname == "/rigs/" + rigId) {
-        //Check rig owned address
-        const rigOwner = await nftContract.ownerOf(rigId);
-        document.getElementById("rig-owner").innerHTML = "OWNED BY " + rigOwner;
-      } else {
+        if (window.location.pathname == "/minter/") {
+          //Check contract totalSupply
+          const maxSupply = 3000 - totalSupply;
+          document.getElementById("rig-supply").innerHTML = maxSupply + "/3000";
+          if (maxSupply === 0) {
+            console.log("no more left!");
+            document.getElementById("connect-button").innerHTML =
+              "RIGS SOLD OUT!";
+            document.querySelector("#connect-button").disabled = true;
+          }
+        }
+
+        if (window.location.pathname == "/garage/") {
+          let userAddress = await signer.getAddress();
+          const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
+          const tokenBalance = await nftContract.balanceOf(userAddress);
+          this.tokenBalance = tokenBalance;
+          const rigBalance = await nftContract.tokensOfOwnerIn(
+            userAddress,
+            0,
+            10000
+          );
+
+          rigBalance.forEach((item) => {
+            let rigLog = document.getElementById("rig-garage");
+            const rigId = ethers.utils.formatUnits(item._hex, 0);
+            const rigIdSub = ethers.utils.formatUnits(item._hex, 0) - 1;
+            rigLog.innerHTML += `<div class="lg:w-1/3 md:w-1/2 w-full px-3 py-3 rigs">
+                    <a href="/rigs/${rigId}">
+                     <div class="rig-frame ${rigsMeta.rigs[rigIdSub].attributes[1].value}" >
+                      <img src="${rigsMeta.rigs[rigIdSub].image}"/>
+                     </div>
+                     <h2 class="text-black font-Orbitron text-xl px-3 py-3">RIG ID #00${rigId}</h2>
+                      <p class="text-black px-3 py-0">${rigsMeta.rigs[rigIdSub].attributes[1].value}</p>
+                      <p class="text-black px-3 py-3 pb-3 ${rigsMeta.rigs[rigIdSub].attributes[1].value} rarity-${rigsMeta.rigs[rigIdSub].attributes[0].value}">${rigsMeta.rigs[rigIdSub].attributes[0].value}/100</p>
+                    </a>
+                  </div>`;
+          });
+        }
+
+        if (window.location.pathname == "/rigs/" + rigId) {
+          //Check rig owned address
+          const rigOwner = await nftContract.ownerOf(rigId);
+          document.getElementById("rig-owner").innerHTML = "OWNED BY " + rigOwner;
+        } else {
+        }
       }
     },
 
@@ -789,7 +797,9 @@ export default async ({ env }, inject) => {
     window.ethereum.on("accountsChanged", ([newAddress]) => {
       console.log("accountsChanged", newAddress);
       wallet.setAccount(newAddress);
-      window.location.reload();
+      if (window.location.pathname == "/garage/") {
+        window.location.reload();
+      }
     });
 
     window.ethereum.on("chainChanged", (chainId) => {

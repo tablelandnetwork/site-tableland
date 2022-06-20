@@ -54,11 +54,14 @@
                 <strong>{{ $wallet.accountCompact }}</strong>
               </a>
               <a
+                v-if="!provider2"
                 @click="wallet = !wallet"
                 v-else
                 class="btn bg-black text-white"
               >
-                <strong>Connect Wallet</strong>
+                <strong>Connect Wallet
+
+                </strong>
               </a>
               <div
                 v-if="account"
@@ -141,7 +144,7 @@
           >
             Your Wallet
           </h1>
-          <li v-if="isMinter">
+          <li v-show="isMinter">
             <a
               v-if="provider"
               class="btn bg-white text-white text-xl"
@@ -191,14 +194,18 @@ export default {
   props: ["titles", "hrefs", "targets"],
   methods: {
     connectWallet() {
-      const provider = new WalletConnectProvider({
+      const provider2 = new WalletConnectProvider({
         infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
       });
-      console.log(provider);
-      const ethers = new providers.Web3Provider(provider);
-      provider.enable();
-      if (provider) {
-      }
+      console.log(provider2);
+      this.provider2 = new ethers.providers.Web3Provider(provider2);
+      const signer = this.provider2.getSigner();
+      // this.$wallet.provider = this.provider2;
+      console.log("signer add: " + signer.address);
+      // const account = this.provider.getAccounts();
+      // console.log("account id",account)
+      // if (provider) {
+      // }
     },
   },
   computed: {
