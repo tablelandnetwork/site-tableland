@@ -54,7 +54,6 @@
                 <strong>{{ $wallet.accountCompact }}</strong>
               </a>
               <a
-                v-if="!provider2"
                 @click="wallet = !wallet"
                 v-else
                 class="btn bg-black text-white"
