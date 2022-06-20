@@ -53,7 +53,11 @@
               >
                 <strong>{{ $wallet.accountCompact }}</strong>
               </a>
-              <a @click="wallet = !wallet"  v-else class="btn bg-black text-white">
+              <a
+                @click="wallet = !wallet"
+                v-else
+                class="btn bg-black text-white"
+              >
                 <strong>Connect Wallet</strong>
               </a>
               <div
@@ -70,7 +74,6 @@
                   </li>
                   <li>
                     <a
-
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >Disconnect</a
                     >
@@ -158,7 +161,7 @@
             >
               <strong>Disconnect</strong>
             </a>
-            <a @click="connectWallet" v-else class="btn bg-black text-white" >
+            <a @click="connectWallet" v-else class="btn bg-black text-white">
               <strong>Connect Wallet</strong>
             </a>
           </li>
@@ -175,15 +178,15 @@ import { ethers, providers } from "ethers";
 export default {
   props: ["titles", "hrefs", "targets"],
   methods: {
-    connectWallet () {
+    connectWallet() {
       const provider = new WalletConnectProvider({
-          infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
-        });
-        console.log(provider);
-        const ethers = new providers.Web3Provider(provider);
-        provider.enable();
-        if (provider) {
-        }
+        infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
+      });
+      console.log(provider);
+      const ethers = new providers.Web3Provider(provider);
+      provider.enable();
+      if (provider) {
+      }
     },
   },
   computed: {

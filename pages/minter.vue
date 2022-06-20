@@ -66,6 +66,8 @@
               >VISIT GARAGE</a
             >
             <a href="/minter" class="btn btn-mint text-white">MINT ANOTHER</a>
+            <h1>Explore your parts with Tableland</h1>
+            <Playground></Playground>
           </div>
         </div>
         <div class="flex lg:px-12 xl:px-48 py-0">

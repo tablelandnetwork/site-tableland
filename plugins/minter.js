@@ -417,8 +417,6 @@ export default async ({ env }, inject) => {
     price: "50000000000000",
   });
 
-
-
   const wallet = Vue.observable({
     account: null,
     accountCompact: null,
