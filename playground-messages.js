@@ -18,7 +18,10 @@ export default {
     "    help      Show this message again\n\n" +
     "Example Read Queries:\n" +
     "    SELECT * FROM LootAttributes_3;\n" +
-    "    SELECT * FROM todo_todos_example_34 ORDER BY id ASC;",
+    "    SELECT * FROM todo_todos_example_34 ORDER BY id ASC;\n" +
+    "Example Create and Write Queries:\n" +
+    "    CREATE TABLE trees (climate TEXT, name TEXT);\n" +
+    "    INSERT INTO trees_5_16 (\"climate\", \"name\") VALUES (\"cold\", \"aspen\");",
   running: "Running SQL on the Validator",
   warn: {
     address:
