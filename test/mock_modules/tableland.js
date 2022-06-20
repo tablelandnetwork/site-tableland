@@ -56,7 +56,7 @@ module.exports = {
           },
         ];
       },
-      async read (query) {
+      async read(query) {
         if (testErr) {
           const err = testErr;
           testErr = null;
@@ -98,7 +98,6 @@ module.exports = {
           throw err;
         }
 
-
         if (query === "updatequery1") {
           return {
             data: null,
@@ -118,11 +117,11 @@ module.exports = {
           name: "unittests_180",
         };
       },
-      async siwe () {}
+      async siwe() {},
     };
   },
   ConnectOptions: {},
-  nextError (err) {
+  nextError(err) {
     // console.log('nextError ' + err);
     testErr = err;
   },

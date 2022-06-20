@@ -307,10 +307,10 @@ export default {
         this.processError(err);
       }
     },
-    async runCommand (sql, mutate) {
+    async runCommand(sql, mutate) {
       try {
         this.showSpinner(messages.running);
-        const command = mutate ? 'runWrite' : 'runRead';
+        const command = mutate ? "runWrite" : "runRead";
 
         const response = await this.$store.dispatch(command, sql);
         this.loading = false;
@@ -338,19 +338,21 @@ export default {
         this.processError(err);
       }
     },
-    async getReceipt (txnHash) {
+    async getReceipt(txnHash) {
       try {
         this.showSpinner(messages.fetching);
-        const response = await this.$store.dispatch('getReceipt', txnHash);
+        const response = await this.$store.dispatch("getReceipt", txnHash);
         this.loading = false;
         this.cls();
-        this.printf('Transaction Receipt:\n' + JSON.stringify(response, null, 4));
+        this.printf(
+          "Transaction Receipt:\n" + JSON.stringify(response, null, 4)
+        );
       } catch (err) {
         this.loading = false;
         this.processError(err);
       }
     },
-    async list () {
+    async list() {
       try {
         this.showSpinner();
         const tables = await this.$store.dispatch("myTables");

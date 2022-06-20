@@ -59,7 +59,7 @@ const getConnection = (function () {
 
 export const actions: ActionTree<RootState, RootState> = {
   connect: async function (context) {
-    console.log('store connect...');
+    console.log("store connect...");
     // connect to tableland
     const tableland = await getConnection();
 
