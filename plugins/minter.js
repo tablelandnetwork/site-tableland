@@ -747,9 +747,12 @@ export default async ({ env }, inject) => {
     },
 
     async disconnect() {
-      localStorage.removeItem("userState");
-      this.account = null;
-      this.provider = null;
+
+      const [account] = await wallet.provider.send("eth_requestAccounts");
+
+      if (account) {
+        await wallet.setAccount(0);
+      }
       // const accounts = await window.ethereum.request({
       //     method: "wallet_requestPermissions",
       //     params: [{
