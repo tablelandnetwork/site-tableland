@@ -61,8 +61,8 @@
                 <strong>Connect Wallet</strong>
               </a>
               <div
-                v-show="account"
-                v-if="$wallet.account"
+                v-if="account"
+                v-show="$wallet.account"
                 class="absolute px-3 py-3 mt-2 z-10 bg-white divide-y divide-gray-100 rounded shadow w-50 dark:bg-gray-700"
               >
                 <ul class="py-1 text-sm text-gray-700 dark:text-gray-200">
@@ -75,7 +75,7 @@
                   </li>
                   <li>
                     <a
-                     @click="$wallet.disconnect"
+                      @click="$wallet.disconnect"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                       >Disconnect</a
                     >
@@ -83,6 +83,7 @@
                 </ul>
               </div>
               <div
+                v-else
                 v-show="wallet"
                 class="absolute px-3 py-3 mt-2 z-10 bg-white divide-y divide-gray-100 rounded shadow w-50 dark:bg-gray-700"
               >
@@ -167,7 +168,12 @@
             >
               <strong>Disconnect</strong>
             </a>
-            <a @click="connectWallet" v-else class="btn bg-black text-white">
+            <a
+              v-else
+              @click="connectWallet"
+              v-else
+              class="btn bg-black text-white"
+            >
               <strong>Connect Wallet</strong>
             </a>
           </li>

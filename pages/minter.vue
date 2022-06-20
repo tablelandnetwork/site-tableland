@@ -226,14 +226,14 @@
           >
             <div class="flex flex-wrap py-3 lg:py-12 px-12">
               <div class="w-1/2 lg:w-1/2">
-                <h3 class="text-white lg:text-xl text-l">PRICE</h3>
-                <h2 class="text-white text-xl lg:text-4xl font-Orbitron">
+                <h3 class="text-black lg:text-xl text-l">PRICE</h3>
+                <h2 class="text-black text-xl lg:text-4xl font-Orbitron">
                   0.05ETH
                 </h2>
               </div>
               <div class="w-1/2 lg:w-1/2">
-                <h3 class="text-white lg:text-xl text-l">TOTAL SUPPLY</h3>
-                <h2 class="text-white text-xl lg:text-4xl font-Orbitron">
+                <h3 class="text-black lg:text-xl text-l">TOTAL SUPPLY</h3>
+                <h2 class="text-black text-xl lg:text-4xl font-Orbitron">
                   3000
                 </h2>
               </div>

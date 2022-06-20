@@ -441,6 +441,7 @@ export default async ({ env }, inject) => {
       // this.signer = this.provider.getSigner();
       // console.log(this.web3.eth.accounts[0]);
       // this.coinbase = await this.web3.eth.getAccounts()[0];
+      const signer = provider.getSigner();
     },
 
     async init() {
@@ -747,7 +748,6 @@ export default async ({ env }, inject) => {
     },
 
     async disconnect() {
-
       const [account] = await wallet.provider.send("eth_requestAccounts");
       if (account) {
         await wallet.setAccount(0);
