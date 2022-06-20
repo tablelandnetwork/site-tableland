@@ -423,8 +423,10 @@ export default async ({ env }, inject) => {
     network: null,
     balance: null,
     provider: null,
-    price: "5000000000000000",
+    price: "50000000000000000",
     quantity: "1",
+    priceFix: null,
+    tokenBalance: null,
 
     get hexChainId() {
       return "0x" + this.network?.chainId.toString(16);
@@ -444,6 +446,7 @@ export default async ({ env }, inject) => {
     async init() {
       this.provider = provider;
       this.network = this.provider.getNetwork();
+      this.priceFix = ethers.utils.formatEther(this.price);
       const [account] = await this.provider.listAccounts();
 
       if (account) {
@@ -489,12 +492,13 @@ export default async ({ env }, inject) => {
         let userAddress = await signer.getAddress();
         const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
         const tokenBalance = await nftContract.balanceOf(userAddress);
+        this.tokenBalance = tokenBalance;
         const rigBalance = await nftContract.tokensOfOwnerIn(
           userAddress,
           0,
           10000
         );
-        console.log("rig balance" + rigBalance);
+
         rigBalance.forEach((item) => {
           let rigLog = document.getElementById("rig-garage");
           const rigId = ethers.utils.formatUnits(item._hex, 0);
@@ -504,10 +508,9 @@ export default async ({ env }, inject) => {
                    <div class="rig-frame ${rigsMeta.rigs[rigIdSub].attributes[1].value}" >
                     <img src="${rigsMeta.rigs[rigIdSub].image}"/>
                    </div>
-                   <h2 class="text-black font-Orbitron text-l">RIG ID #00${rigId}</h2>
-                  <p class="text-black">${rigsMeta.rigs[rigIdSub].attributes[1].value}</p>
-                  <p class="text-black px-3 py-0">${rigsMeta.rigs[rigIdSub].attributes[1].value}</p>
-                  <p class="text-black px-3 py-3 pb-3 ${rigsMeta.rigs[rigIdSub].attributes[1].value} rarity-${rigsMeta.rigs[rigIdSub].attributes[0].value}">${rigsMeta.rigs[rigIdSub].attributes[0].value}/100</p>
+                   <h2 class="text-black font-Orbitron text-xl px-3 py-3">RIG ID #00${rigId}</h2>
+                    <p class="text-black px-3 py-0">${rigsMeta.rigs[rigIdSub].attributes[1].value}</p>
+                    <p class="text-black px-3 py-3 pb-3 ${rigsMeta.rigs[rigIdSub].attributes[1].value} rarity-${rigsMeta.rigs[rigIdSub].attributes[0].value}">${rigsMeta.rigs[rigIdSub].attributes[0].value}/100</p>
                   </a>
                 </div>`;
         });

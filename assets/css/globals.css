@@ -645,6 +645,11 @@ input:focus {
   position: relative;
 }
 
+.price-box {
+  overflow: hidden;
+  width: 220px;
+}
+
 .price-box span {
   width: 155px;
 }

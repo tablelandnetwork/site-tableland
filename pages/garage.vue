@@ -15,16 +15,6 @@
     </section>
 
     <section class="md:block bg-solid py-24 relative">
-      <h4 class="text-black lg:text-xl text-md" v-if="$wallet.account">
-        WALLET ID: {{ $wallet.account }}
-      </h4>
-      <h1
-        class="text-black font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
-        data-aos="fade-up"
-        v-if="$wallet.account"
-      >
-        Welcome to the Garage
-      </h1>
       <h1
         class="text-black text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
         data-aos="fade-up"
@@ -38,42 +28,49 @@
         v-if="$wallet.account"
       >
         <div class="flex flex-wrap">
-          <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-0" data-aos="fade-up">
+          <div
+            class="lg:w-full px-6 lg:px-12 lg:pb-12 pb-6 pt-0"
+            data-aos="fade-up"
+          >
+            <h4 class="text-black lg:text-xl text-md" v-if="$wallet.account">
+              WALLET ID: {{ $wallet.account }}
+            </h4>
+            <h1
+              class="text-black font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
+              data-aos="fade-up"
+              v-if="$wallet.account"
+            >
+              Welcome to the Garage
+            </h1>
+          </div>
+          <div
+            class="lg:w-1/2 px-6 lg:px-12 lg:pb-12 pb-6 pt-0"
+            data-aos="fade-up"
+          >
             <h1
               class="text-black font-Orbitron w-full h-auto text-3xl sm:text-4xl lg:text-5xl md:text-4xl leading-tighter mb-12 lg:mb-10"
               data-aos="fade-up"
             >
-              Your Rigs
+              — Your Rigs
             </h1>
           </div>
-        </div>
-        <div id="rig-garage" class="flex flex-wrap py-0 px-12 rig-garage"></div>
-        <div class="flex">
-          <div class="lg:w-full px-12 lg:pb-12 pb-6 pt-36" data-aos="fade-up">
-            <h1
-              class="text-black font-Orbitron w-full h-auto text-3xl sm:text-4xl lg:text-5xl md:text-4xl leading-tighter mb-12 lg:mb-10"
-              data-aos="fade-up"
+          <div class="lg:w-1/2 px-6 lg:px-12 lg:pb-12 py-2" data-aos="fade-up">
+            <h4
+              id="rig-balance"
+              class="text-black text-right lg:text-2xl text-md"
+              v-show="$wallet.tokenBalance"
             >
-              Your Badges
-            </h1>
+              {{ $wallet.tokenBalance }} RIGS OWNED
+            </h4>
           </div>
         </div>
-        <div class="flex py-0">
-          <div class="w-1/3 px-12 text-center">
-            <img src="~assets/img/badge1.png" />
-            <h3 class="text-black lg:text-xl text-l py-2">badge_name</h3>
-            <h3 class="text-black lg:text-xl text-l">earned 05/05/2022</h3>
-          </div>
-          <div class="w-1/3 px-12 text-center">
-            <img src="~assets/img/badge2.png" />
-            <h3 class="text-black lg:text-xl text-l py-2">badge_name</h3>
-            <h3 class="text-black lg:text-xl text-l">earned 05/05/2022</h3>
-          </div>
-          <div class="w-1/3 px-12 text-center">
-            <img src="~assets/img/badge3.png" />
-            <h3 class="text-black lg:text-xl text-l py-2">badge_name</h3>
-            <h3 class="text-black lg:text-xl text-l">earned 05/05/2022</h3>
-          </div>
+      </div>
+      <div
+        id="rig-garage"
+        class="flex flex-wrap py-0 px-6 md:px-38 lg:px-38 rig-garage"
+      >
+        <div id="rig-message px-12" v-show="$wallet.tokenBalnce">
+          No rigs found!
         </div>
       </div>
     </section>

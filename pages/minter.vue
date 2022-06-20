@@ -63,8 +63,8 @@
               >VISIT GARAGE</a
             >
             <a href="/minter" class="btn btn-mint text-white">MINT ANOTHER</a>
-            <h1>Explore your parts with Tableland</h1>
-            <Playground></Playground>
+            <!-- <h1>Explore your parts with Tableland</h1>
+            <Playground></Playground> -->
           </div>
         </div>
         <div class="flex lg:px-12 xl:px-48 py-0">
@@ -81,7 +81,7 @@
                   <p>WALLET: {{ $wallet.account }}</p>
                   <p>BALANCE: {{ $wallet.balance }} ETH</p>
                   <p>QUANTITY: {{ quantity }}</p>
-                  <p>PRICE: {{ 0.05 * quantity }} ETH</p>
+                  <p>PRICE: {{ $wallet.priceFix * quantity }} ETH</p>
                   ============================================================================
                   ============================================================================
                   ============================================================================
@@ -117,7 +117,7 @@
                   v-if="quantity"
                   class="overflow-hidden text-black lg:text-4xl text-xl font-Orbitron pr-12 price-box"
                 >
-                  <span>{{ 0.05 * quantity }}</span
+                  <span>{{ $wallet.priceFix * quantity }}</span
                   >ETH
                 </h2>
                 <h2 v-else class="text-black text-xl lg:text-4xl font-Orbitron">
@@ -309,6 +309,7 @@
 <script>
 import helpers from "~/plugins/helpers";
 import rigsMeta from "~/assets/rigsMeta.json";
+
 export default {
   head() {
     return {
