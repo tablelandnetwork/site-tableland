@@ -59,6 +59,7 @@ const getConnection = (function () {
 
 export const actions: ActionTree<RootState, RootState> = {
   connect: async function (context) {
+    console.log("store connect...");
     // connect to tableland
     const tableland = await getConnection();
 
@@ -68,6 +69,11 @@ export const actions: ActionTree<RootState, RootState> = {
   },
   disconnect: async function (context) {
     await getConnection({ disconnect: true });
+  },
+  getReceipt: async function (context, txnHash) {
+    const tableland = await getConnection();
+    console.log(txnHash);
+    return await tableland.receipt(txnHash);
   },
   runWrite: async function (context, query) {
     const tableland = await getConnection();

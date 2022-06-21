@@ -286,11 +286,14 @@ export default {
 
         if (sql.indexOf("receipt") === 0) {
           const parts = sql.split(" ").filter((c) => c);
+
           const txnHash = parts[1];
           await this.getReceipt(txnHash);
           return;
         }
+
         let mutate = false;
+
         if (
           sql.indexOf("insert") === 0 ||
           sql.indexOf("update") === 0 ||
@@ -304,24 +307,11 @@ export default {
         this.processError(err);
       }
     },
-    async getReceipt(txnHash) {
-      try {
-        this.showSpinner(messages.fetching);
-        const response = await this.$store.dispatch("getReceipt", txnHash);
-        this.loading = false;
-        this.cls();
-        this.printf(
-          "Transaction Receipt:\n" + JSON.stringify(response, null, 4)
-        );
-      } catch (err) {
-        this.loading = false;
-        this.processError(err);
-      }
-    },
     async runCommand(sql, mutate) {
       try {
         this.showSpinner(messages.running);
         const command = mutate ? "runWrite" : "runRead";
+
         const response = await this.$store.dispatch(command, sql);
         this.loading = false;
         this.cls();
@@ -343,6 +333,20 @@ export default {
         this.loading = false;
         this.cls();
         this.printf("Table Created:\n" + JSON.stringify(response, null, 4));
+      } catch (err) {
+        this.loading = false;
+        this.processError(err);
+      }
+    },
+    async getReceipt(txnHash) {
+      try {
+        this.showSpinner(messages.fetching);
+        const response = await this.$store.dispatch("getReceipt", txnHash);
+        this.loading = false;
+        this.cls();
+        this.printf(
+          "Transaction Receipt:\n" + JSON.stringify(response, null, 4)
+        );
       } catch (err) {
         this.loading = false;
         this.processError(err);
@@ -376,6 +380,7 @@ export default {
     },
     processError(err) {
       this.cls();
+
       if (err.message.includes("address not authorized")) {
         return this.printf(messages.warn.address);
       }

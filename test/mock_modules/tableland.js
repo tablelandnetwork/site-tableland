@@ -1,3 +1,4 @@
+/* eslint-disable require-await */
 let testErr = null;
 
 module.exports = {
@@ -55,7 +56,7 @@ module.exports = {
           },
         ];
       },
-      read(query) {
+      async read(query) {
         if (testErr) {
           const err = testErr;
           testErr = null;
@@ -119,6 +120,7 @@ module.exports = {
       async siwe() {},
     };
   },
+  ConnectOptions: {},
   nextError(err) {
     // console.log('nextError ' + err);
     testErr = err;
