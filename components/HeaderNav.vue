@@ -100,9 +100,9 @@
                   </li>
                   <li>
                     <a
-                      @click="connectWallet"
+                      @click="$wallet.connectMobile"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >WalletConnect</a
+                      >WalletConnect {{this.wallet.price}}</a
                     >
                   </li>
                 </ul>
@@ -192,22 +192,26 @@ import { ethers, providers } from "ethers";
 export default {
   props: ["titles", "hrefs", "targets"],
   methods: {
-    connectWallet() {
+
+    async connectWallet() {
       const provider2 = new WalletConnectProvider({
-        infuraId: "27e484dcd9e3efcfd25a83a78777cdf1",
+        infuraId: "e949e17ac40246f0a00ff2a4119be7a2",
       });
+      await provider2.enable();
       console.log(provider2);
       this.provider2 = new ethers.providers.Web3Provider(provider2);
-      const signer = this.provider2.getSigner();
-      // this.$wallet.provider = this.provider2;
-      console.log("signer add: " + signer.address);
-      // const account = this.provider.getAccounts();
+      const signer = await this.provider2.getSigner();
+      // this.$wallet.provider = this.provider2.provider.accounts[0];
+      console.log(this.provider2.provider.accounts[0]);
+      // const account = provider2.getAccounts();
       // console.log("account id",account)
+
       // if (provider) {
       // }
     },
   },
   computed: {
+
     ethereum: function () {
       return window.ethereum;
     },

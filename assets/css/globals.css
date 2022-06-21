@@ -767,7 +767,7 @@ input:focus {
 
 .rig-result {
   background: transparent;
-  margin-top: -400px;
+  margin-top: -350px;
   height: auto;
   max-width: 100%;
   width: 100%;
@@ -1363,7 +1363,7 @@ input:focus {
 }
 
 .animated-carousel.mint div {
-  animation: slide-slow 1s ease-in-out infinite;
+  animation: slide-slow 0.25s ease-in-out infinite;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -1781,6 +1781,12 @@ input:checked ~ .tab-content {
 }
 
 @media (max-width: 1080px) {
+  .rig-result {
+    margin-top: -300px;
+  }
+  .rig-result .btn {
+    margin: 10px 0px;
+  }
   .animated-carousel {
     margin-left: 0 !important;
     margin-right: 0 !important;

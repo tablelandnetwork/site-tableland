@@ -1,20 +1,21 @@
 import Vue from "vue";
 import { ethers, providers } from "ethers";
-import { state } from "~/plugins/state.js";
 import { BigNumber } from "ethers";
-import rigsMeta from "~/assets/rigsMeta.json";
 import WalletConnectProvider from "@walletconnect/web3-provider";
+import rigsMeta from "~/assets/rigsMeta.json";
 
 export default async ({ env }, inject) => {
+
+  ethers.getDefaultProvider();
+
   const provider =
     window.ethereum != null
       ? new ethers.providers.Web3Provider(window.ethereum, "any")
       : new WalletConnectProvider({
           infuraId: "e949e17ac40246f0a00ff2a4119be7a2",
         });
-  ethers.getDefaultProvider();
 
-  const rig = Vue.observable({
+  const rig = {
     address: "0x88694d0b8c8E800AB3D9eecBF9A8923B3b5825fA",
     abi: [
       {
@@ -415,7 +416,7 @@ export default async ({ env }, inject) => {
       },
     ],
     price: "50000000000000",
-  });
+  };
 
   const wallet = Vue.observable({
     account: null,
@@ -428,33 +429,45 @@ export default async ({ env }, inject) => {
     priceFix: null,
     tokenBalance: null,
 
+
+    //Walletconnect functions
+    async connectMobile() {
+      await provider.enable();
+      const wallct = new ethers.providers.Web3Provider(provider);
+      const signer = await wallct.getSigner();
+      const [account] = await wallct.listAccounts();
+      // this.$wallet.provider = this.provider2.provider.accounts[0];
+      console.log("connected to account:" + account)
+      if (account) {
+        await wallet.setAccountWallet(account);
+      }
+
+
+
+    },
+
     get hexChainId() {
       return "0x" + this.network?.chainId.toString(16);
     },
 
-    async connectMobile() {
-      const walletConnectProvider = new WalletConnectProvider({
-        infuraId: "e949e17ac40246f0a00ff2a4119be7a2",
-      });
-      await walletConnectProvider.enable();
-      provider = new ethers.providers.Web3Provider(walletConnectProvider);
-      // this.signer = this.provider.getSigner();
-      // console.log(this.web3.eth.accounts[0]);
-      // this.coinbase = await this.web3.eth.getAccounts()[0];
-      const signer = provider.getSigner();
-      console.log(signer.accounts);
-      const account = await provider.getAccounts();
-      console.log("account id",account)
-
-
-    },
-
     async init() {
       this.provider = provider;
-      this.network = this.provider.getNetwork();
-      this.priceFix = ethers.utils.formatEther(this.price);
 
+      // For devices with no browser wallet
+      // Notes: Not working at the moment, need to find better way to implement WalletConnect
+      // if (!window.ethereum) {
+      //   console.log("connected to walletconnect")
+      //   console.log(this.provider)
+      //   if (account) {
+      //     await wallet.setAccountWallet(account);
+      //   }
+      // }
+
+      // For devices WITH browser wallets
       if (window.ethereum) {
+        console.log("connected to metamask")
+        this.network = this.provider.getNetwork();
+        this.priceFix = ethers.utils.formatEther(this.price);
         const [account] = await this.provider.listAccounts();
 
         if (account) {
@@ -522,6 +535,7 @@ export default async ({ env }, inject) => {
                     </a>
                   </div>`;
           });
+
         }
 
         if (window.location.pathname == "/rigs/" + rigId) {
@@ -548,6 +562,13 @@ export default async ({ env }, inject) => {
         this.accountCompact = null;
         this.balance = null;
       }
+    },
+
+    async setAccountWallet() {
+          this.account = null;
+          this.accountCompact = null;
+          this.balance = null;
+
     },
 
     async connect() {
@@ -807,7 +828,8 @@ export default async ({ env }, inject) => {
       window.location.reload();
     });
 
-    wallet.init();
-    inject("wallet", wallet);
+
   }
+  wallet.init();
+  inject("wallet", wallet);
 };

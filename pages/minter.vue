@@ -55,7 +55,7 @@
             id="rig-box"
             class="flex flex-wrap justify-center text-center"
           ></div>
-          <div class="rig-btn">
+          <div class="rig-btn py-2 px-2">
             <a id="tx-btn" class="btn bg-black text-white" target="_blank"
               >VIEW TRANSACTION</a
             >
