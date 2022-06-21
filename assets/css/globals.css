@@ -958,13 +958,9 @@ input:focus {
   width: 750px;
   max-width: 100%;
   height: auto;
-  /* background-image: linear-gradient(180deg, #b2d1fc 0%, #dd6c90 100%);
-  border-radius: 25px; */
-  overflow: hidden;
   padding: 10px;
   margin: 0px auto;
   animation: float 10s ease-in-out infinite;
-  position: relative;
   z-index: 999;
 }
 
@@ -1738,6 +1734,9 @@ input:checked ~ .tab-content {
 }
 
 @media (max-width: 1480px) {
+  nav .btn, nav li a {
+    font-size: 1em;
+  }
   .guild-list .vehicle {
     max-width: 250px !important;
     margin: 0px !important;
@@ -1759,10 +1758,6 @@ input:checked ~ .tab-content {
 }
 
 @media (min-width: 2140px) {
-  .rig-result {
-    zoom: 1;
-    top: -500px;
-  }
 }
 
 @media (max-width: 1640px) {
@@ -1852,8 +1847,8 @@ input:checked ~ .tab-content {
   }
 
   .btn {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .guild-list .vehicle {

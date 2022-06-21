@@ -11,7 +11,7 @@
     <section class="rig-id">
       <div
         v-if="rigId"
-        class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-36 pt-24 lg:pt-48 justify-between"
+        class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-36 pt-30 lg:pt-48 justify-between"
       >
         <h1
           class="text-black text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
@@ -21,11 +21,6 @@
         </h1>
         <div
           class="rig-frame"
-          :class="
-            rigsMeta.rigs[rigIdName].attributes[1].value +
-            ' rarity-' +
-            rigsMeta.rigs[rigIdName].attributes[0].value
-          "
         >
           <img :src="rigsMeta.rigs[rigIdName].image" />
         </div>
@@ -33,9 +28,9 @@
           id="rig-owner"
           class="text-white text-center lg:text-xl text-l"
         ></h3>
-        <div class="flex px-6 lg:px-24 py-12">
+        <div class="flex px-6 lg:px-24 py-6 lg:py-12">
           <div class="lg:w-full minter-details">
-            <div class="flex flex-wrap py-0 lg:px-12 px-12">
+            <div class="flex flex-wrap py-0 lg:px-12 px-0">
               <div
                 class="lg:w-1/2 w-full px-0 py-3"
                 v-for="(rig, index) in rigsMeta.rigs[rigIdName].attributes"
@@ -50,7 +45,7 @@
               </div>
             </div>
             <div class="flex">
-              <div class="w-full px-24 py-18">
+              <div class="w-full lg:px-24 py-6 lg:py-18">
                 <a
                   class="btn btn-mint text-white"
                   :href="

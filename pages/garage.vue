@@ -10,11 +10,11 @@
     <!-- minter -->
     <section class="user-garage">
       <div
-        class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-8 lg:pt-12 2xl:pt-24 justify-between"
+        class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-0 lg:pt-12 2xl:pt-24 justify-between"
       ></div>
     </section>
 
-    <section class="md:block story py-24 relative">
+    <section class="md:block story py-4 md:py-24 relative">
       <h1
         class="text-black text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
         data-aos="fade-up"
@@ -24,7 +24,7 @@
       </h1>
 
       <div
-        class="container px-4 sm:px-12 md:px-12 lg:px-24 xl:px-24"
+        class="container px-0 sm:px-12 md:px-12 lg:px-24 xl:px-24"
         v-if="$wallet.account"
       >
         <div class="flex flex-wrap">
@@ -36,7 +36,7 @@
               WALLET ID: {{ $wallet.account }}
             </h4>
             <h1
-              class="text-black font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
+              class="text-black font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter md:mb-12 lg:mb-10"
               data-aos="fade-up"
               v-if="$wallet.account"
             >
@@ -44,11 +44,11 @@
             </h1>
           </div>
           <div
-            class="lg:w-1/2 px-6 lg:px-12 lg:pb-12 pb-6 pt-0"
+            class="lg:w-1/2 px-6 md:px-6 lg:px-12 lg:pb-12 pb-6 pt-0"
             data-aos="fade-up"
           >
             <h1
-              class="text-black font-Orbitron w-full h-auto text-3xl sm:text-4xl lg:text-5xl md:text-4xl leading-tighter mb-12 lg:mb-10"
+              class="text-black font-Orbitron w-full h-auto text-3xl sm:text-4xl lg:text-5xl md:text-4xl leading-tighter md:mb-12 lg:mb-10"
               data-aos="fade-up"
             >
               — Your Rigs
@@ -67,7 +67,7 @@
       </div>
       <div
         id="rig-garage"
-        class="flex flex-wrap py-0 px-6 md:px-38 lg:px-40 rig-garage"
+        class="flex flex-wrap py-0 px-0 md:px-38 lg:px-40 rig-garage"
         v-if="$wallet.account"
       >
         <div id="rig-message px-12" v-if="$wallet.tokenBalance == '0'">
