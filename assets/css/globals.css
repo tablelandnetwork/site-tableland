@@ -778,6 +778,7 @@ input:focus {
   opacity: 0;
   z-index: -999;
   display: none;
+  position: absolute;
 }
 
 .rig-result .rig-frame {
@@ -1277,6 +1278,7 @@ input:focus {
 @keyframes result {
   0% {
     opacity: 0;
+    position: relative;
   }
 
   30% {
@@ -1296,6 +1298,7 @@ input:focus {
     transform: scale(1);
     opacity: 1;
     transform: translatey(0px) rotate(0deg);
+    position: relative;
   }
 }
 
