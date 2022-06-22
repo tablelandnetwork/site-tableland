@@ -730,6 +730,9 @@ export default async ({ env }, inject) => {
       // For devices with no browser wallet
       // Notes: Not working at the moment, need to find better way to implement WalletConnect
       // if (!window.ethereum) {
+      //   const nftContract = new ethers.Contract(rig.address, rig.abi);
+      //   const totalSupply = await nftContract.totalSupply();
+      //
       //   console.log("connected to walletconnect")
       //   console.log(this.provider)
       //   if (account) {

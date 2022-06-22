@@ -870,8 +870,7 @@ input:focus {
 
 .filters .active,
 .filters button:hover {
-  background: #ff2f5b;
-  color: #232041;
+  text-decoration: underline;
 }
 
 /** rig **/
@@ -1591,21 +1590,21 @@ input:focus {
 
 .filters {
   margin: 20px;
-  display: flex;
-  justify-content: left;
 }
 
 .filter {
   margin: 20px;
-  padding: 10px 20px;
   transition: all 0.2s ease-in-out;
+}
+
+.filter:nth-child(1) {
+  margin-left: 0px;
 }
 
 .filter:hover {
   cursor: pointer;
-  background: #ff2f5b;
+  text-decoration: underline;
   transition: all 0.2s ease-in-out;
-  color: #141034;
 }
 
 /* accordion */

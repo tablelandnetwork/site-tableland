@@ -76,8 +76,7 @@
             <div class="text-white text-center" id="mint-log">
               <div id="mint-terminal" class="frame">
                 <div v-if="$wallet.account">
-                  ========================== WALLET CONNECTED
-                  ===============================
+                  <p class="text-justify">========================== WALLET CONNECTED ============================</p>
                   <p>WALLET: {{ $wallet.account }}</p>
                   <p>BALANCE: {{ $wallet.balance }} ETH</p>
                   <p>QUANTITY: {{ quantity }}</p>
@@ -85,12 +84,10 @@
                   ============================================================================
                   ============================================================================
                   ============================================================================
-                  ================= READY TO MINT CONFIRM TRANSACTION TO PROCEED
-                  =============
+                  <p>================= READY TO MINT CONFIRM TRANSACTION TO PROCEED =============</p>
                 </div>
                 <div v-else>
-                  ============================= CONNECT YOUR WALLET
-                  ===================================
+                  <p class="text-justify">============================= CONNECT YOUR WALLET =====================</p>
                   <p>
                     Tableland awaits! Connect your wallet to start your
                     adventure by grabbing one of the Rigs. Rigs give valuable
@@ -100,7 +97,7 @@
                   ============================================================================
                   ============================================================================
                   ============================================================================
-                  ========================== CONNECT YOUR WALLET =============
+                  <p>========================== CONNECT YOUR WALLET =============================</p>
                 </div>
               </div>
             </div>

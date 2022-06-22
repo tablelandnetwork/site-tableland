@@ -1,6 +1,6 @@
 <template>
   <section class="rig-gallery">
-    <div class="filters hidden lg:block text-black" data-aos="fade-up">
+    <div class="filters hidden lg:block text-black text-l" data-aos="fade-up">
 			<span class="filter" v-bind:class="{ active: currentFilter === 'All' }" v-on:click="setFilter('All')">View All</span>
       <span class="filter" v-bind:class="{ active: currentFilter === 'Titans' }" v-on:click="setFilter('Titans')">Titans</span>
       <span class="filter" v-bind:class="{ active: currentFilter === 'Tumblers' }" v-on:click="setFilter('Tumblers')">Tumblers</span>
@@ -29,7 +29,7 @@
       </div>
       <h2 class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3">RIG ID #00{{ rig.id }}</h2>
       <p class="text-black px-3 py-0">{{ rig.attributes[1].value }}</p>
-      <p class="text-black px-3 lg:py-3 pb-3" :class="' rarity-' + rig.attributes[0].value">{{ rig.attributes[0].value }}/100</p>
+      <p class="text-black px-3 lg:py-3 lg:pb-3" :class="' rarity-' + rig.attributes[0].value">{{ rig.attributes[0].value }}/100</p>
        </a>
      </div>
    </div>
