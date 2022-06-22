@@ -76,7 +76,10 @@
             <div class="text-white text-center" id="mint-log">
               <div id="mint-terminal" class="frame">
                 <div v-if="$wallet.account">
-                  <p class="text-justify">========================== WALLET CONNECTED ============================</p>
+                  <p class="text-justify">
+                    ========================== WALLET CONNECTED
+                    ============================
+                  </p>
                   <p>WALLET: {{ $wallet.account }}</p>
                   <p>BALANCE: {{ $wallet.balance }} ETH</p>
                   <p>QUANTITY: {{ quantity }}</p>
@@ -84,10 +87,16 @@
                   ============================================================================
                   ============================================================================
                   ============================================================================
-                  <p>================= READY TO MINT CONFIRM TRANSACTION TO PROCEED =============</p>
+                  <p>
+                    ================= READY TO MINT CONFIRM TRANSACTION TO
+                    PROCEED =============
+                  </p>
                 </div>
                 <div v-else>
-                  <p class="text-justify">============================= CONNECT YOUR WALLET =====================</p>
+                  <p class="text-justify">
+                    ============================= CONNECT YOUR WALLET
+                    =====================
+                  </p>
                   <p>
                     Tableland awaits! Connect your wallet to start your
                     adventure by grabbing one of the Rigs. Rigs give valuable
@@ -97,7 +106,10 @@
                   ============================================================================
                   ============================================================================
                   ============================================================================
-                  <p>========================== CONNECT YOUR WALLET =============================</p>
+                  <p>
+                    ========================== CONNECT YOUR WALLET
+                    =============================
+                  </p>
                 </div>
               </div>
             </div>

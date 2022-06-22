@@ -14,7 +14,7 @@
       ></div>
     </section>
 
-    <section class="md:block story py-4 md:py-24 relative">
+    <section class="md:block story py-4 md:py-12 relative">
       <h1
         class="text-black text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
         data-aos="fade-up"
@@ -36,7 +36,7 @@
               WALLET ID: {{ $wallet.account }}
             </h4>
             <h1
-              class="text-black font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter md:mb-12 lg:mb-10"
+              class="text-black font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter md:mb-6 lg:mb-6"
               data-aos="fade-up"
               v-if="$wallet.account"
             >
