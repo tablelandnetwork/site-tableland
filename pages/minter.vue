@@ -117,8 +117,7 @@
                   v-if="quantity"
                   class="overflow-hidden text-black lg:text-4xl text-xl font-Orbitron pr-12 price-box"
                 >
-                  <span>{{ $wallet.priceFix * quantity }}</span
-                  >ETH
+                  <span>{{ $wallet.priceFix * quantity }}</span>
                 </h2>
                 <h2 v-else class="text-black text-xl lg:text-4xl font-Orbitron">
                   0.05ETH
@@ -188,6 +187,9 @@
                 </div>
               </div>
             </div>
+            <p class="px-12">
+              ===== DEVELOPMENT NOTE, USE ONLY ON OPTIMISM KOVAN TESTNET! ======
+            </p>
           </div>
         </div>
       </div>
@@ -209,7 +211,8 @@
                 </p>
                 <p>
                   Afterwards, visit this link again to gain access to minting
-                  functions
+                  functions. We recommend if on mobile to use Metamask's built
+                  in dApp browser for the best experience.
                 </p>
                 ============================================================================
                 ============================================================================

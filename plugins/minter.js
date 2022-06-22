@@ -2,10 +2,9 @@ import Vue from "vue";
 import { ethers, providers } from "ethers";
 import { BigNumber } from "ethers";
 import WalletConnectProvider from "@walletconnect/web3-provider";
-import rigsMeta from "~/assets/rigsMeta.json";
+// import rigsMeta from "~/assets/rigsMeta.json";
 
 export default async ({ env }, inject) => {
-
   ethers.getDefaultProvider();
 
   const provider =
@@ -16,131 +15,89 @@ export default async ({ env }, inject) => {
         });
 
   const rig = {
-    address: "0x88694d0b8c8E800AB3D9eecBF9A8923B3b5825fA",
+    address: "0x61a748d5F21E7B235f740bdB496B66b852687000",
     abi: [
       {
-        inputs: [{ internalType: "string", name: "baseURI", type: "string" }],
+        inputs: [
+          {
+            internalType: "string",
+            name: "baseURI",
+            type: "string",
+          },
+        ],
         stateMutability: "nonpayable",
         type: "constructor",
       },
-      { inputs: [], name: "ApprovalCallerNotOwnerNorApproved", type: "error" },
-      { inputs: [], name: "ApprovalQueryForNonexistentToken", type: "error" },
-      { inputs: [], name: "ApprovalToCurrentOwner", type: "error" },
-      {
-        inputs: [
-          { internalType: "address", name: "to", type: "address" },
-          { internalType: "uint256", name: "tokenId", type: "uint256" },
-        ],
-        name: "approve",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function",
-      },
-      { inputs: [], name: "ApproveToCaller", type: "error" },
-      { inputs: [], name: "BalanceQueryForZeroAddress", type: "error" },
-      {
-        inputs: [{ internalType: "uint256", name: "tokenId", type: "uint256" }],
-        name: "burn",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function",
-      },
-      { inputs: [], name: "InvalidQueryRange", type: "error" },
-      {
-        inputs: [
-          { internalType: "uint256", name: "quantity", type: "uint256" },
-        ],
-        name: "mint",
-        outputs: [],
-        stateMutability: "payable",
-        type: "function",
-      },
-      { inputs: [], name: "MintToZeroAddress", type: "error" },
-      { inputs: [], name: "MintZeroQuantity", type: "error" },
-      { inputs: [], name: "OwnerQueryForNonexistentToken", type: "error" },
       {
         inputs: [],
-        name: "pause",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function",
+        name: "ApprovalCallerNotOwnerNorApproved",
+        type: "error",
       },
       {
         inputs: [],
-        name: "renounceOwnership",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function",
+        name: "ApprovalQueryForNonexistentToken",
+        type: "error",
       },
       {
-        inputs: [
-          { internalType: "address", name: "from", type: "address" },
-          { internalType: "address", name: "to", type: "address" },
-          { internalType: "uint256", name: "tokenId", type: "uint256" },
-        ],
-        name: "safeTransferFrom",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function",
+        inputs: [],
+        name: "ApprovalToCurrentOwner",
+        type: "error",
       },
       {
-        inputs: [
-          { internalType: "address", name: "from", type: "address" },
-          { internalType: "address", name: "to", type: "address" },
-          { internalType: "uint256", name: "tokenId", type: "uint256" },
-          { internalType: "bytes", name: "_data", type: "bytes" },
-        ],
-        name: "safeTransferFrom",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function",
+        inputs: [],
+        name: "ApproveToCaller",
+        type: "error",
       },
       {
-        inputs: [
-          { internalType: "address", name: "operator", type: "address" },
-          { internalType: "bool", name: "approved", type: "bool" },
-        ],
-        name: "setApprovalForAll",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function",
+        inputs: [],
+        name: "BalanceQueryForZeroAddress",
+        type: "error",
       },
       {
-        inputs: [{ internalType: "string", name: "baseURI", type: "string" }],
-        name: "setBaseURI",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function",
+        inputs: [],
+        name: "InvalidQueryRange",
+        type: "error",
       },
-      { inputs: [], name: "TransferCallerNotOwnerNorApproved", type: "error" },
       {
-        inputs: [
-          { internalType: "address", name: "from", type: "address" },
-          { internalType: "address", name: "to", type: "address" },
-          { internalType: "uint256", name: "tokenId", type: "uint256" },
-        ],
-        name: "transferFrom",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function",
+        inputs: [],
+        name: "MintToZeroAddress",
+        type: "error",
       },
-      { inputs: [], name: "TransferFromIncorrectOwner", type: "error" },
       {
-        inputs: [
-          { internalType: "address", name: "newOwner", type: "address" },
-        ],
-        name: "transferOwnership",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function",
+        inputs: [],
+        name: "MintZeroQuantity",
+        type: "error",
+      },
+      {
+        inputs: [],
+        name: "OwnerQueryForNonexistentToken",
+        type: "error",
+      },
+      {
+        inputs: [],
+        name: "TransferCallerNotOwnerNorApproved",
+        type: "error",
+      },
+      {
+        inputs: [],
+        name: "TransferFromIncorrectOwner",
+        type: "error",
       },
       {
         inputs: [],
         name: "TransferToNonERC721ReceiverImplementer",
         type: "error",
       },
-      { inputs: [], name: "TransferToZeroAddress", type: "error" },
-      { inputs: [], name: "URIQueryForNonexistentToken", type: "error" },
+      {
+        inputs: [],
+        name: "TransferToZeroAddress",
+        type: "error",
+      },
+      {
+        inputs: [],
+        name: "URIQueryForNonexistentToken",
+        type: "error",
+      },
       {
         anonymous: false,
         inputs: [
@@ -249,13 +206,6 @@ export default async ({ env }, inject) => {
         type: "event",
       },
       {
-        inputs: [],
-        name: "unpause",
-        outputs: [],
-        stateMutability: "nonpayable",
-        type: "function",
-      },
-      {
         anonymous: false,
         inputs: [
           {
@@ -269,25 +219,69 @@ export default async ({ env }, inject) => {
         type: "event",
       },
       {
-        inputs: [{ internalType: "address", name: "owner", type: "address" }],
+        inputs: [
+          {
+            internalType: "address",
+            name: "to",
+            type: "address",
+          },
+          {
+            internalType: "uint256",
+            name: "tokenId",
+            type: "uint256",
+          },
+        ],
+        name: "approve",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "owner",
+            type: "address",
+          },
+        ],
         name: "balanceOf",
-        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256",
+          },
+        ],
         stateMutability: "view",
         type: "function",
       },
       {
-        inputs: [{ internalType: "uint256", name: "tokenId", type: "uint256" }],
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "tokenId",
+            type: "uint256",
+          },
+        ],
         name: "explicitOwnershipOf",
         outputs: [
           {
             components: [
-              { internalType: "address", name: "addr", type: "address" },
+              {
+                internalType: "address",
+                name: "addr",
+                type: "address",
+              },
               {
                 internalType: "uint64",
                 name: "startTimestamp",
                 type: "uint64",
               },
-              { internalType: "bool", name: "burned", type: "bool" },
+              {
+                internalType: "bool",
+                name: "burned",
+                type: "bool",
+              },
             ],
             internalType: "struct IERC721A.TokenOwnership",
             name: "",
@@ -299,19 +293,31 @@ export default async ({ env }, inject) => {
       },
       {
         inputs: [
-          { internalType: "uint256[]", name: "tokenIds", type: "uint256[]" },
+          {
+            internalType: "uint256[]",
+            name: "tokenIds",
+            type: "uint256[]",
+          },
         ],
         name: "explicitOwnershipsOf",
         outputs: [
           {
             components: [
-              { internalType: "address", name: "addr", type: "address" },
+              {
+                internalType: "address",
+                name: "addr",
+                type: "address",
+              },
               {
                 internalType: "uint64",
                 name: "startTimestamp",
                 type: "uint64",
               },
-              { internalType: "bool", name: "burned", type: "bool" },
+              {
+                internalType: "bool",
+                name: "burned",
+                type: "bool",
+              },
             ],
             internalType: "struct IERC721A.TokenOwnership[]",
             name: "",
@@ -322,96 +328,368 @@ export default async ({ env }, inject) => {
         type: "function",
       },
       {
-        inputs: [{ internalType: "uint256", name: "tokenId", type: "uint256" }],
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "tokenId",
+            type: "uint256",
+          },
+        ],
         name: "getApproved",
-        outputs: [{ internalType: "address", name: "", type: "address" }],
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address",
+          },
+        ],
         stateMutability: "view",
         type: "function",
       },
       {
         inputs: [
-          { internalType: "address", name: "owner", type: "address" },
-          { internalType: "address", name: "operator", type: "address" },
+          {
+            internalType: "address",
+            name: "owner",
+            type: "address",
+          },
+          {
+            internalType: "address",
+            name: "operator",
+            type: "address",
+          },
         ],
         name: "isApprovedForAll",
-        outputs: [{ internalType: "bool", name: "", type: "bool" }],
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool",
+          },
+        ],
         stateMutability: "view",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "uint256",
+            name: "quantity",
+            type: "uint256",
+          },
+        ],
+        name: "mint",
+        outputs: [],
+        stateMutability: "payable",
         type: "function",
       },
       {
         inputs: [],
         name: "name",
-        outputs: [{ internalType: "string", name: "", type: "string" }],
+        outputs: [
+          {
+            internalType: "string",
+            name: "",
+            type: "string",
+          },
+        ],
         stateMutability: "view",
         type: "function",
       },
       {
         inputs: [],
         name: "owner",
-        outputs: [{ internalType: "address", name: "", type: "address" }],
-        stateMutability: "view",
-        type: "function",
-      },
-      {
-        inputs: [{ internalType: "uint256", name: "tokenId", type: "uint256" }],
-        name: "ownerOf",
-        outputs: [{ internalType: "address", name: "", type: "address" }],
-        stateMutability: "view",
-        type: "function",
-      },
-      {
-        inputs: [],
-        name: "paused",
-        outputs: [{ internalType: "bool", name: "", type: "bool" }],
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address",
+          },
+        ],
         stateMutability: "view",
         type: "function",
       },
       {
         inputs: [
-          { internalType: "bytes4", name: "interfaceId", type: "bytes4" },
+          {
+            internalType: "uint256",
+            name: "tokenId",
+            type: "uint256",
+          },
+        ],
+        name: "ownerOf",
+        outputs: [
+          {
+            internalType: "address",
+            name: "",
+            type: "address",
+          },
+        ],
+        stateMutability: "view",
+        type: "function",
+      },
+      {
+        inputs: [],
+        name: "pause",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [],
+        name: "paused",
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool",
+          },
+        ],
+        stateMutability: "view",
+        type: "function",
+      },
+      {
+        inputs: [],
+        name: "renounceOwnership",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "from",
+            type: "address",
+          },
+          {
+            internalType: "address",
+            name: "to",
+            type: "address",
+          },
+          {
+            internalType: "uint256",
+            name: "tokenId",
+            type: "uint256",
+          },
+        ],
+        name: "safeTransferFrom",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "from",
+            type: "address",
+          },
+          {
+            internalType: "address",
+            name: "to",
+            type: "address",
+          },
+          {
+            internalType: "uint256",
+            name: "tokenId",
+            type: "uint256",
+          },
+          {
+            internalType: "bytes",
+            name: "_data",
+            type: "bytes",
+          },
+        ],
+        name: "safeTransferFrom",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "operator",
+            type: "address",
+          },
+          {
+            internalType: "bool",
+            name: "approved",
+            type: "bool",
+          },
+        ],
+        name: "setApprovalForAll",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "string",
+            name: "baseURI",
+            type: "string",
+          },
+        ],
+        name: "setBaseURI",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "bytes4",
+            name: "interfaceId",
+            type: "bytes4",
+          },
         ],
         name: "supportsInterface",
-        outputs: [{ internalType: "bool", name: "", type: "bool" }],
+        outputs: [
+          {
+            internalType: "bool",
+            name: "",
+            type: "bool",
+          },
+        ],
         stateMutability: "view",
         type: "function",
       },
       {
         inputs: [],
         name: "symbol",
-        outputs: [{ internalType: "string", name: "", type: "string" }],
-        stateMutability: "view",
-        type: "function",
-      },
-      {
-        inputs: [{ internalType: "address", name: "owner", type: "address" }],
-        name: "tokensOfOwner",
-        outputs: [{ internalType: "uint256[]", name: "", type: "uint256[]" }],
+        outputs: [
+          {
+            internalType: "string",
+            name: "",
+            type: "string",
+          },
+        ],
         stateMutability: "view",
         type: "function",
       },
       {
         inputs: [
-          { internalType: "address", name: "owner", type: "address" },
-          { internalType: "uint256", name: "start", type: "uint256" },
-          { internalType: "uint256", name: "stop", type: "uint256" },
+          {
+            internalType: "uint256",
+            name: "tokenId",
+            type: "uint256",
+          },
         ],
-        name: "tokensOfOwnerIn",
-        outputs: [{ internalType: "uint256[]", name: "", type: "uint256[]" }],
+        name: "tokenURI",
+        outputs: [
+          {
+            internalType: "string",
+            name: "",
+            type: "string",
+          },
+        ],
         stateMutability: "view",
         type: "function",
       },
       {
-        inputs: [{ internalType: "uint256", name: "tokenId", type: "uint256" }],
-        name: "tokenURI",
-        outputs: [{ internalType: "string", name: "", type: "string" }],
+        inputs: [
+          {
+            internalType: "address",
+            name: "owner",
+            type: "address",
+          },
+        ],
+        name: "tokensOfOwner",
+        outputs: [
+          {
+            internalType: "uint256[]",
+            name: "",
+            type: "uint256[]",
+          },
+        ],
+        stateMutability: "view",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "owner",
+            type: "address",
+          },
+          {
+            internalType: "uint256",
+            name: "start",
+            type: "uint256",
+          },
+          {
+            internalType: "uint256",
+            name: "stop",
+            type: "uint256",
+          },
+        ],
+        name: "tokensOfOwnerIn",
+        outputs: [
+          {
+            internalType: "uint256[]",
+            name: "",
+            type: "uint256[]",
+          },
+        ],
         stateMutability: "view",
         type: "function",
       },
       {
         inputs: [],
         name: "totalSupply",
-        outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+        outputs: [
+          {
+            internalType: "uint256",
+            name: "",
+            type: "uint256",
+          },
+        ],
         stateMutability: "view",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "from",
+            type: "address",
+          },
+          {
+            internalType: "address",
+            name: "to",
+            type: "address",
+          },
+          {
+            internalType: "uint256",
+            name: "tokenId",
+            type: "uint256",
+          },
+        ],
+        name: "transferFrom",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [
+          {
+            internalType: "address",
+            name: "newOwner",
+            type: "address",
+          },
+        ],
+        name: "transferOwnership",
+        outputs: [],
+        stateMutability: "nonpayable",
+        type: "function",
+      },
+      {
+        inputs: [],
+        name: "unpause",
+        outputs: [],
+        stateMutability: "nonpayable",
         type: "function",
       },
     ],
@@ -429,7 +707,6 @@ export default async ({ env }, inject) => {
     priceFix: null,
     tokenBalance: null,
 
-
     //Walletconnect functions
     async connectMobile() {
       await provider.enable();
@@ -437,13 +714,10 @@ export default async ({ env }, inject) => {
       const signer = await wallct.getSigner();
       const [account] = await wallct.listAccounts();
       // this.$wallet.provider = this.provider2.provider.accounts[0];
-      console.log("connected to account:" + account)
+      console.log("connected to account:" + account);
       if (account) {
         await wallet.setAccountWallet(account);
       }
-
-
-
     },
 
     get hexChainId() {
@@ -465,7 +739,7 @@ export default async ({ env }, inject) => {
 
       // For devices WITH browser wallets
       if (window.ethereum) {
-        console.log("connected to metamask")
+        console.log("connected to metamask");
         this.network = this.provider.getNetwork();
         this.priceFix = ethers.utils.formatEther(this.price);
         const [account] = await this.provider.listAccounts();
@@ -520,28 +794,30 @@ export default async ({ env }, inject) => {
             10000
           );
 
-          rigBalance.forEach((item) => {
+          //find solution to getting rate limited on requests, edge cases
+          await rigBalance.forEach(async (item) => {
             let rigLog = document.getElementById("rig-garage");
-            const rigId = ethers.utils.formatUnits(item._hex, 0);
-            const rigIdSub = ethers.utils.formatUnits(item._hex, 0) - 1;
+            const rigId = await ethers.utils.formatUnits(item._hex, 0);
+            const tokenURI = await nftContract.tokenURI(rigId);
+            const rigsMeta = await (await fetch(tokenURI)).json();
             rigLog.innerHTML += `<div class="lg:w-1/3 md:w-1/2 w-full px-3 py-3 rigs">
                     <a href="/rigs/${rigId}">
-                     <div class="rig-frame ${rigsMeta.rigs[rigIdSub].attributes[1].value}" >
-                      <img src="${rigsMeta.rigs[rigIdSub].image}"/>
+                     <div class="rig-frame " >
+                      <img src="${rigsMeta.image}"/>
                      </div>
                      <h2 class="text-black font-Orbitron text-xl px-3 py-3">RIG ID #00${rigId}</h2>
-                      <p class="text-black px-3 py-0">${rigsMeta.rigs[rigIdSub].attributes[1].value}</p>
-                      <p class="text-black px-3 py-3 pb-3 ${rigsMeta.rigs[rigIdSub].attributes[1].value} rarity-${rigsMeta.rigs[rigIdSub].attributes[0].value}">${rigsMeta.rigs[rigIdSub].attributes[0].value}/100</p>
+                     <p class="text-black px-3 py-0">${rigsMeta.attributes[3].value}</p>
+                     <p class="text-black px-3 py-3 pb-3 ${rigsMeta.attributes[2].value} rarity-${rigsMeta.attributes[5].value}">${rigsMeta.attributes[5].value}/100</p>
                     </a>
                   </div>`;
           });
-
         }
 
         if (window.location.pathname == "/rigs/" + rigId) {
           //Check rig owned address
           const rigOwner = await nftContract.ownerOf(rigId);
-          document.getElementById("rig-owner").innerHTML = "OWNED BY " + rigOwner;
+          document.getElementById("rig-owner").innerHTML =
+            "OWNED BY " + rigOwner;
         } else {
         }
       }
@@ -565,10 +841,9 @@ export default async ({ env }, inject) => {
     },
 
     async setAccountWallet() {
-          this.account = null;
-          this.accountCompact = null;
-          this.balance = null;
-
+      this.account = null;
+      this.accountCompact = null;
+      this.balance = null;
     },
 
     async connect() {
@@ -630,14 +905,14 @@ export default async ({ env }, inject) => {
           const signer = provider.getSigner();
           let userAddress = await signer.getAddress();
           const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
-          const rigUrl = rigsMeta.image;
+
           const quantity = this.quantity;
           const rigPrice = rig.price * this.quantity;
 
           // Minting in progress
           let tx = await nftContract
             .connect(signer)
-            .mint(quantity, { value: rigPrice });
+            .mint(quantity, { value: rigPrice, gasLimit: "150000" });
           document.getElementById("mint-terminal").innerHTML =
             "============================== MINTING IN PROGRESS ================================ <p>0x6060604052341561000f57600080fd5b61053a8061001e6000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde031461005c57806320965255146100ea57806393a0935214610178575b600080fd5b341561006757600080fd5b61006f61024e565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100af578082015181840152602081019050610094565b50505050905090810190601f1680156100dc5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156100f557600080fd5b6100fd6102ec565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561013d578082015181840152602081019050610122565b50505050905090810190601f16801561016a5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561018357600080fd5b6101d3600480803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610394565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102135780820151818401526020810190506101f8565b50505050905090810190601f1680156102405780820380516001836020036101000a031916815260200191505b50929</p>";
           document.getElementById("mint-button").innerHTML =
@@ -652,6 +927,9 @@ export default async ({ env }, inject) => {
           const [event] = receipt.events ?? [];
           const tokenId = event.args?.tokenId;
           const tokenIdFix = tokenId - 1;
+          const tokenURI = await nftContract.tokenURI(tokenId);
+          // const rigsMeta = await (await fetch(tokenURI)).json();
+
           document.getElementById("mint-button").innerHTML = "Rig Minted";
           document.getElementById("rig-result").classList.add("active");
           document.getElementById("minter-details").classList.add("active");
@@ -663,32 +941,38 @@ export default async ({ env }, inject) => {
               tx.hash
             }, ${event.args?.tokenId}, token id ${
               event.args?.tokenId
-            }, see transaction: https://goerli.etherscan.io/tx/${
+            }, see transaction: hhttps://kovan-optimistic.etherscan.io/tx/${
               tx.hash
-            }, Gas used: ${receipt.gasUsed.toString()}, Transaction confirmed in block ${
+            }, Token URI ${tokenURI}
+
+            Gas used: ${receipt.gasUsed.toString()}, Transaction confirmed in block ${
               receipt.blockNumber
             }</p>`
           );
-          receipt.events.forEach((item) => {
+          await receipt.events.forEach(async (item) => {
             let rigResult = document.getElementById("rig-box");
             const tokenId = item.args?.tokenId;
-            const tokenIdSub = item.args?.tokenId - 1;
+            const tokenURI = await nftContract.tokenURI(tokenId);
+            const rigsMeta = await (await fetch(tokenURI)).json();
 
             rigResult.innerHTML += `<div class="md:w-1/3 w-full px-3 py-3 rigs">
-               <div class="rig-frame ${rigsMeta.rigs[tokenIdSub].attributes[1].value} rarity-${rigsMeta.rigs[tokenIdSub].attributes[0].value}" >
-                <img src="${rigsMeta.rigs[tokenIdSub].image}"/>
+               <div class="rig-frame ${rigsMeta.attributes[1].value} rarity-${rigsMeta.attributes[0].value}" >
+                <img src="${rigsMeta.image}"/>
                </div>
-               <h2 class="text-black font-Orbitron text-l">RIG ID #00${tokenId}</h2>
-              <div id="trait-${tokenIdSub}"></div>
+               <h2 class="text-black font-Orbitron text-xl">RIG ID #00${tokenId}</h2>
+              <div id="trait-${tokenId}"></div>
             </div>`;
-            rigsMeta.rigs[tokenIdSub].attributes.forEach((item) => {
-              let traitBox = document.getElementById("trait-" + tokenIdSub);
+            rigsMeta.attributes.forEach((item) => {
+              let traitBox = document.getElementById("trait-" + tokenId);
               traitBox.innerHTML += `<p class="text-black">${item.trait_type}: ${item.value}</p>`;
             });
           });
           document
             .getElementById("tx-btn")
-            .setAttribute("href", `https://goerli.etherscan.io/tx/${tx.hash}`);
+            .setAttribute(
+              "href",
+              `https://kovan-optimistic.etherscan.io/tx/${tx.hash}`
+            );
           document.getElementById("os-btn").setAttribute("href", `/garage/`);
         } else {
           console.log("Can't find your rig captain");
@@ -702,95 +986,11 @@ export default async ({ env }, inject) => {
       }
     },
 
-    async rigsGarage() {
-      const provider = new ethers.providers.Web3Provider(
-        window.ethereum,
-        "any"
-      );
-      wallet.network = wallet.provider.getNetwork();
-
-      // const connection = await connect({
-      //   network: "testnet",
-      //   host: "http://testnet.tableland.network",
-      // });
-
-      const [account] = await wallet.provider.send("eth_requestAccounts");
-
-      if (account) {
-        await wallet.setAccount(account);
-      }
-      await provider.send("eth_requestAccounts", []);
-      const signer = provider.getSigner();
-
-      //Connect to contract and spit out owned rig data
-      let userAddress = await signer.getAddress();
-      const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
-      const tokenBalance = await nftContract.balanceOf(userAddress);
-      const rigBalance = await nftContract.tokensOfOwnerIn(
-        userAddress,
-        0,
-        10000
-      );
-
-      rigBalance.forEach((item) => {
-        let rigLog = document.getElementById("rig-garage");
-        const rigId = ethers.utils.formatUnits(item._hex, 0);
-        const rigIdSub = ethers.utils.formatUnits(item._hex, 0) - 1;
-        rigLog.innerHTML += `<div class="w-1/3 px-3 py-3 rigs">
-                <a href="/rigs/${rigId}">
-                 <div class="rig-frame ${rigsMeta.rigs[rigIdSub].attributes[1].value} rarity-${rigsMeta.rigs[rigIdSub].attributes[0].value}" >
-                  <img src="${rigsMeta.rigs[rigIdSub].image}"/>
-                 </div>
-                 <h2 class="text-white font-Orbitron text-l">RIG ID #00${rigId}</h2>
-                <p class="text-white">FLEET: ${rigsMeta.rigs[rigIdSub].attributes[1].value}</p>
-                </a>
-              </div>`;
-      });
-    },
-
-    // Gets the minted NFT data
-    async getRig(tokenId) {
-      try {
-        const { ethereum } = window;
-
-        if (ethereum) {
-          await provider.send("eth_requestAccounts", []);
-          const signer = provider.getSigner();
-          let userAddress = await signer.getAddress();
-          const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
-          const tokenBalance = await nftContract.balanceOf(userAddress);
-          const nftBalance = await provider.getBalance(rig.address);
-          const rigBalance = await nftContract.tokensOfOwner(userAddress);
-          console.log("user wallet:", userAddress);
-          console.log("token balance:", tokenBalance);
-          console.log("rigs owned:", rigBalance);
-          rigBalance.forEach((item) => {
-            console.log("rig: ", item);
-            console.log("=========");
-          });
-        } else {
-          console.log("Ethereum object doesn't exist!");
-        }
-      } catch (error) {
-        console.log(JSON.stringify(error));
-      }
-    },
-
     async disconnect() {
       const [account] = await wallet.provider.send("eth_requestAccounts");
       if (account) {
         await wallet.setAccount(0);
       }
-      // const accounts = await window.ethereum.request({
-      //     method: "wallet_requestPermissions",
-      //     params: [{
-      //         eth_accounts: {}
-      //     }]
-      // }).then(() => ethereum.request({
-      //     method: 'eth_requestAccounts'
-      // }))
-      //
-      // const account = accounts[0]
     },
 
     async switchNetwork(config) {
@@ -827,8 +1027,6 @@ export default async ({ env }, inject) => {
       console.log("chainChanged", chainId);
       window.location.reload();
     });
-
-
   }
   wallet.init();
   inject("wallet", wallet);

@@ -318,6 +318,10 @@ footer {
   overflow: hidden;
 }
 
+.mint-page .story {
+  min-height: 100vh;
+}
+
 .mint-page .animated-carousel {
   z-index: 0;
   position: relative;
@@ -1734,7 +1738,8 @@ input:checked ~ .tab-content {
 }
 
 @media (max-width: 1480px) {
-  nav .btn, nav li a {
+  nav .btn,
+  nav li a {
     font-size: 1em;
   }
   .guild-list .vehicle {

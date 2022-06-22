@@ -19,9 +19,7 @@
         >
           RIG ID #00{{ rigId }}
         </h1>
-        <div
-          class="rig-frame"
-        >
+        <div class="rig-frame">
           <img :src="rigsMeta.rigs[rigIdName].image" />
         </div>
         <h3

@@ -58,9 +58,7 @@
                 v-else
                 class="btn bg-black text-white"
               >
-                <strong>Connect Wallet
-
-                </strong>
+                <strong>Connect Wallet </strong>
               </a>
               <div
                 v-if="account"
@@ -102,7 +100,7 @@
                     <a
                       @click="$wallet.connectMobile"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      >WalletConnect {{this.wallet.price}}</a
+                      >WalletConnect {{ this.wallet.price }}</a
                     >
                   </li>
                 </ul>
@@ -192,7 +190,6 @@ import { ethers, providers } from "ethers";
 export default {
   props: ["titles", "hrefs", "targets"],
   methods: {
-
     async connectWallet() {
       const provider2 = new WalletConnectProvider({
         infuraId: "e949e17ac40246f0a00ff2a4119be7a2",
@@ -211,7 +208,6 @@ export default {
     },
   },
   computed: {
-
     ethereum: function () {
       return window.ethereum;
     },
