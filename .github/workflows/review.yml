@@ -1,15 +1,16 @@
-name: Deploy
+name: Review
 on:
   push:
     branches:
       - main
+  pull_request:
 
 concurrency:
-  group: test-${{github.ref}}
+  group: review-${{github.ref}}
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
@@ -34,14 +35,5 @@ jobs:
       - name: Install 🔧
         run: npm install
 
-      - name: Build ⚒️
-        run: npm run generate
-
-      - name: Test 🧪
-        run: npm test
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.5
-        with:
-          branch: gh-pages
-          folder: dist
+      - name: Lint 🙈
+        run: npm run prettier && npm run lint

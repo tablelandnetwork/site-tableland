@@ -1,35 +1,55 @@
 <template>
   <div>
-
     <div v-if="ethereum" class="playground-component" @click.once="init">
       <div
         class="w-full pt-6 flex items-center flex-col rounded-3xl border-2px-black bg-black overflow-hidden"
       >
         <div class="w-full block">
-          <form class="web-terminal-form relative block w-full text-white font-mono" @submit.prevent="onSubmit">
+          <form
+            class="web-terminal-form relative block w-full text-white font-mono"
+            @submit.prevent="onSubmit"
+          >
             <input
               ref="web-terminal-input"
               class="pl-8 pr-5 bg-black web-terminal-input block w-full text-white font-mono outline-none"
               type="text"
               autocomplete="off"
               @keydown="keyCheck"
-            >
-            <input type="submit" class="w-0 hidden">
+            />
+            <input type="submit" class="w-0 hidden" />
           </form>
-          <div ref="web-terminal" class="web-terminal p-5 overflow-y-scroll text-white">
+          <div
+            ref="web-terminal"
+            class="web-terminal p-5 overflow-y-scroll text-white"
+          >
             <span v-for="(line, i) in lines" :key="i">
-              {{ line.type === 'text' ? line.value : '' }}
-              <br v-if="line.type === 'text'">
+              {{ line.type === "text" ? line.value : "" }}
+              <br v-if="line.type === 'text'" />
 
-              <table v-if="line.type === 'table'" class="table-auto mx-4 border border-solid border-white border-collapse">
+              <table
+                v-if="line.type === 'table'"
+                class="table-auto mx-4 border border-solid border-white border-collapse"
+              >
                 <thead>
                   <tr>
-                    <th v-for="col in line.columns" :key="col.name" class="px-2 border border-white pull-left font-bold">{{ col.name }}</th>
+                    <th
+                      v-for="col in line.columns"
+                      :key="col.name"
+                      class="px-2 border border-white pull-left font-bold"
+                    >
+                      {{ col.name }}
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr v-for="(row, j) in line.rows" :key="j">
-                    <td v-for="(val, k) in row" :key="k" class="px-2 border border-white">{{ val }}</td>
+                    <td
+                      v-for="(val, k) in row"
+                      :key="k"
+                      class="px-2 border border-white"
+                    >
+                      {{ val }}
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -40,34 +60,57 @@
     </div>
 
     <div v-if="!ethereum" class="playground-component relative">
-      <div class="absolute overlay-disable top-0 bottom-0 left-0 right-0 z-50 rounded-3xl cursor-not-allowed"></div>
+      <div
+        class="absolute overlay-disable top-0 bottom-0 left-0 right-0 z-50 rounded-3xl cursor-not-allowed"
+      ></div>
       <div
         class="w-full pt-6 flex items-center flex-col rounded-3xl border-2px-black bg-black overflow-hidden"
       >
         <div class="w-full block">
-          <form class="web-terminal-form relative block w-full text-white font-mono" @submit.prevent="() => false">
+          <form
+            class="web-terminal-form relative block w-full text-white font-mono"
+            @submit.prevent="() => false"
+          >
             <input
               ref="web-terminal-input"
               class="pl-8 pr-5 bg-black web-terminal-input block w-full text-white font-mono outline-none"
               type="text"
               autocomplete="off"
               disabled="disabled"
-            >
+            />
           </form>
-          <div ref="web-terminal" class="web-terminal p-5 overflow-y-scroll text-white">
+          <div
+            ref="web-terminal"
+            class="web-terminal p-5 overflow-y-scroll text-white"
+          >
             <span v-for="(line, i) in lines" :key="i">
-              {{ line.type === 'text' ? line.value : '' }}
-              <br v-if="line.type === 'text'">
+              {{ line.type === "text" ? line.value : "" }}
+              <br v-if="line.type === 'text'" />
 
-              <table v-if="line.type === 'table'" class="table-auto mx-4 border border-solid border-white border-collapse">
+              <table
+                v-if="line.type === 'table'"
+                class="table-auto mx-4 border border-solid border-white border-collapse"
+              >
                 <thead>
                   <tr>
-                    <th v-for="col in line.columns" :key="col.name" class="px-2 border border-white pull-left font-bold">{{ col.name }}</th>
+                    <th
+                      v-for="col in line.columns"
+                      :key="col.name"
+                      class="px-2 border border-white pull-left font-bold"
+                    >
+                      {{ col.name }}
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr v-for="(row, j) in line.rows" :key="j">
-                    <td v-for="(val, k) in row" :key="k" class="px-2 border border-white">{{ val }}</td>
+                    <td
+                      v-for="(val, k) in row"
+                      :key="k"
+                      class="px-2 border border-white"
+                    >
+                      {{ val }}
+                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -76,15 +119,12 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
 <script>
-
-import { mapState } from 'vuex';
-import messages from '~/playground-messages.js';
-
+import { mapState } from "vuex";
+import messages from "~/playground-messages.js";
 
 // store user input
 let buffer;
@@ -95,81 +135,85 @@ const bufferHistory = [];
 const bhManage = function () {
   bufferHistory.shift();
   bufferHistory.unshift(buffer);
-  bufferHistory.unshift('');
+  bufferHistory.unshift("");
 
   bhIndex = 0;
 };
 
-
 export default {
-  data: function () {
+  data() {
     return {
       loading: false,
-      lines: []
+      lines: [],
     };
   },
   computed: {
     ...mapState({
-      ethAddress: state => state.ethAddress,
-      ethereum: state => window.ethereum
-    })
+      ethAddress: (state) => state.ethAddress,
+      ethereum: (state) => window.ethereum,
+    }),
   },
-  mounted: function () {
+  mounted() {
     this.printf(messages.help);
   },
   methods: {
     // format, write to terminal
-    printf: function (string) {
-      const lines = string.replaceAll('  ', '\xA0\xA0').split('\n').reverse();
+    printf(string) {
+      const lines = string.replaceAll("  ", "\xA0\xA0").split("\n").reverse();
       for (let i = 0; i < lines.length; i++) {
-        const line = { value: lines[i], type: 'text' };
+        const line = { value: lines[i], type: "text" };
         this.lines.unshift(line);
       }
 
-      this.$refs['web-terminal'].scrollTop = 0;
+      this.$refs["web-terminal"].scrollTop = 0;
     },
-    printTable: function (data) {
+    printTable(data) {
       this.lines.unshift({
-        type: 'table',
+        type: "table",
         columns: data.columns,
-        rows: data.rows
+        rows: data.rows,
       });
     },
-    replaceLine: function (string) {
-      this.$set(this.lines, 0, { value: string, type: 'text' });
+    replaceLine(string) {
+      this.$set(this.lines, 0, { value: string, type: "text" });
     },
-    cls: function () { // clear screen
+    cls() {
+      // clear screen
       const fontHeight = 15;
-      const clientHeight = this.$refs['web-terminal'].clientHeight;
+      const clientHeight = this.$refs["web-terminal"].clientHeight;
 
-      for (let i = 0; i <= clientHeight / fontHeight; i++) this.printf('');
+      for (let i = 0; i <= clientHeight / fontHeight; i++) {
+        this.printf("");
+      }
     },
-    keyCheck: function (e) {
+    keyCheck(e) {
       const keycode = window.event.keyCode;
 
       switch (keycode) {
         case 38: // up arrow
           if (bhIndex < bufferHistory.length - 1) {
             bhIndex++;
-            this.$refs['web-terminal-input'].value = bufferHistory[bhIndex];
+            this.$refs["web-terminal-input"].value = bufferHistory[bhIndex];
           }
           break;
 
         case 40: // down arrow
           if (bhIndex > 0) {
             bhIndex--;
-            this.$refs['web-terminal-input'].value = bufferHistory[bhIndex];
+            this.$refs["web-terminal-input"].value = bufferHistory[bhIndex];
           }
           break;
       }
     },
-    showSpinner: function (prefix = '') {
-      if (this.loading === true) return;
+    showSpinner(prefix = "") {
+      if (this.loading === true) {
+        return;
+      }
 
       this.cls();
       this.loading = true;
 
-      const spinner = ['\\', '|', '/', '—'];
+      const spinner = ["\\", "|", "/", "—"];
       let count = 0;
       const intervalId = setInterval(() => {
         if (this.loading === false) {
@@ -177,32 +221,42 @@ export default {
           return;
         }
 
-        this.replaceLine(prefix + ' ' + spinner[count++ % 4]);
+        this.replaceLine(prefix + " " + spinner[count++ % 4]);
       }, 313.37);
     },
-    onSubmit: function () {
-      buffer = this.$refs['web-terminal-input'].value;
+    onSubmit() {
+      buffer = this.$refs["web-terminal-input"].value;
       bhManage(); // manage buffer history
 
-      if (this.loading) return;
+      if (this.loading) {
+        return;
+      }
 
-      if (buffer === 'connect') {
+      if (buffer === "connect") {
         this.connect();
-      } else if (buffer === 'docs' || buffer === 'man' || buffer === 'man tableland') {
+      } else if (
+        buffer === "docs" ||
+        buffer === "man" ||
+        buffer === "man tableland"
+      ) {
         this.cls();
         this.printf(messages.docs);
-      } else if (buffer === 'help') {
+      } else if (buffer === "help") {
         this.cls();
         this.printf(messages.help);
-      } else if (buffer === 'clear') {
+      } else if (buffer === "clear") {
         this.cls();
       } else if (!this.ethAddress) {
         this.cls();
         this.printf(messages.warn.connect);
-      } else if (buffer === 'whoami') {
+      } else if (buffer === "whoami") {
         this.cls();
         this.printf(this.ethAddress);
-      } else if (buffer === 'mytables' || buffer === 'list' || buffer === 'ls') {
+      } else if (
+        buffer === "mytables" ||
+        buffer === "list" ||
+        buffer === "ls"
+      ) {
         this.cls();
         this.list();
       } else {
@@ -211,33 +265,54 @@ export default {
         this.parseCommand(buffer);
       }
 
-      this.$refs['web-terminal-input'].value = '';
+      this.$refs["web-terminal-input"].value = "";
     },
-    init: function () {
+    init() {
       // the first click on the terminal should put their cursor in the input
-      this.$refs['web-terminal-input'].focus();
+      this.$refs["web-terminal-input"].focus();
     },
-    parseCommand: async function (command) {
+    async parseCommand(command) {
       try {
         const sql = command.trim().toLowerCase();
 
-        if (!sql) return this.printf(messages.warn.statement);
+        if (!sql) {
+          return this.printf(messages.warn.statement);
+        }
 
-        if (sql.indexOf('create') === 0) {
+        if (sql.indexOf("create") === 0) {
           await this.runCreate(command);
           return;
         }
 
-        await this.runCommand(command);
+        if (sql.indexOf("receipt") === 0) {
+          const parts = sql.split(" ").filter((c) => c);
+
+          const txnHash = parts[1];
+          await this.getReceipt(txnHash);
+          return;
+        }
+
+        let mutate = false;
+
+        if (
+          sql.indexOf("insert") === 0 ||
+          sql.indexOf("update") === 0 ||
+          sql.indexOf("delete") === 0
+        ) {
+          mutate = true;
+        }
+        await this.runCommand(command, mutate);
       } catch (err) {
         this.loading = false;
         this.processError(err);
       }
     },
-    runCommand: async function (sql) {
+    async runCommand(sql, mutate) {
       try {
         this.showSpinner(messages.running);
-        const response = await this.$store.dispatch('runSql', sql);
+        const command = mutate ? "runWrite" : "runRead";
+
+        const response = await this.$store.dispatch(command, sql);
         this.loading = false;
         this.cls();
         if (response.data && response.data.columns && response.data.rows) {
@@ -245,40 +320,54 @@ export default {
           return;
         }
 
-        this.printf('Result:\n' + JSON.stringify(response, null, 4));
+        this.printf("Result:\n" + JSON.stringify(response, null, 4));
       } catch (err) {
         this.loading = false;
         this.processError(err);
       }
     },
-    runCreate: async function (sql) {
+    async runCreate(sql) {
       try {
         this.showSpinner(messages.creating);
-        const response = await this.$store.dispatch('createTable', sql);
+        const response = await this.$store.dispatch("createTable", sql);
         this.loading = false;
         this.cls();
-        this.printf('Table Created:\n' + JSON.stringify(response, null, 4));
+        this.printf("Table Created:\n" + JSON.stringify(response, null, 4));
       } catch (err) {
         this.loading = false;
         this.processError(err);
       }
     },
-    list: async function () {
+    async getReceipt(txnHash) {
+      try {
+        this.showSpinner(messages.fetching);
+        const response = await this.$store.dispatch("getReceipt", txnHash);
+        this.loading = false;
+        this.cls();
+        this.printf(
+          "Transaction Receipt:\n" + JSON.stringify(response, null, 4)
+        );
+      } catch (err) {
+        this.loading = false;
+        this.processError(err);
+      }
+    },
+    async list() {
       try {
         this.showSpinner();
-        const tables = await this.$store.dispatch('myTables');
+        const tables = await this.$store.dispatch("myTables");
         this.loading = false;
         this.cls();
-        this.printf('Result:\n' + JSON.stringify(tables, null, 4));
+        this.printf("Result:\n" + JSON.stringify(tables, null, 4));
       } catch (err) {
         this.loading = false;
         this.processError(err);
       }
     },
-    connect: async function () {
+    async connect() {
       try {
-        this.showSpinner('connecting');
-        await this.$store.dispatch('connect');
+        this.showSpinner("connecting");
+        await this.$store.dispatch("connect");
         this.loading = false;
 
         // initial message
@@ -289,32 +378,34 @@ export default {
         this.processError(err);
       }
     },
-    processError: function (err) {
+    processError(err) {
       this.cls();
-      if (err.message.includes('address not authorized')) return this.printf(messages.warn.address);
 
-      this.printf('Error:\n' + err.message);
-    }
-  }
+      if (err.message.includes("address not authorized")) {
+        return this.printf(messages.warn.address);
+      }
+
+      this.printf("Error:\n" + err.message);
+    },
+  },
 };
-
 </script>
 
 <style scoped>
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .overlay-disable {
-  background-color: rgba(30, 30, 30,0.8)
+  background-color: rgba(30, 30, 30, 0.8);
 }
 
 .web-terminal {
   font-family: monospace;
   height: calc(16rem + 10vw);
   /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 .web-terminal::-webkit-scrollbar {
@@ -326,9 +417,8 @@ export default {
 }
 
 .web-terminal-form::before {
-  content: '> ';
+  content: "> ";
   position: absolute;
   left: 1rem;
 }
-
 </style>

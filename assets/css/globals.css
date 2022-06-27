@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;500;600&display=swap");
 
 @font-face {
-  font-family: 'AndaleMono';
-  src:  url('~assets/fonts/andale-mono.woff2') format('woff2'),
-        url('~assets/fonts/andale-mono.woff') format('woff');
+  font-family: "AndaleMono";
+  src: url("~assets/fonts/andale-mono.woff2") format("woff2"),
+    url("~assets/fonts/andale-mono.woff") format("woff");
 }
 
 ::selection {
   color: #000;
-  background-color: #0BE291;
+  background-color: #0be291;
 }
-
 
 html {
   max-width: 100%;
@@ -27,7 +26,12 @@ body {
   animation: reveal 2s;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   letter-spacing: 2px;
 }
 
@@ -40,8 +44,12 @@ div#webpack-hot-middleware-clientOverlay {
 }
 
 @keyframes reveal {
-  from {opacity: 0.5;}
-  to {opacity: 1;}
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .nav-bar {
@@ -54,7 +62,7 @@ div#webpack-hot-middleware-clientOverlay {
 }
 
 .bg-navbar {
-	background: #ff6567;
+  background: #ff6567;
   position: fixed;
   height: 110px;
   padding: 1.5em 1em;
@@ -82,7 +90,8 @@ nav li a {
   font-size: 1.2em;
 }
 
-nav li a:hover, nav li a:active {
+nav li a:hover,
+nav li a:active {
   text-decoration: underline;
   transition: all 0.2s ease-in-out;
 }
@@ -123,12 +132,12 @@ nav li a:hover, nav li a:active {
 }
 
 .btn {
-	@apply inline-block md:text-xl py-5 px-12 lg:px-24 rounded-2xl uppercase tracking-wider lg:tracking-widest cursor-pointer
+  @apply inline-block md:text-xl py-5 px-12 lg:px-24 rounded-2xl uppercase tracking-wider lg:tracking-widest cursor-pointer;
 }
 
 .btn:hover {
   /* color: #000!important; */
-  background-color: #0BE291!important;
+  background-color: #0be291 !important;
   transition: all 0.2s ease-in-out;
 }
 
@@ -141,146 +150,137 @@ nav li a:hover, nav li a:active {
 }
 
 .text-orange {
-  color: #FF9774;
+  color: #ff9774;
 }
 
 .text-purple {
-  color: #C07BDB;
+  color: #c07bdb;
 }
 
 .text-blue {
-  color: #6067EB;
+  color: #6067eb;
 }
 
 /** hero **/
 .hero {
-	background: center top / cover no-repeat url('~assets/img/hero.jpg');
+  background: center top / cover no-repeat url("~assets/img/hero.jpg");
   height: calc(100vw * 1.43229166667);
   max-height: 2750px;
   width: 100vw;
-  max-width: 1920px!important;
+  max-width: 1920px !important;
   margin: auto;
 }
 
 /** garage **/
 .garage {
   position: relative;
-	background: center top / cover no-repeat url('~assets/img/garage.jpg');
+  background: center top / cover no-repeat url("~assets/img/garage.jpg");
   height: calc(100vw * 0.96354166666);
   max-height: 1850px;
   min-height: 925px;
   width: 100vw;
-  max-width: 1920px!important;
+  max-width: 1920px !important;
   margin: auto;
 }
 
 .garage-break {
   position: relative;
-	background: center / cover no-repeat url('~assets/img/break_1.svg');
-	height: 184px;
+  background: center / cover no-repeat url("~assets/img/break_1.svg");
+  height: 184px;
   top: -1px;
 }
 
-@media
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .garage {
-		background-image: url('~assets/img/garage@2x.jpg');
+    background-image: url("~assets/img/garage@2x.jpg");
   }
 }
 
 /** sql **/
 .sql {
-	background: center top / cover no-repeat url('~assets/img/sql.jpg');
+  background: center top / cover no-repeat url("~assets/img/sql.jpg");
   height: calc(100vw * 1.024);
   min-height: 938px;
   width: 100vw;
-  max-width: 1920px!important;
+  max-width: 1920px !important;
   margin: auto;
 }
 
-@media
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .sql {
-		background-image: url('~assets/img/sql@2x.jpg');
+    background-image: url("~assets/img/sql@2x.jpg");
   }
 }
 
 .playground {
-  background: -44rem 3rem / 150% no-repeat url('~assets/img/clouds.png');
+  background: -44rem 3rem / 150% no-repeat url("~assets/img/clouds.png");
 }
 
-@media
-(-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .playground {
-    background-image: url('~assets/img/clouds@2x.png');
+    background-image: url("~assets/img/clouds@2x.png");
   }
 }
 
 /** community **/
 .community {
-	background: center top / cover no-repeat url('~assets/img/community.jpg');
+  background: center top / cover no-repeat url("~assets/img/community.jpg");
   height: calc(100vw * 1.74635416667);
   max-height: 3353px;
   min-height: 1677px;
   width: 100vw;
-  max-width: 1920px!important;
+  max-width: 1920px !important;
   margin: auto;
 }
 
 .landing {
-  max-width: 1920px!important;
+  max-width: 1920px !important;
   margin: auto;
 }
 
-@media
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .community {
-		background-image: url('~assets/img/community@2x.jpg');
+    background-image: url("~assets/img/community@2x.jpg");
   }
 }
 
 @media (min-width: 1500px) {
   .community-top {
-    padding-top: 16rem!important;
+    padding-top: 16rem !important;
   }
   .animated-carousel {
-    height: 300px!important;
+    height: 300px !important;
   }
   .animated-carousel .vehicle {
-    min-width: 300px!important;
+    min-width: 300px !important;
   }
 }
 
 @media (min-width: 1760px) {
   .community-top {
-    padding-top: 24rem!important;
+    padding-top: 24rem !important;
   }
   .animated-carousel {
-    height: 350px!important;
+    height: 350px !important;
   }
   .animated-carousel .vehicle {
-    min-width: 350px!important;
+    min-width: 350px !important;
   }
-
 }
 
 @media (min-width: 2160px) {
   .community-top {
-    padding-top: 24rem!important;
+    padding-top: 24rem !important;
   }
   .animated-carousel {
-    height: 400px!important;
+    height: 400px !important;
   }
   .animated-carousel .vehicle {
-    min-width: 400px!important;
+    min-width: 400px !important;
   }
   .ship {
-    height: 700px!important;
-    bottom: -200px!important;
+    height: 700px !important;
+    bottom: -200px !important;
     left: 0px;
     width: 100%;
   }
@@ -307,8 +307,8 @@ nav li a:hover, nav li a:active {
 }
 
 .community-break {
-	background: center / cover no-repeat url('~assets/img/break_4.svg');
-	height: 184px;
+  background: center / cover no-repeat url("~assets/img/break_4.svg");
+  height: 184px;
   position: absolute;
   bottom: -57px;
   left: 0;
@@ -319,12 +319,12 @@ nav li a:hover, nav li a:active {
 /** showcase **/
 .showcase {
   background-color: #141034;
-  color: #6067EB!important;
+  color: #6067eb !important;
   position: relative;
 }
 
 .showcase .btn {
-  background: #6067EB;
+  background: #6067eb;
   color: #fff;
 }
 
@@ -333,23 +333,23 @@ footer {
 }
 
 .showcase-break {
-    position: absolute;
-  	background: center / cover no-repeat url('~assets/img/break_footer.svg');
-  	height: 184px;
-    top: -184px;
-    width: 100%;
+  position: absolute;
+  background: center / cover no-repeat url("~assets/img/break_footer.svg");
+  height: 184px;
+  top: -184px;
+  width: 100%;
 }
 
 /** cohort  **/
 .cohort {
-	background: left -250px / cover no-repeat url('~assets/img/cohort.png');
+  background: left -250px / cover no-repeat url("~assets/img/cohort.png");
   height: 125vh;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .mint-page {
-  background: bottom / cover no-repeat url('~assets/img/rigs/hero.jpg');
+  background: bottom / cover no-repeat url("~assets/img/rigs/hero.jpg");
   background-attachment: fixed;
   overflow: hidden;
 }
@@ -374,10 +374,14 @@ footer {
 }
 
 .story {
-  background-image: linear-gradient(180deg, rgba(255,0,0,0), rgb(255 255 255));
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 0),
+    rgb(255 255 255)
+  );
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
   padding-bottom: 200px;
 }
 
@@ -435,18 +439,22 @@ code {
 }
 
 .bg-solid {
-	background-image: linear-gradient(0deg, rgba(255,255,255,0.75), rgb(234 225 253));
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.75),
+    rgb(234 225 253)
+  );
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
   position: relative;
 }
 
 .bg-solid-top {
-	background: top / cover no-repeat url('~assets/img/break_purple2.svg');
+  background: top / cover no-repeat url("~assets/img/break_purple2.svg");
   height: auto;
   height: 200px;
-  width: 110%!important;
+  width: 110% !important;
   position: absolute;
   top: -200px;
 }
@@ -455,7 +463,8 @@ a {
   text-decoration: underline;
 }
 
-nav a, a.btn {
+nav a,
+a.btn {
   text-decoration: none;
 }
 
@@ -500,22 +509,26 @@ nav a, a.btn {
 }
 
 .minting .btn {
-  z-index: 999!important;
+  z-index: 999 !important;
   position: absolute;
 }
 
 .info {
-  background-image: linear-gradient(180deg, rgba(255,0,0,0), rgb(255 255 255));
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 0, 0, 0),
+    rgb(255 255 255)
+  );
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
   padding-bottom: 200px;
 }
 
 .info-break {
   position: relative;
-	background: top / cover no-repeat url('~assets/img/break_white.svg');
-	height: 184px;
+  background: top / cover no-repeat url("~assets/img/break_white.svg");
+  height: 184px;
   top: -180px;
 }
 
@@ -529,28 +542,28 @@ nav a, a.btn {
 }
 
 .minter {
-  background: left -1400px / 100% no-repeat url('~assets/img/guild-list.jpg');
+  background: left -1400px / 100% no-repeat url("~assets/img/guild-list.jpg");
   background-color: #ff9675;
   height: 40vh;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .minted {
-  background: left -500px / cover no-repeat url('~assets/img/cohort.png')!important;
+  background: left -500px / cover no-repeat url("~assets/img/cohort.png") !important;
   background-color: #ff9675;
   height: 80vh;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .user-garage {
-  background: left -500px / cover no-repeat url('~assets/img/cohort.png')!important;
+  background: left -500px / cover no-repeat url("~assets/img/cohort.png") !important;
   background-color: #ff9675;
   height: auto;
   min-height: 50vh;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .rigs a img {
@@ -558,39 +571,38 @@ nav a, a.btn {
 }
 
 .rigs a:hover img {
-  transform: translatey(-20px)!important;
+  transform: translatey(-20px) !important;
   transition: all 0.2s ease-in-out;
 }
 
 .minter-break {
-    position: relative;
-  	background: center / cover no-repeat url('~assets/img/break_footer.svg');
-  	height: 184px;
-    top: -200px;
+  position: relative;
+  background: center / cover no-repeat url("~assets/img/break_footer.svg");
+  height: 184px;
+  top: -200px;
 }
 
 .minter-console {
-
 }
 
 .part-frame .carousel {
   height: 250px;
 }
 
-.mint .carousel>*:nth-child(1) {
-	animation:fade1 0.5s infinite;
+.mint .carousel > *:nth-child(1) {
+  animation: fade1 0.5s infinite;
 }
-.mint .carousel>*:nth-child(2) {
-	animation:fade2 0.5s infinite;
+.mint .carousel > *:nth-child(2) {
+  animation: fade2 0.5s infinite;
 }
-.mint .carousel>*:nth-child(3) {
-	animation:fade3 0.5s infinite;
+.mint .carousel > *:nth-child(3) {
+  animation: fade3 0.5s infinite;
 }
-.mint .carousel>*:nth-child(4) {
-	animation:fade4 0.5s infinite;
+.mint .carousel > *:nth-child(4) {
+  animation: fade4 0.5s infinite;
 }
-.mint .carousel>*:nth-child(5) {
-	animation:fade5 0.5s infinite;
+.mint .carousel > *:nth-child(5) {
+  animation: fade5 0.5s infinite;
 }
 
 .part-result {
@@ -598,7 +610,7 @@ nav a, a.btn {
   top: 0px;
   left: 0px;
   padding: 60px 40px;
-  background: center / 100% no-repeat url('~assets/img/part2.png');
+  background: center / 100% no-repeat url("~assets/img/part2.png");
   width: 250px;
   height: 300px;
   display: inline-block;
@@ -612,17 +624,17 @@ nav a, a.btn {
 }
 
 .btn-mint {
-  background: #FF5B7A!important;
+  background: #ff5b7a !important;
   width: 100%;
   text-align: center;
 }
 
 .minter-console .bg-black {
-  background: #1C73E2;
+  background: #1c73e2;
 }
 
 .minter-console {
-  color: #12FFA6!important;
+  color: #12ffa6 !important;
   position: relative;
 }
 
@@ -643,16 +655,19 @@ nav a, a.btn {
 #mint-log .frame {
   animation: typing 2.5s steps(40, end);
   overflow-y: hidden;
-  overflow-x:scroll;
+  overflow-x: scroll;
   word-break: break-all;
   max-height: 400px;
-
 }
 
 /* The typing effect */
 @keyframes typing {
-  from { height: 0 }
-  to { height: 100% }
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
 }
 
 .part-frame {
@@ -665,7 +680,7 @@ nav a, a.btn {
 }
 
 .part1 {
-  background: center / 100% no-repeat url('~assets/img/part1.png');
+  background: center / 100% no-repeat url("~assets/img/part1.png");
 }
 
 .part1 .part-result.active {
@@ -673,31 +688,30 @@ nav a, a.btn {
 }
 
 .part2 {
-
-  background: center / 100% no-repeat url('~assets/img/part2.png');
+  background: center / 100% no-repeat url("~assets/img/part2.png");
 }
 
 .part2 .part-result.active {
   animation-delay: 2s;
-  background: center / 100% no-repeat url('~assets/img/part3.png');
+  background: center / 100% no-repeat url("~assets/img/part3.png");
 }
 
 .part3 {
-  background: center / 100% no-repeat url('~assets/img/part3.png');
+  background: center / 100% no-repeat url("~assets/img/part3.png");
 }
 
 .part3 .part-result.active {
   animation-delay: 3s;
-  background: center / 100% no-repeat url('~assets/img/part4.png');
+  background: center / 100% no-repeat url("~assets/img/part4.png");
 }
 
 .part4 {
-  background: center / 100% no-repeat url('~assets/img/part4.png');
+  background: center / 100% no-repeat url("~assets/img/part4.png");
 }
 
 .part4 .part-result.active {
   animation-delay: 4s;
-  background: center / 100% no-repeat url('~assets/img/part2.png');
+  background: center / 100% no-repeat url("~assets/img/part2.png");
 }
 
 .part-frame.part1.mint {
@@ -729,7 +743,7 @@ nav a, a.btn {
 }
 
 .rig-result {
-  background: center / cover no-repeat url('~assets/img/holo.png');
+  background: center / cover no-repeat url("~assets/img/holo.png");
   position: absolute;
   top: -100px;
   left: 40%;
@@ -753,7 +767,8 @@ nav a, a.btn {
   animation-delay: 2.75s;
 }
 
-.minter-details.active, .minter-console.active {
+.minter-details.active,
+.minter-console.active {
   animation: fadeInDown 0.1s linear;
   animation-delay: 2.5s;
   animation-iteration-count: 1;
@@ -773,7 +788,8 @@ nav a, a.btn {
   transform: scaleX(-1);
 }
 
-.halo1.active, .halo2.active {
+.halo1.active,
+.halo2.active {
   animation: fadeOutDown 0.1s linear;
   animation-delay: 5.5s;
   animation-iteration-count: 1;
@@ -785,36 +801,37 @@ nav a, a.btn {
 /** Gallery **/
 
 .filters button {
-  background: #615C89;
+  background: #615c89;
   border-radius: 50px;
   padding: 10px 30px;
   font-size: 1.2em;
 }
 
-.filters .active, .filters button:hover {
-  background: #FF6667;
+.filters .active,
+.filters button:hover {
+  background: #ff6667;
   color: #232041;
 }
 
 /** rig **/
 .rig {
-	background: #232041;
+  background: #232041;
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .rig-break {
   position: relative;
-	background: center / cover no-repeat url('~assets/img/break_5.svg');
-	height: 184px;
+  background: center / cover no-repeat url("~assets/img/break_5.svg");
+  height: 184px;
   top: -80px;
 }
 
 .rig-break-bottom {
   position: relative;
-	background: center / cover no-repeat url('~assets/img/break_5.svg');
-	height: 184px;
+  background: center / cover no-repeat url("~assets/img/break_5.svg");
+  height: 184px;
   bottom: -160px;
   -webkit-transform: scaleY(-1);
   transform: scaleY(-1);
@@ -881,15 +898,14 @@ nav a, a.btn {
 }
 
 .rig-frame {
-   width: 750px;
-   height: 750px;
-   background-image: linear-gradient(180deg, #B2D1FC 0%, #DD6C90 100%);
-   border-radius: 50px;
-   overflow: hidden;
-   padding: 10px;
-   margin: 40px auto;
-   animation: float 10s ease-in-out infinite;
-
+  width: 750px;
+  height: 750px;
+  background-image: linear-gradient(180deg, #b2d1fc 0%, #dd6c90 100%);
+  border-radius: 50px;
+  overflow: hidden;
+  padding: 10px;
+  margin: 40px auto;
+  animation: float 10s ease-in-out infinite;
 }
 
 .rig-frame img {
@@ -898,32 +914,36 @@ nav a, a.btn {
 
 /** guilds **/
 .guild {
-	background: top / cover no-repeat url('~assets/img/break_purple2.svg');
+  background: top / cover no-repeat url("~assets/img/break_purple2.svg");
   height: auto;
   max-height: 600px;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
   margin-top: -350px;
 }
 
 .fleet-break {
   position: relative;
-	background: bottom / cover no-repeat url('~assets/img/fleet_break.svg');
-	height: 300px;
+  background: bottom / cover no-repeat url("~assets/img/fleet_break.svg");
+  height: 300px;
   bottom: 0px;
 }
 
 .guild-list {
-	background-image: linear-gradient(0deg, rgba(255,255,255,0.75), rgb(234 225 253));
+  background-image: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0.75),
+    rgb(234 225 253)
+  );
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .guild-list-break {
   position: relative;
-	background: center / cover no-repeat url('~assets/img/mod.png');
-	height: 700px;
+  background: center / cover no-repeat url("~assets/img/mod.png");
+  height: 700px;
   bottom: 0px;
 }
 
@@ -950,11 +970,11 @@ nav a, a.btn {
 }
 
 .cohort-info {
-	background: left 200px / 100% no-repeat url('~assets/img/cohort2.png');
+  background: left 200px / 100% no-repeat url("~assets/img/cohort2.png");
   background-color: #311b41;
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .cohort-info .icon {
@@ -964,22 +984,22 @@ nav a, a.btn {
 /** id section  **/
 
 .id {
-	background: center top / cover no-repeat url('~assets/img/id.jpg');
+  background: center top / cover no-repeat url("~assets/img/id.jpg");
   height: calc(100vw * 1.74635416667);
   max-height: 1353px;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .details {
   background: #232041;
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .whitelist {
-  background: #F5F1FF;
+  background: #f5f1ff;
   height: auto;
   width: 100vw;
   max-width: 1920px !important;
@@ -987,8 +1007,8 @@ nav a, a.btn {
 
 .whitelist-break {
   position: relative;
-	background: center / cover no-repeat url('~assets/img/break_purple.svg');
-	height: 184px;
+  background: center / cover no-repeat url("~assets/img/break_purple.svg");
+  height: 184px;
   top: -150px;
 }
 
@@ -998,14 +1018,14 @@ nav a, a.btn {
 }
 
 .faq {
-  background-image: linear-gradient(180deg, #8d5392 0%, #8CC5E3 100%);
+  background-image: linear-gradient(180deg, #8d5392 0%, #8cc5e3 100%);
   height: auto;
   width: 100vw;
-  max-width: 100%!important;
+  max-width: 100% !important;
 }
 
 .console {
-  max-width: 1920px!important;
+  max-width: 1920px !important;
   margin: auto;
 }
 
@@ -1031,40 +1051,40 @@ nav a, a.btn {
 /** animations  **/
 
 @keyframes fadeOutDown {
-   0% {
-      opacity: 0;
-      transform: translateY(100px);
-   }
-   100% {
-      opacity: 1;
-      transform: translateY(0px);
-   }
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 @keyframes fadeInDown {
-   0% {
-      opacity: 1;
-      transform: translateY(0px);
-   }
-   50% {
- 		transform: translatey(-20px);
- 	}
-   100% {
-      opacity: 0;
-      transform: translateY(100px);
-   }
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
 }
 
 @keyframes float {
-	0% {
-		transform: translatey(0px);
-	}
-	50% {
-		transform: translatey(-20px);
-	}
-	100% {
-		transform: translatey(0px);
-	}
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
 }
 
 @keyframes slide {
@@ -1083,7 +1103,6 @@ nav a, a.btn {
   100% {
     transform: translateX(calc(-250px * 12));
   }
-
 }
 
 @keyframes a1 {
@@ -1149,8 +1168,9 @@ nav a, a.btn {
     opacity: 1;
     transform: scale(1.2);
   }
-  40%, 60% {
-    transform: rotate(-20deg) scale(1.2) ;
+  40%,
+  60% {
+    transform: rotate(-20deg) scale(1.2);
   }
   50% {
     transform: rotate(20deg) scale(1.2);
@@ -1209,15 +1229,15 @@ nav a, a.btn {
   left: 0px;
   width: 100%;
   height: 500px;
-  background: right / cover no-repeat url('~assets/img/ship.png');
+  background: right / cover no-repeat url("~assets/img/ship.png");
 }
 
 .ship.aos-init {
-  opacity: 1!important;
+  opacity: 1 !important;
 }
 
 .ship.aos-init.aos-animate {
-  bottom: -700px!important;
+  bottom: -700px !important;
   transition: all 0.8s ease-in-out;
   z-index: 2;
 }
@@ -1267,107 +1287,167 @@ nav a, a.btn {
   overflow: hidden;
   display: flex;
   height: 350px;
-  margin-bottom: 30px!important;
+  margin-bottom: 30px !important;
   width: calc(250px * 17);
-  margin-left: -10%!important;
-  margin-right: -10%!important;
+  margin-left: -10% !important;
+  margin-right: -10% !important;
   margin: 0 auto;
 }
 
 .animated-carousel .vehicle {
-  margin: 0px!important;
+  margin: 0px !important;
   min-width: 350px;
-  margin-left:0px!important;
+  margin-left: 0px !important;
 }
 
 .carousel {
-	position: relative!important;
-	overflow: hidden;
+  position: relative !important;
+  overflow: hidden;
   height: 1000px;
   width: 100%;
 }
 
-.carousel>* {
-	position:absolute;
-	left:0;
-	top:0;
-	background-size: cover;
+.carousel > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-size: cover;
 }
 
 .carousel img {
   border-radius: 50px;
 }
 
-.carousel>*:nth-child(1) {
-	animation:fade1 20s infinite;
+.carousel > *:nth-child(1) {
+  animation: fade1 20s infinite;
 }
 @keyframes fade1 {
-	0%   {opacity:1}
-	20%  {opacity:0}
-	40%  {opacity:0}
-	60%  {opacity:0}
-	80%  {opacity:0}
-	100% {opacity:1}
+  0% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.carousel>*:nth-child(2) {
-	animation:fade2 20s infinite;
+.carousel > *:nth-child(2) {
+  animation: fade2 20s infinite;
 }
 @keyframes fade2 {
-	0%   {opacity:0}
-	20%  {opacity:1}
-	40%  {opacity:0}
-	60%  {opacity:0}
-	80%  {opacity:0}
-	100% {opacity:0}
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.carousel>*:nth-child(3) {
-	animation:fade3 20s infinite;
+.carousel > *:nth-child(3) {
+  animation: fade3 20s infinite;
 }
 @keyframes fade3 {
-	0%   {opacity:0}
-	20%  {opacity:0}
-	40%  {opacity:1}
-	60%  {opacity:0}
-	80%  {opacity:0}
-	100% {opacity:0}
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.carousel>*:nth-child(4) {
-	animation:fade4 20s infinite;
+.carousel > *:nth-child(4) {
+  animation: fade4 20s infinite;
 }
 @keyframes fade4 {
-	0%   {opacity:0}
-	20%  {opacity:0}
-	40%  {opacity:0}
-	60%  {opacity:1}
-	80%  {opacity:0}
-	100% {opacity:0}
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-.carousel>*:nth-child(5) {
-	animation:fade5 20s infinite;
+.carousel > *:nth-child(5) {
+  animation: fade5 20s infinite;
 }
 @keyframes fade5 {
-	0%   {opacity:0}
-	20%  {opacity:0}
-	40%  {opacity:0}
-	60%  {opacity:0}
-	80%  {opacity:1}
-	100% {opacity:0}
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .a-1 {
-  animation-delay: 1.2s!important;
+  animation-delay: 1.2s !important;
 }
 
 .a-2 {
-  animation-delay: 2.5s!important;
+  animation-delay: 2.5s !important;
 }
 
 .a-3 {
-  animation-delay: 3.75s!important;
+  animation-delay: 3.75s !important;
 }
 
 /* accordion */
@@ -1456,35 +1536,31 @@ input:checked ~ .tab-content {
   outline: 0;
 }
 
-
-@media
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 2dppx) {
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .hero {
-		background-image: url('~assets/img/hero@2x.jpg');
+    background-image: url("~assets/img/hero@2x.jpg");
     height: calc(250vw * 1.43229166667);
   }
-
 }
 
 @media (max-width: 1480px) {
   .guild-list .vehicle {
-   max-width: 250px!important;
-   margin: 0px!important;
+    max-width: 250px !important;
+    margin: 0px !important;
   }
   .hero-btn {
     /* margin-bottom: 14rem !important; */
   }
   .cohort {
-    background: left 0px / 180% no-repeat url('~assets/img/cohort.png')!important;
+    background: left 0px / 180% no-repeat url("~assets/img/cohort.png") !important;
     height: 125vh;
     width: 100vw;
   }
   .animated-carousel {
-    height: 300px!important;
+    height: 300px !important;
   }
   .animated-carousel .vehicle {
-    min-width: 300px!important;
+    min-width: 300px !important;
   }
 }
 
@@ -1493,7 +1569,7 @@ input:checked ~ .tab-content {
     /* margin-bottom: 14rem !important; */
   }
   .guild-list .vehicle {
-   max-width: 300px!important;
+    max-width: 300px !important;
   }
 }
 
@@ -1505,23 +1581,23 @@ input:checked ~ .tab-content {
 
 @media (max-width: 1080px) {
   .animated-carousel {
-    margin-left: 0!important;
-    margin-right: 0!important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   .info .float-frame {
-    margin-top: 0px!important;
+    margin-top: 0px !important;
   }
   .carousel {
-    height: 750px!important;
+    height: 750px !important;
   }
   .guild-list .vehicle {
-    max-width: 200px!important;
+    max-width: 200px !important;
   }
   .tab-label {
-    font-size: 19px!important;
+    font-size: 19px !important;
   }
   .ship {
-    bottom: -250px!important;
+    bottom: -250px !important;
     display: none;
   }
   nav li a {
@@ -1545,10 +1621,10 @@ input:checked ~ .tab-content {
     max-width: 160px;
   }
   .animated-carousel {
-    height: 275px!important;
+    height: 275px !important;
   }
   .animated-carousel .vehicle {
-    min-width: 275px!important;
+    min-width: 275px !important;
   }
   nav .btn {
     font-size: 0.75em;
@@ -1557,7 +1633,7 @@ input:checked ~ .tab-content {
     /* margin-bottom: 14rem !important; */
   }
   .cohort {
-    background: left 100px / 250% no-repeat url(/_nuxt/assets/img/cohort.png)!important;
+    background: left 100px / 250% no-repeat url(/_nuxt/assets/img/cohort.png) !important;
     height: 155vh;
     width: 100vw;
   }
@@ -1568,14 +1644,14 @@ input:checked ~ .tab-content {
   }
 
   .guild-list .vehicle {
-    max-width: 160px!important;
+    max-width: 160px !important;
   }
 
   .info .float-frame {
-    margin-top: 0px!important;
+    margin-top: 0px !important;
   }
   .carousel {
-    height: 350px!important;
+    height: 350px !important;
   }
 
   .bg-navbar {
@@ -1583,15 +1659,15 @@ input:checked ~ .tab-content {
   }
 
   .fleet-container {
-    padding: 1em 2em!important;
+    padding: 1em 2em !important;
   }
 
   .text-xl {
-    font-size: 1.15rem!important;
+    font-size: 1.15rem !important;
   }
 
   .guild {
-    max-height: 820px!important;
+    max-height: 820px !important;
     padding-top: 60px;
   }
 
@@ -1604,5 +1680,4 @@ input:checked ~ .tab-content {
   .token {
     display: none;
   }
-
 }

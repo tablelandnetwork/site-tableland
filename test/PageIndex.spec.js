@@ -1,12 +1,12 @@
-import { createLocalVue, mount } from '@vue/test-utils';
-import { setupTest } from '@nuxt/test-utils';
+import { createLocalVue, mount } from "@vue/test-utils";
+import { setupTest } from "@nuxt/test-utils";
 
-import { registerComponents } from './setup';
-import IndexPage from '@/pages/index.vue';
+import { registerComponents } from "./setup";
+import IndexPage from "@/pages/index.vue";
 
-describe('Index Page', function () {
+describe("Index Page", function () {
   setupTest({
-    configFile: 'nuxt.config.js'
+    configFile: "nuxt.config.js",
   });
 
   let wrapper;
@@ -22,23 +22,23 @@ describe('Index Page', function () {
 
     // hoisted
     wrapper = mount(IndexPage, {
-      localVue: localVue,
-      store: store,
-      attachTo: document.body
+      localVue,
+      store,
+      attachTo: document.body,
     });
   });
 
-  test('is a Vue instance', async function () {
+  test("is a Vue instance", async function () {
     await expect(wrapper.vm).toBeTruthy();
   });
 
-  test('renders correctly when browser has a wallet', async function () {
+  test("renders correctly when browser has a wallet", async function () {
     window.ethereum = {};
     await expect(wrapper.element).toMatchSnapshot();
     delete window.ethereum;
   });
 
-  test('renders correctly when browser does not have a wallet', async function () {
+  test("renders correctly when browser does not have a wallet", async function () {
     await expect(wrapper.element).toMatchSnapshot();
   });
 });

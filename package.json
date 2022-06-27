@@ -1,6 +1,6 @@
 {
-  "name": "site-tableland",
-  "description": "Build web3 with SQL",
+  "name": "@tableland/site",
+  "description": "The Tableland homepage",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,21 +8,25 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
-    "lint": "npm run lint:js",
-    "test": "jest"
+    "test": "npm run lint && jest",
+    "lint": "eslint --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier '**/*.{js,ts,json,vue,md}' --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "format": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
     "@chenfengyuan/vue-countdown": "^1.1.5",
     "aos": "^2.3.4",
     "core-js": "^3.15.1",
-    "ethers": "^5.6.7",
+    "ethers": "^5.6.8",
     "locomotive-scroll": "^4.1.4",
     "nuxt": "^2.15.7",
+    "v-lazy-image": "^2.1.1",
+    "typescript": "^4.6.3",
     "vue": "^2.6.14",
     "vue-class-on-scroll": "^0.1.0",
-    "vue-parallaxy": "^1.1.1",
-    "v-lazy-image": "^2.1.1"
+    "vue-parallaxy": "^1.1.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
@@ -33,16 +37,19 @@
     "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/tailwindcss": "^4.2.0",
-    "@tableland/sdk": "^0.0.1",
+    "@tableland/sdk": "^1.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@vue/test-utils": "^1.2.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^27.0.5",
     "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
     "flush-promises": "^1.0.2",
     "jest": "^27.0.5",
     "postcss": "^8.3.5",
+    "prettier": "^2.6.2",
     "vue-jest": "^3.0.4"
   }
 }
