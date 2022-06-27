@@ -30,6 +30,7 @@
         <div class="flex px-6 lg:px-24 py-6 lg:py-12">
           <div class="lg:w-full minter-details">
             <div class="flex flex-wrap py-0 lg:px-12 px-0">
+                  {{rigsMeta[0].json_build_object.name}}
               <!-- <div
                 class="lg:w-1/2 w-full px-0 py-3"
                 v-for="(rig, index) in rigsMeta.json_build_object[rigId].attributes"
@@ -125,7 +126,6 @@
 export default {
   data: function () {
     return {
-      rigsMeta: this.rigsMeta,
       rigId: this.$route.params.id,
       provider: window.ethereum,
       nav: [
@@ -193,7 +193,8 @@ export default {
       this.$nuxt.refresh();
     },
     rigsMeta: async function() {
-      const rigsMeta =  await(await fetch('https://staging.tableland.network/query?s=select%20json_build_object(%27name%27%2C%20concat(%27%23%27%2C%20id)%2C%20%27external_url%27%2C%20concat(%27https%3A%2F%2Ftableland.xyz%2Frigs%2F%27%2C%20id)%2C%20%27image%27%2C%20image%2C%20%27image_alpha%27%2C%20image_alpha%2C%20%27thumb%27%2C%20thumb%2C%20%27thumb_alpha%27%2C%20thumb_alpha%2C%20%27attributes%27%2C%20%20json_agg(json_build_object(%27display_type%27%2C%20display_type%2C%20%27trait_type%27%2C%20trait_type%2C%20%27value%27%2C%20value)))%20from%20test_rigs_69_5%20join%20test_rig_attributes_69_6%20on%20test_rigs_69_5.id%20%3D%20test_rig_attributes_69_6.rig_id%20group%20by%20id%3B&mode=json')).json().slice(rigId);
+      const options = {method: 'GET', headers: {Accept: 'application/json'}};
+      const rigsMeta =  await(await fetch('https://staging.tableland.network/query?s=select%20json_build_object(%27name%27%2C%20concat(%27%23%27%2C%20id)%2C%20%27external_url%27%2C%20concat(%27https%3A%2F%2Ftableland.xyz%2Frigs%2F%27%2C%20id)%2C%20%27image%27%2C%20image%2C%20%27image_alpha%27%2C%20image_alpha%2C%20%27thumb%27%2C%20thumb%2C%20%27thumb_alpha%27%2C%20thumb_alpha%2C%20%27attributes%27%2C%20%20json_agg(json_build_object(%27display_type%27%2C%20display_type%2C%20%27trait_type%27%2C%20trait_type%2C%20%27value%27%2C%20value)))%20from%20test_rigs_69_5%20join%20test_rig_attributes_69_6%20on%20test_rigs_69_5.id%20%3D%20test_rig_attributes_69_6.rig_id%20group%20by%20id%3B&mode=json', options)).json();
       this.rigsMeta = rigsMeta;
       console.log(rigsMeta);
     },
