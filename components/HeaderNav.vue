@@ -162,7 +162,7 @@
             </a>
             <a
               v-if="provider"
-              v-show="$wallet.account"
+              v-show="$wallet.account "
               class="p-6 block text-l"
               @click="$wallet.disconnect"
             >
@@ -171,7 +171,6 @@
             <a
               v-else
               @click="connectWallet"
-              v-else
               class="btn bg-black text-white"
             >
               <strong>Connect Wallet</strong>

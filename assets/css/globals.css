@@ -582,8 +582,8 @@ input::placeholder {
   color: white;
 }
 
-input:focus {
-  border-bottom: 2px solid white;
+input.quantity:focus {
+  border-bottom: 2px solid black;
   outline: 0;
   transition: border 0.2s ease-in-out;
 }
@@ -809,7 +809,7 @@ input:focus {
 
 .rig-result {
   background: transparent;
-  margin-top: -350px;
+  margin-top: -500px;
   height: auto;
   max-width: 100%;
   width: 100%;
@@ -853,7 +853,7 @@ input:focus {
 }
 
 .minter-details.active,
-.minter-console.active {
+.minter-console.active, .minter-title.active {
   animation: fadeInDown 0.1s linear;
   animation-delay: 2.5s;
   animation-iteration-count: 1;
@@ -1156,7 +1156,7 @@ input:focus {
 }
 
 .progress {
-  animation: fadeOutDown 1s ease-in-out;
+  /* animation: fadeOutDown 1s ease-in-out; */
   margin-top: -80px;
   display: block;
 }
@@ -1183,11 +1183,11 @@ input:focus {
 @keyframes fadeOutDown {
   0% {
     opacity: 0;
-    transform: translateY(100px);
+    /* transform: translateY(100px); */
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    /* transform: translateY(0px); */
   }
 }
 
@@ -1823,7 +1823,7 @@ input:checked ~ .tab-content {
 
 @media (max-width: 1080px) {
   .rig-result {
-    margin-top: -300px;
+    margin-top: -450px;
   }
   .rig-result .btn {
     margin: 10px 0px;

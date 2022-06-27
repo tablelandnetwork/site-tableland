@@ -2,16 +2,16 @@
   <div>
     <div v-if="ethereum" class="playground-component" @click.once="init">
       <div
-        class="w-full pt-6 flex items-center flex-col rounded-3xl border-2px-black bg-white overflow-hidden"
+        class="w-full pt-6 flex items-center flex-col rounded-3xl border-2px-black bg-black overflow-hidden"
       >
         <div class="w-full block">
           <form
-            class="web-terminal-form relative block w-full text-black font-mono"
+            class="web-terminal-form relative block w-full text-white font-mono"
             @submit.prevent="onSubmit"
           >
             <input
               ref="web-terminal-input"
-              class="pl-8 pr-5 bg-white web-terminal-input block w-full text-black font-mono outline-none"
+              class="pl-8 pr-5 bg-black web-terminal-input block w-full text-white font-mono outline-none"
               type="text"
               autocomplete="off"
               @keydown="keyCheck"
@@ -20,7 +20,7 @@
           </form>
           <div
             ref="web-terminal"
-            class="web-terminal p-5 overflow-y-scroll text-black"
+            class="web-terminal p-5 overflow-y-scroll text-white"
           >
             <span v-for="(line, i) in lines" :key="i">
               {{ line.type === "text" ? line.value : "" }}
@@ -68,12 +68,12 @@
       >
         <div class="w-full block">
           <form
-            class="web-terminal-form relative block w-full text-black font-mono"
+            class="web-terminal-form relative block w-full text-white font-mono"
             @submit.prevent="() => false"
           >
             <input
               ref="web-terminal-input"
-              class="pl-8 pr-5 bg-black web-terminal-input block w-full text-black font-mono outline-none"
+              class="pl-8 pr-5 bg-black web-terminal-input block w-full text-white font-mono outline-none"
               type="text"
               autocomplete="off"
               disabled="disabled"
@@ -81,7 +81,7 @@
           </form>
           <div
             ref="web-terminal"
-            class="web-terminal p-5 overflow-y-scroll text-black"
+            class="web-terminal p-5 overflow-y-scroll text-white"
           >
             <span v-for="(line, i) in lines" :key="i">
               {{ line.type === "text" ? line.value : "" }}

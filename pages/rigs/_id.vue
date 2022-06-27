@@ -9,12 +9,13 @@
 
     <!-- minter -->
     <section class="rig-id">
+      <div class="rigs-hero-top"></div>
       <div
         v-if="rigId"
         class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-36 pt-30 lg:pt-48 justify-between"
       >
         <h1
-          class="text-black text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
+          class="text-white text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
           data-aos="fade-up"
         >
           RIG ID #00{{ rigId }}

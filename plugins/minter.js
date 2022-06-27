@@ -729,16 +729,49 @@ export default async ({ env }, inject) => {
 
       // For devices with no browser wallet
       // Notes: Not working at the moment, need to find better way to implement WalletConnect
-      // if (!window.ethereum) {
-      //   const nftContract = new ethers.Contract(rig.address, rig.abi);
-      //   const totalSupply = await nftContract.totalSupply();
-      //
-      //   console.log("connected to walletconnect")
-      //   console.log(this.provider)
-      //   if (account) {
-      //     await wallet.setAccountWallet(account);
-      //   }
-      // }
+      if (!window.ethereum) {
+        // const nftContract = new ethers.Contract(rig.address, rig.abi);
+        // const totalSupply = await nftContract.totalSupply();
+
+        console.log("connected to walletconnect")
+        console.log(this.provider)
+        const wallct = new ethers.providers.Web3Provider(provider);
+        const signer = await wallct.getSigner();
+        const [account] = await wallct.listAccounts();
+        // this.$wallet.provider = this.provider2.provider.accounts[0];
+
+        if (account) {
+          await provider.enable();
+          console.log("connected to account:" + account);
+          const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
+          const balance = (await wallct.getBalance(account)).toString();
+          this.balance = (+ethers.utils.formatEther(balance)).toFixed(3);
+          this.account = account;
+          this.accountCompact = `${account.substring(
+            0,
+            5
+          )}...${account.substring(account.length - 4)}`;
+          console.log(this.balance)
+          console.log(this.account)
+        }
+
+
+        const nftContract = new ethers.Contract(rig.address, rig.abi);
+        console.log(nftContract);
+
+        const totalSupply = await nftContract.totalSupply();
+        if (window.location.pathname == "/minter/") {
+          //Check contract totalSupply
+          const maxSupply = 3000 - totalSupply;
+          document.getElementById("rig-supply").innerHTML = maxSupply + "/3000";
+          if (maxSupply === 0) {
+            console.log("no more left!");
+            document.getElementById("connect-button").innerHTML =
+              "RIGS SOLD OUT!";
+            document.querySelector("#connect-button").disabled = true;
+          }
+        }
+      }
 
       // For devices WITH browser wallets
       if (window.ethereum) {
@@ -809,7 +842,7 @@ export default async ({ env }, inject) => {
                       <img src="${rigsMeta.image}"/>
                      </div>
                      <h2 class="text-black font-Orbitron text-xl px-3 py-3">RIG ID #00${rigId}</h2>
-                     <p class="text-black px-3 py-0">${rigsMeta.attributes[3].value}</p>
+                     <p class="text-black px-3 py-0">Fleet: ${rigsMeta.attributes[3].value}</p>
                      <p class="text-black px-3 py-3 pb-3 ${rigsMeta.attributes[2].value} rarity-${rigsMeta.attributes[5].value}">${rigsMeta.attributes[5].value}/100</p>
                     </a>
                   </div>`;
@@ -937,8 +970,8 @@ export default async ({ env }, inject) => {
           document.getElementById("rig-result").classList.add("active");
           document.getElementById("minter-details").classList.add("active");
           document.getElementById("minter-console").classList.add("active");
+          document.getElementById("minter-title").classList.add("active");
           document.getElementById("animated-carousel").classList.add("mint");
-          document.getElementById("minter-title").innerHTML = "Rig Minted";
           console.log(
             `============================ RIG MINTED =============================== <p>transaction tx ${
               tx.hash
@@ -990,9 +1023,18 @@ export default async ({ env }, inject) => {
     },
 
     async disconnect() {
-      const [account] = await wallet.provider.send("eth_requestAccounts");
-      if (account) {
-        await wallet.setAccount(0);
+      if (!window.ethereum) {
+        const wallct = new ethers.providers.Web3Provider(provider);
+        const [account] = await wallct.listAccounts();
+        if (account) {
+          await wallet.setAccount(0);
+        }
+      }
+      if (window.ethereum) {
+        const [account] = await wallet.provider.send("eth_requestAccounts");
+        if (account) {
+          await wallet.setAccount(0);
+        }
       }
     },
 

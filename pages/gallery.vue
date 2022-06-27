@@ -19,7 +19,7 @@
         <div class="flex">
           <div class="lg:w-full px-3 pt-0" data-aos="fade-up">
             <h1
-              class="font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter"
+              class="font-Orbitron w-full h-auto text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-12 lg:mb-10"
               data-aos="fade-up"
             >
               The Rigs

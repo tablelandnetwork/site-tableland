@@ -14,10 +14,8 @@
         <div class="lg:w-full px-6 pb-6 lg:pb-10 pt-12" data-aos="fade-up">
           <div class="lg:flex">
             <div class="w-full pt-6">
-              <h1 class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-12 lg:mb-10">
-                <span id="minter-title">Mint a Rig</span>
-                <!-- <span class="ghost" v-bind:class="{'progress': isAddClass}">Finding your parts</span><span class="ghost" v-bind:class="{'done': isAddClass}">It's your rig!</span> -->
-              </h1>
+              <h1 id="minter-title" class="minter-title text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-12 lg:mb-10" v-bind:class="{ active: isAddClass }">
+                Mint a Rig</h1>
             </div>
           </div>
         </div>
@@ -43,6 +41,10 @@
           class="rig-result"
           v-bind:class="{ active: isAddClass }"
         >
+        <h1 class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-12 lg:mb-10 text-center">
+          <span id="minter-title">Rig Minted</span>
+          <!-- <span class="ghost" v-bind:class="{'progress': isAddClass}">Finding your parts</span><span class="ghost" v-bind:class="{'done': isAddClass}">It's your rig!</span> -->
+        </h1>
           <div
             id="rig-box"
             class="flex flex-wrap justify-center text-center"
@@ -163,7 +165,7 @@
               </div>
             </div>
             <div class="flex">
-              <div v-if="provider" class="w-full px-12 py-12">
+              <div v-if="provider !== null" class="w-full px-12 py-12">
                 <div v-if="$wallet.account">
                   <a
                     id="mint-button"
@@ -191,11 +193,6 @@
               ===== DEVELOPMENT NOTE, USE ONLY ON OPTIMISM KOVAN TESTNET! ======
             </p>
           </div>
-        </div>
-        <div class="lg:px-64 px-24 py-24">
-          <h1 class="text-center font-Orbitron w-full h-auto text-l sm:text-xl lg:text-3xl md:text-2xl leading-tighter py-12 px-3"
-          data-aos="fade-up">Explore your parts with Tableland</h1>
-          <Playground></Playground>
         </div>
       </div>
 
@@ -257,6 +254,14 @@
               <div></div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="container section-container" id="minter-console">
+        <div class="lg:px-24 px-12 py-24">
+
+          <h1 class="text-center font-Orbitron w-full h-auto text-l sm:text-xl lg:text-3xl md:text-2xl leading-tighter py-12 px-3"
+          data-aos="fade-up">Explore your parts with Tableland</h1>
+          <Playground></Playground>
         </div>
       </div>
     </section>
@@ -368,7 +373,7 @@ export default {
       time: launchDate - now,
       isAddClass: false,
       rigs: rigsMeta,
-      provider: window.ethereum,
+      provider: this.$wallet.provider,
       quantity: "1",
       rigs: helpers.getRigs(20),
       nav: [
