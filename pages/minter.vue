@@ -9,20 +9,12 @@
 
     <!-- minter -->
     <section class="minter">
-      <div class="rigs-hero-top h-271px lg:h-308px xl:h-322px"></div>
-      <div
-        class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-24 lg:pt-24 2xl:pt-24 justify-between"
-      >
-        <div
-          class="lg:w-full w-full px-0 lg:pb-12 pb-6 pt-0"
-          data-aos="fade-up"
-        >
-          <div class="flex">
-            <div class="text-center w-full pt-6" data-aos="fade-up">
-              <h1
-                class="font-bold text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-0"
-                data-aos="fade-up"
-              >
+      <div class="rigs-hero-top"></div>
+      <div class="container px-0 sm:px-6 md:px-12 pt-12 sm:pt-12 lg:pt-32">
+        <div class="lg:w-full px-6 pb-6 lg:pb-10 pt-12" data-aos="fade-up">
+          <div class="lg:flex">
+            <div class="w-full pt-6">
+              <h1 class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-12 lg:mb-10">
                 <span id="minter-title">Mint a Rig</span>
                 <!-- <span class="ghost" v-bind:class="{'progress': isAddClass}">Finding your parts</span><span class="ghost" v-bind:class="{'done': isAddClass}">It's your rig!</span> -->
               </h1>
@@ -32,7 +24,7 @@
       </div>
     </section>
 
-    <section class="md:block story py-0 pb-48 relative">
+    <section class="md:block story py-0 pb-48 pt-18 relative">
       <div class="w-full">
         <div
           id="animated-carousel"
@@ -64,11 +56,6 @@
             >
             <a href="/minter" class="btn btn-mint text-white">MINT ANOTHER</a>
 
-          </div>
-          <div class="lg:px-64 px-12 py-12">
-            <h1 class="text-center font-Orbitron w-full h-auto text-l sm:text-xl lg:text-3xl md:text-2xl leading-tighter py-12 px-3"
-            data-aos="fade-up">Explore your parts with Tableland</h1>
-            <Playground></Playground>
           </div>
         </div>
         <div class="flex lg:px-12 xl:px-48 py-0">
@@ -125,7 +112,7 @@
           >
             <div class="flex py-12 px-12">
               <div class="w-1/2 lg:w-1/2">
-                <h3 class="text-black lg:text-xl text-l">PRICE</h3>
+                <h3 class="text-black lg:text-xl xl:text-2xl text-l">PRICE</h3>
                 <h2
                   v-if="quantity"
                   class="overflow-hidden text-black lg:text-4xl text-xl font-Orbitron pr-12 price-box"
@@ -137,7 +124,7 @@
                 </h2>
               </div>
               <div class="w-1/2 lg:w-1/2">
-                <h3 class="text-black lg:text-xl text-l">TOTAL SUPPLY</h3>
+                <h3 class="text-black xl:text-2xl lg:text-xl text-l">TOTAL SUPPLY</h3>
                 <h2
                   id="rig-supply"
                   class="text-black text-xl lg:text-4xl font-Orbitron"
@@ -148,23 +135,23 @@
             </div>
             <div class="flex py-0 px-12" v-if="$wallet.account">
               <div class="w-full lg:w-1/2">
-                <h3 class="text-black lg:text-xl text-l">YOUR BALANCE</h3>
+                <h3 class="text-black xl:text-2xl lg:text-xl text-l">YOUR BALANCE</h3>
                 <h2 class="text-black text-xl lg:text-4xl font-Orbitron">
                   {{ $wallet.balance }}
                 </h2>
               </div>
               <div class="w-full lg:w-1/2">
-                <h3 class="text-black lg:text-xl text-l">QUANTITY</h3>
-                <!-- <input
-                  class="quantity text-white text-2xl lg:text-4xl font-Orbitron"
+                <h3 class="text-black xl:text-2xl lg:text-xl text-l">QUANTITY</h3>
+                <input
+                  class="quantity text-black text-2xl lg:text-4xl font-Orbitron"
                   v-model="quantity"
                   v-on:change="updateQuantity"
                   value="quantity"
                   type="number"
                   min="1"
-                  max="9"
-                /> -->
-                <select
+                  max="10"
+                />
+                <!-- <select
                   class="quantity text-black text-2xl lg:text-4xl font-Orbitron"
                   v-model="quantity"
                   v-on:change="updateQuantity"
@@ -172,7 +159,7 @@
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
-                </select>
+                </select> -->
               </div>
             </div>
             <div class="flex">
@@ -204,6 +191,11 @@
               ===== DEVELOPMENT NOTE, USE ONLY ON OPTIMISM KOVAN TESTNET! ======
             </p>
           </div>
+        </div>
+        <div class="lg:px-64 px-24 py-24">
+          <h1 class="text-center font-Orbitron w-full h-auto text-l sm:text-xl lg:text-3xl md:text-2xl leading-tighter py-12 px-3"
+          data-aos="fade-up">Explore your parts with Tableland</h1>
+          <Playground></Playground>
         </div>
       </div>
 

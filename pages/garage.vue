@@ -7,16 +7,11 @@
       :targets="nav.map((i) => i.target)"
     />
 
-    <!-- minter -->
-    <section class="user-garage">
-      <div
-        class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-12 flex pt-0 lg:pt-12 2xl:pt-24 justify-between"
-      ></div>
-    </section>
 
     <section class="md:block story py-4 md:py-12 relative">
+      <div class="rigs-hero-top"></div>
       <h1
-        class="text-black text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
+        class="text-white text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
         data-aos="fade-up"
         v-if="!$wallet.account"
       >
@@ -24,45 +19,27 @@
       </h1>
 
       <div
-        class="container px-0 sm:px-12 md:px-12 lg:px-24 xl:px-24"
+        class="container px-0 sm:px-6 md:px-12 pt-12 sm:pt-12 lg:pt-32"
         v-if="$wallet.account"
       >
-        <div class="flex flex-wrap">
-          <div
-            class="lg:w-full px-6 lg:px-12 lg:pb-12 pb-6 pt-0"
-            data-aos="fade-up"
-          >
-            <h4 class="text-black lg:text-xl text-md" v-if="$wallet.account">
-              WALLET ID: {{ $wallet.account }}
-            </h4>
-            <h1
-              class="text-black font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter md:mb-6 lg:mb-6"
-              data-aos="fade-up"
-              v-if="$wallet.account"
-            >
-              Welcome to the Garage
-            </h1>
+        <div class="lg:w-full px-6 pb-6 lg:pb-10 pt-12" data-aos="fade-up">
+          <div class="lg:flex">
+            <div class="lg:w-1/2 w-full pt-6">
+              <h1 class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-12 lg:mb-10">
+                Your Garage
+              </h1>
+            </div>
+            <div class="lg:w-1/2 w-full px-6 lg:px-12 lg:pb-12 py-16" data-aos="fade-up">
+              <h4
+                id="rig-balance"
+                class="text-white text-right lg:text-2xl text-md"
+                v-show="$wallet.tokenBalance"
+              >
+                {{ $wallet.tokenBalance }} RIGS OWNED
+              </h4>
+            </div>
           </div>
-          <div
-            class="lg:w-1/2 px-6 md:px-6 lg:px-12 lg:pb-12 pb-6 pt-0"
-            data-aos="fade-up"
-          >
-            <h1
-              class="text-black font-Orbitron w-full h-auto text-3xl sm:text-4xl lg:text-5xl md:text-4xl leading-tighter md:mb-12 lg:mb-10"
-              data-aos="fade-up"
-            >
-              — Your Rigs
-            </h1>
-          </div>
-          <div class="lg:w-1/2 px-6 lg:px-12 lg:pb-12 py-2" data-aos="fade-up">
-            <h4
-              id="rig-balance"
-              class="text-black text-right lg:text-2xl text-md"
-              v-show="$wallet.tokenBalance"
-            >
-              {{ $wallet.tokenBalance }} RIGS OWNED
-            </h4>
-          </div>
+
         </div>
       </div>
       <div

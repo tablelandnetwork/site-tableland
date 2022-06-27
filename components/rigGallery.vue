@@ -22,14 +22,14 @@
     </ul> -->
 
     <div class="flex flex-wrap py-0 rig-garage">
-     <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 sm:w-1/2 lg:px-3 lg:py-3 rigs my-2" v-for="(rig, index) in rigsMeta.rigs" :key="index" data-aos="fade-up" v-if="currentFilter === rig.attributes[1].value || currentFilter === 'All'">
-       <a :href="'/rigs/' + rig.id ">
+     <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 sm:w-1/2 lg:px-3 lg:py-3 rigs my-2" v-for="(rig, index) in rigsMeta" :key="index" data-aos="fade-up" v-if="currentFilter === rig.json_build_object.attributes[1].value || currentFilter === 'All'">
+       <a :href="'/rigs/' + rig.json_build_object.name ">
         <div class="rig-frame" :class="rig.attributes[1].value">
-        <img :src="rig.image"/>
+        <img :src="rig.json_build_object.image"/>
       </div>
-      <h2 class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3">RIG ID #00{{ rig.id }}</h2>
-      <p class="text-black px-3 py-0">{{ rig.attributes[1].value }}</p>
-      <p class="text-black px-3 lg:py-3 lg:pb-3" :class="' rarity-' + rig.attributes[0].value">{{ rig.attributes[0].value }}/100</p>
+      <h2 class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3">RIG ID #00{{ rig.json_build_object.name }}</h2>
+      <p class="text-black px-3 py-0">{{ rig.json_build_object.attributes[1].value }}</p>
+      <p class="text-black px-3 lg:py-3 lg:pb-3" :class="' rarity-' + rig.json_build_object.attributes[0].value">{{ rig.json_build_object.attributes[0].value }}/100</p>
        </a>
      </div>
    </div>
@@ -39,15 +39,20 @@
 
 
 <script>
-import rigsMeta from '~/assets/rigsMeta.json';
+
 export default {
+
     data() {
       return {
-          rigsMeta: rigsMeta,
           currentFilter: 'All',
       };
     },
     methods: {
+      async rigsMeta() {
+        const rigsMeta =  await(await fetch('https://staging.tableland.network/query?s=select%20json_build_object(%27name%27%2C%20concat(%27%23%27%2C%20id)%2C%20%27external_url%27%2C%20concat(%27https%3A%2F%2Ftableland.xyz%2Frigs%2F%27%2C%20id)%2C%20%27image%27%2C%20image%2C%20%27image_alpha%27%2C%20image_alpha%2C%20%27thumb%27%2C%20thumb%2C%20%27thumb_alpha%27%2C%20thumb_alpha%2C%20%27attributes%27%2C%20%20json_agg(json_build_object(%27display_type%27%2C%20display_type%2C%20%27trait_type%27%2C%20trait_type%2C%20%27value%27%2C%20value)))%20from%20test_rigs_69_5%20join%20test_rig_attributes_69_6%20on%20test_rigs_69_5.id%20%3D%20test_rig_attributes_69_6.rig_id%20group%20by%20id%3B&mode=json')).json();
+        console.log(rigsMeta)
+        this.rigsMeta = rigsMeta;
+      },
   		setFilter: function(filter) {
   			this.currentFilter = filter;
   		}
