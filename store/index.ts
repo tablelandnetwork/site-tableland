@@ -1,5 +1,5 @@
 import { ActionTree, GetterTree, MutationTree } from "vuex";
-import { connect } from "@tableland/sdk";
+import { connect, ConnectOptions } from "@tableland/sdk";
 
 export const state = function () {
   return {
@@ -40,17 +40,16 @@ const getConnection = (function () {
   let connection: any;
   return async function (options?: any) {
     if (options?.disconnect) {
-      connection = void 0;
+      connection = undefined;
       delete window.tableland;
       return;
     }
     if (connection) return connection;
 
-    console.log(`connecting to validator at: ${process.env.validatorHost}`);
     connection = await connect({
-      host: process.env.validatorHost as string,
-      network: process.env.validatorNet as any,
-    });
+      chain: process.env.chain as string,
+    } as ConnectOptions);
+    await connection.siwe();
 
     window.tableland = connection;
 
@@ -60,6 +59,7 @@ const getConnection = (function () {
 
 export const actions: ActionTree<RootState, RootState> = {
   connect: async function (context) {
+    console.log("store connect...");
     // connect to tableland
     const tableland = await getConnection();
 
@@ -70,13 +70,31 @@ export const actions: ActionTree<RootState, RootState> = {
   disconnect: async function (context) {
     await getConnection({ disconnect: true });
   },
-  runSql: async function (context, query) {
+  getReceipt: async function (context, txnHash) {
     const tableland = await getConnection();
-    return await tableland.query(query);
+    console.log(txnHash);
+    return await tableland.receipt(txnHash);
+  },
+  runWrite: async function (context, query) {
+    const tableland = await getConnection();
+    return await tableland.write(query);
+  },
+  runRead: async function (context, query) {
+    const tableland = await getConnection();
+    return await tableland.read(query);
   },
   createTable: async function (context, createStatement) {
+    const parts = createStatement.split(" ");
+    const tableName = parts[2];
+    const defintionParts = parts.slice(3);
+    let definition = defintionParts.join(" ");
+    definition = definition.slice(
+      definition.indexOf("(") + 1,
+      definition.lastIndexOf(")")
+    );
+
     const tableland = await getConnection();
-    return await tableland.create(createStatement);
+    return await tableland.create(definition, tableName);
   },
   myTables: async function (context) {
     const tableland = await getConnection();
