@@ -21,7 +21,7 @@
         </div>
       <h2 class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3">RIG ID {{ rig.json_build_object.name }}</h2>
       <p class="text-black px-3 py-0">Fleet: {{ rig.json_build_object.attributes[1].value }}</p>
-      <p class="text-black px-3 lg:py-3 lg:pb-3" :class="' rarity-' + rig.json_build_object.attributes[0].value">Original: {{ rig.json_build_object.attributes[0].value }}</p>
+      <p class="text-black px-3 lg:py-3 lg:pb-3" :class="' rarity-' + rig.json_build_object.attributes[2].value">Original: {{ rig.json_build_object.attributes[0].value }}</p>
        </a>
      </div>
    </div>
@@ -51,7 +51,7 @@ export default {
       rigsMeta: async function() {
         const totalSupply = 200;
         const options = {method: 'GET', headers: {Accept: 'application/json'}};
-        const rigsFeed =  await(await fetch('https://staging.tableland.network/query?s=select%20json_build_object(%27name%27%2C%20concat(%27%23%27%2C%20id)%2C%20%27external_url%27%2C%20concat(%27https%3A%2F%2Ftableland.xyz%2Frigs%2F%27%2C%20id)%2C%20%27image%27%2C%20image%2C%20%27image_alpha%27%2C%20image_alpha%2C%20%27thumb%27%2C%20thumb%2C%20%27thumb_alpha%27%2C%20thumb_alpha%2C%20%27attributes%27%2C%20%20json_agg(json_build_object(%27display_type%27%2C%20display_type%2C%20%27trait_type%27%2C%20trait_type%2C%20%27value%27%2C%20value)))%20from%20test_rigs_69_5%20join%20test_rig_attributes_69_6%20on%20test_rigs_69_5.id%20%3D%20test_rig_attributes_69_6.rig_id%20where%20id%20%3C%20' + totalSupply + '%20group%20by%20id%3B&mode=json', options)).json();
+        const rigsFeed =  await(await fetch('https://staging.tableland.network/query?s=select%20json_build_object(%27name%27%2C%20concat(%27%23%27%2C%20id)%2C%20%27external_url%27%2C%20concat(%27https%3A%2F%2Ftableland.xyz%2Frigs%2F%27%2C%20id)%2C%20%27image%27%2C%20image%2C%20%27image_alpha%27%2C%20image_alpha%2C%20%27thumb%27%2C%20thumb%2C%20%27thumb_alpha%27%2C%20thumb_alpha%2C%20%27attributes%27%2C%20%20json_agg(json_build_object(%27display_type%27%2C%20display_type%2C%20%27trait_type%27%2C%20trait_type%2C%20%27value%27%2C%20value)))%20from%20test_rigs_69_5%20join%20test_rig_attributes_69_6%20on%20test_rigs_69_5.id%20%3D%20test_rig_attributes_69_6.rig_id%20where%20id%20%3C%20' + totalSupply + '%20group%20by%20id%20order%20by%20id%3B&mode=json', options)).json();
         this.rigsMeta = rigsFeed;
         rigsMeta = this.rigsMeta;
       },
