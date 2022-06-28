@@ -601,7 +601,7 @@ input.quantity:focus {
 }
 
 .rig-id .container {
-  max-width: 1280px;
+  max-width: 100%;
 }
 
 .user-garage {
@@ -616,6 +616,10 @@ input.quantity:focus {
   min-height: 140px;
   width: 100vw;
   max-width: 100% !important;
+}
+
+.rigs {
+  animation: 1s fadeIn;
 }
 
 .rigs a {
@@ -701,7 +705,7 @@ input.quantity:focus {
 }
 
 #mint-log {
-  height: 400px;
+  height: 450px;
   background: #fff;
   position: absolute;
   top: 16px;
@@ -713,7 +717,7 @@ input.quantity:focus {
   text-align: left;
   padding: 20px;
   transition: all 0.2s ease-in-out;
-  overflow: hidden;
+  overflow: scroll;
   word-wrap: break-word;
 }
 
@@ -722,7 +726,8 @@ input.quantity:focus {
   overflow-y: hidden;
   overflow-x: scroll;
   word-break: break-all;
-  max-height: 400px;
+  font-size: 14px;
+  /* max-height: 400px; */
 }
 
 /* The typing effect */
@@ -994,6 +999,16 @@ input.quantity:focus {
 .light_1 {
   bottom: 0px;
   right: -70px;
+}
+
+.rig-id .rig-frame {
+  width: 100%;
+  animation: none;
+}
+
+.rig-id #mint-log {
+  position: relative;
+  top: 10px;
 }
 
 .rig-frame {

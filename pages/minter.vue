@@ -68,7 +68,68 @@
           >
             <div class="text-white text-center" id="mint-log">
               <div id="mint-terminal" class="frame">
-                <div v-if="$wallet.account">
+<code>
+tableland> SELECT * FROM rig_parts WHERE fleet = 'Foils';
+
+fleet       original         type        name                    color
+----------  ---------------  ----------  ----------------------  ----------
+Foils       Solar Scarab     Airframe    DHA                     Dawn
+Foils       Solar Scarab     Airframe    DHA                     Electric
+Foils       Solar Scarab     Airframe    DHA                     Ruby
+Foils       The Cricket      Propulsion  EVM                     Alpenglow
+Foils       The Cricket      Propulsion  EVM                     Blaze
+Foils       The Cricket      Propulsion  EVM                     Midnight
+Foils       Hydro Wasp       Propulsion  SPoF                    Dawn
+Foils       Hydro Wasp       Propulsion  SPoF                    Electric
+Foils       Hydro Wasp       Propulsion  SPoF                    Sunset
+Foils       G-Nat            Cockpit     Simple Query            Dawn
+Foils       G-Nat            Cockpit     Simple Query            Midnight
+Foils       G-Nat            Cockpit     Simple Query            Sunset
+Foils       The Cricket      Cockpit     Staker                  Alpenglow
+Foils       The Cricket      Cockpit     Staker                  Blaze
+Foils       The Cricket      Cockpit     Staker                  Midnight
+Foils       Stark Tangler    Cockpit     Stark                   Alpenglow
+Foils       Stark Tangler    Cockpit     Stark                   Midnight
+Foils       Stark Tangler    Cockpit     Stark                   Sunset
+Foils       Solar Scarab     Cockpit     State Machine           Dawn
+Foils       Solar Scarab     Cockpit     State Machine           Electric
+Foils       Solar Scarab     Cockpit     State Machine           Ruby
+Foils       The Cricket      Airframe    Supersingular           Alpenglow
+Foils       The Cricket      Airframe    Supersingular           Blaze
+Foils       The Cricket      Airframe    Supersingular           Midnight
+Foils       Solar Scarab     Propulsion  Symmetric Encryption    Dawn
+Foils       Solar Scarab     Propulsion  Symmetric Encryption    Electric
+Foils       Solar Scarab     Propulsion  Symmetric Encryption    Ruby
+Foils       G-Nat            Propulsion  Syntax                  Dawn
+Foils       G-Nat            Propulsion  Syntax                  Midnight
+Foils       G-Nat            Propulsion  Syntax                  Sunset
+Foils       Stark Tangler    Airframe    Tangle                  Alpenglow
+Foils       Stark Tangler    Airframe    Tangle                  Midnight
+Foils       Stark Tangler    Airframe    Tangle                  Sunset
+Foils       The Messenger    Cockpit     Testnet                 Blaze
+Foils       The Messenger    Cockpit     Testnet                 Dawn
+Foils       The Messenger    Cockpit     Testnet                 Electric
+Foils       The Messenger    Propulsion  Threshold               Blaze
+Foils       The Messenger    Propulsion  Threshold               Dawn
+Foils       The Messenger    Propulsion  Threshold               Electric
+Foils       Hydro Wasp       Airframe    Transitive Dependency   Dawn
+Foils       Hydro Wasp       Airframe    Transitive Dependency   Electric
+Foils       Hydro Wasp       Airframe    Transitive Dependency   Sunset
+Foils       G-Nat            Airframe    Transmitter             Dawn
+Foils       G-Nat            Airframe    Transmitter             Midnight
+Foils       G-Nat            Airframe    Transmitter             Sunset
+Foils       The Messenger    Airframe    Tuple                   Blaze
+Foils       The Messenger    Airframe    Tuple                   Dawn
+Foils       The Messenger    Airframe    Tuple                   Electric
+Foils       Hydro Wasp       Cockpit     WAL                     Dawn
+Foils       Hydro Wasp       Cockpit     WAL                     Electric
+Foils       Hydro Wasp       Cockpit     WAL                     Sunset
+Foils       Stark Tangler    Propulsion  Zero-Knowledge          Alpenglow
+Foils       Stark Tangler    Propulsion  Zero-Knowledge          Midnight
+Foils       Stark Tangler    Propulsion  Zero-Knowledge          Sunset
+
+</code>
+                <!-- <div v-if="$wallet.account">
                   <p class="text-justify">
                     ========================== WALLET CONNECTED
                     ============================
@@ -103,7 +164,7 @@
                     ========================== CONNECT YOUR WALLET
                     =============================
                   </p>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -119,7 +180,7 @@
                   v-if="quantity"
                   class="overflow-hidden text-black lg:text-4xl text-xl font-Orbitron pr-12 price-box"
                 >
-                  <span>{{ $wallet.priceFix * quantity }}</span>
+                  <span>{{ $wallet.priceFix * quantity || '0.05' }}</span>
                 </h2>
                 <h2 v-else class="text-black text-xl lg:text-4xl font-Orbitron">
                   0.05ETH
@@ -131,8 +192,9 @@
                   id="rig-supply"
                   class="text-black text-xl lg:text-4xl font-Orbitron"
                 >
-                  3000
+                  {{3000 - $wallet.totalSupply}}
                 </h2>
+
               </div>
             </div>
             <div class="flex py-0 px-12" v-if="$wallet.account">
@@ -194,6 +256,31 @@
             </p>
           </div>
         </div>
+        <!-- <div>
+
+          <div class="flex px-6 xl:px-24 py-6 lg:py-12"><div class="lg:w-full minter-details"><div data-aos="fade-up" class="flex flex-wrap py-0 lg:px-12 px-0 aos-init aos-animate"><div class="w-full md:w-full lg:w-1/2"><div class="rig-frame"><img src="https://ipfs.infura-ipfs.io/ipfs/bafybeidshfelbo2vzks2bsygexw3ezybiqfstmzahsas2pnfsyxv2cdy4i/image.png"></div></div> <div class="w-full md:w-full lg:w-1/2 lg:px-12"><div id="minter-console" class="minter-console hidden md:block"><div id="mint-log" class="text-white text-left"><div id="mint-terminal" class="frame"><div class="text-left">&gt; Querying Rig ID #001</div> <div id="rig-owner">&gt; Owner: 0x4D13f1C893b4CaFAF791501EDACA331468FEfeDe</div><br> <div class="text-left">tableland&gt; SELECT * FROM rig_parts WHERE fleet = 'Foils';</div><br> <div class="flex flex-wrap"><div class="w-1/3 px-0 py-2"><strong>Background</strong><br>
+                           ---------------------<br>
+                           Main High Desert 3
+                         </div><div class="w-1/3 px-0 py-2"><strong>Cockpit</strong><br>
+                           ---------------------<br>
+                           Sunset Front Run
+                         </div><div class="w-1/3 px-0 py-2"><strong>Core</strong><br>
+                           ---------------------<br>
+                           Midnight Klinger
+                         </div><div class="w-1/3 px-0 py-2"><strong>Fleet</strong><br>
+                           ---------------------<br>
+                           Tumblers
+                         </div><div class="w-1/3 px-0 py-2"><strong>Percent Original</strong><br>
+                           ---------------------<br>
+                           0.250000
+                         </div><div class="w-1/3 px-0 py-2"><strong>Suspension</strong><br>
+                           ---------------------<br>
+                           Blaze Derivative
+                         </div><div class="w-1/3 px-0 py-2"><strong>Utility Pack</strong><br>
+                           ---------------------<br>
+                           Dawn Rebaser
+                         </div></div></div></div> <div class="w-full px-0 py-6 lg:py-18"><a href="https://testnet.quixotic.io/asset/0x61a748d5F21E7B235f740bdB496B66b852687000/1" class="btn btn-mint text-white">VIEW ON QUIXOTIC</a></div></div></div></div></div></div>
+        </div> -->
       </div>
 
       <div class="container" v-else>
@@ -239,7 +326,7 @@
               <div class="w-1/2 lg:w-1/2">
                 <h3 class="text-black lg:text-xl text-l">TOTAL SUPPLY</h3>
                 <h2 class="text-black text-xl lg:text-4xl font-Orbitron">
-                  3000
+                  {{3000 - $wallet.totalSupply}}
                 </h2>
               </div>
               <div class="w-full px-0 py-6">
@@ -256,14 +343,14 @@
           </div>
         </div>
       </div>
-      <div class="container section-container" id="minter-console">
+      <!-- <div class="container section-container" id="minter-console">
         <div class="lg:px-24 px-12 py-24">
 
           <h1 class="text-center font-Orbitron w-full h-auto text-l sm:text-xl lg:text-3xl md:text-2xl leading-tighter py-12 px-3"
           data-aos="fade-up">Explore your parts with Tableland</h1>
           <Playground></Playground>
         </div>
-      </div>
+      </div> -->
     </section>
 
     <footer class="text-blue py-10">

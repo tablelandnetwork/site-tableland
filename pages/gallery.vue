@@ -143,7 +143,7 @@ export default {
         },
         {
           title: "Mint a Rig",
-          href: "/minter",
+          href: "/minter/",
           main: true,
         },
       ],

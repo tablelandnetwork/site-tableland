@@ -12,7 +12,7 @@
       <div class="rigs-hero-top"></div>
       <div
         v-if="rigId"
-        class="container px-2 sm:px-12 md:px-36 lg:px-36 xl:px-36 pt-30 lg:pt-48 justify-between"
+        class="container px-2 sm:px-12 md:px-12 lg:px-12 xl:px-24 pt-30 lg:pt-48 justify-between story"
       >
         <h1
           class="text-white text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
@@ -20,44 +20,58 @@
         >
           RIG ID #00{{ rigId }}
         </h1>
-        <div class="rig-frame">
-          <!-- <img :src="rigsMeta.json_build_object.image" /> -->
-        </div>
-        <h3
-          id="rig-owner"
-          class="text-white text-center lg:text-xl text-l"
-        ></h3>
-        <div class="flex px-6 lg:px-24 py-6 lg:py-12">
+
+        <div class="flex px-6 xl:px-24 py-6 lg:py-12">
           <div class="lg:w-full minter-details">
-            <div class="flex flex-wrap py-0 lg:px-12 px-0">
-                  {{rigsMeta[0].json_build_object.name}}
-              <!-- <div
-                class="lg:w-1/2 w-full px-0 py-3"
-                v-for="(rig, index) in rigsMeta.json_build_object[rigId].attributes"
+              <div
+                class="flex flex-wrap py-0 lg:px-12 px-0"
+                v-for="(rig, index) in rigsMeta[0]"
                 data-aos="fade-up"
               >
-                <h3 class="text-white lg:text-xl text-l">
-                  {{ rig.trait_type }}
-                </h3>
-                <h2 class="text-white text-3xl font-Orbitron">
-                  {{ rig.value }}
-                </h2>
-              </div> -->
-            </div>
-            <div class="flex">
-              <div class="w-full lg:px-24 py-6 lg:py-18">
-                <a
-                  class="btn btn-mint text-white"
-                  :href="
-                    'https://testnets.opensea.io/assets/goerli/0x88694d0b8c8E800AB3D9eecBF9A8923B3b5825fA/' +
-                    rigId
-                  "
-                  >VIEW ON OPENSEA</a
-                >
+
+                  <div class="w-full md:w-full lg:w-1/2">
+                    <div class="rig-frame">
+                      <img :src="rig.image" />
+                    </div>
+                  </div>
+
+                  <div class="w-full md:w-full lg:w-1/2 lg:px-12">
+                  <div class="minter-console hidden md:block" id="minter-console">
+                    <div class="text-white text-left" id="mint-log">
+                      <div id="mint-terminal" class="frame">
+
+                            <div class="text-left">> Querying Rig ID #00{{rigId}}</div>
+
+                            <div id="rig-owner"></div><br>
+                            <div class="text-left">tableland> SELECT * FROM rig_parts WHERE fleet = 'Foils';</div><br>
+
+                            <div class="flex flex-wrap" >
+                              <div class="w-1/3 px-0 py-2" v-for="parts in rig.attributes">
+                              <strong>{{ parts.trait_type }}</strong><br>
+                              ---------------------<br>
+                              {{ parts.value }}
+                            </div>
+                            </div>
+
+
+                      </div>
+                    </div>
+                    <div class="w-full px-0 py-6 lg:py-18">
+                      <a
+                        class="btn btn-mint text-white"
+                        :href="
+                          'https://testnet.quixotic.io/asset/0x61a748d5F21E7B235f740bdB496B66b852687000/' +
+                          rigId
+                        "
+                        >VIEW ON QUIXOTIC</a
+                      >
+                    </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
       <div
         class="container"
@@ -128,23 +142,21 @@ export default {
     return {
       rigId: this.$route.params.id,
       provider: window.ethereum,
+      rigsMeta: this.rigsMeta,
+      totalSupply: this.$wallet.totalSupply,
       nav: [
         {
           title: "Gallery",
           href: "/gallery",
         },
         {
-          title: "Garage",
-          href: "/garage",
-        },
-        {
-          title: "Docs",
-          href: "https://docs.tableland.xyz",
-          target: "_blank",
-        },
-        {
           title: "Rigs",
           href: "/rigs",
+        },
+        {
+          title: "Mint a Rig",
+          href: "/minter/",
+          main: true,
         },
       ],
     };
@@ -175,7 +187,7 @@ export default {
         {
           hid: "og-image",
           property: "og:image",
-          content: "https://i.imgur.com/5YHLnkC.png",
+          content: "",
         },
       ],
     };
@@ -194,9 +206,10 @@ export default {
     },
     rigsMeta: async function() {
       const options = {method: 'GET', headers: {Accept: 'application/json'}};
-      const rigsMeta =  await(await fetch('https://staging.tableland.network/query?s=select%20json_build_object(%27name%27%2C%20concat(%27%23%27%2C%20id)%2C%20%27external_url%27%2C%20concat(%27https%3A%2F%2Ftableland.xyz%2Frigs%2F%27%2C%20id)%2C%20%27image%27%2C%20image%2C%20%27image_alpha%27%2C%20image_alpha%2C%20%27thumb%27%2C%20thumb%2C%20%27thumb_alpha%27%2C%20thumb_alpha%2C%20%27attributes%27%2C%20%20json_agg(json_build_object(%27display_type%27%2C%20display_type%2C%20%27trait_type%27%2C%20trait_type%2C%20%27value%27%2C%20value)))%20from%20test_rigs_69_5%20join%20test_rig_attributes_69_6%20on%20test_rigs_69_5.id%20%3D%20test_rig_attributes_69_6.rig_id%20group%20by%20id%3B&mode=json', options)).json();
-      this.rigsMeta = rigsMeta;
-      console.log(rigsMeta);
+      const rigsFeed =  await(await fetch('https://staging.tableland.network/query?s=select%20json_build_object(%27name%27%2C%20concat(%27%23%27%2C%20id)%2C%20%27external_url%27%2C%20concat(%27https%3A%2F%2Ftableland.xyz%2Frigs%2F%27%2C%20id)%2C%20%27image%27%2C%20image%2C%20%27image_alpha%27%2C%20image_alpha%2C%20%27thumb%27%2C%20thumb%2C%20%27thumb_alpha%27%2C%20thumb_alpha%2C%20%27attributes%27%2C%20%20json_agg(json_build_object(%27display_type%27%2C%20display_type%2C%20%27trait_type%27%2C%20trait_type%2C%20%27value%27%2C%20value)))%20from%20test_rigs_69_5%20join%20test_rig_attributes_69_6%20on%20test_rigs_69_5.id%20%3D%20test_rig_attributes_69_6.rig_id%20where%20id%20%3D%20' + this.rigId + '%20and%20id%20%3C%20200%20group%20by%20id%3B&mode=rows', options)).json();
+      this.rigsMeta = rigsFeed;
+      console.log(this.rigsMeta);
+      rigsMeta = this.rigsMeta;
     },
   },
 };

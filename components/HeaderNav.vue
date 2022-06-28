@@ -213,8 +213,7 @@ export default {
     isMinter() {
       if (
         this.$route.path === "/minter/" ||
-        this.$route.path === "/garage/" ||
-        this.$route.path === "/gallery/"
+        this.$route.path === "/garage/"
       ) {
         return true;
       } else {
