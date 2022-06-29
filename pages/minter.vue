@@ -47,7 +47,7 @@
         </h1>
           <div
             id="rig-box"
-            class="flex flex-wrap justify-center text-center"
+            
           ></div>
           <div class="rig-btn py-2 px-2">
             <a id="tx-btn" class="btn bg-black text-white" target="_blank"
@@ -256,31 +256,34 @@ Foils       Stark Tangler    Propulsion  Zero-Knowledge          Sunset
             </p>
           </div>
         </div>
-        <!-- <div>
 
-          <div class="flex px-6 xl:px-24 py-6 lg:py-12"><div class="lg:w-full minter-details"><div data-aos="fade-up" class="flex flex-wrap py-0 lg:px-12 px-0 aos-init aos-animate"><div class="w-full md:w-full lg:w-1/2"><div class="rig-frame"><img src="https://ipfs.infura-ipfs.io/ipfs/bafybeidshfelbo2vzks2bsygexw3ezybiqfstmzahsas2pnfsyxv2cdy4i/image.png"></div></div> <div class="w-full md:w-full lg:w-1/2 lg:px-12"><div id="minter-console" class="minter-console hidden md:block"><div id="mint-log" class="text-white text-left"><div id="mint-terminal" class="frame"><div class="text-left">&gt; Querying Rig ID #001</div> <div id="rig-owner">&gt; Owner: 0x4D13f1C893b4CaFAF791501EDACA331468FEfeDe</div><br> <div class="text-left">tableland&gt; SELECT * FROM rig_parts WHERE fleet = 'Foils';</div><br> <div class="flex flex-wrap"><div class="w-1/3 px-0 py-2"><strong>Background</strong><br>
-                           ---------------------<br>
-                           Main High Desert 3
-                         </div><div class="w-1/3 px-0 py-2"><strong>Cockpit</strong><br>
-                           ---------------------<br>
-                           Sunset Front Run
-                         </div><div class="w-1/3 px-0 py-2"><strong>Core</strong><br>
-                           ---------------------<br>
-                           Midnight Klinger
-                         </div><div class="w-1/3 px-0 py-2"><strong>Fleet</strong><br>
-                           ---------------------<br>
-                           Tumblers
-                         </div><div class="w-1/3 px-0 py-2"><strong>Percent Original</strong><br>
-                           ---------------------<br>
-                           0.250000
-                         </div><div class="w-1/3 px-0 py-2"><strong>Suspension</strong><br>
-                           ---------------------<br>
-                           Blaze Derivative
-                         </div><div class="w-1/3 px-0 py-2"><strong>Utility Pack</strong><br>
-                           ---------------------<br>
-                           Dawn Rebaser
-                         </div></div></div></div> <div class="w-full px-0 py-6 lg:py-18"><a href="https://testnet.quixotic.io/asset/0x61a748d5F21E7B235f740bdB496B66b852687000/1" class="btn btn-mint text-white">VIEW ON QUIXOTIC</a></div></div></div></div></div></div>
+        <!-- <div id="rig-box" class="md:flex justify-center text-center" style="max-width:1280px;margin: 60px auto;">
+           <div class="w-full md:w-1/3 rig-frame">
+            <img src="https://ipfs.infura-ipfs.io/ipfs/bafybeibyf3gmhmv32bg6h4k3w5swmpg3drnetzefhbkzzwrbfap5uyryga/image.png">
+           </div>
+           <div class="w-full md:w-2/3">
+             <div class="minter-console" id="minter-console">
+               <div class="text-white text-left" id="mint-log">
+                 <div id="mint-terminal" class="frame">
+
+                       <div class="text-left">> Querying Rig ID #00{{rigId}}</div>
+
+                       <div id="rig-owner"></div><br>
+                       <div class="text-left">tableland> SELECT * FROM rig_parts WHERE fleet = 'Foils';</div><br>
+
+                       <div class="flex flex-wrap" >
+                      test
+                       </div>
+
+
+                 </div>
+               </div>
+             </div>
+          </div>
         </div> -->
+
+
+
       </div>
 
       <div class="container" v-else>

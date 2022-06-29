@@ -5,14 +5,14 @@ import WalletConnectProvider from "@walletconnect/web3-provider";
 // import rigsMeta from "~/assets/rigsMeta.json";
 
 export default async ({ env }, inject) => {
-  ethers.getDefaultProvider();
+ethers.getDefaultProvider();
 
   const provider =
     window.ethereum != null
       ? new ethers.providers.Web3Provider(window.ethereum, "any")
       : new WalletConnectProvider({
-          infuraId: "e949e17ac40246f0a00ff2a4119be7a2",
-        });
+         infuraId: "e949e17ac40246f0a00ff2a4119be7a2",
+       });
 
   const rig = {
     address: "0x61a748d5F21E7B235f740bdB496B66b852687000",
@@ -727,6 +727,7 @@ export default async ({ env }, inject) => {
 
     async init() {
       this.provider = provider;
+      // Check contract on page load
 
       // For devices with no browser wallet
       // Notes: Not working at the moment, need to find better way to implement WalletConnect
@@ -737,7 +738,14 @@ export default async ({ env }, inject) => {
         console.log("connected to walletconnect")
         console.log(this.provider)
         const wallct = new ethers.providers.Web3Provider(provider);
-        const signer = await wallct.getSigner();
+        // const signer = await wallct.getSigner();
+
+        const nftContract = new ethers.Contract(rig.address, rig.abi);
+        const totalSupply = await nftContract.totalSupply();
+        console.log(totalSupply);
+        this.totalSupply = totalSupply;
+
+
         const [account] = await wallct.listAccounts();
         // this.$wallet.provider = this.provider2.provider.accounts[0];
 
@@ -769,11 +777,11 @@ export default async ({ env }, inject) => {
           await wallet.setAccount(account);
         }
 
-        // Check contract on page load
         const signer = provider.getSigner();
         const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
         const totalSupply = await nftContract.totalSupply();
         this.totalSupply = totalSupply;
+        console.log(totalSupply);
         const rigId = this.rigId;
 
         // Force page refreshes on network changes
@@ -952,7 +960,7 @@ export default async ({ env }, inject) => {
           const tokenURI = await nftContract.tokenURI(tokenId);
           // const rigsMeta = await (await fetch(tokenURI)).json();
 
-          document.getElementById("mint-button").innerHTML = "Rig Minted";
+          document.getElementById("mint-button").innerHTML = "Mint Results";
           document.getElementById("rig-result").classList.add("active");
           document.getElementById("minter-details").classList.add("active");
           document.getElementById("minter-console").classList.add("active");
@@ -977,16 +985,44 @@ export default async ({ env }, inject) => {
             const tokenURI = await nftContract.tokenURI(tokenId);
             const rigsMeta = await (await fetch(tokenURI)).json();
 
-            rigResult.innerHTML += `<div class="md:w-1/3 w-full px-3 py-3 rigs">
-               <div class="rig-frame ${rigsMeta.attributes[1].value} rarity-${rigsMeta.attributes[0].value}" >
-                <img src="${rigsMeta.image}"/>
-               </div>
-               <h2 class="text-black font-Orbitron text-xl">RIG ID #00${tokenId}</h2>
-              <div id="trait-${tokenId}"></div>
-            </div>`;
+            rigResult.innerHTML += `<div class="md:flex justify-center text-center px-6 py-2">
+            <div class="w-full md:w-1/3 rig-frame">
+             <img src="${rigsMeta.image}">
+            </div>
+            <div class="w-full md:w-2/3">
+              <div class="minter-console" id="minter-console">
+                <div class="text-white text-left" id="mint-log">
+                  <div id="mint-terminal" class="frame">
+                        <div class="text-left">> Querying Rig ID #00${tokenId}</div>
+                        <div class="text-left">tableland> SELECT * FROM rig_parts WHERE fleet = '${rigsMeta.attributes[1].value}';</div><br>
+
+                        <div id="trait-${tokenId}" class="flex flex-wrap"></div>
+                        <div class="text-left">
+                        <p>transaction tx '${
+                          tx.hash
+                        }', '${event.args?.tokenId}', token id '${
+                          event.args?.tokenId
+                        }', see transaction: hhttps://kovan-optimistic.etherscan.io/tx/'${
+                          tx.hash}'
+
+                        Gas used: '${receipt.gasUsed.toString()}', Transaction confirmed in block '${
+                          receipt.blockNumber
+                        }'</p>
+                        </div>
+                  </div>
+                </div>
+              </div>
+           </div>
+           </div>`;
             rigsMeta.attributes.forEach((item) => {
               let traitBox = document.getElementById("trait-" + tokenId);
-              traitBox.innerHTML += `<p class="text-black">${item.trait_type}: ${item.value}</p>`;
+              traitBox.innerHTML += `
+                <div class="md:w-1/3 w-1/2 px-0 py-2" v-for="parts in rig.attributes">
+                <strong>${item.trait_type}</strong><br>
+                ---------------------<br>
+              ${item.value}
+              </div>
+              `;
             });
           });
           document

@@ -101,10 +101,10 @@ export default {
   },
 
   hooks: {
-    "generate:page": (page) => {
-      page.html = page.html
-        .replace(/ data-n-head=".*?"/gi, "")
-        .replace(/ data-hid=".*?"/gi, "");
-    },
+    // "generate:page": (page) => {
+    //   page.html = page.html
+    //     .replace(/ data-n-head=".*?"/gi, "")
+    //     .replace(/ data-hid=".*?"/gi, "");
+    // },
   },
 };

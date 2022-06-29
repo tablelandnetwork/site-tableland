@@ -1011,13 +1011,27 @@ input.quantity:focus {
   top: 10px;
 }
 
+.rig-box .rig-frame {
+  width: 500px;
+}
+
+#rig-box {
+  margin: auto;
+  max-width: 1280px;
+}
+
+#rig-box #mint-log {
+  height: 480px;
+  top: 10px;
+  position: relative;
+}
+
 .rig-frame {
   width: 750px;
   max-width: 100%;
   height: auto;
   padding: 10px;
   margin: 0px auto;
-  animation: float 10s ease-in-out infinite;
   z-index: 999;
   position: relative;
 }
@@ -1837,6 +1851,10 @@ input:checked ~ .tab-content {
 }
 
 @media (max-width: 1080px) {
+
+  .rig-box .rig-frame {
+    padding: 0px 10px;
+  }
   .rig-result {
     margin-top: -450px;
   }
