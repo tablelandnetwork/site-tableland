@@ -1,6 +1,5 @@
 <template>
   <section class="rig-gallery">
-    <h1>TOTAL RIGS: {{$wallet.totalSupply}}{{supply}}</h1>
     <div class="filters hidden lg:block text-black text-l" data-aos="fade-up">
 			<span class="filter" v-bind:class="{ active: currentFilter === 'ALL' }" v-on:click="setFilter('ALL')">View All</span>
       <span class="filter" v-bind:class="{ active: currentFilter === 'Titans' }" v-on:click="setFilter('Titans')">Titans</span>
@@ -45,14 +44,12 @@ export default {
     data() {
       return {
           currentFilter: 'ALL',
-          supply: this.$wallet.totalSupply,
-          // rigsMeta: this.rigsMeta,
+          rigsMeta: this.rigsMeta,
       };
     },
     beforeMount(){
         this.rigsMeta();
         this.setFilter('ALL');
-
     },
     methods: {
       setFilter: function(filter) {
@@ -63,11 +60,9 @@ export default {
 
         if (this.$wallet.totalSupply) {
           this.totalSupply = this.$wallet.totalSupply;
-          console.log('conncet:'+ this.$wallet.totalSupply)
         }
         if (!this.$wallet.totalSupply) {
           this.totalSupply = 200;
-          console.log('no conncet:'+ this.$wallet.totalSupply)
         }
         // const totalSupply = await(await fetch('https://kovan-optimistic.etherscan.io/api?module=account&action=balance&address=0x61a748d5F21E7B235f740bdB496B66b852687000&tag=latest&apikey=3VRMFHQSVKKVN4X8SQVI7YEH8H2RABWQ78',options)).json();
         // console.log(totalSupply)
