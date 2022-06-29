@@ -10,8 +10,7 @@ export default {
 
   generate: {
     fallback: true
-  }
-  
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: "Tableland-Build web3 with SQL",
