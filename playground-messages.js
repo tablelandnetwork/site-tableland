@@ -17,11 +17,11 @@ export default {
     "    docs      Show url to the documentation\n" +
     "    help      Show this message again\n\n" +
     "Example Read Queries:\n" +
-    "    SELECT * FROM trees_5_16;\n" +
-    "    SELECT * FROM chess_5_11 WHERE game_id = 'wagmi99' ORDER BY move_id ASC;\n" +
+    "    SELECT * FROM mytable_5_30;\n" +
+    "    SELECT * FROM mytable_5_30 WHERE id = 0;\n" +
     "Example Create and Write Queries:\n" +
     "    CREATE TABLE trees (climate TEXT, name TEXT);\n" +
-    "    INSERT INTO trees_5_16 ('climate', 'name') VALUES ('cold', 'aspen');",
+    "    INSERT INTO trees_5_<tableId> ('climate', 'name') VALUES ('cold', 'aspen');",
   running: "Running SQL on the Validator",
   warn: {
     address:

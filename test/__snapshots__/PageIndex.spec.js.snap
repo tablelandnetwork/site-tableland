@@ -518,6 +518,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
    
   <div
     class="console bg-gradient bg-gradient-to-b from-violet to-pink"
+    id="playground"
   >
     <section
       class="playground text-white pt-6 md:pt-32 pb-32"
@@ -679,7 +680,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
                     </span>
                     <span>
                       
-                SELECT * FROM trees_5_16;
+                SELECT * FROM mytable_5_30;
             
                       <br />
                        
@@ -687,7 +688,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
                     </span>
                     <span>
                       
-                SELECT * FROM chess_5_11 WHERE game_id = 'wagmi99' ORDER BY move_id ASC;
+                SELECT * FROM mytable_5_30 WHERE id = 0;
             
                       <br />
                        
@@ -711,7 +712,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
                     </span>
                     <span>
                       
-                INSERT INTO trees_5_16 ('climate', 'name') VALUES ('cold', 'aspen');
+                INSERT INTO trees_5_&lt;tableId&gt; ('climate', 'name') VALUES ('cold', 'aspen');
             
                       <br />
                        
@@ -1474,6 +1475,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
    
   <div
     class="console bg-gradient bg-gradient-to-b from-violet to-pink"
+    id="playground"
   >
     <section
       class="playground text-white pt-6 md:pt-32 pb-32"
@@ -1635,7 +1637,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
                     </span>
                     <span>
                       
-                SELECT * FROM trees_5_16;
+                SELECT * FROM mytable_5_30;
             
                       <br />
                        
@@ -1643,7 +1645,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
                     </span>
                     <span>
                       
-                SELECT * FROM chess_5_11 WHERE game_id = 'wagmi99' ORDER BY move_id ASC;
+                SELECT * FROM mytable_5_30 WHERE id = 0;
             
                       <br />
                        
@@ -1667,7 +1669,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
                     </span>
                     <span>
                       
-                INSERT INTO trees_5_16 ('climate', 'name') VALUES ('cold', 'aspen');
+                INSERT INTO trees_5_&lt;tableId&gt; ('climate', 'name') VALUES ('cold', 'aspen');
             
                       <br />
                        
