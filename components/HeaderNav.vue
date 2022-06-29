@@ -162,17 +162,13 @@
             </a>
             <a
               v-if="provider"
-              v-show="$wallet.account "
+              v-show="$wallet.account"
               class="p-6 block text-l"
               @click="$wallet.disconnect"
             >
               <strong>Disconnect</strong>
             </a>
-            <a
-              v-else
-              @click="connectWallet"
-              class="btn bg-black text-white"
-            >
+            <a v-else @click="connectWallet" class="btn bg-black text-white">
               <strong>Connect Wallet</strong>
             </a>
           </li>
@@ -211,10 +207,7 @@ export default {
       return window.ethereum;
     },
     isMinter() {
-      if (
-        this.$route.path === "/minter/" ||
-        this.$route.path === "/garage/"
-      ) {
+      if (this.$route.path === "/minter/" || this.$route.path === "/garage/") {
         return true;
       } else {
         return false;

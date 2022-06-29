@@ -14,8 +14,13 @@
         <div class="lg:w-full px-6 pb-6 lg:pb-10 pt-12" data-aos="fade-up">
           <div class="lg:flex">
             <div class="w-full pt-6">
-              <h1 id="minter-title" class="minter-title text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-12 lg:mb-10" v-bind:class="{ active: isAddClass }">
-                Mint a Rig</h1>
+              <h1
+                id="minter-title"
+                class="minter-title text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-12 lg:mb-10"
+                v-bind:class="{ active: isAddClass }"
+              >
+                Mint a Rig
+              </h1>
             </div>
           </div>
         </div>
@@ -41,14 +46,13 @@
           class="rig-result"
           v-bind:class="{ active: isAddClass }"
         >
-        <h1 class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-12 lg:mb-10 text-center">
-          <span id="minter-title">Rig Minted</span>
-          <!-- <span class="ghost" v-bind:class="{'progress': isAddClass}">Finding your parts</span><span class="ghost" v-bind:class="{'done': isAddClass}">It's your rig!</span> -->
-        </h1>
-          <div
-            id="rig-box"
-            
-          ></div>
+          <h1
+            class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-12 lg:mb-10 text-center"
+          >
+            <span id="minter-title">Rig Minted</span>
+            <!-- <span class="ghost" v-bind:class="{'progress': isAddClass}">Finding your parts</span><span class="ghost" v-bind:class="{'done': isAddClass}">It's your rig!</span> -->
+          </h1>
+          <div id="rig-box"></div>
           <div class="rig-btn py-2 px-2">
             <a id="tx-btn" class="btn bg-black text-white" target="_blank"
               >VIEW TRANSACTION</a
@@ -57,7 +61,6 @@
               >VISIT GARAGE</a
             >
             <a href="/minter" class="btn btn-mint text-white">MINT ANOTHER</a>
-
           </div>
         </div>
         <div class="flex lg:px-12 xl:px-48 py-0">
@@ -68,67 +71,52 @@
           >
             <div class="text-white text-center" id="mint-log">
               <div id="mint-terminal" class="frame">
-<code>
-tableland> SELECT * FROM rig_parts WHERE fleet = 'Foils';
-
-fleet       original         type        name                    color
-----------  ---------------  ----------  ----------------------  ----------
-Foils       Solar Scarab     Airframe    DHA                     Dawn
-Foils       Solar Scarab     Airframe    DHA                     Electric
-Foils       Solar Scarab     Airframe    DHA                     Ruby
-Foils       The Cricket      Propulsion  EVM                     Alpenglow
-Foils       The Cricket      Propulsion  EVM                     Blaze
-Foils       The Cricket      Propulsion  EVM                     Midnight
-Foils       Hydro Wasp       Propulsion  SPoF                    Dawn
-Foils       Hydro Wasp       Propulsion  SPoF                    Electric
-Foils       Hydro Wasp       Propulsion  SPoF                    Sunset
-Foils       G-Nat            Cockpit     Simple Query            Dawn
-Foils       G-Nat            Cockpit     Simple Query            Midnight
-Foils       G-Nat            Cockpit     Simple Query            Sunset
-Foils       The Cricket      Cockpit     Staker                  Alpenglow
-Foils       The Cricket      Cockpit     Staker                  Blaze
-Foils       The Cricket      Cockpit     Staker                  Midnight
-Foils       Stark Tangler    Cockpit     Stark                   Alpenglow
-Foils       Stark Tangler    Cockpit     Stark                   Midnight
-Foils       Stark Tangler    Cockpit     Stark                   Sunset
-Foils       Solar Scarab     Cockpit     State Machine           Dawn
-Foils       Solar Scarab     Cockpit     State Machine           Electric
-Foils       Solar Scarab     Cockpit     State Machine           Ruby
-Foils       The Cricket      Airframe    Supersingular           Alpenglow
-Foils       The Cricket      Airframe    Supersingular           Blaze
-Foils       The Cricket      Airframe    Supersingular           Midnight
-Foils       Solar Scarab     Propulsion  Symmetric Encryption    Dawn
-Foils       Solar Scarab     Propulsion  Symmetric Encryption    Electric
-Foils       Solar Scarab     Propulsion  Symmetric Encryption    Ruby
-Foils       G-Nat            Propulsion  Syntax                  Dawn
-Foils       G-Nat            Propulsion  Syntax                  Midnight
-Foils       G-Nat            Propulsion  Syntax                  Sunset
-Foils       Stark Tangler    Airframe    Tangle                  Alpenglow
-Foils       Stark Tangler    Airframe    Tangle                  Midnight
-Foils       Stark Tangler    Airframe    Tangle                  Sunset
-Foils       The Messenger    Cockpit     Testnet                 Blaze
-Foils       The Messenger    Cockpit     Testnet                 Dawn
-Foils       The Messenger    Cockpit     Testnet                 Electric
-Foils       The Messenger    Propulsion  Threshold               Blaze
-Foils       The Messenger    Propulsion  Threshold               Dawn
-Foils       The Messenger    Propulsion  Threshold               Electric
-Foils       Hydro Wasp       Airframe    Transitive Dependency   Dawn
-Foils       Hydro Wasp       Airframe    Transitive Dependency   Electric
-Foils       Hydro Wasp       Airframe    Transitive Dependency   Sunset
-Foils       G-Nat            Airframe    Transmitter             Dawn
-Foils       G-Nat            Airframe    Transmitter             Midnight
-Foils       G-Nat            Airframe    Transmitter             Sunset
-Foils       The Messenger    Airframe    Tuple                   Blaze
-Foils       The Messenger    Airframe    Tuple                   Dawn
-Foils       The Messenger    Airframe    Tuple                   Electric
-Foils       Hydro Wasp       Cockpit     WAL                     Dawn
-Foils       Hydro Wasp       Cockpit     WAL                     Electric
-Foils       Hydro Wasp       Cockpit     WAL                     Sunset
-Foils       Stark Tangler    Propulsion  Zero-Knowledge          Alpenglow
-Foils       Stark Tangler    Propulsion  Zero-Knowledge          Midnight
-Foils       Stark Tangler    Propulsion  Zero-Knowledge          Sunset
-
-</code>
+                <code>
+                  tableland> SELECT * FROM rig_parts WHERE fleet = 'Foils';
+                  fleet original type name color ---------- ---------------
+                  ---------- ---------------------- ---------- Foils Solar
+                  Scarab Airframe DHA Dawn Foils Solar Scarab Airframe DHA
+                  Electric Foils Solar Scarab Airframe DHA Ruby Foils The
+                  Cricket Propulsion EVM Alpenglow Foils The Cricket Propulsion
+                  EVM Blaze Foils The Cricket Propulsion EVM Midnight Foils
+                  Hydro Wasp Propulsion SPoF Dawn Foils Hydro Wasp Propulsion
+                  SPoF Electric Foils Hydro Wasp Propulsion SPoF Sunset Foils
+                  G-Nat Cockpit Simple Query Dawn Foils G-Nat Cockpit Simple
+                  Query Midnight Foils G-Nat Cockpit Simple Query Sunset Foils
+                  The Cricket Cockpit Staker Alpenglow Foils The Cricket Cockpit
+                  Staker Blaze Foils The Cricket Cockpit Staker Midnight Foils
+                  Stark Tangler Cockpit Stark Alpenglow Foils Stark Tangler
+                  Cockpit Stark Midnight Foils Stark Tangler Cockpit Stark
+                  Sunset Foils Solar Scarab Cockpit State Machine Dawn Foils
+                  Solar Scarab Cockpit State Machine Electric Foils Solar Scarab
+                  Cockpit State Machine Ruby Foils The Cricket Airframe
+                  Supersingular Alpenglow Foils The Cricket Airframe
+                  Supersingular Blaze Foils The Cricket Airframe Supersingular
+                  Midnight Foils Solar Scarab Propulsion Symmetric Encryption
+                  Dawn Foils Solar Scarab Propulsion Symmetric Encryption
+                  Electric Foils Solar Scarab Propulsion Symmetric Encryption
+                  Ruby Foils G-Nat Propulsion Syntax Dawn Foils G-Nat Propulsion
+                  Syntax Midnight Foils G-Nat Propulsion Syntax Sunset Foils
+                  Stark Tangler Airframe Tangle Alpenglow Foils Stark Tangler
+                  Airframe Tangle Midnight Foils Stark Tangler Airframe Tangle
+                  Sunset Foils The Messenger Cockpit Testnet Blaze Foils The
+                  Messenger Cockpit Testnet Dawn Foils The Messenger Cockpit
+                  Testnet Electric Foils The Messenger Propulsion Threshold
+                  Blaze Foils The Messenger Propulsion Threshold Dawn Foils The
+                  Messenger Propulsion Threshold Electric Foils Hydro Wasp
+                  Airframe Transitive Dependency Dawn Foils Hydro Wasp Airframe
+                  Transitive Dependency Electric Foils Hydro Wasp Airframe
+                  Transitive Dependency Sunset Foils G-Nat Airframe Transmitter
+                  Dawn Foils G-Nat Airframe Transmitter Midnight Foils G-Nat
+                  Airframe Transmitter Sunset Foils The Messenger Airframe Tuple
+                  Blaze Foils The Messenger Airframe Tuple Dawn Foils The
+                  Messenger Airframe Tuple Electric Foils Hydro Wasp Cockpit WAL
+                  Dawn Foils Hydro Wasp Cockpit WAL Electric Foils Hydro Wasp
+                  Cockpit WAL Sunset Foils Stark Tangler Propulsion
+                  Zero-Knowledge Alpenglow Foils Stark Tangler Propulsion
+                  Zero-Knowledge Midnight Foils Stark Tangler Propulsion
+                  Zero-Knowledge Sunset
+                </code>
                 <!-- <div v-if="$wallet.account">
                   <p class="text-justify">
                     ========================== WALLET CONNECTED
@@ -180,32 +168,37 @@ Foils       Stark Tangler    Propulsion  Zero-Knowledge          Sunset
                   v-if="quantity"
                   class="overflow-hidden text-black lg:text-4xl text-xl font-Orbitron pr-12 price-box"
                 >
-                  <span>{{ $wallet.priceFix * quantity || '0.05' }}</span>
+                  <span>{{ $wallet.priceFix * quantity || "0.05" }}</span>
                 </h2>
                 <h2 v-else class="text-black text-xl lg:text-4xl font-Orbitron">
                   0.05ETH
                 </h2>
               </div>
               <div class="w-1/2 lg:w-1/2">
-                <h3 class="text-black xl:text-2xl lg:text-xl text-l">TOTAL SUPPLY</h3>
+                <h3 class="text-black xl:text-2xl lg:text-xl text-l">
+                  TOTAL SUPPLY
+                </h3>
                 <h2
                   id="rig-supply"
                   class="text-black text-xl lg:text-4xl font-Orbitron"
                 >
-                  {{3000 - $wallet.totalSupply}}
+                  {{ 3000 - $wallet.totalSupply }}
                 </h2>
-
               </div>
             </div>
             <div class="flex py-0 px-12" v-if="$wallet.account">
               <div class="w-full lg:w-1/2">
-                <h3 class="text-black xl:text-2xl lg:text-xl text-l">YOUR BALANCE</h3>
+                <h3 class="text-black xl:text-2xl lg:text-xl text-l">
+                  YOUR BALANCE
+                </h3>
                 <h2 class="text-black text-xl lg:text-4xl font-Orbitron">
                   {{ $wallet.balance }}
                 </h2>
               </div>
               <div class="w-full lg:w-1/2">
-                <h3 class="text-black xl:text-2xl lg:text-xl text-l">QUANTITY</h3>
+                <h3 class="text-black xl:text-2xl lg:text-xl text-l">
+                  QUANTITY
+                </h3>
                 <input
                   class="quantity text-black text-2xl lg:text-4xl font-Orbitron"
                   v-model="quantity"
@@ -281,9 +274,6 @@ Foils       Stark Tangler    Propulsion  Zero-Knowledge          Sunset
              </div>
           </div>
         </div> -->
-
-
-
       </div>
 
       <div class="container" v-else>
@@ -329,7 +319,7 @@ Foils       Stark Tangler    Propulsion  Zero-Knowledge          Sunset
               <div class="w-1/2 lg:w-1/2">
                 <h3 class="text-black lg:text-xl text-l">TOTAL SUPPLY</h3>
                 <h2 class="text-black text-xl lg:text-4xl font-Orbitron">
-                  {{3000 - $wallet.totalSupply}}
+                  {{ 3000 - $wallet.totalSupply }}
                 </h2>
               </div>
               <div class="w-full px-0 py-6">

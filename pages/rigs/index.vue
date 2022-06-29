@@ -864,7 +864,7 @@ export default {
         },
         {
           title: "Mint a Rig",
-          href: "/minter/"
+          href: "/minter/",
         },
       ],
       time: launchDate - now,

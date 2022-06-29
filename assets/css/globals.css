@@ -98,7 +98,6 @@ nav li a:active,
   cursor: pointer;
 }
 
-
 .mobile-nav {
   background-color: #815691;
   transition: all 0.2s ease-in-out;
@@ -115,16 +114,18 @@ nav li a:active,
   animation: bounce-in 0.5s reverse;
 }
 
-.mobile-enter-active li, .mobile-enter-active h1 {
+.mobile-enter-active li,
+.mobile-enter-active h1 {
   animation: fadeIn 1.5s ease-in-out;
 }
-.mobile-leave-active li, .mobile-enter-active h1 {
+.mobile-leave-active li,
+.mobile-enter-active h1 {
   animation: fadeIn 0.5s reverse;
 }
 
 @keyframes bounce-in {
   0% {
-    height:0px;
+    height: 0px;
     transition: all 0.2s ease-in-out;
   }
   100% {
@@ -858,7 +859,8 @@ input.quantity:focus {
 }
 
 .minter-details.active,
-.minter-console.active, .minter-title.active {
+.minter-console.active,
+.minter-title.active {
   animation: fadeInDown 0.1s linear;
   animation-delay: 0.5s;
   animation-iteration-count: 1;
@@ -1037,7 +1039,7 @@ input.quantity:focus {
 }
 
 .rig-frame img {
-      border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 
 .rarity-1\.000000 {

@@ -7,7 +7,6 @@
       :targets="nav.map((i) => i.target)"
     />
 
-
     <section class="md:block story py-4 md:py-12 relative">
       <div class="rigs-hero-top"></div>
       <h1
@@ -25,11 +24,16 @@
         <div class="lg:w-full px-6 pb-6 lg:pb-10 pt-12" data-aos="fade-up">
           <div class="lg:flex">
             <div class="lg:w-1/2 w-full pt-6">
-              <h1 class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-12 lg:mb-10">
+              <h1
+                class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-12 lg:mb-10"
+              >
                 Your Garage
               </h1>
             </div>
-            <div class="lg:w-1/2 w-full px-6 lg:px-12 lg:pb-12 py-16" data-aos="fade-up">
+            <div
+              class="lg:w-1/2 w-full px-6 lg:px-12 lg:pb-12 py-16"
+              data-aos="fade-up"
+            >
               <h4
                 id="rig-balance"
                 class="text-white text-right lg:text-2xl text-md"
@@ -39,7 +43,6 @@
               </h4>
             </div>
           </div>
-
         </div>
       </div>
       <div
