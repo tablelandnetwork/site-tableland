@@ -181,7 +181,10 @@
     </section>
 
     <!-- playground -->
-    <div id="playground" class="console bg-gradient bg-gradient-to-b from-violet to-pink">
+    <div
+      id="playground"
+      class="console bg-gradient bg-gradient-to-b from-violet to-pink"
+    >
       <section class="playground text-white pt-6 md:pt-32 pb-32">
         <div class="container px-6 md:px-9 lg:px-16 flex justify-center">
           <div class="md:w-2/3">
