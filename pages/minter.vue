@@ -71,51 +71,36 @@
           >
             <div class="text-white text-center" id="mint-log">
               <div id="mint-terminal" class="frame">
+
                 <code>
-                  tableland> SELECT * FROM rig_parts WHERE fleet = 'Foils';
-                  fleet original type name color ---------- ---------------
-                  ---------- ---------------------- ---------- Foils Solar
-                  Scarab Airframe DHA Dawn Foils Solar Scarab Airframe DHA
-                  Electric Foils Solar Scarab Airframe DHA Ruby Foils The
-                  Cricket Propulsion EVM Alpenglow Foils The Cricket Propulsion
-                  EVM Blaze Foils The Cricket Propulsion EVM Midnight Foils
-                  Hydro Wasp Propulsion SPoF Dawn Foils Hydro Wasp Propulsion
-                  SPoF Electric Foils Hydro Wasp Propulsion SPoF Sunset Foils
-                  G-Nat Cockpit Simple Query Dawn Foils G-Nat Cockpit Simple
-                  Query Midnight Foils G-Nat Cockpit Simple Query Sunset Foils
-                  The Cricket Cockpit Staker Alpenglow Foils The Cricket Cockpit
-                  Staker Blaze Foils The Cricket Cockpit Staker Midnight Foils
-                  Stark Tangler Cockpit Stark Alpenglow Foils Stark Tangler
-                  Cockpit Stark Midnight Foils Stark Tangler Cockpit Stark
-                  Sunset Foils Solar Scarab Cockpit State Machine Dawn Foils
-                  Solar Scarab Cockpit State Machine Electric Foils Solar Scarab
-                  Cockpit State Machine Ruby Foils The Cricket Airframe
-                  Supersingular Alpenglow Foils The Cricket Airframe
-                  Supersingular Blaze Foils The Cricket Airframe Supersingular
-                  Midnight Foils Solar Scarab Propulsion Symmetric Encryption
-                  Dawn Foils Solar Scarab Propulsion Symmetric Encryption
-                  Electric Foils Solar Scarab Propulsion Symmetric Encryption
-                  Ruby Foils G-Nat Propulsion Syntax Dawn Foils G-Nat Propulsion
-                  Syntax Midnight Foils G-Nat Propulsion Syntax Sunset Foils
-                  Stark Tangler Airframe Tangle Alpenglow Foils Stark Tangler
-                  Airframe Tangle Midnight Foils Stark Tangler Airframe Tangle
-                  Sunset Foils The Messenger Cockpit Testnet Blaze Foils The
-                  Messenger Cockpit Testnet Dawn Foils The Messenger Cockpit
-                  Testnet Electric Foils The Messenger Propulsion Threshold
-                  Blaze Foils The Messenger Propulsion Threshold Dawn Foils The
-                  Messenger Propulsion Threshold Electric Foils Hydro Wasp
-                  Airframe Transitive Dependency Dawn Foils Hydro Wasp Airframe
-                  Transitive Dependency Electric Foils Hydro Wasp Airframe
-                  Transitive Dependency Sunset Foils G-Nat Airframe Transmitter
-                  Dawn Foils G-Nat Airframe Transmitter Midnight Foils G-Nat
-                  Airframe Transmitter Sunset Foils The Messenger Airframe Tuple
-                  Blaze Foils The Messenger Airframe Tuple Dawn Foils The
-                  Messenger Airframe Tuple Electric Foils Hydro Wasp Cockpit WAL
-                  Dawn Foils Hydro Wasp Cockpit WAL Electric Foils Hydro Wasp
-                  Cockpit WAL Sunset Foils Stark Tangler Propulsion
-                  Zero-Knowledge Alpenglow Foils Stark Tangler Propulsion
-                  Zero-Knowledge Midnight Foils Stark Tangler Propulsion
-                  Zero-Knowledge Sunset
+Tableland> SELECT * FROM rig_parts WHERE fleet = 'Foils';
+
+fleet       original         type        name                    color
+----------  ---------------  ----------  ----------------------  ----------
+Foils       Solar Scarab     Airframe    DHA                     Dawn
+Foils       Solar Scarab     Airframe    DHA                     Electric
+Foils       Solar Scarab     Airframe    DHA                     Ruby
+Foils       The Cricket      Propulsion  EVM                     Alpenglow
+Foils       The Cricket      Propulsion  EVM                     Blaze
+Foils       The Cricket      Propulsion  EVM                     Midnight
+Foils       Hydro Wasp       Propulsion  SPoF                    Dawn
+Foils       Hydro Wasp       Propulsion  SPoF                    Electric
+Foils       Hydro Wasp       Propulsion  SPoF                    Sunset
+Foils       G-Nat            Cockpit     Simple Query            Dawn
+Foils       G-Nat            Cockpit     Simple Query            Midnight
+Foils       G-Nat            Cockpit     Simple Query            Sunset
+Foils       The Cricket      Cockpit     Staker                  Alpenglow
+Foils       The Cricket      Cockpit     Staker                  Blaze
+Foils       The Cricket      Cockpit     Staker                  Midnight
+Foils       Stark Tangler    Cockpit     Stark                   Alpenglow
+Foils       Stark Tangler    Cockpit     Stark                   Midnight
+Foils       Stark Tangler    Cockpit     Stark                   Sunset
+Foils       Solar Scarab     Cockpit     State Machine           Dawn
+Foils       Solar Scarab     Cockpit     State Machine           Electric
+Foils       Solar Scarab     Cockpit     State Machine           Ruby
+Foils       The Cricket      Airframe    Supersingular           Alpenglow
+Foils       The Cricket      Airframe    Supersingular           Blaze
+Foils       The Cricket      Airframe    Supersingular           Midnight
                 </code>
                 <!-- <div v-if="$wallet.account">
                   <p class="text-justify">
