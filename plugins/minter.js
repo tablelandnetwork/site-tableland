@@ -830,16 +830,33 @@ ethers.getDefaultProvider();
             const rigId = await ethers.utils.formatUnits(item._hex, 0);
             const tokenURI = await nftContract.tokenURI(rigId);
             const rigsMeta = await (await fetch(tokenURI)).json();
-            rigLog.innerHTML += `<div class="lg:w-1/3 md:w-1/2 w-full px-3 py-3 rigs">
-                    <a href="/rigs/${rigId}">
-                     <div class="rig-frame " >
-                      <img src="${rigsMeta.image}"/>
-                     </div>
-                     <h2 class="text-black font-Orbitron text-xl px-3 py-3">RIG ID #00${rigId}</h2>
-                     <p class="text-black px-3 py-0">Fleet: ${rigsMeta.attributes[3].value}</p>
-                     <p class="text-black px-3 py-3 pb-3 ${rigsMeta.attributes[2].value} rarity-${rigsMeta.attributes[5].value}">${rigsMeta.attributes[5].value}/100</p>
-                    </a>
-                  </div>`;
+            if (rigsMeta.attributes[0].value == '1.000000') {
+              rigLog.innerHTML += `<div class="lg:w-1/3 md:w-1/2 w-full px-3 py-3 rigs">
+                      <a href="/rigs/${rigId}">
+                       <div class="rig-frame " >
+                        <img src="${rigsMeta.image}"/>
+                       </div>
+                       <h2 class="text-black font-Orbitron text-xl px-3 py-3">RIG ID #00${rigId}</h2>
+
+                       <p class="text-black px-3 py-0">Fleet: ${rigsMeta.attributes[5].value}</p>
+                       <p class="text-black px-3 py-3 pb-3 ${rigsMeta.attributes[0].value} rarity-${rigsMeta.attributes[0].value}">Original: ${rigsMeta.attributes[0].value}%</p>
+                      </a>
+                    </div>`;
+            }
+            else {
+              rigLog.innerHTML += `<div class="lg:w-1/3 md:w-1/2 w-full px-3 py-3 rigs">
+                      <a href="/rigs/${rigId}">
+                       <div class="rig-frame " >
+                        <img src="${rigsMeta.image}"/>
+                       </div>
+                       <h2 class="text-black font-Orbitron text-xl px-3 py-3">RIG ID #00${rigId}</h2>
+
+                       <p class="text-black px-3 py-0">Fleet: ${rigsMeta.attributes[4].value}</p>
+                       <p class="text-black px-3 py-3 pb-3 ${rigsMeta.attributes[0].value} rarity-${rigsMeta.attributes[5].value}">Original: ${rigsMeta.attributes[0].value}%</p>
+                      </a>
+                    </div>`;
+            }
+
           });
         }
 
@@ -998,14 +1015,10 @@ ethers.getDefaultProvider();
 
                         <div id="trait-${tokenId}" class="flex flex-wrap"></div>
                         <div class="text-left">
-                        <p>transaction tx '${
+                        <p>> Transaction TX '${
                           tx.hash
-                        }', '${event.args?.tokenId}', token id '${
-                          event.args?.tokenId
-                        }', see transaction: hhttps://kovan-optimistic.etherscan.io/tx/'${
-                          tx.hash}'
-
-                        Gas used: '${receipt.gasUsed.toString()}', Transaction confirmed in block '${
+                        }', See transaction: hhttps://kovan-optimistic.etherscan.io/tx/'${
+                          tx.hash}' Gas used: '${receipt.gasUsed.toString()}', Transaction confirmed in block '${
                           receipt.blockNumber
                         }'</p>
                         </div>
@@ -1017,9 +1030,9 @@ ethers.getDefaultProvider();
             rigsMeta.attributes.forEach((item) => {
               let traitBox = document.getElementById("trait-" + tokenId);
               traitBox.innerHTML += `
-                <div class="md:w-1/3 w-1/2 px-0 py-2" v-for="parts in rig.attributes">
+                <div class="lg:w-1/3 w-1/2 px-0 py-2" v-for="parts in rig.attributes">
                 <strong>${item.trait_type}</strong><br>
-                ---------------------<br>
+                -------------<br>
               ${item.value}
               </div>
               `;

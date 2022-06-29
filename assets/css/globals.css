@@ -852,7 +852,7 @@ input.quantity:focus {
   animation: result 0.5s linear;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  animation-delay: 2.75s;
+  animation-delay: 1.25s;
   z-index: 999;
   display: block;
 }
@@ -860,7 +860,7 @@ input.quantity:focus {
 .minter-details.active,
 .minter-console.active, .minter-title.active {
   animation: fadeInDown 0.1s linear;
-  animation-delay: 2.5s;
+  animation-delay: 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -1426,17 +1426,17 @@ input.quantity:focus {
 
 .animated-carousel.mint {
   animation: fadeInDown 1s ease-in-out;
-  animation-delay: 1.5s;
+  animation-delay: 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   transition: all 1s ease-in-out;
 }
 
-.animated-carousel.mint div {
+/* .animated-carousel.mint div {
   animation: slide-slow 0.25s ease-in-out infinite;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-}
+} */
 
 .animated-carousel.mint .a1 {
   animation: a1 2s ease-in-out;
@@ -1851,7 +1851,9 @@ input:checked ~ .tab-content {
 }
 
 @media (max-width: 1080px) {
-
+  .rig-id .rig-frame {
+    padding: 10px 0px;
+  }
   .rig-box .rig-frame {
     padding: 0px 10px;
   }

@@ -12,7 +12,7 @@
       <div class="rigs-hero-top"></div>
       <div
         v-if="rigId"
-        class="container px-2 sm:px-12 md:px-12 lg:px-12 xl:px-24 pt-30 lg:pt-48 justify-between story"
+        class="container px-2 sm:px-2 md:px-2 lg:px-6 2xl:px-24 pt-30 lg:pt-48 justify-between story"
       >
         <h1
           class="text-white text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
@@ -36,7 +36,7 @@
                   </div>
 
                   <div class="w-full md:w-full lg:w-1/2 lg:px-12">
-                  <div class="minter-console hidden md:block" id="minter-console">
+                  <div class="minter-console" id="minter-console">
                     <div class="text-white text-left" id="mint-log">
                       <div id="mint-terminal" class="frame">
 
@@ -46,9 +46,9 @@
                             <div class="text-left">tableland> SELECT * FROM rig_parts WHERE fleet = 'Foils';</div><br>
 
                             <div class="flex flex-wrap" >
-                              <div class="w-1/3 px-0 py-2" v-for="parts in rig.attributes">
+                              <div class="xl:w-1/3 lg:w-1/2 w-1/2 px-0 py-2" v-for="parts in rig.attributes">
                               <strong>{{ parts.trait_type }}</strong><br>
-                              ---------------------<br>
+                              -------------<br>
                               {{ parts.value }}
                             </div>
                             </div>
