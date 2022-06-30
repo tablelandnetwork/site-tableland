@@ -126,8 +126,7 @@
             require complex relational data models.
           </p>
           <div class="text-center md:text-left" data-aos="fade-up">
-            <ButtonLink
-              href="https://docs.tableland.xyz/building/examples/playbooks"
+            <ButtonLink href="https://docs.tableland.xyz/playbooks"
               >See playbooks</ButtonLink
             >
           </div>

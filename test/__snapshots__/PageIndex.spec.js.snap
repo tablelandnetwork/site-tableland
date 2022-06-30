@@ -444,7 +444,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
         >
           <a
             class="btn bg-black text-white"
-            href="https://docs.tableland.xyz/building/examples/playbooks"
+            href="https://docs.tableland.xyz/playbooks"
           >
             <span
               class="flex"
@@ -1401,7 +1401,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
         >
           <a
             class="btn bg-black text-white"
-            href="https://docs.tableland.xyz/building/examples/playbooks"
+            href="https://docs.tableland.xyz/playbooks"
           >
             <span
               class="flex"
