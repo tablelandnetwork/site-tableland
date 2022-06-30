@@ -206,7 +206,15 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
             </div>
             <div class="flex">
               <div v-if="provider !== null" class="w-full px-12 py-12">
-                <div v-if="$wallet.account">
+                <div v-if="$wallet.account" v-show="$wallet.claimStatus === null">
+                  <a
+                    id="claim-button"
+                    class="btn btn-mint text-white"
+                    @click="$wallet.claimRig()"
+                    >CLAIM RIG</a
+                  >
+                </div>
+                <div v-if="$wallet.claimStatus === 1">
                   <a
                     id="mint-button"
                     class="btn btn-mint text-white"
@@ -219,6 +227,7 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
                     id="connect-button"
                     class="btn bg-black text-white"
                     @click="$wallet.connect"
+                    v-show="!$wallet.account"
                   >
                     <strong>{{
                       !!$wallet.account
@@ -264,7 +273,7 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
       <div class="container" v-else>
         <div class="flex xl:px-48 py-0">
           <div
-            class="lg:w-1/2 w-full minter-console hidden md:block"
+            class="lg:w-1/2 w-full minter-console md:block"
             id="minter-console"
             v-bind:class="{ active: isAddClass }"
           >
@@ -284,8 +293,7 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
                 ============================================================================
                 ============================================================================
                 ===============================================================================
-                ================= INSTALL METAMASK TO CONTINUE
-                =============================
+                <p>================= INSTALL METAMASK TO CONTINUE ============================</p>
               </div>
             </div>
           </div>
@@ -438,7 +446,7 @@ export default {
       time: launchDate - now,
       isAddClass: false,
       rigs: rigsMeta,
-      provider: this.$wallet.provider,
+      provider: window.ethereum,
       quantity: "1",
       rigs: helpers.getRigs(20),
       nav: [

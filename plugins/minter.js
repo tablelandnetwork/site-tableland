@@ -706,7 +706,8 @@ export default async ({ env }, inject) => {
     quantity: "1",
     priceFix: null,
     tokenBalance: null,
-    totalSupply: null,
+    totalSupply: 200,
+    claimStatus: null,
 
     //Walletconnect functions
     async connectMobile() {
@@ -727,7 +728,17 @@ export default async ({ env }, inject) => {
 
     async init() {
       this.provider = provider;
-      // Check contract on page load
+
+      // Check totalSupply via api connection on pageload (requires no web3 wallet provider)
+
+      // Looksrare API, use for main net or rinkeby contract queries
+      // const rigSupply = await(await fetch('https://api-rinkeby.looksrare.org/api/v1/collections/stats?address=0x879A53A8Ac46fc87Cfe6F7700f0624F50a750713')).json();
+      // this.totalSupply = rigSupply.data.totalSupply;
+
+      // Optomism API, use for optimism contract queries
+      const rigSupply = await(await fetch('https://api-kovan-optimistic.etherscan.io/api?module=stats&action=tokensupply&contractaddress=0x61a748d5f21e7b235f740bdb496b66b852687000&apikey=SAHJW4NKQD6IFP49Y8DGBSH7NHQBR2FXK3')).json();
+      this.totalSupply = rigSupply.result;
+
 
       // For devices with no browser wallet
       // Notes: Not working at the moment, need to find better way to implement WalletConnect
@@ -742,7 +753,6 @@ export default async ({ env }, inject) => {
 
         const nftContract = new ethers.Contract(rig.address, rig.abi);
         const totalSupply = await nftContract.totalSupply();
-        console.log(totalSupply);
         this.totalSupply = totalSupply;
 
         const [account] = await wallct.listAccounts();
@@ -833,10 +843,10 @@ export default async ({ env }, inject) => {
                        <div class="rig-frame " >
                         <img src="${rigsMeta.image}"/>
                        </div>
-                       <h2 class="text-black font-Orbitron text-xl px-3 py-3">RIG ID #00${rigId}</h2>
+                       <h2 class="text-black font-Orbitron text-xl px-3 py-3">#${rigId}</h2>
 
                        <p class="text-black px-3 py-0">Fleet: ${rigsMeta.attributes[5].value}</p>
-                       <p class="text-black px-3 py-3 pb-3 ${rigsMeta.attributes[0].value} rarity-${rigsMeta.attributes[0].value}">Original: ${rigsMeta.attributes[0].value}%</p>
+                       <p class="text-black px-3 py-3 pb-3 ${rigsMeta.attributes[0].value} rarity-${rigsMeta.attributes[0].value}">Original: ${rigsMeta.attributes[4].value} ${rigsMeta.attributes[7].value}</p>
                       </a>
                     </div>`;
             } else {
@@ -845,10 +855,10 @@ export default async ({ env }, inject) => {
                        <div class="rig-frame " >
                         <img src="${rigsMeta.image}"/>
                        </div>
-                       <h2 class="text-black font-Orbitron text-xl px-3 py-3">RIG ID #00${rigId}</h2>
+                       <h2 class="text-black font-Orbitron text-xl px-3 py-3">#${rigId}</h2>
 
                        <p class="text-black px-3 py-0">Fleet: ${rigsMeta.attributes[4].value}</p>
-                       <p class="text-black px-3 py-3 pb-3 ${rigsMeta.attributes[0].value} rarity-${rigsMeta.attributes[5].value}">Original: ${rigsMeta.attributes[0].value}%</p>
+                       <p class="text-black px-3 py-3 pb-3 ${rigsMeta.attributes[0].value} rarity-${rigsMeta.attributes[5].value}">Original: ${rigsMeta.attributes[0].value * 100}%</p>
                       </a>
                     </div>`;
             }
@@ -928,6 +938,35 @@ export default async ({ env }, inject) => {
           document.getElementById("mint-log").innerHTML = message;
         };
       }
+    },
+
+    async claimRig() {
+      const claimList = ["0xaf8Ce23CB0D794999574d1b6eA215Af6fBeeD532", "0x8b717e371E1089b91825c62Db5BB350a6F829e1E"];
+      await provider.send("eth_requestAccounts", []);
+      const signer = provider.getSigner();
+      let userAddress = await signer.getAddress();
+
+      if (claimList.includes(userAddress)) {
+        this.claimStatus = 1;
+        console.log("you're on the claim list!");
+      }
+
+      else {
+        console.log("Wallet ID not on whitelist, try again!");
+        document.getElementById("claim-button").innerHTML =
+          "Wallet not on list";
+      }
+
+      // wire up to claim() function on contract
+      // const { ethereum } = window;
+      //
+      // if (ethereum) {
+      //   await provider.send("eth_requestAccounts", []);
+      //   const signer = provider.getSigner();
+      //   let userAddress = await signer.getAddress();
+      //   const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
+      //   const claimRig = await nftContract.claim(userAddress);
+      // }
     },
 
     async mintRig() {

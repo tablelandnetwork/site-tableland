@@ -605,6 +605,10 @@ input.quantity:focus {
   max-width: 100%;
 }
 
+.rig-id .rarity-1\.000000 {
+  margin: 10px 0px;
+}
+
 .user-garage {
   height: auto;
   min-height: 140px;

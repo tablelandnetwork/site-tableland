@@ -53,13 +53,24 @@
               >
                 <strong>{{ $wallet.accountCompact }}</strong>
               </a>
+
               <a
+                href="https://metamask.io"
+                target="_blank"
+                v-else
+                class="btn bg-black text-white"
+              >
+                <strong>Get Metamask </strong>
+              </a>
+
+              <!-- For walletconnect implementation NOT ACTIVE! -->
+              <!-- <a
                 @click="wallet = !wallet"
                 v-else
                 class="btn bg-black text-white"
               >
                 <strong>Connect Wallet </strong>
-              </a>
+              </a> -->
               <div
                 v-if="account"
                 v-show="$wallet.account"
@@ -82,7 +93,8 @@
                   </li>
                 </ul>
               </div>
-              <div
+              <!-- For walletconnect implementation NOT ACTIVE! -->
+              <!-- <div
                 v-else
                 v-show="wallet"
                 class="absolute px-3 py-3 mt-2 z-10 bg-white divide-y divide-gray-100 rounded shadow w-50 dark:bg-gray-700"
@@ -104,7 +116,7 @@
                     >
                   </li>
                 </ul>
-              </div>
+              </div> -->
             </li>
           </ul>
         </div>
@@ -168,8 +180,8 @@
             >
               <strong>Disconnect</strong>
             </a>
-            <a v-else @click="connectWallet" class="btn bg-black text-white">
-              <strong>Connect Wallet</strong>
+            <a v-else class="btn bg-black text-white" href="https://metamask.io" target="_blank">
+              <strong>Get Metamask</strong>
             </a>
           </li>
         </ul>
