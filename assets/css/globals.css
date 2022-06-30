@@ -735,6 +735,19 @@ input.quantity:focus {
   /* max-height: 400px; */
 }
 
+#mint-log .original-text {
+  display: none;
+}
+
+#mint-log .rarity-1\.000000 {
+  margin: 10px 0px;
+  padding: 10px;
+}
+
+#mint-log .rarity-1\.000000 .original-text {
+  display: block;
+}
+
 /* The typing effect */
 @keyframes typing {
   from {
@@ -1856,6 +1869,9 @@ input:checked ~ .tab-content {
 }
 
 @media (max-width: 1080px) {
+  .rig-gallery .rigs p {
+    font-size: 0.9em;
+  }
   .rig-id .rig-frame {
     padding: 10px 0px;
   }

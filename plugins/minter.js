@@ -1044,6 +1044,7 @@ export default async ({ env }, inject) => {
               <div class="minter-console" id="minter-console">
                 <div class="text-white text-left" id="mint-log">
                   <div id="mint-terminal" class="frame">
+                        <div class="text-left text-white rarity-${rigsMeta.attributes[0].value}"><p class="original-text">IT'S AN ORIGINAL!</p></div>
                         <div class="text-left">> Querying Rig ID #00${tokenId}</div>
                         <div class="text-left">tableland> SELECT * FROM rig_parts WHERE fleet = '${
                           rigsMeta.attributes[1].value
