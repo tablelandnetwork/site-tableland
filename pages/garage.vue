@@ -9,19 +9,26 @@
 
     <section class="md:block story py-4 md:py-12 relative">
       <div class="rigs-hero-top"></div>
-      <h1
-        class="text-white text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
-        data-aos="fade-up"
-        v-if="!$wallet.account"
-      >
-        Connect your wallet
-      </h1>
+
 
       <div
         class="container px-0 sm:px-6 md:px-6 pt-12 sm:pt-12 lg:pt-32"
-        v-if="$wallet.account"
+
       >
-        <div class="lg:w-full px-6 pb-6 lg:pb-10 pt-12" data-aos="fade-up">
+      <div class="lg:w-full px-6 pb-6 lg:pb-10 pt-12" data-aos="fade-up" v-if="!$wallet.account">
+        <div class="lg:flex">
+          <div class="lg:w-1/2 w-full pt-6">
+            <h1
+              class="text-white text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
+              data-aos="fade-up"
+
+            >
+              Connect your wallet
+            </h1>
+          </div>
+        </div>
+      </div>
+        <div class="lg:w-full px-6 pb-6 lg:pb-10 pt-12" data-aos="fade-up" v-if="$wallet.account">
           <div class="lg:flex">
             <div class="lg:w-1/2 w-full pt-6">
               <h1
@@ -50,10 +57,10 @@
         class="flex flex-wrap py-0 px-0 md:px-12 lg:px-16 xl:px-36 rig-garage"
         v-if="$wallet.account"
       >
-        <div id="rig-message px-12" v-if="$wallet.tokenBalance == '0'">
+        <p id="rig-message" class="px-0 text-xl" v-if="$wallet.tokenBalance == '0'">
           No rigs found! Visit the <a href="/minter/">mint a rig</a> page to
           grab your first rig captain!
-        </div>
+        </p>
       </div>
     </section>
 
@@ -149,7 +156,6 @@ export default {
     return {
       time: launchDate - now,
       isAddClass: false,
-
       useWallet: true,
       nav: [
         {
