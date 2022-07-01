@@ -846,7 +846,7 @@ export default async ({ env }, inject) => {
                        <h2 class="text-black font-Orbitron text-xl px-3 py-3">#${rigId}</h2>
 
                        <p class="text-black px-3 py-0">Fleet: ${rigsMeta.attributes[5].value}</p>
-                       <p class="text-black px-3 py-3 pb-3 ${rigsMeta.attributes[0].value} rarity-${rigsMeta.attributes[0].value}">Original: ${rigsMeta.attributes[4].value} ${rigsMeta.attributes[7].value}</p>
+                       <p class="text-black px-3 py-3 pb-3 ${rigsMeta.attributes[0].value} rarity-${rigsMeta.attributes[0].value}">Original: ${rigsMeta.attributes[3].value} ${rigsMeta.attributes[6].value}</p>
                       </a>
                     </div>`;
             } else {

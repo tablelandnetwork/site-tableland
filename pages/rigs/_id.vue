@@ -37,7 +37,7 @@
 
                   <div class="w-full md:w-full lg:w-1/2 lg:px-12">
                     <div v-if="rig.attributes[0].value == '1.000000'">
-                      <p class="text-black px-3 py-3 pb-3 text-bold" :class="' rarity-' + rig.attributes[0].value">Original: {{ rig.attributes[4].value }} {{ rig.attributes[8].value }}</p>
+                      <p class="text-black px-3 py-3 pb-3 text-bold" :class="' rarity-' + rig.attributes[0].value">Original: {{ rig.attributes[3].value }} {{ rig.attributes[6].value }}</p>
                     </div>
                   <div class="minter-console" id="minter-console">
                     <div class="text-white text-left" id="mint-log">
