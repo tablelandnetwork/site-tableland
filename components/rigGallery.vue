@@ -23,7 +23,7 @@
       <h2 class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3">{{ rig.json_build_object.name }}</h2>
 
       <div v-if="rig.json_build_object.attributes[2].value === '1.000000'">
-        <p class="text-black px-3 py-0">Fleet: {{ rig.json_build_object.attributes[3].value }}</p>
+        <p class="text-black px-3 py-0">Fleet: {{ rig.json_build_object.attributes[3].value }}  </p>
         <p class="text-black px-3 lg:py-3 lg:pb-3 text-bold" :class="' rarity-' + rig.json_build_object.attributes[2].value">Original: {{ rig.json_build_object.attributes[1].value }} {{ rig.json_build_object.attributes[0].value }}</p>
       </div>
       <div v-else>

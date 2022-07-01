@@ -205,7 +205,7 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
               </div>
             </div>
             <div class="flex">
-              <div v-if="provider !== null" class="w-full px-12 py-12">
+              <div v-if="provider !== null" class="w-full lg:px-12 lg:py-12 px-12 pb-12 py-0">
                 <div v-if="$wallet.account" v-show="$wallet.claimStatus === null">
                   <a
                     id="claim-button"
@@ -271,7 +271,37 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
       </div>
 
       <div class="container" v-else>
-        <div class="flex xl:px-48 py-0">
+        <div class="lg:flex px-6 xl:px-48 py-0">
+          <div
+            class="lg:w-1/2 w-full minter-details block md:hidden px-6"
+            v-bind:class="{ active: isAddClass }"
+            id="minter-details"
+          >
+            <div class="flex flex-wrap py-3 lg:py-12 px-0">
+              <div class="w-1/2 lg:w-1/2">
+                <h3 class="text-black lg:text-xl text-l">PRICE</h3>
+                <h2 class="text-black text-xl lg:text-4xl font-Orbitron">
+                  0.05ETH
+                </h2>
+              </div>
+              <div class="w-1/2 lg:w-1/2">
+                <h3 class="text-black lg:text-xl text-l">TOTAL SUPPLY</h3>
+                <h2 class="text-black text-xl lg:text-4xl font-Orbitron">
+                  {{ 3000 - $wallet.totalSupply }}
+                </h2>
+              </div>
+              <div class="w-full px-0 py-6">
+                <a
+                  id="mint-button"
+                  class="btn btn-mint text-white"
+                  href="https://metamask.io/"
+                  target="_blank"
+                  >GET METAMASK</a
+                >
+              </div>
+              <div></div>
+            </div>
+          </div>
           <div
             class="lg:w-1/2 w-full minter-console md:block"
             id="minter-console"
@@ -298,7 +328,7 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
             </div>
           </div>
           <div
-            class="lg:w-1/2 w-full minter-details"
+            class="lg:w-1/2 w-full minter-details hidden sm:block"
             v-bind:class="{ active: isAddClass }"
             id="minter-details"
           >

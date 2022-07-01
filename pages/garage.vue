@@ -18,25 +18,25 @@
       </h1>
 
       <div
-        class="container px-0 sm:px-6 md:px-12 pt-12 sm:pt-12 lg:pt-32"
+        class="container px-0 sm:px-6 md:px-6 pt-12 sm:pt-12 lg:pt-32"
         v-if="$wallet.account"
       >
         <div class="lg:w-full px-6 pb-6 lg:pb-10 pt-12" data-aos="fade-up">
           <div class="lg:flex">
             <div class="lg:w-1/2 w-full pt-6">
               <h1
-                class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-12 lg:mb-10"
+                class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-2 lg:mb-10"
               >
                 Your Garage
               </h1>
             </div>
             <div
-              class="lg:w-1/2 w-full px-6 lg:px-12 lg:pb-12 py-16"
+              class="lg:w-1/2 w-full px-3 lg:px-12 lg:pb-12 lg:py-16"
               data-aos="fade-up"
             >
               <h4
                 id="rig-balance"
-                class="text-white text-right lg:text-2xl text-md"
+                class="text-white text-left lg:text-right lg:text-2xl text-md"
                 v-show="$wallet.tokenBalance"
               >
                 {{ $wallet.tokenBalance }} RIGS OWNED
@@ -47,7 +47,7 @@
       </div>
       <div
         id="rig-garage"
-        class="flex flex-wrap py-0 px-0 md:px-38 lg:px-40 rig-garage"
+        class="flex flex-wrap py-0 px-0 md:px-12 lg:px-16 xl:px-36 rig-garage"
         v-if="$wallet.account"
       >
         <div id="rig-message px-12" v-if="$wallet.tokenBalance == '0'">

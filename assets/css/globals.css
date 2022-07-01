@@ -715,7 +715,7 @@ input.quantity:focus {
   position: absolute;
   top: 16px;
   width: 100%;
-  z-index: 99999;
+  z-index: 998;
   color: black;
   border-radius: 10px;
   font-family: monospace;
@@ -1051,7 +1051,7 @@ input.quantity:focus {
   height: auto;
   padding: 10px;
   margin: 0px auto;
-  z-index: 999;
+  z-index: 998;
   position: relative;
 }
 
