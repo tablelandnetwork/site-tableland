@@ -111,8 +111,6 @@
 </template>
 
 <script>
-import rigsMeta from "~/assets/rigsMeta.json";
-
 export default {
   head() {
     return {
@@ -151,7 +149,7 @@ export default {
     return {
       time: launchDate - now,
       isAddClass: false,
-      rigsMeta: rigsMeta,
+
       useWallet: true,
       nav: [
         {

@@ -102,42 +102,6 @@ Foils       The Cricket      Airframe    Supersingular           Alpenglow
 Foils       The Cricket      Airframe    Supersingular           Blaze
 Foils       The Cricket      Airframe    Supersingular           Midnight
                 </code>
-                <!-- <div v-if="$wallet.account">
-                  <p class="text-justify">
-                    ========================== WALLET CONNECTED
-                    ============================
-                  </p>
-                  <p>WALLET: {{ $wallet.account }}</p>
-                  <p>BALANCE: {{ $wallet.balance }} ETH</p>
-                  <p>QUANTITY: {{ quantity }}</p>
-                  <p>PRICE: {{ $wallet.priceFix * quantity }} ETH</p>
-                  ============================================================================
-                  ============================================================================
-                  ============================================================================
-                  <p>
-                    ================= READY TO MINT CONFIRM TRANSACTION TO
-                    PROCEED =============
-                  </p>
-                </div>
-                <div v-else>
-                  <p class="text-justify">
-                    ============================= CONNECT YOUR WALLET
-                    =====================
-                  </p>
-                  <p>
-                    Tableland awaits! Connect your wallet to start your
-                    adventure by grabbing one of the Rigs. Rigs give valuable
-                    access to Tableland. Start your journey
-                  </p>
-                  <p>PRICE: 0.05 ETH</p>
-                  ============================================================================
-                  ============================================================================
-                  ============================================================================
-                  <p>
-                    ========================== CONNECT YOUR WALLET
-                    =============================
-                  </p>
-                </div> -->
               </div>
             </div>
           </div>
@@ -205,7 +169,7 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
               </div>
             </div>
             <div class="flex">
-              <div v-if="provider !== null" class="w-full lg:px-12 lg:py-12 px-12 pb-12 py-0">
+              <div v-if="provider !== null" class="w-full lg:px-12 lg:py-12 py-12 px-6 pb-12">
                 <div v-if="$wallet.account" v-show="$wallet.claimStatus === null">
                   <a
                     id="claim-button"
@@ -243,31 +207,6 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
             </p>
           </div>
         </div>
-
-        <!-- <div id="rig-box" class="md:flex justify-center text-center" style="max-width:1280px;margin: 60px auto;">
-           <div class="w-full md:w-1/3 rig-frame">
-            <img src="https://ipfs.infura-ipfs.io/ipfs/bafybeibyf3gmhmv32bg6h4k3w5swmpg3drnetzefhbkzzwrbfap5uyryga/image.png">
-           </div>
-           <div class="w-full md:w-2/3">
-             <div class="minter-console" id="minter-console">
-               <div class="text-white text-left" id="mint-log">
-                 <div id="mint-terminal" class="frame">
-
-                       <div class="text-left">> Querying Rig ID #00{{rigId}}</div>
-
-                       <div id="rig-owner"></div><br>
-                       <div class="text-left">tableland> SELECT * FROM rig_parts WHERE fleet = 'Foils';</div><br>
-
-                       <div class="flex flex-wrap" >
-                      test
-                       </div>
-
-
-                 </div>
-               </div>
-             </div>
-          </div>
-        </div> -->
       </div>
 
       <div class="container" v-else>
@@ -309,8 +248,9 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
           >
             <div class="text-white text-center" id="mint-log">
               <div id="mint-terminal" class="frame">
-                ============================= NO WALLET DETECTED!
-                ===============================
+                <div class="text=center">
+                  ============= NO WALLET DETECTED! ==============
+                </div>
                 <p>
                   In order to mint one of our Tableland rigs, you need to first
                   install Metamask chrome extension: https://metamask.io/
@@ -322,8 +262,8 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
                 </p>
                 ============================================================================
                 ============================================================================
-                ===============================================================================
-                <p>================= INSTALL METAMASK TO CONTINUE ============================</p>
+                ============================================================================
+                <p>======== INSTALL METAMASK TO CONTINUE ========</p>
               </div>
             </div>
           </div>
@@ -332,7 +272,7 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
             v-bind:class="{ active: isAddClass }"
             id="minter-details"
           >
-            <div class="flex flex-wrap py-3 lg:py-12 px-12">
+            <div class="flex flex-wrap py-3 lg:py-12 md:px-12">
               <div class="w-1/2 lg:w-1/2">
                 <h3 class="text-black lg:text-xl text-l">PRICE</h3>
                 <h2 class="text-black text-xl lg:text-4xl font-Orbitron">
@@ -424,7 +364,6 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
 
 <script>
 import helpers from "~/plugins/helpers";
-import rigsMeta from "~/assets/rigsMeta.json";
 
 export default {
   head() {
@@ -475,7 +414,6 @@ export default {
     return {
       time: launchDate - now,
       isAddClass: false,
-      rigs: rigsMeta,
       provider: window.ethereum,
       quantity: "1",
       rigs: helpers.getRigs(20),

@@ -1,8 +1,6 @@
 import Vue from "vue";
-import { ethers, providers } from "ethers";
-import { BigNumber } from "ethers";
+import { ethers } from "ethers";
 import WalletConnectProvider from "@walletconnect/web3-provider";
-// import rigsMeta from "~/assets/rigsMeta.json";
 
 export default async ({ env }, inject) => {
   ethers.getDefaultProvider();
@@ -776,7 +774,6 @@ export default async ({ env }, inject) => {
 
       // For devices WITH browser wallets
       if (window.ethereum) {
-        console.log("connected to metamask");
         this.network = this.provider.getNetwork();
         this.priceFix = ethers.utils.formatEther(this.price);
         const [account] = await this.provider.listAccounts();
@@ -789,7 +786,6 @@ export default async ({ env }, inject) => {
         const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
         const totalSupply = await nftContract.totalSupply();
         this.totalSupply = totalSupply;
-        console.log(totalSupply);
         const rigId = this.rigId;
 
         // Force page refreshes on network changes
@@ -905,11 +901,6 @@ export default async ({ env }, inject) => {
           "any"
         );
         wallet.network = wallet.provider.getNetwork();
-
-        // const connection = await connect({
-        //   network: "testnet",
-        //   host: "http://testnet.tableland.network",
-        // });
 
         const [account] = await wallet.provider.send("eth_requestAccounts");
 
