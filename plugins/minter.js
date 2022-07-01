@@ -1045,7 +1045,7 @@ export default async ({ env }, inject) => {
                         <div class="text-left">
                         <p>> Transaction TX '${
                           tx.hash
-                        }', See transaction: hhttps://kovan-optimistic.etherscan.io/tx/'${
+                        }', See transaction: https://kovan-optimistic.etherscan.io/tx/'${
               tx.hash
             }' Gas used: '${receipt.gasUsed.toString()}', Transaction confirmed in block '${
               receipt.blockNumber
