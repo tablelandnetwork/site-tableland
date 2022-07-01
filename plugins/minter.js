@@ -1047,7 +1047,7 @@ export default async ({ env }, inject) => {
                         <div class="text-left text-white rarity-${rigsMeta.attributes[0].value}"><p class="original-text">IT'S AN ORIGINAL!</p></div>
                         <div class="text-left">> Querying Rig ID #00${tokenId}</div>
                         <div class="text-left">tableland> SELECT * FROM rig_parts WHERE fleet = '${
-                          rigsMeta.attributes[1].value
+                          rigsMeta.attributes[4].value
                         }';</div><br>
 
                         <div id="trait-${tokenId}" class="flex flex-wrap"></div>

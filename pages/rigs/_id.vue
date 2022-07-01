@@ -46,7 +46,7 @@
                             <div class="text-left">> Querying Rig ID #00{{rigId}}</div>
 
                             <div id="rig-owner"></div><br>
-                            <div class="text-left">tableland> SELECT * FROM rig_parts WHERE fleet = '{{ rig.attributes[5].value }}';</div><br>
+                            <div class="text-left"><p>tableland> SELECT * FROM rig_parts WHERE fleet = '<strong v-if="rig.attributes[0].value == '1.000000'">{{ rig.attributes[5].value }}</strong><strong v-else>{{ rig.attributes[4].value }}</strong>';</p></div><br>
 
                             <div class="flex flex-wrap" >
                               <div class="xl:w-1/3 lg:w-1/2 w-1/2 px-0 py-2" v-for="parts in rig.attributes">
