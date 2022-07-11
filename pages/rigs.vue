@@ -34,7 +34,7 @@
               </h1>
             </div>
             <div
-              class="hidden lg:w-1/3 w-full px-0 lg:px-0 pt-0 lg:pt-9 xl:pt-11 text-right"
+              class="lg:w-1/3 w-full px-0 lg:px-0 pt-0 lg:pt-9 xl:pt-11 text-right"
             >
               <h2
                 class="text-white font-Orbitron text-2xl md:text-2xl lg:text-3xl xl:text-4xl pt-6"
@@ -66,8 +66,9 @@
           <h1
             class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
           >
-            A generative NFT built from 1,074 handcrafted works of art for the
-            builders and creatives of cyberspace. Coming July 2022.
+            A 3k generative NFT built from 1,074 handcrafted works of art for
+            the builders and creatives of cyberspace. Coming July 14th at 5PM
+            UTC.
           </h1>
         </div>
         <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
@@ -843,7 +844,7 @@ import helpers from "~/plugins/helpers";
 export default {
   data() {
     const now = new Date();
-    const launchDate = new Date(2022, 5, 17, 10, 0);
+    const launchDate = new Date(2022, 6, 14, 10, 0);
     return {
       nav: [
         {
