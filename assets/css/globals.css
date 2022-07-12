@@ -605,7 +605,7 @@ input.quantity:focus {
   max-width: 100%;
 }
 
-.rig-id .rarity-1\.000000 {
+.rig-id .rarity-100 {
   margin: 10px 0px;
 }
 
@@ -739,12 +739,12 @@ input.quantity:focus {
   display: none;
 }
 
-#mint-log .rarity-1\.000000 {
+#mint-log .rarity-100 {
   margin: 10px 0px;
   padding: 10px;
 }
 
-#mint-log .rarity-1\.000000 .original-text {
+#mint-log .rarity-100 .original-text {
   display: block;
 }
 
@@ -1059,7 +1059,7 @@ input.quantity:focus {
   border-radius: 0.5rem;
 }
 
-.rarity-1\.000000 {
+.rarity-100 {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 1s linear infinite;

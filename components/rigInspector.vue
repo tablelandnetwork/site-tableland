@@ -1,81 +1,194 @@
 <template>
   <section class="rig-gallery">
     <div class="filters hidden lg:block text-black text-l" data-aos="fade-up">
-			<span class="filter" v-bind:class="{ active: currentFilter === 'ALL' }" v-on:click="setFilter('ALL')">View All</span>
-      <span class="filter" v-bind:class="{ active: currentFilter === 'Titans' }" v-on:click="setFilter('Titans')">Titans</span>
-      <span class="filter" v-bind:class="{ active: currentFilter === 'Tumblers' }" v-on:click="setFilter('Tumblers')">Tumblers</span>
-			<span class="filter" v-bind:class="{ active: currentFilter === 'Sleds' }" v-on:click="setFilter('Sleds')">Sleds</span>
-      <span class="filter" v-bind:class="{ active: currentFilter === 'Edge Riders' }" v-on:click="setFilter('Edge Riders')">Edge Riders</span>
-      <span class="filter" v-bind:class="{ active: currentFilter === 'Tracers' }" v-on:click="setFilter('Tracers')">Tracers</span>
-      <span class="filter" v-bind:class="{ active: currentFilter === 'Hoppers' }" v-on:click="setFilter('Hoppers')">Hoppers</span>
-			<span class="filter" v-bind:class="{ active: currentFilter === 'Airelights' }" v-on:click="setFilter('Airelights')">Airelights</span>
-			<span class="filter" v-bind:class="{ active: currentFilter === 'Foils' }" v-on:click="setFilter('Foils')">Foils</span>
-      <span class="filter" v-bind:class="{ active: currentFilter === '1.000000' }" v-on:click="setFilter('1.000000')">Originals</span>
-
-		</div>
+      <span
+        class="filter"
+        :class="{ active: currentFilter === 'All' }"
+        @click="setFilter('All')"
+        >View All</span
+      >
+      <span
+        class="filter"
+        :class="{ active: currentFilter === 'Titans' }"
+        @click="setFilter('Titans')"
+        >Titans</span
+      >
+      <span
+        class="filter"
+        :class="{ active: currentFilter === 'Tumblers' }"
+        @click="setFilter('Tumblers')"
+        >Tumblers</span
+      >
+      <span
+        class="filter"
+        :class="{ active: currentFilter === 'Sleds' }"
+        @click="setFilter('Sleds')"
+        >Sleds</span
+      >
+      <span
+        class="filter"
+        :class="{ active: currentFilter === 'Edge Riders' }"
+        @click="setFilter('Edge Riders')"
+        >Edge Riders</span
+      >
+      <span
+        class="filter"
+        :class="{ active: currentFilter === 'Tracers' }"
+        @click="setFilter('Tracers')"
+        >Tracers</span
+      >
+      <span
+        class="filter"
+        :class="{ active: currentFilter === 'Hoppers' }"
+        @click="setFilter('Hoppers')"
+        >Hoppers</span
+      >
+      <span
+        class="filter"
+        :class="{ active: currentFilter === 'Airelights' }"
+        @click="setFilter('Airelights')"
+        >Airelights</span
+      >
+      <span
+        class="filter"
+        :class="{ active: currentFilter === 'Foils' }"
+        @click="setFilter('Foils')"
+        >Foils</span
+      >
+      <span
+        class="filter"
+        :class="{ active: currentFilter === 100 }"
+        @click="setFilter(100)"
+        >Originals</span
+      >
+    </div>
 
     <div class="flex flex-wrap py-0 rig-garage">
-     <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 sm:w-1/2 lg:px-3 lg:py-3 rigs my-2" v-for="rig in rigsMeta" v-show="currentFilter === 'ALL' || currentFilter === rig.json_build_object.attributes[1].value || currentFilter === rig.json_build_object.attributes[2].value">
-       <a :href="'/rigs/' + rig.json_build_object.name.replace('#', '') " >
-        <div class="rig-frame" :class="rig.json_build_object.attributes[1].value" >
-          <img :src="rig.json_build_object.thumb"/>
-        </div>
-      <h2 class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3">{{ rig.json_build_object.name }}</h2>
-
-      <div v-if="rig.json_build_object.attributes[2].value === '1.000000'">
-        <p class="text-black px-3 py-0">Fleet: {{ rig.json_build_object.attributes[3].value }}  </p>
-        <p class="text-black px-3 lg:py-3 lg:pb-3 text-bold" :class="' rarity-' + rig.json_build_object.attributes[2].value">Original: {{ rig.json_build_object.attributes[1].value }} {{ rig.json_build_object.attributes[0].value }}</p>
-      </div>
-      <div v-else>
-        <div class="flex flex-wrap">
-        <div class="xl:w-1/2 lg:w-1/2 w-1/2 px-0 py-2" v-for="parts in rig.json_build_object.attributes">
-        <strong>{{ parts.trait_type }}</strong><br>
-        -------------<br>
-        {{ parts.value }}
+      <div
+        v-for="rigInfo in rigInfos"
+        v-show="rigInfo.matches.includes(currentFilter)"
+        :key="rigInfo.name"
+        class="
+          w-1/2
+          xl:w-1/4
+          lg:w-1/3
+          md:w-1/3
+          sm:w-1/2
+          lg:px-3 lg:py-3
+          rigs
+          my-2
+        "
+      >
+        <a :href="'/rigs/' + rigInfo.id">
+          <div class="rig-frame" :class="rigInfo.fleet">
+            <img :src="rigInfo.thumbUrl" />
+          </div>
+          <h2 class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3">
+            {{ rigInfo.name }}
+          </h2>
+          <div v-if="rigInfo.percentOrg === 100">
+            <p class="text-black px-3 py-0">Fleet: {{ rigInfo.fleet }}</p>
+            <p class="text-black px-3 lg:py-3 lg:pb-3 text-bold rarity-100">
+              Original: {{ rigInfo.origColor }} {{ rigInfo.origName }}
+            </p>
+          </div>
+          <div v-else>
+            <p class="text-black px-3 py-0">Fleet: {{ rigInfo.fleet }}</p>
+            <p class="text-black px-3 py-0">
+              {{ rigInfo.percentOrg }}% original
+            </p>
+          </div>
+        </a>
       </div>
     </div>
-      </div>
-      </a>
-     </div>
-   </div>
-
   </section>
 </template>
 
-
 <script>
 export default {
-
-    data() {
-      return {
-          currentFilter: 'ALL',
-          rigsMeta: this.rigsMeta,
-      };
+  data() {
+    return {
+      currentFilter: "All",
+      rigInfos: [],
+    };
+  },
+  beforeMount() {
+    this.loadRigs();
+    this.setFilter("All");
+  },
+  methods: {
+    setFilter(filter) {
+      this.currentFilter = filter;
     },
-    beforeMount(){
-        this.rigsMeta();
-        this.setFilter('ALL');
+    async loadRigs() {
+      const rigsTable = this.$route.query.r;
+      const rigsAttrTable = this.$route.query.a;
+
+      const baseUrl = `${this.$config.tblAPIURL}/query?mode=json&s=`;
+      const query = `select json_object(
+        'name','#'||id,
+        'image',image,
+        'image_alpha',image_alpha,
+        'thumb',thumb,
+        'thumb_alpha',thumb_alpha,
+        'attributes',json_group_array(
+          json_object(
+            'display_type',display_type,
+            'trait_type',trait_type,
+            'value',value
+          )
+        )
+      ) as obj
+      from ${rigsTable}
+        join (select * from ${rigsAttrTable} order by rowid) as a
+          on ${rigsTable}.id=a.rig_id
+      group by ${rigsTable}.id`;
+
+      const url = baseUrl + encodeURIComponent(query);
+
+      const res = await fetch(url, {
+        method: "GET",
+        headers: { Accept: "application/json" },
+      });
+      const json = await res.json();
+      const mapped = json.map((item) => {
+        const matches = ["All"];
+        let percentOrg;
+        let fleet;
+        let origName;
+        let origColor;
+        for (const attr of item.obj.attributes) {
+          if (attr.trait_type === "Fleet") {
+            matches.push(attr.value);
+            fleet = attr.value;
+          }
+          if (attr.trait_type === "% Original") {
+            matches.push(attr.value);
+            percentOrg = attr.value;
+          }
+          if (attr.trait_type === "Name") {
+            origName = attr.value;
+          }
+          if (attr.trait_type === "Color") {
+            origColor = attr.value;
+          }
+        }
+        return {
+          id: item.obj.name.replace("#", ""),
+          name: item.obj.name,
+          matches,
+          thumbUrl: item.obj.thumb.replace(
+            "ipfs://",
+            this.$config.ipfsGatewayURL + "/ipfs/"
+          ),
+          percentOrg,
+          fleet,
+          origName,
+          origColor,
+        };
+      });
+      this.rigInfos = mapped;
     },
-    methods: {
-      setFilter: function(filter) {
-  			this.currentFilter = filter;
-  		},
-      rigsMeta: async function() {
-        const options = {method: 'GET', headers: {Accept: 'application/json'}};
-
-        // // Use for main net / rinkeby queries
-        // const rigSupply = await(await fetch('https://api-rinkeby.looksrare.org/api/v1/collections/stats?address=0x879A53A8Ac46fc87Cfe6F7700f0624F50a750713')).json();
-        // const totalSupply = rigSupply.data.totalSupply;
-
-        // Use for optimism network queries
-        const rigSupply = await(await fetch('https://api-kovan-optimistic.etherscan.io/api?module=stats&action=tokensupply&contractaddress=0x61a748d5f21e7b235f740bdb496b66b852687000&apikey=SAHJW4NKQD6IFP49Y8DGBSH7NHQBR2FXK3')).json();
-        const totalSupply = rigSupply.result;
-
-        const rigsFeed =  await(await fetch('https://staging.tableland.network/query?s=select%20json_build_object(%27name%27%2C%20concat(%27%23%27%2C%20id)%2C%20%27external_url%27%2C%20concat(%27https%3A%2F%2Ftableland.xyz%2Frigs%2F%27%2C%20id)%2C%20%27image%27%2C%20image%2C%20%27image_alpha%27%2C%20image_alpha%2C%20%27thumb%27%2C%20thumb%2C%20%27thumb_alpha%27%2C%20thumb_alpha%2C%20%27attributes%27%2C%20%20json_agg(json_build_object(%27display_type%27%2C%20display_type%2C%20%27trait_type%27%2C%20trait_type%2C%20%27value%27%2C%20value)))%20from%20test_rigs_69_5%20join%20test_rig_attributes_69_6%20on%20test_rigs_69_5.id%20%3D%20test_rig_attributes_69_6.rig_id%20where%20id%20%3C%2030000%20group%20by%20id%20order%20by%20id%3B&mode=json', options)).json();
-        this.rigsMeta = rigsFeed;
-        const rigsMeta = this.rigsMeta;
-
-      },
-	}
+  },
 };
 </script>

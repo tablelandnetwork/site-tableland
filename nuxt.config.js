@@ -2,6 +2,12 @@ export default {
   env: {
     chain: "ethereum-goerli",
   },
+
+  publicRuntimeConfig: {
+    tblAPIURL: process.env.TBL_API_URL || 'http://localhost:8080',
+    ipfsGatewayURL: process.env.IPFS_GATEWAY_URL || 'http://127.0.0.1:8081',
+  },
+
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
