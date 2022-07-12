@@ -66,7 +66,11 @@
     <div class="flex flex-wrap py-0 rig-garage">
       <div
         v-for="rigInfo in rigInfos"
-        v-show="rigInfo.matches.includes(currentFilter)"
+        v-show="
+          currentFilter === 'All' ||
+          rigInfo.fleet === currentFilter ||
+          rigInfo.percentOrig === currentFilter
+        "
         :key="rigInfo.name"
         class="
           w-1/2
@@ -86,7 +90,7 @@
           <h2 class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3">
             {{ rigInfo.name }}
           </h2>
-          <div v-if="rigInfo.percentOrg === 100">
+          <div v-if="rigInfo.percentOrig === 100">
             <p class="text-black px-3 py-0">Fleet: {{ rigInfo.fleet }}</p>
             <p class="text-black px-3 lg:py-3 lg:pb-3 text-bold rarity-100">
               Original: {{ rigInfo.origColor }} {{ rigInfo.origName }}
@@ -95,7 +99,7 @@
           <div v-else>
             <p class="text-black px-3 py-0">Fleet: {{ rigInfo.fleet }}</p>
             <p class="text-black px-3 py-0">
-              {{ rigInfo.percentOrg }}% original
+              {{ rigInfo.percentOrig }}% original
             </p>
           </div>
         </a>
@@ -152,19 +156,16 @@ export default {
       });
       const json = await res.json();
       const mapped = json.map((item) => {
-        const matches = ["All"];
-        let percentOrg;
+        let percentOrig;
         let fleet;
         let origName;
         let origColor;
         for (const attr of item.obj.attributes) {
           if (attr.trait_type === "Fleet") {
-            matches.push(attr.value);
             fleet = attr.value;
           }
           if (attr.trait_type === "% Original") {
-            matches.push(attr.value);
-            percentOrg = attr.value;
+            percentOrig = attr.value;
           }
           if (attr.trait_type === "Name") {
             origName = attr.value;
@@ -176,12 +177,11 @@ export default {
         return {
           id: item.obj.name.replace("#", ""),
           name: item.obj.name,
-          matches,
           thumbUrl: item.obj.thumb.replace(
             "ipfs://",
             this.$config.ipfsGatewayURL + "/ipfs/"
           ),
-          percentOrg,
+          percentOrig,
           fleet,
           origName,
           origColor,
