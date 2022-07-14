@@ -94,6 +94,9 @@ const getRigsProvider = (function () {
       walletconnect: {
         package: WalletConnectProvider,
         options: {
+          rpc: {
+            80001: "https://rpc-mumbai.maticvigil.com/",
+          },
           infuraId: "2a8924427d074d4c957ed6c03fabc42f",
         },
       },
@@ -118,12 +121,20 @@ const rigsChainId = 1;
 const getRigs = (function () {
   return async function (provider: ethers.providers.Web3Provider) {
     const signer = provider.getSigner();
-    const { chainId } = await provider.getNetwork();
+    let { chainId } = await provider.getNetwork();
     if (chainId !== rigsChainId) {
       await window.ethereum.request({
         method: "wallet_switchEthereumChain",
         params: [{ chainId: `0x${rigsChainId.toString(16)}` }], // chainId must be in hexadecimal numbers
       });
+    }
+
+    // If still not connected correct, fail out
+    const net = await provider.getNetwork();
+    if (net.chainId !== rigsChainId) {
+      throw new Error(
+        "Unable to connect to Rigs contract.\nTry reconnecting your wallet to Ethereum mainnet."
+      );
     }
 
     return TablelandRigs__factory.connect(
@@ -286,7 +297,8 @@ export const actions: ActionTree<RootState, RootState> = {
         const status = await getRigsStatus(rigs, address);
         return { ...status, address };
       } catch (error) {
-        console.log(error);
+        alert(error);
+        window.location.reload();
       }
     }
   },
