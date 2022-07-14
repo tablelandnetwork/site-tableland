@@ -133,8 +133,6 @@ const getRigsStatus = (function () {
       );
     }
 
-    return;
-
     switch (mintphase) {
       case 0:
         return { mintphase };
