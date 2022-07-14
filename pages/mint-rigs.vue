@@ -21,7 +21,8 @@
             builders and creatives of cyberspace. It's time to grab yours.
           </h1>
         </div>
-        <div v-else class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0">
+        <div v-else-if="paidAllowance + freeAllowance - tokens.length > 0"
+          class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0">
           <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18">
             Each Rig is generated from 1,074 handcrafted works of art for the
             builders and creatives of cyberspace. It's time to grab yours.
@@ -32,6 +33,16 @@
             gas.
           </h1>
         </div>
+        <div v-else class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0">
+          <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18">
+            Each Rig is generated from 1,074 handcrafted works of art for the
+            builders and creatives of cyberspace. It's time to grab yours.
+          </h1>
+          <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18">
+            Hey Friend! Looks like you don't have any allocation for this mint phase. If you're on the waitlist, check
+            back on Monday at 12AM.
+          </h1>
+        </div>
         <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
           <a v-if="!address" class="btn bg-black text-white" @click="connect">
             <span class="flex">
@@ -40,7 +51,7 @@
                   ~assets/img/arrow_white.png    1x,
                   ~assets/img/arrow_white@2x.png 2x
                 " class="hidden sm:inline-block ml-4" alt="" /> </span></a>
-          <div v-else>
+          <div v-else-if="paidAllowance + freeAllowance - tokens.length > 0">
             <a class="btn bg-black text-white" @click="mint">
               <span class="flex">
                 Mint
@@ -49,7 +60,7 @@
                     ~assets/img/arrow_white@2x.png 2x
                   " class="hidden sm:inline-block ml-4" alt="" /> </span></a>
             <input v-model.number="quantity" class="inline" type="number" min="1"
-              :max="freeAllowance + paidAllowance" />
+              :max="freeAllowance + paidAllowance - tokens.length" />
           </div>
         </div>
       </div>
@@ -166,7 +177,7 @@ export default {
         this.freeAllowance = status.entry ? status.entry[1] : 0;
         this.paidAllowance = status.entry ? status.entry[2] : 0;
         this.proof = status.proof || [];
-        this.tokens = status.tokens;
+        this.tokens = status.tokens || [];
 
         this.rigs = await this.$store.dispatch("getRigsMetadata", { tokens: this.tokens });
       }

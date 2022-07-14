@@ -151,7 +151,7 @@ const getRigsStatus = (function () {
         const entryRes = await tbl.read(
           `select * from ${rigsDeployment.allowlistTable} where address='${address}' and waitlist=${useWaitlist}`
         );
-        if (entryRes.rows.length === 0) {
+        if (entryRes.rows && entryRes.rows.length === 0) {
           return { mintphase };
         }
         const entry = entryRes.rows[0];
@@ -160,7 +160,7 @@ const getRigsStatus = (function () {
         const list = await tbl.read(
           `select * from ${rigsDeployment.allowlistTable} where waitlist=${useWaitlist}`
         );
-        const tree = buildTree(list.rows);
+        const tree = buildTree(list.rows || []);
         const proof = tree.getHexProof(hashEntry(entry));
         console.info("user proof:", proof);
 
@@ -212,12 +212,18 @@ const mintRigs = (function () {
 
 const getRigsMetadata = (function () {
   return async function (tokens: number[]) {
+    if (tokens.length === 0) {
+      return [];
+    }
     const tbl = await connect({
       chain: "ethereum-goerli",
     } as ConnectOptions);
     const entryRes = await tbl.read(
       `select thumb from rigs_5_28 where id in (${tokens})`
     );
+    if (!entryRes.rows || entryRes.rows.length === 0) {
+      return [];
+    }
     return entryRes.rows.map((r: any) => {
       return r[0];
     });
