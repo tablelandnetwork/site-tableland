@@ -110,10 +110,10 @@ const getRigsProvider = (function () {
 })();
 
 // TODO: Switch these out if you are testing
-// const rigsDeployment = deployments["ethereum"];
-// const rigsChainId = 1;
-const rigsDeployment = deployments["polygon-mumbai"];
-const rigsChainId = 80001;
+const rigsDeployment = deployments["ethereum"];
+const rigsChainId = 1;
+// const rigsDeployment = deployments["polygon-mumbai"];
+// const rigsChainId = 80001;
 
 const getRigs = (function () {
   return async function (provider: ethers.providers.Web3Provider) {
