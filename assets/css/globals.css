@@ -96,7 +96,6 @@ nav li a:active {
   transition: all 0.2s ease-in-out;
 }
 
-
 .mobile-nav {
   background-color: #815691;
   transition: all 0.2s ease-in-out;
@@ -113,16 +112,18 @@ nav li a:active {
   animation: bounce-in 0.5s reverse;
 }
 
-.mobile-enter-active li, .mobile-enter-active h1 {
+.mobile-enter-active li,
+.mobile-enter-active h1 {
   animation: fadeIn 1.5s ease-in-out;
 }
-.mobile-leave-active li, .mobile-enter-active h1 {
+.mobile-leave-active li,
+.mobile-enter-active h1 {
   animation: fadeIn 0.5s reverse;
 }
 
 @keyframes bounce-in {
   0% {
-    height:0px;
+    height: 0px;
     transition: all 0.2s ease-in-out;
   }
   100% {
@@ -366,6 +367,10 @@ footer {
   min-height: 50vh;
 }
 
+.mintrigs .rigs-hero {
+  min-height: 75vh;
+}
+
 .rigs-hero-top {
   width: 100%;
   background-color: #815691;
@@ -582,84 +587,6 @@ a.btn {
   top: -200px;
 }
 
-.minter-console {
-}
-
-.part-frame .carousel {
-  height: 250px;
-}
-
-.mint .carousel > *:nth-child(1) {
-  animation: fade1 0.5s infinite;
-}
-.mint .carousel > *:nth-child(2) {
-  animation: fade2 0.5s infinite;
-}
-.mint .carousel > *:nth-child(3) {
-  animation: fade3 0.5s infinite;
-}
-.mint .carousel > *:nth-child(4) {
-  animation: fade4 0.5s infinite;
-}
-.mint .carousel > *:nth-child(5) {
-  animation: fade5 0.5s infinite;
-}
-
-.part-result {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  padding: 60px 40px;
-  background: center / 100% no-repeat url("~assets/img/part2.png");
-  width: 250px;
-  height: 300px;
-  display: inline-block;
-  opacity: 0;
-}
-
-.part-result.active {
-  animation: minter 1s ease-in-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-
-.btn-mint {
-  background: #ff5b7a !important;
-  width: 100%;
-  text-align: center;
-}
-
-.minter-console .bg-black {
-  background: #1c73e2;
-}
-
-.minter-console {
-  color: #12ffa6 !important;
-  position: relative;
-}
-
-#mint-log {
-  height: 400px;
-  background: #1b72e2;
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  z-index: 99999;
-  color: white;
-  font-family: monospace;
-  text-align: left;
-  padding: 0px 20px;
-  transition: all 0.2s ease-in-out;
-}
-
-#mint-log .frame {
-  animation: typing 2.5s steps(40, end);
-  overflow-y: hidden;
-  overflow-x: scroll;
-  word-break: break-all;
-  max-height: 400px;
-}
-
 /* The typing effect */
 @keyframes typing {
   from {
@@ -668,111 +595,6 @@ a.btn {
   to {
     height: 100%;
   }
-}
-
-.part-frame {
-  width: 250px;
-  height: 300px;
-  display: inline-block;
-  margin: 20px;
-  padding: 80px 60px;
-  margin-top: -100px;
-}
-
-.part1 {
-  background: center / 100% no-repeat url("~assets/img/part1.png");
-}
-
-.part1 .part-result.active {
-  animation-delay: 1s;
-}
-
-.part2 {
-  background: center / 100% no-repeat url("~assets/img/part2.png");
-}
-
-.part2 .part-result.active {
-  animation-delay: 2s;
-  background: center / 100% no-repeat url("~assets/img/part3.png");
-}
-
-.part3 {
-  background: center / 100% no-repeat url("~assets/img/part3.png");
-}
-
-.part3 .part-result.active {
-  animation-delay: 3s;
-  background: center / 100% no-repeat url("~assets/img/part4.png");
-}
-
-.part4 {
-  background: center / 100% no-repeat url("~assets/img/part4.png");
-}
-
-.part4 .part-result.active {
-  animation-delay: 4s;
-  background: center / 100% no-repeat url("~assets/img/part2.png");
-}
-
-.part-frame.part1.mint {
-  animation: mint1 0.75s ease-in-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 5s;
-}
-
-.part-frame.part2.mint {
-  animation: mint2 0.75s ease-in-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 5s;
-}
-
-.part-frame.part3.mint {
-  animation: mint3 0.75s ease-in-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 5s;
-}
-
-.part-frame.part4.mint {
-  animation: mint4 0.75s ease-in-out;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 5s;
-}
-
-.rig-result {
-  background: center / cover no-repeat url("~assets/img/holo.png");
-  position: absolute;
-  top: -100px;
-  left: 40%;
-  height: 100vh;
-  max-width: 370px;
-  opacity: 0;
-  z-index: 999;
-}
-
-.rig-result .btn {
-  padding-left: 1em;
-  padding-right: 1em;
-  margin: 10px 0px;
-  width: 100%;
-}
-
-.rig-result.active {
-  animation: result 0.5s linear;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  animation-delay: 2.75s;
-}
-
-.minter-details.active,
-.minter-console.active {
-  animation: fadeInDown 0.1s linear;
-  animation-delay: 2.5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 }
 
 .halo1 {

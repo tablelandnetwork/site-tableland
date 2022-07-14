@@ -67,12 +67,11 @@
             class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
           >
             A 3k generative NFT built from 1,074 handcrafted works of art for
-            the builders and creatives of cyberspace. Coming July 14th at 5PM
-            UTC.
+            the builders and creatives of cyberspace.
           </h1>
         </div>
         <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
-          <ButtonLink href="/test-rigs">See some more</ButtonLink>
+          <ButtonLink href="/mint-rigs">Grab your Rig</ButtonLink>
         </div>
       </div>
     </section>
