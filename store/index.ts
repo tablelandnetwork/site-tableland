@@ -108,11 +108,23 @@ const getRigsProvider = (function () {
   };
 })();
 
+// TODO: Switch these out if you are testing
 const rigsDeployment = deployments["ethereum"];
+const rigsChainId = 1;
+// const rigsDeployment = deployments["polygon-mumbai"];
+// const rigsChainId = 80001;
 
 const getRigs = (function () {
   return async function (provider: ethers.providers.Web3Provider) {
     const signer = provider.getSigner();
+    const { chainId } = await provider.getNetwork();
+    if (chainId !== rigsChainId) {
+      await window.ethereum.request({
+        method: "wallet_switchEthereumChain",
+        params: [{ chainId: `0x${rigsChainId.toString(16)}` }], // chainId must be in hexadecimal numbers
+      });
+    }
+
     return TablelandRigs__factory.connect(
       rigsDeployment.contractAddress,
       signer
