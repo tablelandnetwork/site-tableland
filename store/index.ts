@@ -160,7 +160,9 @@ const getRigsStatus = (function () {
 
         const useWaitlist = mintphase === 2 ? 1 : 0;
         const entryRes = await tbl.read(
-          `select * from ${rigsDeployment.allowlistTable} where address='${address}' and waitlist=${useWaitlist}`
+          `select * from ${
+            rigsDeployment.allowlistTable
+          } where address='${address.toLowerCase()}' and waitlist=${useWaitlist}`
         );
         if (entryRes.rows && entryRes.rows.length === 0) {
           return { mintphase };
