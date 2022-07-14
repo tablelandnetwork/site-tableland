@@ -72,9 +72,6 @@ export default {
     {
       src: "~/plugins/countdown.js",
     },
-    {
-      src: "~/plugins/minter.js",
-    },
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

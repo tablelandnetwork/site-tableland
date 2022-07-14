@@ -1,5 +1,6 @@
 import { ActionTree, GetterTree, MutationTree } from "vuex";
 import { connect, ConnectOptions } from "@tableland/sdk";
+import { BigNumber, ethers, utils } from "ethers";
 
 export const state = function () {
   return {
@@ -30,6 +31,7 @@ export const mutations: MutationTree<RootState> = {
 declare global {
   interface Window {
     tableland: any;
+    rigs: any;
   }
 }
 
@@ -56,6 +58,16 @@ const getConnection = (function () {
     return connection;
   };
 })();
+
+// window.rigs =
+//   "First connect with metamask, then start playing with Rigs!";
+// // store the rigs connection as a private plain Object
+// const getRigs = (function () {
+//   let rigs: any;
+//   return async function () {
+//     ethers.getDefaultProvider()
+//   };
+// })();
 
 export const actions: ActionTree<RootState, RootState> = {
   connect: async function (context) {
