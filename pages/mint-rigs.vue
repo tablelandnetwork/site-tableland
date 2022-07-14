@@ -109,7 +109,7 @@
               class="inline px-3 py-3 max-w-fit outline-none focus:outline-none bg-black text-white rounded-xl"
               type="number"
               min="1"
-              :max="freeAllowance + paidAllowance"
+              :max="paidAllowance + freeAllowance - tokens.length"
             />
           </div>
         </div>
