@@ -844,7 +844,7 @@ import helpers from "~/plugins/helpers";
 export default {
   data() {
     const now = new Date();
-    const launchDate = new Date(2022, 6, 14, 10, 0);
+    const launchDate = new Date(Date.UTC(2022, 6, 14, 17, 0, 0));
     return {
       nav: [
         {
