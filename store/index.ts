@@ -1,6 +1,12 @@
-import { ActionTree, GetterTree, MutationTree } from "vuex";
+import { ActionTree, MutationTree } from "vuex";
 import { connect, ConnectOptions } from "@tableland/sdk";
-import { BigNumber, ethers, utils } from "ethers";
+import { ethers, BigNumber } from "ethers";
+import Web3Modal from "web3modal";
+import WalletConnectProvider from "@walletconnect/web3-provider";
+import { TablelandRigs, TablelandRigs__factory } from "@tableland/rigs";
+import { deployments } from "@tableland/rigs/deployments";
+import { MerkleTree } from "merkletreejs";
+import keccak256 from "keccak256";
 
 export const state = function () {
   return {
@@ -31,7 +37,6 @@ export const mutations: MutationTree<RootState> = {
 declare global {
   interface Window {
     tableland: any;
-    rigs: any;
   }
 }
 
@@ -59,15 +64,131 @@ const getConnection = (function () {
   };
 })();
 
-// window.rigs =
-//   "First connect with metamask, then start playing with Rigs!";
-// // store the rigs connection as a private plain Object
-// const getRigs = (function () {
-//   let rigs: any;
-//   return async function () {
-//     ethers.getDefaultProvider()
-//   };
-// })();
+const getRigsProvider = (function () {
+  let web3Modal: Web3Modal | undefined;
+  let provider: ethers.providers.Web3Provider | undefined;
+
+  return async function (options?: any) {
+    if (options?.disconnect) {
+      if (web3Modal) web3Modal.clearCachedProvider();
+      return;
+    }
+    if (provider) return provider;
+
+    const providerOptions = {
+      walletconnect: {
+        package: WalletConnectProvider,
+        options: {
+          infuraId: "2a8924427d074d4c957ed6c03fabc42f",
+        },
+      },
+    };
+    web3Modal = new Web3Modal({
+      cacheProvider: true,
+      providerOptions,
+    });
+    const instance = await web3Modal.connect();
+    provider = new ethers.providers.Web3Provider(instance);
+
+    if (window.ethereum) {
+      window.ethereum.on("accountsChanged", ([newAddress]: any) => {
+        console.log("accountsChanged", newAddress);
+        if (web3Modal) web3Modal.clearCachedProvider();
+        window.location.reload();
+      });
+
+      window.ethereum.on("chainChanged", (chainId: any) => {
+        console.log("chainChanged", chainId);
+        if (web3Modal) web3Modal.clearCachedProvider();
+        window.location.reload();
+      });
+    }
+
+    return provider;
+  };
+})();
+
+const rigsDeployment = deployments["polygon-mumbai"];
+
+const getRigs = (function () {
+  return async function (provider: ethers.providers.Web3Provider) {
+    const signer = provider.getSigner();
+    return TablelandRigs__factory.connect(
+      rigsDeployment.contractAddress,
+      signer
+    ) as TablelandRigs;
+  };
+})();
+
+const getRigsStatus = (function () {
+  return async function (rigs: TablelandRigs, address: string) {
+    const mintphase = await rigs.mintPhase();
+    console.info("mint phase:", mintphase);
+    const tokens = await rigs.tokensOfOwner(address);
+    console.info("address has:", tokens.length);
+
+    switch (mintphase) {
+      case 0:
+        return { mintphase };
+      case 1:
+      case 2:
+        const tbl = await connect({
+          chain: "ethereum-goerli",
+        } as ConnectOptions);
+
+        const useWaitlist = mintphase === 2 ? 1 : 0;
+        const entryRes = await tbl.read(
+          `select * from ${rigsDeployment.allowlistTable} where address='${address}' and waitlist=${useWaitlist}`
+        );
+        if (entryRes.rows.length === 0) {
+          return { mintphase };
+        }
+        const entry = entryRes.rows[0];
+        console.info("user entry:", entry);
+
+        const list = await tbl.read(
+          `select * from ${rigsDeployment.allowlistTable} where waitlist=${useWaitlist}`
+        );
+        const tree = buildTree(list.rows);
+        const proof = tree.getHexProof(hashEntry(entry));
+        console.info("user proof:", proof);
+
+        return { mintphase, tokens, rigs, entry, proof };
+      default:
+        return { mintphase, rigs };
+    }
+  };
+})();
+
+const mintRigs = (function () {
+  return async function (
+    rigs: TablelandRigs,
+    quantity: number,
+    freeAllowance: number,
+    paidAllowance: number,
+    proof: string[]
+  ) {
+    const tx = await rigs["mint(uint256,uint256,uint256,bytes32[])"](
+      quantity,
+      freeAllowance,
+      paidAllowance,
+      proof
+    );
+    const receipt = await tx.wait();
+    let ids = [];
+    if (receipt.events && receipt.events.length > 0) {
+      for (let i = 0; i < receipt.events.length; i++) {
+        const e = receipt.events[i];
+        if (e.event === "Transfer") {
+          console.log(e.args);
+          const id = (e.args?.tokenId as BigNumber).toNumber();
+          ids.push(id);
+        }
+      }
+    }
+    return ids;
+  };
+})();
 
 export const actions: ActionTree<RootState, RootState> = {
   connect: async function (context) {
@@ -112,6 +233,39 @@ export const actions: ActionTree<RootState, RootState> = {
     const tableland = await getConnection();
     return await tableland.list();
   },
+  getRigsStatus: async function (context) {
+    const provider = await getRigsProvider();
+    if (provider) {
+      try {
+        const rigs = await getRigs(provider);
+        const address = await provider?.getSigner().getAddress();
+        console.info("connnected to", address);
+
+        const status = await getRigsStatus(rigs, address);
+        return { ...status, address };
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  },
+  mintRigs: async function (context, args) {
+    try {
+      const provider = await getRigsProvider();
+      if (provider) {
+        const rigs = await getRigs(provider);
+        const ids = await mintRigs(
+          rigs,
+          args.quantity,
+          args.freeAllowance,
+          args.paidAllowance,
+          args.proof
+        );
+        return ids;
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  },
 };
 
 // RPC responds with rows and columns in separate arrays, this will combine to an array of objects
@@ -137,3 +291,25 @@ const wait = function (ms: number) {
     setTimeout(() => resolve(void 0), ms);
   });
 };
+
+function buildTree(allowlist: [string, number, number, number][]): MerkleTree {
+  return new MerkleTree(
+    allowlist.map((entry) => hashEntry(entry)),
+    keccak256,
+    {
+      sort: true,
+    }
+  );
+}
+
+function hashEntry(entry: [string, number, number, number]): Buffer {
+  return Buffer.from(
+    ethers.utils
+      .solidityKeccak256(
+        ["address", "uint256", "uint256"],
+        [entry[0], entry[1], entry[2]]
+      )
+      .slice(2),
+    "hex"
+  );
+}
