@@ -1,80 +1,145 @@
 <template>
   <div class="mint-page mint-rigs">
-    <HeaderNav :titles="nav.map((i) => i.title)" :hrefs="nav.map((i) => i.href)" :targets="nav.map((i) => i.target)" />
-    <HeaderScrollNav anchor=".choose" :titles="nav.map((i) => i.title)" :hrefs="nav.map((i) => i.href)"
-      :targets="nav.map((i) => i.target)" />
+    <HeaderNav
+      :titles="nav.map((i) => i.title)"
+      :hrefs="nav.map((i) => i.href)"
+      :targets="nav.map((i) => i.target)"
+    />
+    <HeaderScrollNav
+      anchor=".choose"
+      :titles="nav.map((i) => i.title)"
+      :hrefs="nav.map((i) => i.href)"
+      :targets="nav.map((i) => i.target)"
+    />
     <!-- hero -->
     <section class="rigs-hero">
-      <div class="container px-0 sm:px-6 md:px-12 pt-12 sm:pt-24 lg:pt-32 xl:pt-48 justify-between">
+      <div
+        class="container px-0 sm:px-6 md:px-12 pt-12 sm:pt-24 lg:pt-32 xl:pt-48 justify-between"
+      >
         <div class="w-full px-6 pb-6 lg:pb-10 pt-12" data-aos="fade-up">
           <div class="w-full pt-6">
-            <h1 class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter">
+            <h1
+              class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter"
+            >
               Mint <span class="font-black">Rigs</span>
             </h1>
           </div>
         </div>
       </div>
-      <div class="container px-0 sm:px-6 md:px-12 pt-0 lg:pt-0 pb-24" data-aos="fade-up">
-        <div v-if="!address" class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0">
-          <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18">
+      <div
+        class="container px-0 sm:px-6 md:px-12 pt-0 lg:pt-0 pb-24"
+        data-aos="fade-up"
+      >
+        <div
+          v-if="!address"
+          class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
+        >
+          <h1
+            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
+          >
             Each Rig is generated from 1,074 handcrafted works of art for the
             builders and creatives of cyberspace. It's time to grab yours.
           </h1>
         </div>
-        <div v-else-if="paidAllowance + freeAllowance - tokens.length > 0"
-          class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0">
-          <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18">
+        <div
+          v-else-if="paidAllowance + freeAllowance - tokens.length > 0"
+          class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
+        >
+          <h1
+            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
+          >
             Each Rig is generated from 1,074 handcrafted works of art for the
             builders and creatives of cyberspace. It's time to grab yours.
           </h1>
-          <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18">
+          <h1
+            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
+          >
             Hey Tablelander! Looks like you can grab
-            {{ paidAllowance + freeAllowance - tokens.length }} Rig(s) for 0.05E each +
-            gas.
+            {{ paidAllowance + freeAllowance - tokens.length }} Rig(s) for 0.05E
+            each + gas.
           </h1>
         </div>
-        <div v-else class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0">
-          <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18">
+        <div
+          v-else
+          class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
+        >
+          <h1
+            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
+          >
             Each Rig is generated from 1,074 handcrafted works of art for the
             builders and creatives of cyberspace. It's time to grab yours.
           </h1>
-          <h1 class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18">
-            Hey Friend! Looks like you don't have any allocation for this mint phase. If you're on the waitlist, check
-            back on Monday at 12AM.
+          <h1
+            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
+          >
+            Hey Friend! Looks like you don't have any allocation for this mint
+            phase. If you're on the waitlist, check back on Monday at 12AM.
           </h1>
         </div>
         <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
           <a v-if="!address" class="btn bg-black text-white" @click="connect">
             <span class="flex">
               Connect Wallet
-              <img src="~assets/img/arrow_white.png" srcset="
+              <img
+                src="~assets/img/arrow_white.png"
+                srcset="
                   ~assets/img/arrow_white.png    1x,
                   ~assets/img/arrow_white@2x.png 2x
-                " class="hidden sm:inline-block ml-4" alt="" /> </span></a>
+                "
+                class="hidden sm:inline-block ml-4"
+                alt=""
+              /> </span
+          ></a>
           <div v-else-if="paidAllowance + freeAllowance - tokens.length > 0">
             <a class="btn bg-black text-white" @click="mint">
               <span class="flex">
                 Mint
-                <img src="~assets/img/arrow_white.png" srcset="
+                <img
+                  src="~assets/img/arrow_white.png"
+                  srcset="
                     ~assets/img/arrow_white.png    1x,
                     ~assets/img/arrow_white@2x.png 2x
-                  " class="hidden sm:inline-block ml-4" alt="" /> </span></a>
-            <input v-model.number="quantity" class="inline" type="number" min="1"
-              :max="freeAllowance + paidAllowance - tokens.length" />
+                  "
+                  class="hidden sm:inline-block ml-4"
+                  alt=""
+                /> </span
+            ></a>
+            <input
+              v-model.number="quantity"
+              class="inline px-3 py-3 max-w-fit outline-none focus:outline-none bg-black text-white rounded-xl"
+              type="number"
+              min="1"
+              :max="freeAllowance + paidAllowance"
+            />
           </div>
         </div>
       </div>
     </section>
     <div class="bg-solid">
-      <div class="main min-h-screen container flex flex-col items-center p-8 text-sm">
-        <div ref="grid" class="w-full grid gap-4 grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+      <div
+        class="main min-h-screen container flex flex-col items-center p-8 text-sm"
+      >
+        <div
+          ref="grid"
+          class="w-full grid gap-4 grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+        >
           <div v-for="(src, i) in rigs" :key="i">
-            <v-lazy-image v-if="i < 20" :style="{ minHeight: imageHeight }"
-              class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20" :src="src"
-              @intersect="imageIntersect" @load="imageLoad" />
-            <v-lazy-image v-else :style="{ minHeight: imageHeight }"
-              class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20 choose" :src="src"
-              @intersect="imageIntersect" @load="imageLoad" />
+            <v-lazy-image
+              v-if="i < 20"
+              :style="{ minHeight: imageHeight }"
+              class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20"
+              :src="src"
+              @intersect="imageIntersect"
+              @load="imageLoad"
+            />
+            <v-lazy-image
+              v-else
+              :style="{ minHeight: imageHeight }"
+              class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20 choose"
+              :src="src"
+              @intersect="imageIntersect"
+              @load="imageLoad"
+            />
           </div>
         </div>
       </div>
@@ -92,6 +157,7 @@ export default {
 
   data() {
     return {
+      isLoading: false,
       mintstatus: 0,
       address: undefined,
       quantity: 1,
@@ -179,21 +245,26 @@ export default {
         this.proof = status.proof || [];
         this.tokens = status.tokens || [];
 
-        this.rigs = await this.$store.dispatch("getRigsMetadata", { tokens: this.tokens });
+        this.rigs = await this.$store.dispatch("getRigsMetadata", {
+          tokens: this.tokens,
+        });
       }
     },
 
     async mint() {
-      const receipt = await this.$store.dispatch("mintRigs", {
+      this.isLoading = true;
+      await this.$store.dispatch("mintRigs", {
         quantity: this.quantity,
         freeAllowance: this.freeAllowance,
         paidAllowance: this.paidAllowance,
         proof: this.proof,
-        tokens: this.tokens.length
+        tokens: this.tokens.length,
       });
-      console.log(receipt);
 
-      this.rigs = await this.$store.dispatch("getRigsMetadata", { tokens: this.tokens });
+      this.rigs = await this.$store.dispatch("getRigsMetadata", {
+        tokens: this.tokens,
+      });
+      this.isLoading = false;
     },
 
     resizeImages() {
@@ -214,5 +285,4 @@ export default {
 };
 </script>
 
-<style scoped src="~/assets/css/samples.css">
-</style>
+<style scoped src="~/assets/css/samples.css"></style>
