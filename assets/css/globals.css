@@ -96,7 +96,6 @@ nav li a:active {
   transition: all 0.2s ease-in-out;
 }
 
-
 .mobile-nav {
   background-color: #815691;
   transition: all 0.2s ease-in-out;
@@ -113,16 +112,18 @@ nav li a:active {
   animation: bounce-in 0.5s reverse;
 }
 
-.mobile-enter-active li, .mobile-enter-active h1 {
+.mobile-enter-active li,
+.mobile-enter-active h1 {
   animation: fadeIn 1.5s ease-in-out;
 }
-.mobile-leave-active li, .mobile-enter-active h1 {
+.mobile-leave-active li,
+.mobile-enter-active h1 {
   animation: fadeIn 0.5s reverse;
 }
 
 @keyframes bounce-in {
   0% {
-    height:0px;
+    height: 0px;
     transition: all 0.2s ease-in-out;
   }
   100% {
@@ -367,7 +368,7 @@ footer {
 }
 
 .mintrigs .rigs-hero {
-  min-height: 80vh;
+  min-height: 75vh;
 }
 
 .rigs-hero-top {

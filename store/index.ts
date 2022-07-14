@@ -64,8 +64,23 @@ const getConnection = (function () {
   };
 })();
 
+let web3Modal: Web3Modal | undefined;
+
+if (window.ethereum) {
+  window.ethereum.on("accountsChanged", ([newAddress]: any) => {
+    console.log("accountsChanged", newAddress);
+    if (web3Modal) web3Modal.clearCachedProvider();
+    window.location.reload();
+  });
+
+  window.ethereum.on("chainChanged", (chainId: any) => {
+    console.log("chainChanged", chainId);
+    if (web3Modal) web3Modal.clearCachedProvider();
+    window.location.reload();
+  });
+}
+
 const getRigsProvider = (function () {
-  let web3Modal: Web3Modal | undefined;
   let provider: ethers.providers.Web3Provider | undefined;
 
   return async function (options?: any) {
@@ -90,29 +105,15 @@ const getRigsProvider = (function () {
     const instance = await web3Modal.connect();
     provider = new ethers.providers.Web3Provider(instance);
 
-    if (window.ethereum) {
-      window.ethereum.on("accountsChanged", ([newAddress]: any) => {
-        console.log("accountsChanged", newAddress);
-        if (web3Modal) web3Modal.clearCachedProvider();
-        window.location.reload();
-      });
-
-      window.ethereum.on("chainChanged", (chainId: any) => {
-        console.log("chainChanged", chainId);
-        if (web3Modal) web3Modal.clearCachedProvider();
-        window.location.reload();
-      });
-    }
-
     return provider;
   };
 })();
 
 // TODO: Switch these out if you are testing
-const rigsDeployment = deployments["ethereum"];
-const rigsChainId = 1;
-// const rigsDeployment = deployments["polygon-mumbai"];
-// const rigsChainId = 80001;
+// const rigsDeployment = deployments["ethereum"];
+// const rigsChainId = 1;
+const rigsDeployment = deployments["polygon-mumbai"];
+const rigsChainId = 80001;
 
 const getRigs = (function () {
   return async function (provider: ethers.providers.Web3Provider) {
@@ -136,8 +137,6 @@ const getRigsStatus = (function () {
   return async function (rigs: TablelandRigs, address: string) {
     const mintphase = await rigs.mintPhase();
     console.info("mint phase:", mintphase);
-    const tokens = await rigs.tokensOfOwner(address);
-    console.info("address has:", tokens.length);
 
     switch (mintphase) {
       case 0:
@@ -165,6 +164,9 @@ const getRigsStatus = (function () {
         const proof = tree.getHexProof(hashEntry(entry));
         console.info("user proof:", proof);
 
+        const tokens = await rigs.tokensOfOwner(address);
+        console.info("address has:", tokens.length);
+
         return { mintphase, tokens, rigs, entry, proof };
       default:
         return { mintphase, rigs };
@@ -178,13 +180,19 @@ const mintRigs = (function () {
     quantity: number,
     freeAllowance: number,
     paidAllowance: number,
-    proof: string[]
+    proof: string[],
+    claimed: number
   ) {
+    const freeSurplus = freeAllowance > claimed ? freeAllowance - claimed : 0;
+    const costQuantity = quantity < freeSurplus ? 0 : quantity - freeSurplus;
+    const value = ethers.utils.parseEther((costQuantity * 0.05).toFixed(2));
+
     const tx = await rigs["mint(uint256,uint256,uint256,bytes32[])"](
       quantity,
       freeAllowance,
       paidAllowance,
-      proof
+      proof,
+      { value: value }
     );
     const receipt = await tx.wait();
     let ids = [];
@@ -199,6 +207,20 @@ const mintRigs = (function () {
       }
     }
     return ids;
+  };
+})();
+
+const getRigsMetadata = (function () {
+  return async function (tokens: number[]) {
+    const tbl = await connect({
+      chain: "ethereum-goerli",
+    } as ConnectOptions);
+    const entryRes = await tbl.read(
+      `select thumb from rigs_5_28 where id in (${tokens})`
+    );
+    return entryRes.rows.map((r: any) => {
+      return r[0];
+    });
   };
 })();
 
@@ -270,10 +292,18 @@ export const actions: ActionTree<RootState, RootState> = {
           args.quantity,
           args.freeAllowance,
           args.paidAllowance,
-          args.proof
+          args.proof,
+          args.tokens
         );
         return ids;
       }
+    } catch (error) {
+      console.log(error);
+    }
+  },
+  getRigsMetadata: async function (context, args) {
+    try {
+      return await getRigsMetadata(args.tokens);
     } catch (error) {
       console.log(error);
     }
