@@ -16,17 +16,22 @@
     "format": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
+    "@alch/alchemy-web3": "^1.4.4",
     "@chenfengyuan/vue-countdown": "^1.1.5",
+    "@tableland/rigs": "^0.0.1",
+    "@tableland/sdk": "^2.0.2",
+    "@walletconnect/web3-provider": "^1.7.8",
     "aos": "^2.3.4",
     "core-js": "^3.15.1",
-    "ethers": "^5.6.8",
+    "ethers": "^5.6.9",
     "locomotive-scroll": "^4.1.4",
     "nuxt": "^2.15.7",
-    "v-lazy-image": "^2.1.1",
     "typescript": "^4.6.3",
-    "vue": "^2.6.14",
+    "v-lazy-image": "^2.1.1",
+    "vue": "^2.7.5",
     "vue-class-on-scroll": "^0.1.0",
-    "vue-parallaxy": "^1.1.1"
+    "vue-parallaxy": "^1.1.1",
+    "web3modal": "^1.9.8"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
@@ -37,7 +42,6 @@
     "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
     "@nuxtjs/tailwindcss": "^4.2.0",
-    "@tableland/sdk": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@vue/test-utils": "^1.2.1",
     "babel-core": "7.0.0-bridge.0",
@@ -45,11 +49,14 @@
     "eslint": "^7.29.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-nuxt": "^2.0.0",
+    "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^7.12.1",
     "flush-promises": "^1.0.2",
     "jest": "^27.0.5",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.2.32",
     "postcss": "^8.3.5",
-    "prettier": "^2.6.2",
+    "prettier": "^2.7.1",
     "vue-jest": "^3.0.4"
   }
 }
