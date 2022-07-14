@@ -71,7 +71,7 @@
           </h1>
         </div>
         <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
-          <ButtonLink href="/test-rigs">See some more</ButtonLink>
+          <ButtonLink href="/mint-rigs">Grab your Rig</ButtonLink>
         </div>
       </div>
     </section>
