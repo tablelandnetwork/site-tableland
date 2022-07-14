@@ -202,7 +202,7 @@ export default {
   methods: {
     async connect() {
       const status = await this.$store.dispatch("getRigsStatus");
-      if (status) {
+      if (status && status.tokens) {
         this.address = status.address;
         this.mintstatus = status.mintstatus || 0;
         this.freeAllowance = status.entry ? status.entry[1] : 0;

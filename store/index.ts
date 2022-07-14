@@ -108,7 +108,7 @@ const getRigsProvider = (function () {
   };
 })();
 
-const rigsDeployment = deployments["ethereum"];
+const rigsDeployment = deployments["polygon-mumbai"];
 
 const getRigs = (function () {
   return async function (provider: ethers.providers.Web3Provider) {
@@ -126,6 +126,14 @@ const getRigsStatus = (function () {
     console.info("mint phase:", mintphase);
     const tokens = await rigs.tokensOfOwner(address);
     console.info("address has:", tokens.length);
+
+    if (tokens.length < 1) {
+      alert(
+        "This wallet address does not have any tokens allocated\nCome back for public mint!"
+      );
+    }
+
+    return;
 
     switch (mintphase) {
       case 0:
