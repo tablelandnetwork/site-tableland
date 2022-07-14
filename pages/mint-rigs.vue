@@ -213,13 +213,12 @@ export default {
     },
 
     async mint() {
-      const receipt = await this.$store.dispatch("mintRigs", {
+      await this.$store.dispatch("mintRigs", {
         quantity: this.quantity,
         freeAllowance: this.freeAllowance,
         paidAllowance: this.paidAllowance,
         proof: this.proof,
       });
-      console.log(receipt);
     },
   },
 };

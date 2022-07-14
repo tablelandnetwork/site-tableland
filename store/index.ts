@@ -108,7 +108,7 @@ const getRigsProvider = (function () {
   };
 })();
 
-const rigsDeployment = deployments["polygon-mumbai"];
+const rigsDeployment = deployments["ethereum"];
 
 const getRigs = (function () {
   return async function (provider: ethers.providers.Web3Provider) {
