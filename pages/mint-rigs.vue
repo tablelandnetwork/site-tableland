@@ -54,9 +54,10 @@
           <h1
             class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
           >
-            Hey Tablelander! Looks like you can grab
-            {{ paidAllowance + freeAllowance - tokens.length }} Rig(s) for 0.05E
-            each + gas.
+            Hey Tablelander! Looks like you can grab a total of
+            {{ paidAllowance + freeAllowance }} Rig(s) for 0.05E each + gas. If
+            you try to mint more than your total allowance you will
+            automatically be refunded.
           </h1>
         </div>
         <div
@@ -92,7 +93,7 @@
                 alt=""
               /> </span
           ></a>
-          <div v-else-if="paidAllowance + freeAllowance - tokens.length > 0">
+          <div v-else-if="paidAllowance + freeAllowance > 0">
             <a class="btn bg-black text-white" @click="mint">
               <span class="flex">
                 Mint
@@ -111,7 +112,7 @@
               class="inline px-3 py-3 max-w-fit outline-none focus:outline-none bg-black text-white rounded-xl"
               type="number"
               min="1"
-              :max="paidAllowance + freeAllowance - tokens.length"
+              :max="paidAllowance + freeAllowance"
             />
           </div>
         </div>
