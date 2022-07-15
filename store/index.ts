@@ -148,6 +148,12 @@ const getRigsStatus = (function () {
   return async function (rigs: TablelandRigs, address: string) {
     const mintphase = await rigs.mintPhase();
     console.info("mint phase:", mintphase);
+    const tokens = await rigs.tokensOfOwner(address);
+    console.info("address has:", tokens.length);
+    const minted = await rigs.totalSupply();
+    const max = await rigs.maxSupply();
+    const supply = max.toNumber() - minted.toNumber();
+    console.info("remaining supply:", supply);
 
     switch (mintphase) {
       case 0:
@@ -177,12 +183,9 @@ const getRigsStatus = (function () {
         const proof = tree.getHexProof(hashEntry(entry));
         console.info("user proof:", proof);
 
-        const tokens = await rigs.tokensOfOwner(address);
-        console.info("address has:", tokens.length);
-
-        return { mintphase, tokens, rigs, entry, proof };
+        return { mintphase, tokens, supply, rigs, entry, proof };
       default:
-        return { mintphase, rigs };
+        return { mintphase, tokens, supply, rigs };
     }
   };
 })();
@@ -193,27 +196,32 @@ const mintRigs = (function () {
     quantity: number,
     freeAllowance: number,
     paidAllowance: number,
-    proof: string[],
-    claimed: number
+    proof: string[]
   ) {
-    const freeSurplus = freeAllowance > claimed ? freeAllowance - claimed : 0;
-    const costQuantity = quantity < freeSurplus ? 0 : quantity - freeSurplus;
-    const value = ethers.utils.parseEther((costQuantity * 0.05).toFixed(2));
+    const value = ethers.utils.parseEther((quantity * 0.05).toFixed(2));
 
-    const tx = await rigs["mint(uint256,uint256,uint256,bytes32[])"](
-      quantity,
-      freeAllowance,
-      paidAllowance,
-      proof,
-      { value: value }
-    );
-    const receipt = await tx.wait();
+    let receipt;
+    if (proof.length > 0) {
+      receipt = await (
+        await rigs["mint(uint256,uint256,uint256,bytes32[])"](
+          quantity,
+          freeAllowance,
+          paidAllowance,
+          proof,
+          { value: value }
+        )
+      ).wait();
+    } else {
+      receipt = await (
+        await rigs["mint(uint256)"](quantity, { value: value })
+      ).wait();
+    }
+
     let ids = [];
     if (receipt.events && receipt.events.length > 0) {
       for (let i = 0; i < receipt.events.length; i++) {
         const e = receipt.events[i];
         if (e.event === "Transfer") {
-          console.log(e.args);
           const id = (e.args?.tokenId as BigNumber).toNumber();
           ids.push(id);
         }
@@ -312,20 +320,19 @@ export const actions: ActionTree<RootState, RootState> = {
           args.quantity,
           args.freeAllowance,
           args.paidAllowance,
-          args.proof,
-          args.tokens
+          args.proof
         );
         return ids;
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   },
   getRigsMetadata: async function (context, args) {
     try {
       return await getRigsMetadata(args.tokens);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   },
 };
