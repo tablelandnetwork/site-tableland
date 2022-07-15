@@ -73,9 +73,9 @@
             class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
           >
             Hey Friend! Looks like you don't have any allocation for this mint
-            phase. If you're on the waitlist, come back at 7AM UTC on July 18th 
-            for a 22 hour first come, first serve mint window. Public mint starts
-            on July 19th at 17:00 UTC.
+            phase. If you're on the waitlist, come back at 7AM UTC on July 18th
+            for a 22 hour first come, first serve mint window. Public mint
+            starts on July 19th at 17:00 UTC.
           </h1>
         </div>
         <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
