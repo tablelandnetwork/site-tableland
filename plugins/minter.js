@@ -934,29 +934,27 @@ export default async ({ env }, inject) => {
     },
 
     async claimRig() {
-      const claimList = ["0xaf8Ce23CB0D794999574d1b6eA215Af6fBeeD532", "0x8b717e371E1089b91825c62Db5BB350a6F829e1E"];
       await provider.send("eth_requestAccounts", []);
       const signer = provider.getSigner();
       let userAddress = await signer.getAddress();
       const rigAllowance = await(await fetch('https://testnet.tableland.network/query?s=select%20*%20from%20rigs_allowlist_5_59%20where%20address=%27'+ userAddress +'%27')).json();
-      console.log(rigAllowance);
-      console.log('Free allowance' + rigAllowance.rows[1])
-      console.log('Paid Allowance' + rigAllowance.rows[2])
 
-      this.freeAllowance = rigAllowance.rows[1];
-      this.paidAllowance = rigAllowance.rows[2];
-
-
-      if (rigAllowance.rows[1] < 1 ) {
+      if (rigAllowance.rows) {
         this.claimStatus = 1;
         console.log("you're on the claim list!");
+        const rigList = rigAllowance.rows[0];
+        this.freeAllowance = rigList[1];
+        this.paidAllowance = rigList[2];
       }
 
       else {
         console.log("Wallet ID not on whitelist, try again!");
         document.getElementById("claim-button").innerHTML =
           "NOT WHITELISTED!";
-      }
+        document.getElementById("claim-text").innerHTML =
+        "==== You are currently not on our whitelist, come back July 18, 2022 ====";
+        }
+
 
     },
 
@@ -987,7 +985,7 @@ export default async ({ env }, inject) => {
           // Minting in progress
           let tx = await nftContract
             .connect(signer)
-            .mint(quantity, freeAllowance, paidAllowance, { value: rigPrice, gasLimit: "150000" });
+            .mint(quantity, freeAllowance, paidAllowance, { gasLimit: "150000" });
           document.getElementById("mint-terminal").innerHTML =
             "============================== MINTING IN PROGRESS ================================ <p>0x6060604052341561000f57600080fd5b61053a8061001e6000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde031461005c57806320965255146100ea57806393a0935214610178575b600080fd5b341561006757600080fd5b61006f61024e565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100af578082015181840152602081019050610094565b50505050905090810190601f1680156100dc5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156100f557600080fd5b6100fd6102ec565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561013d578082015181840152602081019050610122565b50505050905090810190601f16801561016a5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561018357600080fd5b6101d3600480803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610394565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102135780820151818401526020810190506101f8565b50505050905090810190601f1680156102405780820380516001836020036101000a031916815260200191505b50929</p>";
           document.getElementById("mint-button").innerHTML =

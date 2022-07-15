@@ -168,7 +168,7 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
                 </select> -->
               </div>
             </div>
-            <p v-if="$wallet.claimStatus === 1">You have {{$wallet.paidAllowance}} whitelist mints remaining</p>
+
             <div class="flex">
               <div v-if="provider !== null" class="w-full lg:px-12 lg:py-12 py-12 px-6 pb-12">
                 <div v-if="$wallet.account" v-show="$wallet.claimStatus === null">
@@ -203,6 +203,8 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
                 </div>
               </div>
             </div>
+           <p class="px-12"v-if="$wallet.claimStatus === 1">==== YOU HAVE {{$wallet.paidAllowance}} WHITELIST MINTS  ====</p>
+           <p class="px-12" v-if="!$wallet.claimStatus" id="claim-text"></p>
           </div>
         </div>
       </div>
