@@ -30,6 +30,7 @@
         class="container px-0 sm:px-6 md:px-12 pt-0 lg:pt-0 pb-24"
         data-aos="fade-up"
       >
+        <!-- Default screen before connecting wallet -->
         <div
           v-if="!address"
           class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
@@ -41,6 +42,57 @@
             builders and creatives of cyberspace. It's time to grab yours.
           </h1>
         </div>
+
+        <!-- Minting not open -->
+        <div
+          v-else-if="mintphase === 0"
+          class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
+        >
+          <h1
+            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
+          >
+            Each Rig is generated from 1,074 handcrafted works of art for the
+            builders and creatives of cyberspace. It's time to grab yours.
+          </h1>
+          <h1
+            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
+          >
+            Hey Tablelander! We haven't started minting yet!
+          </h1>
+        </div>
+
+        <!-- Public mint phase screen -->
+        <div
+          v-else-if="mintphase === 3"
+          class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
+        >
+          <h1
+            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
+          >
+            Each Rig is generated from 1,074 handcrafted works of art for the
+            builders and creatives of cyberspace. It's time to grab yours.
+          </h1>
+          <h1
+            v-if="supply > 0"
+            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
+          >
+            Hey Tablelander! Looks like there are {{ supply }} tokens left to
+            mint.
+          </h1>
+          <h1
+            v-else
+            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
+          >
+            Hey Tablelander! Looks like Rigs is sold out :( Check them out on
+            <a
+              href="https://opensea.io/collection/tableland-rigs"
+              target="_blank"
+              >OpenSea</a
+            >.
+          </h1>
+        </div>
+
+        <!-- Allowlist and waitlist screen -->
         <div
           v-else-if="paidAllowance + freeAllowance > 0"
           class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
@@ -60,6 +112,8 @@
             automatically be refunded.
           </h1>
         </div>
+
+        <!-- No allocation screen -->
         <div
           v-else
           class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
@@ -71,14 +125,24 @@
             builders and creatives of cyberspace. It's time to grab yours.
           </h1>
           <h1
+            v-if="mintphase === 1"
             class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
           >
-            Hey Friend! Looks like you don't have any allocation for this mint
-            phase. If you're on the waitlist, come back at 7AM UTC on July 18th
-            for a 22 hour first come, first serve mint window. Public mint
+            Hey Friend! Looks like you don't have any allocations on the
+            allowlist. If you're on the waitlist, come back at 7AM UTC on July
+            18th for a 22 hour first come, first serve mint window. Public mint
             starts on July 19th at 17:00 UTC.
           </h1>
+          <h1
+            v-else
+            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
+          >
+            Hey Friend! Looks like you don't have any allocations on the
+            waitlist. Public mint starts on July 19th at 17:00 UTC.
+          </h1>
         </div>
+
+        <!-- Mint buttons -->
         <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
           <a v-if="!address" class="btn bg-black text-white" @click="connect">
             <span class="flex">
@@ -93,7 +157,13 @@
                 alt=""
               /> </span
           ></a>
-          <div v-else-if="paidAllowance + freeAllowance > 0">
+          <div
+            v-else-if="
+              (mintphase === 1 && paidAllowance + freeAllowance > 0) ||
+              (mintphase === 2 && paidAllowance + freeAllowance > 0) ||
+              mintphase === 3
+            "
+          >
             <a class="btn bg-black text-white" @click="mint">
               <span class="flex">
                 Mint
@@ -161,7 +231,8 @@ export default {
   data() {
     return {
       isLoading: false,
-      mintstatus: 0,
+      mintphase: 0,
+      supply: 0,
       address: undefined,
       quantity: 1,
       tokens: [],
@@ -242,11 +313,12 @@ export default {
       const status = await this.$store.dispatch("getRigsStatus");
       if (status) {
         this.address = status.address;
-        this.mintstatus = status.mintstatus || 0;
+        this.mintphase = status.mintphase || 0;
         this.freeAllowance = status.entry ? status.entry[1] : 0;
         this.paidAllowance = status.entry ? status.entry[2] : 0;
         this.proof = status.proof || [];
         this.tokens = status.tokens || [];
+        this.supply = status.supply || 0;
 
         this.rigs = await this.$store.dispatch("getRigsMetadata", {
           tokens: this.tokens,
@@ -261,7 +333,6 @@ export default {
         freeAllowance: this.freeAllowance,
         paidAllowance: this.paidAllowance,
         proof: this.proof,
-        tokens: this.tokens.length,
       });
 
       this.rigs = await this.$store.dispatch("getRigsMetadata", {
