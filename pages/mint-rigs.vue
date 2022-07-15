@@ -172,7 +172,7 @@ export default {
       nav: [
         {
           title: "Discord",
-          href: "https://discord.gg/hpd5WWn4Ys",
+          href: "https://discord.gg/dc8EBEhGbg",
           target: "_blank",
         },
         {
