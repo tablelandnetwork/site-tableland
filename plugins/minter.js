@@ -706,6 +706,8 @@ export default async ({ env }, inject) => {
     tokenBalance: null,
     totalSupply: 200,
     claimStatus: null,
+    freeAllowance: 0,
+    paidAllowance: 0,
 
     //Walletconnect functions
     async connectMobile() {
@@ -730,12 +732,12 @@ export default async ({ env }, inject) => {
       // Check totalSupply via api connection on pageload (requires no web3 wallet provider)
 
       // Looksrare API, use for main net or rinkeby contract queries
-      // const rigSupply = await(await fetch('https://api-rinkeby.looksrare.org/api/v1/collections/stats?address=0x879A53A8Ac46fc87Cfe6F7700f0624F50a750713')).json();
-      // this.totalSupply = rigSupply.data.totalSupply;
+      const rigSupply = await(await fetch('https://api.looksrare.org/api/v1/collections/stats?address=0x8EAa9AE1Ac89B1c8C8a8104D08C045f78Aadb42D')).json();
+      this.totalSupply = rigSupply.data.totalSupply;
 
       // Optomism API, use for optimism contract queries
-      const rigSupply = await(await fetch('https://api-kovan-optimistic.etherscan.io/api?module=stats&action=tokensupply&contractaddress=0x61a748d5f21e7b235f740bdb496b66b852687000&apikey=SAHJW4NKQD6IFP49Y8DGBSH7NHQBR2FXK3')).json();
-      this.totalSupply = rigSupply.result;
+      // const rigSupply = await(await fetch('https://api-kovan-optimistic.etherscan.io/api?module=stats&action=tokensupply&contractaddress=0x61a748d5f21e7b235f740bdb496b66b852687000&apikey=SAHJW4NKQD6IFP49Y8DGBSH7NHQBR2FXK3')).json();
+      // this.totalSupply = rigSupply.result;
 
 
       // For devices with no browser wallet
@@ -833,7 +835,7 @@ export default async ({ env }, inject) => {
             const rigId = await ethers.utils.formatUnits(item._hex, 0);
             const tokenURI = await nftContract.tokenURI(rigId);
             const rigsMeta = await (await fetch(tokenURI)).json();
-            if (rigsMeta.attributes[0].value == "1.000000") {
+            if (rigsMeta.attributes[0].value == "100") {
               rigLog.innerHTML += `<div class="lg:w-1/3 md:w-1/2 w-full px-3 py-3 rigs">
                       <a href="/rigs/${rigId}">
                        <div class="rig-frame " >
@@ -936,8 +938,16 @@ export default async ({ env }, inject) => {
       await provider.send("eth_requestAccounts", []);
       const signer = provider.getSigner();
       let userAddress = await signer.getAddress();
+      const rigAllowance = await(await fetch('https://testnet.tableland.network/query?s=select%20*%20from%20rigs_allowlist_5_59%20where%20address=%27'+ userAddress +'%27')).json();
+      console.log(rigAllowance);
+      console.log('Free allowance' + rigAllowance.rows[1])
+      console.log('Paid Allowance' + rigAllowance.rows[2])
 
-      if (claimList.includes(userAddress)) {
+      this.freeAllowance = rigAllowance.rows[1];
+      this.paidAllowance = rigAllowance.rows[2];
+
+
+      if (rigAllowance.rows[1] < 1 ) {
         this.claimStatus = 1;
         console.log("you're on the claim list!");
       }
@@ -945,19 +955,9 @@ export default async ({ env }, inject) => {
       else {
         console.log("Wallet ID not on whitelist, try again!");
         document.getElementById("claim-button").innerHTML =
-          "Wallet not on list";
+          "NOT WHITELISTED!";
       }
 
-      // wire up to claim() function on contract
-      // const { ethereum } = window;
-      //
-      // if (ethereum) {
-      //   await provider.send("eth_requestAccounts", []);
-      //   const signer = provider.getSigner();
-      //   let userAddress = await signer.getAddress();
-      //   const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
-      //   const claimRig = await nftContract.claim(userAddress);
-      // }
     },
 
     async mintRig() {
@@ -968,6 +968,7 @@ export default async ({ env }, inject) => {
           console.log = function (message) {
             document.getElementById("mint-log").innerHTML = message;
           };
+
           document.getElementById("mint-button").innerHTML =
             "Confirm the Transaction";
           document.getElementById("mint-terminal").innerHTML =
@@ -979,12 +980,14 @@ export default async ({ env }, inject) => {
           const nftContract = new ethers.Contract(rig.address, rig.abi, signer);
 
           const quantity = this.quantity;
+          const freeAllowance = this.freeAllowance;
+          const paidAllowance = this.paidAllowance;
           const rigPrice = rig.price * this.quantity;
 
           // Minting in progress
           let tx = await nftContract
             .connect(signer)
-            .mint(quantity, { value: rigPrice, gasLimit: "150000" });
+            .mint(quantity, freeAllowance, paidAllowance, { value: rigPrice, gasLimit: "150000" });
           document.getElementById("mint-terminal").innerHTML =
             "============================== MINTING IN PROGRESS ================================ <p>0x6060604052341561000f57600080fd5b61053a8061001e6000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806306fdde031461005c57806320965255146100ea57806393a0935214610178575b600080fd5b341561006757600080fd5b61006f61024e565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156100af578082015181840152602081019050610094565b50505050905090810190601f1680156100dc5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156100f557600080fd5b6100fd6102ec565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561013d578082015181840152602081019050610122565b50505050905090810190601f16801561016a5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561018357600080fd5b6101d3600480803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610394565b6040518080602001828103825283818151815260200191508051906020019080838360005b838110156102135780820151818401526020810190506101f8565b50505050905090810190601f1680156102405780820380516001836020036101000a031916815260200191505b50929</p>";
           document.getElementById("mint-button").innerHTML =
@@ -1013,7 +1016,7 @@ export default async ({ env }, inject) => {
               tx.hash
             }, ${event.args?.tokenId}, token id ${
               event.args?.tokenId
-            }, see transaction: hhttps://kovan-optimistic.etherscan.io/tx/${
+            }, see transaction: hhttps://etherscan.io/tx/${
               tx.hash
             }, Token URI ${tokenURI}
 
@@ -1045,7 +1048,7 @@ export default async ({ env }, inject) => {
                         <div class="text-left">
                         <p>> Transaction TX '${
                           tx.hash
-                        }', See transaction: https://kovan-optimistic.etherscan.io/tx/'${
+                        }', See transaction: https://etherscan.io/tx/'${
               tx.hash
             }' Gas used: '${receipt.gasUsed.toString()}', Transaction confirmed in block '${
               receipt.blockNumber
@@ -1071,7 +1074,7 @@ export default async ({ env }, inject) => {
             .getElementById("tx-btn")
             .setAttribute(
               "href",
-              `https://kovan-optimistic.etherscan.io/tx/${tx.hash}`
+              `https://etherscan.io/tx/${tx.hash}`
             );
           document.getElementById("os-btn").setAttribute("href", `/garage/`);
         } else {

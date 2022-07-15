@@ -168,6 +168,7 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
                 </select> -->
               </div>
             </div>
+            <p v-if="$wallet.claimStatus === 1">You have {{$wallet.paidAllowance}} whitelist mints remaining</p>
             <div class="flex">
               <div v-if="provider !== null" class="w-full lg:px-12 lg:py-12 py-12 px-6 pb-12">
                 <div v-if="$wallet.account" v-show="$wallet.claimStatus === null">
@@ -202,9 +203,6 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
                 </div>
               </div>
             </div>
-            <p class="px-12">
-              ===== DEVELOPMENT NOTE, USE ONLY ON OPTIMISM KOVAN TESTNET! ======
-            </p>
           </div>
         </div>
       </div>
@@ -226,7 +224,7 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
               <div class="w-1/2 lg:w-1/2">
                 <h3 class="text-black lg:text-xl text-l">TOTAL SUPPLY</h3>
                 <h2 class="text-black text-xl lg:text-4xl font-Orbitron">
-                  {{ 3000 - $wallet.totalSupply }}
+                  {{ 3000 - $wallet.totalSupply }} /3000
                 </h2>
               </div>
               <div class="w-full px-0 py-6">
@@ -282,7 +280,7 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
               <div class="w-1/2 lg:w-1/2">
                 <h3 class="text-black lg:text-xl text-l">TOTAL SUPPLY</h3>
                 <h2 class="text-black text-xl lg:text-4xl font-Orbitron">
-                  {{ 3000 - $wallet.totalSupply }}
+                  {{ 3000 - $wallet.totalSupply }}/3000
                 </h2>
               </div>
               <div class="w-full px-0 py-6">
