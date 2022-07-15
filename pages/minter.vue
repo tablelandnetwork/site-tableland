@@ -152,7 +152,6 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
                   class="quantity text-black text-2xl lg:text-4xl font-Orbitron"
                   v-model="quantity"
                   v-on:change="updateQuantity"
-                  value="quantity"
                   type="number"
                   min="1"
                   max="10"
@@ -168,7 +167,8 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
                 </select> -->
               </div>
             </div>
-
+            <p class="text-center px-12 pt-12" v-if="$wallet.claimStatus === 1">==== YOU HAVE {{$wallet.paidAllowance}} WHITELIST MINTS  ====</p>
+            <p class="text-center px-12" v-if="!$wallet.claimStatus" id="claim-text"></p>
             <div class="flex">
               <div v-if="provider !== null" class="w-full lg:px-12 lg:py-12 py-12 px-6 pb-12">
                 <div v-if="$wallet.account" v-show="$wallet.claimStatus === null">
@@ -203,9 +203,8 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
                 </div>
               </div>
             </div>
-           <p class="px-12"v-if="$wallet.claimStatus === 1">==== YOU HAVE {{$wallet.paidAllowance}} WHITELIST MINTS  ====</p>
-           <p class="px-12" v-if="!$wallet.claimStatus" id="claim-text"></p>
-           <p class="px=12">== USE ONLY ON MUMBAI POLYGON NETWORK! ==</p>
+
+           <p class="text-center px-12">== USE ONLY ON MUMBAI POLYGON NETWORK! == </p>
           </div>
         </div>
       </div>
