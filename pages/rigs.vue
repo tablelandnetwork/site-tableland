@@ -39,7 +39,7 @@
               <h2
                 class="text-white font-Orbitron text-2xl md:text-2xl lg:text-3xl xl:text-4xl pt-6"
               >
-                <countdown :time="time">
+                <countdown v-if="time > 0" :time="time">
                   <template slot-scope="props"
                     >{{ props.days }}d:{{ props.hours }}h:{{
                       props.minutes
