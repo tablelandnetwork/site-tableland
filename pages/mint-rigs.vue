@@ -141,6 +141,8 @@
             waitlist. Public mint starts on July 19th at 17:00 UTC.
           </h1>
         </div>
+        
+        <!-- Mint buttons -->
         <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
           <a v-if="!address" class="btn bg-black text-white" @click="connect">
             <span class="flex">
@@ -155,7 +157,7 @@
                 alt=""
               /> </span
           ></a>
-          <div v-else-if="paidAllowance + freeAllowance > 0">
+          <div v-else-if="(mintphase === 1 && paidAllowance + freeAllowance > 0) || (mintphase === 2 && paidAllowance + freeAllowance > 0) || mintphase === 3">
             <a class="btn bg-black text-white" @click="mint">
               <span class="flex">
                 Mint
