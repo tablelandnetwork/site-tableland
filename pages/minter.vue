@@ -205,6 +205,7 @@ Foils       The Cricket      Airframe    Supersingular           Midnight
             </div>
            <p class="px-12"v-if="$wallet.claimStatus === 1">==== YOU HAVE {{$wallet.paidAllowance}} WHITELIST MINTS  ====</p>
            <p class="px-12" v-if="!$wallet.claimStatus" id="claim-text"></p>
+           <p class="px=12">== USE ONLY ON MUMBAI POLYGON NETWORK! ==</p>
           </div>
         </div>
       </div>
