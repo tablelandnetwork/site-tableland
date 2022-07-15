@@ -42,7 +42,7 @@
           </h1>
         </div>
         <div
-          v-else-if="paidAllowance + freeAllowance - tokens.length > 0"
+          v-else-if="paidAllowance + freeAllowance > 0"
           class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
         >
           <h1
