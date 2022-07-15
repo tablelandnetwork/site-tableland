@@ -42,7 +42,7 @@
           </h1>
         </div>
         <div
-          v-else-if="paidAllowance + freeAllowance - tokens.length > 0"
+          v-else-if="paidAllowance + freeAllowance > 0"
           class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
         >
           <h1
@@ -54,9 +54,10 @@
           <h1
             class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
           >
-            Hey Tablelander! Looks like you can grab
-            {{ paidAllowance + freeAllowance - tokens.length }} Rig(s) for 0.05E
-            each + gas.
+            Hey Tablelander! Looks like you can grab a total of
+            {{ paidAllowance + freeAllowance }} Rig(s) for 0.05E each + gas. If
+            you try to mint more than your total allowance you will
+            automatically be refunded.
           </h1>
         </div>
         <div
@@ -73,7 +74,9 @@
             class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
           >
             Hey Friend! Looks like you don't have any allocation for this mint
-            phase. If you're on the waitlist, check back on Monday at 12AM.
+            phase. If you're on the waitlist, come back at 7AM UTC on July 18th
+            for a 22 hour first come, first serve mint window. Public mint
+            starts on July 19th at 17:00 UTC.
           </h1>
         </div>
         <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
@@ -90,7 +93,7 @@
                 alt=""
               /> </span
           ></a>
-          <div v-else-if="paidAllowance + freeAllowance - tokens.length > 0">
+          <div v-else-if="paidAllowance + freeAllowance > 0">
             <a class="btn bg-black text-white" @click="mint">
               <span class="flex">
                 Mint
@@ -109,7 +112,7 @@
               class="inline px-3 py-3 max-w-fit outline-none focus:outline-none bg-black text-white rounded-xl"
               type="number"
               min="1"
-              :max="paidAllowance + freeAllowance - tokens.length"
+              :max="paidAllowance + freeAllowance"
             />
           </div>
         </div>
@@ -169,7 +172,7 @@ export default {
       nav: [
         {
           title: "Discord",
-          href: "https://discord.gg/hpd5WWn4Ys",
+          href: "https://discord.gg/dc8EBEhGbg",
           target: "_blank",
         },
         {

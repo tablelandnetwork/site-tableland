@@ -240,7 +240,7 @@
               fast-growing community of innovators from all over the world.
             </p>
             <div class="text-center md:text-left mt-5" data-aos="fade-up">
-              <ButtonLink href="https://discord.gg/hpd5WWn4Ys"
+              <ButtonLink href="https://discord.gg/dc8EBEhGbg"
                 >Join us on Discord</ButtonLink
               >
             </div>
@@ -285,7 +285,7 @@ export default {
       nav: [
         {
           title: "Discord",
-          href: "https://discord.gg/hpd5WWn4Ys",
+          href: "https://discord.gg/dc8EBEhGbg",
           target: "_blank",
         },
         {

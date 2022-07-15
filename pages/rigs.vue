@@ -641,7 +641,7 @@ tableland> UPDATE rig_badges SET visible = true WHERE rig_id = 56 AND badge_id =
                 data-aos="fade-up"
               >
                 It all starts with the community
-                <a href="https://discord.gg/hpd5WWn4Ys" target="_blank"
+                <a href="https://discord.gg/dc8EBEhGbg" target="_blank"
                   >Discord</a
                 >, where Rig ownership will be checked at the door. We'll also
                 be launching developer experiences that will only be available
@@ -864,7 +864,7 @@ export default {
         },
         {
           title: "Discord",
-          href: "https://discord.gg/hpd5WWn4Ys",
+          href: "https://discord.gg/dc8EBEhGbg",
           target: "_blank",
         },
       ],
