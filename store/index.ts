@@ -7,6 +7,7 @@ import { TablelandRigs, TablelandRigs__factory } from "@tableland/rigs";
 import { deployments } from "@tableland/rigs/deployments";
 import { MerkleTree } from "merkletreejs";
 import keccak256 from "keccak256";
+import { token } from "@tableland/rigs/typechain-types/@openzeppelin/contracts";
 
 export const state = function () {
   return {
@@ -171,7 +172,7 @@ const getRigsStatus = (function () {
           } where lower(address)='${address.toLowerCase()}' and waitlist=${useWaitlist}`
         );
         if (entryRes.rows && entryRes.rows.length === 0) {
-          return { mintphase };
+          return { mintphase, tokens, supply };
         }
         const entry = entryRes.rows[0];
         console.info("user entry:", entry);
@@ -183,9 +184,9 @@ const getRigsStatus = (function () {
         const proof = tree.getHexProof(hashEntry(entry));
         console.info("user proof:", proof);
 
-        return { mintphase, tokens, supply, rigs, entry, proof };
+        return { mintphase, tokens, supply, entry, proof };
       default:
-        return { mintphase, tokens, supply, rigs };
+        return { mintphase, tokens, supply };
     }
   };
 })();
