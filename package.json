@@ -16,7 +16,7 @@
     "format": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
-    "@alch/alchemy-web3": "^1.4.4",
+    "@alch/alchemy-web3": "^1.4.6",
     "@chenfengyuan/vue-countdown": "^1.1.5",
     "@tableland/rigs": "^0.0.1",
     "@tableland/sdk": "^2.0.2",
