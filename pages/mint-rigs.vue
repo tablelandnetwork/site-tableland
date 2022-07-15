@@ -54,10 +54,15 @@
           <h1
             class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
           >
-            Hey Tablelander! Looks like you can grab a total of
-            {{ paidAllowance + freeAllowance }} Rig(s) for 0.05E each + gas. If
-            you try to mint more than your total allowance you will
-            automatically be refunded.
+            Hey Tablelander! You have a total allocation of
+            {{ paidAllowance + freeAllowance }} Rig(s). You can mint these for
+            0.05E each + gas. If you try to mint more than your total allowance
+            you will automatically be refunded.
+            <p v-if="tokens.length > 0">
+              It looks like you have {{ tokens.length }} Rig(s) already. This
+              might not be part of your allocation if you purchased it/them via
+              a marketplace etc.
+            </p>
           </h1>
         </div>
         <div
