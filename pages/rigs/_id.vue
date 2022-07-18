@@ -157,16 +157,23 @@ export default {
       rigsMeta: this.rigsMeta,
       nav: [
         {
-          title: "Gallery",
-          href: "/gallery",
+          title: "Discord",
+          href: "https://discord.gg/dc8EBEhGbg",
+          target: "_blank",
         },
         {
-          title: "Rigs",
+          title: "Blog",
+          href: "https://mirror.xyz/tableland.eth",
+          target: "_blank",
+        },
+        {
+          title: "Docs",
+          href: "https://docs.tableland.xyz",
+          target: "_blank",
+        },
+        {
+          title: "More Info",
           href: "/rigs",
-        },
-        {
-          title: "Mint a Rig",
-          href: "/minter/",
           main: true,
         },
       ],

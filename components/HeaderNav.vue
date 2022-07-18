@@ -34,6 +34,46 @@
                 {{ item }}
               </a>
             </li>
+            <li v-show="!isRigs">
+              <a
+                v-if="!address"
+                v-show="!address"
+                class="btn bg-white text-white w-50 text-center"
+                @click="connect"
+              >
+                <strong>Connect Wallet</strong>
+              </a>
+              <a
+                v-if="address"
+                v-show="address"
+                class="btn bg-white text-white w-50 text-center"
+                @click="account = !account"
+              >
+                <strong>{{address.substring(0, 5)}}...{{address.substring(address.length - 4)}}</strong>
+              </a>
+              <div
+                v-if="account"
+                v-show="address"
+                class="absolute px-3 py-3 mt-2 z-10 bg-white divide-y divide-gray-100 rounded shadow w-50 dark:bg-gray-700"
+              >
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-200">
+                  <li>
+                    <a
+                      href="/rigs/garage/"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Your Garage</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      @click="disconnect"
+                      class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      >Disconnect</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </div>
       </nav>
@@ -74,7 +114,32 @@ export default {
   data() {
     return {
       menu: false,
+      address: undefined,
+      account: false,
     };
+  },
+  computed: {
+    isRigs() {
+      if (this.$route.path === "/rigs/" || this.$route.path === "/") {
+        return true;
+      } else {
+        return false;
+      }
+    },
+  },
+  methods: {
+    async connect() {
+      const status = await this.$store.dispatch("getRigsStatus");
+      if (status) {
+        this.address = status.address;
+        this.rigs = await this.$store.dispatch("getRigsMetadata", {
+          tokens: this.tokens,
+        });
+      }
+    },
+    disconnect() {
+      this.address = undefined;
+    }
   },
 };
 </script>
