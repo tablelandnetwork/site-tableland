@@ -7,26 +7,36 @@
     />
 
     <!-- hero -->
-    <section class="rigs-hero">
+    <section class="md:block story py-4 md:py-12 relative">
+      <div class="rigs-hero-top"></div>
       <div
         class="container px-0 sm:px-6 md:px-12 pt-12 sm:pt-24 lg:pt-32 xl:pt-48 justify-between"
       >
         <div class="w-full px-6 pb-6 lg:pb-10 pt-12" data-aos="fade-up">
-          <div class="w-full pt-6">
-            <h1
-              class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter"
+          <div class="lg:flex">
+            <div class="lg:w-1/2 w-full pt-6">
+              <h1
+                class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter mb-2 lg:mb-10"
+              >
+                Your Garage
+              </h1>
+            </div>
+            <div
+              class="lg:w-1/2 w-full px-3 lg:px-12 lg:pb-12 lg:py-16"
+              data-aos="fade-up"
             >
-              Your <span class="font-black">Garage</span>
-            </h1>
+              <h4
+                id="rig-balance"
+                class="text-white text-left lg:text-right lg:text-2xl text-md"
+
+              >
+                {{ tokens.length }} RIGS OWNED
+              </h4>
+            </div>
           </div>
         </div>
-      </div>
-      <div
-        class="container px-0 sm:px-6 md:px-12 pt-0 lg:pt-0 pb-24"
-        data-aos="fade-up"
-      >
         <!-- Connect buttons -->
-        <div v-if="!address" class="w-full px-6 pb-0 lg:pb-0 pt-0">
+        <div v-if="!address" class="w-full px-6 pb-0 lg:pb-0 pt-0 relative">
           <a  class="btn bg-black text-white" @click="connect">
             <span class="flex">
               Connect Wallet
@@ -46,10 +56,33 @@
       </div>
       <div
         id="rig-garage"
-        class="flex flex-wrap py-0 px-0 md:px-12 lg:px-16 xl:px-36 rig-garage"
+        class="flex flex-wrap py-0 px-0 md:px-12 lg:px-24 xl:px-36 rig-garage"
         v-if="address"
       >
-      <div v-for="(src, i) in rigs" :key="i">
+      <div class="lg:w-1/3 md:w-1/2 w-full px-3 py-3 rigs" v-for="(src, i) in rigs" :key="i">
+              <a :href="'/rigs/' + src[0] ">
+               <div class="rig-frame " >
+                 <v-lazy-image
+                   v-if="i < 20"
+                   :style="{ minHeight: imageHeight }"
+                   class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20"
+                   :src="src[3]"
+                   @intersect="imageIntersect"
+                   @load="imageLoad"
+                 />
+                 <v-lazy-image
+                   v-else
+                   :style="{ minHeight: imageHeight }"
+                   class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20 choose"
+                   :src="src[3]"
+                   @intersect="imageIntersect"
+                   @load="imageLoad"
+                 />
+               </div>
+               <h2 class="text-black font-Orbitron text-xl px-3 py-3">#{{src[0]}}</h2>
+             </a>
+            </div>
+      <!-- <div v-for="(src, i) in rigs" :key="i">
         <a href="/rigs/"
         <v-lazy-image
           v-if="i < 20"
@@ -68,8 +101,8 @@
           @load="imageLoad"
         />
         {{src[0]}}
-        
-      </div>
+
+      </div> -->
 
       </div>
     </section>
@@ -89,7 +122,8 @@ export default {
       isLoading: false,
       mintphase: 0,
       supply: 0,
-      address: undefined,
+      address: status.address,
+      tokens: undefined,
       quantity: 1,
       tokens: [],
       freeAllowance: 0,

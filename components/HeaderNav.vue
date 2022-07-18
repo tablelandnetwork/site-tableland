@@ -114,7 +114,7 @@ export default {
   data() {
     return {
       menu: false,
-      address: this.address,
+      address: status.address,
       account: false,
     };
   },
@@ -128,12 +128,13 @@ export default {
     },
   },
   beforeMount(){
-    this.rigsGarage();
+    // this.rigsConnect();
   },
   methods: {
-    async rigsGarage() {
-      const status = await this.$store.dispatch("getRigsStatus");
-      this.address = status.address;
+    async rigsConnect() {
+        const status = await this.$store.dispatch("getRigsProvider");
+        this.provider = status.provider;
+        console.log(this.provider)
     },
     async connect() {
       const status = await this.$store.dispatch("getRigsStatus");
@@ -147,6 +148,8 @@ export default {
     },
     disconnect() {
       this.address = undefined;
+      window.localStorage.removeItem('provider');
+
     }
   },
 };

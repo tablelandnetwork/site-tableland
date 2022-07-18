@@ -18,7 +18,7 @@
           class="text-white text-center font-Orbitron w-full h-auto text-4xl sm:text-5xl lg:text-6xl md:text-5xl leading-tighter mb-12 lg:mb-10"
           data-aos="fade-up"
         >
-          RIG ID #00{{ rigId }}
+          RIG #{{ rigId }}
         </h1>
 
         <div class="flex px-6 xl:px-24 py-6 lg:py-12">
@@ -43,7 +43,7 @@
                     <div class="text-white text-left" id="mint-log">
                       <div id="mint-terminal" class="frame">
 
-                            <div class="text-left">> Querying Rig ID #00{{rigId}}</div>
+                            <div class="text-left">> Querying Rig #{{rigId}}</div>
 
                             <div id="rig-owner"></div><br>
                             <div class="text-left"><p>tableland> SELECT * FROM rig_parts WHERE fleet = '<strong v-if="rig.attributes[0].value == '100'">{{ rig.attributes[5].value }}</strong><strong v-else>{{ rig.attributes[4].value }}</strong>';</p></div><br>
@@ -182,14 +182,14 @@ export default {
 
   head: function () {
     return {
-      title: "Rig #00" + this.rigId + " - The Tableland NFT: Rigs",
+      title: "Rig #" + this.rigId + " - The Tableland NFT: Rigs",
       meta: [
         { hid: "og-url", property: "og:url", content: `${this.$route.path}` },
         { hid: "og-type", property: "og:type", content: "website" },
         {
           hid: "og-title",
           property: "og:title",
-          content: "Rig #00" + this.rigId + " - The Tableland NFT: Rigs",
+          content: "Rig #" + this.rigId + " - The Tableland NFT: Rigs",
         },
         {
           hid: "og-sitename",
