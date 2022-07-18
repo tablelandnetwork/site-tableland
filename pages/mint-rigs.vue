@@ -344,7 +344,6 @@ export default {
         this.tokens = status.tokens || [];
         this.supply = status.supply || 0;
         this.claimed = status.claimed || { allowClaims: 0, waitClaims: 0 };
-
         this.rigs = await this.$store.dispatch("getRigsMetadata", {
           tokens: this.tokens,
         });

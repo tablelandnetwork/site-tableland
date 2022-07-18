@@ -114,7 +114,7 @@ export default {
   data() {
     return {
       menu: false,
-      address: undefined,
+      address: this.address,
       account: false,
     };
   },
@@ -130,6 +130,7 @@ export default {
   methods: {
     async connect() {
       const status = await this.$store.dispatch("getRigsStatus");
+      this.address = status.address;
       if (status) {
         this.address = status.address;
         this.rigs = await this.$store.dispatch("getRigsMetadata", {

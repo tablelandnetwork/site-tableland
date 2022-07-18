@@ -5,12 +5,7 @@
       :hrefs="nav.map((i) => i.href)"
       :targets="nav.map((i) => i.target)"
     />
-    <HeaderScrollNav
-      anchor=".choose"
-      :titles="nav.map((i) => i.title)"
-      :hrefs="nav.map((i) => i.href)"
-      :targets="nav.map((i) => i.target)"
-    />
+
     <!-- hero -->
     <section class="rigs-hero">
       <div
@@ -43,128 +38,10 @@
           </h1>
         </div>
 
-        <!-- Minting not open -->
-        <div
-          v-else-if="mintphase === 0"
-          class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
-        >
-          <h1
-            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
-          >
-            Each Rig is generated from 1,074 handcrafted works of art for the
-            builders and creatives of cyberspace. It's time to grab yours.
-          </h1>
-          <h1
-            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
-          >
-            Hey Tablelander! We haven't started minting yet!
-          </h1>
-        </div>
-
-        <!-- Sold out screen -->
-        <div
-          v-else-if="supply === 0"
-          class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
-        >
-          <h1
-            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
-          >
-            Each Rig is generated from 1,074 handcrafted works of art for the
-            builders and creatives of cyberspace. It's time to grab yours.
-          </h1>
-          <h1
-            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
-          >
-            Hey Tablelander! Looks like Rigs is sold out :( Check them out on
-            <a
-              href="https://opensea.io/collection/tableland-rigs"
-              target="_blank"
-              >OpenSea</a
-            >.
-          </h1>
-        </div>
-
-        <!-- Public mint phase screen -->
-        <div
-          v-else-if="mintphase === 3"
-          class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
-        >
-          <h1
-            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
-          >
-            Each Rig is generated from 1,074 handcrafted works of art for the
-            builders and creatives of cyberspace. It's time to grab yours.
-          </h1>
-          <h1
-            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
-          >
-            Hey Tablelander! Looks like there are {{ supply }} Rigs left to
-            mint.
-          </h1>
-        </div>
-
-        <!-- Allowlist and waitlist screen -->
-        <div
-          v-else-if="paidAllowance + freeAllowance > 0"
-          class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
-        >
-          <h1
-            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
-          >
-            Each Rig is generated from 1,074 handcrafted works of art for the
-            builders and creatives of cyberspace. It's time to grab yours.
-          </h1>
-          <h1
-            v-if="mintphase === 2 && claimed.allowClaims > 0"
-            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
-          >
-            Hey Tablelander! Looks like you already minted during the allowlist
-            phase.
-          </h1>
-          <h1
-            v-else
-            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
-          >
-            Hey Tablelander! There are {{ supply }} Rigs left to mint. Looks
-            like you can grab a total of
-            {{ paidAllowance + freeAllowance }} Rig(s) for 0.05E each + gas. If
-            you try to mint more than your total allowance you will
-            automatically be refunded.
-          </h1>
-        </div>
-
-        <!-- No allocation screen -->
-        <div
-          v-else
-          class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
-        >
-          <h1
-            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
-          >
-            Each Rig is generated from 1,074 handcrafted works of art for the
-            builders and creatives of cyberspace. It's time to grab yours.
-          </h1>
-          <h1
-            v-if="mintphase === 1"
-            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
-          >
-            Hey Friend! Looks like you don't have any allocations on the
-            allowlist. If you're on the waitlist, come back at 7AM UTC on July
-            18th for a 22 hour first come, first serve mint window. Public mint
-            starts on July 19th at 17:00 UTC.
-          </h1>
-          <h1
-            v-else
-            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
-          >
-            Hey Friend! Looks like you don't have any allocations on the
-            waitlist. Public mint starts on July 19th at 17:00 UTC.
-          </h1>
-        </div>
 
         <!-- Mint buttons -->
-        <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
-          <a v-if="!address" class="btn bg-black text-white" @click="connect">
+        <div v-if="!address" class="w-full px-6 pb-0 lg:pb-0 pt-0">
+          <a  class="btn bg-black text-white" @click="connect">
             <span class="flex">
               Connect Wallet
               <img
@@ -177,69 +54,39 @@
                 alt=""
               /> </span
           ></a>
-          <div
-            v-else-if="
-              supply > 0 &&
-              ((mintphase === 1 && paidAllowance + freeAllowance > 0) ||
-                (mintphase === 2 &&
-                  paidAllowance + freeAllowance > 0 &&
-                  claimed.allowClaims === 0) ||
-                mintphase === 3)
-            "
-          >
-            <a class="btn bg-black text-white" @click="mint">
-              <span class="flex">
-                Mint
-                <img
-                  src="~assets/img/arrow_white.png"
-                  srcset="
-                    ~assets/img/arrow_white.png    1x,
-                    ~assets/img/arrow_white@2x.png 2x
-                  "
-                  class="hidden sm:inline-block ml-4"
-                  alt=""
-                /> </span
-            ></a>
-            <input
-              v-model.number="quantity"
-              class="inline px-3 py-3 max-w-fit outline-none focus:outline-none bg-black text-white rounded-xl"
-              type="number"
-              min="1"
-              :max="paidAllowance + freeAllowance"
-            />
-          </div>
+
         </div>
+
+      </div>
+      <div
+        id="rig-garage"
+        class="flex flex-wrap py-0 px-0 md:px-12 lg:px-16 xl:px-36 rig-garage"
+        v-if="address"
+      >
+      <div v-for="(src, i) in rigs" :key="i">
+        <v-lazy-image
+          v-if="i < 20"
+          :style="{ minHeight: imageHeight }"
+          class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20"
+          :src="src"
+          @intersect="imageIntersect"
+          @load="imageLoad"
+        />
+        <v-lazy-image
+          v-else
+          :style="{ minHeight: imageHeight }"
+          class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20 choose"
+          :src="src"
+          @intersect="imageIntersect"
+          @load="imageLoad"
+        />
+      </div>
+        <p id="rig-message" class="px-0 text-xl" v-if="tokenBalance == '0'">
+          No rigs found! Visit the <a href="/minter/">mint a rig</a> page to
+          grab your first rig captain!
+        </p>
       </div>
     </section>
-    <div class="bg-solid">
-      <div
-        class="main min-h-screen container flex flex-col items-center p-8 text-sm"
-      >
-        <div
-          ref="grid"
-          class="w-full grid gap-4 grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
-        >
-          <div v-for="(src, i) in rigs" :key="i">
-            <v-lazy-image
-              v-if="i < 20"
-              :style="{ minHeight: imageHeight }"
-              class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20"
-              :src="src"
-              @intersect="imageIntersect"
-              @load="imageLoad"
-            />
-            <v-lazy-image
-              v-else
-              :style="{ minHeight: imageHeight }"
-              class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20 choose"
-              :src="src"
-              @intersect="imageIntersect"
-              @load="imageLoad"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
     <FooterNav />
   </div>
 </template>
@@ -256,7 +103,7 @@ export default {
       isLoading: false,
       mintphase: 0,
       supply: 0,
-      address: undefined,
+      address: this.address,
       quantity: 1,
       tokens: [],
       freeAllowance: 0,
@@ -324,10 +171,6 @@ export default {
     addEventListener("resize", this.resizeImages);
   },
 
-  mounted() {
-    this.resizeImages();
-  },
-
   destroyed() {
     removeEventListener("resize", this.resizeImages);
   },
@@ -366,12 +209,6 @@ export default {
       this.isLoading = false;
     },
 
-    resizeImages() {
-      const grid = getComputedStyle(this.$refs.grid);
-      this.imageHeight = grid
-        .getPropertyValue("grid-template-columns")
-        .split(" ")[0];
-    },
 
     imageIntersect() {
       // console.log('intersect detected');
