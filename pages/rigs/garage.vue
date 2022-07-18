@@ -52,20 +52,19 @@
         </div>
       </div>
       <div
-        id="rig-garage"
-        class="flex flex-wrap py-0 px-0 md:px-12 lg:px-24 xl:px-36 rig-garage"
         v-if="address"
+        id="rig-garage"  
+        class="flex flex-wrap py-0 px-0 md:px-12 lg:px-24 xl:px-36 rig-garage"
       >
         <div
-          class="lg:w-1/3 md:w-1/2 w-full px-3 py-3 rigs"
           v-for="(src, i) in rigs"
           :key="i"
+          class="lg:w-1/3 md:w-1/2 w-full px-3 py-3 rigs"
         >
           <a :href="'/rigs/' + src[0]">
             <div class="rig-frame">
               <v-lazy-image
                 v-if="i < 20"
-                :style="{ minHeight: imageHeight }"
                 class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20"
                 :src="src[3]"
                 @intersect="imageIntersect"
@@ -73,7 +72,6 @@
               />
               <v-lazy-image
                 v-else
-                :style="{ minHeight: imageHeight }"
                 class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20 choose"
                 :src="src[3]"
                 @intersect="imageIntersect"
@@ -85,27 +83,6 @@
             </h2>
           </a>
         </div>
-        <!-- <div v-for="(src, i) in rigs" :key="i">
-        <a href="/rigs/"
-        <v-lazy-image
-          v-if="i < 20"
-          :style="{ minHeight: imageHeight }"
-          class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20"
-          :src="src[3]"
-          @intersect="imageIntersect"
-          @load="imageLoad"
-        />
-        <v-lazy-image
-          v-else
-          :style="{ minHeight: imageHeight }"
-          class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20 choose"
-          :src="src[3]"
-          @intersect="imageIntersect"
-          @load="imageLoad"
-        />
-        {{src[0]}}
-
-      </div> -->
       </div>
     </section>
     <FooterNav />
@@ -125,7 +102,6 @@ export default {
       mintphase: 0,
       supply: 0,
       address: status.address,
-      tokens: undefined,
       quantity: 1,
       tokens: [],
       freeAllowance: 0,
@@ -191,6 +167,13 @@ export default {
   beforeMount() {
     this.rigsGarage();
   },
+  created() {
+    addEventListener("resize", this.resizeImages);
+  },
+
+  destroyed() {
+    removeEventListener("resize", this.resizeImages);
+  },
   methods: {
     async rigsGarage() {
       const status = await this.$store.dispatch("getRigsStatus");
@@ -228,13 +211,6 @@ export default {
     },
   },
 
-  created() {
-    addEventListener("resize", this.resizeImages);
-  },
-
-  destroyed() {
-    removeEventListener("resize", this.resizeImages);
-  },
 };
 </script>
 
