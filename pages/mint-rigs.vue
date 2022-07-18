@@ -61,6 +61,29 @@
           </h1>
         </div>
 
+        <!-- Sold out screen -->
+        <div
+          v-else-if="supply === 0"
+          class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
+        >
+          <h1
+            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
+          >
+            Each Rig is generated from 1,074 handcrafted works of art for the
+            builders and creatives of cyberspace. It's time to grab yours.
+          </h1>
+          <h1
+            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
+          >
+            Hey Tablelander! Looks like Rigs is sold out :( Check them out on
+            <a
+              href="https://opensea.io/collection/tableland-rigs"
+              target="_blank"
+              >OpenSea</a
+            >.
+          </h1>
+        </div>
+
         <!-- Public mint phase screen -->
         <div
           v-else-if="mintphase === 3"
@@ -73,22 +96,10 @@
             builders and creatives of cyberspace. It's time to grab yours.
           </h1>
           <h1
-            v-if="supply > 0"
             class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
           >
-            Hey Tablelander! Looks like there are {{ supply }} tokens left to
+            Hey Tablelander! Looks like there are {{ supply }} Rigs left to
             mint.
-          </h1>
-          <h1
-            v-else
-            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
-          >
-            Hey Tablelander! Looks like Rigs is sold out :( Check them out on
-            <a
-              href="https://opensea.io/collection/tableland-rigs"
-              target="_blank"
-              >OpenSea</a
-            >.
           </h1>
         </div>
 
@@ -104,9 +115,18 @@
             builders and creatives of cyberspace. It's time to grab yours.
           </h1>
           <h1
+            v-if="mintphase === 2 && claimed.allowClaims > 0"
             class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
           >
-            Hey Tablelander! Looks like you can grab a total of
+            Hey Tablelander! Looks like you already minted during the allowlist
+            phase.
+          </h1>
+          <h1
+            v-else
+            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
+          >
+            Hey Tablelander! There are {{ supply }} Rigs left to mint. Looks
+            like you can grab a total of
             {{ paidAllowance + freeAllowance }} Rig(s) for 0.05E each + gas. If
             you try to mint more than your total allowance you will
             automatically be refunded.
@@ -159,9 +179,12 @@
           ></a>
           <div
             v-else-if="
-              (mintphase === 1 && paidAllowance + freeAllowance > 0) ||
-              (mintphase === 2 && paidAllowance + freeAllowance > 0) ||
-              mintphase === 3
+              supply > 0 &&
+              ((mintphase === 1 && paidAllowance + freeAllowance > 0) ||
+                (mintphase === 2 &&
+                  paidAllowance + freeAllowance > 0 &&
+                  claimed.allowClaims === 0) ||
+                mintphase === 3)
             "
           >
             <a class="btn bg-black text-white" @click="mint">
@@ -239,6 +262,7 @@ export default {
       freeAllowance: 0,
       paidAllowance: 0,
       proof: [],
+      claimed: { allowClaims: 0, waitClaims: 0 },
       rigs: [],
       nav: [
         {
@@ -319,6 +343,7 @@ export default {
         this.proof = status.proof || [];
         this.tokens = status.tokens || [];
         this.supply = status.supply || 0;
+        this.claimed = status.claimed || { allowClaims: 0, waitClaims: 0 };
 
         this.rigs = await this.$store.dispatch("getRigsMetadata", {
           tokens: this.tokens,
