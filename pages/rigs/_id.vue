@@ -24,8 +24,9 @@
         <div class="flex px-6 xl:px-24 py-6 lg:py-12">
           <div class="lg:w-full minter-details">
             <div
-              class="flex flex-wrap py-0 lg:px-12 px-0"
               v-for="rig in rigsMeta[0]"
+              :key="rig"
+              class="flex flex-wrap py-0 lg:px-12 px-0"
               data-aos="fade-up"
             >
               <div class="w-full md:w-full lg:w-1/2">
@@ -44,8 +45,8 @@
                     {{ rig.attributes[7].value }}
                   </p>
                 </div>
-                <div class="minter-console" id="minter-console">
-                  <div class="text-white text-left" id="mint-log">
+                <div id="minter-console" class="minter-console">
+                  <div id="mint-log" class="text-white text-left">
                     <div id="mint-terminal" class="frame">
                       <div class="text-left">> Querying Rig #{{ rigId }}</div>
 
@@ -67,6 +68,7 @@
                         <div
                           class="xl:w-1/3 lg:w-1/2 w-1/2 px-0 py-2"
                           v-for="parts in rig.attributes"
+                          :key="parts"
                         >
                           <strong>{{ parts.trait_type }}</strong
                           ><br />
@@ -247,9 +249,7 @@ export default {
           options
         )
       ).json();
-
       this.rigsMeta = rigsFeed;
-      console.log(this.rigsMeta);
       rigsMeta = this.rigsMeta;
     },
   },

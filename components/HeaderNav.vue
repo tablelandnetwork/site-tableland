@@ -70,8 +70,8 @@
                   </li>
                   <li>
                     <a
-                      @click="disconnect"
                       class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      @click="disconnect"
                       >Disconnect</a
                     >
                   </li>
@@ -137,8 +137,6 @@ export default {
   methods: {
     async rigsConnect() {
       const status = await this.$store.dispatch("getRigsProvider");
-      this.provider = status.provider;
-      console.log(this.provider);
     },
     async connect() {
       const status = await this.$store.dispatch("getRigsStatus");
