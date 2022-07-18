@@ -42,24 +42,47 @@
           </div>
 
           <div class="flex flex-wrap py-0 rig-garage">
-           <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 sm:w-1/2 lg:px-3 lg:py-3 rigs my-2" v-for="rig in rigsMeta" v-show="currentFilter === 'ALL' || currentFilter === rig[0].attributes[4].value || currentFilter == rig[0].attributes[0].value">
-             <a :href="'/rigs/' + rig[0].name.replace('#', '')" >
-              <div class="rig-frame" :class="rig[0].attributes[0].value" >
-                <img :src="rig[0].thumb"/>
-              </div>
-            <h2 class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3">{{ rig[0].name }}</h2>
-
-            <div v-if="rig[0].attributes[0].value == '100'">
-              <p class="text-black px-3 py-0">Fleet: {{ rig[0].attributes[5].value }}  </p>
-              <p class="text-black px-3 lg:py-3 lg:pb-3 text-bold" :class="' rarity-' + rig[0].attributes[0].value">Original: {{ rig[0].attributes[4].value }} {{ rig[0].attributes[7].value }}</p>
+            <div
+              v-for="rigInfo in rigInfos"
+              v-show="
+                currentFilter === 'All' ||
+                rigInfo.fleet === currentFilter ||
+                rigInfo.percentOrig === currentFilter
+              "
+              :key="rigInfo.name"
+              class="
+                w-1/2
+                xl:w-1/4
+                lg:w-1/3
+                md:w-1/3
+                sm:w-1/2
+                lg:px-3 lg:py-3
+                rigs
+                my-2
+              "
+            >
+              <a :href="'/rigs/' + rigInfo.id">
+                <div class="rig-frame" :class="rigInfo.fleet">
+                  <img :src="rigInfo.thumbUrl" />
+                </div>
+                <h2 class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3">
+                  {{ rigInfo.name }}
+                </h2>
+                <div v-if="rigInfo.percentOrig === 100">
+                  <p class="text-black px-3 py-0">Fleet: {{ rigInfo.fleet }}</p>
+                  <p class="text-black px-3 lg:py-3 lg:pb-3 text-bold rarity-100">
+                    Original: {{ rigInfo.origColor }} {{ rigInfo.origName }}
+                  </p>
+                </div>
+                <div v-else>
+                  <p class="text-black px-3 py-0">Fleet: {{ rigInfo.fleet }}</p>
+                  <p class="text-black px-3 py-0">
+                    {{ rigInfo.percentOrig }}% original
+                  </p>
+                </div>
+              </a>
             </div>
-            <div v-else>
-              <p class="text-black px-3 py-0">Fleet: {{ rig[0].attributes[4].value }}</p>
-              <p class="text-black px-3 lg:py-3 lg:pb-3">Original: {{ rig[0].attributes[0].value}}%</p>
-            </div>
-            </a>
-           </div>
-         </div>
+          </div>
         </div>
       </div>
     </section>
@@ -145,7 +168,10 @@ export default {
       ],
     };
   },
-
+  beforeMount(){
+      this.loadRigs();
+      this.setFilter('ALL');
+  },
   methods: {
     addClass: function () {
       this.isAddClass = true;
@@ -153,19 +179,73 @@ export default {
     setFilter: function(filter) {
       this.currentFilter = filter;
     },
-    rigsMeta: async function() {
-      const options = {method: 'GET', headers: {Accept: 'application/json'}};
-      const rigsFeed =  await(await fetch('https://testnet.tableland.network/query?mode=rows&s=select%20json_object(%27name%27%2C%27%23%27%7C%7Cid%2C%27external_url%27%2C%27https%3A%2F%2Ftableland.xyz%2Frigs%2F%27%7C%7Cid%2C%27image%27%2Cimage%2C%27image_alpha%27%2Cimage_alpha%2C%27thumb%27%2Cthumb%2C%27thumb_alpha%27%2Cthumb_alpha%2C%27attributes%27%2Cjson_group_array(json_object(%27display_type%27%2Cdisplay_type%2C%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue)))%20from%20rigs_5_28%20join%20rig_attributes_5_27%20on%20rigs_5_28.id%3Drig_attributes_5_27.rig_id%20where%20id%20%3C%203000%20group%20by%20id%20order%20by%20id%3B', options)).json();
+    async loadRigs() {
+      const rigsTable = 'rigs_5_28';
+      const rigsAttrTable = 'rig_attributes_5_27';
 
-      this.rigsMeta = rigsFeed;
-      const rigsMeta = this.rigsMeta;
+      const baseUrl = `https://testnet.tableland.network/query?mode=json&s=`;
+      const query = `select json_object(
+        'name','#'||id,
+        'image',image,
+        'image_alpha',image_alpha,
+        'thumb',thumb,
+        'thumb_alpha',thumb_alpha,
+        'attributes',json_group_array(
+          json_object(
+            'display_type',display_type,
+            'trait_type',trait_type,
+            'value',value
+          )
+        )
+      ) as obj
+      from ${rigsTable}
+        join (select * from ${rigsAttrTable} order by rowid) as a
+          on ${rigsTable}.id=a.rig_id
+      group by ${rigsTable}.id`;
 
+      const url = baseUrl + encodeURIComponent(query);
+
+      const res = await fetch(url, {
+        method: "GET",
+        headers: { Accept: "application/json" },
+      });
+      const json = await res.json();
+      const mapped = json.map((item) => {
+        let percentOrig;
+        let fleet;
+        let origName;
+        let origColor;
+        for (const attr of item.obj.attributes) {
+          if (attr.trait_type === "Fleet") {
+            fleet = attr.value;
+          }
+          if (attr.trait_type === "% Original") {
+            percentOrig = attr.value;
+          }
+          if (attr.trait_type === "Name") {
+            origName = attr.value;
+          }
+          if (attr.trait_type === "Color") {
+            origColor = attr.value;
+          }
+        }
+        return {
+          id: item.obj.name.replace("#", ""),
+          name: item.obj.name,
+          thumbUrl: item.obj.thumb.replace(
+            "ipfs://",
+            this.$config.ipfsGatewayURL + "/ipfs/"
+          ),
+          percentOrig,
+          fleet,
+          origName,
+          origColor,
+        };
+      });
+      this.rigInfos = mapped;
     },
   },
-  beforeMount(){
-      this.rigsMeta();
-      this.setFilter('ALL');
-  },
+
   data() {
     const now = new Date();
     const launchDate = new Date(2022, 4, 31, 0, 0);
@@ -175,6 +255,7 @@ export default {
       time: launchDate - now,
       isAddClass: false,
       useWallet: true,
+      rigInfos: [],
       nav: [
         {
           title: "Discord",
