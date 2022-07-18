@@ -7,7 +7,6 @@ import { TablelandRigs, TablelandRigs__factory } from "@tableland/rigs";
 import { deployments } from "@tableland/rigs/deployments";
 import { MerkleTree } from "merkletreejs";
 import keccak256 from "keccak256";
-import { token } from "@tableland/rigs/typechain-types/@openzeppelin/contracts";
 
 export const state = function () {
   return {
@@ -151,6 +150,8 @@ const getRigsStatus = (function () {
     console.info("mint phase:", mintphase);
     const tokens = await rigs.tokensOfOwner(address);
     console.info("address has:", tokens.length);
+    const claimed = await rigs.getClaimed(address);
+    console.info("address claimed:", claimed.allowClaims, claimed.waitClaims);
     const minted = await rigs.totalSupply();
     const max = await rigs.maxSupply();
     const supply = max.toNumber() - minted.toNumber();
@@ -158,7 +159,7 @@ const getRigsStatus = (function () {
 
     switch (mintphase) {
       case 0:
-        return { mintphase };
+        return { mintphase, supply };
       case 1:
       case 2:
         const tbl = await connect({
@@ -172,21 +173,21 @@ const getRigsStatus = (function () {
           } where lower(address)='${address.toLowerCase()}' and waitlist=${useWaitlist}`
         );
         if (entryRes.rows && entryRes.rows.length === 0) {
-          return { mintphase, tokens, supply };
+          return { mintphase, tokens, supply, claimed };
         }
         const entry = entryRes.rows[0];
-        console.info("user entry:", entry);
+        console.info("address entry:", entry);
 
         const list = await tbl.read(
           `select * from ${rigsDeployment.allowlistTable} where waitlist=${useWaitlist}`
         );
         const tree = buildTree(list.rows || []);
         const proof = tree.getHexProof(hashEntry(entry));
-        console.info("user proof:", proof);
+        console.info("address proof:", proof);
 
-        return { mintphase, tokens, supply, entry, proof };
+        return { mintphase, tokens, supply, entry, proof, claimed };
       default:
-        return { mintphase, tokens, supply };
+        return { mintphase, tokens, supply, claimed };
     }
   };
 })();
@@ -241,7 +242,7 @@ const getRigsMetadata = (function () {
       chain: "ethereum-goerli",
     } as ConnectOptions);
     const entryRes = await tbl.read(
-      `select thumb from rigs_5_28 where id in (${tokens})`
+      `select thumb from ${rigsDeployment.tokensTable} where id in (${tokens})`
     );
     if (!entryRes.rows || entryRes.rows.length === 0) {
       return [];
