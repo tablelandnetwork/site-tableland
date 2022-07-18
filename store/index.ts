@@ -242,13 +242,13 @@ const getRigsMetadata = (function () {
       chain: "ethereum-goerli",
     } as ConnectOptions);
     const entryRes = await tbl.read(
-      `select thumb from ${rigsDeployment.tokensTable} where id in (${tokens})`
+      `select * from ${rigsDeployment.tokensTable} where id in (${tokens})`
     );
     if (!entryRes.rows || entryRes.rows.length === 0) {
       return [];
     }
     return entryRes.rows.map((r: any) => {
-      return r[0];
+      return r;
     });
   };
 })();

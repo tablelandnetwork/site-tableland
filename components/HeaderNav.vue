@@ -127,7 +127,14 @@ export default {
       }
     },
   },
+  beforeMount(){
+    this.rigsGarage();
+  },
   methods: {
+    async rigsGarage() {
+      const status = await this.$store.dispatch("getRigsStatus");
+      this.address = status.address;
+    },
     async connect() {
       const status = await this.$store.dispatch("getRigsStatus");
       this.address = status.address;

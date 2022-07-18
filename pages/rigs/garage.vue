@@ -16,7 +16,7 @@
             <h1
               class="text-white w-full h-auto font-Orbitron text-5xl lg:text-6xl xl:text-7xl leading-tighter"
             >
-              Mint <span class="font-black">Rigs</span>
+              Your <span class="font-black">Garage</span>
             </h1>
           </div>
         </div>
@@ -25,21 +25,7 @@
         class="container px-0 sm:px-6 md:px-12 pt-0 lg:pt-0 pb-24"
         data-aos="fade-up"
       >
-        <!-- Default screen before connecting wallet -->
-        <div
-          v-if="!address"
-          class="w-full md:w-full lg:w-1/2 xl:w-1/2 px-6 pb-0 lg:pb-0 pt-0"
-        >
-          <h1
-            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
-          >
-            Each Rig is generated from 1,074 handcrafted works of art for the
-            builders and creatives of cyberspace. It's time to grab yours.
-          </h1>
-        </div>
-
-
-        <!-- Mint buttons -->
+        <!-- Connect buttons -->
         <div v-if="!address" class="w-full px-6 pb-0 lg:pb-0 pt-0">
           <a  class="btn bg-black text-white" @click="connect">
             <span class="flex">
@@ -64,11 +50,12 @@
         v-if="address"
       >
       <div v-for="(src, i) in rigs" :key="i">
+        <a href="/rigs/"
         <v-lazy-image
           v-if="i < 20"
           :style="{ minHeight: imageHeight }"
           class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20"
-          :src="src"
+          :src="src[3]"
           @intersect="imageIntersect"
           @load="imageLoad"
         />
@@ -76,15 +63,14 @@
           v-else
           :style="{ minHeight: imageHeight }"
           class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20 choose"
-          :src="src"
+          :src="src[3]"
           @intersect="imageIntersect"
           @load="imageLoad"
         />
+        {{src[0]}}
+        
       </div>
-        <p id="rig-message" class="px-0 text-xl" v-if="tokenBalance == '0'">
-          No rigs found! Visit the <a href="/minter/">mint a rig</a> page to
-          grab your first rig captain!
-        </p>
+
       </div>
     </section>
     <FooterNav />
@@ -103,7 +89,7 @@ export default {
       isLoading: false,
       mintphase: 0,
       supply: 0,
-      address: this.address,
+      address: undefined,
       quantity: 1,
       tokens: [],
       freeAllowance: 0,
@@ -166,18 +152,13 @@ export default {
       ],
     };
   },
-
-  created() {
-    addEventListener("resize", this.resizeImages);
+  beforeMount(){
+    this.rigsGarage();
   },
-
-  destroyed() {
-    removeEventListener("resize", this.resizeImages);
-  },
-
   methods: {
-    async connect() {
+    async rigsGarage() {
       const status = await this.$store.dispatch("getRigsStatus");
+      this.address = status.address;
       if (status) {
         this.address = status.address;
         this.mintphase = status.mintphase || 0;
@@ -187,29 +168,21 @@ export default {
         this.tokens = status.tokens || [];
         this.supply = status.supply || 0;
         this.claimed = status.claimed || { allowClaims: 0, waitClaims: 0 };
+        this.rigs = await this.$store.dispatch("getRigsMetadata", {
+          tokens: this.tokens,
+        });
+      }
+    },
+    async connect() {
+      const status = await this.$store.dispatch("getRigsStatus");
+      if (status) {
+        this.address = status.address;
 
         this.rigs = await this.$store.dispatch("getRigsMetadata", {
           tokens: this.tokens,
         });
       }
     },
-
-    async mint() {
-      this.isLoading = true;
-      await this.$store.dispatch("mintRigs", {
-        quantity: this.quantity,
-        freeAllowance: this.freeAllowance,
-        paidAllowance: this.paidAllowance,
-        proof: this.proof,
-      });
-
-      this.rigs = await this.$store.dispatch("getRigsMetadata", {
-        tokens: this.tokens,
-      });
-      this.isLoading = false;
-    },
-
-
     imageIntersect() {
       // console.log('intersect detected');
     },
@@ -218,6 +191,16 @@ export default {
       // console.log('image loaded');
     },
   },
+
+  created() {
+    addEventListener("resize", this.resizeImages);
+  },
+
+  destroyed() {
+    removeEventListener("resize", this.resizeImages);
+  },
+
+
 };
 </script>
 
