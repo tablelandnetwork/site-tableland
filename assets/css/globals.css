@@ -91,9 +91,11 @@ nav li a {
 }
 
 nav li a:hover,
-nav li a:active {
+nav li a:active,
+.nav-bar button:hover {
   text-decoration: underline;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .mobile-nav {
@@ -137,7 +139,6 @@ nav li a:active {
 }
 
 .btn:hover {
-  /* color: #000!important; */
   background-color: #0be291 !important;
   transition: all 0.2s ease-in-out;
 }
@@ -314,14 +315,13 @@ nav li a:active {
   bottom: -57px;
   left: 0;
   right: 0;
-  display: none;
 }
 
 /** showcase **/
 .showcase {
   background-color: #141034;
   color: #6067eb !important;
-  position: relative;
+  min-height: 650px;
 }
 
 .showcase .btn {
@@ -337,8 +337,7 @@ footer {
   position: absolute;
   background: center / cover no-repeat url("~assets/img/break_footer.svg");
   height: 184px;
-  top: -184px;
-  width: 100%;
+  top: -200px;
 }
 
 /** cohort  **/
@@ -355,6 +354,15 @@ footer {
   overflow: hidden;
 }
 
+.mint-page .story {
+  min-height: 100vh;
+}
+
+.mint-page .animated-carousel {
+  z-index: 0;
+  position: relative;
+}
+
 /** sander additions **/
 .rigs-hero {
   background: transparent;
@@ -367,14 +375,17 @@ footer {
   min-height: 50vh;
 }
 
-.mint-rigs .rigs-hero {
-  min-height: 80vh;
-}
-
 .rigs-hero-top {
   width: 100%;
-  background-color: #815691;
-  opacity: 0.5;
+  height: 100vh;
+  background-image: linear-gradient(
+    180deg,
+    rgb(129 86 145),
+    rgba(129, 86, 145, 0)
+  );
+  opacity: 0.75;
+  top: 0;
+  z-index: 0;
   position: absolute;
 }
 
@@ -499,14 +510,7 @@ a.btn {
   height: auto;
   min-height: 100vh;
   width: 100%;
-}
-
-.minting-top {
-  width: 100%;
-  height: 400px;
-  background-color: #815691;
-  opacity: 0.5;
-  position: absolute;
+  background-image: linear-gradient(0deg, rgba(255, 0, 0, 0), #b176a2);
 }
 
 .minting .vehicle img {
@@ -541,50 +545,206 @@ a.btn {
   margin-top: -200px;
 }
 
+.info .vehicle img {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
 .info video {
   border-radius: 50px;
   overflow: hidden;
 }
 
 .minter {
-  background: left -1400px / 100% no-repeat url("~assets/img/guild-list.jpg");
-  background-color: #ff9675;
-  height: 40vh;
+  height: 250px;
   width: 100vw;
   max-width: 100% !important;
 }
 
+input {
+  background: transparent;
+  outline: 0;
+  border-bottom: 0px;
+}
+
+input.quantity,
+select.quantity {
+  max-width: 110px;
+  width: 100%;
+  background: transparent;
+}
+
+select.quantity:focus {
+  outline: 0;
+  border-bottom: 2px solid black;
+}
+
+input::placeholder {
+  color: white;
+}
+
+input.quantity:focus {
+  border-bottom: 2px solid black;
+  outline: 0;
+  transition: border 0.2s ease-in-out;
+}
+
 .minted {
-  background: left -500px / cover no-repeat url("~assets/img/cohort.png") !important;
-  background-color: #ff9675;
   height: 80vh;
   width: 100vw;
   max-width: 100% !important;
 }
 
-.user-garage {
-  background: left -500px / cover no-repeat url("~assets/img/cohort.png") !important;
-  background-color: #ff9675;
+.rig-id {
   height: auto;
-  min-height: 50vh;
   width: 100vw;
   max-width: 100% !important;
 }
 
-.rigs a img {
+.rig-id .container {
+  max-width: 100%;
+}
+
+.rig-id .rarity-100 {
+  margin: 10px 0px;
+}
+
+.user-garage {
+  height: auto;
+  min-height: 140px;
+  width: 100vw;
+  max-width: 100% !important;
+}
+
+.rig-gallery {
+  height: auto;
+  min-height: 140px;
+  width: 100vw;
+  max-width: 100% !important;
+}
+
+.rigs {
+  animation: 1s fadeIn;
+}
+
+.rigs a {
+  text-decoration: none;
+}
+
+.rigs a .rig-frame {
   transition: all 0.2s ease-in-out;
 }
 
-.rigs a:hover img {
+.rigs a:hover .rig-frame {
   transform: translatey(-20px) !important;
   transition: all 0.2s ease-in-out;
 }
 
 .minter-break {
-  position: relative;
+  position: absolute;
   background: center / cover no-repeat url("~assets/img/break_footer.svg");
   height: 184px;
-  top: -200px;
+  top: -100px;
+}
+
+.part-frame .carousel {
+  height: 250px;
+}
+
+.mint .carousel > *:nth-child(1) {
+  animation: fade1 0.5s infinite;
+}
+.mint .carousel > *:nth-child(2) {
+  animation: fade2 0.5s infinite;
+}
+.mint .carousel > *:nth-child(3) {
+  animation: fade3 0.5s infinite;
+}
+.mint .carousel > *:nth-child(4) {
+  animation: fade4 0.5s infinite;
+}
+.mint .carousel > *:nth-child(5) {
+  animation: fade5 0.5s infinite;
+}
+
+.part-result {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 60px 40px;
+  width: 250px;
+  height: 300px;
+  display: inline-block;
+  opacity: 0;
+}
+
+.part-result.active {
+  animation: minter 1s ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.btn-mint {
+  background: #ff5b7a !important;
+  width: 100%;
+  text-align: center;
+}
+
+.minter-console .bg-black {
+  background: #1c73e2;
+}
+
+.minter-console {
+  color: #12ffa6 !important;
+  position: relative;
+}
+
+.price-box {
+  overflow: hidden;
+  width: 120px;
+}
+
+.price-box span {
+  width: 155px;
+}
+
+#mint-log {
+  height: 450px;
+  background: #fff;
+  position: absolute;
+  top: 16px;
+  width: 100%;
+  z-index: 998;
+  color: black;
+  border-radius: 10px;
+  font-family: monospace;
+  text-align: left;
+  padding: 20px;
+  transition: all 0.2s ease-in-out;
+  overflow: scroll;
+  word-wrap: break-word;
+}
+
+#mint-log .frame {
+  animation: typing 2.5s steps(40, end);
+  overflow-y: hidden;
+  overflow-x: scroll;
+  word-break: break-all;
+  font-size: 14px;
+  /* max-height: 400px; */
+}
+
+#mint-log .original-text {
+  display: none;
+}
+
+#mint-log .rarity-100 {
+  margin: 10px 0px;
+  padding: 10px;
+}
+
+#mint-log .rarity-100 .original-text {
+  display: block;
 }
 
 /* The typing effect */
@@ -595,6 +755,84 @@ a.btn {
   to {
     height: 100%;
   }
+}
+
+.part-frame {
+  width: 250px;
+  height: 300px;
+  display: inline-block;
+  margin: 20px;
+  padding: 80px 60px;
+  margin-top: -100px;
+}
+
+.rig-result {
+  background: transparent;
+  margin-top: -500px;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+  opacity: 0;
+  z-index: -999;
+  display: none;
+  position: absolute;
+}
+
+.rig-result .rig-frame {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  animation: none;
+  -webkit-animation: none;
+}
+
+.rig-result .btn {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 40px 10px;
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+
+.rig-btn {
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.rig-result.active {
+  animation: result 0.5s linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1.25s;
+  z-index: 999;
+  display: block;
+}
+
+.minter-details.active,
+.minter-console.active,
+.minter-title.active {
+  animation: fadeInDown 0.1s linear;
+  animation-delay: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.rig-garage .rig-frame {
+  width: 100%;
+  height: auto;
+  animation: none;
+}
+
+.rig-gallery .rig-frame {
+  /* border-radius: 25px; */
+  height: auto;
+}
+
+.rig-gallery .rig-frame img {
+  /* border-radius: 25px; */
 }
 
 .halo1 {
@@ -631,8 +869,7 @@ a.btn {
 
 .filters .active,
 .filters button:hover {
-  background: #ff6667;
-  color: #232041;
+  text-decoration: underline;
 }
 
 /** rig **/
@@ -719,20 +956,66 @@ a.btn {
   right: -70px;
 }
 
+.rig-id .rig-frame {
+  width: 100%;
+  animation: none;
+}
+
+.rig-id #mint-log {
+  position: relative;
+  top: 10px;
+}
+
+.rig-box .rig-frame {
+  width: 500px;
+}
+
+#rig-box {
+  margin: auto;
+  max-width: 1280px;
+}
+
+#rig-box #mint-log {
+  height: 480px;
+  top: 10px;
+  position: relative;
+}
+
 .rig-frame {
   width: 750px;
-  height: 750px;
-  background-image: linear-gradient(180deg, #b2d1fc 0%, #dd6c90 100%);
-  border-radius: 50px;
-  overflow: hidden;
+  max-width: 100%;
+  height: auto;
   padding: 10px;
-  margin: 40px auto;
-  animation: float 10s ease-in-out infinite;
+  margin: 0px auto;
+  z-index: 998;
+  position: relative;
 }
 
 .rig-frame img {
-  border-radius: 50px;
+  border-radius: 0.5rem;
 }
+
+.rarity-100 {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 1s linear infinite;
+  color: white;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/*
+.Airelights {
+  background-image: linear-gradient(180deg, #b2d1fc 0%, #dd6c90 100%);
+}
+
+.Sleds {
+  background-image: linear-gradient(180deg, #f1ff68 0%, #6fb0c2 100%);
+}
+
+.Titans {
+  background-image: linear-gradient(180deg, #687fff 0%, #aa6fc2 100%);
+} */
 
 /** guilds **/
 .guild {
@@ -857,7 +1140,7 @@ a.btn {
 }
 
 .progress {
-  animation: fadeOutDown 1s ease-in-out;
+  /* animation: fadeOutDown 1s ease-in-out; */
   margin-top: -80px;
   display: block;
 }
@@ -872,14 +1155,23 @@ a.btn {
 
 /** animations  **/
 
-@keyframes fadeOutDown {
+@keyframes fadeIn {
   0% {
     opacity: 0;
-    transform: translateY(100px);
   }
   100% {
     opacity: 1;
-    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeOutDown {
+  0% {
+    opacity: 0;
+    /* transform: translateY(100px); */
+  }
+  100% {
+    opacity: 1;
+    /* transform: translateY(0px); */
   }
 }
 
@@ -914,7 +1206,7 @@ a.btn {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 12));
+    transform: translateX(calc(-200px * 12));
   }
 }
 
@@ -1009,6 +1301,7 @@ a.btn {
 @keyframes result {
   0% {
     opacity: 0;
+    position: relative;
   }
 
   30% {
@@ -1028,20 +1321,29 @@ a.btn {
     transform: scale(1);
     opacity: 1;
     transform: translatey(0px) rotate(0deg);
+    position: relative;
   }
 }
 
 @keyframes colorchange {
+  from {
+    background: linear-gradient(180deg, #b2d1fc 0%, #dd6c90 100%);
+  }
+
+  to {
+    background: linear-gradient(180deg, #f1ff68 0%, #6fb0c2 100%);
+  }
+}
+
+@keyframes gradient {
   0% {
-    filter: hue-rotate(0);
+    background-position: 0% 50%;
   }
-
   50% {
-    filter: hue-rotate(180);
+    background-position: 100% 50%;
   }
-
   100% {
-    filter: hue-rotate(270);
+    background-position: 0% 50%;
   }
 }
 
@@ -1061,7 +1363,6 @@ a.btn {
 .ship.aos-init.aos-animate {
   bottom: -700px !important;
   transition: all 0.8s ease-in-out;
-  z-index: 2;
 }
 
 .animated-carousel div {
@@ -1073,23 +1374,23 @@ a.btn {
 }
 
 .animated-carousel.progress div {
-  animation: slide 1s linear infinite;
+  animation: slide 0.5s linear infinite;
   transition: all 1s ease-in-out;
 }
 
 .animated-carousel.mint {
   animation: fadeInDown 1s ease-in-out;
-  animation-delay: 1.5s;
+  animation-delay: 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   transition: all 1s ease-in-out;
 }
 
-.animated-carousel.mint div {
-  animation: slide-slow 1s ease-in-out infinite;
+/* .animated-carousel.mint div {
+  animation: slide-slow 0.25s ease-in-out infinite;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-}
+} */
 
 .animated-carousel.mint .a1 {
   animation: a1 2s ease-in-out;
@@ -1110,7 +1411,7 @@ a.btn {
   display: flex;
   height: 350px;
   margin-bottom: 30px !important;
-  width: calc(250px * 17);
+  width: calc(250px * 24);
   margin-left: -10% !important;
   margin-right: -10% !important;
   margin: 0 auto;
@@ -1120,6 +1421,7 @@ a.btn {
   margin: 0px !important;
   min-width: 350px;
   margin-left: 0px !important;
+  z-index: 999;
 }
 
 .carousel {
@@ -1272,6 +1574,64 @@ a.btn {
   animation-delay: 3.75s !important;
 }
 
+/* rig gallery filters */
+/*  Needed for filters */
+
+.hide {
+  /* You can play with the seconds to change the "animation" */
+  animation: hide 0.5s ease 0s 1 normal forwards;
+  transform-origin: center;
+}
+.show {
+  /* You can play with the seconds to change the "animation" */
+  animation: show 0.5s ease 0s 1 normal forwards;
+  transform-origin: center;
+}
+
+@keyframes hide {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+}
+@keyframes show {
+  0% {
+    transform: scale(0);
+    width: 0;
+    height: 0;
+    margin: 0;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* rig gallery filters */
+
+.filters {
+  margin: 20px;
+}
+
+.filter {
+  margin: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.filter:nth-child(1) {
+  margin-left: 0px;
+}
+
+.filter:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
+
 /* accordion */
 .tabs {
   border-radius: 10px;
@@ -1358,6 +1718,42 @@ input:checked ~ .tab-content {
   outline: 0;
 }
 
+.mobile-nav {
+  background-color: #815691;
+  transition: all 0.2s ease-in-out;
+  z-index: 9999;
+  color: white;
+  height: 100vh;
+}
+
+.mobile-enter-active {
+  animation: bounce-in 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+.mobile-leave-active {
+  animation: bounce-in 0.5s reverse;
+}
+
+.mobile-enter-active li,
+.mobile-enter-active h1 {
+  animation: fadeIn 1.5s ease-in-out;
+}
+.mobile-leave-active li,
+.mobile-enter-active h1 {
+  animation: fadeIn 0.5s reverse;
+}
+
+@keyframes bounce-in {
+  0% {
+    height: 0px;
+    transition: all 0.2s ease-in-out;
+  }
+  100% {
+    height: 100vh;
+    transition: height 0.2s ease-in-out;
+  }
+}
+
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .hero {
     background-image: url("~assets/img/hero@2x.jpg");
@@ -1366,12 +1762,16 @@ input:checked ~ .tab-content {
 }
 
 @media (max-width: 1480px) {
+  nav .btn,
+  nav li a {
+    font-size: 1em;
+  }
   .guild-list .vehicle {
     max-width: 250px !important;
     margin: 0px !important;
   }
   .hero-btn {
-    /* margin-bottom: 14rem !important; */
+    margin-bottom: 14rem !important;
   }
   .cohort {
     background: left 0px / 180% no-repeat url("~assets/img/cohort.png") !important;
@@ -1386,9 +1786,12 @@ input:checked ~ .tab-content {
   }
 }
 
+@media (min-width: 2140px) {
+}
+
 @media (max-width: 1640px) {
   .hero-btn {
-    /* margin-bottom: 14rem !important; */
+    margin-bottom: 14rem !important;
   }
   .guild-list .vehicle {
     max-width: 300px !important;
@@ -1397,11 +1800,26 @@ input:checked ~ .tab-content {
 
 @media (min-width: 1760px) {
   .hero-btn {
-    /* margin-bottom: 14rem !important; */
+    margin-bottom: 14rem !important;
   }
 }
 
 @media (max-width: 1080px) {
+  .rig-gallery .rigs p {
+    font-size: 0.9em;
+  }
+  .rig-id .rig-frame {
+    padding: 10px 0px;
+  }
+  .rig-box .rig-frame {
+    padding: 0px 10px;
+  }
+  .rig-result {
+    margin-top: -450px;
+  }
+  .rig-result .btn {
+    margin: 10px 0px;
+  }
   .animated-carousel {
     margin-left: 0 !important;
     margin-right: 0 !important;
@@ -1434,11 +1852,17 @@ input:checked ~ .tab-content {
     border-radius: 20px;
   }
   .hero-btn {
-    /* margin-bottom: 14rem !important; */
+    margin-bottom: 14rem !important;
   }
 }
 
 @media (max-width: 720px) {
+  .filters {
+    display: none;
+  }
+  .minter {
+    height: 200px;
+  }
   .logo {
     max-width: 160px;
   }
@@ -1452,7 +1876,7 @@ input:checked ~ .tab-content {
     font-size: 0.75em;
   }
   .hero-btn {
-    /* margin-bottom: 14rem !important; */
+    margin-bottom: 14rem !important;
   }
   .cohort {
     background: left 100px / 250% no-repeat url(/_nuxt/assets/img/cohort.png) !important;
@@ -1461,8 +1885,8 @@ input:checked ~ .tab-content {
   }
 
   .btn {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .guild-list .vehicle {

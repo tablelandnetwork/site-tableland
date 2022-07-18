@@ -59,7 +59,7 @@
 
                       </div>
                     </div>
-                    <div class="w-full px-0 pt-6 lg:pt-18">
+                    <div class="w-full px-0 pt-6 lg:pt-6">
                       <a
                         class="btn btn-mint text-white"
                         :href="
@@ -154,9 +154,7 @@ export default {
   data: function () {
     return {
       rigId: this.$route.params.id,
-      provider: window.ethereum,
       rigsMeta: this.rigsMeta,
-      totalSupply: this.$wallet.totalSupply,
       nav: [
         {
           title: "Gallery",
@@ -207,9 +205,6 @@ export default {
   },
 
   beforeMount() {
-    if (this.provider) {
-      this.$wallet.rigId = this.rigId;
-    };
     this.rigsMeta()
   },
 
@@ -219,10 +214,6 @@ export default {
     },
     rigsMeta: async function() {
       const options = {method: 'GET', headers: {Accept: 'application/json'}};
-
-      const rigSupply = await(await fetch('https://api.looksrare.org/api/v1/collections/stats?address=0x8EAa9AE1Ac89B1c8C8a8104D08C045f78Aadb42D')).json();
-      const totalSupply = rigSupply.data.totalSupply;
-
       const rigsFeed =  await(await fetch('https://testnet.tableland.network/query?mode=rows&s=select%20json_object(%27name%27%2C%27%23%27%7C%7Cid%2C%27external_url%27%2C%27https%3A%2F%2Ftableland.xyz%2Frigs%2F%27%7C%7Cid%2C%27image%27%2Cimage%2C%27image_alpha%27%2Cimage_alpha%2C%27thumb%27%2Cthumb%2C%27thumb_alpha%27%2Cthumb_alpha%2C%27attributes%27%2Cjson_group_array(json_object(%27display_type%27%2Cdisplay_type%2C%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue)))%20from%20rigs_5_28%20join%20rig_attributes_5_27%20on%20rigs_5_28.id%3Drig_attributes_5_27.rig_id%20where%20id%3D' + this.rigId + '%20group%20by%20id%3B', options)).json();
 
       this.rigsMeta = rigsFeed;
