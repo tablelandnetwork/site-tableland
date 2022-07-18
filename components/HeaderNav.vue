@@ -49,7 +49,11 @@
                 class="btn bg-white text-white w-50 text-center"
                 @click="account = !account"
               >
-                <strong>{{address.substring(0, 5)}}...{{address.substring(address.length - 4)}}</strong>
+                <strong
+                  >{{ address.substring(0, 5) }}...{{
+                    address.substring(address.length - 4)
+                  }}</strong
+                >
               </a>
               <div
                 v-if="account"
@@ -127,14 +131,14 @@ export default {
       }
     },
   },
-  beforeMount(){
+  beforeMount() {
     // this.rigsConnect();
   },
   methods: {
     async rigsConnect() {
-        const status = await this.$store.dispatch("getRigsProvider");
-        this.provider = status.provider;
-        console.log(this.provider)
+      const status = await this.$store.dispatch("getRigsProvider");
+      this.provider = status.provider;
+      console.log(this.provider);
     },
     async connect() {
       const status = await this.$store.dispatch("getRigsStatus");
@@ -148,9 +152,8 @@ export default {
     },
     disconnect() {
       this.address = undefined;
-      window.localStorage.removeItem('provider');
-
-    }
+      window.localStorage.removeItem("provider");
+    },
   },
 };
 </script>

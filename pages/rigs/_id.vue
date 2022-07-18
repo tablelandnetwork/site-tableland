@@ -23,68 +23,84 @@
 
         <div class="flex px-6 xl:px-24 py-6 lg:py-12">
           <div class="lg:w-full minter-details">
-              <div
-                class="flex flex-wrap py-0 lg:px-12 px-0"
-                v-for="rig in rigsMeta[0]"
-                data-aos="fade-up"
-              >
+            <div
+              class="flex flex-wrap py-0 lg:px-12 px-0"
+              v-for="rig in rigsMeta[0]"
+              data-aos="fade-up"
+            >
+              <div class="w-full md:w-full lg:w-1/2">
+                <div class="rig-frame">
+                  <img :src="rig.image" />
+                </div>
+              </div>
 
-                  <div class="w-full md:w-full lg:w-1/2">
-                    <div class="rig-frame">
-                      <img :src="rig.image" />
-                    </div>
-                  </div>
+              <div class="w-full md:w-full lg:w-1/2 lg:px-12">
+                <div v-if="rig.attributes[0].value == '100'">
+                  <p
+                    class="text-black px-3 py-3 pb-3 text-bold"
+                    :class="' rarity-' + rig.attributes[0].value"
+                  >
+                    Original: {{ rig.attributes[4].value }}
+                    {{ rig.attributes[7].value }}
+                  </p>
+                </div>
+                <div class="minter-console" id="minter-console">
+                  <div class="text-white text-left" id="mint-log">
+                    <div id="mint-terminal" class="frame">
+                      <div class="text-left">> Querying Rig #{{ rigId }}</div>
 
-                  <div class="w-full md:w-full lg:w-1/2 lg:px-12">
-                    <div v-if="rig.attributes[0].value == '100'">
-                      <p class="text-black px-3 py-3 pb-3 text-bold" :class="' rarity-' + rig.attributes[0].value">Original: {{ rig.attributes[4].value }} {{ rig.attributes[7].value }}</p>
-                    </div>
-                  <div class="minter-console" id="minter-console">
-                    <div class="text-white text-left" id="mint-log">
-                      <div id="mint-terminal" class="frame">
+                      <div id="rig-owner"></div>
+                      <br />
+                      <div class="text-left">
+                        <p>
+                          tableland> SELECT * FROM rig_parts WHERE fleet =
+                          '<strong v-if="rig.attributes[0].value == '100'">{{
+                            rig.attributes[5].value
+                          }}</strong
+                          ><strong v-else>{{ rig.attributes[4].value }}</strong
+                          >';
+                        </p>
+                      </div>
+                      <br />
 
-                            <div class="text-left">> Querying Rig #{{rigId}}</div>
-
-                            <div id="rig-owner"></div><br>
-                            <div class="text-left"><p>tableland> SELECT * FROM rig_parts WHERE fleet = '<strong v-if="rig.attributes[0].value == '100'">{{ rig.attributes[5].value }}</strong><strong v-else>{{ rig.attributes[4].value }}</strong>';</p></div><br>
-
-                            <div class="flex flex-wrap" >
-                              <div class="xl:w-1/3 lg:w-1/2 w-1/2 px-0 py-2" v-for="parts in rig.attributes">
-                              <strong>{{ parts.trait_type }}</strong><br>
-                              -------------<br>
-                              {{ parts.value }}
-                            </div>
-                            </div>
-
-
+                      <div class="flex flex-wrap">
+                        <div
+                          class="xl:w-1/3 lg:w-1/2 w-1/2 px-0 py-2"
+                          v-for="parts in rig.attributes"
+                        >
+                          <strong>{{ parts.trait_type }}</strong
+                          ><br />
+                          -------------<br />
+                          {{ parts.value }}
+                        </div>
                       </div>
                     </div>
-                    <div class="w-full px-0 pt-6 lg:pt-6">
-                      <a
-                        class="btn btn-mint text-white"
-                        :href="
-                          'https://opensea.io/assets/ethereum/0x8eaa9ae1ac89b1c8c8a8104d08c045f78aadb42d/' +
-                          rigId
-                        "
-                        >VIEW ON OPENSEA</a
-                      >
-                    </div>
-                    <div class="w-full px-0 py-2">
-                      <a
-                        class="btn btn-mint text-white"
-                        :href="
-                          'https://looksrare.org/collections/0x8EAa9AE1Ac89B1c8C8a8104D08C045f78Aadb42D/' +
-                          rigId
-                        "
-                        >VIEW ON LOOKSRARE</a
-                      >
-                    </div>
+                  </div>
+                  <div class="w-full px-0 pt-6 lg:pt-6">
+                    <a
+                      class="btn btn-mint text-white"
+                      :href="
+                        'https://opensea.io/assets/ethereum/0x8eaa9ae1ac89b1c8c8a8104d08c045f78aadb42d/' +
+                        rigId
+                      "
+                      >VIEW ON OPENSEA</a
+                    >
+                  </div>
+                  <div class="w-full px-0 py-2">
+                    <a
+                      class="btn btn-mint text-white"
+                      :href="
+                        'https://looksrare.org/collections/0x8EAa9AE1Ac89B1c8C8a8104D08C045f78Aadb42D/' +
+                        rigId
+                      "
+                      >VIEW ON LOOKSRARE</a
+                    >
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
       <div
         class="container"
@@ -149,7 +165,6 @@
 </template>
 
 <script>
-
 export default {
   data: function () {
     return {
@@ -212,16 +227,26 @@ export default {
   },
 
   beforeMount() {
-    this.rigsMeta()
+    this.rigsMeta();
   },
 
   methods: {
     refresh() {
       this.$nuxt.refresh();
     },
-    rigsMeta: async function() {
-      const options = {method: 'GET', headers: {Accept: 'application/json'}};
-      const rigsFeed =  await(await fetch('https://testnet.tableland.network/query?mode=rows&s=select%20json_object(%27name%27%2C%27%23%27%7C%7Cid%2C%27external_url%27%2C%27https%3A%2F%2Ftableland.xyz%2Frigs%2F%27%7C%7Cid%2C%27image%27%2Cimage%2C%27image_alpha%27%2Cimage_alpha%2C%27thumb%27%2Cthumb%2C%27thumb_alpha%27%2Cthumb_alpha%2C%27attributes%27%2Cjson_group_array(json_object(%27display_type%27%2Cdisplay_type%2C%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue)))%20from%20rigs_5_28%20join%20rig_attributes_5_27%20on%20rigs_5_28.id%3Drig_attributes_5_27.rig_id%20where%20id%3D' + this.rigId + '%20group%20by%20id%3B', options)).json();
+    rigsMeta: async function () {
+      const options = {
+        method: "GET",
+        headers: { Accept: "application/json" },
+      };
+      const rigsFeed = await (
+        await fetch(
+          "https://testnet.tableland.network/query?mode=rows&s=select%20json_object(%27name%27%2C%27%23%27%7C%7Cid%2C%27external_url%27%2C%27https%3A%2F%2Ftableland.xyz%2Frigs%2F%27%7C%7Cid%2C%27image%27%2Cimage%2C%27image_alpha%27%2Cimage_alpha%2C%27thumb%27%2Cthumb%2C%27thumb_alpha%27%2Cthumb_alpha%2C%27attributes%27%2Cjson_group_array(json_object(%27display_type%27%2Cdisplay_type%2C%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue)))%20from%20rigs_5_28%20join%20rig_attributes_5_27%20on%20rigs_5_28.id%3Drig_attributes_5_27.rig_id%20where%20id%3D" +
+            this.rigId +
+            "%20group%20by%20id%3B",
+          options
+        )
+      ).json();
 
       this.rigsMeta = rigsFeed;
       console.log(this.rigsMeta);

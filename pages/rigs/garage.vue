@@ -28,7 +28,6 @@
               <h4
                 id="rig-balance"
                 class="text-white text-left lg:text-right lg:text-2xl text-md"
-
               >
                 {{ tokens.length }} RIGS OWNED
               </h4>
@@ -37,7 +36,7 @@
         </div>
         <!-- Connect buttons -->
         <div v-if="!address" class="w-full px-6 pb-0 lg:pb-0 pt-0 relative">
-          <a  class="btn bg-black text-white" @click="connect">
+          <a class="btn bg-black text-white" @click="connect">
             <span class="flex">
               Connect Wallet
               <img
@@ -50,39 +49,43 @@
                 alt=""
               /> </span
           ></a>
-
         </div>
-
       </div>
       <div
         id="rig-garage"
         class="flex flex-wrap py-0 px-0 md:px-12 lg:px-24 xl:px-36 rig-garage"
         v-if="address"
       >
-      <div class="lg:w-1/3 md:w-1/2 w-full px-3 py-3 rigs" v-for="(src, i) in rigs" :key="i">
-              <a :href="'/rigs/' + src[0] ">
-               <div class="rig-frame " >
-                 <v-lazy-image
-                   v-if="i < 20"
-                   :style="{ minHeight: imageHeight }"
-                   class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20"
-                   :src="src[3]"
-                   @intersect="imageIntersect"
-                   @load="imageLoad"
-                 />
-                 <v-lazy-image
-                   v-else
-                   :style="{ minHeight: imageHeight }"
-                   class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20 choose"
-                   :src="src[3]"
-                   @intersect="imageIntersect"
-                   @load="imageLoad"
-                 />
-               </div>
-               <h2 class="text-black font-Orbitron text-xl px-3 py-3">#{{src[0]}}</h2>
-             </a>
+        <div
+          class="lg:w-1/3 md:w-1/2 w-full px-3 py-3 rigs"
+          v-for="(src, i) in rigs"
+          :key="i"
+        >
+          <a :href="'/rigs/' + src[0]">
+            <div class="rig-frame">
+              <v-lazy-image
+                v-if="i < 20"
+                :style="{ minHeight: imageHeight }"
+                class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20"
+                :src="src[3]"
+                @intersect="imageIntersect"
+                @load="imageLoad"
+              />
+              <v-lazy-image
+                v-else
+                :style="{ minHeight: imageHeight }"
+                class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20 choose"
+                :src="src[3]"
+                @intersect="imageIntersect"
+                @load="imageLoad"
+              />
             </div>
-      <!-- <div v-for="(src, i) in rigs" :key="i">
+            <h2 class="text-black font-Orbitron text-xl px-3 py-3">
+              #{{ src[0] }}
+            </h2>
+          </a>
+        </div>
+        <!-- <div v-for="(src, i) in rigs" :key="i">
         <a href="/rigs/"
         <v-lazy-image
           v-if="i < 20"
@@ -103,7 +106,6 @@
         {{src[0]}}
 
       </div> -->
-
       </div>
     </section>
     <FooterNav />
@@ -186,7 +188,7 @@ export default {
       ],
     };
   },
-  beforeMount(){
+  beforeMount() {
     this.rigsGarage();
   },
   methods: {
@@ -233,8 +235,6 @@ export default {
   destroyed() {
     removeEventListener("resize", this.resizeImages);
   },
-
-
 };
 </script>
 

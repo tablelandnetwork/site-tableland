@@ -27,18 +27,70 @@
           </div>
         </div>
         <div class="container mx-auto">
-          <div class="filters hidden lg:block text-black text-l" data-aos="fade-up">
-            <span class="filter" v-bind:class="{ active: currentFilter === 'ALL' }" v-on:click="setFilter('ALL')">View All</span>
-            <span class="filter" v-bind:class="{ active: currentFilter === 'Titans' }" v-on:click="setFilter('Titans')">Titans</span>
-            <span class="filter" v-bind:class="{ active: currentFilter === 'Tumblers' }" v-on:click="setFilter('Tumblers')">Tumblers</span>
-            <span class="filter" v-bind:class="{ active: currentFilter === 'Sleds' }" v-on:click="setFilter('Sleds')">Sleds</span>
-            <span class="filter" v-bind:class="{ active: currentFilter === 'Edge Riders' }" v-on:click="setFilter('Edge Riders')">Edge Riders</span>
-            <span class="filter" v-bind:class="{ active: currentFilter === 'Tracers' }" v-on:click="setFilter('Tracers')">Tracers</span>
-            <span class="filter" v-bind:class="{ active: currentFilter === 'Hoppers' }" v-on:click="setFilter('Hoppers')">Hoppers</span>
-            <span class="filter" v-bind:class="{ active: currentFilter === 'Airelights' }" v-on:click="setFilter('Airelights')">Airelights</span>
-            <span class="filter" v-bind:class="{ active: currentFilter === 'Foils' }" v-on:click="setFilter('Foils')">Foils</span>
-            <span class="filter" v-bind:class="{ active: currentFilter == '100' }" v-on:click="setFilter('100')">Originals</span>
-
+          <div
+            class="filters hidden lg:block text-black text-l"
+            data-aos="fade-up"
+          >
+            <span
+              class="filter"
+              v-bind:class="{ active: currentFilter === 'ALL' }"
+              v-on:click="setFilter('ALL')"
+              >View All</span
+            >
+            <span
+              class="filter"
+              v-bind:class="{ active: currentFilter === 'Titans' }"
+              v-on:click="setFilter('Titans')"
+              >Titans</span
+            >
+            <span
+              class="filter"
+              v-bind:class="{ active: currentFilter === 'Tumblers' }"
+              v-on:click="setFilter('Tumblers')"
+              >Tumblers</span
+            >
+            <span
+              class="filter"
+              v-bind:class="{ active: currentFilter === 'Sleds' }"
+              v-on:click="setFilter('Sleds')"
+              >Sleds</span
+            >
+            <span
+              class="filter"
+              v-bind:class="{ active: currentFilter === 'Edge Riders' }"
+              v-on:click="setFilter('Edge Riders')"
+              >Edge Riders</span
+            >
+            <span
+              class="filter"
+              v-bind:class="{ active: currentFilter === 'Tracers' }"
+              v-on:click="setFilter('Tracers')"
+              >Tracers</span
+            >
+            <span
+              class="filter"
+              v-bind:class="{ active: currentFilter === 'Hoppers' }"
+              v-on:click="setFilter('Hoppers')"
+              >Hoppers</span
+            >
+            <span
+              class="filter"
+              v-bind:class="{ active: currentFilter === 'Airelights' }"
+              v-on:click="setFilter('Airelights')"
+              >Airelights</span
+            >
+            <span
+              class="filter"
+              v-bind:class="{ active: currentFilter === 'Foils' }"
+              v-on:click="setFilter('Foils')"
+              >Foils</span
+            >
+            <span
+              class="filter"
+              v-bind:class="{ active: currentFilter == '100' }"
+              v-on:click="setFilter('100')"
+              >Originals</span
+            >
           </div>
 
           <div class="flex flex-wrap py-0 rig-garage">
@@ -50,27 +102,22 @@
                 rigInfo.percentOrig === currentFilter
               "
               :key="rigInfo.name"
-              class="
-                w-1/2
-                xl:w-1/4
-                lg:w-1/3
-                md:w-1/3
-                sm:w-1/2
-                lg:px-3 lg:py-3
-                rigs
-                my-2
-              "
+              class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 sm:w-1/2 lg:px-3 lg:py-3 rigs my-2"
             >
               <a :href="'/rigs/' + rigInfo.id">
                 <div class="rig-frame" :class="rigInfo.fleet">
                   <img :src="rigInfo.thumbUrl" />
                 </div>
-                <h2 class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3">
+                <h2
+                  class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3"
+                >
                   {{ rigInfo.name }}
                 </h2>
                 <div v-if="rigInfo.percentOrig === 100">
                   <p class="text-black px-3 py-0">Fleet: {{ rigInfo.fleet }}</p>
-                  <p class="text-black px-3 lg:py-3 lg:pb-3 text-bold rarity-100">
+                  <p
+                    class="text-black px-3 lg:py-3 lg:pb-3 text-bold rarity-100"
+                  >
                     Original: {{ rigInfo.origColor }} {{ rigInfo.origName }}
                   </p>
                 </div>
@@ -168,20 +215,20 @@ export default {
       ],
     };
   },
-  beforeMount(){
-      this.loadRigs();
-      this.setFilter('ALL');
+  beforeMount() {
+    this.loadRigs();
+    this.setFilter("ALL");
   },
   methods: {
     addClass: function () {
       this.isAddClass = true;
     },
-    setFilter: function(filter) {
+    setFilter: function (filter) {
       this.currentFilter = filter;
     },
     async loadRigs() {
-      const rigsTable = 'rigs_5_28';
-      const rigsAttrTable = 'rig_attributes_5_27';
+      const rigsTable = "rigs_5_28";
+      const rigsAttrTable = "rig_attributes_5_27";
 
       const baseUrl = `https://testnet.tableland.network/query?mode=json&s=`;
       const query = `select json_object(
@@ -250,7 +297,7 @@ export default {
     const now = new Date();
     const launchDate = new Date(2022, 4, 31, 0, 0);
     return {
-      currentFilter: 'ALL',
+      currentFilter: "ALL",
       rigsMeta: this.rigsMeta,
       time: launchDate - now,
       isAddClass: false,
