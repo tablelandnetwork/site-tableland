@@ -21,7 +21,7 @@ export default {
     "    SELECT * FROM mytable_5_30 WHERE id = 0;\n" +
     "Example Create and Write Queries:\n" +
     "    CREATE TABLE trees (climate TEXT, name TEXT);\n" +
-    "    INSERT INTO trees_5_<tableId> ('climate', 'name') VALUES ('cold', 'aspen');",
+    "    INSERT INTO trees_5_<tableId> (climate, name) VALUES ('cold', 'aspen');",
   running: "Running SQL on the Validator",
   warn: {
     address:
