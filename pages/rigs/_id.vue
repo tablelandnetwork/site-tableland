@@ -19,7 +19,6 @@
           data-aos="fade-up"
         >
           RIG #{{ rigId }}
-
         </h1>
         <div class="flex px-6 xl:px-24 py-6 lg:py-12">
           <div class="lg:w-full minter-details">
@@ -120,7 +119,7 @@
 import { connect } from "@tableland/sdk";
 
 export default {
-  data () {
+  data() {
     return {
       rigId: this.$route.params.id,
       rigsMeta: this.rigsMeta,
@@ -149,7 +148,7 @@ export default {
     };
   },
 
-  head () {
+  head() {
     return {
       title: "Rig #" + this.rigId + " - The Tableland NFT: Rigs",
       meta: [
@@ -188,7 +187,7 @@ export default {
     refresh() {
       this.$nuxt.refresh();
     },
-    async rigsLoad () {
+    async rigsLoad() {
       const connection = await connect({ network: "testnet" });
 
       const rigsTable = "rigs_5_28";

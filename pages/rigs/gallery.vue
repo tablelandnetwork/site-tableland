@@ -103,6 +103,7 @@
                 currentFilter === rig[0].attributes[4].value ||
                 currentFilter == rig[0].attributes[0].value
               "
+              :key="rig"
               class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 sm:w-1/2 lg:px-3 lg:py-3 rigs my-2"
             >
               <a :href="'/rigs/' + rig[0].name.replace('#', '')">
@@ -149,7 +150,6 @@
 import { connect } from "@tableland/sdk";
 
 export default {
-
   data() {
     return {
       currentFilter: "ALL",
@@ -212,10 +212,10 @@ export default {
     this.getRigs();
   },
   methods: {
-    addClass () {
+    addClass() {
       this.isAddClass = true;
     },
-    setFilter (filter) {
+    setFilter(filter) {
       this.currentFilter = filter;
     },
     async getRigs() {
@@ -242,7 +242,6 @@ export default {
       join (select * from ${rigsAttrTable} order by rowid) as a
         on ${rigsTable}.id=a.rig_id
     group by ${rigsTable}.id`);
-      console.log(query.rows);
       this.rigsMeta = query.rows;
     },
   },
