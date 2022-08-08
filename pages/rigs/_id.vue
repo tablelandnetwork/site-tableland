@@ -65,9 +65,9 @@
 
                       <div class="flex flex-wrap">
                         <div
-                          class="xl:w-1/3 lg:w-1/2 w-1/2 px-0 py-2"
                           v-for="parts in rig.attributes"
                           :key="parts"
+                          class="xl:w-1/3 lg:w-1/2 w-1/2 px-0 py-2"
                         >
                           <strong>{{ parts.trait_type }}</strong
                           ><br />
@@ -104,9 +104,9 @@
         </div>
       </div>
       <div
+        v-if="!rigId"
         class="container"
         style="margin-top: -900px; max-width: 1280px; z-index: 999"
-        v-if="!rigId"
       >
         Rig not found!
       </div>
@@ -119,7 +119,7 @@
 import { connect } from "@tableland/sdk";
 
 export default {
-  data: function () {
+  data () {
     return {
       rigId: this.$route.params.id,
       rigsMeta: this.rigsMeta,
@@ -148,7 +148,7 @@ export default {
     };
   },
 
-  head: function () {
+  head () {
     return {
       title: "Rig #" + this.rigId + " - The Tableland NFT: Rigs",
       meta: [
@@ -187,7 +187,7 @@ export default {
     refresh() {
       this.$nuxt.refresh();
     },
-    rigsMeta: async function () {
+    async rigsMeta () {
       const connection = await connect({ network: "testnet" });
 
       const rigsTable = "rigs_5_28";
