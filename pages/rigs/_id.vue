@@ -19,11 +19,12 @@
           data-aos="fade-up"
         >
           RIG #{{ rigId }}
+
         </h1>
         <div class="flex px-6 xl:px-24 py-6 lg:py-12">
           <div class="lg:w-full minter-details">
             <div
-              v-for="rig in rigsMeta[0]"
+              v-for="rig in rigsMeta"
               :key="rig"
               class="flex flex-wrap py-0 lg:px-12 px-0"
               data-aos="fade-up"
@@ -180,14 +181,14 @@ export default {
   },
 
   beforeMount() {
-    this.rigsMeta();
+    this.rigsLoad();
   },
 
   methods: {
     refresh() {
       this.$nuxt.refresh();
     },
-    async rigsMeta () {
+    async rigsLoad () {
       const connection = await connect({ network: "testnet" });
 
       const rigsTable = "rigs_5_28";
@@ -212,8 +213,7 @@ export default {
           on ${rigsTable}.id=a.rig_id
       where id = ${this.rigId}
       `);
-
-      this.rigsMeta = query.rows;
+      this.rigsMeta = query.rows[0];
     },
   },
 };
