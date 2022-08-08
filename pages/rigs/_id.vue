@@ -7,7 +7,7 @@
       :targets="nav.map((i) => i.target)"
     />
 
-    <!-- minter -->
+    <!-- Individual rig page -->
     <section class="rig-id">
       <div class="rigs-hero-top"></div>
       <div
@@ -20,7 +20,6 @@
         >
           RIG #{{ rigId }}
         </h1>
-
         <div class="flex px-6 xl:px-24 py-6 lg:py-12">
           <div class="lg:w-full minter-details">
             <div
@@ -36,13 +35,13 @@
               </div>
 
               <div class="w-full md:w-full lg:w-1/2 lg:px-12">
-                <div v-if="rig.attributes[0].value == '100'">
+                <div v-if="rig.attributes[1].value == '100'">
                   <p
                     class="text-black px-3 py-3 pb-3 text-bold"
-                    :class="' rarity-' + rig.attributes[0].value"
+                    :class="' rarity-' + rig.attributes[1].value"
                   >
-                    Original: {{ rig.attributes[4].value }}
-                    {{ rig.attributes[7].value }}
+                    Original: {{ rig.attributes[2].value }}
+                    {{ rig.attributes[3].value }}
                   </p>
                 </div>
                 <div id="minter-console" class="minter-console">
@@ -55,7 +54,7 @@
                       <div class="text-left">
                         <p>
                           tableland> SELECT * FROM rig_parts WHERE fleet =
-                          '<strong v-if="rig.attributes[0].value == '100'">{{
+                          '<strong v-if="rig.attributes[1].value == '100'">{{
                             rig.attributes[5].value
                           }}</strong
                           ><strong v-else>{{ rig.attributes[4].value }}</strong
@@ -112,61 +111,13 @@
         Rig not found!
       </div>
     </section>
-
-    <footer class="text-blue py-10">
-      <nav class="container px-6 md:px-9 lg:px-16 py-2">
-        <div class="hidden py-4">
-          <img
-            src="~assets/img/logo-white.svg"
-            alt="Tableland"
-            class="h-5"
-            id="js-scroll"
-          />
-        </div>
-        <ul
-          class="flex justify-center items-center gap-x-3 sm:gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-xs"
-        >
-          <li class="hidden md:inline-block">
-            <a href="https://twitter.com/tableland__">Twitter</a>
-          </li>
-          <li>
-            <a
-              href="https://textile.notion.site/Tableland-Grants-Funding-ebc1f398d53a481d94f090ab12d93be0"
-              >Grants</a
-            >
-          </li>
-          <li class="hidden md:inline-block">
-            <a href="https://boards.greenhouse.io/textileio">Jobs</a>
-          </li>
-          <li>
-            <a href="https://hhueol4i6vp.typeform.com/to/sgtDW2Xt"
-              >Token Info</a
-            >
-          </li>
-          <li>
-            <a href="https://docs.tableland.xyz/general/community/partners"
-              >Partners</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://textile.notion.site/Tableland-Privacy-Policy-6fd160e7f485491d9dc4cbab188043d5"
-              >Privacy</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://textile.notion.site/Tableland-Terms-of-Use-cf80f1b550b843ad9d4b8c3140b78e35"
-              >Terms</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </footer>
+    <FooterNav />
   </div>
 </template>
 
 <script>
+import { connect } from "@tableland/sdk";
+
 export default {
   data: function () {
     return {
@@ -237,20 +188,34 @@ export default {
       this.$nuxt.refresh();
     },
     rigsMeta: async function () {
-      const options = {
-        method: "GET",
-        headers: { Accept: "application/json" },
-      };
-      const rigsFeed = await (
-        await fetch(
-          "https://testnet.tableland.network/query?mode=rows&s=select%20json_object(%27name%27%2C%27%23%27%7C%7Cid%2C%27external_url%27%2C%27https%3A%2F%2Ftableland.xyz%2Frigs%2F%27%7C%7Cid%2C%27image%27%2Cimage%2C%27image_alpha%27%2Cimage_alpha%2C%27thumb%27%2Cthumb%2C%27thumb_alpha%27%2Cthumb_alpha%2C%27attributes%27%2Cjson_group_array(json_object(%27display_type%27%2Cdisplay_type%2C%27trait_type%27%2Ctrait_type%2C%27value%27%2Cvalue)))%20from%20rigs_5_28%20join%20rig_attributes_5_27%20on%20rigs_5_28.id%3Drig_attributes_5_27.rig_id%20where%20id%3D" +
-            this.rigId +
-            "%20group%20by%20id%3B",
-          options
+
+      const connection = await connect({ network: "testnet" });
+
+      const rigsTable = "rigs_5_28";
+      const rigsAttrTable = "rig_attributes_5_27";
+
+      const query = await connection.read(`select json_object(
+        'name','#'||id,
+        'image',image,
+        'image_alpha',image_alpha,
+        'thumb',thumb,
+        'thumb_alpha',thumb_alpha,
+        'attributes',json_group_array(
+          json_object(
+            'display_type',display_type,
+            'trait_type',trait_type,
+            'value',value
+          )
         )
-      ).json();
-      this.rigsMeta = rigsFeed;
-      rigsMeta = this.rigsMeta;
+      ) as obj
+      from ${rigsTable}
+        join (select * from ${rigsAttrTable} order by rowid) as a
+          on ${rigsTable}.id=a.rig_id
+      where id = ${this.rigId}
+      `);
+
+      this.rigsMeta = query.rows;
+
     },
   },
 };

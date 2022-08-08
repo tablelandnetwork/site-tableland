@@ -131,13 +131,7 @@ export default {
       }
     },
   },
-  beforeMount() {
-    // this.rigsConnect();
-  },
   methods: {
-    async rigsConnect() {
-      const status = await this.$store.dispatch("getRigsProvider");
-    },
     async connect() {
       const status = await this.$store.dispatch("getRigsStatus");
       this.address = status.address;
@@ -150,7 +144,6 @@ export default {
     },
     disconnect() {
       this.address = undefined;
-      window.localStorage.removeItem("provider");
     },
   },
 };

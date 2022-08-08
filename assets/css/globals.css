@@ -1004,18 +1004,6 @@ input.quantity:focus {
   margin: 10px;
 }
 
-/*
-.Airelights {
-  background-image: linear-gradient(180deg, #b2d1fc 0%, #dd6c90 100%);
-}
-
-.Sleds {
-  background-image: linear-gradient(180deg, #f1ff68 0%, #6fb0c2 100%);
-}
-
-.Titans {
-  background-image: linear-gradient(180deg, #687fff 0%, #aa6fc2 100%);
-} */
 
 /** guilds **/
 .guild {

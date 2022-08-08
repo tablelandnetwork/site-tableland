@@ -13,7 +13,7 @@
       ></div>
     </section>
 
-    <!-- showcase -->
+    <!-- Rig Gallery -->
     <section class="md:block bg-solid py-24 relative">
       <div class="container px-0 sm:px-12 md:px-12 lg:px-24 xl:px-24">
         <div class="flex">
@@ -27,6 +27,8 @@
           </div>
         </div>
         <div class="container mx-auto">
+          <!-- {{rigsMeta}} -->
+
           <div
             class="filters hidden lg:block text-black text-l"
             data-aos="fade-up"
@@ -94,104 +96,42 @@
           </div>
 
           <div class="flex flex-wrap py-0 rig-garage">
-            <div
-              v-for="rigInfo in rigInfos"
-              v-show="
-                currentFilter === 'All' ||
-                rigInfo.fleet === currentFilter ||
-                rigInfo.percentOrig === currentFilter
-              "
-              :key="rigInfo.name"
-              class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 sm:w-1/2 lg:px-3 lg:py-3 rigs my-2"
-            >
-              <a :href="'/rigs/' + rigInfo.id">
-                <div class="rig-frame" :class="rigInfo.fleet">
-                  <img :src="rigInfo.thumbUrl" />
-                </div>
-                <h2
-                  class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3"
-                >
-                  {{ rigInfo.name }}
-                </h2>
-                <div v-if="rigInfo.percentOrig === 100">
-                  <p class="text-black px-3 py-0">Fleet: {{ rigInfo.fleet }}</p>
-                  <p
-                    class="text-black px-3 lg:py-3 lg:pb-3 text-bold rarity-100"
-                  >
-                    Original: {{ rigInfo.origColor }} {{ rigInfo.origName }}
-                  </p>
-                </div>
-                <div v-else>
-                  <p class="text-black px-3 py-0">Fleet: {{ rigInfo.fleet }}</p>
-                  <p class="text-black px-3 py-0">
-                    {{ rigInfo.percentOrig }}% original
-                  </p>
-                </div>
-              </a>
+
+            <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 sm:w-1/2 lg:px-3 lg:py-3 rigs my-2" v-for="rig in rigsMeta" v-show="currentFilter === 'ALL' || currentFilter === rig[0].attributes[4].value || currentFilter == rig[0].attributes[0].value">
+              <a :href="'/rigs/' + rig[0].name.replace('#', '')" >
+               <div class="rig-frame" :class="rig[0].attributes[0].value" >
+                 <img :src="rig[0].thumb"/>
+               </div>
+             <h2 class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3">{{ rig[0].name }}</h2>
+
+             <div v-if="rig[0].attributes[0].value == '100'">
+               <p class="text-black px-3 py-0">Fleet: {{ rig[0].attributes[5].value }}  </p>
+               <p class="text-black px-3 lg:py-3 lg:pb-3 text-bold" :class="' rarity-' + rig[0].attributes[0].value">Original: {{ rig[0].attributes[7].value }} {{ rig[0].attributes[4].value }}</p>
+             </div>
+             <div v-else>
+               <p class="text-black px-3 py-0">Fleet: {{ rig[0].attributes[4].value }}</p>
+               <p class="text-black px-3 lg:py-3 lg:pb-3">Original: {{ rig[0].attributes[0].value}}%</p>
+             </div>
+             </a>
             </div>
+
           </div>
+
         </div>
       </div>
     </section>
-
-    <footer class="text-blue py-10">
-      <nav class="container px-6 md:px-9 lg:px-16 py-2">
-        <div class="hidden py-4">
-          <img
-            src="~assets/img/logo-white.svg"
-            alt="Tableland"
-            class="h-5"
-            id="js-scroll"
-          />
-        </div>
-        <ul
-          class="flex justify-center items-center gap-x-3 sm:gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-xs"
-        >
-          <li class="hidden md:inline-block">
-            <a href="https://twitter.com/tableland__">Twitter</a>
-          </li>
-          <li>
-            <a
-              href="https://textile.notion.site/Tableland-Grants-Funding-ebc1f398d53a481d94f090ab12d93be0"
-              >Grants</a
-            >
-          </li>
-          <li class="hidden md:inline-block">
-            <a href="https://boards.greenhouse.io/textileio">Jobs</a>
-          </li>
-          <li>
-            <a href="https://hhueol4i6vp.typeform.com/to/sgtDW2Xt"
-              >Token Info</a
-            >
-          </li>
-          <li>
-            <a href="https://docs.tableland.xyz/general/community/partners"
-              >Partners</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://textile.notion.site/Tableland-Privacy-Policy-6fd160e7f485491d9dc4cbab188043d5"
-              >Privacy</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://textile.notion.site/Tableland-Terms-of-Use-cf80f1b550b843ad9d4b8c3140b78e35"
-              >Terms</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </footer>
+    <FooterNav />
   </div>
 </template>
 
 <script>
+
+import { connect } from "@tableland/sdk";
+
 export default {
   head() {
     return {
-      title: "Gallery - Tableland",
+      title: "The Tableland NFT: Rigs Gallery",
       meta: [
         { hid: `og-url`, property: "og:url", content: `/${this.$route.path}` },
         { hid: "og-type", property: "og:type", content: "website" },
@@ -216,8 +156,8 @@ export default {
     };
   },
   beforeMount() {
-    this.loadRigs();
     this.setFilter("ALL");
+    this.getRigs();
   },
   methods: {
     addClass: function () {
@@ -226,83 +166,43 @@ export default {
     setFilter: function (filter) {
       this.currentFilter = filter;
     },
-    async loadRigs() {
-      const rigsTable = "rigs_5_28";
-      const rigsAttrTable = "rig_attributes_5_27";
+    async getRigs(){
 
-      const baseUrl = `https://testnet.tableland.network/query?mode=json&s=`;
-      const query = `select json_object(
-        'name','#'||id,
-        'image',image,
-        'image_alpha',image_alpha,
-        'thumb',thumb,
-        'thumb_alpha',thumb_alpha,
-        'attributes',json_group_array(
-          json_object(
-            'display_type',display_type,
-            'trait_type',trait_type,
-            'value',value
-          )
+    const connection = await connect({ network: "testnet" });
+
+    const rigsTable = "rigs_5_28";
+    const rigsAttrTable = "rig_attributes_5_27";
+
+    const query = await connection.read(`select json_object(
+      'name','#'||id,
+      'image',image,
+      'image_alpha',image_alpha,
+      'thumb',thumb,
+      'thumb_alpha',thumb_alpha,
+      'attributes',json_group_array(
+        json_object(
+          'display_type',display_type,
+          'trait_type',trait_type,
+          'value',value
         )
-      ) as obj
-      from ${rigsTable}
-        join (select * from ${rigsAttrTable} order by rowid) as a
-          on ${rigsTable}.id=a.rig_id
-      group by ${rigsTable}.id`;
-
-      const url = baseUrl + encodeURIComponent(query);
-
-      const res = await fetch(url, {
-        method: "GET",
-        headers: { Accept: "application/json" },
-      });
-      const json = await res.json();
-      const mapped = json.map((item) => {
-        let percentOrig;
-        let fleet;
-        let origName;
-        let origColor;
-        for (const attr of item.obj.attributes) {
-          if (attr.trait_type === "Fleet") {
-            fleet = attr.value;
-          }
-          if (attr.trait_type === "% Original") {
-            percentOrig = attr.value;
-          }
-          if (attr.trait_type === "Name") {
-            origName = attr.value;
-          }
-          if (attr.trait_type === "Color") {
-            origColor = attr.value;
-          }
-        }
-        return {
-          id: item.obj.name.replace("#", ""),
-          name: item.obj.name,
-          thumbUrl: item.obj.thumb.replace(
-            "ipfs://",
-            this.$config.ipfsGatewayURL + "/ipfs/"
-          ),
-          percentOrig,
-          fleet,
-          origName,
-          origColor,
-        };
-      });
-      this.rigInfos = mapped;
+      )
+    ) as obj
+    from ${rigsTable}
+      join (select * from ${rigsAttrTable} order by rowid) as a
+        on ${rigsTable}.id=a.rig_id
+    group by ${rigsTable}.id`);
+    console.log(query.rows)
+    this.rigsMeta = query.rows;
     },
   },
 
   data() {
-    const now = new Date();
-    const launchDate = new Date(2022, 4, 31, 0, 0);
     return {
       currentFilter: "ALL",
-      rigsMeta: this.rigsMeta,
-      time: launchDate - now,
       isAddClass: false,
       useWallet: true,
       rigInfos: [],
+      rigsMeta: this.rigsMeta,
       nav: [
         {
           title: "Discord",

@@ -6,7 +6,7 @@
       :targets="nav.map((i) => i.target)"
     />
 
-    <!-- hero -->
+    <!-- Rig Garage -->
     <section class="md:block story py-4 md:py-12 relative">
       <div class="rigs-hero-top"></div>
       <div
@@ -53,8 +53,8 @@
       </div>
       <div
         v-if="address"
-        id="rig-garage"  
-        class="flex flex-wrap py-0 px-0 md:px-12 lg:px-24 xl:px-36 rig-garage"
+        id="rig-garage"
+        class="flex flex-wrap py-0 px-0 md:px-12 lg:px-24 xl:px-28 rig-garage"
       >
         <div
           v-for="(src, i) in rigs"
@@ -99,15 +99,8 @@ export default {
   data() {
     return {
       isLoading: false,
-      mintphase: 0,
-      supply: 0,
       address: status.address,
-      quantity: 1,
       tokens: [],
-      freeAllowance: 0,
-      paidAllowance: 0,
-      proof: [],
-      claimed: { allowClaims: 0, waitClaims: 0 },
       rigs: [],
       nav: [
         {
