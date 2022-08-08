@@ -96,27 +96,48 @@
           </div>
 
           <div class="flex flex-wrap py-0 rig-garage">
+            <div
+              class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 sm:w-1/2 lg:px-3 lg:py-3 rigs my-2"
+              v-for="rig in rigsMeta"
+              v-show="
+                currentFilter === 'ALL' ||
+                currentFilter === rig[0].attributes[4].value ||
+                currentFilter == rig[0].attributes[0].value
+              "
+            >
+              <a :href="'/rigs/' + rig[0].name.replace('#', '')">
+                <div class="rig-frame" :class="rig[0].attributes[0].value">
+                  <img :src="rig[0].thumb" />
+                </div>
+                <h2
+                  class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3"
+                >
+                  {{ rig[0].name }}
+                </h2>
 
-            <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 sm:w-1/2 lg:px-3 lg:py-3 rigs my-2" v-for="rig in rigsMeta" v-show="currentFilter === 'ALL' || currentFilter === rig[0].attributes[4].value || currentFilter == rig[0].attributes[0].value">
-              <a :href="'/rigs/' + rig[0].name.replace('#', '')" >
-               <div class="rig-frame" :class="rig[0].attributes[0].value" >
-                 <img :src="rig[0].thumb"/>
-               </div>
-             <h2 class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3">{{ rig[0].name }}</h2>
-
-             <div v-if="rig[0].attributes[0].value == '100'">
-               <p class="text-black px-3 py-0">Fleet: {{ rig[0].attributes[5].value }}  </p>
-               <p class="text-black px-3 lg:py-3 lg:pb-3 text-bold" :class="' rarity-' + rig[0].attributes[0].value">Original: {{ rig[0].attributes[7].value }} {{ rig[0].attributes[4].value }}</p>
-             </div>
-             <div v-else>
-               <p class="text-black px-3 py-0">Fleet: {{ rig[0].attributes[4].value }}</p>
-               <p class="text-black px-3 lg:py-3 lg:pb-3">Original: {{ rig[0].attributes[0].value}}%</p>
-             </div>
-             </a>
+                <div v-if="rig[0].attributes[0].value == '100'">
+                  <p class="text-black px-3 py-0">
+                    Fleet: {{ rig[0].attributes[5].value }}
+                  </p>
+                  <p
+                    class="text-black px-3 lg:py-3 lg:pb-3 text-bold"
+                    :class="' rarity-' + rig[0].attributes[0].value"
+                  >
+                    Original: {{ rig[0].attributes[7].value }}
+                    {{ rig[0].attributes[4].value }}
+                  </p>
+                </div>
+                <div v-else>
+                  <p class="text-black px-3 py-0">
+                    Fleet: {{ rig[0].attributes[4].value }}
+                  </p>
+                  <p class="text-black px-3 lg:py-3 lg:pb-3">
+                    Original: {{ rig[0].attributes[0].value }}%
+                  </p>
+                </div>
+              </a>
             </div>
-
           </div>
-
         </div>
       </div>
     </section>
@@ -125,7 +146,6 @@
 </template>
 
 <script>
-
 import { connect } from "@tableland/sdk";
 
 export default {
@@ -166,14 +186,13 @@ export default {
     setFilter: function (filter) {
       this.currentFilter = filter;
     },
-    async getRigs(){
+    async getRigs() {
+      const connection = await connect({ network: "testnet" });
 
-    const connection = await connect({ network: "testnet" });
+      const rigsTable = "rigs_5_28";
+      const rigsAttrTable = "rig_attributes_5_27";
 
-    const rigsTable = "rigs_5_28";
-    const rigsAttrTable = "rig_attributes_5_27";
-
-    const query = await connection.read(`select json_object(
+      const query = await connection.read(`select json_object(
       'name','#'||id,
       'image',image,
       'image_alpha',image_alpha,
@@ -191,8 +210,8 @@ export default {
       join (select * from ${rigsAttrTable} order by rowid) as a
         on ${rigsTable}.id=a.rig_id
     group by ${rigsTable}.id`);
-    console.log(query.rows)
-    this.rigsMeta = query.rows;
+      console.log(query.rows);
+      this.rigsMeta = query.rows;
     },
   },
 

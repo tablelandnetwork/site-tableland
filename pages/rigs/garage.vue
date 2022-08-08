@@ -203,7 +203,6 @@ export default {
       // console.log('image loaded');
     },
   },
-
 };
 </script>
 

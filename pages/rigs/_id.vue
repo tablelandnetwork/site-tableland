@@ -188,7 +188,6 @@ export default {
       this.$nuxt.refresh();
     },
     rigsMeta: async function () {
-
       const connection = await connect({ network: "testnet" });
 
       const rigsTable = "rigs_5_28";
@@ -215,7 +214,6 @@ export default {
       `);
 
       this.rigsMeta = query.rows;
-
     },
   },
 };
