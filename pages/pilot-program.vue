@@ -130,7 +130,9 @@
             </h1>
           </div>
         </div>
-        <div class="grid grid-cols-1 lg:grid-cols-2 justify-center place-content-center py-12 pb-12 lg:px-48 text-center text-white">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 justify-center place-content-center py-12 pb-12 lg:px-48 text-center text-white"
+        >
           <div class="lg:px-12 py-0">
             <img
               class="icon py-12"
