@@ -792,7 +792,7 @@ a.btn {
 }
 
 .cohort-info {
-  background: left 200px / 100% no-repeat url("~assets/img/cohort2.png");
+  background: bottom / cover no-repeat url("~assets/img/rigs/hero.jpg");
   background-color: #311b41;
   height: auto;
   width: 100vw;
@@ -1456,7 +1456,7 @@ input:checked ~ .tab-content {
   }
   .cohort {
     background: left 100px / 250% no-repeat url(/_nuxt/assets/img/cohort.png) !important;
-    height: 155vh;
+    height: 70vh;
     width: 100vw;
   }
 
