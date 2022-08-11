@@ -57,31 +57,25 @@
         class="flex flex-wrap py-0 px-0 md:px-12 lg:px-24 xl:px-28 rig-garage"
       >
         <div
-          v-for="(src, i) in rigs"
-          :key="i"
-          class="lg:w-1/3 md:w-1/2 w-full px-3 py-3 rigs"
+          v-for="rig in rigsMeta"
+          :key="rig"
+          class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 sm:w-1/2 lg:px-3 lg:py-3 rigs my-2"
         >
-          <a :href="'/rigs/' + src[0]">
-            <div class="rig-frame">
-              <v-lazy-image
-                v-if="i < 20"
-                class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20"
-                :src="src[3]"
-                @intersect="imageIntersect"
-                @load="imageLoad"
-              />
-              <v-lazy-image
-                v-else
-                class="m-auto bg-black dark:bg-white bg-opacity-20 dark:bg-opacity-20 choose"
-                :src="src[3]"
-                @intersect="imageIntersect"
-                @load="imageLoad"
-              />
-            </div>
-            <h2 class="text-black font-Orbitron text-xl px-3 py-3">
-              #{{ src[0] }}
-            </h2>
-          </a>
+          <div v-if="rig.name">
+            <a :href="'/rigs/' + rig.name.replace('#', '')">
+              <div class="rig-frame" :class="rig.attributes[1].value">
+                <img :src="rig.thumb" />
+              </div>
+              <h2
+                class="text-black font-Orbitron text-l lg:text-xl px-3 lg:py-3"
+              >
+                {{ rig.name }}
+              </h2>
+            </a>
+          </div>
+          <div v-else>
+            <p>No Rigs owned by Wallet ID: {{ address }}</p>
+          </div>
         </div>
       </div>
     </section>
@@ -90,18 +84,16 @@
 </template>
 
 <script>
-import VLazyImage from "v-lazy-image/v2";
-export default {
-  components: {
-    VLazyImage,
-  },
+import { connect } from "@tableland/sdk";
 
+export default {
   data() {
     return {
       isLoading: false,
       address: status.address,
       tokens: [],
       rigs: [],
+      rigsMeta: this.rigsMeta,
       nav: [
         {
           title: "Discord",
@@ -160,47 +152,43 @@ export default {
   beforeMount() {
     this.rigsGarage();
   },
-  created() {
-    addEventListener("resize", this.resizeImages);
-  },
-
-  destroyed() {
-    removeEventListener("resize", this.resizeImages);
-  },
   methods: {
     async rigsGarage() {
       const status = await this.$store.dispatch("getRigsStatus");
       this.address = status.address;
-      if (status) {
-        this.address = status.address;
-        this.mintphase = status.mintphase || 0;
-        this.freeAllowance = status.entry ? status.entry[1] : 0;
-        this.paidAllowance = status.entry ? status.entry[2] : 0;
-        this.proof = status.proof || [];
-        this.tokens = status.tokens || [];
-        this.supply = status.supply || 0;
-        this.claimed = status.claimed || { allowClaims: 0, waitClaims: 0 };
-        this.rigs = await this.$store.dispatch("getRigsMetadata", {
-          tokens: this.tokens,
-        });
-      }
+      this.tokens = status.tokens || [];
+      const connection = await connect({ network: "testnet" });
+      const rigsTable = "rigs_5_28";
+      const rigsAttrTable = "rig_attributes_5_27";
+
+      const query = await connection.read(`select json_object(
+        'name','#'||id,
+        'image',image,
+        'image_alpha',image_alpha,
+        'thumb',thumb,
+        'thumb_alpha',thumb_alpha,
+        'attributes',json_group_array(
+          json_object(
+            'display_type',display_type,
+            'trait_type',trait_type,
+            'value',value
+          )
+        )
+      ) as obj
+      from ${rigsTable}
+        join (select * from ${rigsAttrTable} order by rowid) as a
+          on ${rigsTable}.id=a.rig_id
+      where id in (${this.tokens})
+      `);
+      this.rigsMeta = query.rows[0];
     },
     async connect() {
       const status = await this.$store.dispatch("getRigsStatus");
-      if (status) {
-        this.address = status.address;
-
-        this.rigs = await this.$store.dispatch("getRigsMetadata", {
-          tokens: this.tokens,
-        });
-      }
-    },
-    imageIntersect() {
-      // console.log('intersect detected');
-    },
-
-    imageLoad() {
-      // console.log('image loaded');
+      this.address = status.address;
+      this.tokens = status.tokens || [];
+      this.rigs = await this.$store.dispatch("getRigsMetadata", {
+        tokens: this.tokens,
+      });
     },
   },
 };
