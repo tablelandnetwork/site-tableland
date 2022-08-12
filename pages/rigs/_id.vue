@@ -5,6 +5,7 @@
       :titles="nav.map((i) => i.title)"
       :hrefs="nav.map((i) => i.href)"
       :targets="nav.map((i) => i.target)"
+      has-wallet="true"
     />
 
     <!-- Individual rig page -->

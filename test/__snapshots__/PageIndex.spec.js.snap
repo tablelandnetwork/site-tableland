@@ -72,6 +72,22 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
             
               </a>
             </li>
+             
+            <li
+              style="display: none;"
+            >
+              <a
+                class="btn bg-white text-white w-50 text-center"
+              >
+                <strong>
+                  Connect Wallet
+                </strong>
+              </a>
+               
+              <!---->
+               
+              <!---->
+            </li>
           </ul>
         </div>
       </nav>
@@ -1028,6 +1044,22 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
               Rigs
             
               </a>
+            </li>
+             
+            <li
+              style="display: none;"
+            >
+              <a
+                class="btn bg-white text-white w-50 text-center"
+              >
+                <strong>
+                  Connect Wallet
+                </strong>
+              </a>
+               
+              <!---->
+               
+              <!---->
             </li>
           </ul>
         </div>
