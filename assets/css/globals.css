@@ -547,7 +547,6 @@ a.btn {
 }
 
 .minter {
-  background: left -1400px / 100% no-repeat url("~assets/img/guild-list.jpg");
   background-color: #ff9675;
   height: 40vh;
   width: 100vw;
@@ -760,13 +759,6 @@ a.btn {
   height: auto;
   width: 100vw;
   max-width: 100% !important;
-}
-
-.guild-list-break {
-  position: relative;
-  background: center / cover no-repeat url("~assets/img/mod.png");
-  height: 700px;
-  bottom: 0px;
 }
 
 .guild-list .vehicle {

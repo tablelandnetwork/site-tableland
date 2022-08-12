@@ -234,7 +234,7 @@
           <p
             class="font-Orbitron text-pink text-3xl md:text-4xl lg:text-5xl md:leading-normal lg:leading-normal font-light mb-10"
           >
-            Launching on July 11th.
+            Applications now open.
           </p>
           <p
             class="font-Orbitron text-pink text-2xl md:text-2xl lg:text-3xl md:leading-normal lg:leading-normal font-light mb-10"
