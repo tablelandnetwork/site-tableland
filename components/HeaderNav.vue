@@ -34,7 +34,7 @@
                 {{ item }}
               </a>
             </li>
-            <li v-show="!isRigs">
+            <li v-show="routes === 'rigs-gallery' || routes === 'rigs-id' || routes === 'rigs-garage'">
               <a
                 v-if="!address"
                 v-show="!address"
@@ -113,6 +113,11 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+
+Vue.use(VueRouter)
+
 export default {
   props: ["titles", "hrefs", "targets"],
   data() {
@@ -120,18 +125,16 @@ export default {
       menu: false,
       address: status.address,
       account: false,
+      routes: this.routes,
     };
   },
-  computed: {
-    isRigs() {
-      if (this.$route.path === "/rigs/" || this.$route.path === "/") {
-        return true;
-      } else {
-        return false;
-      }
-    },
+  beforeMount() {
+    this.get();
   },
   methods: {
+    get() {
+      this.routes = this.$route.name;
+    },
     async connect() {
       const status = await this.$store.dispatch("getRigsStatus");
       this.address = status.address;
