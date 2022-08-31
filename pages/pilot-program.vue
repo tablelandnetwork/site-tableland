@@ -187,8 +187,8 @@
               class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18"
               data-aos="fade-up"
             >
-              Every team will be granted a free Tableland Rig per member (up to
-              3) to continue building and collaborating on the network.
+              Every team will be granted a free Tableland Rig per project to
+              continue building and collaborating on the network.
             </p>
           </div>
           <div class="lg:px-12 py-0">
