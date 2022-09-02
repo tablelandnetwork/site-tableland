@@ -905,21 +905,19 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
          
         <li>
           <a
+            href="https://dev.tableland.xyz"
+            target="_blank"
+          >
+            Tech Blog
+          </a>
+        </li>
+         
+        <li>
+          <a
             href="https://docs.tableland.xyz"
             target="_blank"
           >
             Docs
-          </a>
-        </li>
-         
-        <li
-          class="hidden md:inline-block"
-        >
-          <a
-            href="https://textile.notion.site/Tableland-Grants-Funding-ebc1f398d53a481d94f090ab12d93be0"
-            target="_blank"
-          >
-            Grants
           </a>
         </li>
          
@@ -1862,21 +1860,19 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
          
         <li>
           <a
+            href="https://dev.tableland.xyz"
+            target="_blank"
+          >
+            Tech Blog
+          </a>
+        </li>
+         
+        <li>
+          <a
             href="https://docs.tableland.xyz"
             target="_blank"
           >
             Docs
-          </a>
-        </li>
-         
-        <li
-          class="hidden md:inline-block"
-        >
-          <a
-            href="https://textile.notion.site/Tableland-Grants-Funding-ebc1f398d53a481d94f090ab12d93be0"
-            target="_blank"
-          >
-            Grants
           </a>
         </li>
          

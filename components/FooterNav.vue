@@ -19,14 +19,10 @@
           <a href="https://mirror.xyz/tableland.eth" target="_blank">Blog</a>
         </li>
         <li>
-          <a href="https://docs.tableland.xyz" target="_blank">Docs</a>
+          <a href="https://dev.tableland.xyz" target="_blank">Tech Blog</a>
         </li>
-        <li class="hidden md:inline-block">
-          <a
-            href="https://textile.notion.site/Tableland-Grants-Funding-ebc1f398d53a481d94f090ab12d93be0"
-            target="_blank"
-            >Grants</a
-          >
+        <li>
+          <a href="https://docs.tableland.xyz" target="_blank">Docs</a>
         </li>
         <li class="hidden md:inline-block">
           <a href="https://hhueol4i6vp.typeform.com/to/sgtDW2Xt" target="_blank"
