@@ -33,7 +33,7 @@
           <p
             class="text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18"
           >
-            Join our summer pilot program for access to exclusive mentorship,
+            Join our fall pilot program for access to exclusive mentorship,
             prizes, and small group building on the cutting edge of the open
             web.
           </p>
@@ -106,10 +106,15 @@
               class="text-pink text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18"
             >
               The Pilot Program is here to support you with funding, technical
-              mentors, public showcases, and more. Starting in July, the 7-week
-              program is low-lift and high reward for any builder with a vision
-              and dedication.
+              mentors, public showcases, and more. Running September 28 to
+              November 16th, the program is low-lift and high reward for any
+              builder with a vision and dedication.
             </p>
+            <a
+              href="https://youtu.be/r0u9CRsw-yQ?t=3254"
+              class="btn bg-black text-white"
+              >Season 4 Demos</a
+            >
           </div>
           <div class="lg:w-1/2 lg:mt-48">
             <img src="~assets/img/craft.png" />
@@ -182,8 +187,8 @@
               class="text-xl leading-normal md:leading-normal font-light mb-10 lg:mb-18"
               data-aos="fade-up"
             >
-              Every team will be granted a free Tableland Rig per member (up to
-              3) to continue building and collaborating on the network.
+              Every team will be granted a free Tableland Rig per project to
+              continue building and collaborating on the network.
             </p>
           </div>
           <div class="lg:px-12 py-0">
