@@ -30,9 +30,8 @@
               class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-10 lg:mb-18"
               data-aos="fade-up"
             >
-              Tableland is a network and relational metadata protocol for EVM
-              chains like Ethereum. Built for developers, NFT creators, and web3
-              visionaries.
+              Tableland is a permissionless relational database for web3
+              natives. Built for developers, NFT creators, and web3 visionaries.
             </p>
             <div
               class="hero-btn hidden md:inline-block text-center md:text-left"
