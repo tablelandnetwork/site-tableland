@@ -259,9 +259,8 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
             data-aos="fade-up"
           >
             
-            Tableland is a network and relational metadata protocol for EVM
-            chains like Ethereum. Built for developers, NFT creators, and web3
-            visionaries.
+            Tableland is a permissionless relational database for web3
+            natives. Built for developers, NFT creators, and web3 visionaries.
           
           </p>
            
@@ -1214,9 +1213,8 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
             data-aos="fade-up"
           >
             
-            Tableland is a network and relational metadata protocol for EVM
-            chains like Ethereum. Built for developers, NFT creators, and web3
-            visionaries.
+            Tableland is a permissionless relational database for web3
+            natives. Built for developers, NFT creators, and web3 visionaries.
           
           </p>
            
