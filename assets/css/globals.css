@@ -167,7 +167,7 @@ nav li a:active {
   background: center top / cover no-repeat url("~assets/img/hero.jpg");
   height: calc(100vw * 1.43229166667);
   max-height: 2750px;
-  width: 100vw;
+  width: 100%;
   max-width: 1920px !important;
   margin: auto;
 }
@@ -179,7 +179,7 @@ nav li a:active {
   height: calc(100vw * 0.96354166666);
   max-height: 1850px;
   min-height: 925px;
-  width: 100vw;
+  width: 100%;
   max-width: 1920px !important;
   margin: auto;
 }
@@ -202,7 +202,7 @@ nav li a:active {
   background: center top / cover no-repeat url("~assets/img/sql.jpg");
   height: calc(100vw * 1.024);
   min-height: 938px;
-  width: 100vw;
+  width: 100%;
   max-width: 1920px !important;
   margin: auto;
 }
@@ -229,7 +229,7 @@ nav li a:active {
   height: calc(100vw * 1.74635416667);
   max-height: 3353px;
   min-height: 1677px;
-  width: 100vw;
+  width: 100%;
   max-width: 1920px !important;
   margin: auto;
 }
