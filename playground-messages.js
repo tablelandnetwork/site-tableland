@@ -17,11 +17,11 @@ export default {
     "    docs      Show url to the documentation\n" +
     "    help      Show this message again\n\n" +
     "Example Read Queries:\n" +
-    "    SELECT * FROM mytable_5_30;\n" +
-    "    SELECT * FROM mytable_5_30 WHERE id = 0;\n" +
+    "    SELECT * FROM rigs_5_28 LIMIT 10;\n" +
+    "    SELECT * FROM rigs_5_28 WHERE id = 1;\n" +
     "Example Create and Write Queries:\n" +
     "    CREATE TABLE trees (climate TEXT, name TEXT);\n" +
-    "    INSERT INTO trees_5_<tableId> (climate, name) VALUES ('cold', 'aspen');",
+    "    INSERT INTO <name returned from create statement> (climate, name) VALUES ('cold', 'aspen');",
   running: "Running SQL on the Validator",
   warn: {
     address:

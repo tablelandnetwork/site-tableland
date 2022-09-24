@@ -679,7 +679,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
                     </span>
                     <span>
                       
-                SELECT * FROM mytable_5_30;
+                SELECT * FROM rigs_5_28 LIMIT 10;
             
                       <br />
                        
@@ -687,7 +687,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
                     </span>
                     <span>
                       
-                SELECT * FROM mytable_5_30 WHERE id = 0;
+                SELECT * FROM rigs_5_28 WHERE id = 1;
             
                       <br />
                        
@@ -711,7 +711,7 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
                     </span>
                     <span>
                       
-                INSERT INTO trees_5_&lt;tableId&gt; (climate, name) VALUES ('cold', 'aspen');
+                INSERT INTO &lt;name returned from create statement&gt; (climate, name) VALUES ('cold', 'aspen');
             
                       <br />
                        
@@ -1633,7 +1633,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
                     </span>
                     <span>
                       
-                SELECT * FROM mytable_5_30;
+                SELECT * FROM rigs_5_28 LIMIT 10;
             
                       <br />
                        
@@ -1641,7 +1641,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
                     </span>
                     <span>
                       
-                SELECT * FROM mytable_5_30 WHERE id = 0;
+                SELECT * FROM rigs_5_28 WHERE id = 1;
             
                       <br />
                        
@@ -1665,7 +1665,7 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
                     </span>
                     <span>
                       
-                INSERT INTO trees_5_&lt;tableId&gt; (climate, name) VALUES ('cold', 'aspen');
+                INSERT INTO &lt;name returned from create statement&gt; (climate, name) VALUES ('cold', 'aspen');
             
                       <br />
                        
