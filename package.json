@@ -22,7 +22,7 @@
     "@tableland/sdk": "^2.0.2",
     "@walletconnect/web3-provider": "^1.7.8",
     "aos": "^2.3.4",
-    "core-js": "^3.15.1",
+    "core-js": "^3.25.5",
     "ethers": "^5.6.9",
     "locomotive-scroll": "^4.1.4",
     "nuxt": "^2.15.7",
