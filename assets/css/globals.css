@@ -1071,6 +1071,16 @@ a.btn {
   z-index: 2;
 }
 
+.rigs-carousel {
+  margin-top: -50px;
+}
+
+@media (max-width: 1024px) {
+  .rigs-carousel {
+    margin-top: -74px;
+  }
+}
+
 .animated-carousel div {
   height: 200px;
   min-width: 200px;
