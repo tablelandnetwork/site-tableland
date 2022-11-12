@@ -71,7 +71,9 @@
           </h1>
         </div>
         <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
-          <ButtonLink href="/mint-rigs">Grab your Rig</ButtonLink>
+          <ButtonLink href="https://garage.tableland.xyz"
+            >Enter the Rig Garage</ButtonLink
+          >
         </div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 export default {
   env: {
     chain: "ethereum-goerli",
+    chainId: "0x5",
   },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,

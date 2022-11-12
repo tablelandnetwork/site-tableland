@@ -51,34 +51,41 @@ const getConnection = (function () {
       delete window.tableland;
       return;
     }
-    if (connection) return connection;
 
+    if (process.env.chainId && window.ethereum.chainId != process.env.chainId) {
+      await window.ethereum.request({
+        method: "wallet_switchEthereumChain",
+        params: [{ chainId: process.env.chainId }],
+      });
+    }
+
+    if (connection) return connection;
     connection = await connect({
       chain: process.env.chain as string,
     } as ConnectOptions);
     await connection.siwe();
 
     window.tableland = connection;
-
     return connection;
   };
 })();
 
 let web3Modal: Web3Modal | undefined;
 
-if (window.ethereum) {
-  window.ethereum.on("accountsChanged", ([newAddress]: any) => {
-    console.log("accountsChanged", newAddress);
-    if (web3Modal) web3Modal.clearCachedProvider();
-    window.location.reload();
-  });
+// NOTICE: This was used during mint, but is not needed for the playground.
+// if (window.ethereum) {
+//   window.ethereum.on("accountsChanged", ([newAddress]: any) => {
+//     console.log("accountsChanged", newAddress);
+//     if (web3Modal) web3Modal.clearCachedProvider();
+//     window.location.reload();
+//   });
 
-  window.ethereum.on("chainChanged", (chainId: any) => {
-    console.log("chainChanged", chainId);
-    if (web3Modal) web3Modal.clearCachedProvider();
-    window.location.reload();
-  });
-}
+//   window.ethereum.on("chainChanged", (chainId: any) => {
+//     console.log("chainChanged", chainId);
+//     if (web3Modal) web3Modal.clearCachedProvider();
+//     window.location.reload();
+//   });
+// }
 
 const getRigsProvider = (function () {
   let provider: ethers.providers.Web3Provider | undefined;
@@ -117,6 +124,7 @@ const rigsDeployment = deployments["ethereum"];
 const rigsChainId = 1;
 // const rigsDeployment = deployments["polygon-mumbai"];
 // const rigsChainId = 80001;
+const ipfsGatewayUri = "https://nftstorage.link/ipfs/";
 
 const getRigs = (function () {
   return async function (provider: ethers.providers.Web3Provider) {
@@ -163,7 +171,7 @@ const getRigsStatus = (function () {
       case 1:
       case 2:
         const tbl = await connect({
-          chain: "ethereum-goerli",
+          chain: rigsDeployment.tablelandChain,
         } as ConnectOptions);
 
         const useWaitlist = mintphase === 2 ? 1 : 0;
@@ -239,23 +247,22 @@ const getRigsMetadata = (function () {
       return [];
     }
     const tbl = await connect({
-      chain: "ethereum-goerli",
+      chain: rigsDeployment.tablelandChain,
     } as ConnectOptions);
     const entryRes = await tbl.read(
-      `select thumb from ${rigsDeployment.tokensTable} where id in (${tokens})`
+      `select renders_cid,rig_id,image_thumb_name from ${rigsDeployment.attributesTable} join ${rigsDeployment.lookupsTable} where rig_id in (${tokens}) group by rig_id`
     );
     if (!entryRes.rows || entryRes.rows.length === 0) {
       return [];
     }
     return entryRes.rows.map((r: any) => {
-      return r[0];
+      return ipfsGatewayUri + r.join("/");
     });
   };
 })();
 
 export const actions: ActionTree<RootState, RootState> = {
   connect: async function (context) {
-    console.log("store connect...");
     // connect to tableland
     const tableland = await getConnection();
 
@@ -268,7 +275,6 @@ export const actions: ActionTree<RootState, RootState> = {
   },
   getReceipt: async function (context, txnHash) {
     const tableland = await getConnection();
-    console.log(txnHash);
     return await tableland.receipt(txnHash);
   },
   runWrite: async function (context, query) {
