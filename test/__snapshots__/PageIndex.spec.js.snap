@@ -349,7 +349,13 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
             Well-crafted NFTs can link technology, art, community, and
             incentives in ways unlike any previous innovation. Rigs are where
             we will experiment and demonstrate what is possible.
-          
+            
+            <a
+              href="https://opensea.io/collection/tableland-rigs"
+              target="_blank"
+            >
+              View on OpenSea.
+            </a>
           </p>
            
           <div
@@ -1303,7 +1309,13 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
             Well-crafted NFTs can link technology, art, community, and
             incentives in ways unlike any previous innovation. Rigs are where
             we will experiment and demonstrate what is possible.
-          
+            
+            <a
+              href="https://opensea.io/collection/tableland-rigs"
+              target="_blank"
+            >
+              View on OpenSea.
+            </a>
           </p>
            
           <div

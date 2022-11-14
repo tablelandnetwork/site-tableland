@@ -79,6 +79,11 @@
               Well-crafted NFTs can link technology, art, community, and
               incentives in ways unlike any previous innovation. Rigs are where
               we will experiment and demonstrate what is possible.
+              <a
+                href="https://opensea.io/collection/tableland-rigs"
+                target="_blank"
+                >View on OpenSea.</a
+              >
             </p>
             <div class="text-center md:text-left" data-aos="fade-up">
               <ButtonLink href="/rigs">Learn more</ButtonLink>

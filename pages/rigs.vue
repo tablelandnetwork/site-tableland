@@ -51,7 +51,7 @@
           </div>
         </div>
       </div>
-      <div class="flex" style="margin-top: -50px" data-aos="fade-up">
+      <div class="flex rigs-carousel" data-aos="fade-up">
         <div class="animated-carousel w-full">
           <div v-for="(item, index) in rigs" :key="index" class="vehicle">
             <img :src="item" />
@@ -69,9 +69,21 @@
             A 3k generative NFT built from 1,074 handcrafted works of art for
             the builders and creatives of cyberspace.
           </h1>
+          <h1
+            class="text-white w-full h-auto text-xl md:text-2xl xl:text-2xl leading-tighter mb-10 lg:mb-18"
+          >
+            Sold out!
+            <a
+              href="https://opensea.io/collection/tableland-rigs"
+              target="_blank"
+              >View on OpenSea.</a
+            >
+          </h1>
         </div>
         <div class="w-full px-6 pb-0 lg:pb-0 pt-0">
-          <ButtonLink href="/mint-rigs">Grab your Rig</ButtonLink>
+          <ButtonLink href="https://garage.tableland.xyz"
+            >Enter the Rig Garage</ButtonLink
+          >
         </div>
       </div>
     </section>

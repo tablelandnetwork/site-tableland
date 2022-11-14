@@ -1,5 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@600;900&family=Poppins:wght@300;400;500;600&display=swap");
 
+/**
+  * @license
+  * MyFonts Webfont Build ID 3867246, 2020-12-16T11:57:38-0500
+  * 
+  * The fonts listed in this notice are subject to the End User License
+  * Agreement(s) entered into by the website owner. All other parties are 
+  * explicitly restricted from using the Licensed Webfonts(s).
+  * 
+  * You may obtain a valid license at the URLs below.
+  * 
+  * Webfont: AndaleMonoPaneuropeanRegular by Monotype
+  * URL: https://www.myfonts.com/products/regular-andale-mono-paneuropean-345935
+  * Copyright: Copyright © 2014 Monotype Imaging Inc. All rights reserved.
+  * 
+  * © 2020 MyFonts Incn*/
 @font-face {
   font-family: "AndaleMono";
   src: url("~assets/fonts/andale-mono.woff2") format("woff2"),
@@ -1054,6 +1069,16 @@ a.btn {
   bottom: -700px !important;
   transition: all 0.8s ease-in-out;
   z-index: 2;
+}
+
+.rigs-carousel {
+  margin-top: -50px;
+}
+
+@media (max-width: 1024px) {
+  .rigs-carousel {
+    margin-top: -74px;
+  }
 }
 
 .animated-carousel div {
