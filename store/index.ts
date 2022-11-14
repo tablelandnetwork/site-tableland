@@ -124,7 +124,7 @@ const rigsDeployment = deployments["ethereum"];
 const rigsChainId = 1;
 // const rigsDeployment = deployments["polygon-mumbai"];
 // const rigsChainId = 80001;
-const ipfsGatewayUri = "https://nftstorage.link/ipfs/";
+const ipfsGatewayUri = "https://tableland.mypinata.cloud/ipfs/";
 
 const getRigs = (function () {
   return async function (provider: ethers.providers.Web3Provider) {
