@@ -172,6 +172,7 @@ const getRigsStatus = (function () {
       case 2:
         const tbl = await connect({
           chain: rigsDeployment.tablelandChain,
+          host: rigsDeployment.tablelandHost,
         } as ConnectOptions);
 
         const useWaitlist = mintphase === 2 ? 1 : 0;
@@ -248,6 +249,7 @@ const getRigsMetadata = (function () {
     }
     const tbl = await connect({
       chain: rigsDeployment.tablelandChain,
+      host: rigsDeployment.tablelandHost,
     } as ConnectOptions);
     const entryRes = await tbl.read(
       `select renders_cid,rig_id,image_thumb_name from ${rigsDeployment.attributesTable} join ${rigsDeployment.lookupsTable} where rig_id in (${tokens}) group by rig_id`
