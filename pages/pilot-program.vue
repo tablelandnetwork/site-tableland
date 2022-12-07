@@ -106,15 +106,15 @@
               class="text-pink text-xl lg:text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18"
             >
               The Pilot Program is here to support you with funding, technical
-              mentors, public showcases, and more. Running January 23 to
-              March 17th, the program is low-lift and high reward for any
-              builder with a vision and dedication.
+              mentors, public showcases, and more. Running January 23 to March
+              17th, the program is low-lift and high reward for any builder with
+              a vision and dedication.
             </p>
-              <a
-                href="https://youtube.com/playlist?list=PLAc0xDyQDZbo-PnGBbv1aBTVMVwd4qncL"
-                class="btn bg-black text-white"
-                >Season 5 Demos</a
-              >
+            <a
+              href="https://youtube.com/playlist?list=PLAc0xDyQDZbo-PnGBbv1aBTVMVwd4qncL"
+              class="btn bg-black text-white"
+              >Season 5 Demos</a
+            >
           </div>
           <div class="lg:w-1/2 lg:mt-48">
             <img src="~assets/img/craft.png" />
