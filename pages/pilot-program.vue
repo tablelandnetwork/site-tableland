@@ -33,7 +33,7 @@
           <p
             class="text-2xl leading-normal md:leading-normal font-light mb-10 lg:mb-18"
           >
-            Join our fall pilot program for access to exclusive mentorship,
+            Join our winter pilot program for access to exclusive mentorship,
             prizes, and small group building on the cutting edge of the open
             web.
           </p>
