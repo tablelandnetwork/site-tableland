@@ -62,6 +62,8 @@ const getConnection = (function () {
     if (connection) return connection;
     connection = await connect({
       chain: process.env.chain as string,
+      host: "https://testnets.tableland.network",
+      rpcRelay: false,
     } as ConnectOptions);
     await connection.siwe();
 
