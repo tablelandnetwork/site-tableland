@@ -28,7 +28,7 @@
     "nuxt": "^2.15.7",
     "typescript": "^4.6.3",
     "v-lazy-image": "^2.1.1",
-    "vue": "^2.6.14",
+    "vue": "^2.7.14",
     "vue-class-on-scroll": "^0.1.0",
     "vue-parallaxy": "^1.1.1",
     "web3modal": "^1.9.8"
