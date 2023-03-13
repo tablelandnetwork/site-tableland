@@ -874,22 +874,24 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
     class="text-blue py-10 landing"
   >
     <nav
-      class="container px-6 md:px-9 lg:px-16 py-2"
+      class="container flex justify-around md:justify-items-center gap-x-6 grid md:grid-cols-4 gap-4 px-10"
     >
-      <div
-        class="hidden py-4"
-      >
-        <img
-          alt="Tableland"
-          class="h-5"
-          id="js-scroll"
-          src="~assets/img/logo-white.svg"
-        />
-      </div>
-       
-      <ul
-        class="flex justify-center items-center gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-xs"
-      >
+      <ul>
+        <h3
+          class="font-bold text-white uppercase"
+        >
+          Community
+        </h3>
+         
+        <li>
+          <a
+            href="https://discord.gg/dc8EBEhGbg"
+            target="_blank"
+          >
+            Discord
+          </a>
+        </li>
+         
         <li>
           <a
             href="https://twitter.com/tableland__"
@@ -901,12 +903,52 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
          
         <li>
           <a
-            href="https://mirror.xyz/tableland.eth"
+            href="https://tableland.xyz/pilot-program/"
             target="_blank"
           >
-            Blog
+            Pilot Program
           </a>
         </li>
+      </ul>
+       
+      <ul>
+        <h3
+          class="font-bold text-white uppercase"
+        >
+          Use Cases
+        </h3>
+         
+        <li>
+          <a
+            href="https://dev.tableland.xyz/one-pagers/tableland-for-nfts"
+          >
+            NFTs
+          </a>
+        </li>
+         
+        <li>
+          <a
+            href="https://dev.tableland.xyz/one-pagers/tableland-for-gaming"
+          >
+            Gaming
+          </a>
+        </li>
+         
+        <li>
+          <a
+            href="https://docs.tableland.xyz/use-cases"
+          >
+            More Use Cases
+          </a>
+        </li>
+      </ul>
+       
+      <ul>
+        <h3
+          class="font-bold text-white uppercase"
+        >
+          Resources
+        </h3>
          
         <li>
           <a
@@ -925,6 +967,14 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
             Docs
           </a>
         </li>
+      </ul>
+       
+      <ul>
+        <h3
+          class="font-bold text-white uppercase"
+        >
+          References
+        </h3>
          
         <li
           class="hidden md:inline-block"
@@ -955,6 +1005,17 @@ exports[`Index Page renders correctly when browser does not have a wallet 1`] = 
           </a>
         </li>
       </ul>
+       
+      <div
+        class="hidden py-4"
+      >
+        <img
+          alt="Tableland"
+          class="h-5"
+          id="js-scroll"
+          src="~assets/img/logo-white.svg"
+        />
+      </div>
     </nav>
   </footer>
 </div>
@@ -1834,22 +1895,24 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
     class="text-blue py-10 landing"
   >
     <nav
-      class="container px-6 md:px-9 lg:px-16 py-2"
+      class="container flex justify-around md:justify-items-center gap-x-6 grid md:grid-cols-4 gap-4 px-10"
     >
-      <div
-        class="hidden py-4"
-      >
-        <img
-          alt="Tableland"
-          class="h-5"
-          id="js-scroll"
-          src="~assets/img/logo-white.svg"
-        />
-      </div>
-       
-      <ul
-        class="flex justify-center items-center gap-x-6 md:gap-x-12 xl:gap-x-24 uppercase text-xs"
-      >
+      <ul>
+        <h3
+          class="font-bold text-white uppercase"
+        >
+          Community
+        </h3>
+         
+        <li>
+          <a
+            href="https://discord.gg/dc8EBEhGbg"
+            target="_blank"
+          >
+            Discord
+          </a>
+        </li>
+         
         <li>
           <a
             href="https://twitter.com/tableland__"
@@ -1861,12 +1924,52 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
          
         <li>
           <a
-            href="https://mirror.xyz/tableland.eth"
+            href="https://tableland.xyz/pilot-program/"
             target="_blank"
           >
-            Blog
+            Pilot Program
           </a>
         </li>
+      </ul>
+       
+      <ul>
+        <h3
+          class="font-bold text-white uppercase"
+        >
+          Use Cases
+        </h3>
+         
+        <li>
+          <a
+            href="https://dev.tableland.xyz/one-pagers/tableland-for-nfts"
+          >
+            NFTs
+          </a>
+        </li>
+         
+        <li>
+          <a
+            href="https://dev.tableland.xyz/one-pagers/tableland-for-gaming"
+          >
+            Gaming
+          </a>
+        </li>
+         
+        <li>
+          <a
+            href="https://docs.tableland.xyz/use-cases"
+          >
+            More Use Cases
+          </a>
+        </li>
+      </ul>
+       
+      <ul>
+        <h3
+          class="font-bold text-white uppercase"
+        >
+          Resources
+        </h3>
          
         <li>
           <a
@@ -1885,6 +1988,14 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
             Docs
           </a>
         </li>
+      </ul>
+       
+      <ul>
+        <h3
+          class="font-bold text-white uppercase"
+        >
+          References
+        </h3>
          
         <li
           class="hidden md:inline-block"
@@ -1915,6 +2026,17 @@ exports[`Index Page renders correctly when browser has a wallet 1`] = `
           </a>
         </li>
       </ul>
+       
+      <div
+        class="hidden py-4"
+      >
+        <img
+          alt="Tableland"
+          class="h-5"
+          id="js-scroll"
+          src="~assets/img/logo-white.svg"
+        />
+      </div>
     </nav>
   </footer>
 </div>
