@@ -300,7 +300,7 @@ export const actions: ActionTree<RootState, RootState> = {
     );
 
     const tableland = await getConnection();
-    return await tableland.create(definition, tableName);
+    return await tableland.create(definition, { prefix: tableName });
   },
   myTables: async function (context) {
     const tableland = await getConnection();
