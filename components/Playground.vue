@@ -310,9 +310,7 @@ export default {
     async runCommand(sql, mutate) {
       try {
         this.showSpinner(messages.running);
-        const command = mutate ? "runWrite" : "runRead";
-
-        const response = await this.$store.dispatch(command, sql);
+        const response = await this.$store.dispatch("runQuery", sql);
         this.loading = false;
         this.cls();
         if (response.data && response.data.columns && response.data.rows) {
@@ -329,7 +327,7 @@ export default {
     async runCreate(sql) {
       try {
         this.showSpinner(messages.creating);
-        const response = await this.$store.dispatch("createTable", sql);
+        const response = await this.$store.dispatch("runQuery", sql);
         this.loading = false;
         this.cls();
         this.printf("Table Created:\n" + JSON.stringify(response, null, 4));

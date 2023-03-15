@@ -1,5 +1,5 @@
 import { ActionTree, MutationTree } from "vuex";
-import { connect, ConnectOptions } from "@tableland/sdk";
+import { Database, Validator } from "@tableland/sdk";
 import { ethers, BigNumber } from "ethers";
 import Web3Modal from "web3modal";
 import WalletConnectProvider from "@walletconnect/web3-provider";
@@ -60,12 +60,11 @@ const getConnection = (function () {
     }
 
     if (connection) return connection;
-    connection = await connect({
-      chain: process.env.chain as string,
-      host: "https://testnets.tableland.network",
-      rpcRelay: false,
-    } as ConnectOptions);
-    await connection.siwe();
+    const db = new Database({ autoWait: true });
+    connection = {
+      db: db,
+      validator: new Validator(db.config),
+    };
 
     window.tableland = connection;
     return connection;
@@ -172,26 +171,27 @@ const getRigsStatus = (function () {
         return { mintphase, supply };
       case 1:
       case 2:
-        const tbl = await connect({
-          chain: rigsDeployment.tablelandChain,
-          host: rigsDeployment.tablelandHost,
-        } as ConnectOptions);
+        const { db } = await getConnection();
 
         const useWaitlist = mintphase === 2 ? 1 : 0;
-        const entryRes = await tbl.read(
-          `select * from ${
-            rigsDeployment.allowlistTable
-          } where lower(address)='${address.toLowerCase()}' and waitlist=${useWaitlist}`
-        );
+        const entryRes = await db
+          .prepare(
+            `select * from ${
+              rigsDeployment.allowlistTable
+            } where lower(address)='${address.toLowerCase()}' and waitlist=${useWaitlist}`
+          )
+          .all();
         if (entryRes.rows && entryRes.rows.length === 0) {
           return { mintphase, tokens, supply, claimed };
         }
         const entry = entryRes.rows[0];
         console.info("address entry:", entry);
 
-        const list = await tbl.read(
-          `select * from ${rigsDeployment.allowlistTable} where waitlist=${useWaitlist}`
-        );
+        const list = await db
+          .prepare(
+            `select * from ${rigsDeployment.allowlistTable} where waitlist=${useWaitlist}`
+          )
+          .raw();
         const tree = buildTree(list.rows || []);
         const proof = tree.getHexProof(hashEntry(entry));
         console.info("address proof:", proof);
@@ -249,13 +249,16 @@ const getRigsMetadata = (function () {
     if (tokens.length === 0) {
       return [];
     }
-    const tbl = await connect({
-      chain: rigsDeployment.tablelandChain,
-      host: rigsDeployment.tablelandHost,
-    } as ConnectOptions);
-    const entryRes = await tbl.read(
-      `select renders_cid,rig_id,image_thumb_name from ${rigsDeployment.attributesTable} join ${rigsDeployment.lookupsTable} where rig_id in (${tokens}) group by rig_id`
-    );
+    const { db } = await getConnection();
+    const entryRes = await db
+      .prepare(
+        `select renders_cid,rig_id,image_thumb_name from ${rigsDeployment.attributesTable} join ${rigsDeployment.lookupsTable} where rig_id in (${tokens}) group by rig_id`
+      )
+      .all();
+
+    // TODO: fix this
+    console.log("getRigsMetadata", entryRes);
+
     if (!entryRes.rows || entryRes.rows.length === 0) {
       return [];
     }
@@ -268,9 +271,9 @@ const getRigsMetadata = (function () {
 export const actions: ActionTree<RootState, RootState> = {
   connect: async function (context) {
     // connect to tableland
-    const tableland = await getConnection();
+    const { db } = await getConnection();
 
-    const ethAddress = await tableland.signer.getAddress();
+    const ethAddress = await db.signer.getAddress();
     // save the user's eth account address
     context.commit("set", { key: "ethAddress", value: ethAddress });
   },
@@ -278,29 +281,12 @@ export const actions: ActionTree<RootState, RootState> = {
     await getConnection({ disconnect: true });
   },
   getReceipt: async function (context, txnHash) {
-    const tableland = await getConnection();
-    return await tableland.receipt(txnHash);
+    const { validator } = await getConnection();
+    return await validator.pollTransactionReceipt(txnHash);
   },
-  runWrite: async function (context, query) {
-    const tableland = await getConnection();
-    return await tableland.write(query);
-  },
-  runRead: async function (context, query) {
-    const tableland = await getConnection();
-    return await tableland.read(query);
-  },
-  createTable: async function (context, createStatement) {
-    const parts = createStatement.split(" ");
-    const tableName = parts[2];
-    const defintionParts = parts.slice(3);
-    let definition = defintionParts.join(" ");
-    definition = definition.slice(
-      definition.indexOf("(") + 1,
-      definition.lastIndexOf(")")
-    );
-
-    const tableland = await getConnection();
-    return await tableland.create(definition, { prefix: tableName });
+  runQuery: async function (context, query) {
+    const { db } = await getConnection();
+    return await db.prepare(query).all();
   },
   myTables: async function (context) {
     const tableland = await getConnection();
