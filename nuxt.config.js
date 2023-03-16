@@ -1,3 +1,5 @@
+import path from "path";
+
 export default {
   env: {
     chain: "ethereum-goerli",
@@ -95,6 +97,16 @@ export default {
   build: {
     options: {
       fix: true,
+    },
+    babel: {
+      presets: [
+        ["@babel/preset-env", { targets: { node: "current" } }],
+        "@babel/preset-typescript",
+      ],
+      plugins: ["@babel/plugin-proposal-nullish-coalescing-operator"],
+      include: [
+        "/Users/jwagner/Workspaces/textile/github/site-tableland/node_modules/@tableland/sdk/dist/esm/statement.js",
+      ],
     },
   },
 
