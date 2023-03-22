@@ -183,47 +183,6 @@
       </div>
     </section>
 
-    <!-- playground -->
-    <div
-      id="playground"
-      class="console bg-gradient bg-gradient-to-b from-violet to-pink"
-    >
-      <section class="playground text-white pt-6 md:pt-32 pb-32">
-        <div class="container px-6 md:px-9 lg:px-16 flex justify-center">
-          <div class="md:w-2/3">
-            <h3
-              class="font-Orbitron text-4xl md:text-5xl lg:text-6xl leading-tighter mb-4 lg:mb-10"
-              data-aos="fade-up"
-            >
-              Try it out
-            </h3>
-            <p
-              v-if="ethereum"
-              class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-4 lg:mb-6"
-              data-aos="fade-up"
-            >
-              Go ahead! Don't take our word for it.
-            </p>
-            <p
-              v-if="!ethereum"
-              class="text-xl md:text-3xl leading-normal md:leading-normal font-light mb-4 lg:mb-6"
-              data-aos="fade-up"
-            >
-              Uh oh! You need a browser wallet. Go install
-              <a href="https://metamask.io/" target="_blank" class="underline"
-                >Metamask</a
-              >
-              or use a browser with a built-in wallet like
-              <a href="https://brave.com/" target="_blank" class="underline"
-                >Brave</a
-              >.
-            </p>
-            <playground></playground>
-          </div>
-        </div>
-      </section>
-    </div>
-
     <!-- community -->
     <section class="community relative">
       <div class="container px-6 md:px-9 lg:px-16">
