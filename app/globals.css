@@ -2,26 +2,145 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+::selection {
+  color: theme("colors.black");
+  background-color: theme("colors.neongreen");
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: theme("colors.black");
+  background-color: theme("colors.black");
+}
+
+a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Buttons */
+
+a.btn {
+  @apply inline-block md:text-xl py-3 px-8 rounded-2xl uppercase cursor-pointer;
+}
+
+a.btn-header {
+  @apply inline-block text-sm py-2 px-6 rounded-xl cursor-pointer;
+}
+
+a.btn-small {
+  @apply inline-block text-xs py-1 px-2 rounded cursor-pointer;
+  height: 1.55rem;
+}
+
+a.btn:hover,
+a.btn-header:hover,
+a.btn-small:hover {
+  background-color: theme("colors.neonblue") !important;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a,
+a.btn,
+a.btn-header,
+a.btn-small {
+  text-decoration: none;
+}
+
+a.btn {
+  font-size: 1rem;
+  line-height: normal;
+}
+
+a.btn i {
+  font-size: 1.5rem;
+}
+
+a.btn-small {
+  font-size: 0.75rem;
+  line-height: normal;
+}
+
+a.btn-small i {
+  font-size: 1.2rem;
+}
+
+nav .btn {
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+}
+
+nav li a:hover,
+nav li a:active {
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Pages */
+
+.pilot-page {
+  background: top / cover no-repeat url("/img/pilot/hero.jpg");
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.home-page .page-hero {
+  background: top / cover no-repeat url("/img/home/hero.jpg");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .home-page .page-hero {
+    background-image: url("/img/home/hero@2x.jpg");
+  }
+}
+
+.sample-rigs .page-hero {
+  min-height: 50vh;
+}
+
+.story {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0),
+    rgb(255, 255, 255),
+    rgb(255, 255, 255),
+    rgb(255, 255, 255),
+    rgb(255, 255, 255)
+  );
+  height: auto;
+  width: 100vw;
+  max-width: 100% !important;
+}
+
+.home-page .story {
+  background: theme("colors.darkgreen");
+  border-top: 1px solid theme("colors.green");
+}
+
+.white-line {
+  height: 18px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.white-line-thin {
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.025);
+  rotate: -2deg;
+}
+
+/* Rigs */
+
+.sample-rigs-grid {
+  max-width: none !important;
+}
+
+.v-lazy-image {
+  filter: blur(5px);
+  transition: filter 1s ease-out, opacity 1s ease-out;
+  will-change: filter;
+  opacity: 0;
+}
+
+.v-lazy-image-loaded {
+  filter: blur(0);
+  opacity: 1;
 }
