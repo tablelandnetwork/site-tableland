@@ -19,7 +19,6 @@ export default function HeaderNav() {
     }
     checkScroll()
     window.addEventListener("scroll", checkScroll)
-    return () => window.removeEventListener("resize", checkScroll)
   }, [opaque])
 
   function handleMenu() {

@@ -55,15 +55,16 @@ export default function Rigs() {
       <HeaderNav />
       {/* hero */}
       <section className="w-full bg-top bg-cover bg-no-repeat bg-[url('/img/rigs/hero.jpg')]">
-        <div className="absolute w-full opacity-50 bg-purple h-[144px] md:h-[180px] lg:h-[264px] xl:h-[272px]"></div>
-        <div className="relative container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pt-24 md:pt-32 lg:pt-48 mb-3 md:mb-4 lg:mb-6 xl:mb-8">
-          <article className="prose !prose-invert prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose font-light text-center md:text-left">
+        <div className="absolute w-full opacity-50 bg-purple h-[156px] md:h-[188px] lg:h-[280px] xl:h-[280px]"></div>
+        <div className="relative container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pt-24 md:pt-32 lg:pt-48">
+          <article className="prose !prose-invert prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose text-center md:text-left">
             <h1 className={orbitron.className}>
               Meet the <span className="font-black">Rigs</span>
             </h1>
+            <p></p>
           </article>
         </div>
-        <div className="overflow-hidden h-48 md:h-56 lg:h-64 xl:h-80 2xl:h-96 mb-3 md:mb-4 lg:mb-6 xl:mb-8">
+        <div className="overflow-hidden h-48 md:h-56 lg:h-64 xl:h-80 2xl:h-96">
           <div className="flex w-auto h-full animate-scroll">
             {rigs.map(function (p, i) {
               return (
@@ -82,6 +83,7 @@ export default function Rigs() {
         </div>
         <div className="container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pb-12 md:pb-24 lg:pb-36">
           <article className="prose !prose-invert prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose font-light text-center md:text-left">
+            <p></p>
             <p className="lead">
               A 3k generative NFT built from 1,074 handcrafted works of art for
               the builders and creatives of cyberspace. See{" "}
@@ -124,7 +126,7 @@ export default function Rigs() {
         id="garage"
         className="w-full bg-darkgreen border-t-1 border-color-green"
       >
-        <div className="w-full h-[18px] bg-white opacity-20"></div>
+        <div className="w-full h-[18px] bg-white opacity-[0.15]"></div>
         <div className="container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 py-12 md:py-24 lg:py-36">
           <article className="mx-auto prose prose-normal !prose-invert prose-sm md:prose-md lg:prose-lg max-w-prose prose-img:rounded-lg prose-pre:text-xs font-light">
             <h1 className={orbitron.className}>The Garage</h1>
@@ -276,7 +278,7 @@ export default function Rigs() {
       </section>
       {/* story */}
       <section id="story" className="w-full bg-black">
-        <div className="w-full h-[18px] bg-white opacity-20"></div>
+        <div className="w-full h-[18px] bg-white opacity-[0.15]"></div>
         <div className="container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 py-12 md:py-24 lg:py-36">
           <article className="mx-auto prose prose-normal !prose-invert prose-sm md:prose-md lg:prose-lg max-w-prose prose-img:rounded-lg prose-pre:text-xs font-light">
             <h1 className={orbitron.className}>Story</h1>
@@ -351,7 +353,7 @@ export default function Rigs() {
       </section>
       {/* fleets */}
       <section id="fleets" className="w-full bg-lightpurple">
-        <div className="w-full h-[18px] bg-white opacity-20"></div>
+        <div className="w-full h-[18px] bg-white opacity-[0.15]"></div>
         <div className="container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 py-12 md:py-24 lg:py-36">
           <article className="mx-auto prose prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose prose-img:rounded-lg prose-pre:text-xs font-light">
             <h1 className={orbitron.className}>Fleets</h1>
@@ -631,7 +633,7 @@ export default function Rigs() {
       />
       {/* artists */}
       <section id="artists" className="w-full bg-black">
-        <div className="w-full h-[18px] bg-white opacity-20"></div>
+        <div className="w-full h-[18px] bg-white opacity-[0.15]"></div>
         <div className="container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 py-12 md:py-24 lg:py-36">
           <article className="mx-auto prose prose-normal !prose-invert prose-sm md:prose-md lg:prose-lg max-w-prose prose-img:rounded-lg prose-pre:text-xs font-light">
             <h1 className={orbitron.className}>The Artists</h1>

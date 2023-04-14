@@ -10,7 +10,7 @@ type Props = {
 export default function Showcase({ href, classes, children }: Props) {
   return (
     <section className={"text-neongreen border-b " + classes}>
-      <div className="w-full h-[18px] bg-white opacity-20"></div>
+      <div className="w-full h-[18px] bg-white opacity-[0.15]"></div>
       <div className="py-12 md:py-32">
         <div className="text-center">
           <ButtonLink
