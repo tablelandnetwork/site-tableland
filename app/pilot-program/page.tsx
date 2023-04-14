@@ -31,7 +31,7 @@ export default function PilotProgram() {
       <section className="w-full bg-top bg-cover bg-no-repeat bg-[url('/img/pilot/hero.jpg')]">
         <div className="relative container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pt-24 md:pt-32 lg:pt-48 pb-12 md:pb-24 lg:pb-36">
           <article className="mx-auto md:mx-[initial] prose prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose font-light text-center md:text-left">
-            <h1>The Pilot Program</h1>
+            <h1 className={orbitron.className}>The Pilot Program</h1>
             <p className="lead">
               Join the next pilot program season for access to exclusive
               mentorship, prizes, and a small group building on the cutting edge
