@@ -21,7 +21,7 @@ import sled from "../../public/img/rigs/originals/sled.jpg"
 import titan from "../../public/img/rigs/originals/titan.jpg"
 import tracer from "../../public/img/rigs/originals/tracer.jpg"
 import tumbler from "../../public/img/rigs/originals/tumbler.jpg"
-import { getRigs } from "@/lib/getRigs"
+import getRigs from "@/lib/rigs"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -65,12 +65,15 @@ export default function Rigs() {
           </article>
         </div>
         <div className="overflow-hidden h-48 md:h-56 lg:h-64 xl:h-80 2xl:h-96">
-          <div className="flex w-auto h-full animate-scroll">
-            {rigs.map(function (p, i) {
+          <div
+            className="flex w-auto h-full animate-scroll"
+            style={{ transform: "translate3d(0px,0px,0px)" }}
+          >
+            {rigs.map(function (r, i) {
               return (
                 <div key={i} className="relative h-full aspect-square">
                   <Image
-                    src={p}
+                    src={r}
                     alt={"Rig " + i}
                     priority={true}
                     fill

@@ -1,4 +1,4 @@
-export function getRigs(count: number, fleet?: string): string[] {
+export default function getRigs(count: number, fleet?: string): string[] {
   let indexes: number[] = []
   let max = 100
   const path = fleet || "all"
