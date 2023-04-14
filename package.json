@@ -1,7 +1,25 @@
 {
-  "name": "baz",
-  "version": "0.1.0",
+  "name": "@tableland/site",
+  "description": "The Tableland homepage",
+  "version": "0.0.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tablelandnetwork/site-tableland.git"
+  },
+  "keywords": [
+    "tableland",
+    "database",
+    "decentralized",
+    "sql",
+    "web3",
+    "tamperproof"
+  ],
+  "license": "MIT AND Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/tablelandnetwork/site-tableland/issues"
+  },
+  "homepage": "https://github.com/tablelandnetwork/site-tableland#readme",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
