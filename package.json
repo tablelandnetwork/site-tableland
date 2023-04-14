@@ -13,6 +13,7 @@
     "format": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
@@ -27,9 +28,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "tailwindcss": "3.3.1",
+    "typed.js": "^2.0.15",
     "typescript": "5.0.4"
-  },
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9"
   }
 }
