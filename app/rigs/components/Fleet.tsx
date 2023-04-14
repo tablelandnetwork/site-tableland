@@ -34,13 +34,16 @@ export default function Showcase({
       <div className="overflow-hidden h-48 md:h-56 lg:h-64 xl:h-80 2xl:h-96 mb-3 md:mb-4 lg:mb-6 xl:mb-8">
         <div
           className="flex w-auto h-full animate-scroll"
-          style={{ animationDelay: delay + "s" }}
+          style={{
+            transform: "translate3d(0px,0px,0px)",
+            animationDelay: delay + "s",
+          }}
         >
-          {rigs.map(function (p, i) {
+          {rigs.map(function (r, i) {
             return (
               <div key={i} className="relative h-full aspect-square">
                 <Image
-                  src={p}
+                  src={r}
                   alt={name + " " + i}
                   fill
                   className="animate-blur"

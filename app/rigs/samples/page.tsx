@@ -1,11 +1,10 @@
 import HeaderNav from "../../components/HeaderNav"
 import FooterNav from "../../components/FooterNav"
 import Showcase from "../../components/Showcase"
-import Link from "next/link"
 import ButtonLink from "../../components/ButtonLink"
 import Image from "next/image"
 import { Poppins, Orbitron } from "next/font/google"
-import { getRigs } from "@/lib/getRigs"
+import getRigs from "@/lib/rigs"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -50,13 +49,13 @@ export default function SampleRigs() {
         className="w-full bg-darkgreen border-t-1 border-color-green"
       >
         <div className="w-full h-[18px] bg-white opacity-[0.15]"></div>
-        <div className="sample-rigs-grid container flex flex-col items-center p-4">
-          <div className="w-full grid gap-4 grid-cols-2 md:grid-cols-5 xl:grid-cols-10">
-            {rigs.map(function (p, i) {
+        <div className="mx-auto p-4">
+          <div className="w-full grid gap-4 grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))]">
+            {rigs.map(function (r, i) {
               return (
                 <div key={i} className="relative h-full aspect-square">
                   <Image
-                    src={p}
+                    src={r}
                     alt={"Rig " + i}
                     fill
                     className="rounded animate-blur"
