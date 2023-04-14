@@ -103,7 +103,7 @@ export default function Terminal({ classes }: Props) {
         }`}
       >
         <div className="w-full">
-          <div className="cmd relative bg-green">
+          <div className="relative bg-green before:content-['>_'] before:absolute before:left-[0.5rem]">
             <div className="pl-6 pr-3">
               <span ref={cmd1r}></span>
             </div>
@@ -120,7 +120,7 @@ export default function Terminal({ classes }: Props) {
                   )
                 })}
               </div>
-              <div className="cmd relative bg-green">
+              <div className="relative bg-green before:content-['>_'] before:absolute before:left-[0.5rem]">
                 <div className="pl-6 pr-3">
                   <span ref={cmd2r}></span>
                 </div>
@@ -139,7 +139,7 @@ export default function Terminal({ classes }: Props) {
                   )
                 })}
               </div>
-              <div className="cmd relative bg-green">
+              <div className="relative bg-green before:content-['>_'] before:absolute before:left-[0.5rem]">
                 <div className="pl-6 pr-3">
                   <span ref={cmd3r}></span>
                 </div>
@@ -158,7 +158,7 @@ export default function Terminal({ classes }: Props) {
                   )
                 })}
               </div>
-              <div className="cmd relative bg-green">
+              <div className="relative bg-green before:content-['>_'] before:absolute before:left-[0.5rem]">
                 <div className="pl-6 pr-3">
                   <span ref={cmd4r}></span>
                 </div>
@@ -177,7 +177,7 @@ export default function Terminal({ classes }: Props) {
                   )
                 })}
               </div>
-              <div className="cmd relative bg-green">
+              <div className="relative bg-green before:content-['>_'] before:absolute before:left-[0.5rem]">
                 <div className="pl-6 pr-3">
                   <span ref={cmd5r}></span>
                 </div>

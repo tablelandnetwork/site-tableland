@@ -17,8 +17,6 @@ a {
   cursor: pointer;
 }
 
-/* Buttons */
-
 a.btn {
   @apply inline-block md:text-xl py-3 px-8 rounded-2xl uppercase cursor-pointer;
 }
@@ -104,14 +102,3 @@ nav li a:active {
   filter: blur(0);
   opacity: 1;
 }
-
-.cmd {
-  background-color: theme("colors.green");
-}
-
-.cmd::before {
-  content: "> ";
-  position: absolute;
-  left: 0.5rem;
-}
-

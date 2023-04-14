@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        white: "rgba(255,255,255,0.87)",
         black: "#1a1a1a",
         neonblue: "#75b6b5",
         grey: "#5d657f",
@@ -33,13 +34,13 @@ module.exports = {
             "--tw-prose-code": theme("colors.neonblue"),
             "--tw-prose-pre-code": theme("colors.neonblue"),
             "--tw-prose-pre-bg": theme("colors.green"),
-            "--tw-prose-invert-body": "white",
-            "--tw-prose-invert-headings": "white",
-            "--tw-prose-invert-lead": "white",
-            "--tw-prose-invert-links": "white",
-            "--tw-prose-invert-bold": "white",
+            "--tw-prose-invert-body": theme("colors.white"),
+            "--tw-prose-invert-headings": theme("colors.white"),
+            "--tw-prose-invert-lead": theme("colors.white"),
+            "--tw-prose-invert-links": theme("colors.white"),
+            "--tw-prose-invert-bold": theme("colors.white"),
             "--tw-prose-invert-bullets": theme("colors.verylightgreen"),
-            "--tw-prose-invert-captions": "white",
+            "--tw-prose-invert-captions": theme("colors.white"),
             "--tw-prose-invert-code": theme("colors.neonblue"),
             "--tw-prose-invert-pre-code": theme("colors.neonblue"),
             "--tw-prose-invert-pre-bg": theme("colors.green"),

@@ -17,7 +17,7 @@ export default function FooterNav() {
             <Image
               src={logo}
               alt="Tableland"
-              className="h-3 w-auto"
+              className="h-3 w-auto opacity-[0.87]"
               priority={true}
             />
             <div className="mt-3">

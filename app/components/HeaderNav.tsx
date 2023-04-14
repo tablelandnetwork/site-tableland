@@ -52,7 +52,7 @@ export default function HeaderNav() {
             <Image
               src={opaque ? logoWhite : logoBlack}
               alt="Tableland"
-              className="h-3 md:h-4 w-auto"
+              className={`h-3 md:h-4 w-auto${opaque ? " opacity-[0.87]" : ""}`}
               priority={true}
             />
           </a>
@@ -74,7 +74,7 @@ export default function HeaderNav() {
                 href="/pilot-program"
                 className={pathname == "/pilot-program" ? "underline" : ""}
               >
-                Grants
+                Pilot Program
               </Link>
             </li>
             <li>
@@ -140,7 +140,7 @@ export default function HeaderNav() {
                   href="/pilot-program"
                   className="block py-2 pl-3 pr-4 hover:underline"
                 >
-                  Grants
+                  Pilot Program
                 </Link>
                 <Link
                   href="/rigs"
