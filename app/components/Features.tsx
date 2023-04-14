@@ -6,7 +6,7 @@ export default function Features() {
     <div className="w-full grid gap-4 lg:gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
       {features.map(function (f, i) {
         return (
-          <div key={i} className="rounded-lg">
+          <div key={i} className="rounded-lg mt-6">
             <div className="flex items-center mb-4">
               <span className="inline-block bg-white text-center rounded-full mr-4">
                 <f.icon className="text-black text-3xl px-[0.25em]"></f.icon>
