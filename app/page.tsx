@@ -5,6 +5,7 @@ import ButtonLink from "./components/ButtonLink"
 import Terminal from "./components/Terminal"
 import Features from "./components/Features"
 import Tweets from "./components/Tweets"
+import Examples from "./components/Examples"
 import { Poppins } from "next/font/google"
 
 const poppins = Poppins({
@@ -53,7 +54,7 @@ export default function Home() {
       >
         <div className="w-full h-[18px] bg-white opacity-[0.15]"></div>
         <div className="container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 py-12 md:py-24 lg:py-36">
-          <h1 className="w-full text-lg lg:text-xl xl:text-2xl mb-10 lg:mb-16">
+          <h1 className="w-full text-lg lg:text-xl xl:text-2xl mb-6 lg:mb-10">
             Build on decentralized data without the headache.
           </h1>
           <Features></Features>
@@ -93,8 +94,8 @@ export default function Home() {
           <p className="w-full text-center text-sm lg:text-lg text-verylightgreen font-light mb-6 lg:mb-10">
             Get started with examples and templates from the community.
           </p>
-          <div className="flex flex-col items-center mb-6 lg:mb-10">
-            {/* <Examples></Examples> */}
+          <div className="mb-6 lg:mb-10">
+            <Examples></Examples>
           </div>
           <div className="text-center">
             <ButtonLink
