@@ -87,7 +87,7 @@ export default function Rigs() {
             <p className="lead">
               A 3k generative NFT built from 1,074 handcrafted works of art for
               the builders and creatives of cyberspace. See{" "}
-              <Link href="/sample-rigs">samples</Link>.
+              <Link href="/rigs/samples">samples</Link>.
             </p>
             <p>
               Rigs are{" "}
@@ -756,10 +756,10 @@ export default function Rigs() {
       </section>
       {/* showcase */}
       <Showcase
-        href="https://docs.tableland.xyz"
+        href="https://opensea.io/collection/tableland-rigs"
         classes="bg-green border-lightgreen"
       >
-        Apply now
+        View on OpenSea
       </Showcase>
       {/* footer */}
       <FooterNav />

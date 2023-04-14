@@ -72,33 +72,3 @@ nav li a:active {
   text-decoration: underline;
   transition: all 0.2s ease-in-out;
 }
-
-/* Pages */
-
-.pilot-page {
-  background: top / cover no-repeat url("/img/pilot/hero.jpg");
-  background-attachment: fixed;
-  overflow: hidden;
-}
-
-.sample-rigs .page-hero {
-  min-height: 50vh;
-}
-
-/* Rigs */
-
-.sample-rigs-grid {
-  max-width: none !important;
-}
-
-.v-lazy-image {
-  filter: blur(5px);
-  transition: filter 1s ease-out, opacity 1s ease-out;
-  will-change: filter;
-  opacity: 0;
-}
-
-.v-lazy-image-loaded {
-  filter: blur(0);
-  opacity: 1;
-}
