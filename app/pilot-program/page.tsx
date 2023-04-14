@@ -1,20 +1,8 @@
-import HeaderNav from "../components/HeaderNav"
-import FooterNav from "../components/FooterNav"
 import Showcase from "../components/Showcase"
 import Link from "next/link"
 import ButtonLink from "../components/ButtonLink"
 import Image from "next/image"
-import { Poppins, Orbitron } from "next/font/google"
 import banner from "../../public/img/pilot/community.jpg"
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-})
-const orbitron = Orbitron({
-  subsets: ["latin"],
-  weight: ["600", "700", "800", "900"],
-})
 
 export const metadata = {
   title: "Tableland: Pilot Program",
@@ -24,14 +12,12 @@ export const metadata = {
 
 export default function PilotProgram() {
   return (
-    <main className={"min-h-screen " + poppins.className}>
-      {/* header */}
-      <HeaderNav />
+    <main>
       {/* <!-- hero --> */}
       <section className="w-full bg-top bg-cover bg-no-repeat bg-[url('/img/pilot/hero.jpg')]">
         <div className="relative container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pt-24 md:pt-32 lg:pt-48 pb-12 md:pb-24 lg:pb-36">
           <article className="mx-auto md:mx-[initial] prose prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose font-light text-center md:text-left">
-            <h1 className={orbitron.className}>The Pilot Program</h1>
+            <h1 className="font-title">The Pilot Program</h1>
             <p className="lead">
               Join the next pilot program season for access to exclusive
               mentorship, prizes, and a small group building on the cutting edge
@@ -66,7 +52,7 @@ export default function PilotProgram() {
         <div className="w-full h-[18px] bg-white opacity-[0.15]"></div>
         <div className="container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 py-12 md:py-24 lg:py-36">
           <article className="mx-auto prose prose-normal !prose-invert prose-sm md:prose-md lg:prose-lg max-w-prose prose-img:rounded-lg prose-pre:text-xs font-light">
-            <h1 className={orbitron.className}>Benefits</h1>
+            <h1 className="font-title">Benefits</h1>
             <p>
               <Image
                 src={banner}
@@ -109,8 +95,6 @@ export default function PilotProgram() {
       >
         Apply now
       </Showcase>
-      {/* footer */}
-      <FooterNav />
     </main>
   )
 }

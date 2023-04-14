@@ -31,13 +31,15 @@
     "format": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.9",
+    "@tailwindcss/typography": "0.5.9",
     "@types/node": "18.15.11",
     "@types/react": "18.0.33",
     "@types/react-dom": "18.0.11",
     "autoprefixer": "10.4.14",
-    "embla-carousel-autoplay": "^7.1.0",
-    "embla-carousel-react": "^7.1.0",
+    "configcat-js": "7.0.0",
+    "configcat-node": "9.1.1",
+    "embla-carousel-autoplay": "7.1.0",
+    "embla-carousel-react": "7.1.0",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "eslint-config-prettier": "8.8.0",
@@ -46,9 +48,9 @@
     "prettier": "2.8.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.8.0",
+    "react-icons": "4.8.0",
     "tailwindcss": "3.3.1",
-    "typed.js": "^2.0.15",
+    "typed.js": "2.0.15",
     "typescript": "5.0.4"
   }
 }

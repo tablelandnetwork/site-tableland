@@ -1,5 +1,5 @@
 import ButtonLink from "./ButtonLink"
-import { ReactNode } from "react"
+import { type ReactNode } from "react"
 
 type Props = {
   href: string

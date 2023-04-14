@@ -1,8 +1,8 @@
-import Home from "./components/Home"
-import Hero from "./components/Hero"
-import ButtonLink from "./components/ButtonLink"
+import Home from "../components/Home"
+import Hero from "../components/Hero"
+import ButtonLink from "../components/ButtonLink"
 
-export default function HomePage() {
+export default function HomePageA() {
   return (
     <Home>
       <Hero>
@@ -10,7 +10,7 @@ export default function HomePage() {
           Read+write from <span className="font-bold">anywhere</span>
         </>
         <>
-          The <span className="font-bold">decentralized</span> cloud database.
+          SQL infrastructure for the <span className="font-bold">decentralized</span> internet
         </>
         <>
           Tableland is an open source, permissionless cloud database built on

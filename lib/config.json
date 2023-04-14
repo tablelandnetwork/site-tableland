@@ -1,0 +1,28 @@
+{
+  "ConfigFile": { "Preferences": "p", "FeatureFlags": "f" },
+  "Preferences": { "BaseUrl": "u", "Redirect": "r" },
+  "Setting": {
+    "Value": "v",
+    "SettingType": "t",
+    "RolloutPercentageItems": "p",
+    "RolloutRules": "r",
+    "VariationId": "i"
+  },
+  "RolloutRules": {},
+  "RolloutPercentageItems": {},
+  "ConfigJSON": {
+    "p": { "u": "https://cdn-global.configcat.com", "r": 0 },
+    "f": {
+      "homePageVariantA": {
+        "v": true,
+        "i": "704ba714",
+        "t": 0,
+        "p": [
+          { "o": 0, "v": true, "p": 50, "i": "704ba714" },
+          { "o": 1, "v": false, "p": 50, "i": "ba535c60" }
+        ],
+        "r": []
+      }
+    }
+  }
+}

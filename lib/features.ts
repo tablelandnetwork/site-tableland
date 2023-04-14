@@ -1,4 +1,4 @@
-import { IconType } from "react-icons"
+import { type IconType } from "react-icons"
 import { FaDatabase, FaLock, FaBriefcase, FaLink } from "react-icons/fa"
 
 type Feature = {

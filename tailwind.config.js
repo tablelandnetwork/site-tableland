@@ -1,3 +1,5 @@
+const { fontFamily } = require("tailwindcss/defaultTheme")
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -20,6 +22,10 @@ module.exports = {
         lightgreen: "#3b4949",
         verylightgreen: "#718b8b",
         neongreen: "#0be291",
+      },
+      fontFamily: {
+        sans: ["var(--font-poppins)", ...fontFamily.sans],
+        title: ["var(--font-orbitron)", ...fontFamily.sans],
       },
       typography: ({ theme }) => ({
         normal: {
@@ -49,7 +55,7 @@ module.exports = {
       }),
       animation: {
         scroll: "scroll 60s linear infinite",
-        blur: "blur 1s ease-out"
+        blur: "blur 1s ease-out",
       },
       keyframes: {
         scroll: {
@@ -59,7 +65,7 @@ module.exports = {
         blur: {
           "0%": { filter: "blur(5px)", opacity: 0 },
           "100%": { filter: "blur(0)", opacity: 1 },
-        }
+        },
       },
     },
   },

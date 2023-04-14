@@ -1,11 +1,8 @@
-import HeaderNav from "../components/HeaderNav"
-import FooterNav from "../components/FooterNav"
 import Showcase from "../components/Showcase"
 import Link from "next/link"
 import ButtonLink from "../components/ButtonLink"
 import Fleet from "./components/Fleet"
 import Image from "next/image"
-import { Poppins, Orbitron } from "next/font/google"
 import garage from "../../public/img/rigs/garage.jpg"
 import pilots from "../../public/img/rigs/pilots.jpg"
 import pioneer1 from "../../public/img/rigs/pioneer_1.jpg"
@@ -22,15 +19,6 @@ import titan from "../../public/img/rigs/originals/titan.jpg"
 import tracer from "../../public/img/rigs/originals/tracer.jpg"
 import tumbler from "../../public/img/rigs/originals/tumbler.jpg"
 import getRigs from "@/lib/rigs"
-
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-})
-const orbitron = Orbitron({
-  subsets: ["latin"],
-  weight: ["600", "700", "800", "900"],
-})
 
 export const metadata = {
   title: "Tableland: Rigs",
@@ -50,15 +38,13 @@ export default function Rigs() {
   const foils = getRigs(20, "foils")
 
   return (
-    <main className={"min-h-screen " + poppins.className}>
-      {/* header */}
-      <HeaderNav />
+    <main>
       {/* hero */}
       <section className="w-full bg-top bg-cover bg-no-repeat bg-[url('/img/rigs/hero.jpg')]">
         <div className="absolute w-full opacity-50 bg-purple h-[156px] md:h-[188px] lg:h-[280px] xl:h-[280px]"></div>
         <div className="relative container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pt-24 md:pt-32 lg:pt-48">
           <article className="prose !prose-invert prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose text-center md:text-left">
-            <h1 className={orbitron.className}>
+            <h1 className="font-title">
               Meet the <span className="font-black">Rigs</span>
             </h1>
             <p></p>
@@ -132,7 +118,7 @@ export default function Rigs() {
         <div className="w-full h-[18px] bg-white opacity-[0.15]"></div>
         <div className="container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 py-12 md:py-24 lg:py-36">
           <article className="mx-auto prose prose-normal !prose-invert prose-sm md:prose-md lg:prose-lg max-w-prose prose-img:rounded-lg prose-pre:text-xs font-light">
-            <h1 className={orbitron.className}>The Garage</h1>
+            <h1 className="font-title">The Garage</h1>
             <p>
               <Image src={garage} alt="Garage" className="w-full" />
               <Link href="https://garage.tableland.xyz" target="_blank">
@@ -284,7 +270,7 @@ export default function Rigs() {
         <div className="w-full h-[18px] bg-white opacity-[0.15]"></div>
         <div className="container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 py-12 md:py-24 lg:py-36">
           <article className="mx-auto prose prose-normal !prose-invert prose-sm md:prose-md lg:prose-lg max-w-prose prose-img:rounded-lg prose-pre:text-xs font-light">
-            <h1 className={orbitron.className}>Story</h1>
+            <h1 className="font-title">Story</h1>
             <p>
               <span className="lead italic">
                 Tableland awaits...but you&apos;re going to need a Rig to get
@@ -359,7 +345,7 @@ export default function Rigs() {
         <div className="w-full h-[18px] bg-white opacity-[0.15]"></div>
         <div className="container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 py-12 md:py-24 lg:py-36">
           <article className="mx-auto prose prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose prose-img:rounded-lg prose-pre:text-xs font-light">
-            <h1 className={orbitron.className}>Fleets</h1>
+            <h1 className="font-title">Fleets</h1>
             <p>
               From fast and flat salts to the windy and steep desert mountains,
               each domain of Tableland demands a different tool to explore. Rigs
@@ -476,11 +462,11 @@ export default function Rigs() {
             <div className="flex">
               <div className="w-1/2">
                 <h3 className="uppercase">Num. Originals</h3>
-                <h2 className={orbitron.className}>66</h2>
+                <h2 className="font-title">66</h2>
               </div>
               <div className="w-1/2">
                 <h3 className="uppercase">Color Variants</h3>
-                <h2 className={orbitron.className}>181</h2>
+                <h2 className="font-title">181</h2>
               </div>
             </div>
             <p>
@@ -639,7 +625,7 @@ export default function Rigs() {
         <div className="w-full h-[18px] bg-white opacity-[0.15]"></div>
         <div className="container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 py-12 md:py-24 lg:py-36">
           <article className="mx-auto prose prose-normal !prose-invert prose-sm md:prose-md lg:prose-lg max-w-prose prose-img:rounded-lg prose-pre:text-xs font-light">
-            <h1 className={orbitron.className}>The Artists</h1>
+            <h1 className="font-title">The Artists</h1>
             <p>
               <Image src={oddfellows} alt="Oddfellows" className="w-full" />
               The Rigs project was developed alongside an über-talented team of
@@ -764,8 +750,6 @@ export default function Rigs() {
       >
         View on OpenSea
       </Showcase>
-      {/* footer */}
-      <FooterNav />
     </main>
   )
 }
