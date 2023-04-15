@@ -1,9 +1,4 @@
-type Tweet = {
-  username: string
-  image: string
-  body: string
-  url: string
-}
+import { Tweet } from "@/lib/types"
 
 const tweets: Tweet[] = [
   {

@@ -1,5 +1,3 @@
-const { withConfigcat } = require("./scripts/configcat")
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
@@ -19,4 +17,4 @@ const nextConfig = {
   },
 }
 
-module.exports = withConfigcat(nextConfig)
+module.exports = nextConfig

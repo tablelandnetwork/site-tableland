@@ -3,23 +3,23 @@ import { type ReactNode } from "react"
 import { FaLongArrowAltRight } from "react-icons/fa"
 
 type Props = {
+  children: ReactNode
   href: string
   target?: string
   classes?: string
-  children: ReactNode
 }
 
 export default function SmallButtonLink({
+  children,
   href,
   target,
   classes,
-  children,
 }: Props) {
   return (
     <Link
       href={href}
       target={target ? target : ""}
-      className={"btn-small bg-black text-white " + classes}
+      className={`btn-small bg-black text-white${classes ? " " + classes : ""}`}
     >
       <span className="flex items-center">
         {children}

@@ -1,10 +1,4 @@
-type Example = {
-  username: string
-  image: string
-  title: string
-  description: string
-  repo: string
-}
+import { Example } from "@/lib/types"
 
 const examples: Example[] = [
   {

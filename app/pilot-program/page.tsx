@@ -10,7 +10,7 @@ export const metadata = {
     "The Pilot Program is here to support you with funding, technical mentors, public showcases, and more. The program is low-lift and high reward for any builder with a vision and dedication.",
 }
 
-export default function PilotProgram() {
+export default function PilotProgramPage() {
   return (
     <main>
       {/* <!-- hero --> */}

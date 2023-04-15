@@ -26,6 +26,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-poppins)", ...fontFamily.sans],
         title: ["var(--font-orbitron)", ...fontFamily.sans],
+        mono: "monospace"
       },
       typography: ({ theme }) => ({
         normal: {

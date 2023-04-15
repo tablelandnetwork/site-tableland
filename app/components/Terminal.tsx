@@ -87,7 +87,7 @@ export default function Terminal({ classes }: Props) {
         },
       })
     } else {
-      const typed = new Typed(cmd5r.current, {
+      new Typed(cmd5r.current, {
         strings: [""],
         typeSpeed: 10,
         showCursor: true,
@@ -96,7 +96,11 @@ export default function Terminal({ classes }: Props) {
   }, [lines1, lines2, lines3, lines4])
 
   return (
-    <div className={"hidden sm:block text-white text-xs text-left font-mono " + classes}>
+    <div
+      className={`hidden sm:block text-white text-xs text-left font-mono${
+        classes ? " " + classes : ""
+      }`}
+    >
       <div
         className={`flex bg-darkgreen rounded-2xl h-64 overflow-scroll border border-green pt-3${
           lines4.val ? " flex-col-reverse" : ""

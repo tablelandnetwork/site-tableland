@@ -31,13 +31,10 @@
     "format": "npm run prettier:fix && npm run lint:fix"
   },
   "dependencies": {
+    "@amplitude/analytics-browser": "1.9.4",
     "@tailwindcss/typography": "0.5.9",
-    "@types/node": "18.15.11",
-    "@types/react": "18.0.33",
-    "@types/react-dom": "18.0.11",
     "autoprefixer": "10.4.14",
-    "configcat-js": "7.0.0",
-    "configcat-node": "9.1.1",
+    "configcat-js-ssr": "6.0.0",
     "embla-carousel-autoplay": "7.1.0",
     "embla-carousel-react": "7.1.0",
     "eslint": "8.38.0",
@@ -51,6 +48,13 @@
     "react-icons": "4.8.0",
     "tailwindcss": "3.3.1",
     "typed.js": "2.0.15",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "uuid": "9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.33",
+    "@types/react-dom": "18.0.11",
+    "@types/uuid": "9.0.1"
   }
 }

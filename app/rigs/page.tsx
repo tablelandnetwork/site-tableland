@@ -26,7 +26,7 @@ export const metadata = {
     "A 3k generative NFT built from 1,074 handcrafted works of art for the builders and creatives of cyberspace.",
 }
 
-export default function Rigs() {
+export default function RigsPage() {
   const rigs = getRigs(20)
   const titans = getRigs(20, "titans")
   const tumblers = getRigs(20, "tumblers")

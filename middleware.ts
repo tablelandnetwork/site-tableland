@@ -1,13 +1,8 @@
 import { type NextRequest, NextResponse } from "next/server"
-import { type FlagsMatcher, getValue, type Flags } from "@/lib/configcat"
+import { v4 as uuidv4 } from "uuid"
 
-const FLAGS: FlagsMatcher = {
-  "/": {
-    cookie: "flag-homePageVariantA",
-    name: process.env.FEATURE_FLAG_HOME_PAGE as Flags,
-    rewrite: (enabled) => (enabled ? "/a" : "/"),
-  },
-}
+// Anonomous user identifier
+const cookie = "id"
 
 export const config = {
   // Pages to match
@@ -15,22 +10,13 @@ export const config = {
 }
 
 export async function middleware(req: NextRequest) {
-  const url = req.nextUrl
-  const flag = FLAGS[url.pathname]
-
-  if (!flag) return
-
-  const value =
-    req.cookies.get(flag.cookie)?.value || (getValue(flag.name) ? "1" : "0")
-
-  // Create a rewrite to the page matching the flag
-  url.pathname = flag.rewrite(value === "1")
-  const res = NextResponse.rewrite(url)
+  // Get or create identifier
+  const value = req.cookies.get(cookie)?.value || uuidv4()
 
   // Add the cookie to the response if it's not present
-  if (!req.cookies.has(flag.cookie)) {
-    res.cookies.set(flag.cookie, value)
+  const res = NextResponse.next()
+  if (!req.cookies.has(cookie)) {
+    res.cookies.set(cookie, value)
   }
-
   return res
 }
