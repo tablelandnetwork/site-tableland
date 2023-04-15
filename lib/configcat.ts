@@ -18,7 +18,9 @@ export async function getFlag(
   key: string,
   id: string | undefined
 ): Promise<IEvaluationDetails> {
-  return client().getValueDetailsAsync(key, false, {
-    identifier: id || "",
-  })
+  return client().getValueDetailsAsync(
+    key,
+    false,
+    id ? { identifier: id } : undefined
+  )
 }

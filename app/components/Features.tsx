@@ -1,14 +1,12 @@
 import Link from "next/link"
-import { cookies } from "next/headers"
+import { getUserId } from "@/lib/users"
 import { getFlag } from "@/lib/configcat"
 import { features } from "@/lib/content"
 
 export default async function Features() {
-  const cookieStore = cookies()
-  const id = cookieStore.get("id")
-
-  const title = await getFlag(features.flags["title"], id?.value)
-  const items = await getFlag(features.flags["items"], id?.value)
+  const userId = getUserId()
+  const title = await getFlag(features.flags["title"], userId)
+  const items = await getFlag(features.flags["items"], userId)
 
   const show = items.value ? features.b.items : features.a.items
   return (

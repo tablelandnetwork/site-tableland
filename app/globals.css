@@ -9,7 +9,7 @@
 
 body {
   color: theme("colors.black");
-  background-color: theme("colors.black");
+  background-color: theme("colors.lightpurple");
 }
 
 a {

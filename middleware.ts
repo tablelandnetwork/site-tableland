@@ -1,8 +1,8 @@
 import { type NextRequest, NextResponse } from "next/server"
-import { v4 as uuidv4 } from "uuid"
+// import { anonUserCookieName as cookie } from "./lib/users"
 
 // Anonomous user identifier
-const cookie = "id"
+export const anonUserCookieName = "id"
 
 export const config = {
   // Pages to match
@@ -11,12 +11,15 @@ export const config = {
 
 export async function middleware(req: NextRequest) {
   // Get or create identifier
-  const value = req.cookies.get(cookie)?.value || uuidv4()
+  // Note: `randomUUID` returns ill-formed UUIDs (last hyphen is missing).
+  // See https://github.com/vercel/next.js/issues/47189.
+  const value =
+    req.cookies.get(anonUserCookieName)?.value || crypto.randomUUID()
 
   // Add the cookie to the response if it's not present
   const res = NextResponse.next()
-  if (!req.cookies.has(cookie)) {
-    res.cookies.set(cookie, value)
+  if (!req.cookies.has(anonUserCookieName)) {
+    res.cookies.set(anonUserCookieName, value)
   }
   return res
 }

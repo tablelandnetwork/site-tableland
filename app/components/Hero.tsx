@@ -1,17 +1,15 @@
 import ButtonLink from "./ButtonLink"
 import Terminal from "./Terminal"
-import { cookies } from "next/headers"
+import { getUserId } from "@/lib/users"
 import { getFlag } from "@/lib/configcat"
 import { hero } from "@/lib/content"
 
 export default async function Hero() {
-  const cookieStore = cookies()
-  const id = cookieStore.get("id")
-
-  const tag = await getFlag(hero.flags["tag"], id?.value)
-  const title = await getFlag(hero.flags["title"], id?.value)
-  const lead = await getFlag(hero.flags["lead"], id?.value)
-  const cta = await getFlag(hero.flags["cta"], id?.value)
+  const userId = getUserId()
+  const tag = await getFlag(hero.flags["tag"], userId)
+  const title = await getFlag(hero.flags["title"], userId)
+  const lead = await getFlag(hero.flags["lead"], userId)
+  const cta = await getFlag(hero.flags["cta"], userId)
 
   return (
     <section className="w-full bg-top bg-cover bg-no-repeat bg-[url('/img/home/hero.jpg')]">
