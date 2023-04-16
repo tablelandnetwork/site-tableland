@@ -1,8 +1,9 @@
-import Showcase from "../components/Showcase"
+import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import ButtonLink from "../components/ButtonLink"
 import Fleet from "./components/Fleet"
-import Image from "next/image"
+import Showcase from "../components/Showcase"
 import garage from "../../public/img/rigs/garage.jpg"
 import pilots from "../../public/img/rigs/pilots.jpg"
 import pioneer1 from "../../public/img/rigs/pioneer_1.jpg"
@@ -20,7 +21,7 @@ import tracer from "../../public/img/rigs/originals/tracer.jpg"
 import tumbler from "../../public/img/rigs/originals/tumbler.jpg"
 import getRigs from "@/lib/rigs"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Tableland: Rigs",
   description:
     "A 3k generative NFT built from 1,074 handcrafted works of art for the builders and creatives of cyberspace.",

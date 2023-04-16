@@ -1,10 +1,11 @@
-import Showcase from "../components/Showcase"
+import type { Metadata } from 'next'
 import Link from "next/link"
-import ButtonLink from "../components/ButtonLink"
 import Image from "next/image"
+import ButtonLink from "../components/ButtonLink"
+import Showcase from "../components/Showcase"
 import banner from "../../public/img/pilot/community.jpg"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Tableland: Pilot Program",
   description:
     "The Pilot Program is here to support you with funding, technical mentors, public showcases, and more. The program is low-lift and high reward for any builder with a vision and dedication.",

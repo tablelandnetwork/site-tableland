@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { type ReactNode, useEffect } from "react"
-import { init, track } from "@/lib/amplitude"
+import { Event } from "@/lib/types"
 
 type Props = {
   children: ReactNode
@@ -14,6 +14,16 @@ type Props = {
   classes?: string
 }
 
+async function logEvent(event: Event): Promise<Response> {
+  return fetch("/api/events", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(event),
+  })
+}
+
 export default function EventLink({
   children,
   href,
@@ -23,16 +33,13 @@ export default function EventLink({
   variantIds,
   classes,
 }: Props) {
-  useEffect(() => {
-    if (userId) {
-      init(userId)
-    }
-  }, [event, userId])
-
-  const handleClick = () => {
+  const handleClick = async () => {
     if (event && userId && variantIds) {
-      console.log(event, variantIds)
-      track(event, { variantIds: variantIds })
+      await logEvent({
+        name: event,
+        userId: userId,
+        params: { variantIds: variantIds },
+      })
     }
   }
 

@@ -1,5 +1,15 @@
 import { type IconType } from "react-icons"
 
+export type Event = {
+  name: string
+  userId: string
+  params: Params
+}
+
+export type Params = {
+  variantIds: string[]
+}
+
 export type Flags = {
   [x: string]: string
 }

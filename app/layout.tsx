@@ -1,10 +1,11 @@
 import "./globals.css"
 import { type ReactNode } from "react"
+import type { Metadata } from "next"
 import { Poppins, Orbitron } from "next/font/google"
 import HeaderNav from "./components/HeaderNav"
 import FooterNav from "./components/FooterNav"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Tableland: The decentralized cloud database",
   description:
     "Tableland is an open source, permissionless cloud database built on SQLite. Read and write tamperproof data from apps, data pipelines, or EVM smart contracts.",

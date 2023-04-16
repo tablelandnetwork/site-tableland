@@ -1,9 +1,10 @@
-import Showcase from "../../components/Showcase"
-import ButtonLink from "../../components/ButtonLink"
+import type { Metadata } from "next"
 import Image from "next/image"
+import ButtonLink from "../../components/ButtonLink"
+import Showcase from "../../components/Showcase"
 import getRigs from "@/lib/rigs"
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Tableland: Sample Rigs",
   description:
     "A 3k generative NFT built from 1,074 handcrafted works of art for the builders and creatives of cyberspace. Here are 1,000 random Rigs.",
