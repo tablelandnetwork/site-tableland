@@ -1,14 +1,14 @@
-import Link from "next/link"
+import EventLink from "./EventLink"
 import { getUserId } from "@/lib/users"
 import { getFlag } from "@/lib/configcat"
 import { features } from "@/lib/content"
 
 export default async function Features() {
   const userId = getUserId()
-  const title = await getFlag(features.flags["title"], userId)
-  const items = await getFlag(features.flags["items"], userId)
+  const [titleB, titleVariant] = await getFlag(features.flags["title"], userId)
+  const [itemsB, itemsVariant] = await getFlag(features.flags["items"], userId)
 
-  const show = items.value ? features.b.items : features.a.items
+  const showItems = itemsB ? features.b.items : features.a.items
   return (
     <section
       id="features"
@@ -17,10 +17,10 @@ export default async function Features() {
       <div className="w-full h-[18px] bg-white opacity-[0.15]"></div>
       <div className="container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 py-12 md:py-24 lg:py-36">
         <h1 className="w-full text-lg lg:text-xl xl:text-2xl mb-6 lg:mb-10">
-          {title.value ? features.b.title : features.a.title}
+          {titleB ? features.b.title : features.a.title}
         </h1>
         <div className="w-full grid gap-4 lg:gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          {show.map(function (f, i) {
+          {showItems.map(function (f, i) {
             return (
               <div key={i} className="rounded-lg mt-6">
                 <div className="flex items-center mb-4">
@@ -33,9 +33,15 @@ export default async function Features() {
                   {f.description}
                 </p>
                 <p className="text-xs text-white font-light">
-                  <Link href={f.link} target="_blank">
+                  <EventLink
+                    href={f.link}
+                    target="_blank"
+                    event={`Features Click ${f.title}`}
+                    userId={userId}
+                    variantIds={[titleVariant, itemsVariant]}
+                  >
                     Learn more
-                  </Link>
+                  </EventLink>
                 </p>
               </div>
             )

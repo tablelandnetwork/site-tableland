@@ -1,13 +1,7 @@
 import { type NextRequest, NextResponse } from "next/server"
-// import { anonUserCookieName as cookie } from "./lib/users"
 
 // Anonomous user identifier
 export const anonUserCookieName = "id"
-
-export const config = {
-  // Pages to match
-  matcher: ["/"],
-}
 
 export async function middleware(req: NextRequest) {
   // Get or create identifier
@@ -19,7 +13,11 @@ export async function middleware(req: NextRequest) {
   // Add the cookie to the response if it's not present
   const res = NextResponse.next()
   if (!req.cookies.has(anonUserCookieName)) {
-    res.cookies.set(anonUserCookieName, value)
+    const date = new Date()
+    date.setDate(new Date().getDate() + 7) // one week
+    res.cookies.set(anonUserCookieName, value, {
+      expires: date
+    })
   }
   return res
 }
