@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Tableland: The decentralized cloud database",
   description:
     "Tableland is an open source, permissionless cloud database built on SQLite. Read and write tamperproof data from apps, data pipelines, or EVM smart contracts.",
+  keywords: ["database", "data", "sql", "decentralized", "web3", "tamperproof"],
+  category: "technology",
+  themeColor: "#101e1e",
 }
 
 const poppins = Poppins({
