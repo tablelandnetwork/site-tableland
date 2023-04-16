@@ -4,6 +4,18 @@ import type { Metadata } from "next"
 import { Poppins, Orbitron } from "next/font/google"
 import HeaderNav from "./components/HeaderNav"
 import FooterNav from "./components/FooterNav"
+import Fathom from "./components/Fathom"
+
+/*
+
+- add new navigation links
+- add studio section
+- add fathom
+- more a/b?
+- share a/b loom
+- 404 page?
+
+*/
 
 export const metadata: Metadata = {
   title: "Tableland: The decentralized cloud database",
@@ -31,6 +43,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`min-h-screen ${poppins.variable} ${orbitron.variable} font-sans`}
       >
+        <Fathom />
         <HeaderNav />
         {children}
         <FooterNav />
