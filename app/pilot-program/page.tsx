@@ -15,13 +15,13 @@ export const metadata: Metadata = {
   openGraph: {
     title,
     description,
-    url: "https://tableland.xyz",
+    url: "https://tableland.xyz/pilot-program",
     siteName: title,
     images: [
       {
         url: "https://tableland.xyz/img/og/pilot.jpg",
         width: 1200,
-        height: 631,
+        height: 630,
       },
     ],
     locale: "en-US",
