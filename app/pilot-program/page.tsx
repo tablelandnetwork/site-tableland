@@ -5,10 +5,28 @@ import ButtonLink from "../components/ButtonLink"
 import Showcase from "../components/Showcase"
 import community from "../../public/img/pilot/community.jpg"
 
+const title = "Tableland: Pilot Program"
+const description =
+  "The Pilot Program is here to support you with funding, technical mentors, public showcases, and more. The program is low-lift and high reward for any builder with a vision and dedication."
+
 export const metadata: Metadata = {
-  title: "Tableland: Pilot Program",
-  description:
-    "The Pilot Program is here to support you with funding, technical mentors, public showcases, and more. The program is low-lift and high reward for any builder with a vision and dedication.",
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "https://tableland.xyz",
+    siteName: title,
+    images: [
+      {
+        url: "https://tableland.xyz/img/og/pilot.jpg",
+        width: 1200,
+        height: 631,
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
 }
 
 export default function PilotProgramPage() {

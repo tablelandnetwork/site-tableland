@@ -4,7 +4,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { FaGithub, FaTwitter, FaYoutube, FaDiscord } from "react-icons/fa"
-import logo from "../../public/logo-white.svg"
+import logo from "../../public/img/logo/white.svg"
 
 export default function FooterNav() {
   const pathname = usePathname()

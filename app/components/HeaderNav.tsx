@@ -5,8 +5,8 @@ import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
-import logoBlack from "../../public/logo-black.svg"
-import logoWhite from "../../public/logo-white.svg"
+import logoBlack from "../../public/img/logo/black.svg"
+import logoWhite from "../../public/img/logo/white.svg"
 
 export default function HeaderNav() {
   const pathname = usePathname()

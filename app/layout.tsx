@@ -6,13 +6,31 @@ import HeaderNav from "./components/HeaderNav"
 import FooterNav from "./components/FooterNav"
 import Fathom from "./components/Fathom"
 
+const title = "Tableland: The decentralized cloud database"
+const description =
+  "Tableland is an open source, permissionless cloud database built on SQLite. Read and write tamperproof data from apps, data pipelines, or EVM smart contracts."
+
 export const metadata: Metadata = {
-  title: "Tableland: The decentralized cloud database",
-  description:
-    "Tableland is an open source, permissionless cloud database built on SQLite. Read and write tamperproof data from apps, data pipelines, or EVM smart contracts.",
+  title,
+  description,
   keywords: ["database", "data", "sql", "decentralized", "web3", "tamperproof"],
   category: "technology",
   themeColor: "#101e1e",
+  openGraph: {
+    title,
+    description,
+    url: "https://tableland.xyz",
+    siteName: title,
+    images: [
+      {
+        url: "https://tableland.xyz/img/og/home.jpg",
+        width: 1200,
+        height: 631,
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
 }
 
 const poppins = Poppins({

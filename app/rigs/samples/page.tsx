@@ -4,10 +4,28 @@ import ButtonLink from "../../components/ButtonLink"
 import Showcase from "../../components/Showcase"
 import getRigs from "@/lib/rigs"
 
+const title = "Tableland: Sample Rigs"
+const description =
+  "A 3k generative NFT built from 1,074 handcrafted works of art for the builders and creatives of cyberspace. Here are 1,000 random Rigs."
+
 export const metadata: Metadata = {
-  title: "Tableland: Sample Rigs",
-  description:
-    "A 3k generative NFT built from 1,074 handcrafted works of art for the builders and creatives of cyberspace. Here are 1,000 random Rigs.",
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "https://tableland.xyz",
+    siteName: title,
+    images: [
+      {
+        url: "https://tableland.xyz/img/og/rigs.jpg",
+        width: 1200,
+        height: 631,
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
 }
 
 export default function SampleRigsPage() {

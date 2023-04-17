@@ -21,10 +21,28 @@ import titan from "../../public/img/rigs/originals/titan.jpg"
 import tracer from "../../public/img/rigs/originals/tracer.jpg"
 import tumbler from "../../public/img/rigs/originals/tumbler.jpg"
 
+const title = "Tableland: Rigs"
+const description =
+  "A 3k generative NFT built from 1,074 handcrafted works of art for the builders and creatives of cyberspace."
+
 export const metadata: Metadata = {
-  title: "Tableland: Rigs",
-  description:
-    "A 3k generative NFT built from 1,074 handcrafted works of art for the builders and creatives of cyberspace.",
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    url: "https://tableland.xyz",
+    siteName: title,
+    images: [
+      {
+        url: "https://tableland.xyz/img/og/rigs.jpg",
+        width: 1200,
+        height: 631,
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
 }
 
 export default function RigsPage() {
