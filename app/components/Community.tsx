@@ -63,7 +63,7 @@ export default function Tweets() {
         </div>
         <div className="text-center">
           <ButtonLink
-            href="https://discord.gg/dc8EBEhGbg"
+            href="https://tableland.xyz/discord"
             target="_blank"
             classes="text-neonblue hover:text-white bg-darkgreen border-2 border-green"
           >

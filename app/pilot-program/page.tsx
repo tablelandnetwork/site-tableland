@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import ButtonLink from "../components/ButtonLink"
 import Showcase from "../components/Showcase"
-import banner from "../../public/img/pilot/community.jpg"
+import community from "../../public/img/pilot/community.jpg"
 
 export const metadata: Metadata = {
   title: "Tableland: Pilot Program",
@@ -58,7 +58,7 @@ export default function PilotProgramPage() {
             <h1 className="font-title">Benefits</h1>
             <p>
               <Image
-                src={banner}
+                src={community}
                 alt="Tableland Community"
                 className="text-flow w-full"
               />

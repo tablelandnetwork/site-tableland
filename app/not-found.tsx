@@ -20,13 +20,13 @@ export default function NotFound() {
             <p className="lead">
               But you found a Rig!
             </p>
-            <div className="relative w-full aspect-square">
+            <div className="relative !mx-auto w-[400px] aspect-square">
               <Image
                 src={rig[0]}
                 alt={"Rig"}
                 priority={true}
                 fill
-                className="animate-blur rounded"
+                className="animate-blur rounded-lg"
               />
             </div>
           </article>

@@ -6,15 +6,6 @@ import HeaderNav from "./components/HeaderNav"
 import FooterNav from "./components/FooterNav"
 import Fathom from "./components/Fathom"
 
-/*
-
-- add new navigation links
-- add studio section
-- more a/b?
-- share a/b loom
-
-*/
-
 export const metadata: Metadata = {
   title: "Tableland: The decentralized cloud database",
   description:
