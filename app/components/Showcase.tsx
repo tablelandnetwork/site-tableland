@@ -17,7 +17,7 @@ export default function Showcase({ children, href, classes }: Props) {
         <div className="text-center">
           <ButtonLink
             href={href}
-            target="_blank"
+            target={href.startsWith("http") ? "_blank" : "_self"}
             classes="text-white bg-lightgreen"
           >
             {children}

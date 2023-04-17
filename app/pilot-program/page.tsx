@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import ButtonLink from "../components/ButtonLink"
@@ -15,36 +15,38 @@ export default function PilotProgramPage() {
   return (
     <main>
       {/* <!-- hero --> */}
-      <section className="w-full bg-top bg-cover bg-no-repeat bg-[url('/img/pilot/hero.jpg')]">
-        <div className="relative container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pt-24 md:pt-32 lg:pt-48 pb-12 md:pb-24 lg:pb-36">
-          <article className="mx-auto md:mx-[initial] prose prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose font-light text-center md:text-left">
-            <h1 className="font-title">The Pilot Program</h1>
-            <p className="lead">
-              Join the next pilot program season for access to exclusive
-              mentorship, prizes, and a small group building on the cutting edge
-              of the open web.
-            </p>
-            <p>
-              Check out{" "}
-              <Link
-                href="https://youtube.com/playlist?list=PLAc0xDyQDZbo-PnGBbv1aBTVMVwd4qncL"
-                target="blank"
-              >
-                the demos
-              </Link>{" "}
-              from Season 5.
-            </p>
-            <p>
-              <ButtonLink
-                href="https://hhueol4i6vp.typeform.com/pilot-program"
-                target="_blank"
-              >
-                Apply now
-              </ButtonLink>
-            </p>
-          </article>
-        </div>
-      </section>
+      <div className="bg-white">
+        <section className="w-full bg-top bg-cover bg-no-repeat bg-[url('/img/pilot/hero.jpg')]">
+          <div className="relative container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pt-24 md:pt-32 lg:pt-48 pb-12 md:pb-24 lg:pb-36">
+            <article className="mx-auto md:mx-[initial] prose prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose font-light text-center md:text-left">
+              <h1 className="font-title">The Pilot Program</h1>
+              <p className="lead">
+                Join the next pilot program season for access to exclusive
+                mentorship, prizes, and a small group building on the cutting
+                edge of the open web.
+              </p>
+              <p>
+                Check out{" "}
+                <Link
+                  href="https://youtube.com/playlist?list=PLAc0xDyQDZbo-PnGBbv1aBTVMVwd4qncL"
+                  target="blank"
+                >
+                  the demos
+                </Link>{" "}
+                from Season 5.
+              </p>
+              <p>
+                <ButtonLink
+                  href="https://hhueol4i6vp.typeform.com/pilot-program"
+                  target="_blank"
+                >
+                  Apply now
+                </ButtonLink>
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
       {/* <!-- benefits --> */}
       <section
         id="garage"

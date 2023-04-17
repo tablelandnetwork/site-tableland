@@ -18,7 +18,7 @@ export default function SmallButtonLink({
   return (
     <Link
       href={href}
-      target={target ? target : ""}
+      target={target ? target : "_self"}
       className={`btn-small bg-black text-white${classes ? " " + classes : ""}`}
     >
       <span className="flex items-center">

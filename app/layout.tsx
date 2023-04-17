@@ -10,10 +10,8 @@ import Fathom from "./components/Fathom"
 
 - add new navigation links
 - add studio section
-- add fathom
 - more a/b?
 - share a/b loom
-- 404 page?
 
 */
 

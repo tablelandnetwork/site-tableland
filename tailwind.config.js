@@ -15,6 +15,7 @@ module.exports = {
         neonblue: "#75b6b5",
         grey: "#5d657f",
         orange: "#f4706b",
+        pink: "#d96e75",
         purple: "#815691",
         lightpurple: "#e4cbf2",
         green: "#162929",
@@ -26,7 +27,7 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-poppins)", ...fontFamily.sans],
         title: ["var(--font-orbitron)", ...fontFamily.sans],
-        mono: "monospace"
+        mono: "monospace",
       },
       typography: ({ theme }) => ({
         normal: {

@@ -46,7 +46,7 @@ export default function EventLink({
   return (
     <Link
       href={href}
-      target={target ? target : ""}
+      target={target ? target : "_self"}
       className={classes}
       onClick={handleClick}
     >

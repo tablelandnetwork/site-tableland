@@ -24,7 +24,7 @@ export default function ButtonLink({
   return (
     <EventLink
       href={href}
-      target={target ? target : ""}
+      target={target ? target : "_self"}
       event={event}
       userId={userId}
       variantIds={variantIds}

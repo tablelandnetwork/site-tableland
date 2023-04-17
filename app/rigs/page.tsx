@@ -4,6 +4,7 @@ import Image from "next/image"
 import ButtonLink from "../components/ButtonLink"
 import Fleet from "./components/Fleet"
 import Showcase from "../components/Showcase"
+import getRigs from "@/lib/rigs"
 import garage from "../../public/img/rigs/garage.jpg"
 import pilots from "../../public/img/rigs/pilots.jpg"
 import pioneer1 from "../../public/img/rigs/pioneer_1.jpg"
@@ -19,7 +20,6 @@ import sled from "../../public/img/rigs/originals/sled.jpg"
 import titan from "../../public/img/rigs/originals/titan.jpg"
 import tracer from "../../public/img/rigs/originals/tracer.jpg"
 import tumbler from "../../public/img/rigs/originals/tumbler.jpg"
-import getRigs from "@/lib/rigs"
 
 export const metadata: Metadata = {
   title: "Tableland: Rigs",
@@ -41,76 +41,78 @@ export default function RigsPage() {
   return (
     <main>
       {/* hero */}
-      <section className="w-full bg-top bg-cover bg-no-repeat bg-[url('/img/rigs/hero.jpg')]">
-        <div className="absolute w-full opacity-50 bg-purple h-[156px] md:h-[188px] lg:h-[280px] xl:h-[280px]"></div>
-        <div className="relative container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pt-24 md:pt-32 lg:pt-48">
-          <article className="prose !prose-invert prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose text-center md:text-left">
-            <h1 className="font-title">
-              Meet the <span className="font-black">Rigs</span>
-            </h1>
-            <p></p>
-          </article>
-        </div>
-        <div className="overflow-hidden h-48 md:h-56 lg:h-64 xl:h-80 2xl:h-96">
-          <div
-            className="flex w-auto h-full animate-scroll"
-            style={{ transform: "translate3d(0px,0px,0px)" }}
-          >
-            {rigs.map(function (r, i) {
-              return (
-                <div key={i} className="relative h-full aspect-square">
-                  <Image
-                    src={r}
-                    alt={"Rig " + i}
-                    priority={true}
-                    fill
-                    className="animate-blur"
-                  />
-                </div>
-              )
-            })}
+      <div className="bg-pink">
+        <section className="w-full bg-top bg-cover bg-no-repeat bg-[url('/img/rigs/hero.jpg')]">
+          <div className="absolute w-full opacity-50 bg-purple h-[156px] md:h-[188px] lg:h-[280px] xl:h-[280px]"></div>
+          <div className="relative container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pt-24 md:pt-32 lg:pt-48">
+            <article className="prose !prose-invert prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose text-center md:text-left">
+              <h1 className="font-title">
+                Meet the <span className="font-black">Rigs</span>
+              </h1>
+              <p></p>
+            </article>
           </div>
-        </div>
-        <div className="container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pb-12 md:pb-24 lg:pb-36">
-          <article className="prose !prose-invert prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose font-light text-center md:text-left">
-            <p></p>
-            <p className="lead">
-              A 3k generative NFT built from 1,074 handcrafted works of art for
-              the builders and creatives of cyberspace. See{" "}
-              <Link href="/rigs/samples">samples</Link>.
-            </p>
-            <p>
-              Rigs are{" "}
-              <Link
-                href="https://github.com/tablelandnetwork/rigs"
-                target="_blank"
-              >
-                open source
-              </Link>
-              ! View on{" "}
-              <Link
-                href="https://opensea.io/collection/tableland-rigs"
-                target="_blank"
-              >
-                OpenSea
-              </Link>{" "}
-              or{" "}
-              <Link
-                href="https://etherscan.io/address/0x8eaa9ae1ac89b1c8c8a8104d08c045f78aadb42d"
-                target="_blank"
-              >
-                Etherscan
-              </Link>
-              .
-            </p>
-            <p>
-              <ButtonLink href="https://garage.tableland.xyz" target="_blank">
-                Enter the Rig Garage
-              </ButtonLink>
-            </p>
-          </article>
-        </div>
-      </section>
+          <div className="overflow-hidden h-48 md:h-56 lg:h-64 xl:h-80 2xl:h-96">
+            <div
+              className="flex w-auto h-full animate-scroll"
+              style={{ transform: "translate3d(0px,0px,0px)" }}
+            >
+              {rigs.map(function (r, i) {
+                return (
+                  <div key={i} className="relative h-full aspect-square">
+                    <Image
+                      src={r}
+                      alt={"Rig " + i}
+                      priority={true}
+                      fill
+                      className="animate-blur"
+                    />
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+          <div className="container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pb-12 md:pb-24 lg:pb-36">
+            <article className="prose !prose-invert prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose font-light text-center md:text-left">
+              <p></p>
+              <p className="lead">
+                A 3k generative NFT built from 1,074 handcrafted works of art
+                for the builders and creatives of cyberspace. See{" "}
+                <Link href="/rigs/samples">samples</Link>.
+              </p>
+              <p>
+                Rigs are{" "}
+                <Link
+                  href="https://github.com/tablelandnetwork/rigs"
+                  target="_blank"
+                >
+                  open source
+                </Link>
+                ! View on{" "}
+                <Link
+                  href="https://opensea.io/collection/tableland-rigs"
+                  target="_blank"
+                >
+                  OpenSea
+                </Link>{" "}
+                or{" "}
+                <Link
+                  href="https://etherscan.io/address/0x8eaa9ae1ac89b1c8c8a8104d08c045f78aadb42d"
+                  target="_blank"
+                >
+                  Etherscan
+                </Link>
+                .
+              </p>
+              <p>
+                <ButtonLink href="https://garage.tableland.xyz" target="_blank">
+                  Enter the Rig Garage
+                </ButtonLink>
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
       {/* garage */}
       <section
         id="garage"

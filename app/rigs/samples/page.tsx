@@ -16,20 +16,23 @@ export default function SampleRigsPage() {
   return (
     <main>
       {/* <!-- hero --> */}
-      <section className="w-full bg-top bg-cover bg-no-repeat bg-[url('/img/rigs/hero.jpg')]">
-        <div className="relative container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pt-24 md:pt-32 lg:pt-48 pb-12 md:pb-24 lg:pb-36">
-          <article className="mx-auto md:mx-[initial] prose !prose-invert prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose font-light text-center md:text-left">
-            <h1 className="font-title">Sample Rigs</h1>
-            <p className="lead">
-              Each Rig is generated from 1,074 handcrafted works of art for the
-              builders and creatives of cyberspace. Here are 1,000 random Rigs.
-            </p>
-            <p>
-              <ButtonLink href="/rigs">Learn more</ButtonLink>
-            </p>
-          </article>
-        </div>
-      </section>
+      <div className="bg-pink">
+        <section className="w-full bg-top bg-cover bg-no-repeat bg-[url('/img/rigs/hero.jpg')]">
+          <div className="relative container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pt-24 md:pt-32 lg:pt-48 pb-12 md:pb-24 lg:pb-36">
+            <article className="mx-auto md:mx-[initial] prose !prose-invert prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose font-light text-center md:text-left">
+              <h1 className="font-title">Sample Rigs</h1>
+              <p className="lead">
+                Each Rig is generated from 1,074 handcrafted works of art for
+                the builders and creatives of cyberspace. Here are 1,000 random
+                Rigs.
+              </p>
+              <p>
+                <ButtonLink href="/rigs">Learn more</ButtonLink>
+              </p>
+            </article>
+          </div>
+        </section>
+      </div>
       {/* <!-- grid --> */}
       <section
         id="grid"
