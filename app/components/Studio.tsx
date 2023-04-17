@@ -15,7 +15,11 @@ export default function Studio() {
           decentralized applications without worrying about infrastructure and
           setup.
         </p>
-        <Image src={studio} alt="Tableland Studio" className="mx-auto w-full xl:w-2/3 mb-6 lg:mb-10" />
+        <Image
+          src={studio}
+          alt="Tableland Studio"
+          className="mx-auto w-full xl:w-2/3 mb-6 lg:mb-10"
+        />
         <div className="text-center">
           <ButtonLink
             href="https://tableland.xyz/studio"

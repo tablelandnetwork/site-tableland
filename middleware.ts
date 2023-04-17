@@ -16,7 +16,7 @@ export async function middleware(req: NextRequest) {
     const date = new Date()
     date.setDate(new Date().getDate() + 7) // one week
     res.cookies.set(anonUserCookieName, value, {
-      expires: date
+      expires: date,
     })
   }
   return res
