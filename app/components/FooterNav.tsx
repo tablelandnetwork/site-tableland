@@ -33,12 +33,12 @@ export default function FooterNav() {
               >
                 <FaYoutube className="inline-block text-verylightgreen hover:text-white text-lg mr-4"></FaYoutube>
               </Link>
-              <Link href="https://discord.gg/dc8EBEhGbg" target="_blank">
+              <Link href="https://tableland.xyz/discord" target="_blank">
                 <FaDiscord className="inline-block text-verylightgreen hover:text-white text-lg mr-4"></FaDiscord>
               </Link>
             </div>
           </div>
-          <div className="w-full grid gap-10 grid-cols-2 md:grid-cols-3">
+          <div className="w-full grid gap-10 grid-cols-2 md:grid-cols-4">
             <div className="flex flex-col space-y-3">
               <h3 className="text-sm text-white">Resources</h3>
               <ul className="flex flex-col space-y-3">
@@ -58,11 +58,31 @@ export default function FooterNav() {
                   </Link>
                 </li>
                 <li className="text-xs">
+                  <Link href="https://tableland.xyz/newsletter" target="_blank">
+                    Newsletter
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col space-y-3">
+              <h3 className="text-sm text-white">Developers</h3>
+              <ul className="flex flex-col space-y-3">
+                <li className="text-xs">
+                  <Link href="https://docs.tableland.xyz" target="_blank">
+                    Docs
+                  </Link>
+                </li>
+                <li className="text-xs">
                   <Link
                     href="/pilot-program"
                     className={pathname == "/pilot-program" ? "underline" : ""}
                   >
                     Pilot Program
+                  </Link>
+                </li>
+                <li className="text-xs">
+                  <Link href="https://tableland.xyz/studio" target="_blank">
+                    Studio Waitlist
                   </Link>
                 </li>
               </ul>
@@ -102,13 +122,15 @@ export default function FooterNav() {
               </ul>
             </div>
             <div className="flex flex-col space-y-3">
-              <h3 className="text-sm text-white">References</h3>
+              <h3 className="text-sm text-white">Network</h3>
               <ul className="flex flex-col space-y-3">
                 <li className="text-xs">
-                  <Link
-                    href="https://hhueol4i6vp.typeform.com/to/sgtDW2Xt"
-                    target="_blank"
-                  >
+                  <Link href="https://tableland.xyz/jobs" target="_blank">
+                    Jobs
+                  </Link>
+                </li>
+                <li className="text-xs">
+                  <Link href="https://tableland.xyz/token" target="_blank">
                     Token Info
                   </Link>
                 </li>

@@ -48,14 +48,14 @@ export default function HeaderNav() {
           </button>
         </div>
         <div>
-          <a href="/">
+          <Link href="/">
             <Image
               src={opaque ? logoWhite : logoBlack}
               alt="Tableland"
               className={`h-3 md:h-4 w-auto${opaque ? " opacity-[0.87]" : ""}`}
               priority={true}
             />
-          </a>
+          </Link>
         </div>
         <div className="hidden lg:block">
           <ul className="flex justify-end text-sm items-center gap-x-2 sm:gap-x-4 md:gap-x-6 lg:gap-x-8">

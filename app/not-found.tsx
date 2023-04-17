@@ -18,7 +18,7 @@ export default function NotFound() {
           <article className="mx-auto prose prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose font-light text-center">
             <h1 className="font-title">404: You&apos;re lost</h1>
             <p className="lead">
-              But you found a Rig! <a href="/">home</a>
+              But you found a Rig!
             </p>
             <div className="relative w-full aspect-square">
               <Image
