@@ -10,6 +10,7 @@ function TrackPageView() {
   useEffect(() => {
     load(process.env.NEXT_PUBLIC_FATHOM_ID!, {
       includedDomains: ["tableland.xyz", "site-tableland.vercel.app"],
+      honorDNT: true,
     })
   }, [])
 
