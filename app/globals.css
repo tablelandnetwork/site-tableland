@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::selection {
+  color: theme("colors.black");
+  background-color: theme("colors.neongreen");
+}
+
+body {
+  color: theme("colors.black");
+  background-color: theme("colors.darkgreen");
+}
+
+a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+a.btn {
+  @apply inline-block md:text-xl py-3 px-8 rounded-2xl uppercase cursor-pointer;
+}
+
+a.btn-header {
+  @apply inline-block text-sm py-2 px-6 rounded-xl cursor-pointer;
+}
+
+a.btn-small {
+  @apply inline-block text-xs py-1 px-2 rounded cursor-pointer;
+  height: 1.55rem;
+}
+
+a.btn:hover,
+a.btn-header:hover,
+a.btn-small:hover {
+  background-color: theme("colors.neonblue") !important;
+  transition: all 0.2s ease-in-out;
+}
+
+nav a,
+a.btn,
+a.btn-header,
+a.btn-small {
+  text-decoration: none;
+}
+
+a.btn {
+  font-size: 1rem;
+  line-height: normal;
+}
+
+a.btn i {
+  font-size: 1.5rem;
+}
+
+a.btn-small {
+  font-size: 0.75rem;
+  line-height: normal;
+}
+
+a.btn-small i {
+  font-size: 1.2rem;
+}
+
+nav .btn {
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+}
+
+nav li a:hover,
+nav li a:active {
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
