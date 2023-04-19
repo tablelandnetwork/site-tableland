@@ -47,7 +47,7 @@ export default function FooterNav() {
                     href="https://docs.tableland.xyz/fundamentals/use-cases/#application-data"
                     target="_blank"
                   >
-                    Application data
+                    Application Data
                   </Link>
                 </li>
                 <li className="text-xs">
@@ -55,7 +55,7 @@ export default function FooterNav() {
                     href="https://docs.tableland.xyz/fundamentals/use-cases/#nfts--gaming"
                     target="_blank"
                   >
-                    NFTs & gaming
+                    NFTs & Gaming
                   </Link>
                 </li>
                 <li className="text-xs">
@@ -63,7 +63,7 @@ export default function FooterNav() {
                     href="https://docs.tableland.xyz/fundamentals/use-cases/#data-daos--token-gating"
                     target="_blank"
                   >
-                    Data DAOs & token gating
+                    Data DAOs & Token Gating
                   </Link>
                 </li>
                 <li className="text-xs">
@@ -219,7 +219,7 @@ export default function FooterNav() {
                     href="https://docs.tableland.xyz/validator"
                     target="_blank"
                   >
-                    Run a node
+                    Run a Node
                   </Link>
                 </li>
                 <li className="text-xs">

@@ -1,109 +1,41 @@
-import { AB, Hero, Features } from "@/lib/types"
+import { AB, ABC, Hero, Features } from "@/lib/types"
 import { FaDatabase, FaLock, FaBriefcase, FaLink } from "react-icons/fa"
 
-/*
-
-type HeroA = {
-  tag: string
-}
-
-type Test = {
-  compare: hero
-}
-
-*/
-
-export const hero: AB<Hero> = {
+export const hero: ABC<Hero> = {
   flags: {
-    tagB: "heroTagB",
-    titleB: "heroTitleB",
-    leadB: "heroLeadB",
-    ctaB: "heroCtaB",
+    main: "hero",
+    sections: ["heroTag", "heroTitle", "heroLead", "heroCta"],
   },
   a: {
     tag: 'Read+write from <span className="font-bold">anywhere</span>',
     title: 'The <span class="font-bold">decentralized</span> cloud database.',
     lead: "Tableland is an open source, permissionless cloud database built on SQLite. Read and write tamperproof data from apps, data pipelines, or EVM smart contracts.",
-    cta: "Start your project",
+    cta: "Get started",
   },
   b: {
-    tag: 'Read+write from <span className="font-bold">anywhere</span>',
+    tag: "Read, write, grant access",
+    title: 'Build <span class="font-bold">data-driven</span> web3 apps.',
+    lead: "Built for performance. Designed for simplicity. Welcome to Tableland, the first web3-native database that allows you to write and query data from any app or smart contract.",
+    cta: "Get started",
+  },
+  c: {
+    tag: "SQL developer tools",
     title:
-      'SQL infrastructure for the <span class="font-bold">decentralized</span> internet.',
-    lead: "Tableland is an open source, permissionless cloud database built on SQLite. Read and write tamperproof data from apps, data pipelines, or EVM smart contracts.",
-    cta: "Start your project",
+      'Store and query contract metadata with <span class="font-bold">SQL</span>.',
+    lead: "Tableland is a decentralized database built on the SQLite engine, providing SQL APIs deployed to multiple blockchains, including Ethereum, Polygon, Arbitrum, and Optimism.",
+    cta: "Get started",
   },
 }
 
 export const features: AB<Features> = {
   flags: {
-    title: "featuresTitleB",
-    items: "featuresItemsB",
+    main: "features",
+    sections: ["featuresTitle"],
   },
   a: {
     title: "Build on decentralized data without the headache.",
-    items: [
-      {
-        title: "SQLite",
-        icon: FaDatabase,
-        description:
-          "Tableland is a fully-featured, ACID-compliant, relational database built on the blazing-fast SQLite engine.",
-        link: "https://docs.tableland.xyz/playbooks",
-      },
-      {
-        title: "On-chain security",
-        icon: FaLock,
-        description:
-          "Leverage wallet and contract-based authentication & authorization. Configure tables with fine-grained row- and column-level write access control.",
-        link: "https://docs.tableland.xyz/fundamentals/architecture/protocol-design",
-      },
-      {
-        title: "Portable",
-        icon: FaBriefcase,
-        description:
-          "Write SQL from your frontend, backend, or smart-contracts.",
-        link: "https://docs.tableland.xyz/quickstarts",
-      },
-      {
-        title: "Multi-chain",
-        icon: FaLink,
-        description:
-          "Live on Ethereum, Optimism, Arbitrum, Arbitrum Nova, and Polygon. Filecoin and zkEVMs coming soon.",
-        link: "https://docs.tableland.xyz/fundamentals/chains",
-      },
-    ],
   },
   b: {
     title: "The only user-friendly Web3 database.",
-    items: [
-      {
-        title: "SQLite",
-        icon: FaDatabase,
-        description:
-          "Tableland is a fully-featured, ACID-compliant, relational database built on the blazing-fast SQLite engine.",
-        link: "https://docs.tableland.xyz/playbooks",
-      },
-      {
-        title: "On-chain security",
-        icon: FaLock,
-        description:
-          "Leverage wallet and contract-based authentication & authorization. Configure tables with fine-grained row- and column-level write access control.",
-        link: "https://docs.tableland.xyz/fundamentals/architecture/protocol-design",
-      },
-      {
-        title: "Portable",
-        icon: FaBriefcase,
-        description:
-          "Write SQL from your frontend, backend, or smart-contracts.",
-        link: "https://docs.tableland.xyz/quickstarts",
-      },
-      {
-        title: "Multi-chain",
-        icon: FaLink,
-        description:
-          "Live on Ethereum, Optimism, Arbitrum, Arbitrum Nova, and Polygon. Filecoin and zkEVMs coming soon.",
-        link: "https://docs.tableland.xyz/fundamentals/chains",
-      },
-    ],
   },
 }

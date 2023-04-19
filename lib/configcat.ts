@@ -10,21 +10,27 @@ function client(): IConfigCatClient {
   return _client
 }
 
-export async function getFlag(
+export async function getBoolFlag(
   key: string,
   userId: string | undefined
-): Promise<[boolean, string]> {
-  const details = await client().getValueDetailsAsync(
+): Promise<string> {
+  const value = await client().getValueAsync(
     key,
     false,
     userId ? { identifier: userId } : undefined
   )
 
-  // Add flag value to variation id, e.g., myFeatureA-{id} or myFeatureB-{id}
-  // This adds human-readable context that's useful in the Amplitude dash
-  if (!details.variationId) {
-    return [details.value, "unknown"]
-  }
-  const variant = key.substring(0, key.length - 1) + (details.value ? "B" : "A")
-  return [details.value, [variant, details.variationId].join("-")]
+  return value ? "B" : "A"
+}
+
+export async function getStringFlag(
+  key: string,
+  userId: string | undefined
+): Promise<string> {
+  const value = await client().getValueAsync(
+    key,
+    "A",
+    userId ? { identifier: userId } : undefined
+  )
+  return value
 }

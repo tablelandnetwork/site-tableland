@@ -1,15 +1,25 @@
 import ButtonLink from "./ButtonLink"
 import Terminal from "./Terminal"
 import { getUserId } from "@/lib/users"
-import { getFlag } from "@/lib/configcat"
+import { getStringFlag } from "@/lib/configcat"
 import { hero } from "@/lib/content"
 
 export default async function Hero() {
   const userId = getUserId()
-  const [tagB, tagVariant] = await getFlag(hero.flags["tagB"], userId)
-  const [titleB, titleVariant] = await getFlag(hero.flags["titleB"], userId)
-  const [leadB, leadVariant] = await getFlag(hero.flags["leadB"], userId)
-  const [ctaB, ctaVariant] = await getFlag(hero.flags["ctaB"], userId)
+
+  // Get main prerequisite flag
+  const main = await getStringFlag(hero.flags["main"], userId)
+
+  // Get section flags based entirely off the main flag
+  // Note: We will later drive individual sections by their own flags, possibly holding others constant.
+  const content = main === "A" ? hero.a : main === "B" ? hero.b : hero.c
+  
+  // Collect section variants for reporting
+  // Note: These will currently all match, ie, all be of flavor A/B/C, but we still need to have them
+  // broken out for comparison with other tests later on.
+  const variantIds = hero.flags.sections.map((v) => {
+    return v + main
+  })
 
   return (
     <div className="bg-lightpurple">
@@ -19,14 +29,14 @@ export default async function Hero() {
             <h3 className="text-grey uppercase font-normal !mb-0">
               <span
                 dangerouslySetInnerHTML={{
-                  __html: tagB ? hero.b.tag : hero.a.tag,
+                  __html: content.tag,
                 }}
               />
             </h3>
             <h1 className="font-normal">
               <span
                 dangerouslySetInnerHTML={{
-                  __html: titleB ? hero.b.title : hero.a.title,
+                  __html: content.title,
                 }}
               />
             </h1>
@@ -34,7 +44,7 @@ export default async function Hero() {
             <p className="lead">
               <span
                 dangerouslySetInnerHTML={{
-                  __html: leadB ? hero.b.lead : hero.a.lead,
+                  __html: content.lead,
                 }}
               />
             </p>
@@ -44,10 +54,10 @@ export default async function Hero() {
                 target="_blank"
                 event={"Hero CTA Clicked"}
                 userId={userId}
-                variantIds={[tagVariant, titleVariant, leadVariant, ctaVariant]}
+                variantIds={variantIds}
                 classes="bg-darkgreen"
               >
-                {ctaB ? hero.b.cta : hero.a.cta}
+                {content.cta}
               </ButtonLink>
             </p>
           </article>
