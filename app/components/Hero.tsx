@@ -13,7 +13,7 @@ export default async function Hero() {
   // Get section flags based entirely off the main flag
   // Note: We will later drive individual sections by their own flags, possibly holding others constant.
   const content = main === "A" ? hero.a : main === "B" ? hero.b : hero.c
-  
+
   // Collect section variants for reporting
   // Note: These will currently all match, ie, all be of flavor A/B/C, but we still need to have them
   // broken out for comparison with other tests later on.
