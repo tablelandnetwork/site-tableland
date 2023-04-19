@@ -6,10 +6,10 @@ import { hero } from "@/lib/content"
 
 export default async function Hero() {
   const userId = getUserId()
-  const [tagB, tagVariant] = await getFlag(hero.flags["tag"], userId)
-  const [titleB, titleVariant] = await getFlag(hero.flags["title"], userId)
-  const [leadB, leadVariant] = await getFlag(hero.flags["lead"], userId)
-  const [ctaB, ctaVariant] = await getFlag(hero.flags["cta"], userId)
+  const [tagB, tagVariant] = await getFlag(hero.flags["tagB"], userId)
+  const [titleB, titleVariant] = await getFlag(hero.flags["titleB"], userId)
+  const [leadB, leadVariant] = await getFlag(hero.flags["leadB"], userId)
+  const [ctaB, ctaVariant] = await getFlag(hero.flags["ctaB"], userId)
 
   return (
     <div className="bg-lightpurple">

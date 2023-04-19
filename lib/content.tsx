@@ -1,12 +1,24 @@
 import { AB, Hero, Features } from "@/lib/types"
 import { FaDatabase, FaLock, FaBriefcase, FaLink } from "react-icons/fa"
 
+/*
+
+type HeroA = {
+  tag: string
+}
+
+type Test = {
+  compare: hero
+}
+
+*/
+
 export const hero: AB<Hero> = {
   flags: {
-    tag: "heroTagB",
-    title: "heroTitleB",
-    lead: "heroLeadB",
-    cta: "heroCtaB",
+    tagB: "heroTagB",
+    titleB: "heroTitleB",
+    leadB: "heroLeadB",
+    ctaB: "heroCtaB",
   },
   a: {
     tag: 'Read+write from <span className="font-bold">anywhere</span>',

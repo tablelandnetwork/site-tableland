@@ -9,7 +9,7 @@ function TrackPageView() {
   const searchParams = useSearchParams()
   useEffect(() => {
     load(process.env.NEXT_PUBLIC_FATHOM_ID!, {
-      includedDomains: ["tableland.xyz", "site-tableland.vercel.app"],
+      includedDomains: ["tableland.xyz"],
       honorDNT: true,
     })
   }, [])

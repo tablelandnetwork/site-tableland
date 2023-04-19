@@ -10,8 +10,9 @@
   "keywords": [
     "tableland",
     "database",
-    "decentralized",
     "sql",
+    "sqlite",
+    "decentralized",
     "web3",
     "tamperproof"
   ],
