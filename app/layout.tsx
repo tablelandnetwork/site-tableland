@@ -5,6 +5,7 @@ import { Poppins, Orbitron } from "next/font/google"
 import HeaderNav from "./components/HeaderNav"
 import FooterNav from "./components/FooterNav"
 import Fathom from "./components/Fathom"
+import { Analytics } from "@vercel/analytics/react"
 
 const title = "Tableland: The decentralized cloud database"
 const description =
@@ -50,10 +51,11 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`min-h-screen ${poppins.variable} ${orbitron.variable} font-sans`}
       >
-        <Fathom />
         <HeaderNav />
         {children}
         <FooterNav />
+        <Fathom />
+        <Analytics />
       </body>
     </html>
   )

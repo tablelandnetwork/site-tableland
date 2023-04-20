@@ -4,13 +4,21 @@ import { type ReactNode } from "react"
 type Props = {
   children: ReactNode
   href: string
-  classes?: string
+  event?: string
+  params?: Record<string, string | number | boolean | null>
+  className?: string
 }
 
-export default function Showcase({ children, href, classes }: Props) {
+export default function Showcase({
+  children,
+  href,
+  event,
+  params,
+  className,
+}: Props) {
   return (
     <section
-      className={`text-neongreen border-b${classes ? " " + classes : ""}`}
+      className={`text-neongreen border-b${className ? " " + className : ""}`}
     >
       <div className="w-full h-[18px] bg-white opacity-[0.15]"></div>
       <div className="py-12 md:py-32">
@@ -18,7 +26,9 @@ export default function Showcase({ children, href, classes }: Props) {
           <ButtonLink
             href={href}
             target={href.startsWith("http") ? "_blank" : "_self"}
-            classes="text-white bg-lightgreen"
+            className="text-white bg-lightgreen"
+            event={event}
+            params={params}
           >
             {children}
           </ButtonLink>

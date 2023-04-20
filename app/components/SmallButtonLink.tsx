@@ -1,15 +1,16 @@
-import EventLink from "./EventLink"
 import { type ReactNode } from "react"
 import { FaLongArrowAltRight } from "react-icons/fa"
+import EventLink from "./EventLink"
 
 type Props = {
   children: ReactNode
   href: string
   target?: string
   event?: string
+  params?: Record<string, string | number | boolean | null>
   userId?: string
   variantIds?: string[]
-  classes?: string
+  className?: string
 }
 
 export default function SmallButtonLink({
@@ -17,18 +18,22 @@ export default function SmallButtonLink({
   href,
   target,
   event,
+  params,
   userId,
   variantIds,
-  classes,
+  className,
 }: Props) {
   return (
     <EventLink
       href={href}
       target={target ? target : "_self"}
       event={event}
+      params={params}
       userId={userId}
       variantIds={variantIds}
-      classes={`btn-small bg-black text-white${classes ? " " + classes : ""}`}
+      className={`btn-small bg-black text-white${
+        className ? " " + className : ""
+      }`}
     >
       <span className="flex items-center">
         {children}

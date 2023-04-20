@@ -30,7 +30,12 @@ export default function NotFound() {
           </article>
         </div>
       </section>
-      <Showcase href="/" classes="bg-green border-lightgreen">
+      <Showcase
+        href="/"
+        className="bg-green border-lightgreen"
+        event="Go Home Clicked"
+        params={{ location: "not-found" }}
+      >
         Go Home
       </Showcase>
     </main>

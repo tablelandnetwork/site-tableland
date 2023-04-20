@@ -17,7 +17,9 @@ export default function HomePage() {
       <Studio />
       <Showcase
         href="https://docs.tableland.xyz"
-        classes="bg-green border-lightgreen"
+        className="bg-green border-lightgreen"
+        event="Docs Clicked"
+        params={{ location: "home-gutter" }}
       >
         Documentation
       </Showcase>

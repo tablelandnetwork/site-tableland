@@ -1,10 +1,10 @@
 "use client"
 
-import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { useState, useEffect } from "react"
 import { FaBars, FaTimes } from "react-icons/fa"
+import EventLink from "./EventLink"
 import logoBlack from "../../public/img/logo/black.svg"
 import logoWhite from "../../public/img/logo/white.svg"
 
@@ -48,53 +48,73 @@ export default function HeaderNav() {
           </button>
         </div>
         <div>
-          <Link href="/">
+          <EventLink
+            href="/"
+            event="Logo Clicked"
+            params={{ location: "header" }}
+          >
             <Image
               src={opaque ? logoWhite : logoBlack}
               alt="Tableland"
               className={`h-3 md:h-4 w-auto${opaque ? " opacity-[0.87]" : ""}`}
               priority={true}
             />
-          </Link>
+          </EventLink>
         </div>
         <div className="hidden lg:block">
           <ul className="flex justify-end text-sm items-center gap-x-2 sm:gap-x-4 md:gap-x-6 lg:gap-x-8">
             <li>
-              <a href="https://github.com/tablelandnetwork" target="_blank">
+              <EventLink
+                href="https://github.com/tablelandnetwork"
+                target="_blank"
+                event="GitHub Clicked"
+                params={{ location: "header" }}
+              >
                 GitHub
-              </a>
+              </EventLink>
             </li>
             <li>
-              <a href="https://mirror.xyz/tableland.eth" target="_blank">
+              <EventLink
+                href="https://mirror.xyz/tableland.eth"
+                target="_blank"
+                event="Blog Clicked"
+                params={{ location: "header" }}
+              >
                 Blog
-              </a>
+              </EventLink>
             </li>
             <li>
-              <Link
+              <EventLink
                 href="/pilot-program"
                 className={pathname == "/pilot-program" ? "underline" : ""}
+                event="Pilot Program Clicked"
+                params={{ location: "header" }}
               >
                 Pilot Program
-              </Link>
+              </EventLink>
             </li>
             <li>
-              <Link
+              <EventLink
                 href="/rigs"
                 className={pathname == "/rigs" ? "underline" : ""}
+                event="Rigs Clicked"
+                params={{ location: "header" }}
               >
                 Rigs
-              </Link>
+              </EventLink>
             </li>
             <li>
-              <a
+              <EventLink
                 href="https://docs.tableland.xyz"
                 target="_blank"
                 className={`btn-header hover:text-white${
                   opaque ? " bg-white text-black" : " bg-black text-orange"
                 }`}
+                event="Docs Clicked"
+                params={{ location: "header" }}
               >
                 Docs
-              </a>
+              </EventLink>
             </li>
           </ul>
         </div>
@@ -115,41 +135,51 @@ export default function HeaderNav() {
             </div>
             <div className="mt-6 mb-12">
               <div className="pt-2 pb-4 space-y-1 text-white">
-                <a
+                <EventLink
                   href="https://docs.tableland.xyz"
                   target="_blank"
                   className="block py-2 pl-3 pr-4 hover:underline"
+                  event="Docs Clicked"
+                  params={{ location: "header" }}
                 >
                   Docs
-                </a>
-                <a
+                </EventLink>
+                <EventLink
                   href="https://github.com/tablelandnetwork"
                   target="_blank"
                   className="block py-2 pl-3 pr-4 hover:underline"
+                  event="GitHub Clicked"
+                  params={{ location: "header" }}
                 >
                   GitHub
-                </a>
-                <a
+                </EventLink>
+                <EventLink
                   href="https://mirror.xyz/tableland.eth"
                   target="_blank"
                   className="block py-2 pl-3 pr-4 hover:underline"
+                  event="Blog Clicked"
+                  params={{ location: "header" }}
                 >
                   Blog
-                </a>
-                <Link
+                </EventLink>
+                <EventLink
                   href="/pilot-program"
                   className="block py-2 pl-3 pr-4 hover:underline"
                   onClick={handleMenu}
+                  event="Pilot Program Clicked"
+                  params={{ location: "header" }}
                 >
                   Pilot Program
-                </Link>
-                <Link
+                </EventLink>
+                <EventLink
                   href="/rigs"
                   className="block py-2 pl-3 pr-4 hover:underline"
                   onClick={handleMenu}
+                  event="Rigs Clicked"
+                  params={{ location: "header" }}
                 >
                   Rigs
-                </Link>
+                </EventLink>
               </div>
             </div>
           </div>

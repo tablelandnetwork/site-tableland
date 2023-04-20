@@ -1,5 +1,6 @@
 import Image from "next/image"
 import ButtonLink from "./ButtonLink"
+import EventLink from "./EventLink"
 import SmallButtonLink from "./SmallButtonLink"
 import examples from "@/lib/examples"
 
@@ -28,9 +29,11 @@ export default function Build() {
                     </p>
                     <div className="flex mb-2">
                       <div className="hidden sm:block relative mr-2">
-                        <a
+                        <EventLink
                           href={"https://github.com/" + e.username}
                           target="blank"
+                          event={e.username + " Clicked"}
+                          params={{ location: "examples" }}
                         >
                           <Image
                             src={e.image}
@@ -39,32 +42,38 @@ export default function Build() {
                             height={32}
                             className="rounded-full"
                           />
-                        </a>
+                        </EventLink>
                       </div>
-                      <a
+                      <EventLink
                         href={"https://github.com/" + e.username}
                         target="blank"
                         className="text-verylightgreen no-underline hover:underline"
+                        event={e.username + " Clicked"}
+                        params={{ location: "examples" }}
                       >
                         <h4 className="text-xs mt-2">{e.username}</h4>
-                      </a>
+                      </EventLink>
                     </div>
                   </div>
                   <div className="bg-darkgreen border-2 border-green rounded-b p-4">
                     <div className="hidden sm:block mb-2">
-                      <a
+                      <EventLink
                         href={"https://github.com/" + e.repo}
                         target="_blank"
                         className="text-neonblue text-xs no-underline hover:underline"
+                        event={e.title + " Clicked"}
+                        params={{ location: "examples" }}
                       >
                         {e.repo}
-                      </a>
+                      </EventLink>
                     </div>
                     <div>
                       <SmallButtonLink
                         href={"https://github.com/" + e.repo}
                         target="_blank"
-                        classes="btn-small bg-green text-neonblue hover:text-white"
+                        className="btn-small bg-green text-neonblue hover:text-white"
+                        event={e.title + " Clicked"}
+                        params={{ location: "examples" }}
                       >
                         View code
                       </SmallButtonLink>
@@ -79,7 +88,9 @@ export default function Build() {
           <ButtonLink
             href="https://github.com/tablelandnetwork"
             target="_blank"
-            classes="text-neonblue hover:text-white bg-darkgreen border-2 border-green"
+            className="text-neonblue hover:text-white bg-darkgreen border-2 border-green"
+            event="GitHub Clicked"
+            params={{ location: "examples" }}
           >
             GitHub
           </ButtonLink>

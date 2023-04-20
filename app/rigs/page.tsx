@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import Image from "next/image"
 import ButtonLink from "../components/ButtonLink"
+import EventLink from "../components/EventLink"
 import Fleet from "./components/Fleet"
 import Showcase from "../components/Showcase"
 import getRigs from "@/lib/rigs"
@@ -96,34 +96,52 @@ export default function RigsPage() {
               <p className="lead">
                 A 3k generative NFT built from 1,074 handcrafted works of art
                 for the builders and creatives of cyberspace. See{" "}
-                <Link href="/rigs/samples">samples</Link>.
-              </p>
-              <p>
-                Rigs are{" "}
-                <a
-                  href="https://github.com/tablelandnetwork/rigs"
-                  target="_blank"
+                <EventLink
+                  href="/rigs/samples"
+                  event="Rig Samples Clicked"
+                  params={{ location: "rigs-hero" }}
                 >
-                  open source
-                </a>
-                ! View on{" "}
-                <a
-                  href="https://opensea.io/collection/tableland-rigs"
-                  target="_blank"
-                >
-                  OpenSea
-                </a>{" "}
-                or{" "}
-                <a
-                  href="https://etherscan.io/address/0x8eaa9ae1ac89b1c8c8a8104d08c045f78aadb42d"
-                  target="_blank"
-                >
-                  Etherscan
-                </a>
+                  samples
+                </EventLink>
                 .
               </p>
               <p>
-                <ButtonLink href="https://garage.tableland.xyz" target="_blank">
+                Rigs are{" "}
+                <EventLink
+                  href="https://github.com/tablelandnetwork/rigs"
+                  target="_blank"
+                  event="Rigs Repo Clicked"
+                  params={{ location: "rigs-hero" }}
+                >
+                  open source
+                </EventLink>
+                ! View on{" "}
+                <EventLink
+                  href="https://opensea.io/collection/tableland-rigs"
+                  target="_blank"
+                  event="OpenSea Clicked"
+                  params={{ location: "rigs-hero" }}
+                >
+                  OpenSea
+                </EventLink>{" "}
+                or{" "}
+                <EventLink
+                  href="https://etherscan.io/address/0x8eaa9ae1ac89b1c8c8a8104d08c045f78aadb42d"
+                  target="_blank"
+                  event="Etherscan Clicked"
+                  params={{ location: "rigs-hero" }}
+                >
+                  Etherscan
+                </EventLink>
+                .
+              </p>
+              <p>
+                <ButtonLink
+                  href="https://garage.tableland.xyz"
+                  target="_blank"
+                  event="Garage Clicked"
+                  params={{ location: "rigs-hero" }}
+                >
                   Enter the Rig Garage
                 </ButtonLink>
               </p>
@@ -743,7 +761,9 @@ export default function RigsPage() {
       {/* showcase */}
       <Showcase
         href="https://opensea.io/collection/tableland-rigs"
-        classes="bg-green border-lightgreen"
+        className="bg-green border-lightgreen"
+        event="OpenSea Clicked"
+        params={{ location: "rigs-gutter" }}
       >
         View on OpenSea
       </Showcase>

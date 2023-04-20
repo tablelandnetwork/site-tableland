@@ -45,7 +45,13 @@ export default function SampleRigsPage() {
                 Rigs.
               </p>
               <p>
-                <ButtonLink href="/rigs">Learn more</ButtonLink>
+                <ButtonLink
+                  href="/rigs"
+                  event="Rigs Clicked"
+                  params={{ location: "rigs-samples-hero" }}
+                >
+                  Learn more
+                </ButtonLink>
               </p>
             </article>
           </div>
@@ -77,7 +83,9 @@ export default function SampleRigsPage() {
       {/* showcase */}
       <Showcase
         href="https://opensea.io/collection/tableland-rigs"
-        classes="bg-green border-lightgreen"
+        className="bg-green border-lightgreen"
+        event="OpenSea Clicked"
+        params={{ location: "rigs-samples-gutter" }}
       >
         View on OpenSea
       </Showcase>

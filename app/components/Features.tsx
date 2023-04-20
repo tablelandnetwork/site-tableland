@@ -48,7 +48,8 @@ export default async function Features() {
                   <EventLink
                     href={f.link}
                     target="_blank"
-                    event={`Features Click ${f.title}`}
+                    event={f.title + " Clicked"}
+                    params={{ location: "features" }}
                     userId={userId}
                     variantIds={variantIds}
                   >

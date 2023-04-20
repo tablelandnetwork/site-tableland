@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import ButtonLink from "../components/ButtonLink"
+import EventLink from "../components/EventLink"
 import Showcase from "../components/Showcase"
 import community from "../../public/img/pilot/community.jpg"
 
@@ -44,18 +45,22 @@ export default function PilotProgramPage() {
               </p>
               <p>
                 Check out{" "}
-                <a
+                <EventLink
                   href="https://youtube.com/playlist?list=PLAc0xDyQDZbo-PnGBbv1aBTVMVwd4qncL"
                   target="blank"
+                  event="Pilot Demos Clicked"
+                  params={{ location: "pilot-program-hero" }}
                 >
                   the demos
-                </a>{" "}
+                </EventLink>{" "}
                 from Season 5.
               </p>
               <p>
                 <ButtonLink
                   href="https://hhueol4i6vp.typeform.com/pilot-program"
                   target="_blank"
+                  event="Apply Now Clicked"
+                  params={{ location: "pilot-program-hero" }}
                 >
                   Apply now
                 </ButtonLink>
@@ -111,7 +116,9 @@ export default function PilotProgramPage() {
       {/* showcase */}
       <Showcase
         href="https://hhueol4i6vp.typeform.com/pilot-program"
-        classes="bg-green border-lightgreen"
+        className="bg-green border-lightgreen"
+        event="Apply Now Clicked"
+        params={{ location: "pilot-program-gutter" }}
       >
         Apply now
       </Showcase>
