@@ -3,7 +3,7 @@ import Features from "./components/Features"
 import Community from "./components/Community"
 import Build from "./components/Build"
 import Studio from "./components/Studio"
-import Showcase from "./components/Showcase"
+import Gutter from "./components/Gutter"
 
 export default function HomePage() {
   return (
@@ -15,12 +15,14 @@ export default function HomePage() {
       <Community />
       <Build />
       <Studio />
-      <Showcase
+      <Gutter
         href="https://docs.tableland.xyz"
-        classes="bg-green border-lightgreen"
+        className="bg-green border-lightgreen"
+        event="Docs Clicked"
+        params={{ location: "home-gutter" }}
       >
         Documentation
-      </Showcase>
+      </Gutter>
     </main>
   )
 }

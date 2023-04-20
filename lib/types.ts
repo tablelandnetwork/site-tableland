@@ -2,12 +2,9 @@ import { type IconType } from "react-icons"
 
 export type Event = {
   name: string
-  userId: string
-  params: Params
-}
-
-export type Params = {
-  variantIds: string[]
+  params?: Record<string, string | number | boolean | null>
+  userId?: string
+  variantIds?: string[]
 }
 
 export type Flags = {

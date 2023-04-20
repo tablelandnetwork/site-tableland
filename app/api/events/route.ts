@@ -8,8 +8,12 @@ init(process.env.AMPLITUDE_API_KEY!, {
 
 export async function POST(request: Request) {
   const event = (await request.json()) as Event
-  track(event.name, event.params, {
-    user_id: event.userId,
-  })
+  track(
+    event.name,
+    { variantIds: event.variantIds },
+    {
+      user_id: event.userId,
+    }
+  )
   return new NextResponse()
 }

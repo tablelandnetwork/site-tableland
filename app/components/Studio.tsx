@@ -1,6 +1,6 @@
 import Image from "next/image"
 import ButtonLink from "./ButtonLink"
-import studio from "../../public/img/home/studio.svg"
+import studio from "../../public/img/home/studio.png"
 
 export default function Studio() {
   return (
@@ -18,13 +18,15 @@ export default function Studio() {
         <Image
           src={studio}
           alt="Tableland Studio"
-          className="mx-auto w-full xl:w-2/3 mb-6 lg:mb-10"
+          className="mx-auto w-full xl:w-2/3 rounded-2xl mb-6 lg:mb-10"
         />
         <div className="text-center">
           <ButtonLink
             href="https://tableland.xyz/studio"
             target="_blank"
-            classes="text-neonblue hover:text-white bg-darkgreen border-2 border-green"
+            className="text-neonblue hover:text-white bg-darkgreen border-2 border-green"
+            event="Studio Waitlist Clicked"
+            params={{ location: "studio" }}
           >
             Join waitlist
           </ButtonLink>

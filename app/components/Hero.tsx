@@ -53,9 +53,10 @@ export default async function Hero() {
                 href="https://docs.tableland.xyz"
                 target="_blank"
                 event={"Hero CTA Clicked"}
+                params={{ location: "home-hero" }}
                 userId={userId}
                 variantIds={variantIds}
-                classes="bg-darkgreen"
+                className="bg-darkgreen"
               >
                 {content.cta}
               </ButtonLink>

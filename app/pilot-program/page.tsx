@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import Image from "next/image"
 import ButtonLink from "../components/ButtonLink"
-import Showcase from "../components/Showcase"
+import EventLink from "../components/EventLink"
+import Gutter from "../components/Gutter"
 import community from "../../public/img/pilot/community.jpg"
 
 const title = "Tableland: Pilot Program"
@@ -45,18 +45,22 @@ export default function PilotProgramPage() {
               </p>
               <p>
                 Check out{" "}
-                <Link
+                <EventLink
                   href="https://youtube.com/playlist?list=PLAc0xDyQDZbo-PnGBbv1aBTVMVwd4qncL"
                   target="blank"
+                  event="Pilot Demos Clicked"
+                  params={{ location: "pilot-program-hero" }}
                 >
                   the demos
-                </Link>{" "}
+                </EventLink>{" "}
                 from Season 5.
               </p>
               <p>
                 <ButtonLink
                   href="https://hhueol4i6vp.typeform.com/pilot-program"
                   target="_blank"
+                  event="Apply Now Clicked"
+                  params={{ location: "pilot-program-hero" }}
                 >
                   Apply now
                 </ButtonLink>
@@ -109,13 +113,15 @@ export default function PilotProgramPage() {
           </article>
         </div>
       </section>
-      {/* showcase */}
-      <Showcase
+      {/* gutter */}
+      <Gutter
         href="https://hhueol4i6vp.typeform.com/pilot-program"
-        classes="bg-green border-lightgreen"
+        className="bg-green border-lightgreen"
+        event="Apply Now Clicked"
+        params={{ location: "pilot-program-gutter" }}
       >
         Apply now
-      </Showcase>
+      </Gutter>
     </main>
   )
 }

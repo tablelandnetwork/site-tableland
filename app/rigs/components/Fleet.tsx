@@ -9,7 +9,7 @@ type Props = {
   rigs: string[]
 }
 
-export default function Showcase({
+export default function Fleet({
   name,
   description,
   styles,

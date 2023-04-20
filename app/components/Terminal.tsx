@@ -4,14 +4,14 @@ import Typed from "typed.js"
 import { useEffect, useRef, useState } from "react"
 
 type Props = {
-  classes?: string
+  className?: string
 }
 
 type Lines = {
   val?: string[]
 }
 
-export default function Terminal({ classes }: Props) {
+export default function Terminal({ className }: Props) {
   const [lines1, setLines1] = useState<Lines>({})
   const [lines2, setLines2] = useState<Lines>({})
   const [lines3, setLines3] = useState<Lines>({})
@@ -98,7 +98,7 @@ export default function Terminal({ classes }: Props) {
   return (
     <div
       className={`hidden sm:block text-white text-xs text-left font-mono${
-        classes ? " " + classes : ""
+        className ? " " + className : ""
       }`}
     >
       <div

@@ -1,14 +1,14 @@
 "use client"
 
-import Link from "next/link"
 import Image from "next/image"
 import ButtonLink from "./ButtonLink"
+import EventLink from "./EventLink"
 import useEmblaCarousel from "embla-carousel-react"
 import Autoplay from "embla-carousel-autoplay"
 import { FaTwitter } from "react-icons/fa"
 import tweets from "@/lib/tweets"
 
-export default function Tweets() {
+export default function Community() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 4000 }),
   ])
@@ -30,10 +30,12 @@ export default function Tweets() {
                 return (
                   <div key={i} className="px-3">
                     <div className="bg-lightgreen rounded-lg p-6">
-                      <Link
+                      <EventLink
                         href={t.url}
                         target="_blank"
                         className="no-underline"
+                        event={t.username + " Clicked"}
+                        params={{ location: "community" }}
                       >
                         <div className="flex pb-4">
                           <div className="relative pr-2">
@@ -53,7 +55,7 @@ export default function Tweets() {
                         <p className="text-sm font-light">
                           &ldquo;{t.body}&rdquo;
                         </p>
-                      </Link>
+                      </EventLink>
                     </div>
                   </div>
                 )
@@ -65,7 +67,9 @@ export default function Tweets() {
           <ButtonLink
             href="https://tableland.xyz/discord"
             target="_blank"
-            classes="text-neonblue hover:text-white bg-darkgreen border-2 border-green"
+            className="text-neonblue hover:text-white bg-darkgreen border-2 border-green"
+            event="Discord Clicked"
+            params={{ location: "community" }}
           >
             Discord
           </ButtonLink>
