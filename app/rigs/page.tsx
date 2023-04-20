@@ -3,7 +3,7 @@ import Image from "next/image"
 import ButtonLink from "../components/ButtonLink"
 import EventLink from "../components/EventLink"
 import Fleet from "./components/Fleet"
-import Showcase from "../components/Showcase"
+import Gutter from "../components/Gutter"
 import getRigs from "@/lib/rigs"
 import garage from "../../public/img/rigs/garage.jpg"
 import pilots from "../../public/img/rigs/pilots.jpg"
@@ -758,15 +758,15 @@ export default function RigsPage() {
           </article>
         </div>
       </section>
-      {/* showcase */}
-      <Showcase
+      {/* gutter */}
+      <Gutter
         href="https://opensea.io/collection/tableland-rigs"
         className="bg-green border-lightgreen"
         event="OpenSea Clicked"
         params={{ location: "rigs-gutter" }}
       >
         View on OpenSea
-      </Showcase>
+      </Gutter>
     </main>
   )
 }

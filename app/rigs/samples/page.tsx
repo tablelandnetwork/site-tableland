@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Image from "next/image"
 import ButtonLink from "../../components/ButtonLink"
-import Showcase from "../../components/Showcase"
+import Gutter from "../../components/Gutter"
 import getRigs from "@/lib/rigs"
 
 const title = "Tableland: Sample Rigs"
@@ -80,15 +80,15 @@ export default function SampleRigsPage() {
           </div>
         </div>
       </section>
-      {/* showcase */}
-      <Showcase
+      {/* gutter */}
+      <Gutter
         href="https://opensea.io/collection/tableland-rigs"
         className="bg-green border-lightgreen"
         event="OpenSea Clicked"
         params={{ location: "rigs-samples-gutter" }}
       >
         View on OpenSea
-      </Showcase>
+      </Gutter>
     </main>
   )
 }

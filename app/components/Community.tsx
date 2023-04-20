@@ -8,7 +8,7 @@ import Autoplay from "embla-carousel-autoplay"
 import { FaTwitter } from "react-icons/fa"
 import tweets from "@/lib/tweets"
 
-export default function Tweets() {
+export default function Community() {
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 4000 }),
   ])

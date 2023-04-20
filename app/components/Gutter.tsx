@@ -9,7 +9,7 @@ type Props = {
   className?: string
 }
 
-export default function Showcase({
+export default function Gutter({
   children,
   href,
   event,

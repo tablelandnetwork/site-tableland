@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Showcase from "./components/Showcase"
+import Gutter from "./components/Gutter"
 import getRigs from "@/lib/rigs"
 
 // Note: Links from the not-found page do not currently work.
@@ -33,14 +33,14 @@ export default function NotFound() {
           </article>
         </div>
       </section>
-      <Showcase
+      <Gutter
         href="/"
         className="bg-green border-lightgreen"
         event="Go Home Clicked"
         params={{ location: "not-found" }}
       >
         Go Home
-      </Showcase>
+      </Gutter>
     </main>
   )
 }

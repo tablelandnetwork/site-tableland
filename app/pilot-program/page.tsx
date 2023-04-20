@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import Image from "next/image"
 import ButtonLink from "../components/ButtonLink"
 import EventLink from "../components/EventLink"
-import Showcase from "../components/Showcase"
+import Gutter from "../components/Gutter"
 import community from "../../public/img/pilot/community.jpg"
 
 const title = "Tableland: Pilot Program"
@@ -113,15 +113,15 @@ export default function PilotProgramPage() {
           </article>
         </div>
       </section>
-      {/* showcase */}
-      <Showcase
+      {/* gutter */}
+      <Gutter
         href="https://hhueol4i6vp.typeform.com/pilot-program"
         className="bg-green border-lightgreen"
         event="Apply Now Clicked"
         params={{ location: "pilot-program-gutter" }}
       >
         Apply now
-      </Showcase>
+      </Gutter>
     </main>
   )
 }
