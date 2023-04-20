@@ -102,7 +102,7 @@ export default function Terminal({ classes }: Props) {
       }`}
     >
       <div
-        className={`flex bg-darkgreen rounded-2xl h-64 overflow-scroll border border-green pt-3${
+        className={`clean-scroll flex bg-darkgreen rounded-2xl h-64 overflow-scroll border border-green pt-3${
           lines4.val ? " flex-col-reverse" : ""
         }`}
       >

@@ -11,13 +11,21 @@ export type Params = {
 }
 
 export type Flags = {
-  [x: string]: string
+  main: string
+  sections: string[]
 }
 
 export type AB<T> = {
   flags: Flags
   a: T
   b: T
+}
+
+export type ABC<T> = {
+  flags: Flags
+  a: T
+  b: T
+  c: T
 }
 
 export type Hero = {
@@ -29,7 +37,6 @@ export type Hero = {
 
 export type Features = {
   title: string
-  items: Feature[]
 }
 
 export type Feature = {

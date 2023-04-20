@@ -72,3 +72,12 @@ nav li a:active {
   text-decoration: underline;
   transition: all 0.2s ease-in-out;
 }
+
+.clean-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.clean-scroll::-webkit-scrollbar {
+  display: none;
+}
