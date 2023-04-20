@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import ButtonLink from "./ButtonLink"
 import SmallButtonLink from "./SmallButtonLink"
 import examples from "@/lib/examples"
@@ -29,7 +28,7 @@ export default function Build() {
                     </p>
                     <div className="flex mb-2">
                       <div className="hidden sm:block relative mr-2">
-                        <Link
+                        <a
                           href={"https://github.com/" + e.username}
                           target="blank"
                         >
@@ -40,26 +39,26 @@ export default function Build() {
                             height={32}
                             className="rounded-full"
                           />
-                        </Link>
+                        </a>
                       </div>
-                      <Link
+                      <a
                         href={"https://github.com/" + e.username}
                         target="blank"
                         className="text-verylightgreen no-underline hover:underline"
                       >
                         <h4 className="text-xs mt-2">{e.username}</h4>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                   <div className="bg-darkgreen border-2 border-green rounded-b p-4">
                     <div className="hidden sm:block mb-2">
-                      <Link
+                      <a
                         href={"https://github.com/" + e.repo}
                         target="_blank"
                         className="text-neonblue text-xs no-underline hover:underline"
                       >
                         {e.repo}
-                      </Link>
+                      </a>
                     </div>
                     <div>
                       <SmallButtonLink

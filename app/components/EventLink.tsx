@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { type ReactNode, useEffect } from "react"
+import { type ReactNode } from "react"
 import { Event } from "@/lib/types"
 
 type Props = {
@@ -43,14 +43,16 @@ export default function EventLink({
     }
   }
 
-  return (
-    <Link
-      href={href}
-      target={target ? target : "_self"}
-      className={classes}
-      onClick={handleClick}
-    >
+  target = target ? target : "_self"
+  const tag = href.startsWith("http") ? (
+    <a href={href} target={target} className={classes} onClick={handleClick}>
+      {children}
+    </a>
+  ) : (
+    <Link href={href} target={target} className={classes} onClick={handleClick}>
       {children}
     </Link>
   )
+
+  return tag
 }

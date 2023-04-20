@@ -1,5 +1,4 @@
 import type { Metadata } from "next"
-import Link from "next/link"
 import Image from "next/image"
 import ButtonLink from "../components/ButtonLink"
 import Showcase from "../components/Showcase"
@@ -45,12 +44,12 @@ export default function PilotProgramPage() {
               </p>
               <p>
                 Check out{" "}
-                <Link
+                <a
                   href="https://youtube.com/playlist?list=PLAc0xDyQDZbo-PnGBbv1aBTVMVwd4qncL"
                   target="blank"
                 >
                   the demos
-                </Link>{" "}
+                </a>{" "}
                 from Season 5.
               </p>
               <p>

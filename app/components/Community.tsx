@@ -1,6 +1,5 @@
 "use client"
 
-import Link from "next/link"
 import Image from "next/image"
 import ButtonLink from "./ButtonLink"
 import useEmblaCarousel from "embla-carousel-react"
@@ -30,11 +29,7 @@ export default function Tweets() {
                 return (
                   <div key={i} className="px-3">
                     <div className="bg-lightgreen rounded-lg p-6">
-                      <Link
-                        href={t.url}
-                        target="_blank"
-                        className="no-underline"
-                      >
+                      <a href={t.url} target="_blank" className="no-underline">
                         <div className="flex pb-4">
                           <div className="relative pr-2">
                             <div className="absolute flex items-center justify-center top-[-5px] left-[-5px] w-[20px] h-[20px] bg-[#1da1f2] rounded-full">
@@ -53,7 +48,7 @@ export default function Tweets() {
                         <p className="text-sm font-light">
                           &ldquo;{t.body}&rdquo;
                         </p>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 )

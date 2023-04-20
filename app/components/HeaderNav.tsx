@@ -60,14 +60,14 @@ export default function HeaderNav() {
         <div className="hidden lg:block">
           <ul className="flex justify-end text-sm items-center gap-x-2 sm:gap-x-4 md:gap-x-6 lg:gap-x-8">
             <li>
-              <Link href="https://github.com/tablelandnetwork" target="_blank">
+              <a href="https://github.com/tablelandnetwork" target="_blank">
                 GitHub
-              </Link>
+              </a>
             </li>
             <li>
-              <Link href="https://mirror.xyz/tableland.eth" target="_blank">
+              <a href="https://mirror.xyz/tableland.eth" target="_blank">
                 Blog
-              </Link>
+              </a>
             </li>
             <li>
               <Link
@@ -86,7 +86,7 @@ export default function HeaderNav() {
               </Link>
             </li>
             <li>
-              <Link
+              <a
                 href="https://docs.tableland.xyz"
                 target="_blank"
                 className={`btn-header hover:text-white${
@@ -94,7 +94,7 @@ export default function HeaderNav() {
                 }`}
               >
                 Docs
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
@@ -115,36 +115,38 @@ export default function HeaderNav() {
             </div>
             <div className="mt-6 mb-12">
               <div className="pt-2 pb-4 space-y-1 text-white">
-                <Link
+                <a
                   href="https://docs.tableland.xyz"
                   target="_blank"
                   className="block py-2 pl-3 pr-4 hover:underline"
                 >
                   Docs
-                </Link>
-                <Link
+                </a>
+                <a
                   href="https://github.com/tablelandnetwork"
                   target="_blank"
                   className="block py-2 pl-3 pr-4 hover:underline"
                 >
                   GitHub
-                </Link>
-                <Link
+                </a>
+                <a
                   href="https://mirror.xyz/tableland.eth"
                   target="_blank"
                   className="block py-2 pl-3 pr-4 hover:underline"
                 >
                   Blog
-                </Link>
+                </a>
                 <Link
                   href="/pilot-program"
                   className="block py-2 pl-3 pr-4 hover:underline"
+                  onClick={handleMenu}
                 >
                   Pilot Program
                 </Link>
                 <Link
                   href="/rigs"
                   className="block py-2 pl-3 pr-4 hover:underline"
+                  onClick={handleMenu}
                 >
                   Rigs
                 </Link>

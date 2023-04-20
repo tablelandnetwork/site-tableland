@@ -100,26 +100,26 @@ export default function RigsPage() {
               </p>
               <p>
                 Rigs are{" "}
-                <Link
+                <a
                   href="https://github.com/tablelandnetwork/rigs"
                   target="_blank"
                 >
                   open source
-                </Link>
+                </a>
                 ! View on{" "}
-                <Link
+                <a
                   href="https://opensea.io/collection/tableland-rigs"
                   target="_blank"
                 >
                   OpenSea
-                </Link>{" "}
+                </a>{" "}
                 or{" "}
-                <Link
+                <a
                   href="https://etherscan.io/address/0x8eaa9ae1ac89b1c8c8a8104d08c045f78aadb42d"
                   target="_blank"
                 >
                   Etherscan
-                </Link>
+                </a>
                 .
               </p>
               <p>
@@ -142,9 +142,9 @@ export default function RigsPage() {
             <h1 className="font-title">The Garage</h1>
             <p>
               <Image src={garage} alt="Garage" className="w-full" />
-              <Link href="https://garage.tableland.xyz" target="_blank">
+              <a href="https://garage.tableland.xyz" target="_blank">
                 The Garage
-              </Link>{" "}
+              </a>{" "}
               includes a collection metrics dashboard, Rig profiles, collector
               profiles, and a dedicated gallery with Rig-specific trait filters.
               The app relies on publicly queryable Tableland tables, which are
@@ -157,19 +157,19 @@ export default function RigsPage() {
               underlying data is decentralized, anyone can use the Rig tables to
               build their own Garage app or create a new experience. The code is
               open-source and can be found on{" "}
-              <Link
+              <a
                 href="https://github.com/tablelandnetwork/rigs/tree/main/garage"
                 target="_blank"
               >
                 GitHub
-              </Link>
+              </a>
               . You can browse the Rig data table names{" "}
-              <Link
+              <a
                 href="https://github.com/tablelandnetwork/rigs/blob/main/ethereum/deployments.ts#L34"
                 target="_blank"
               >
                 here
-              </Link>
+              </a>
               .
             </p>
             <h2>Earn Flight Time (FT)</h2>
@@ -179,12 +179,12 @@ export default function RigsPage() {
               You can earn FT by &ldquo;piloting&rdquo; your Rig. Rigs that are
               &ldquo;in-flight&rdquo; can&apos;t be sold and are only
               transferrable using the Garage or with the{" "}
-              <Link
+              <a
                 href="https://etherscan.io/address/0x8eaa9ae1ac89b1c8c8a8104d08c045f78aadb42d#writeProxyContract"
                 target="_blank"
               >
                 safeTransferWhileFlying
-              </Link>{" "}
+              </a>{" "}
               contract method. Piloting is a form of soft-staking where the NFT
               remains in your wallet but is locked. In exchange for taking your
               Rig off the market, you earn FT.
@@ -198,12 +198,9 @@ export default function RigsPage() {
             </p>
             <p>
               Rigs implement{" "}
-              <Link
-                href="https://eips.ethereum.org/EIPS/eip-4906"
-                target="_blank"
-              >
+              <a href="https://eips.ethereum.org/EIPS/eip-4906" target="_blank">
                 ERC-4906 (EIP-721 Metadata Update Extension)
-              </Link>
+              </a>
               , which was developed by OpenSea. This means that Pilot changes
               are automatically reflected on OpenSea without requiring a manual
               metadata refresh.
@@ -218,12 +215,9 @@ export default function RigsPage() {
             </p>
             <p>
               Below is{" "}
-              <Link
-                href="https://garage.tableland.xyz/rigs/1018"
-                target="_blank"
-              >
+              <a href="https://garage.tableland.xyz/rigs/1018" target="_blank">
                 Rig #1018
-              </Link>{" "}
+              </a>{" "}
               in the Garage. This Rig is on its third flight session, and has
               accumulated a total of{" "}
               <span className="font-bold">996,331 FT</span>.
@@ -234,12 +228,9 @@ export default function RigsPage() {
             <p>
               To query the same data for Rig #1018 shown in the Garage above,
               you can use the{" "}
-              <Link
-                href="https://www.npmjs.com/package/@tableland/cli"
-                target="_blank"
-              >
+              <a href="https://docs.tableland.xyz/cli" target="_blank">
                 Tableland CLI
-              </Link>
+              </a>
               .
             </p>
             <pre className="w-full max-h-[30vh]">
@@ -256,12 +247,9 @@ export default function RigsPage() {
             <p>
               As Tableland grows, there will be more ways to earn FT, such as
               being a network{" "}
-              <Link
-                href="https://github.com/tablelandnetwork/go-tableland"
-                target="_blank"
-              >
+              <a href="https://docs.tableland.xyz/validator" target="_blank">
                 validator
-              </Link>{" "}
+              </a>{" "}
               and voting on community projects and stewards through the Garage
               (coming mid-2023).
             </p>
@@ -651,28 +639,25 @@ export default function RigsPage() {
               <Image src={oddfellows} alt="Oddfellows" className="w-full" />
               The Rigs project was developed alongside an über-talented team of
               artists and writers from{" "}
-              <Link href="https://oddfellows.tv" target="_blank">
+              <a href="https://oddfellows.tv" target="_blank">
                 Oddfellows
-              </Link>
+              </a>
               .
             </p>
             <h2>Executive Creative Directors</h2>
             <ul>
               <li>
                 Chris Kelly (
-                <Link
-                  href="https://www.instagram.com/chruskelly/"
-                  target="_blank"
-                >
+                <a href="https://www.instagram.com/chruskelly" target="_blank">
                   Instagram
-                </Link>
+                </a>
                 )
               </li>
               <li>
                 Colin Trenter (
-                <Link href="https://twitter.com/wesleytrents" target="_blank">
+                <a href="https://twitter.com/wesleytrents" target="_blank">
                   Twitter
-                </Link>
+                </a>
                 )
               </li>
             </ul>
@@ -680,12 +665,9 @@ export default function RigsPage() {
             <ul>
               <li>
                 Erica Kelly (
-                <Link
-                  href="https://www.instagram.com/ericafellow/"
-                  target="_blank"
-                >
+                <a href="https://www.instagram.com/ericafellow" target="_blank">
                   Instagram
-                </Link>
+                </a>
                 )
               </li>
             </ul>
@@ -693,19 +675,16 @@ export default function RigsPage() {
             <ul>
               <li>
                 Dennis Samatulski (
-                <Link href="https://www.dennisdidthat.com/" target="_blank">
+                <a href="https://www.dennisdidthat.com" target="_blank">
                   Homepage
-                </Link>
+                </a>
                 )
               </li>
               <li>
                 Desiree Etzel (
-                <Link
-                  href="https://www.instagram.com/desetzel/"
-                  target="_blank"
-                >
+                <a href="https://www.instagram.com/desetzel" target="_blank">
                   Instagram
-                </Link>
+                </a>
                 )
               </li>
             </ul>
@@ -717,37 +696,34 @@ export default function RigsPage() {
             <ul>
               <li>
                 Joyce Liu (
-                <Link href="https://twitter.com/joiceloo_art" target="_blank">
+                <a href="https://twitter.com/joiceloo_art" target="_blank">
                   Twitter
-                </Link>
+                </a>
                 )
               </li>
               <li>
                 Amy Sun (
-                <Link
-                  href="https://www.instagram.com/amysunstory/"
-                  target="_blank"
-                >
+                <a href="https://www.instagram.com/amysunstory" target="_blank">
                   Instagram
-                </Link>
+                </a>
                 )
               </li>
               <li>Yuki Yamada</li>
               <li>
                 Justin Burks (
-                <Link
-                  href="https://www.instagram.com/justin_burks_/"
+                <a
+                  href="https://www.instagram.com/justin_burks_"
                   target="_blank"
                 >
                   Instagram
-                </Link>
+                </a>
                 )
               </li>
               <li>
                 Caroline Choi (
-                <Link href="https://www.instagram.com/j._.n/" target="_blank">
+                <a href="https://www.instagram.com/j._.n" target="_blank">
                   Instagram
-                </Link>
+                </a>
                 )
               </li>
             </ul>
@@ -755,9 +731,9 @@ export default function RigsPage() {
             <ul>
               <li>
                 inside.company (
-                <Link href="https://www.inside.company/" target="_blank">
+                <a href="https://www.inside.company" target="_blank">
                   Website
-                </Link>
+                </a>
                 )
               </li>
             </ul>
