@@ -1,5 +1,4 @@
 import { AB, ABC, Hero, Features } from "@/lib/types"
-import { FaDatabase, FaLock, FaBriefcase, FaLink } from "react-icons/fa"
 
 export const hero: ABC<Hero> = {
   flags: {
