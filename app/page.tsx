@@ -18,7 +18,7 @@ export default function HomePage() {
       <Gutter
         href="https://docs.tableland.xyz"
         className="bg-green border-lightgreen"
-        event="Docs Clicked"
+        event="Docs"
         params={{ location: "home-gutter" }}
       >
         Documentation

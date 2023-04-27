@@ -25,7 +25,7 @@ export default function Studio() {
             href="https://tableland.xyz/studio"
             target="_blank"
             className="text-neonblue hover:text-white bg-darkgreen border-2 border-green"
-            event="Studio Waitlist Clicked"
+            event="Studio Waitlist"
             params={{ location: "studio" }}
           >
             Join waitlist

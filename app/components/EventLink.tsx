@@ -1,9 +1,10 @@
 "use client"
 
 import Link from "next/link"
-import { type ReactNode } from "react"
-import { Event } from "@/lib/types"
+import { type ReactNode, useEffect, useContext } from "react"
+import { type Event } from "@/lib/types"
 import va from "@vercel/analytics"
+import { VariantContext } from "../context/VariantProvider"
 
 type Props = {
   children: ReactNode
@@ -11,8 +12,7 @@ type Props = {
   target?: string
   event?: string
   params?: Record<string, string | number | boolean | null>
-  userId?: string
-  variantIds?: string[]
+  logView?: boolean
   className?: string
   onClick?: () => void
 }
@@ -48,21 +48,39 @@ export default function EventLink({
   target,
   event,
   params,
-  userId,
-  variantIds,
+  logView,
   className,
   onClick,
 }: Props) {
+  const variantCtx = useContext(VariantContext)
+
+  useEffect(() => {
+    async function log() {
+      await logEvent({
+        name: event + " Viewed",
+        params,
+        userId: variantCtx.userId,
+        variantIds: variantCtx.ids,
+      })
+    }
+    if (event && logView) {
+      // The timeout puts this in the back of the event queue, giving vercel analytics time to load.
+      setTimeout(() => {
+        log()
+      }, 0)
+    }
+  }, [variantCtx, event, params, logView])
+
   const handleClick = async () => {
     if (onClick) {
       onClick()
     }
     if (event) {
       await logEvent({
-        name: event,
+        name: event + " Clicked",
         params,
-        userId,
-        variantIds,
+        userId: variantCtx.userId,
+        variantIds: variantCtx.ids,
       })
     }
   }

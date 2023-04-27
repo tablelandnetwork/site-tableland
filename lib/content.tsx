@@ -1,4 +1,4 @@
-import { AB, ABC, Hero, Features } from "@/lib/types"
+import { type AB, type ABC, type Hero, type Features } from "@/lib/types"
 
 export const hero: ABC<Hero> = {
   flags: {
@@ -6,7 +6,7 @@ export const hero: ABC<Hero> = {
     sections: ["heroTag", "heroTitle", "heroLead", "heroCta"],
   },
   a: {
-    tag: 'Read+write from <span className="font-bold">anywhere</span>',
+    tag: 'Read+write from <span class="font-bold">anywhere</span>',
     title: 'The <span class="font-bold">decentralized</span> cloud database.',
     lead: "Tableland is an open source, permissionless cloud database built on SQLite. Read and write tamperproof data from apps, data pipelines, or EVM smart contracts.",
     cta: "Get started",

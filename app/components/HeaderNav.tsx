@@ -48,11 +48,7 @@ export default function HeaderNav() {
           </button>
         </div>
         <div>
-          <EventLink
-            href="/"
-            event="Logo Clicked"
-            params={{ location: "header" }}
-          >
+          <EventLink href="/" event="Logo" params={{ location: "header" }}>
             <Image
               src={opaque ? logoWhite : logoBlack}
               alt="Tableland"
@@ -67,7 +63,7 @@ export default function HeaderNav() {
               <EventLink
                 href="https://github.com/tablelandnetwork"
                 target="_blank"
-                event="GitHub Clicked"
+                event="GitHub"
                 params={{ location: "header" }}
               >
                 GitHub
@@ -77,7 +73,7 @@ export default function HeaderNav() {
               <EventLink
                 href="https://mirror.xyz/tableland.eth"
                 target="_blank"
-                event="Blog Clicked"
+                event="Blog"
                 params={{ location: "header" }}
               >
                 Blog
@@ -87,7 +83,7 @@ export default function HeaderNav() {
               <EventLink
                 href="/pilot-program"
                 className={pathname == "/pilot-program" ? "underline" : ""}
-                event="Pilot Program Clicked"
+                event="Pilot Program"
                 params={{ location: "header" }}
               >
                 Pilot Program
@@ -97,7 +93,7 @@ export default function HeaderNav() {
               <EventLink
                 href="/rigs"
                 className={pathname == "/rigs" ? "underline" : ""}
-                event="Rigs Clicked"
+                event="Rigs"
                 params={{ location: "header" }}
               >
                 Rigs
@@ -110,7 +106,7 @@ export default function HeaderNav() {
                 className={`btn-header hover:text-white${
                   opaque ? " bg-white text-black" : " bg-black text-orange"
                 }`}
-                event="Docs Clicked"
+                event="Docs"
                 params={{ location: "header" }}
               >
                 Docs
@@ -139,7 +135,7 @@ export default function HeaderNav() {
                   href="https://docs.tableland.xyz"
                   target="_blank"
                   className="block py-2 pl-3 pr-4 hover:underline"
-                  event="Docs Clicked"
+                  event="Docs"
                   params={{ location: "header" }}
                 >
                   Docs
@@ -148,7 +144,7 @@ export default function HeaderNav() {
                   href="https://github.com/tablelandnetwork"
                   target="_blank"
                   className="block py-2 pl-3 pr-4 hover:underline"
-                  event="GitHub Clicked"
+                  event="GitHub"
                   params={{ location: "header" }}
                 >
                   GitHub
@@ -157,7 +153,7 @@ export default function HeaderNav() {
                   href="https://mirror.xyz/tableland.eth"
                   target="_blank"
                   className="block py-2 pl-3 pr-4 hover:underline"
-                  event="Blog Clicked"
+                  event="Blog"
                   params={{ location: "header" }}
                 >
                   Blog
@@ -166,7 +162,7 @@ export default function HeaderNav() {
                   href="/pilot-program"
                   className="block py-2 pl-3 pr-4 hover:underline"
                   onClick={handleMenu}
-                  event="Pilot Program Clicked"
+                  event="Pilot Program"
                   params={{ location: "header" }}
                 >
                   Pilot Program
@@ -175,7 +171,7 @@ export default function HeaderNav() {
                   href="/rigs"
                   className="block py-2 pl-3 pr-4 hover:underline"
                   onClick={handleMenu}
-                  event="Rigs Clicked"
+                  event="Rigs"
                   params={{ location: "header" }}
                 >
                   Rigs

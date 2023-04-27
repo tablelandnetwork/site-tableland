@@ -1,4 +1,4 @@
-import { Tweet } from "@/lib/types"
+import { type Tweet } from "@/lib/types"
 
 const tweets: Tweet[] = [
   {
@@ -32,7 +32,7 @@ const tweets: Tweet[] = [
   {
     username: "Filecoin",
     image:
-      "https://pbs.twimg.com/profile_images/1542918269539176451/YjPNhJhM_80x80.png",
+      "https://pbs.twimg.com/profile_images/1648352006971555840/wYIRFfIO_80x80.jpg",
     body: "Exciting to see how projects like these are pushing the boundaries!",
     url: "https://twitter.com/Filecoin/status/1630766898748030976",
   },

@@ -1,4 +1,4 @@
-import { Example } from "@/lib/types"
+import { type Example } from "@/lib/types"
 
 const examples: Example[] = [
   {
