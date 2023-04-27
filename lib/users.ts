@@ -14,8 +14,7 @@ export function getUserId(): string | undefined {
   // Try to get from `set-cookie` header
   const header = headers().get("set-cookie")
   if (header) {
-    // Note: This pattern can be improved after https://github.com/vercel/next.js/issues/47189 is resolved.
-    const match = header.match(/^id=([a-f0-9,-]*);/i)
+    const match = header.match(/id=([a-z0-9]+);/i)
     return match ? match[1] : undefined
   }
 }

@@ -34,7 +34,7 @@ export default function Community() {
                         href={t.url}
                         target="_blank"
                         className="no-underline"
-                        event={t.username + " Clicked"}
+                        event={t.username}
                         params={{ location: "community" }}
                       >
                         <div className="flex pb-4">
@@ -68,7 +68,7 @@ export default function Community() {
             href="https://tableland.xyz/discord"
             target="_blank"
             className="text-neonblue hover:text-white bg-darkgreen border-2 border-green"
-            event="Discord Clicked"
+            event="Discord"
             params={{ location: "community" }}
           >
             Discord

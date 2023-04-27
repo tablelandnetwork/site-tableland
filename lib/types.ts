@@ -1,5 +1,10 @@
 import { type IconType } from "react-icons"
 
+export type VariantCtx = {
+  userId?: string
+  ids?: string[]
+}
+
 export type Event = {
   name: string
   params?: Record<string, string | number | boolean | null>

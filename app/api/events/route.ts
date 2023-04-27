@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server"
 import { init, track, Types } from "@amplitude/analytics-node"
-import { Event } from "@/lib/types"
+import { type Event } from "@/lib/types"
 
 init(process.env.AMPLITUDE_API_KEY!, {
   logLevel: Types.LogLevel.Warn,

@@ -35,7 +35,7 @@ export default function SampleRigsPage() {
     <main>
       {/* <!-- hero --> */}
       <div className="bg-pink">
-        <section className="w-full bg-top bg-cover bg-no-repeat bg-[url('/img/rigs/hero.jpg')]">
+        <section className="w-full bg-top bg-cover bg-no-repeat bg-pink md:bg-[url('/img/rigs/hero.jpg')]">
           <div className="relative container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pt-24 md:pt-32 lg:pt-48 pb-12 md:pb-24 lg:pb-36">
             <article className="mx-auto md:mx-[initial] prose !prose-invert prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose font-light text-center md:text-left">
               <h1 className="font-title">Sample Rigs</h1>
@@ -47,7 +47,7 @@ export default function SampleRigsPage() {
               <p>
                 <ButtonLink
                   href="/rigs"
-                  event="Rigs Clicked"
+                  event="Rigs"
                   params={{ location: "rigs-samples-hero" }}
                 >
                   Learn more
@@ -84,7 +84,7 @@ export default function SampleRigsPage() {
       <Gutter
         href="https://opensea.io/collection/tableland-rigs"
         className="bg-green border-lightgreen"
-        event="OpenSea Clicked"
+        event="OpenSea"
         params={{ location: "rigs-samples-gutter" }}
       >
         View on OpenSea

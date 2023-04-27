@@ -8,8 +8,7 @@ type Props = {
   target?: string
   event?: string
   params?: Record<string, string | number | boolean | null>
-  userId?: string
-  variantIds?: string[]
+  logView?: boolean
   className?: string
 }
 
@@ -19,8 +18,7 @@ export default function SmallButtonLink({
   target,
   event,
   params,
-  userId,
-  variantIds,
+  logView,
   className,
 }: Props) {
   return (
@@ -29,8 +27,7 @@ export default function SmallButtonLink({
       target={target ? target : "_self"}
       event={event}
       params={params}
-      userId={userId}
-      variantIds={variantIds}
+      logView={logView}
       className={`btn-small bg-black text-white${
         className ? " " + className : ""
       }`}

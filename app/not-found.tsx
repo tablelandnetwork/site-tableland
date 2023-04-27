@@ -36,7 +36,7 @@ export default function NotFound() {
       <Gutter
         href="/"
         className="bg-green border-lightgreen"
-        event="Go Home Clicked"
+        event="Go Home"
         params={{ location: "not-found" }}
       >
         Go Home

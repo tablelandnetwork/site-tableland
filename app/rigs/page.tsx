@@ -60,7 +60,7 @@ export default function RigsPage() {
     <main>
       {/* hero */}
       <div className="bg-pink">
-        <section className="w-full bg-top bg-cover bg-no-repeat bg-[url('/img/rigs/hero.jpg')]">
+        <section className="w-full bg-top bg-cover bg-no-repeat bg-pink md:bg-[url('/img/rigs/hero.jpg')]">
           <div className="absolute w-full opacity-50 bg-purple h-[156px] md:h-[188px] lg:h-[280px] xl:h-[280px]"></div>
           <div className="relative container mx-auto px-6 md:px-9 lg:px-16 xl:px-20 pt-24 md:pt-32 lg:pt-48">
             <article className="prose !prose-invert prose-normal prose-sm md:prose-md lg:prose-lg max-w-prose text-center md:text-left">
@@ -98,7 +98,7 @@ export default function RigsPage() {
                 for the builders and creatives of cyberspace. See{" "}
                 <EventLink
                   href="/rigs/samples"
-                  event="Rig Samples Clicked"
+                  event="Rig Samples"
                   params={{ location: "rigs-hero" }}
                 >
                   samples
@@ -110,7 +110,7 @@ export default function RigsPage() {
                 <EventLink
                   href="https://github.com/tablelandnetwork/rigs"
                   target="_blank"
-                  event="Rigs Repo Clicked"
+                  event="Rigs Repo"
                   params={{ location: "rigs-hero" }}
                 >
                   open source
@@ -119,7 +119,7 @@ export default function RigsPage() {
                 <EventLink
                   href="https://opensea.io/collection/tableland-rigs"
                   target="_blank"
-                  event="OpenSea Clicked"
+                  event="OpenSea"
                   params={{ location: "rigs-hero" }}
                 >
                   OpenSea
@@ -128,7 +128,7 @@ export default function RigsPage() {
                 <EventLink
                   href="https://etherscan.io/address/0x8eaa9ae1ac89b1c8c8a8104d08c045f78aadb42d"
                   target="_blank"
-                  event="Etherscan Clicked"
+                  event="Etherscan"
                   params={{ location: "rigs-hero" }}
                 >
                   Etherscan
@@ -139,7 +139,7 @@ export default function RigsPage() {
                 <ButtonLink
                   href="https://garage.tableland.xyz"
                   target="_blank"
-                  event="Garage Clicked"
+                  event="Garage"
                   params={{ location: "rigs-hero" }}
                 >
                   Enter the Rig Garage
@@ -762,7 +762,7 @@ export default function RigsPage() {
       <Gutter
         href="https://opensea.io/collection/tableland-rigs"
         className="bg-green border-lightgreen"
-        event="OpenSea Clicked"
+        event="OpenSea"
         params={{ location: "rigs-gutter" }}
       >
         View on OpenSea

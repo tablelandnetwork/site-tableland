@@ -32,7 +32,7 @@ export default function Build() {
                         <EventLink
                           href={"https://github.com/" + e.username}
                           target="blank"
-                          event={e.username + " Clicked"}
+                          event={e.username}
                           params={{ location: "examples" }}
                         >
                           <Image
@@ -48,7 +48,7 @@ export default function Build() {
                         href={"https://github.com/" + e.username}
                         target="blank"
                         className="text-verylightgreen no-underline hover:underline"
-                        event={e.username + " Clicked"}
+                        event={e.username}
                         params={{ location: "examples" }}
                       >
                         <h4 className="text-xs mt-2">{e.username}</h4>
@@ -61,7 +61,7 @@ export default function Build() {
                         href={"https://github.com/" + e.repo}
                         target="_blank"
                         className="text-neonblue text-xs no-underline hover:underline"
-                        event={e.title + " Clicked"}
+                        event={e.title}
                         params={{ location: "examples" }}
                       >
                         {e.repo}
@@ -72,7 +72,7 @@ export default function Build() {
                         href={"https://github.com/" + e.repo}
                         target="_blank"
                         className="btn-small bg-green text-neonblue hover:text-white"
-                        event={e.title + " Clicked"}
+                        event={e.title}
                         params={{ location: "examples" }}
                       >
                         View code
@@ -89,7 +89,7 @@ export default function Build() {
             href="https://github.com/tablelandnetwork"
             target="_blank"
             className="text-neonblue hover:text-white bg-darkgreen border-2 border-green"
-            event="GitHub Clicked"
+            event="GitHub"
             params={{ location: "examples" }}
           >
             GitHub

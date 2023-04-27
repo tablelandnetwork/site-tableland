@@ -1,25 +1,11 @@
 import EventLink from "./EventLink"
+import { getFeatures } from "@/lib/variants"
 import { getUserId } from "@/lib/users"
-import { getBoolFlag } from "@/lib/configcat"
-import { features } from "@/lib/content"
 import items from "@/lib/features"
+import { Features } from "@/lib/types"
 
 export default async function Features() {
-  const userId = getUserId()
-
-  // Get main prerequisite flag
-  const main = await getBoolFlag(features.flags["main"], userId)
-
-  // Get section flags based entirely off the main flag
-  // Note: We will later drive individual sections by their own flags, possibly holding others constant.
-  const content = main === "A" ? features.a : features.b
-
-  // Collect section variants for reporting
-  // Note: These will currently all match, ie, all be of flavor A/B/C, but we still need to have them
-  // broken out for comparison with other tests later on.
-  const variantIds = features.flags.sections.map((v) => {
-    return v + main
-  })
+  const content = await getFeatures(getUserId())
 
   return (
     <section
@@ -48,10 +34,9 @@ export default async function Features() {
                   <EventLink
                     href={f.link}
                     target="_blank"
-                    event={f.title + " Clicked"}
+                    event={f.title}
                     params={{ location: "features" }}
-                    userId={userId}
-                    variantIds={variantIds}
+                    logView={true}
                   >
                     Learn more
                   </EventLink>

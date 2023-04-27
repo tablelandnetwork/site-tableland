@@ -12,7 +12,7 @@ function client(): IConfigCatClient {
 
 export async function getBoolFlag(
   key: string,
-  userId: string | undefined
+  userId?: string
 ): Promise<string> {
   const value = await client().getValueAsync(
     key,
@@ -25,7 +25,7 @@ export async function getBoolFlag(
 
 export async function getStringFlag(
   key: string,
-  userId: string | undefined
+  userId?: string
 ): Promise<string> {
   const value = await client().getValueAsync(
     key,
