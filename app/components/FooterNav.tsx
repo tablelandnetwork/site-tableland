@@ -32,7 +32,7 @@ export default function FooterNav() {
                 <FaGithub className="inline-block text-verylightgreen hover:text-white text-lg mr-4"></FaGithub>
               </EventLink>
               <EventLink
-                href="https://twitter.com/tableland__"
+                href="https://twitter.com/tableland"
                 target="_blank"
                 event="Twitter"
                 params={{ location: "footer" }}
