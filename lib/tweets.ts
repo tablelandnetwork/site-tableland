@@ -5,28 +5,28 @@ const tweets: Tweet[] = [
     username: "juanbenet",
     image:
       "https://pbs.twimg.com/profile_images/436772207746756609/1PMRyGnf_80x80.png",
-    body: "The @textileio team is awesome and always at the vanguard of blockchain dev UX -- stoked to see @tableland__ launch to the world!! 🔥🔥🔥🚀🚀🚀",
+    body: "The @textileio team is awesome and always at the vanguard of blockchain dev UX -- stoked to see @tableland launch to the world!! 🔥🔥🔥🚀🚀🚀",
     url: "https://twitter.com/juanbenet/status/1494462209535225857",
   },
   {
     username: "HammerToe",
     image:
       "https://pbs.twimg.com/profile_images/1548720695517057025/b_O9Yd6-_80x80.jpg",
-    body: "Learning about @tableland__, a decentralised database, at the @filecoin Hackerbase at #ETHDenver. Pretty cool that it is based on SQLite!",
+    body: "Learning about @tableland, a decentralised database, at the @filecoin Hackerbase at #ETHDenver. Pretty cool that it is based on SQLite!",
     url: "https://twitter.com/HammerToe/status/1630680313390325760",
   },
   {
     username: "relay_eth",
     image:
       "https://pbs.twimg.com/profile_images/1631014904475049985/GDKU1jjV_80x80.png",
-    body: "All companies will have web3 metadata including ENS address, @LensProtocol handle, @farcaster_xyz name, @safe address, plus the normal web2 ones. => and soon our Robot OpenAI agent ENS name 🤖 @tableland__ allows the data in Relay to be onchain with decentralized access control",
+    body: "All companies will have web3 metadata including ENS address, @LensProtocol handle, @farcaster_xyz name, @safe address, plus the normal web2 ones. => and soon our Robot OpenAI agent ENS name 🤖 @tableland allows the data in Relay to be onchain with decentralized access control",
     url: "https://twitter.com/relay_eth/status/1623384731852185600",
   },
   {
     username: "Alexintosh",
     image:
       "https://pbs.twimg.com/profile_images/1627622849727852545/uwDmI4A6_80x80.jpg",
-    body: "@tableland__ brings to the table (pun?) an SQL on-chain relational database which even comes with an admin dashboard! On-chain apps are going to be very different very soon.",
+    body: "@tableland brings to the table (pun?) an SQL on-chain relational database which even comes with an admin dashboard! On-chain apps are going to be very different very soon.",
     url: "https://twitter.com/Alexintosh/status/1608857626825355268",
   },
   {
@@ -40,7 +40,7 @@ const tweets: Tweet[] = [
     username: "drivrsnft",
     image:
       "https://pbs.twimg.com/profile_images/1516477823371853825/S-PpXQwJ_80x80.jpg",
-    body: "Pleasure to be building alongside you @tableland__ - one of our favourite web3 teams we’ve met 🤜❤️🤛",
+    body: "Pleasure to be building alongside you @tableland - one of our favourite web3 teams we’ve met 🤜❤️🤛",
     url: "https://twitter.com/drivrsnft/status/1617615373255475200",
   },
   {
