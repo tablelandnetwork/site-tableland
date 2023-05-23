@@ -7,7 +7,7 @@ const features: Feature[] = [
     icon: FaDatabase,
     description:
       "Tableland is a fully-featured, ACID-compliant, relational database built on the blazing-fast SQLite engine.",
-    link: "https://docs.tableland.xyz/playbooks",
+    link: "https://docs.tableland.xyz/fundamentals/why-sqlite",
   },
   {
     title: "On-chain security",
