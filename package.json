@@ -36,7 +36,7 @@
     "@tailwindcss/typography": "0.5.9",
     "@vercel/analytics": "1.0.0",
     "autoprefixer": "10.4.14",
-    "configcat-js-ssr": "6.0.0",
+    "configcat-js-ssr": "7.0.1",
     "embla-carousel-autoplay": "7.1.0",
     "embla-carousel-react": "7.1.0",
     "eslint": "8.39.0",
