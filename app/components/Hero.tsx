@@ -36,7 +36,7 @@ export default async function Hero() {
             </p>
             <p>
               <ButtonLink
-                href="https://docs.tableland.xyz"
+                href="https://studio.tableland.xyz"
                 target="_blank"
                 event="Hero CTA"
                 params={{ location: "home-hero" }}

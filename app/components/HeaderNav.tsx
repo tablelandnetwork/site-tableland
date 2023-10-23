@@ -71,22 +71,22 @@ export default function HeaderNav() {
             </li>
             <li>
               <EventLink
+                href="https://docs.tableland.xyz"
+                target="_blank"
+                event="Docs"
+                params={{ location: "header" }}
+              >
+                Docs
+              </EventLink>
+            </li>
+            <li>
+              <EventLink
                 href="https://mirror.xyz/tableland.eth"
                 target="_blank"
                 event="Blog"
                 params={{ location: "header" }}
               >
                 Blog
-              </EventLink>
-            </li>
-            <li>
-              <EventLink
-                href="/pilot-program"
-                className={pathname == "/pilot-program" ? "underline" : ""}
-                event="Pilot Program"
-                params={{ location: "header" }}
-              >
-                Pilot Program
               </EventLink>
             </li>
             <li>
@@ -101,15 +101,15 @@ export default function HeaderNav() {
             </li>
             <li>
               <EventLink
-                href="https://docs.tableland.xyz"
+                href="https://studio.tableland.xyz"
                 target="_blank"
                 className={`btn-header hover:text-white${
                   opaque ? " bg-white text-black" : " bg-black text-orange"
                 }`}
-                event="Docs"
+                event="Enter Studio"
                 params={{ location: "header" }}
               >
-                Docs
+                Enter Studio
               </EventLink>
             </li>
           </ul>
@@ -132,13 +132,13 @@ export default function HeaderNav() {
             <div className="mt-6 mb-12">
               <div className="pt-2 pb-4 space-y-1 text-white">
                 <EventLink
-                  href="https://docs.tableland.xyz"
+                  href="https://studio.tableland.xyz"
                   target="_blank"
                   className="block py-2 pl-3 pr-4 hover:underline"
-                  event="Docs"
+                  event="Enter Studio"
                   params={{ location: "header" }}
                 >
-                  Docs
+                  Enter Studio
                 </EventLink>
                 <EventLink
                   href="https://github.com/tablelandnetwork"
@@ -150,6 +150,15 @@ export default function HeaderNav() {
                   GitHub
                 </EventLink>
                 <EventLink
+                  href="https://docs.tableland.xyz"
+                  target="_blank"
+                  className="block py-2 pl-3 pr-4 hover:underline"
+                  event="Docs"
+                  params={{ location: "header" }}
+                >
+                  Docs
+                </EventLink>
+                <EventLink
                   href="https://mirror.xyz/tableland.eth"
                   target="_blank"
                   className="block py-2 pl-3 pr-4 hover:underline"
@@ -157,15 +166,6 @@ export default function HeaderNav() {
                   params={{ location: "header" }}
                 >
                   Blog
-                </EventLink>
-                <EventLink
-                  href="/pilot-program"
-                  className="block py-2 pl-3 pr-4 hover:underline"
-                  onClick={handleMenu}
-                  event="Pilot Program"
-                  params={{ location: "header" }}
-                >
-                  Pilot Program
                 </EventLink>
                 <EventLink
                   href="/rigs"

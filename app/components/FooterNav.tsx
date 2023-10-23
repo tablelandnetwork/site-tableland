@@ -91,16 +91,6 @@ export default function FooterNav() {
                     Data DAOs & Token Gating
                   </EventLink>
                 </li>
-                <li className="text-xs">
-                  <EventLink
-                    href="https://tableland.xyz/studio"
-                    target="_blank"
-                    event="Studio Waitlist"
-                    params={{ location: "footer" }}
-                  >
-                    Studio Waitlist
-                  </EventLink>
-                </li>
               </ul>
             </div>
             <div className="flex flex-col space-y-3">
@@ -114,16 +104,6 @@ export default function FooterNav() {
                     params={{ location: "footer" }}
                   >
                     Blog
-                  </EventLink>
-                </li>
-                <li className="text-xs">
-                  <EventLink
-                    href="https://dev.tableland.xyz"
-                    target="_blank"
-                    event="Tech Blog"
-                    params={{ location: "footer" }}
-                  >
-                    Tech Blog
                   </EventLink>
                 </li>
                 <li className="text-xs">
@@ -171,6 +151,16 @@ export default function FooterNav() {
             <div className="flex flex-col space-y-3">
               <h3 className="text-sm text-white">Developers</h3>
               <ul className="flex flex-col space-y-3">
+                <li className="text-xs">
+                  <EventLink
+                    href="https://studio.tableland.xyz"
+                    target="_blank"
+                    event="Enter Studio"
+                    params={{ location: "footer" }}
+                  >
+                    Studio
+                  </EventLink>
+                </li>
                 <li className="text-xs">
                   <EventLink
                     href="https://docs.tableland.xyz/quickstarts"
