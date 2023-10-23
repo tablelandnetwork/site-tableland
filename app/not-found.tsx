@@ -2,15 +2,6 @@ import Image from "next/image"
 import Gutter from "./components/Gutter"
 import getRigs from "@/lib/rigs"
 
-// Note: Links from the not-found page do not currently work.
-// See https://github.com/vercel/next.js/issues/48367.
-
-// Note: Metadata doesn not currently work with a not-found page.
-// See: https://github.com/vercel/next.js/issues/45620
-
-// Update: There is a workaround for both issues that is implemented for now, but it only works for top-level paths.
-// See https://github.com/vercel/next.js/issues/47862#issuecomment-1515491338.
-
 export default function NotFound() {
   const rig = getRigs(1)
 

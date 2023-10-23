@@ -46,6 +46,7 @@ export default function Terminal({ className }: Props) {
       "└─────────┴────┴───────────────┘",
     ]
 
+    console.log("effect")
     if (!lines1.val) {
       const typed = new Typed(cmd1r.current, {
         strings: [cmd1],

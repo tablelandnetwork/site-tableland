@@ -7,9 +7,7 @@ import Gutter from "./components/Gutter"
 export default function HomePage() {
   return (
     <main>
-      {/* @ts-expect-error Async Server Component */}
       <Hero />
-      {/* @ts-expect-error Async Server Component */}
       <Features />
       <Community />
       <Build />
