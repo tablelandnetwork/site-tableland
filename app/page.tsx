@@ -2,7 +2,6 @@ import Hero from "./components/Hero"
 import Features from "./components/Features"
 import Community from "./components/Community"
 import Build from "./components/Build"
-import Studio from "./components/Studio"
 import Gutter from "./components/Gutter"
 
 export default function HomePage() {
@@ -14,14 +13,13 @@ export default function HomePage() {
       <Features />
       <Community />
       <Build />
-      <Studio />
       <Gutter
-        href="https://docs.tableland.xyz"
+        href="https://studio.tableland.xyz"
         className="bg-green border-lightgreen"
-        event="Docs"
+        event="Enter Studio"
         params={{ location: "home-gutter" }}
       >
-        Documentation
+        Enter Studio
       </Gutter>
     </main>
   )

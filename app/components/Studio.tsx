@@ -2,6 +2,8 @@ import Image from "next/image"
 import ButtonLink from "./ButtonLink"
 import studio from "../../public/img/home/studio.png"
 
+// Note: This has not been used since the studio launched. We could redesign
+// this section to show previews of the real studio and/or highlight specific features.
 export default function Studio() {
   return (
     <section id="community" className="w-full bg-darkgreen text-white">

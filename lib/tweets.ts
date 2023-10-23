@@ -4,14 +4,14 @@ const tweets: Tweet[] = [
   {
     username: "juanbenet",
     image:
-      "https://pbs.twimg.com/profile_images/436772207746756609/1PMRyGnf_80x80.png",
+      "https://pbs.twimg.com/profile_images/1657505493084930051/jmEtEsTZ_80x80.jpg",
     body: "The @textileio team is awesome and always at the vanguard of blockchain dev UX -- stoked to see @tableland launch to the world!! 🔥🔥🔥🚀🚀🚀",
     url: "https://twitter.com/juanbenet/status/1494462209535225857",
   },
   {
     username: "HammerToe",
     image:
-      "https://pbs.twimg.com/profile_images/1548720695517057025/b_O9Yd6-_80x80.jpg",
+      "https://pbs.twimg.com/profile_images/1714413716135878656/D-TugPKq_80x80.jpg",
     body: "Learning about @tableland, a decentralised database, at the @filecoin Hackerbase at #ETHDenver. Pretty cool that it is based on SQLite!",
     url: "https://twitter.com/HammerToe/status/1630680313390325760",
   },
@@ -53,7 +53,7 @@ const tweets: Tweet[] = [
   {
     username: "CocoraEth",
     image:
-      "https://pbs.twimg.com/profile_images/1599754381049696256/MbjTloFF_80x80.jpg",
+      "https://pbs.twimg.com/profile_images/1715090570396274688/pvscfkbl_80x80.png",
     body: "Tableland's approach is an innovative and clean way of building dynamic game assets or NFTs. I expect this approach see strong adoption within the web3 game developer community this year and some game developers such as @_axtina are already using this to push web3 gaming forward!",
     url: "https://twitter.com/CocoraEth/status/1626258696459386880",
   },
