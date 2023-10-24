@@ -16,6 +16,7 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
+  metadataBase: new URL("https://tableland.xyz"),
   keywords: ["database", "data", "sql", "decentralized", "web3", "tamperproof"],
   category: "technology",
   themeColor: "#101e1e",

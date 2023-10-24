@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  // In development mode, when strict mode is on, useEffect
+  // is called twice, which can make building client side
+  // components confusing.
+  reactStrictMode: false,
   images: {
     remotePatterns: [
       {

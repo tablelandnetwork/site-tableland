@@ -11,6 +11,7 @@ const description =
 export const metadata: Metadata = {
   title,
   description,
+  metadataBase: new URL("https://tableland.xyz"),
   openGraph: {
     title,
     description,
