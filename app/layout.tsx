@@ -6,6 +6,7 @@ import HeaderNav from "./components/HeaderNav"
 import FooterNav from "./components/FooterNav"
 import Fathom from "./components/Fathom"
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import VariantProvider from "./context/VariantProvider"
 import { getContext } from "@/lib/variants"
 
@@ -67,6 +68,7 @@ export default async function RootLayout({
         </VariantProvider>
         <Fathom />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
