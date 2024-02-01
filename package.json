@@ -36,7 +36,7 @@
     "@tailwindcss/typography": "0.5.9",
     "@vercel/analytics": "1.1.1",
     "@vercel/speed-insights": "^1.0.2",
-    "autoprefixer": "10.4.16",
+    "autoprefixer": "10.4.17",
     "configcat-js-ssr": "7.1.1",
     "embla-carousel-autoplay": "7.1.0",
     "embla-carousel-react": "7.1.0",
