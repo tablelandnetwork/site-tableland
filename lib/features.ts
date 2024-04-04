@@ -27,7 +27,7 @@ const features: Feature[] = [
     icon: FaLink,
     description:
       "Live on Ethereum, Optimism, Arbitrum, Arbitrum Nova, and Polygon. Filecoin and zkEVMs coming soon.",
-    link: "https://docs.tableland.xyz/fundamentals/chains",
+    link: "https://docs.tableland.xyz/fundamentals/supported-chains",
   },
 ]
 
