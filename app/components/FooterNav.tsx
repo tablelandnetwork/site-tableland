@@ -98,12 +98,12 @@ export default function FooterNav() {
               <ul className="flex flex-col space-y-3">
                 <li className="text-xs">
                   <EventLink
-                    href="https://mirror.xyz/tableland.eth"
+                    href="https://blog.textile.io"
                     target="_blank"
                     event="Blog"
                     params={{ location: "footer" }}
                   >
-                    Blog
+                    Blog & newsletter
                   </EventLink>
                 </li>
                 <li className="text-xs">
@@ -128,17 +128,7 @@ export default function FooterNav() {
                 </li>
                 <li className="text-xs">
                   <EventLink
-                    href="https://tableland.xyz/newsletter"
-                    target="_blank"
-                    event="Newsletter"
-                    params={{ location: "footer" }}
-                  >
-                    Newsletter
-                  </EventLink>
-                </li>
-                <li className="text-xs">
-                  <EventLink
-                    href="https://docs.tableland.xyz/fundamentals/about/general-faqs"
+                    href="https://docs.tableland.xyz/fundamentals/about/faqs"
                     target="_blank"
                     event="FAQ"
                     params={{ location: "footer" }}
@@ -173,7 +163,7 @@ export default function FooterNav() {
                 </li>
                 <li className="text-xs">
                   <EventLink
-                    href="https://docs.tableland.xyz/specs/sql"
+                    href="https://docs.tableland.xyz/sql/specification"
                     target="_blank"
                     event="SQL Spec"
                     params={{ location: "footer" }}
@@ -213,7 +203,7 @@ export default function FooterNav() {
                 </li>
                 <li className="text-xs">
                   <EventLink
-                    href="https://docs.tableland.xyz/quickstarts/local-tableland"
+                    href="https://docs.tableland.xyz/local-tableland"
                     target="_blank"
                     event="Local Tableland"
                     params={{ location: "footer" }}
@@ -303,7 +293,7 @@ export default function FooterNav() {
                 </li>
                 <li className="text-xs">
                   <EventLink
-                    href="https://docs.tableland.xyz/gateway-api"
+                    href="https://docs.tableland.xyz/validator/api"
                     target="_blank"
                     event="Gateway"
                     params={{ location: "footer" }}
