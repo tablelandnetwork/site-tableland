@@ -1,5 +1,11 @@
 import { type Feature } from "@/lib/types"
-import { FaDatabase, FaLock, FaBriefcase, FaLink, FaDollarSign } from "react-icons/fa"
+import {
+  FaDatabase,
+  FaLock,
+  FaBriefcase,
+  FaLink,
+  FaDollarSign,
+} from "react-icons/fa"
 
 const features: Feature[] = [
   {
