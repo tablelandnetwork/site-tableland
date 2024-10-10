@@ -1,5 +1,11 @@
 import { type Feature } from "@/lib/types"
-import { FaDatabase, FaLock, FaBriefcase, FaLink } from "react-icons/fa"
+import {
+  FaDatabase,
+  FaLock,
+  FaBriefcase,
+  FaLink,
+  FaDollarSign,
+} from "react-icons/fa"
 
 const features: Feature[] = [
   {
@@ -28,6 +34,13 @@ const features: Feature[] = [
     description:
       "Live on Ethereum, Optimism, Arbitrum, Arbitrum Nova, and Polygon. Filecoin and zkEVMs coming soon.",
     link: "https://docs.tableland.xyz/fundamentals/supported-chains",
+  },
+  {
+    title: "Pricing",
+    icon: FaDollarSign,
+    description:
+      "The Tableland protocol is integrated with various EVM networks and processes user payments per SQL write operation. These fees are payed as transaction gas in a way familiar to users of any blockchain-based technology.",
+    link: "https://docs.tableland.xyz/fundamentals/about/glossary#transaction",
   },
 ]
 
