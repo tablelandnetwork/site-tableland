@@ -3,6 +3,9 @@
   "description": "The Tableland homepage",
   "version": "0.0.0",
   "private": true,
+  "engines": {
+    "node": "20.x"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tablelandnetwork/site-tableland.git"
