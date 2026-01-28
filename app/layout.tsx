@@ -7,8 +7,6 @@ import FooterNav from "./components/FooterNav"
 import Fathom from "./components/Fathom"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
-import VariantProvider from "./context/VariantProvider"
-import { getContext } from "@/lib/variants"
 
 const title = "Tableland: The decentralized cloud database"
 const description =
@@ -49,23 +47,15 @@ const orbitron = Orbitron({
   variable: "--font-orbitron",
 })
 
-export default async function RootLayout({
-  children,
-}: {
-  children: ReactNode
-}) {
-  const variantCtx = await getContext()
-
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body
         className={`min-h-screen ${poppins.variable} ${orbitron.variable} font-sans`}
       >
-        <VariantProvider ctx={variantCtx}>
-          <HeaderNav />
-          {children}
-          <FooterNav />
-        </VariantProvider>
+        <HeaderNav />
+        {children}
+        <FooterNav />
         <Fathom />
         <Analytics />
         <SpeedInsights />
